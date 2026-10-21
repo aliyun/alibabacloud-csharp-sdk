@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
     public class DeletePasskeyRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the passkey.</para>
+        /// <para>This parameter is actually required. If you do not specify this parameter, the call fails and the error code <c>MissingPasskeyId</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PASSKEY-CuZjEHhWcr7GIQOMGvkS</para>

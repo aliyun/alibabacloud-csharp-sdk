@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the IdP.</para>
+        /// <para>The identity provider information.</para>
         /// </summary>
         [NameInMap("SAMLProvider")]
         [Validation(Required=false)]
         public GetSAMLProviderResponseBodySAMLProvider SAMLProvider { get; set; }
         public class GetSAMLProviderResponseBodySAMLProvider : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the IdP.</para>
+            /// <para>The ARN of the identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::177242285274****:saml-provider/test-provider</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The supported signature algorithm. Valid values:</para>
+            /// <para>The signature algorithm supported by the Alibaba Cloud service provider (SP). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>rsa-sha256</para>
-            /// </description></item>
-            /// <item><description><para>rsa-sha1</para>
-            /// </description></item>
+            /// <item><description>rsa-sha256</description></item>
+            /// <item><description>rsa-sha1</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AuthnSignAlgo { get; set; }
 
             /// <summary>
-            /// <para>The time when the information was created. It is displayed in UTC.</para>
+            /// <para>The creation time. Format: RFC 3339 (UTC). Example: 2020-10-22T02:37:05Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-22T02:37:05Z</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The IdP description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a provider.</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The metadata file, which is Base64-encoded.</para>
+            /// <para>The metadata document. The document is Base64-encoded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PD94bWwgdmVy****</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string EncodedSAMLMetadataDocument { get; set; }
 
             /// <summary>
-            /// <para>The IdP name.</para>
+            /// <para>The name of the identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-provider</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string SAMLProviderName { get; set; }
 
             /// <summary>
-            /// <para>The time when the information was last updated. It is displayed in UTC.</para>
+            /// <para>The update time. Format: RFC 3339 (UTC). Example: 2020-10-22T02:51:20Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-22T02:51:20Z</para>

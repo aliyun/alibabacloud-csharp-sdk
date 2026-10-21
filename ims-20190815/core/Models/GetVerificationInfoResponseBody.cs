@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the email.</para>
+        /// <para>The security email address information.</para>
         /// </summary>
         [NameInMap("SecurityEmailDevice")]
         [Validation(Required=false)]
         public GetVerificationInfoResponseBodySecurityEmailDevice SecurityEmailDevice { get; set; }
         public class GetVerificationInfoResponseBodySecurityEmailDevice : TeaModel {
             /// <summary>
-            /// <para>The email address.</para>
+            /// <para>The security email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:username@example.com">username@example.com</a></para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The status of the email. Valid values:</para>
+            /// <para>The status of the security email address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>active: The email is activated.</para>
-            /// </description></item>
-            /// <item><description><para>pending: The email is pending for activation.</para>
-            /// </description></item>
+            /// <item><description>active: Activated.</description></item>
+            /// <item><description>pending: Pending activation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,14 +53,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The information about the mobile phone.</para>
+        /// <para>The secure phone information.</para>
         /// </summary>
         [NameInMap("SecurityPhoneDevice")]
         [Validation(Required=false)]
         public GetVerificationInfoResponseBodySecurityPhoneDevice SecurityPhoneDevice { get; set; }
         public class GetVerificationInfoResponseBodySecurityPhoneDevice : TeaModel {
             /// <summary>
-            /// <para>The international dialing code.</para>
+            /// <para>The area code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86</para>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AreaCode { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number.</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13900001234</para>
@@ -82,12 +80,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>The status of the mobile phone. Valid values:</para>
+            /// <para>The status of the secure phone. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>active: The mobile phone is activated.</para>
-            /// </description></item>
-            /// <item><description><para>pending: The mobile phone is pending for activation.</para>
-            /// </description></item>
+            /// <item><description>active: Activated.</description></item>
+            /// <item><description>pending: Pending activation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

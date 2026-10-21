@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetApplicationProvisionInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ID of the application. You can call ListApplicationProvisionInfos to obtain the AppId of an installed application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -3211,7 +3211,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey of a RAM user.</para>
+        /// <para>Deletes the passkey of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3257,7 +3257,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey of a RAM user.</para>
+        /// <para>Deletes the passkey of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3303,7 +3303,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey of a RAM user.</para>
+        /// <para>Deletes the passkey of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3321,7 +3321,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a passkey of a RAM user.</para>
+        /// <para>Deletes the passkey of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4923,6 +4923,110 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public GetAccessKeyPolicyForAccountResponse GetAccessKeyPolicyForAccountWithOptions(GetAccessKeyPolicyForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccessKeyPolicyForAccount",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccessKeyPolicyForAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public async Task<GetAccessKeyPolicyForAccountResponse> GetAccessKeyPolicyForAccountWithOptionsAsync(GetAccessKeyPolicyForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccessKeyPolicyForAccount",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccessKeyPolicyForAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public GetAccessKeyPolicyForAccountResponse GetAccessKeyPolicyForAccount(GetAccessKeyPolicyForAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAccessKeyPolicyForAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public async Task<GetAccessKeyPolicyForAccountResponse> GetAccessKeyPolicyForAccountAsync(GetAccessKeyPolicyForAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAccessKeyPolicyForAccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -5455,12 +5559,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about a specified installed application.</para>
+        /// <para>Queries the installation information of a specified installed application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// <para>Before you call this operation, the target application must be installed. You can call ProvisionApplication to install the application and use the AppId of the installed application. Calling this operation with an application ID returned by CreateApplication for an application that has not been installed will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5502,12 +5606,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about a specified installed application.</para>
+        /// <para>Queries the installation information of a specified installed application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// <para>Before you call this operation, the target application must be installed. You can call ProvisionApplication to install the application and use the AppId of the installed application. Calling this operation with an application ID returned by CreateApplication for an application that has not been installed will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5549,12 +5653,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about a specified installed application.</para>
+        /// <para>Queries the installation information of a specified installed application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// <para>Before you call this operation, the target application must be installed. You can call ProvisionApplication to install the application and use the AppId of the installed application. Calling this operation with an application ID returned by CreateApplication for an application that has not been installed will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5572,12 +5676,12 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries installation information about a specified installed application.</para>
+        /// <para>Queries the installation information of a specified installed application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，目标应用必须已经安装；可先调用 <c>ProvisionApplication</c> 安装应用，并使用已安装应用的 <c>AppId</c>。仅使用 <c>CreateApplication</c> 返回、但尚未安装的应用 ID 调用会失败。</para>
+        /// <para>Before you call this operation, the target application must be installed. You can call ProvisionApplication to install the application and use the AppId of the installed application. Calling this operation with an application ID returned by CreateApplication for an application that has not been installed will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6667,7 +6771,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Queries the details of a specified role-based SSO identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6709,7 +6813,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Queries the details of a specified role-based SSO identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6751,7 +6855,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Queries the details of a specified role-based SSO identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6769,7 +6873,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an identity provider (IdP) for role-based single sign-on (SSO).</para>
+        /// <para>Queries the details of a specified role-based SSO identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7475,7 +7579,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the status of the secure phone or security email address of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7517,7 +7621,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the status of the secure phone or security email address of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7559,7 +7663,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the status of the secure phone or security email address of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7577,7 +7681,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the mobile phone or email that is bound to a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the status of the secure phone or security email address of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10509,7 +10613,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from an OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10561,7 +10665,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from an OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10613,7 +10717,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from an OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10637,7 +10741,7 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from the OIDC IdP named <c>TestOIDCProvider</c>.</para>
+        /// <para>This topic provides an example on how to remove the client ID <c>498469743454717****</c> from an OIDC IdP named <c>TestOIDCProvider</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11315,6 +11419,126 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetAccessKeyPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public SetAccessKeyPolicyForAccountResponse SetAccessKeyPolicyForAccountWithOptions(SetAccessKeyPolicyForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKeyPolicy))
+            {
+                query["AccessKeyPolicy"] = request.AccessKeyPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAccessKeyPolicyForAccount",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAccessKeyPolicyForAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public async Task<SetAccessKeyPolicyForAccountResponse> SetAccessKeyPolicyForAccountWithOptionsAsync(SetAccessKeyPolicyForAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKeyPolicy))
+            {
+                query["AccessKeyPolicy"] = request.AccessKeyPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAccessKeyPolicyForAccount",
+                Version = "2019-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAccessKeyPolicyForAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public SetAccessKeyPolicyForAccountResponse SetAccessKeyPolicyForAccount(SetAccessKeyPolicyForAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAccessKeyPolicyForAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the account-level AccessKey network access control policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccessKeyPolicyForAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccessKeyPolicyForAccountResponse
+        /// </returns>
+        public async Task<SetAccessKeyPolicyForAccountResponse> SetAccessKeyPolicyForAccountAsync(SetAccessKeyPolicyForAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAccessKeyPolicyForAccountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

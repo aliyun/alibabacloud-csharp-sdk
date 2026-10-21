@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetApplicationProvisionInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The installation information about the application.</para>
+        /// <para>The application installation information.</para>
         /// </summary>
         [NameInMap("ApplicationProvisionInfo")]
         [Validation(Required=false)]
         public GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo ApplicationProvisionInfo { get; set; }
         public class GetApplicationProvisionInfoResponseBodyApplicationProvisionInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>177242285274****</para>
@@ -27,6 +27,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AccountId { get; set; }
 
             /// <summary>
+            /// <para>The application category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Official: official applications</description></item>
+            /// <item><description>ThirdParty: regular third-party applications</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ThirdParty</para>
             /// </summary>
@@ -55,6 +61,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The application assignment type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>AllowAll: No assignment is required. All RAM users and roles can access the application.</description></item>
+            /// <item><description>OnDemand: Assignment is required on demand. RAM users and roles can access the application only after it is assigned to them.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>AllowAll</para>
             /// </summary>
@@ -63,7 +75,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AssignmentType { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was installed. The value is a timestamp.</para>
+            /// <para>The installation timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1603693518000</para>
@@ -73,7 +85,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The information about the scopes of permissions that are granted to the application.</para>
+            /// <para>The application permission scope information.</para>
             /// </summary>
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
@@ -112,6 +124,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether user authorization is required.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -120,7 +134,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? NeedPrincipalConsent { get; set; }
 
             /// <summary>
-            /// <para>The update time. The value is a timestamp.</para>
+            /// <para>The update timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1603693518000</para>

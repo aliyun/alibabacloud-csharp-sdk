@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class RemoveClientIdFromOIDCProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID to remove.</para>
-        /// <para>Format: letters, digits, and the special characters <c>.-_:/</c> are allowed. The value cannot start with the special characters <c>.-_:/</c>.</para>
-        /// <para>Length: up to 128 characters.</para>
+        /// <para>The specified client ID.</para>
+        /// <para>Format: The client ID can contain letters, digits, and the following special characters: <c>.-_:/</c>. It cannot start with a special character.</para>
+        /// <para>Length: The client ID can be up to 128 characters in length.</para>
+        /// <para>The <c>ClientId</c> must be bound to the OIDC IdP specified by <c>OIDCProviderName</c>. If it is not bound, you can first call <c>CreateOIDCProvider</c> by setting <c>ClientIds</c> or call <c>AddClientIdToOIDCProvider</c> to bind it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>498469743454717****</para>
@@ -22,7 +23,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The name of an existing OIDC IdP that has the target <c>ClientId</c> attached. If you have not created or attached one, call <c>CreateOIDCProvider</c> (with <c>ClientIds</c> specified) or <c>AddClientIdToOIDCProvider</c> first.</para>
+        /// <para>The name of the OIDC IdP that exists and is bound to the target <c>ClientId</c>. If the OIDC IdP has not been created or the client ID has not been bound, you can first call <c>CreateOIDCProvider</c> by setting <c>ClientIds</c> or call <c>AddClientIdToOIDCProvider</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestOIDCProvider</para>

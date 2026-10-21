@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class RemoveClientIdFromOIDCProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the OIDC IdP.</para>
+        /// <para>The OIDC IdP information.</para>
         /// </summary>
         [NameInMap("OIDCProvider")]
         [Validation(Required=false)]
         public RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider OIDCProvider { get; set; }
         public class RemoveClientIdFromOIDCProviderResponseBodyOIDCProvider : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.</para>
+            /// <para>The ARN of the OIDC IdP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::177242285274****:oidc-provider/TestOIDCProvider</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string ClientIds { get; set; }
 
             /// <summary>
-            /// <para>The time when the OIDC IdP was created. The time is displayed in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-11T06:56:03Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The fingerprints of the HTTPS CA certificate. Multiple fingerprints are separated by commas (,).</para>
+            /// <para>The verification fingerprints of the HTTPS CA certificate. Multiple fingerprints are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>902ef2deeb3c5b13ea4c3d5193629309e231****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Fingerprints { get; set; }
 
             /// <summary>
-            /// <para>The time when the OIDC IdP was created. The value is a UNIX timestamp.</para>
+            /// <para>The creation time as a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636613763000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the OIDC IdP was last modified. The value is a UNIX timestamp.</para>
+            /// <para>The update time as a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636706309000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The earliest time when an external IdP is allowed to issue an ID token. If the iat field in the ID token indicates a time earlier than the current time by more than this value, the request is rejected.
+            /// <para>The earliest issuance time allowed for the external IdP to issue an ID token. If the time difference between the <c>iat</c> field in the ID token and the current time is greater than this value, the request is rejected.
             /// Unit: hours. Valid values: 1 to 168.</para>
             /// 
             /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string OIDCProviderName { get; set; }
 
             /// <summary>
-            /// <para>The time when the OIDC IdP was last modified. The time is displayed in UTC.</para>
+            /// <para>The update time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-12T08:38:29Z</para>
