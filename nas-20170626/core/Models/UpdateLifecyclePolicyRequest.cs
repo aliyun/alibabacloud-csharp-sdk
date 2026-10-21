@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The attribute of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the access time of the file.</description></item>
+            /// <item><description>Atime: the last access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The threshold of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
+            /// <item><description>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The description of the lifecycle policy.</para>
         /// <para>Format:
-        /// The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
+        /// The description must be 3 to 64 characters in length. It must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// <remarks>
-        /// <para>Only CPFS for Lingjun is supported.</para>
+        /// <para>Supported only for CPFS for Lingjun.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The file system ID. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <para>The ID of the file system. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist and then create the file system in the NAS console.</para>
         /// <remarks>
-        /// <para>This parameter is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
+        /// <para>Supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The ID of the lifecycle policy.</para>
         /// <remarks>
-        /// <para>This parameter is required for CPFS for Lingjun file systems.</para>
+        /// <para>Required for CPFS for Lingjun file systems.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,16 +90,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The absolute paths of the directories associated with the lifecycle management policy.</para>
+        /// <para>The absolute path of the directory associated with the lifecycle management policy. This parameter is required when FileSystemId starts with bmcpfs-.</para>
         /// </summary>
         [NameInMap("Paths")]
         [Validation(Required=false)]
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The data retrieval rules. A maximum of one rule can be configured.</para>
+        /// <para>The data retrieval rules for files. You can configure up to one rule.</para>
         /// <remarks>
-        /// <para>Only CPFS for Lingjun file systems are supported.</para>
+        /// <para>Supported only for CPFS for Lingjun file systems.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RetrieveRules")]
@@ -120,13 +120,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>The threshold of the rule. Valid values:</para>
+            /// <para>The threshold of the rule. Valid values for RetrieveType:</para>
             /// <list type="bullet">
-            /// <item><description>RetrieveType<list type="bullet">
-            /// <item><description>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</description></item>
-            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieval of all data.</description></item>
-            /// </list>
-            /// </description></item>
+            /// <item><description>AfterVisit: supported when LifecyclePolicyType is set to Auto. This value indicates best-effort recall on visit.</description></item>
+            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. This value indicates that all data is retrieved.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,9 +136,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The tiered storage type.</para>
+        /// <para>The tiered storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InfrequentAccess: IA storage class (default).</description></item>
+        /// <item><description>InfrequentAccess: IA storage class. This is the default value.</description></item>
         /// <item><description>Archive: Archive storage class.</description></item>
         /// </list>
         /// 
@@ -153,9 +150,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The data transit rules. A maximum of one rule can be configured.</para>
+        /// <para>The data transition rules for files. You can configure up to one rule.</para>
         /// <remarks>
-        /// <para>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
+        /// <para>Supported only when LifecyclePolicyType is set to Auto for a CPFS for Lingjun file system.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransitRules")]
@@ -166,7 +163,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The attribute of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the access time of the file.</description></item>
+            /// <item><description>Atime: the last access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,7 +177,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The threshold of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
+            /// <item><description>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

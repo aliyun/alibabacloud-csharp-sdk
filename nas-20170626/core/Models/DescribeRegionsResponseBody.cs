@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of regions on each page.</para>
+        /// <para>The number of regions returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of regions returned.</para>
+        /// <para>The total number of regions returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

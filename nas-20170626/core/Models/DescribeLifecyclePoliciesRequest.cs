@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The description of the policy.</para>
         /// <remarks>
-        /// <para>Only CPFS for Lingjun supports this parameter.</para>
+        /// <para>This parameter is supported only by CPFS for Lingjun.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>The ID of the file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31a8e4****</para>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle policy name. The naming rules are as follows:</para>
-        /// <para>The name must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
+        /// <para>Policy Name of the lifecycle policy. Policy Name must meet the following rules:</para>
+        /// <para>Policy Name must be 3 to 64 characters in length. It must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// <remarks>
-        /// <para>This parameter is optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</para>
+        /// <para>For General-purpose NAS file systems, this parameter is optional. If you specify this parameter, the specified value is used. If you do not specify this parameter, the value of LifecyclePolicyId is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,12 +57,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyName { get; set; }
 
         /// <summary>
-        /// <para>The policy type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The policy type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Auto: Automatic execution.</description></item>
         /// <item><description>OnDemand: On-demand execution.<remarks>
-        /// <para>Only CPFS for Lingjun supports this parameter.</para>
+        /// <para>This parameter is supported only by CPFS for Lingjun.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The page number of the list.</para>
-        /// <para>Start value (default value): 1.</para>
+        /// <para>Starting value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of lifecycle management policies on each page.</para>
+        /// <para>The number of lifecycle management policies to return on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -98,9 +97,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters results by path.</para>
+        /// <para>Filters lifecycle policies by path.</para>
         /// <remarks>
-        /// <para>Only CPFS for Lingjun supports this parameter.</para>
+        /// <para>This parameter is supported only by CPFS for Lingjun.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,11 +110,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The storage tiering type. Valid values:</para>
+        /// <para>The tiered storage type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
         /// <item><description>Archive: Archive storage class.<remarks>
-        /// <para>If StorageType is not specified, all lifecycle policies are returned.</para>
+        /// <para>If you do not specify StorageType, all lifecycle policies are returned.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

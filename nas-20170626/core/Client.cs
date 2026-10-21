@@ -734,14 +734,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Storage Channel (VSC) device with a file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be identical.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -792,14 +792,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Storage Channel (VSC) device with a file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be identical.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -850,14 +850,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Storage Channel (VSC) device with a file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be identical.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -876,14 +876,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Storage Channel (VSC) device with a file system.</para>
+        /// <para>Associates a VSC device with a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch operations are supported. In batch mode, only one VscId can be associated with multiple FileSystemId values. This means the ResourceIds.VscId values must be the same.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be identical.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1958,7 +1958,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the quota configured for a fileset.</para>
+        /// <para>Cancels the quota set for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1966,9 +1966,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <para>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.
         /// <b>Before you begin</b></para>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to CPFS for Lingjun file systems of version 2.7.0 or later.</description></item>
+        /// <item><description>This operation is applicable only to CPFS for Lingjun 2.7.0 and later file systems.</description></item>
+        /// <item><description>The fileset feature is available only to whitelisted users. To use this feature, submit a ticket to apply for the fileset whitelist.</description></item>
         /// <item><description>The file system ID must start with <c>bmcpfs-</c>.</description></item>
-        /// <item><description>Before you call this operation, make sure that a quota has been configured for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that a quota is set for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2023,7 +2024,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the quota configured for a fileset.</para>
+        /// <para>Cancels the quota set for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2031,9 +2032,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <para>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.
         /// <b>Before you begin</b></para>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to CPFS for Lingjun file systems of version 2.7.0 or later.</description></item>
+        /// <item><description>This operation is applicable only to CPFS for Lingjun 2.7.0 and later file systems.</description></item>
+        /// <item><description>The fileset feature is available only to whitelisted users. To use this feature, submit a ticket to apply for the fileset whitelist.</description></item>
         /// <item><description>The file system ID must start with <c>bmcpfs-</c>.</description></item>
-        /// <item><description>Before you call this operation, make sure that a quota has been configured for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that a quota is set for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2088,7 +2090,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the quota configured for a fileset.</para>
+        /// <para>Cancels the quota set for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2096,9 +2098,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <para>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.
         /// <b>Before you begin</b></para>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to CPFS for Lingjun file systems of version 2.7.0 or later.</description></item>
+        /// <item><description>This operation is applicable only to CPFS for Lingjun 2.7.0 and later file systems.</description></item>
+        /// <item><description>The fileset feature is available only to whitelisted users. To use this feature, submit a ticket to apply for the fileset whitelist.</description></item>
         /// <item><description>The file system ID must start with <c>bmcpfs-</c>.</description></item>
-        /// <item><description>Before you call this operation, make sure that a quota has been configured for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that a quota is set for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2117,7 +2120,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the quota configured for a fileset.</para>
+        /// <para>Cancels the quota set for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2125,9 +2128,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <para>Only CPFS for Lingjun 2.7.0 and later support quota cancellation.
         /// <b>Before you begin</b></para>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to CPFS for Lingjun file systems of version 2.7.0 or later.</description></item>
+        /// <item><description>This operation is applicable only to CPFS for Lingjun 2.7.0 and later file systems.</description></item>
+        /// <item><description>The fileset feature is available only to whitelisted users. To use this feature, submit a ticket to apply for the fileset whitelist.</description></item>
         /// <item><description>The file system ID must start with <c>bmcpfs-</c>.</description></item>
-        /// <item><description>Before you call this operation, make sure that a quota has been configured for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that a quota is set for the target fileset by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/bmcpfs/developer-reference/api-nas-2017-06-26-setfilesetquota-bmcpfs">SetFilesetQuota</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2772,9 +2776,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount may fail.</description></item>
+        /// <item><description>When you use the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. Therefore, after executing the CreateAccessPoint operation successfully, first invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the status of the access point. Execute the file system mount operation only after the access point enters the <b>Active</b> state. Otherwise, it may result in a failed mount.</description></item>
         /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
-        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2879,9 +2883,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount may fail.</description></item>
+        /// <item><description>When you use the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. Therefore, after executing the CreateAccessPoint operation successfully, first invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the status of the access point. Execute the file system mount operation only after the access point enters the <b>Active</b> state. Otherwise, it may result in a failed mount.</description></item>
         /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
-        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2986,9 +2990,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount may fail.</description></item>
+        /// <item><description>When you use the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. Therefore, after executing the CreateAccessPoint operation successfully, first invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the status of the access point. Execute the file system mount operation only after the access point enters the <b>Active</b> state. Otherwise, it may result in a failed mount.</description></item>
         /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
-        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3013,9 +3017,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <b>Active</b>. Otherwise, the mount may fail.</description></item>
+        /// <item><description>When you use the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. Therefore, after executing the CreateAccessPoint operation successfully, first invoke the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the status of the access point. Execute the file system mount operation only after the access point enters the <b>Active</b> state. Otherwise, it may result in a failed mount.</description></item>
         /// <item><description>Only General-purpose NAS NFS file systems support this feature.</description></item>
-        /// <item><description>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
+        /// <item><description>If you enable the RAM policy (EnabledRam), you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3922,82 +3926,82 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data flow between a CPFS file system (General-purpose or CPFS for Lingjun) and source storage.</para>
+        /// <para>Creates a data flow between a General-purpose CPFS or CPFS for Lingjun file system and a source storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the following products:<table>
+        /// <item><description>This operation is applicable to the following services:<table>
         /// <thead>
         /// <tr>
-        /// <th>Product</th>
+        /// <th>Service</th>
         /// <th>File system ID format</th>
         /// <th>Minimum version that supports data flows</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td><b>General-purpose CPFS</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 or later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 and later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 or later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 and later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>General-purpose CPFS and CPFS for Lingjun share the same set of API operations but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>: General-purpose CPFS and CPFS for Lingjun share the same set of API operations, but differ in parameter values and supported features. Refer to the corresponding section based on the service you use.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
         /// <item><description>You can create a data flow only when the General-purpose CPFS or CPFS for Lingjun file system is in the Running state.</description></item>
-        /// <item><description>A maximum of <b>10</b> data flows can be created for a single General-purpose CPFS or CPFS for Lingjun file system.</description></item>
-        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to check whether the data flow is created.</description></item>
+        /// <item><description>You can create a maximum of <b>10</b> data flows for a General-purpose CPFS or CPFS for Lingjun file system.</description></item>
+        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to check whether the data flow is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Permissions.
-        ///   When you create a data flow, Cloud Parallel File Storage obtains the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        ///   When you create a data flow, Cloud Parallel File Storage assumes the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles to associate the service for the data stream. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">Service-linked roles for Cloud Parallel File Storage</a>.</description></item>
         /// <item><description>Usage notes for General-purpose CPFS.
-        ///    This section applies to General-purpose CPFS whose file system IDs start with <c>cpfs-</c>.<list type="bullet">
+        ///    This section applies to General-purpose CPFS file systems whose IDs start with <c>cpfs-</c>.<list type="bullet">
         /// <item><description>Billing<list type="bullet">
-        /// <item><description>Creating a data flow incurs fees based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
-        /// <item><description>When you use auto-refresh, EventBridge collects object modification events from the source OSS storage, which incurs fees. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">EventBridge billing</a>.</description></item>
+        /// <item><description>You are billed for a data flow based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
+        /// <item><description>If you enable auto-refresh, EventBridge is used to collect object modification events from the source OSS bucket. You are billed for these events. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data stream specifications<list type="bullet">
-        /// <item><description>The data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data stream bandwidth refers to the maximum transfer bandwidth that the data stream can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
-        /// <item><description>Inventory check: Setting DryRun to true checks whether the resources required to create a data stream of the specified specification are available.</description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth is the maximum transmission bandwidth that the data flow can achieve when importing or exporting data.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by a General-purpose Cloud Parallel File Storage mount target. Make sure that the vSwitch has sufficient IP addresses.</description></item>
+        /// <item><description>Resource check: If you set the DryRun Settings parameter to true, the system checks whether the resources required to create a data flow (data stream) of the specified specification are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Fileset<list type="bullet">
-        /// <item><description>The destination of a data flow is a Fileset in the General-purpose CPFS file system. A Fileset is a new directory tree structure in the General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capability.</description></item>
-        /// <item><description>The Fileset must already exist when you create a data flow and cannot be nested with other Filesets. Only one data flow can be created on a Fileset, corresponding to one source storage.</description></item>
-        /// <item><description>The maximum number of files in a Fileset is 1 million. If the number of files imported from an OSS bucket exceeds this limit, creating new files returns a <c>no space</c> error.<remarks>
-        /// <para>If data already exists in the Fileset, the existing data in the Fileset is cleared and replaced with data synchronized from OSS after the data flow is created.</para>
+        /// <item><description>The destination of a data flow is a fileset in a General-purpose CPFS file system. A fileset is a new directory tree structure in a General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capabilities.</description></item>
+        /// <item><description>The fileset must already exist when you create a data flow, and it cannot be nested with other filesets. You can create only one data flow on a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset can contain a maximum of 1 million files. If the number of files imported from the OSS bucket exceeds this limit, a <c>no space</c> error is reported when you create new files.<remarks>
+        /// <para>If the fileset already contains data, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket after the data flow is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Automatic synchronization<list type="bullet">
-        /// <item><description>After automatic synchronization (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data stream node.</description></item>
-        /// <item><description>Automatic synchronization relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 automatic synchronization folders can be configured for a data stream.</description></item>
-        /// <item><description>The automatic synchronization interval (AutoRefreshInterval) specifies the synchronization interval that Cloud Parallel File Storage sets for checking whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization node is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage data stream, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to <c>Misconfigured</c>. You can increase the data stream specification or reduce the OSS modification frequency to resolve this issue.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage data stream, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage data stream.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, automatic synchronization does not work Normal.</para>
+        /// <item><description>Auto-refresh<list type="bullet">
+        /// <item><description>After you configure auto-refresh, when the data in the source storage changes, the changed metadata undergoes automatic synchronization to the General-purpose Cloud Parallel File Storage file system. The changed data is loaded on demand when users access the files, or you can start a data flow node to load the data.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The scope of auto-refresh is a prefix, which is specified by the RefreshPath parameter. You can configure a maximum of five auto-refresh folders for a data flow (data stream).</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) is the time interval configured in the Settings by General-purpose Cloud Parallel File Storage to check whether data updates exist within the prefix in the source OSS bucket. If data updates exist, an auto-refresh node is started. If the frequency of object modification events in the source OSS bucket exceeds the processing capability of the General-purpose Cloud Parallel File Storage data flow, auto-refresh nodes accumulate, metadata updates are delayed, and the status of the data flow becomes <c>Misconfigured</c>. To resolve this issue, you can upgrade the data flow specification or reduce the modification frequency in the OSS bucket.</description></item>
+        /// <item><description>When you configure auto-refresh for a prefix in a General-purpose Cloud Parallel File Storage data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object in the prefix of the source OSS bucket is modified, an OSS event is generated in EventBridge and processed by the General-purpose Cloud Parallel File Storage data flow.<remarks>
+        /// <para>The event bus and event rule created by General-purpose Cloud Parallel File Storage in EventBridge contain the <c>Create for cpfs auto refresh</c> description. You cannot modify or delete the event bus or event rule. Otherwise, auto-refresh cannot remain in a Normal state.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The data stream source storage (SourceStorage) must be an OSS bucket.</description></item>
-        /// <item><description>Cloud Parallel File Storage data streams support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, confirm that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data streams of multiple Cloud Parallel File Storage file systems, or multiple data streams of the same Cloud Parallel File Storage file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage file systems export data to the same source.</description></item>
-        /// <item><description>Cross-region OSS data streams are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage data stream can access the data in the bucket. Do not delete or modify this tag while the data stream is in use. Otherwise, the Cloud Parallel File Storage data stream cannot access the data in the bucket.</para>
+        /// <item><description>Only OSS is supported Cloud Parallel File Storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>General-purpose CPFS data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple General-purpose CPFS data flows or multiple data flows of the same General-purpose CPFS file system use the same OSS bucket Cloud Parallel File Storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple General-purpose CPFS file systems export data to the same source.</description></item>
+        /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the General-purpose CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the General-purpose CPFS data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the General-purpose CPFS data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4005,37 +4009,38 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Usage notes for CPFS for Lingjun.
-        ///    This section applies to CPFS for Lingjun whose file system IDs start with <c>bmcpfs-</c>.<list type="bullet">
+        ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>Only OSS is supported as the source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as the source storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
-        /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows by using cross-account OSS buckets.</description></item>
+        /// <item><description>You need to set the account id parameter only when you use a cross-account OSS bucket.</description></item>
+        /// <item><description>Before you use a cross-account OSS bucket, you must grant permissions to the account. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Authorize cross-account data flows</a>.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
-        /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
+        /// <item><description>Limits of data flows on file systems.<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in the file system path associated with the data flow. Otherwise, a Permission Denied or Directory Not Empty error is reported.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Ultra-long paths are not supported. The maximum path length supported by a data flow is 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After a symlink file is imported to CPFS for Lingjun, it is converted to a regular file that contains data, and the symlink information is lost.</description></item>
-        /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
-        /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
+        /// <item><description>Limits on data flow imports.<list type="bullet">
+        /// <item><description>When a symbolic link file is imported into CPFS for Lingjun, it is converted into a regular file containing data, and the symbolic link information is lost.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only the latest version is copied.</description></item>
+        /// <item><description>File or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After a symlink file is synchronized to OSS, the file that the symlink points to is not synchronized. Instead, the symlink becomes a regular empty object with no data.</description></item>
-        /// <item><description>A hardlink file is synchronized to OSS as a regular file.</description></item>
-        /// <item><description>Socket, Device, and Pipe files are converted to regular empty objects with no data when exported to an OSS bucket.</description></item>
-        /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
+        /// <item><description>Data flow export limits</description></item>
+        /// <item><description>Limits on data flow exports<list type="bullet">
+        /// <item><description>After a symlink file is synchronized to OSS, the file pointed to by the symlink is not synchronized. Instead, the symlink file becomes a regular empty object without data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS only as regular files.</description></item>
+        /// <item><description>When socket, device, or pipe files are exported to an OSS bucket, they become regular empty objects without data.</description></item>
+        /// <item><description>Directory paths longer than 1,023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4130,82 +4135,82 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data flow between a CPFS file system (General-purpose or CPFS for Lingjun) and source storage.</para>
+        /// <para>Creates a data flow between a General-purpose CPFS or CPFS for Lingjun file system and a source storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the following products:<table>
+        /// <item><description>This operation is applicable to the following services:<table>
         /// <thead>
         /// <tr>
-        /// <th>Product</th>
+        /// <th>Service</th>
         /// <th>File system ID format</th>
         /// <th>Minimum version that supports data flows</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td><b>General-purpose CPFS</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 or later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 and later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 or later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 and later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>General-purpose CPFS and CPFS for Lingjun share the same set of API operations but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>: General-purpose CPFS and CPFS for Lingjun share the same set of API operations, but differ in parameter values and supported features. Refer to the corresponding section based on the service you use.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
         /// <item><description>You can create a data flow only when the General-purpose CPFS or CPFS for Lingjun file system is in the Running state.</description></item>
-        /// <item><description>A maximum of <b>10</b> data flows can be created for a single General-purpose CPFS or CPFS for Lingjun file system.</description></item>
-        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to check whether the data flow is created.</description></item>
+        /// <item><description>You can create a maximum of <b>10</b> data flows for a General-purpose CPFS or CPFS for Lingjun file system.</description></item>
+        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to check whether the data flow is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Permissions.
-        ///   When you create a data flow, Cloud Parallel File Storage obtains the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        ///   When you create a data flow, Cloud Parallel File Storage assumes the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles to associate the service for the data stream. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">Service-linked roles for Cloud Parallel File Storage</a>.</description></item>
         /// <item><description>Usage notes for General-purpose CPFS.
-        ///    This section applies to General-purpose CPFS whose file system IDs start with <c>cpfs-</c>.<list type="bullet">
+        ///    This section applies to General-purpose CPFS file systems whose IDs start with <c>cpfs-</c>.<list type="bullet">
         /// <item><description>Billing<list type="bullet">
-        /// <item><description>Creating a data flow incurs fees based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
-        /// <item><description>When you use auto-refresh, EventBridge collects object modification events from the source OSS storage, which incurs fees. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">EventBridge billing</a>.</description></item>
+        /// <item><description>You are billed for a data flow based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
+        /// <item><description>If you enable auto-refresh, EventBridge is used to collect object modification events from the source OSS bucket. You are billed for these events. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data stream specifications<list type="bullet">
-        /// <item><description>The data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data stream bandwidth refers to the maximum transfer bandwidth that the data stream can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
-        /// <item><description>Inventory check: Setting DryRun to true checks whether the resources required to create a data stream of the specified specification are available.</description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth is the maximum transmission bandwidth that the data flow can achieve when importing or exporting data.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by a General-purpose Cloud Parallel File Storage mount target. Make sure that the vSwitch has sufficient IP addresses.</description></item>
+        /// <item><description>Resource check: If you set the DryRun Settings parameter to true, the system checks whether the resources required to create a data flow (data stream) of the specified specification are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Fileset<list type="bullet">
-        /// <item><description>The destination of a data flow is a Fileset in the General-purpose CPFS file system. A Fileset is a new directory tree structure in the General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capability.</description></item>
-        /// <item><description>The Fileset must already exist when you create a data flow and cannot be nested with other Filesets. Only one data flow can be created on a Fileset, corresponding to one source storage.</description></item>
-        /// <item><description>The maximum number of files in a Fileset is 1 million. If the number of files imported from an OSS bucket exceeds this limit, creating new files returns a <c>no space</c> error.<remarks>
-        /// <para>If data already exists in the Fileset, the existing data in the Fileset is cleared and replaced with data synchronized from OSS after the data flow is created.</para>
+        /// <item><description>The destination of a data flow is a fileset in a General-purpose CPFS file system. A fileset is a new directory tree structure in a General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capabilities.</description></item>
+        /// <item><description>The fileset must already exist when you create a data flow, and it cannot be nested with other filesets. You can create only one data flow on a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset can contain a maximum of 1 million files. If the number of files imported from the OSS bucket exceeds this limit, a <c>no space</c> error is reported when you create new files.<remarks>
+        /// <para>If the fileset already contains data, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket after the data flow is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Automatic synchronization<list type="bullet">
-        /// <item><description>After automatic synchronization (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data stream node.</description></item>
-        /// <item><description>Automatic synchronization relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 automatic synchronization folders can be configured for a data stream.</description></item>
-        /// <item><description>The automatic synchronization interval (AutoRefreshInterval) specifies the synchronization interval that Cloud Parallel File Storage sets for checking whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization node is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage data stream, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to <c>Misconfigured</c>. You can increase the data stream specification or reduce the OSS modification frequency to resolve this issue.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage data stream, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage data stream.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, automatic synchronization does not work Normal.</para>
+        /// <item><description>Auto-refresh<list type="bullet">
+        /// <item><description>After you configure auto-refresh, when the data in the source storage changes, the changed metadata undergoes automatic synchronization to the General-purpose Cloud Parallel File Storage file system. The changed data is loaded on demand when users access the files, or you can start a data flow node to load the data.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The scope of auto-refresh is a prefix, which is specified by the RefreshPath parameter. You can configure a maximum of five auto-refresh folders for a data flow (data stream).</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) is the time interval configured in the Settings by General-purpose Cloud Parallel File Storage to check whether data updates exist within the prefix in the source OSS bucket. If data updates exist, an auto-refresh node is started. If the frequency of object modification events in the source OSS bucket exceeds the processing capability of the General-purpose Cloud Parallel File Storage data flow, auto-refresh nodes accumulate, metadata updates are delayed, and the status of the data flow becomes <c>Misconfigured</c>. To resolve this issue, you can upgrade the data flow specification or reduce the modification frequency in the OSS bucket.</description></item>
+        /// <item><description>When you configure auto-refresh for a prefix in a General-purpose Cloud Parallel File Storage data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object in the prefix of the source OSS bucket is modified, an OSS event is generated in EventBridge and processed by the General-purpose Cloud Parallel File Storage data flow.<remarks>
+        /// <para>The event bus and event rule created by General-purpose Cloud Parallel File Storage in EventBridge contain the <c>Create for cpfs auto refresh</c> description. You cannot modify or delete the event bus or event rule. Otherwise, auto-refresh cannot remain in a Normal state.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The data stream source storage (SourceStorage) must be an OSS bucket.</description></item>
-        /// <item><description>Cloud Parallel File Storage data streams support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, confirm that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data streams of multiple Cloud Parallel File Storage file systems, or multiple data streams of the same Cloud Parallel File Storage file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage file systems export data to the same source.</description></item>
-        /// <item><description>Cross-region OSS data streams are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage data stream can access the data in the bucket. Do not delete or modify this tag while the data stream is in use. Otherwise, the Cloud Parallel File Storage data stream cannot access the data in the bucket.</para>
+        /// <item><description>Only OSS is supported Cloud Parallel File Storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>General-purpose CPFS data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple General-purpose CPFS data flows or multiple data flows of the same General-purpose CPFS file system use the same OSS bucket Cloud Parallel File Storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple General-purpose CPFS file systems export data to the same source.</description></item>
+        /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the General-purpose CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the General-purpose CPFS data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the General-purpose CPFS data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4213,37 +4218,38 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Usage notes for CPFS for Lingjun.
-        ///    This section applies to CPFS for Lingjun whose file system IDs start with <c>bmcpfs-</c>.<list type="bullet">
+        ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>Only OSS is supported as the source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as the source storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
-        /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows by using cross-account OSS buckets.</description></item>
+        /// <item><description>You need to set the account id parameter only when you use a cross-account OSS bucket.</description></item>
+        /// <item><description>Before you use a cross-account OSS bucket, you must grant permissions to the account. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Authorize cross-account data flows</a>.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
-        /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
+        /// <item><description>Limits of data flows on file systems.<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in the file system path associated with the data flow. Otherwise, a Permission Denied or Directory Not Empty error is reported.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Ultra-long paths are not supported. The maximum path length supported by a data flow is 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After a symlink file is imported to CPFS for Lingjun, it is converted to a regular file that contains data, and the symlink information is lost.</description></item>
-        /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
-        /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
+        /// <item><description>Limits on data flow imports.<list type="bullet">
+        /// <item><description>When a symbolic link file is imported into CPFS for Lingjun, it is converted into a regular file containing data, and the symbolic link information is lost.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only the latest version is copied.</description></item>
+        /// <item><description>File or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After a symlink file is synchronized to OSS, the file that the symlink points to is not synchronized. Instead, the symlink becomes a regular empty object with no data.</description></item>
-        /// <item><description>A hardlink file is synchronized to OSS as a regular file.</description></item>
-        /// <item><description>Socket, Device, and Pipe files are converted to regular empty objects with no data when exported to an OSS bucket.</description></item>
-        /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
+        /// <item><description>Data flow export limits</description></item>
+        /// <item><description>Limits on data flow exports<list type="bullet">
+        /// <item><description>After a symlink file is synchronized to OSS, the file pointed to by the symlink is not synchronized. Instead, the symlink file becomes a regular empty object without data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS only as regular files.</description></item>
+        /// <item><description>When socket, device, or pipe files are exported to an OSS bucket, they become regular empty objects without data.</description></item>
+        /// <item><description>Directory paths longer than 1,023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4338,82 +4344,82 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data flow between a CPFS file system (General-purpose or CPFS for Lingjun) and source storage.</para>
+        /// <para>Creates a data flow between a General-purpose CPFS or CPFS for Lingjun file system and a source storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the following products:<table>
+        /// <item><description>This operation is applicable to the following services:<table>
         /// <thead>
         /// <tr>
-        /// <th>Product</th>
+        /// <th>Service</th>
         /// <th>File system ID format</th>
         /// <th>Minimum version that supports data flows</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td><b>General-purpose CPFS</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 or later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 and later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 or later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 and later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>General-purpose CPFS and CPFS for Lingjun share the same set of API operations but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>: General-purpose CPFS and CPFS for Lingjun share the same set of API operations, but differ in parameter values and supported features. Refer to the corresponding section based on the service you use.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
         /// <item><description>You can create a data flow only when the General-purpose CPFS or CPFS for Lingjun file system is in the Running state.</description></item>
-        /// <item><description>A maximum of <b>10</b> data flows can be created for a single General-purpose CPFS or CPFS for Lingjun file system.</description></item>
-        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to check whether the data flow is created.</description></item>
+        /// <item><description>You can create a maximum of <b>10</b> data flows for a General-purpose CPFS or CPFS for Lingjun file system.</description></item>
+        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to check whether the data flow is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Permissions.
-        ///   When you create a data flow, Cloud Parallel File Storage obtains the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        ///   When you create a data flow, Cloud Parallel File Storage assumes the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles to associate the service for the data stream. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">Service-linked roles for Cloud Parallel File Storage</a>.</description></item>
         /// <item><description>Usage notes for General-purpose CPFS.
-        ///    This section applies to General-purpose CPFS whose file system IDs start with <c>cpfs-</c>.<list type="bullet">
+        ///    This section applies to General-purpose CPFS file systems whose IDs start with <c>cpfs-</c>.<list type="bullet">
         /// <item><description>Billing<list type="bullet">
-        /// <item><description>Creating a data flow incurs fees based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
-        /// <item><description>When you use auto-refresh, EventBridge collects object modification events from the source OSS storage, which incurs fees. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">EventBridge billing</a>.</description></item>
+        /// <item><description>You are billed for a data flow based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
+        /// <item><description>If you enable auto-refresh, EventBridge is used to collect object modification events from the source OSS bucket. You are billed for these events. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data stream specifications<list type="bullet">
-        /// <item><description>The data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data stream bandwidth refers to the maximum transfer bandwidth that the data stream can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
-        /// <item><description>Inventory check: Setting DryRun to true checks whether the resources required to create a data stream of the specified specification are available.</description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth is the maximum transmission bandwidth that the data flow can achieve when importing or exporting data.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by a General-purpose Cloud Parallel File Storage mount target. Make sure that the vSwitch has sufficient IP addresses.</description></item>
+        /// <item><description>Resource check: If you set the DryRun Settings parameter to true, the system checks whether the resources required to create a data flow (data stream) of the specified specification are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Fileset<list type="bullet">
-        /// <item><description>The destination of a data flow is a Fileset in the General-purpose CPFS file system. A Fileset is a new directory tree structure in the General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capability.</description></item>
-        /// <item><description>The Fileset must already exist when you create a data flow and cannot be nested with other Filesets. Only one data flow can be created on a Fileset, corresponding to one source storage.</description></item>
-        /// <item><description>The maximum number of files in a Fileset is 1 million. If the number of files imported from an OSS bucket exceeds this limit, creating new files returns a <c>no space</c> error.<remarks>
-        /// <para>If data already exists in the Fileset, the existing data in the Fileset is cleared and replaced with data synchronized from OSS after the data flow is created.</para>
+        /// <item><description>The destination of a data flow is a fileset in a General-purpose CPFS file system. A fileset is a new directory tree structure in a General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capabilities.</description></item>
+        /// <item><description>The fileset must already exist when you create a data flow, and it cannot be nested with other filesets. You can create only one data flow on a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset can contain a maximum of 1 million files. If the number of files imported from the OSS bucket exceeds this limit, a <c>no space</c> error is reported when you create new files.<remarks>
+        /// <para>If the fileset already contains data, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket after the data flow is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Automatic synchronization<list type="bullet">
-        /// <item><description>After automatic synchronization (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data stream node.</description></item>
-        /// <item><description>Automatic synchronization relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 automatic synchronization folders can be configured for a data stream.</description></item>
-        /// <item><description>The automatic synchronization interval (AutoRefreshInterval) specifies the synchronization interval that Cloud Parallel File Storage sets for checking whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization node is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage data stream, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to <c>Misconfigured</c>. You can increase the data stream specification or reduce the OSS modification frequency to resolve this issue.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage data stream, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage data stream.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, automatic synchronization does not work Normal.</para>
+        /// <item><description>Auto-refresh<list type="bullet">
+        /// <item><description>After you configure auto-refresh, when the data in the source storage changes, the changed metadata undergoes automatic synchronization to the General-purpose Cloud Parallel File Storage file system. The changed data is loaded on demand when users access the files, or you can start a data flow node to load the data.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The scope of auto-refresh is a prefix, which is specified by the RefreshPath parameter. You can configure a maximum of five auto-refresh folders for a data flow (data stream).</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) is the time interval configured in the Settings by General-purpose Cloud Parallel File Storage to check whether data updates exist within the prefix in the source OSS bucket. If data updates exist, an auto-refresh node is started. If the frequency of object modification events in the source OSS bucket exceeds the processing capability of the General-purpose Cloud Parallel File Storage data flow, auto-refresh nodes accumulate, metadata updates are delayed, and the status of the data flow becomes <c>Misconfigured</c>. To resolve this issue, you can upgrade the data flow specification or reduce the modification frequency in the OSS bucket.</description></item>
+        /// <item><description>When you configure auto-refresh for a prefix in a General-purpose Cloud Parallel File Storage data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object in the prefix of the source OSS bucket is modified, an OSS event is generated in EventBridge and processed by the General-purpose Cloud Parallel File Storage data flow.<remarks>
+        /// <para>The event bus and event rule created by General-purpose Cloud Parallel File Storage in EventBridge contain the <c>Create for cpfs auto refresh</c> description. You cannot modify or delete the event bus or event rule. Otherwise, auto-refresh cannot remain in a Normal state.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The data stream source storage (SourceStorage) must be an OSS bucket.</description></item>
-        /// <item><description>Cloud Parallel File Storage data streams support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, confirm that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data streams of multiple Cloud Parallel File Storage file systems, or multiple data streams of the same Cloud Parallel File Storage file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage file systems export data to the same source.</description></item>
-        /// <item><description>Cross-region OSS data streams are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage data stream can access the data in the bucket. Do not delete or modify this tag while the data stream is in use. Otherwise, the Cloud Parallel File Storage data stream cannot access the data in the bucket.</para>
+        /// <item><description>Only OSS is supported Cloud Parallel File Storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>General-purpose CPFS data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple General-purpose CPFS data flows or multiple data flows of the same General-purpose CPFS file system use the same OSS bucket Cloud Parallel File Storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple General-purpose CPFS file systems export data to the same source.</description></item>
+        /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the General-purpose CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the General-purpose CPFS data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the General-purpose CPFS data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4421,37 +4427,38 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Usage notes for CPFS for Lingjun.
-        ///    This section applies to CPFS for Lingjun whose file system IDs start with <c>bmcpfs-</c>.<list type="bullet">
+        ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>Only OSS is supported as the source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as the source storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
-        /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows by using cross-account OSS buckets.</description></item>
+        /// <item><description>You need to set the account id parameter only when you use a cross-account OSS bucket.</description></item>
+        /// <item><description>Before you use a cross-account OSS bucket, you must grant permissions to the account. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Authorize cross-account data flows</a>.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
-        /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
+        /// <item><description>Limits of data flows on file systems.<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in the file system path associated with the data flow. Otherwise, a Permission Denied or Directory Not Empty error is reported.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Ultra-long paths are not supported. The maximum path length supported by a data flow is 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After a symlink file is imported to CPFS for Lingjun, it is converted to a regular file that contains data, and the symlink information is lost.</description></item>
-        /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
-        /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
+        /// <item><description>Limits on data flow imports.<list type="bullet">
+        /// <item><description>When a symbolic link file is imported into CPFS for Lingjun, it is converted into a regular file containing data, and the symbolic link information is lost.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only the latest version is copied.</description></item>
+        /// <item><description>File or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After a symlink file is synchronized to OSS, the file that the symlink points to is not synchronized. Instead, the symlink becomes a regular empty object with no data.</description></item>
-        /// <item><description>A hardlink file is synchronized to OSS as a regular file.</description></item>
-        /// <item><description>Socket, Device, and Pipe files are converted to regular empty objects with no data when exported to an OSS bucket.</description></item>
-        /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
+        /// <item><description>Data flow export limits</description></item>
+        /// <item><description>Limits on data flow exports<list type="bullet">
+        /// <item><description>After a symlink file is synchronized to OSS, the file pointed to by the symlink is not synchronized. Instead, the symlink file becomes a regular empty object without data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS only as regular files.</description></item>
+        /// <item><description>When socket, device, or pipe files are exported to an OSS bucket, they become regular empty objects without data.</description></item>
+        /// <item><description>Directory paths longer than 1,023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4474,82 +4481,82 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data flow between a CPFS file system (General-purpose or CPFS for Lingjun) and source storage.</para>
+        /// <para>Creates a data flow between a General-purpose CPFS or CPFS for Lingjun file system and a source storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation applies to the following products:<table>
+        /// <item><description>This operation is applicable to the following services:<table>
         /// <thead>
         /// <tr>
-        /// <th>Product</th>
+        /// <th>Service</th>
         /// <th>File system ID format</th>
         /// <th>Minimum version that supports data flows</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td><b>General-purpose CPFS</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 or later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 and later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 or later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 and later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>General-purpose CPFS and CPFS for Lingjun share the same set of API operations but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>: General-purpose CPFS and CPFS for Lingjun share the same set of API operations, but differ in parameter values and supported features. Refer to the corresponding section based on the service you use.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
         /// <item><description>You can create a data flow only when the General-purpose CPFS or CPFS for Lingjun file system is in the Running state.</description></item>
-        /// <item><description>A maximum of <b>10</b> data flows can be created for a single General-purpose CPFS or CPFS for Lingjun file system.</description></item>
-        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to check whether the data flow is created.</description></item>
+        /// <item><description>You can create a maximum of <b>10</b> data flows for a General-purpose CPFS or CPFS for Lingjun file system.</description></item>
+        /// <item><description>Creating a data flow typically takes 2 to 5 minutes. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to check whether the data flow is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Permissions.
-        ///   When you create a data flow, Cloud Parallel File Storage obtains the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</description></item>
+        ///   When you create a data flow, Cloud Parallel File Storage assumes the <c>AliyunServiceRoleForNasOssDataflow</c> and <c>AliyunServiceRoleForNasEventNotification</c> service-linked roles to associate the service for the data stream. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">Service-linked roles for Cloud Parallel File Storage</a>.</description></item>
         /// <item><description>Usage notes for General-purpose CPFS.
-        ///    This section applies to General-purpose CPFS whose file system IDs start with <c>cpfs-</c>.<list type="bullet">
+        ///    This section applies to General-purpose CPFS file systems whose IDs start with <c>cpfs-</c>.<list type="bullet">
         /// <item><description>Billing<list type="bullet">
-        /// <item><description>Creating a data flow incurs fees based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
-        /// <item><description>When you use auto-refresh, EventBridge collects object modification events from the source OSS storage, which incurs fees. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">EventBridge billing</a>.</description></item>
+        /// <item><description>You are billed for a data flow based on the data flow bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing of General-purpose CPFS</a>.</description></item>
+        /// <item><description>If you enable auto-refresh, EventBridge is used to collect object modification events from the source OSS bucket. You are billed for these events. For more information, see <a href="https://help.aliyun.com/document_detail/163752.html">Billing of EventBridge</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data stream specifications<list type="bullet">
-        /// <item><description>The data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data stream bandwidth refers to the maximum transfer bandwidth that the data stream can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
-        /// <item><description>Inventory check: Setting DryRun to true checks whether the resources required to create a data stream of the specified specification are available.</description></item>
+        /// <item><description>Data flow specifications<list type="bullet">
+        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth is the maximum transmission bandwidth that the data flow can achieve when importing or exporting data.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by a General-purpose Cloud Parallel File Storage mount target. Make sure that the vSwitch has sufficient IP addresses.</description></item>
+        /// <item><description>Resource check: If you set the DryRun Settings parameter to true, the system checks whether the resources required to create a data flow (data stream) of the specified specification are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Fileset<list type="bullet">
-        /// <item><description>The destination of a data flow is a Fileset in the General-purpose CPFS file system. A Fileset is a new directory tree structure in the General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capability.</description></item>
-        /// <item><description>The Fileset must already exist when you create a data flow and cannot be nested with other Filesets. Only one data flow can be created on a Fileset, corresponding to one source storage.</description></item>
-        /// <item><description>The maximum number of files in a Fileset is 1 million. If the number of files imported from an OSS bucket exceeds this limit, creating new files returns a <c>no space</c> error.<remarks>
-        /// <para>If data already exists in the Fileset, the existing data in the Fileset is cleared and replaced with data synchronized from OSS after the data flow is created.</para>
+        /// <item><description>The destination of a data flow is a fileset in a General-purpose CPFS file system. A fileset is a new directory tree structure in a General-purpose CPFS file system. It is a small file system within the parent file system and has an independent inode space and management capabilities.</description></item>
+        /// <item><description>The fileset must already exist when you create a data flow, and it cannot be nested with other filesets. You can create only one data flow on a fileset, which corresponds to one source storage.</description></item>
+        /// <item><description>A fileset can contain a maximum of 1 million files. If the number of files imported from the OSS bucket exceeds this limit, a <c>no space</c> error is reported when you create new files.<remarks>
+        /// <para>If the fileset already contains data, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket after the data flow is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Automatic synchronization<list type="bullet">
-        /// <item><description>After automatic synchronization (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data stream node.</description></item>
-        /// <item><description>Automatic synchronization relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 automatic synchronization folders can be configured for a data stream.</description></item>
-        /// <item><description>The automatic synchronization interval (AutoRefreshInterval) specifies the synchronization interval that Cloud Parallel File Storage sets for checking whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization node is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage data stream, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to <c>Misconfigured</c>. You can increase the data stream specification or reduce the OSS modification frequency to resolve this issue.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage data stream, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage data stream.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, automatic synchronization does not work Normal.</para>
+        /// <item><description>Auto-refresh<list type="bullet">
+        /// <item><description>After you configure auto-refresh, when the data in the source storage changes, the changed metadata undergoes automatic synchronization to the General-purpose Cloud Parallel File Storage file system. The changed data is loaded on demand when users access the files, or you can start a data flow node to load the data.</description></item>
+        /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
+        /// <item><description>The scope of auto-refresh is a prefix, which is specified by the RefreshPath parameter. You can configure a maximum of five auto-refresh folders for a data flow (data stream).</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) is the time interval configured in the Settings by General-purpose Cloud Parallel File Storage to check whether data updates exist within the prefix in the source OSS bucket. If data updates exist, an auto-refresh node is started. If the frequency of object modification events in the source OSS bucket exceeds the processing capability of the General-purpose Cloud Parallel File Storage data flow, auto-refresh nodes accumulate, metadata updates are delayed, and the status of the data flow becomes <c>Misconfigured</c>. To resolve this issue, you can upgrade the data flow specification or reduce the modification frequency in the OSS bucket.</description></item>
+        /// <item><description>When you configure auto-refresh for a prefix in a General-purpose Cloud Parallel File Storage data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object in the prefix of the source OSS bucket is modified, an OSS event is generated in EventBridge and processed by the General-purpose Cloud Parallel File Storage data flow.<remarks>
+        /// <para>The event bus and event rule created by General-purpose Cloud Parallel File Storage in EventBridge contain the <c>Create for cpfs auto refresh</c> description. You cannot modify or delete the event bus or event rule. Otherwise, auto-refresh cannot remain in a Normal state.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The data stream source storage (SourceStorage) must be an OSS bucket.</description></item>
-        /// <item><description>Cloud Parallel File Storage data streams support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, confirm that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data streams of multiple Cloud Parallel File Storage file systems, or multiple data streams of the same Cloud Parallel File Storage file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage file systems export data to the same source.</description></item>
-        /// <item><description>Cross-region OSS data streams are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage data stream can access the data in the bucket. Do not delete or modify this tag while the data stream is in use. Otherwise, the Cloud Parallel File Storage data stream cannot access the data in the bucket.</para>
+        /// <item><description>Only OSS is supported Cloud Parallel File Storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>General-purpose CPFS data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple General-purpose CPFS data flows or multiple data flows of the same General-purpose CPFS file system use the same OSS bucket Cloud Parallel File Storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple General-purpose CPFS file systems export data to the same source.</description></item>
+        /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the General-purpose CPFS file system.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the General-purpose CPFS data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the General-purpose CPFS data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4557,37 +4564,38 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Usage notes for CPFS for Lingjun.
-        ///    This section applies to CPFS for Lingjun whose file system IDs start with <c>bmcpfs-</c>.<list type="bullet">
+        ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
-        /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. If you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>Only OSS is supported as the source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support encrypted and unencrypted access to OSS. If you select the encrypted (SSL) access method, make sure that encryption in transit is enabled for the OSS bucket.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as the source storage, you must enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
-        /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows by using cross-account OSS buckets.</description></item>
+        /// <item><description>You need to set the account id parameter only when you use a cross-account OSS bucket.</description></item>
+        /// <item><description>Before you use a cross-account OSS bucket, you must grant permissions to the account. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Authorize cross-account data flows</a>.<remarks>
+        /// <para>Before you create a data flow, you must add a tag (key: cpfs-dataflow, value: true) to the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
-        /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
+        /// <item><description>Limits of data flows on file systems.<list type="bullet">
+        /// <item><description>You cannot rename a non-empty directory in the file system path associated with the data flow. Otherwise, a Permission Denied or Directory Not Empty error is reported.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Ultra-long paths are not supported. The maximum path length supported by a data flow is 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After a symlink file is imported to CPFS for Lingjun, it is converted to a regular file that contains data, and the symlink information is lost.</description></item>
-        /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
-        /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
+        /// <item><description>Limits on data flow imports.<list type="bullet">
+        /// <item><description>When a symbolic link file is imported into CPFS for Lingjun, it is converted into a regular file containing data, and the symbolic link information is lost.</description></item>
+        /// <item><description>If an OSS bucket has multiple versions, only the latest version is copied.</description></item>
+        /// <item><description>File or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After a symlink file is synchronized to OSS, the file that the symlink points to is not synchronized. Instead, the symlink becomes a regular empty object with no data.</description></item>
-        /// <item><description>A hardlink file is synchronized to OSS as a regular file.</description></item>
-        /// <item><description>Socket, Device, and Pipe files are converted to regular empty objects with no data when exported to an OSS bucket.</description></item>
-        /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
+        /// <item><description>Data flow export limits</description></item>
+        /// <item><description>Limits on data flow exports<list type="bullet">
+        /// <item><description>After a symlink file is synchronized to OSS, the file pointed to by the symlink is not synchronized. Instead, the symlink file becomes a regular empty object without data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS only as regular files.</description></item>
+        /// <item><description>When socket, device, or pipe files are exported to an OSS bucket, they become regular empty objects without data.</description></item>
+        /// <item><description>Directory paths longer than 1,023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4900,20 +4908,20 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Notes on CPFS<list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and queued.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Notes on CPFS for Lingjun<list type="bullet">
-        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
+        /// <item><description>CPFS for Lingjun usage notes<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -5016,20 +5024,20 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Notes on CPFS<list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and queued.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Notes on CPFS for Lingjun<list type="bullet">
-        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
+        /// <item><description>CPFS for Lingjun usage notes<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -5132,20 +5140,20 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Notes on CPFS<list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and queued.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Notes on CPFS for Lingjun<list type="bullet">
-        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
+        /// <item><description>CPFS for Lingjun usage notes<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -5172,20 +5180,20 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Notes on CPFS<list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS usage notes<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and queued.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Notes on CPFS for Lingjun<list type="bullet">
-        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. For large amounts of data, split the data into multiple tasks.</description></item>
-        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
+        /// <item><description>CPFS for Lingjun usage notes<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status. The time required to complete a task depends on the amount of data to be imported or exported. For a large amount of data, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create data flow tasks only for data flows in the Running state.</description></item>
+        /// <item><description>When you create an export task, ensure that the total length of the absolute paths of the files to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -5645,13 +5653,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5704,6 +5712,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemType))
             {
                 query["FileSystemType"] = request.FileSystemType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpnZone))
+            {
+                query["HpnZone"] = request.HpnZone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
             {
@@ -5777,13 +5789,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5836,6 +5848,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemType))
             {
                 query["FileSystemType"] = request.FileSystemType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpnZone))
+            {
+                query["HpnZone"] = request.HpnZone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
             {
@@ -5909,13 +5925,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5941,13 +5957,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.aliyun.com/price/product?#/nas/">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.
         /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Before you call this operation, make sure that you fully understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you invoke this operation, the NAS service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for File Storage NAS</a>.</description></item>
+        /// <item><description>Before calling this operation, ensure that you fully understand the billing methods and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing overview</a> and <a href="https://www.alibabacloud.com/zh/product/nas/pricing?_p_lc=1&spm=a2796.7960336.8215766810.64.414bb91aiZQiRG&spm=a2c4g.11186623.help-menu-27516.d_5_1_4_2_0.572a1880hEiKCk">Pricing</a>.</description></item>
+        /// <item><description>To create a file system, you must pass real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification for accounts</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6420,9 +6436,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>Up to 20 lifecycle management policies for General-purpose NAS can be created in each region.</description></item>
+        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support the creation of lifecycle management policies.</description></item>
+        /// <item><description>You can create up to 10 Auto-type and 100 OnDemand-type lifecycle management policies for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>You can create up to 20 lifecycle management policies for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6511,9 +6527,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>Up to 20 lifecycle management policies for General-purpose NAS can be created in each region.</description></item>
+        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support the creation of lifecycle management policies.</description></item>
+        /// <item><description>You can create up to 10 Auto-type and 100 OnDemand-type lifecycle management policies for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>You can create up to 20 lifecycle management policies for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6602,9 +6618,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>Up to 20 lifecycle management policies for General-purpose NAS can be created in each region.</description></item>
+        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support the creation of lifecycle management policies.</description></item>
+        /// <item><description>You can create up to 10 Auto-type and 100 OnDemand-type lifecycle management policies for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>You can create up to 20 lifecycle management policies for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6629,9 +6645,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>Up to 20 lifecycle management policies for General-purpose NAS can be created in each region.</description></item>
+        /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support the creation of lifecycle management policies.</description></item>
+        /// <item><description>You can create up to 10 Auto-type and 100 OnDemand-type lifecycle management policies for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>You can create up to 20 lifecycle management policies for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13062,14 +13078,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow information of a CPFS file system.</para>
+        /// <para>Queries the data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Data flows are supported only by CPFS 2.2.0 and later, and CPFS for Lingjun 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Among the filter keys in Filters, FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match, while FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
         /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
@@ -13125,14 +13141,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow information of a CPFS file system.</para>
+        /// <para>Queries the data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Data flows are supported only by CPFS 2.2.0 and later, and CPFS for Lingjun 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Among the filter keys in Filters, FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match, while FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
         /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
@@ -13188,14 +13204,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow information of a CPFS file system.</para>
+        /// <para>Queries the data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Data flows are supported only by CPFS 2.2.0 and later, and CPFS for Lingjun 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Among the filter keys in Filters, FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match, while FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
         /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
@@ -13215,14 +13231,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow information of a CPFS file system.</para>
+        /// <para>Queries the data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Data flows are supported only by CPFS 2.2.0 and later, and CPFS for Lingjun 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Among the filter keys in Filters, FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match, while FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
         /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
@@ -14108,9 +14124,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
-        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems to complete the association first. You can call ListVscs of Lingjun Intelligent Computing eflo-controller/2022-12-15 to query VscIds. If no virtual storage channel has been created, call CreateVsc to create one.</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist, and then create a file system in the NAS console.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means that the ResourceIds.VscId values must be identical.</description></item>
+        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems first to complete the association. You can call the ListVscs operation of Lingjun AI Computing Service eflo-controller/2022-12-15 to query the VscId. If the virtual storage channel is not created, call CreateVsc to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14171,9 +14187,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
-        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems to complete the association first. You can call ListVscs of Lingjun Intelligent Computing eflo-controller/2022-12-15 to query VscIds. If no virtual storage channel has been created, call CreateVsc to create one.</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist, and then create a file system in the NAS console.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means that the ResourceIds.VscId values must be identical.</description></item>
+        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems first to complete the association. You can call the ListVscs operation of Lingjun AI Computing Service eflo-controller/2022-12-15 to query the VscId. If the virtual storage channel is not created, call CreateVsc to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14234,9 +14250,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
-        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems to complete the association first. You can call ListVscs of Lingjun Intelligent Computing eflo-controller/2022-12-15 to query VscIds. If no virtual storage channel has been created, call CreateVsc to create one.</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist, and then create a file system in the NAS console.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means that the ResourceIds.VscId values must be identical.</description></item>
+        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems first to complete the association. You can call the ListVscs operation of Lingjun AI Computing Service eflo-controller/2022-12-15 to query the VscId. If the virtual storage channel is not created, call CreateVsc to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14261,9 +14277,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only CPFS for Lingjun supports this feature.</description></item>
-        /// <item><description>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</description></item>
-        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems to complete the association first. You can call ListVscs of Lingjun Intelligent Computing eflo-controller/2022-12-15 to query VscIds. If no virtual storage channel has been created, call CreateVsc to create one.</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this feature. To use CPFS for Lingjun, you must first submit a ticket to apply for the service whitelist, and then create a file system in the NAS console.</description></item>
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIds. This means that the ResourceIds.VscId values must be identical.</description></item>
+        /// <item><description>To query the association results between file systems and virtual storage channels, call AttachVscToFilesystems first to complete the association. You can call the ListVscs operation of Lingjun AI Computing Service eflo-controller/2022-12-15 to query the VscId. If the virtual storage channel is not created, call CreateVsc to create one.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14287,7 +14303,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
+        /// <para>This feature is supported only by General-purpose NAS file systems and CPFS for Lingjun.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14330,7 +14346,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
+        /// <para>This feature is supported only by General-purpose NAS file systems and CPFS for Lingjun.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14373,7 +14389,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
+        /// <para>This feature is supported only by General-purpose NAS file systems and CPFS for Lingjun.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14396,7 +14412,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</para>
+        /// <para>This feature is supported only by General-purpose NAS file systems and CPFS for Lingjun.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25110,8 +25126,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
-        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported. UpdateLifecyclePolicy uses overwrite semantics. If a non-required parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configuration, append the new lifecycle rule configuration, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25181,8 +25196,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
-        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported. UpdateLifecyclePolicy uses overwrite semantics. If a non-required parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configuration, append the new lifecycle rule configuration, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25252,8 +25266,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
-        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported. UpdateLifecyclePolicy uses overwrite semantics. If a non-required parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configuration, append the new lifecycle rule configuration, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25271,8 +25284,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
-        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported. UpdateLifecyclePolicy uses overwrite semantics. If a non-required parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configuration, append the new lifecycle rule configuration, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">

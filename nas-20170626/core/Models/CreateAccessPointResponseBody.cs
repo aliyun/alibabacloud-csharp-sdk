@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public CreateAccessPointResponseBodyAccessPoint AccessPoint { get; set; }
         public class CreateAccessPointResponseBodyAccessPoint : TeaModel {
             /// <summary>
-            /// <para>The access point domain name.</para>
+            /// <para>The domain name of the access point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessPointDomain { get; set; }
 
             /// <summary>
-            /// <para>The access point ID.</para>
+            /// <para>The ID of the access point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15yd****</para>
