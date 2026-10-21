@@ -558,7 +558,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// <para>Queries pricing based on the OpenAPI triplet and request parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -599,7 +599,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// <para>Queries pricing based on the OpenAPI triplet and request parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -640,7 +640,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// <para>Queries pricing based on the OpenAPI triplet and request parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -659,7 +659,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// <para>Queries pricing based on the OpenAPI triplet and request parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
