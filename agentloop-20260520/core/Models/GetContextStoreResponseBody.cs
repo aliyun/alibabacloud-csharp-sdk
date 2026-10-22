@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public GetContextStoreResponseBodyConfigAudit Audit { get; set; }
             public class GetContextStoreResponseBodyConfigAudit : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to write item events for candidates dropped during retrieval. Default value: false.</para>
+                /// <para>Specifies whether to write item events for dropped recall candidates. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public bool? DroppedCandidates { get; set; }
 
                 /// <summary>
-                /// <para>The recording mode for retrieval queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</para>
+                /// <para>The recording mode for recall queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>raw</para>
@@ -66,6 +66,105 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
+            /// <para>The extraction policies. You can configure 1 to 10 policies. The strategyVersion parameter indicates the snapshot version of the entire library configuration.</para>
+            /// </summary>
+            [NameInMap("extractionPolicies")]
+            [Validation(Required=false)]
+            public List<GetContextStoreResponseBodyConfigExtractionPolicies> ExtractionPolicies { get; set; }
+            public class GetContextStoreResponseBodyConfigExtractionPolicies : TeaModel {
+                /// <summary>
+                /// <para>The list of memory categories.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;preference&quot;,&quot;profile&quot;]</para>
+                /// </summary>
+                [NameInMap("categories")]
+                [Validation(Required=false)]
+                public List<string> Categories { get; set; }
+
+                /// <summary>
+                /// <para>The custom extraction instructions. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Extract only user product preferences</para>
+                /// </summary>
+                [NameInMap("customInstructions")]
+                [Validation(Required=false)]
+                public string CustomInstructions { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to apply this policy to new inputs. Default value: true. Disabling the policy does not delete historical memories.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                /// <summary>
+                /// <para>The list of exclusion rules. Content that matches these rules is not extracted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;Password&quot;,&quot;ID number&quot;]</para>
+                /// </summary>
+                [NameInMap("excludeRules")]
+                [Validation(Required=false)]
+                public List<string> ExcludeRules { get; set; }
+
+                /// <summary>
+                /// <para>The extraction model configuration.</para>
+                /// </summary>
+                [NameInMap("model")]
+                [Validation(Required=false)]
+                public GetContextStoreResponseBodyConfigExtractionPoliciesModel Model { get; set; }
+                public class GetContextStoreResponseBodyConfigExtractionPoliciesModel : TeaModel {
+                    /// <summary>
+                    /// <para>The name of the extraction model. Currently, only qwen3.8-flash is supported. Internal platform credentials are used.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>qwen3.8-flash</para>
+                    /// </summary>
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The display name of the extraction policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>User preferences</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The preset policy. Valid values: fact, toc-profile, tob-digital-twin, and custom. Default value: fact.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>fact</para>
+                /// </summary>
+                [NameInMap("preset")]
+                [Validation(Required=false)]
+                public string Preset { get; set; }
+
+                /// <summary>
+                /// <para>The stable ID of the extraction policy. The ID must start with a letter and can contain only letters, digits, underscores, and hyphens. It can be up to 64 characters in length. The ID must be unique within the same context library. Modifying the name or instructions does not change this ID.</para>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>preferences</para>
+                /// </summary>
+                [NameInMap("strategyId")]
+                [Validation(Required=false)]
+                public string StrategyId { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The extraction policy for the memory type.</para>
             /// </summary>
             [NameInMap("extractionPolicy")]
@@ -83,7 +182,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public List<string> Categories { get; set; }
 
                 /// <summary>
-                /// <para>The custom extraction instructions. This parameter is required when preset is set to custom. Length: 1 to 8,000 characters.</para>
+                /// <para>The custom extraction instructions. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Extract only user product preferences</para>
@@ -110,7 +209,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public GetContextStoreResponseBodyConfigExtractionPolicyModel Model { get; set; }
                 public class GetContextStoreResponseBodyConfigExtractionPolicyModel : TeaModel {
                     /// <summary>
-                    /// <para>The name of the extraction model. Currently, only qwen3.8-flash is supported, which uses internal platform credentials.</para>
+                    /// <para>The name of the extraction model. Currently, only qwen3.8-flash is supported. Internal platform credentials are used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>qwen3.8-flash</para>
@@ -134,7 +233,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The system-assigned coordinates of the event Logstore for the memory type, located in the Simple Log Service (SLS) project bound to the AgentSpace.</para>
+            /// <para>The system-assigned coordinates of the event Logstore for the memory type. The Logstore is located in the Simple Log Service (SLS) project bound to the AgentSpace.</para>
             /// </summary>
             [NameInMap("innerSource")]
             [Validation(Required=false)]
@@ -163,7 +262,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The metadata field mapping, where the key is the business field and the value is the storage field.</para>
+            /// <para>The metadata field mapping. The key is the business field and the value is the storage field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</para>
@@ -183,7 +282,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string MiningInterval { get; set; }
 
             /// <summary>
-            /// <para>The name of the internal running task associated with the server. Continuous libraries use this for read-only viewing of consumption records, while manual libraries can run limited mining. This is not inferred by the client and cannot replace the ingestion and retrieval criteria of the native experience library.</para>
+            /// <para>The name of the internal running task associated with the server. For continuous libraries, it is used to view consumption records in read-only mode. For manual libraries, it can run limited mining. It is not inferred by the client and cannot replace the ingestion and recall criteria of the native experience library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>experience-review-library</para>
@@ -193,7 +292,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string MiningTaskName { get; set; }
 
             /// <summary>
-            /// <para>The coordinates of observability resources for the memory type.</para>
+            /// <para>The observability resource coordinates (memory type).</para>
             /// </summary>
             [NameInMap("observability")]
             [Validation(Required=false)]
@@ -220,7 +319,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string EventsLogstore { get; set; }
 
                 /// <summary>
-                /// <para>The SLS project where both resources are located, which is the project bound to the AgentSpace.</para>
+                /// <para>The Simple Log Service (SLS) project to which both belong, which is bound to the AgentSpace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agentloop-xxx</para>
@@ -232,14 +331,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The location of the memory output dataset for the memory type.</para>
+            /// <para>The location of the memory output dataset (memory type).</para>
             /// </summary>
             [NameInMap("outputDataset")]
             [Validation(Required=false)]
             public GetContextStoreResponseBodyConfigOutputDataset OutputDataset { get; set; }
             public class GetContextStoreResponseBodyConfigOutputDataset : TeaModel {
                 /// <summary>
-                /// <para>The AgentSpace where the dataset is located.</para>
+                /// <para>The AgentSpace to which the dataset belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent-space</para>
@@ -288,7 +387,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public GetContextStoreResponseBodyConfigScopePolicy ScopePolicy { get; set; }
             public class GetContextStoreResponseBodyConfigScopePolicy : TeaModel {
                 /// <summary>
-                /// <para>At least one of the specified scope fields must be non-empty. Valid element values: userId, agentId, appId, and runId.</para>
+                /// <para>Specifies that at least one of the scope fields must be non-empty. Valid values: userId, agentId, appId, and runId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;userId&quot;]</para>
@@ -300,7 +399,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The list of service names, which are used together with source.agentSpace to locate the trace data source. This parameter cannot be modified in the current phase.</para>
+            /// <para>The list of service names used to locate the trace data source together with source.agentSpace. This parameter cannot be modified in the current phase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;order-service&quot;,&quot;payment-service&quot;]</para>
@@ -310,14 +409,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> ServiceNames { get; set; }
 
             /// <summary>
-            /// <para>The datasource config provided by the user, which serves only as the root identity for the data source.</para>
+            /// <para>The data source configuration provided by the user, which serves only as the root identifier of the data source.</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
             public GetContextStoreResponseBodyConfigSource Source { get; set; }
             public class GetContextStoreResponseBodyConfigSource : TeaModel {
                 /// <summary>
-                /// <para>The AgentSpace where the trace data source resides. It must be the same as the AgentSpace specified during creation.</para>
+                /// <para>The AgentSpace to which the trace data source belongs, which is the same as the AgentSpace to which it belonged when it was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent-space</para>
@@ -337,7 +436,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public Dictionary<string, object> Binding { get; set; }
 
                 /// <summary>
-                /// <para>The Dataset datasource config for the memory type. This parameter is required when the type is memory and source.type is dataset.</para>
+                /// <para>The data source configuration for the memory type dataset. This parameter is required when the type is memory and source.type is dataset.</para>
                 /// </summary>
                 [NameInMap("dataset")]
                 [Validation(Required=false)]
@@ -361,7 +460,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether the field is sensitive.</para>
+                        /// <para>Specifies whether the field is a sensitive field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -381,7 +480,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string SourceField { get; set; }
 
                         /// <summary>
-                        /// <para>The target path for writing data, such as metadata.customerTier.</para>
+                        /// <para>The target path for writing, such as metadata.customerTier.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>metadata.customerTier</para>
@@ -391,11 +490,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string Target { get; set; }
 
                         /// <summary>
-                        /// <para>The usage of the field. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>extraction-input: Participates in extraction.</description></item>
-                        /// <item><description>ignore: Ignored.</description></item>
-                        /// </list>
+                        /// <para>The usage of the field. Valid values: extraction-input (participates in extraction) and ignore (ignored).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>extraction-input</para>
@@ -407,7 +502,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the Dataset in the same AgentSpace. This parameter cannot be modified after creation.</para>
+                    /// <para>The name of the dataset in the same AgentSpace. This parameter cannot be modified after creation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>trajectory-with-crm-profile</para>
@@ -417,14 +512,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string DatasetName { get; set; }
 
                     /// <summary>
-                    /// <para>The row filter conditions.</para>
+                    /// <para>The row filter condition.</para>
                     /// </summary>
                     [NameInMap("filter")]
                     [Validation(Required=false)]
                     public GetContextStoreResponseBodyConfigSourceDatasetFilter Filter { get; set; }
                     public class GetContextStoreResponseBodyConfigSourceDatasetFilter : TeaModel {
                         /// <summary>
-                        /// <para>The subset of the Pipeline where clause, which is pushed down to SQL.</para>
+                        /// <para>The subset of the pipeline where clause, which is pushed down to SQL.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>appId = \&quot;crm-service\&quot;</para>
@@ -446,7 +541,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public int? PollIntervalSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The row schema contract of the Dataset. The value is fixed to MemorySourceV1 in the current phase.</para>
+                    /// <para>The row schema contract of the dataset. In the current phase, this parameter is fixed to MemorySourceV1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MemorySourceV1</para>
@@ -456,18 +551,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string SchemaContract { get; set; }
 
                     /// <summary>
-                    /// <para>The version consumption policy of the Dataset.</para>
+                    /// <para>The version consumption policy of the dataset.</para>
                     /// </summary>
                     [NameInMap("versionPolicy")]
                     [Validation(Required=false)]
                     public GetContextStoreResponseBodyConfigSourceDatasetVersionPolicy VersionPolicy { get; set; }
                     public class GetContextStoreResponseBodyConfigSourceDatasetVersionPolicy : TeaModel {
                         /// <summary>
-                        /// <para>The consumption mode. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>follow: Consumes data incrementally based on __dataset_seq.</description></item>
-                        /// <item><description>fixed: Consumes the specified ACTIVE version in full at once.</description></item>
-                        /// </list>
+                        /// <para>The consumption mode. Valid values: follow (incremental consumption based on __dataset_seq) and fixed (full consumption of the specified ACTIVE version at once).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>follow</para>
@@ -487,7 +578,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public long? StartSeq { get; set; }
 
                         /// <summary>
-                        /// <para>The Dataset version specified for the fixed mode.</para>
+                        /// <para>The dataset version specified for the fixed mode.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>v3</para>
@@ -501,7 +592,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the source Dataset for the experience type in the current AgentSpace.</para>
+                /// <para>The name of the source dataset for the experience type in the current AgentSpace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>reviewed_trajectories</para>
@@ -511,7 +602,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string DatasetName { get; set; }
 
                 /// <summary>
-                /// <para>The input format of the Dataset. For Datasets from the experience library, the value is atif.</para>
+                /// <para>The input format of the dataset. For the experience base dataset, the source is atif.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>atif</para>
@@ -521,7 +612,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of records to read from the Dataset at a time. Valid values: 1 to 1000.</para>
+                /// <para>The maximum number of records to read from the dataset at a time. Valid values: 1 to 1000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -542,21 +633,21 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The trajectory datasource config for the memory type. This parameter is required when the type is memory and source.type is trajectory.</para>
+                /// <para>The data source configuration for the memory type trajectory. This parameter is required when the type is memory and source.type is trajectory.</para>
                 /// </summary>
                 [NameInMap("trajectory")]
                 [Validation(Required=false)]
                 public GetContextStoreResponseBodyConfigSourceTrajectory Trajectory { get; set; }
                 public class GetContextStoreResponseBodyConfigSourceTrajectory : TeaModel {
                     /// <summary>
-                    /// <para>The trajectory filter conditions. Conditions are combined with AND, while items within a list are combined with OR.</para>
+                    /// <para>The trajectory filter condition. Multiple conditions are combined with AND, and conditions within a list are combined with OR.</para>
                     /// </summary>
                     [NameInMap("filter")]
                     [Validation(Required=false)]
                     public GetContextStoreResponseBodyConfigSourceTrajectoryFilter Filter { get; set; }
                     public class GetContextStoreResponseBodyConfigSourceTrajectoryFilter : TeaModel {
                         /// <summary>
-                        /// <para>The list of agent names. An explicitly empty list returns a 400 error.</para>
+                        /// <para>The list of agent names. An explicit empty list returns a 400 error.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;sales-copilot&quot;]</para>
@@ -576,7 +667,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public bool? ExcludeDegraded { get; set; }
 
                         /// <summary>
-                        /// <para>The minimum number of steps. The value must be greater than or equal to 0.</para>
+                        /// <para>The minimum step count, which must be greater than or equal to 0.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -586,7 +677,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public int? MinStepCount { get; set; }
 
                         /// <summary>
-                        /// <para>The native Simple Log Service (SLS) query statement, which is combined with the preceding conditions using AND.</para>
+                        /// <para>The native Simple Log Service (SLS) query statement. This statement is combined with the preceding conditions using the AND operator.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>tool_names:&quot;search_order&quot;</para>
@@ -596,7 +687,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string Query { get; set; }
 
                         /// <summary>
-                        /// <para>The list of service names. A single trailing asterisk (*) is supported. An explicitly empty list returns a 400 error.</para>
+                        /// <para>The list of service names. A single trailing asterisk (*) is supported. An explicit empty list returns a 400 error.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;crm-service&quot;,&quot;app-*&quot;]</para>
@@ -690,7 +781,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The source type, which can be trajectory or dataset. For experience, if not specified, it inherits the trajectory configuration. For Dataset, it uses the datasetName, format, and binding at this level. The default is manual. If versionPolicy.mode is follow, it continuously processes and automatically applies changes to this experience store. For memory, if not specified, it indicates manual, meaning only AddContexts writes data. Otherwise, it uses the sub-configuration of the trajectory or dataset with the same name. This property cannot be modified after creation.</para>
+                /// <para>The source type, which can be trajectory or dataset. For experience, if not specified, the trajectory configuration is used. For Dataset, the datasetName, format, and binding at the current level are used. The default mode is manual. If versionPolicy.mode is set to follow, continuous processing is performed and automatically applied to the experience library. For memory, if not specified, the mode is manual (only written by AddContexts). Otherwise, the trajectory or dataset sub-configuration with the same name is used. This parameter cannot be modified after creation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataset</para>
@@ -700,14 +791,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The continuous consumption configuration for the native experience store Dataset. The default is manual. The follow mode only allows binding.selection.mode=all and consumes by append sequence. This cannot be changed after creation.</para>
+                /// <para>The continuous consumption configuration for the native experience library Dataset. The default mode is manual. The follow mode only allows binding.selection.mode to be set to all, and consumes data by append sequence number. This parameter cannot be modified after creation.</para>
                 /// </summary>
                 [NameInMap("versionPolicy")]
                 [Validation(Required=false)]
                 public GetContextStoreResponseBodyConfigSourceVersionPolicy VersionPolicy { get; set; }
                 public class GetContextStoreResponseBodyConfigSourceVersionPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The continuous consumption mode, which is fixed to follow.</para>
+                    /// <para>The continuous consumption mode. The value is fixed to follow.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>follow</para>
@@ -717,7 +808,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string Mode { get; set; }
 
                     /// <summary>
-                    /// <para>The initial consumed append sequence, which is a decimal string of a non-negative int64. The default is 0. It uses __dataset_seq. Business timestamps are not used as consumption checkpoints.</para>
+                    /// <para>The initial consumed append sequence number. The value is a decimal string of a non-negative int64 integer. Default value: 0. The __dataset_seq field is used, and the business timestamp is not used as the consumption checkpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -731,38 +822,38 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The data source running status for memory type and experience Dataset follow mode. The experience store submits a checkpoint only after successful publishing and automatic application. Pausing and restarting retain the checkpoint.</para>
+            /// <para>The running status of the data source, applicable to the memory type and experience Dataset follow mode. The experience library submits a checkpoint only after it is published and automatically applied successfully. Pausing and restarting retain the checkpoint.</para>
             /// </summary>
             [NameInMap("sourceStatus")]
             [Validation(Required=false)]
             public GetContextStoreResponseBodyConfigSourceStatus SourceStatus { get; set; }
             public class GetContextStoreResponseBodyConfigSourceStatus : TeaModel {
                 /// <summary>
-                /// <para>The processing progress. For memory trajectory, it includes processTimeNs and watermarkMs. For dataset, it includes seq. For manual, it is empty. For experience Dataset follow mode, seq uses an exact int64 decimal string.</para>
+                /// <para>The processing progress. For memory trajectory, the format is {processTimeNs, watermarkMs}. For dataset, the format is {seq}. For manual, the format is {}. For experience Dataset follow, the seq field uses an exact int64 decimal string.</para>
                 /// </summary>
                 [NameInMap("checkpoint")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Checkpoint { get; set; }
 
                 /// <summary>
-                /// <para>The current scheduled sequence window for experience Dataset follow mode, including after, until, and runId. All sequences are decimal strings. Failures do not advance the submitted checkpoint.</para>
+                /// <para>The current reserved sequence window for experience Dataset follow, in the format of {after, until, runId}. All sequence numbers are decimal strings. If a failure occurs, the submitted checkpoint is not advanced.</para>
                 /// </summary>
                 [NameInMap("currentWindow")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> CurrentWindow { get; set; }
 
                 /// <summary>
-                /// <para>The desensitized latest error message. It is empty when the status is normal.</para>
+                /// <para>The last desensitized error message. This field is empty when the status is normal.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Timeout reading the data source</para>
+                /// <para>Data source read timeout</para>
                 /// </summary>
                 [NameInMap("lastError")]
                 [Validation(Required=false)]
                 public string LastError { get; set; }
 
                 /// <summary>
-                /// <para>The run ID of the last successful automatic application to the native experience store. This is for audit purposes only.</para>
+                /// <para>The run ID of the last successful automatic application to the native experience library. This field is for audit purposes only.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>opr-example</para>
@@ -782,7 +873,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string LastWindowAt { get; set; }
 
                 /// <summary>
-                /// <para>The consecutive retry count.</para>
+                /// <para>The number of consecutive retries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -792,7 +883,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public int? RetryCount { get; set; }
 
                 /// <summary>
-                /// <para>The data source status. Valid values: Validating, Ready, Running, Retrying, Paused, SourceSchemaChanged, and Failed.</para>
+                /// <para>The state of the data source. Valid values: Validating, Ready, Running, Retrying, Paused, SourceSchemaChanged, and Failed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -811,7 +902,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public GetContextStoreResponseBodyConfigStoragePolicy StoragePolicy { get; set; }
             public class GetContextStoreResponseBodyConfigStoragePolicy : TeaModel {
                 /// <summary>
-                /// <para>The allowed storage actions. The default is all: ADD, UPDATE, MERGE, and DELETE.</para>
+                /// <para>The allowed storage actions. Default value: all actions. Valid values: ADD, UPDATE, MERGE, and DELETE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</para>
@@ -821,7 +912,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public List<string> AllowedActions { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to deduplicate in event mode. The default is true.</para>
+                /// <para>Specifies whether to enable deduplication in event mode. Default value: true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -831,7 +922,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public bool? Dedupe { get; set; }
 
                 /// <summary>
-                /// <para>The human edit protection. The default is true. When enabled, automatic extraction does not overwrite manually modified memories.</para>
+                /// <para>Specifies whether to enable human edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memories.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -841,7 +932,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public bool? HumanEditProtection { get; set; }
 
                 /// <summary>
-                /// <para>The upsert merge key. Valid values: factKey, semantic, and both. The default is semantic.</para>
+                /// <para>The merge key for upsert operations. Default value: semantic. Valid values: factKey, semantic, and both.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>semantic</para>
@@ -851,7 +942,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string MergeKey { get; set; }
 
                 /// <summary>
-                /// <para>The storage mode. Valid values: event for event appending, and upsert for merge updating. The default is upsert.</para>
+                /// <para>The storage mode. Default value: upsert. Valid values: event (event append) and upsert (merge update).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>upsert</para>
@@ -861,7 +952,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// <para>The semantic merge similarity threshold. Valid values: 0 to 1. The default is 0.4.</para>
+                /// <para>The similarity threshold for semantic merging. Valid values: 0 to 1. Default value: 0.4.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.4</para>
@@ -871,7 +962,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public double? SimilarityThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The memory expiration days. A value of 0 indicates no expiration.</para>
+                /// <para>The number of days before memories expire. A value of 0 indicates that memories do not expire.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -883,7 +974,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The current effective strategy version number for the memory type.</para>
+            /// <para>The currently effective strategy version number for the memory type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -895,7 +986,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The context store name.</para>
+        /// <para>The name of the context store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-context-store</para>
@@ -905,7 +996,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ContextStoreName { get; set; }
 
         /// <summary>
-        /// <para>The context store type, such as experience for experience store and memory for memory store.</para>
+        /// <para>The type of the context store, such as experience or memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>experience</para>
@@ -915,7 +1006,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ContextType { get; set; }
 
         /// <summary>
-        /// <para>The context store creation time in ISO 8601 UTC format.</para>
+        /// <para>The time when the context store was created, in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -926,7 +1017,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The context store description.</para>
+        /// <para>The description of the context store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My context store</para>
@@ -936,7 +1027,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the context store.</para>
+        /// <para>The ID of the region where the context store is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -956,7 +1047,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The context store status. Valid values: ACTIVE, INITIALIZING, and FAILED.</para>
+        /// <para>The status of the context store, such as ACTIVE, INITIALIZING, or FAILED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
@@ -966,7 +1057,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The last update time of the context store in ISO 8601 UTC format.</para>
+        /// <para>The time when the context store was last updated, in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>

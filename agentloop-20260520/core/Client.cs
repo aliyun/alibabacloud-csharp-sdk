@@ -4415,7 +4415,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an AgentSpace.</para>
+        /// <para>Queries the AgentSpace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4455,7 +4455,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an AgentSpace.</para>
+        /// <para>Queries the AgentSpace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4495,7 +4495,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an AgentSpace.</para>
+        /// <para>Queries the AgentSpace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4514,7 +4514,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an AgentSpace.</para>
+        /// <para>Queries the AgentSpace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4533,7 +4533,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context store.</para>
+        /// <para>Queries a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4573,7 +4573,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context store.</para>
+        /// <para>Queries a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4613,7 +4613,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context store.</para>
+        /// <para>Queries a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4632,7 +4632,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context store.</para>
+        /// <para>Queries a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9277,6 +9277,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["scope"] = request.Scope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyIds))
+            {
+                body["strategyIds"] = request.StrategyIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
                 body["threshold"] = request.Threshold;
@@ -9350,6 +9354,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 body["scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyIds))
+            {
+                body["strategyIds"] = request.StrategyIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {

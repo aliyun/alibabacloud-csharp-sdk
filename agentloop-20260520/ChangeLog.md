@@ -1,3 +1,10 @@
+2026-10-22 Version: 2.4.2
+- Update API CreateContextStore: add request parameters body.config.extractionPolicies.
+- Update API GetContextStore: add response parameters Body.config.extractionPolicies.
+- Update API SearchContext: add request parameters body.strategyIds.
+- Update API UpdateContextStore: add request parameters body.config.extractionPolicies.
+
+
 2026-10-20 Version: 2.4.1
 - Update API CreateContextStore: add request parameters body.config.source.binding.
 - Update API CreateContextStore: add request parameters body.config.source.datasetName.

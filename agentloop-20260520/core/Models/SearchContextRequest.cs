@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class SearchContextRequest : TeaModel {
         /// <summary>
-        /// <para>The structured filter conditions. The key is the field name, and the value is the expected matching value.</para>
+        /// <para>The structured filter conditions. The key is the field name, and the value is the expected match value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;userId&quot;:&quot;alice&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Filter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to structurally format the returned results.</para>
+        /// <para>Specifies whether to apply structured formatting to the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Formatted { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include memories with sourceState=inactive. Default value: false.</para>
+        /// <para>Specifies whether to include memories whose sourceState is inactive. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? IncludeInactive { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of returned results, which corresponds to the Top-N similarity.</para>
+        /// <para>The maximum number of returned results, which corresponds to the top N results by similarity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -120,7 +120,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The similarity threshold. Results with a similarity score lower than this value are filtered out. Valid values: 0 to 1.</para>
+        /// <para>Filters results by extraction strategy ID. Multiple IDs in the list are evaluated with an OR condition. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. If the format is valid but no matching IDs are found, an empty result is returned. IDs of historically removed strategies are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;preferences&quot;,&quot;profile&quot;]</para>
+        /// </summary>
+        [NameInMap("strategyIds")]
+        [Validation(Required=false)]
+        public List<string> StrategyIds { get; set; }
+
+        /// <summary>
+        /// <para>The similarity threshold. Results with a similarity score below this value are filtered out. Valid values: 0 to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.5</para>

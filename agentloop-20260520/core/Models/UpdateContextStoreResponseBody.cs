@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateContextStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
+        /// <para>The request ID, which is used to locate the request when troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version number is the same as that before the update.</para>
+        /// <para>The strategy version that takes effect after the update for the memory type. If the strategy remains unchanged, the version is the same as the one before the update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

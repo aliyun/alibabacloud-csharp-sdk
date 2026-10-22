@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
-        /// <para>The CloudMonitor workspace.</para>
+        /// <para>The CMS workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-cms-workspace</para>
@@ -67,6 +67,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public GetAgentSpaceResponseBodyMseNamespace MseNamespace { get; set; }
         public class GetAgentSpaceResponseBodyMseNamespace : TeaModel {
+            /// <summary>
+            /// <para>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AutoCreated</para>
+            /// </summary>
             [NameInMap("bindType")]
             [Validation(Required=false)]
             public string BindType { get; set; }

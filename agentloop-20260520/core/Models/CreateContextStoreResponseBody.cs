@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateContextStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate the request when you troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the currently effective strategy for the memory type.</para>
+        /// <para>The version number of the currently effective strategy (memory type).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
