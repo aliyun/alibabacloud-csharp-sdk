@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DeleteDBClusterBindingRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of Cluster 1.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of Cluster 2.</para>
+        /// <para>The ID of the other cluster in the binding relationship.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

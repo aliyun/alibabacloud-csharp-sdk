@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of regions.</para>
+        /// <para>The list of region data.</para>
         /// </summary>
         [NameInMap("RegionModelList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>An array of zones.</para>
+            /// <para>The list of zones.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 /// <para>The zone description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>北京H可用区</para>
+                /// <para>Beijing H Zone</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the VPC is disabled.</para>
+                /// <para>Indicates whether the zone is disabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string SubDomain { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the VPC is enabled.</para>
+                /// <para>Indicates whether VPC is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public bool? VpcEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the virtual private cloud (VPC) is available.</para>
+                /// <para>Indicates whether VPC is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing-h</para>

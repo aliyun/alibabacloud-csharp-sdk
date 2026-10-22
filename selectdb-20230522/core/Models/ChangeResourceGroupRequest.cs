@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The destination resource group.</para>
+        /// <para>The ID of the target resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance you want to move.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Default value: <c>DBInstance</c>.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DBInstance</para>

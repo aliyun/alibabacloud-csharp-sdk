@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The billing method of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
         /// </description></item>
-        /// <item><description><para><b>Prepaid</b>: subscription.</para>
+        /// <item><description><para><b>Prepaid</b>: subscription</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -37,31 +37,33 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// <para>The number of nodes in the cluster. This parameter takes effect only in Serverless mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ClusterNodeCount")]
         [Validation(Required=false)]
         public int? ClusterNodeCount { get; set; }
 
+        /// <summary>
+        /// <para>The node type of the cluster. This parameter takes effect only in Serverless mode.</para>
+        /// </summary>
         [NameInMap("ClusterNodeType")]
         [Validation(Required=false)]
         public string ClusterNodeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the cluster. Valid values:</para>
+        /// <para>The cluster specifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>selectdb.xlarge</b>: 4 cores, 32 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.2xlarge</b>: 8 cores, 64 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.4xlarge</b>: 16 cores, 128 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.8xlarge</b>: 32 cores, 256 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.16xlarge</b>: 64 cores, 512 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.24xlarge</b>: 96 cores, 768 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.32xlarge</b>: 128 cores, 1024 GB.</para>
-        /// </description></item>
+        /// <item><description><b>selectdb.xlarge</b>: 4 cores and 32 GB memory</description></item>
+        /// <item><description><b>selectdb.2xlarge</b>: 8 cores and 64 GB memory</description></item>
+        /// <item><description><b>selectdb.4xlarge</b>: 16 cores and 128 GB memory</description></item>
+        /// <item><description><b>selectdb.8xlarge</b>: 32 cores and 256 GB memory</description></item>
+        /// <item><description><b>selectdb.16xlarge</b>: 64 cores and 512 GB memory</description></item>
+        /// <item><description><b>selectdb.24xlarge</b>: 96 cores and 768 GB memory</description></item>
+        /// <item><description><b>selectdb.32xlarge</b>: 128 cores and 1024 GB memory</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterClass { get; set; }
 
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database engine type.</para>
+        /// <para>The database type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version.</para>
+        /// <para>The database version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,16 +118,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the subscription cluster. Valid values:</para>
+        /// <para>Specifies whether the subscription cluster is billed on a yearly or monthly basis. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Year</b>: The cluster is billed on a yearly basis.</para>
-        /// </description></item>
-        /// <item><description><para><b>Month</b>: The cluster is billed on a monthly basis.</para>
+        /// <item><description><b>Year</b>: yearly</description></item>
+        /// <item><description><b>Month</b>: monthly<remarks>
+        /// <para>This parameter takes effect and is required only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is required and takes effect only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -149,25 +149,35 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The maximum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32</para>
+        /// </summary>
         [NameInMap("ScaleMax")]
         [Validation(Required=false)]
         public double? ScaleMax { get; set; }
 
+        /// <summary>
+        /// <para>The minimum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
         [NameInMap("ScaleMin")]
         [Validation(Required=false)]
         public double? ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the subscription cluster. Valid values:</para>
+        /// <para>Specifies the purchase duration of the subscription cluster. The unit is specified by Period: Year indicates years, and Month indicates months. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If Period is set to Year, valid values for UsedTime are 1, 2, 3, and 5.</para>
-        /// </description></item>
-        /// <item><description><para>If Period is set to Month, the value of UsedTime can be an integer from 1 to 9.</para>
+        /// <item><description>If Period is set to Year, valid values for UsedTime are 1, 2, 3, and 5.</description></item>
+        /// <item><description>If Period is set to Month, valid values for UsedTime are 1 to 9.<remarks>
+        /// <para>This parameter takes effect and is required only when ChargeType is set to Prepaid.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is required and takes effect only when ChargeType is set to Prepaid.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

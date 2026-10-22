@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeAllDBInstanceClassResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of instance specifications.</para>
+        /// <para>The list of instance types.</para>
         /// </summary>
         [NameInMap("ClassCodeList")]
         [Validation(Required=false)]
         public List<DescribeAllDBInstanceClassResponseBodyClassCodeList> ClassCodeList { get; set; }
         public class DescribeAllDBInstanceClassResponseBodyClassCodeList : TeaModel {
             /// <summary>
-            /// <para>The specification code.</para>
+            /// <para>The instance type code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb.xlarge</para>

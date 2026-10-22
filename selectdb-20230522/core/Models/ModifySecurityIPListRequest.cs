@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the whitelist. Default value: <b>Default</b>.</para>
+        /// <para>The name of the whitelist group. By default, the <b>Default</b> group is modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,14 +32,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The mode in which you want to modify the whitelist. Valid values:</para>
+        /// <para>The modification mode of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: overwrites the IP addresses in the whitelist.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: adds IP addresses to the whitelist.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: removes IP addresses from the whitelist.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Overwrites the original whitelist.</description></item>
+        /// <item><description><b>1</b>: Adds IP addresses to the whitelist.</description></item>
+        /// <item><description><b>2</b>: Removes IP addresses from the whitelist.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +48,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ModifyMode { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

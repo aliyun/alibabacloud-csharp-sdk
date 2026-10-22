@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The details about each IP address whitelist returned.</para>
+        /// <para>The list of whitelist groups.</para>
         /// </summary>
         [NameInMap("GroupItems")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string AecurityIPType { get; set; }
 
             /// <summary>
-            /// <para>The name of the whitelist.</para>
+            /// <para>The name of the whitelist group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group1</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The tag of the whitelist.</para>
+            /// <para>The group tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GroupTag { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses in the whitelist. Multiple IP addresses are separated by commas (,).</para>
+            /// <para>The IP address whitelist of the instance. Multiple IP addresses are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.XX.XX</para>

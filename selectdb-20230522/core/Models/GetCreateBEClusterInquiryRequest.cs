@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? CacheSize { get; set; }
 
         /// <summary>
-        /// <para>The billing type.</para>
+        /// <para>The billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,6 +93,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2374923467</para>
         /// </summary>

@@ -26,11 +26,22 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            /// <summary>
+            /// <para>The coupon information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;OptionCode&quot;:&quot;7afs9d&quot;,&quot;PromotionDesc&quot;:&quot;General coupon for a deduction of 100&quot;,&quot;PromotionName&quot;:&quot;General coupon&quot;,&quot;CanPromFee&quot;:&quot;100&quot;,&quot;PromotionOptionNo&quot;:&quot;775735400028&quot;}]</para>
+            /// </summary>
             [NameInMap("OptionalPromotions")]
             [Validation(Required=false)]
             public List<GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions> OptionalPromotions { get; set; }
             public class GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions : TeaModel {
                 /// <summary>
+                /// <para>The discount amount.</para>
+                /// <remarks>
+                /// <para>This parameter is not applicable to the Chinese site.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -39,6 +50,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string CanPromFee { get; set; }
 
                 /// <summary>
+                /// <para>The description of the promotion rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7afs9d</para>
                 /// </summary>
@@ -47,14 +60,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string OptionCode { get; set; }
 
                 /// <summary>
+                /// <para>The coupon description.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>General coupon with a deduction of 100</para>
+                /// <para>General coupon for a deduction of 100</para>
                 /// </summary>
                 [NameInMap("PromotionDesc")]
                 [Validation(Required=false)]
                 public string PromotionDesc { get; set; }
 
                 /// <summary>
+                /// <para>The coupon name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>General coupon</para>
                 /// </summary>
@@ -63,6 +80,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string PromotionName { get; set; }
 
                 /// <summary>
+                /// <para>The coupon code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>775735400028</para>
                 /// </summary>
@@ -72,12 +91,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
             }
 
+            /// <summary>
+            /// <para>The unit price results of billable items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;compute_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(CU<em>hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;},&quot;cache_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(GB</em>hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;},&quot;storage_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(GB*hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;}}</para>
+            /// </summary>
             [NameInMap("PricingRules")]
             [Validation(Required=false)]
             public Dictionary<string, string> PricingRules { get; set; }
 
             /// <summary>
-            /// <para>The trade amount.</para>
+            /// <para>The amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.76</para>

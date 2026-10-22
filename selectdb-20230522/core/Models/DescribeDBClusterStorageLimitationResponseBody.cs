@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterStorageLimitationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial. This field is returned only when the RAM verification fails.</para>
+        /// <para>The details about the access denial. This parameter is returned only when RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>failed</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string ClassCode { get; set; }
 
                 /// <summary>
-                /// <para>The number of vCPU cores.</para>
+                /// <para>The number of CPU cores.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? CpuCores { get; set; }
 
                 /// <summary>
-                /// <para>The default cache size in GB.</para>
+                /// <para>The default cache size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? DefaultStorageInGB { get; set; }
 
                 /// <summary>
-                /// <para>The maximum cache size in GB.</para>
+                /// <para>The maximum cache size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? MaxStorageInGB { get; set; }
 
                 /// <summary>
-                /// <para>The memory size in GB.</para>
+                /// <para>The memory size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? MemoryInGB { get; set; }
 
                 /// <summary>
-                /// <para>The minimum cache size in GB.</para>
+                /// <para>The minimum cache size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? MinStorageInGB { get; set; }
 
                 /// <summary>
-                /// <para>The cache step size in GB.</para>
+                /// <para>The cache step size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not used. Ignore this parameter.</para>
+        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not used. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>An error occurred while processing your request.</para>

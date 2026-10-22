@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A list of multi-zone configurations.</para>
+        /// <para>The list of multiple zones.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MultiZone")]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The ID of the region in which the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

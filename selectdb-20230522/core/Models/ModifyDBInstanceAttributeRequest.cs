@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance parameter to be modified. Valid values:</para>
+        /// <para>The attribute to modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MaintainTime</b>: Modify the maintenance window of the instance in the hh:mm-hh:mm format.</para>
+        /// <item><description><para><b>MaintainTime</b>: modifies the O&amp;M time. The format is hh:mm-hh:mm.</para>
         /// </description></item>
-        /// <item><description><para><b>DBInstanceDescription</b>: Modify the description of the instance.</para>
+        /// <item><description><para><b>DBInstanceDescription</b>: modifies the instance description.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string InstanceAttributeType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,11 +53,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new value of the instance parameter to be modified. Examples:</para>
+        /// <para>The new value of the attribute. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If InstanceAttributeType is set to MaintainTime, you can set Value to 00:00-06:00.</para>
+        /// <item><description><para>If InstanceAttributeType is set to MaintainTime, set this parameter to a time range such as 00:00-06:00.</para>
         /// </description></item>
-        /// <item><description><para>If InstanceAttributeType is set to DBInstanceDescription, you can set Value to testdb.</para>
+        /// <item><description><para>If InstanceAttributeType is set to DBInstanceDescription, set this parameter to a description such as testdb.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

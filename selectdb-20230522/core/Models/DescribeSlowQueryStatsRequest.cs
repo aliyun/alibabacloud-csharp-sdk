@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time. Must be later than the start time. Defaults to the current time.</para>
+        /// <para>The end time. It must be later than the start time. Default value: the current time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-08 16:00:00</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Defaults to 24 hours before the current time.</para>
+        /// <para>The start time. Default value: 24 hours ago. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-07 16:00:00</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The slow query threshold, in milliseconds. The default value is 5000.</para>
+        /// <para>The slow query threshold in milliseconds. Default value: 5000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ThresholdMs { get; set; }
 
         /// <summary>
-        /// <para>The number of top slow queries to return. The default value is 10.</para>
+        /// <para>The number of top slow queries to return. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

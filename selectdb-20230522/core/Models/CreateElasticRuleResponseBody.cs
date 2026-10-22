@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public CreateElasticRuleResponseBodyData Data { get; set; }
         public class CreateElasticRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The target compute resource specification for the cluster.</para>
+            /// <para>The target compute resource rule of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb.2xlarge</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the time-based elastic scaling rule.</para>
+            /// <para>The start time of the time-based elastic rule. The time is in the HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Explain mode.</para>
+        /// <para>The EXPLAIN mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BASIC</para>

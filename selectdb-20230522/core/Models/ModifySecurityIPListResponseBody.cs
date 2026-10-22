@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the whitelist.</para>
+        /// <para>The name of the whitelist group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The tag of the whitelist.</para>
+        /// <para>The tag of the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>grouptag</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the whitelist of the instance. Multiple IP addresses are separated by commas (,).</para>
+        /// <para>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.XX.XX,127.2.XX.XX</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The IP address type.</para>
+        /// <para>The type of the IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv4</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Separate multiple instance IDs with commas (,).</para>
+        /// <para>The IDs of the instances. Separate multiple instance IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb-cn-7213cjv****</para>
@@ -30,19 +30,19 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The state of the instance. Valid values:</para>
+        /// <para>The status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+        /// <item><description><para><b>CREATING</b>: Creating.</para>
         /// </description></item>
-        /// <item><description><para><b>ACTIVATION</b>: The instance is running.</para>
+        /// <item><description><para><b>ACTIVATION</b>: Running.</para>
         /// </description></item>
-        /// <item><description><para><b>RESOURCE_CHANGING</b>: The instance is being upgraded or downgraded.</para>
+        /// <item><description><para><b>RESOURCE_CHANGING</b>: Changing specifications.</para>
         /// </description></item>
-        /// <item><description><para><b>ORDER_PREPARING</b>: The order is being confirmed.</para>
+        /// <item><description><para><b>ORDER_PREPARING</b>: Confirming the order.</para>
         /// </description></item>
-        /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: The instance configuration is being changed, and the instance is write-locked.</para>
+        /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: Changing resources (the instance is locked for writing).</para>
         /// </description></item>
-        /// <item><description><para><b>DELETING</b>: The instance is being deleted.</para>
+        /// <item><description><para><b>DELETING</b>: Deleting.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -64,14 +64,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +104,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags of instances.</para>
+        /// <para>The instance tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

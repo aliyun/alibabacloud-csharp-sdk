@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeSlowQueryStatsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of slow query statistics, grouped by database.</para>
+        /// <para>The slow query information by database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public object ByDatabase { get; set; }
 
         /// <summary>
-        /// <para>An array of slow query statistics, grouped by time bucket.</para>
+        /// <para>The slow query information by time bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public object ByTimeBucket { get; set; }
 
         /// <summary>
-        /// <para>An array of slow query statistics, grouped by user.</para>
+        /// <para>The slow query information by user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public object ByUser { get; set; }
 
         /// <summary>
-        /// <para>The percentile statistics for query latency.</para>
+        /// <para>The query latency percentile information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The summary of slow query statistics.</para>
+        /// <para>The summary information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public Dictionary<string, object> Summary { get; set; }
 
         /// <summary>
-        /// <para>An array of detailed audit records for the top N slow queries.</para>
+        /// <para>The audit information of the top N slow queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public object TopQueries { get; set; }
 
         /// <summary>
-        /// <para>An array of statistics for the top N slow queries, grouped by SQL digest. Available for kernel version 5.0 and later.</para>
+        /// <para>The classification information of the top N slow query fingerprints. Supported by kernel version 5.0 and later.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[

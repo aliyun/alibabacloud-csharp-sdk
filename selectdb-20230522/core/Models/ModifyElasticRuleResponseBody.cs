@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyElasticRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyElasticRuleResponseBodyData Data { get; set; }
         public class ModifyElasticRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The rule for computing resources of the required cluster.</para>
+            /// <para>The target compute resource rule for the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb.2xlarge</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the scheduled scaling rule is executed.</para>
+            /// <para>The start time of the time-based elastic rule. The time is in the HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00</para>
@@ -57,11 +57,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ElasticRuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution cycle.</para>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>Day</description></item>
-            /// </list>
+            /// <para>The execution period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Day</para>

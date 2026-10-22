@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The upgrade mode.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, the upgrade is performed immediately.</description></item>
-        /// <item><description>If this parameter is set to 1, the upgrade is performed during the maintenance window.</description></item>
+        /// <item><description>If you leave this parameter empty, the upgrade is performed immediately.</description></item>
+        /// <item><description>If you set this parameter to 1, the upgrade is performed during the maintenance window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

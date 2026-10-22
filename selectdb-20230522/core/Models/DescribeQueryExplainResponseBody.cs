@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeQueryExplainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Explain result.</para>
+        /// <para>The EXPLAIN result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>+-----------------------------------------------------------------------+
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The SQL statement for which the execution plan is retrieved. Excessively long SQL statements in audit logs may be truncated.</para>
+        /// <para>The SQL statement for which the execution plan is queried. Overly long SQL statements in audit logs may be truncated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT * FROM example_db.example_tbl</para>

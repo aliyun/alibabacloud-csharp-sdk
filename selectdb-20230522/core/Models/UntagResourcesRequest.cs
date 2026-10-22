@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the instances. This parameter takes effect only when you do not specify TagKey. The default value is false.</para>
+        /// <para>Specifies whether to remove all tags from the instance. This parameter takes effect only when TagKey is not specified. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>An array of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>An array of tag keys.</para>
+        /// <para>The list of tag keys.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

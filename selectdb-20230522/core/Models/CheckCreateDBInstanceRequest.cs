@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CheckCreateDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved cache size, in GB.</para>
+        /// <para>The reserved cache size. Unit: GB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that is used to ensure the idempotence of the request. The token must be unique among different requests. The token can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AB</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The connection string of the instance.</para>
+        /// <para>The endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</para>
@@ -60,20 +60,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>selectdb.xlarge</b>: 4 cores, 32 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.2xlarge</b>: 8 cores, 64 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.4xlarge</b>: 16 cores, 128 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.8xlarge</b>: 32 cores, 256 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.16xlarge</b>: 64 cores, 512 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.24xlarge</b>: 96 cores, 768 GB.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.32xlarge</b>: 128 cores, 1024 GB.</para>
-        /// </description></item>
+        /// <item><description><b>selectdb.xlarge</b>: 4 cores, 32 GB memory.</description></item>
+        /// <item><description><b>selectdb.2xlarge</b>: 8 cores, 64 GB memory.</description></item>
+        /// <item><description><b>selectdb.4xlarge</b>: 16 cores, 128 GB memory.</description></item>
+        /// <item><description><b>selectdb.8xlarge</b>: 32 cores, 256 GB memory.</description></item>
+        /// <item><description><b>selectdb.16xlarge</b>: 64 cores, 512 GB memory.</description></item>
+        /// <item><description><b>selectdb.24xlarge</b>: 96 cores, 768 GB memory.</description></item>
+        /// <item><description><b>selectdb.32xlarge</b>: 128 cores, 1024 GB memory.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,7 +81,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>New instance test</para>
+        /// <para>NewInstanceTest</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -116,16 +109,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>Specifies whether the upfront subscription cluster uses a yearly or monthly billing cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Year</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Month</b></para>
+        /// <item><description><b>Year</b>: yearly billing cycle.</description></item>
+        /// <item><description><b>Month</b>: monthly billing cycle.<remarks>
+        /// <para>This parameter takes effect and is required only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is required and takes effect only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -146,7 +137,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>
@@ -160,7 +151,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist for the instance. Separate multiple IP addresses with commas (,).</para>
+        /// <para>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.XX.XX/12,192.168.XX.XX/22</para>
@@ -170,16 +161,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Valid values:</para>
+        /// <para>The subscription duration of the instance. The unit is specified by Period. Year indicates years and Month indicates months. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If Period is set to Year, valid values are 1, 2, 3, 4, and 5.</para>
-        /// </description></item>
-        /// <item><description><para>If Period is set to Month, valid values are integers from 1 to 12.</para>
+        /// <item><description>If Period is set to Year, the valid values of UsedTime are 1, 2, 3, 4, and 5 (integers).</description></item>
+        /// <item><description>If Period is set to Month, the valid values of UsedTime are 1 to 12 (integers).<remarks>
+        /// <para>This parameter takes effect and is required only when ChargeType is set to Prepaid.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is required and takes effect only when ChargeType is set to Prepaid.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -200,7 +189,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>VPC ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeElasticRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The details of the rules.</para>
+            /// <para>The list of rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeElasticRulesResponseBodyDataRules> Rules { get; set; }
             public class DescribeElasticRulesResponseBodyDataRules : TeaModel {
                 /// <summary>
-                /// <para>The rule for computing resources of the required cluster.</para>
+                /// <para>The target compute resource rule of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>selectdb.2xlarge</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string ClusterClass { get; set; }
 
                 /// <summary>
-                /// <para>The time when you want to execute the scheduled scaling rule.</para>
+                /// <para>The start time of the time-based elastic rule, in the HH:mm format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00</para>
@@ -64,11 +64,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string ElasticRuleStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The execution cycle.</para>
-                /// <para>Valid value:</para>
-                /// <list type="bullet">
-                /// <item><description>Day</description></item>
-                /// </list>
+                /// <para>The execution period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Day</para>

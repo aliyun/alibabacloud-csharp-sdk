@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The cloud service.</para>
+        /// <para>The cloud service type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb</para>
@@ -57,14 +57,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the scheduled scaling policy.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Specifies whether the time-based elastic policy is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

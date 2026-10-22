@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeAllDBInstanceClassRequest : TeaModel {
+        /// <summary>
+        /// <para>The SelectDB instance ID. This parameter is required when you create a cluster or change the specifications of a cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>selectdb-cn-7213cjv****</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

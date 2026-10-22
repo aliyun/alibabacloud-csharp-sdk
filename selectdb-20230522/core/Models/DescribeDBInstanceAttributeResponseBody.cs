@@ -9,19 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The community versions corresponding to the upgradable versions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;4.1.10-20260922&quot;:&quot;Apache Doris 3.1.4&quot;</para>
+        /// </summary>
         [NameInMap("CanUpgradeVersionCommunityMap")]
         [Validation(Required=false)]
         public Dictionary<string, string> CanUpgradeVersionCommunityMap { get; set; }
 
         /// <summary>
-        /// <para>The list of versions to which the instance can be upgraded.</para>
+        /// <para>The list of upgradable versions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;4.1.10-20260922&quot;</para>
         /// </summary>
         [NameInMap("CanUpgradeVersions")]
         [Validation(Required=false)]
         public List<string> CanUpgradeVersions { get; set; }
 
         /// <summary>
-        /// <para>The billing type of the instance. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
@@ -30,6 +45,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// <para>The community version corresponding to the current version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Apache Doris 4.0.8</para>
+        /// </summary>
         [NameInMap("CommunityVersion")]
         [Validation(Required=false)]
         public string CommunityVersion { get; set; }
@@ -45,7 +66,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ConfigPatternType { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the instance.</para>
+        /// <para>The creation time in ISO 8601 format with time zone information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-14T03:00:42Z</para>
@@ -55,7 +76,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The list of clusters that belong to the instance.</para>
+        /// <para>The list of clusters to which the instance belongs.</para>
         /// </summary>
         [NameInMap("DBClusterList")]
         [Validation(Required=false)]
@@ -83,6 +104,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
             /// <summary>
             /// <para>The billing method of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
+            /// </description></item>
+            /// <item><description><para><b>Prepaid</b>: subscription.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Prepaid</para>
@@ -102,7 +129,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ClusterBinding { get; set; }
 
             /// <summary>
-            /// <para>The number of cluster nodes. This parameter takes effect only in serverless mode.</para>
+            /// <para>The number of nodes in the cluster. This parameter takes effect only in serverless mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -112,7 +139,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public int? ClusterNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The cluster node type. This parameter takes effect only in serverless mode.</para>
+            /// <para>The node type of the cluster. This parameter takes effect only in serverless mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>base</para>
@@ -132,7 +159,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? CpuCores { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster was created.</para>
+            /// <para>The creation time of the cluster in ISO 8601 format with time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-14T09:24:13Z</para>
@@ -143,6 +170,36 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
             /// <summary>
             /// <para>The cluster specifications. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>selectdb.xlarge</b>: 4 cores and 16 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.2xlarge</b>: 8 cores and 32 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.4xlarge</b>: 16 cores and 64 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.8xlarge</b>: 32 cores and 128 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.16xlarge</b>: 64 cores and 256 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.24xlarge</b>: 96 cores and 384 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.32xlarge</b>: 128 cores and 512 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.g.xlarge</b>: 4 cores and 16 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.g.2xlarge</b>: 8 cores and 32 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.g.4xlarge</b>: 16 cores and 64 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.g.8xlarge</b>: 32 cores and 128 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.g.16xlarge</b>: 64 cores and 256 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.g.24xlarge</b>: 96 cores and 384 GB memory</para>
+            /// </description></item>
+            /// <item><description><para><b>selectdb.g.32xlarge</b>: 128 cores and 512 GB memory</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb.2xlarge</para>
@@ -175,7 +232,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Instance test</para>
+            /// <para>Test instance</para>
             /// </summary>
             [NameInMap("DbInstanceName")]
             [Validation(Required=false)]
@@ -192,7 +249,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time in ISO 8601 format with time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-02T16:35:44+08:00</para>
@@ -212,7 +269,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The maximum value of the automatic scaling range for the instance RCU (RDS Capacity Unit).</para>
+            /// <para>The maximum number of RDS Capacity Units (RCUs) for auto-scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -222,7 +279,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public double? ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum value of the automatic scaling range for the instance RCU (RDS Capacity Unit).</para>
+            /// <para>The minimum number of RDS Capacity Units (RCUs) for auto-scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -232,7 +289,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public double? ScaleMin { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the time-based elastic policy is enabled.</para>
+            /// <para>Specifies whether the time-based elastic policy is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -242,7 +299,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public bool? ScalingRulesEnable { get; set; }
 
             /// <summary>
-            /// <para>The start time of the cluster.</para>
+            /// <para>The start time of the cluster in ISO 8601 format with time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-14T09:24:13Z</para>
@@ -253,6 +310,20 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
             /// <summary>
             /// <para>The status of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>CREATING</b>: The cluster is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>ACTIVATION</b>: The cluster is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>RESOURCE_CHANGING</b>: The cluster specifications are being changed.</para>
+            /// </description></item>
+            /// <item><description><para><b>ORDER_PREPARING</b>: The order is being confirmed.</para>
+            /// </description></item>
+            /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: The cluster resources are being changed and the instance is locked for writes.</para>
+            /// </description></item>
+            /// <item><description><para><b>DELETING</b>: The cluster is being deleted.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVATION</para>
@@ -265,7 +336,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The subdomain.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Reserved parameter. Not returned</para>
+            /// <para>Reserved parameter, not returned</para>
             /// </summary>
             [NameInMap("SubDomain")]
             [Validation(Required=false)]
@@ -324,7 +395,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The database engine type.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb</para>
@@ -344,7 +415,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The database engine version.</para>
+        /// <para>The database version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.4</para>
@@ -354,7 +425,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance expires.</para>
+        /// <para>The time when the instance expires, in ISO 8601 format with time zone information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-17T00:00Z</para>
@@ -363,26 +434,59 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of FE clusters.</para>
+        /// </summary>
         [NameInMap("FEClusterList")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceAttributeResponseBodyFEClusterList> FEClusterList { get; set; }
         public class DescribeDBInstanceAttributeResponseBodyFEClusterList : TeaModel {
+            /// <summary>
+            /// <para>The name of the FE cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>selectdb-cn-7213cjv****-fe</para>
+            /// </summary>
             [NameInMap("DbClusterId")]
             [Validation(Required=false)]
             public string DbClusterId { get; set; }
 
+            /// <summary>
+            /// <para>The number of nodes in the FE cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("NodeCount")]
             [Validation(Required=false)]
             public long? NodeCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of CPU cores per node in the FE cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("SingleNodeCpuCores")]
             [Validation(Required=false)]
             public long? SingleNodeCpuCores { get; set; }
 
+            /// <summary>
+            /// <para>The memory size per node in the FE cluster. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
+            /// </summary>
             [NameInMap("SingleNodeMemoryInGB")]
             [Validation(Required=false)]
             public long? SingleNodeMemoryInGB { get; set; }
 
+            /// <summary>
+            /// <para>The status of the FE cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACTIVATION</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -390,7 +494,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The time when the instance was last modified (for example, restarted or had public network access enabled). The time is in the yyyy-MM-ddTHH:mmZ format (UTC).</para>
+        /// <para>The time when the instance was modified, such as restart or public network application. The time is in the yyyy-MM-ddTHH:mmZ format (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-17T09:58Z</para>
@@ -399,12 +503,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
+        /// <summary>
+        /// <para>The list of Langfuse instance IDs associated with the SelectDB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;lfu-xxkshuf23sdj&quot;]</para>
+        /// </summary>
         [NameInMap("LangfuseInstanceIds")]
         [Validation(Required=false)]
         public List<string> LangfuseInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The lock mode of the instance. The value is <b>lock</b>, which indicates that the instance is automatically expired or has an overdue payment.</para>
+        /// <para>The lock mode of the instance. A value of <b>lock</b> indicates that the instance is locked due to expiration or overdue payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lock</para>
@@ -424,6 +534,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string LockReason { get; set; }
 
         /// <summary>
+        /// <para>The service status of the MCP Server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>not_enabled</para>
         /// </summary>
@@ -432,20 +544,20 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string MCPServerServiceStatus { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window of the instance.</para>
+        /// <para>Reserved parameter. This parameter is not returned and does not apply to the time format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Reserved parameter.</para>
+        /// <para>Reserved parameter, not currently returned</para>
         /// </summary>
         [NameInMap("MaintainEndtime")]
         [Validation(Required=false)]
         public string MaintainEndtime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window of the instance.</para>
+        /// <para>Reserved parameter. This parameter is not returned and does not apply to the time format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Reserved parameter.</para>
+        /// <para>Reserved parameter, not currently returned</para>
         /// </summary>
         [NameInMap("MaintainStarttime")]
         [Validation(Required=false)]
@@ -453,6 +565,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The multi-zone configuration.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is valid when DeployScheme is set to multi_az.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -472,7 +589,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? AvailableIpCount { get; set; }
 
             /// <summary>
-            /// <para>The Classless Inter-Domain Routing block of the prefix list entry.</para>
+            /// <para>The CIDR block information of the prefix list entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>113.88.14.211/32</para>
@@ -500,10 +617,22 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         }
 
+        /// <summary>
+        /// <para>The OTel collector bearer token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nDVkJstxQEwyXIae8cRBzK33Hev68len</para>
+        /// </summary>
         [NameInMap("OTelBearerToken")]
         [Validation(Required=false)]
         public string OTelBearerToken { get; set; }
 
+        /// <summary>
+        /// <para>The service status of the OTel collector and Grafana.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>not_enabled</para>
+        /// </summary>
         [NameInMap("OTelGrafanaServiceStatus")]
         [Validation(Required=false)]
         public string OTelGrafanaServiceStatus { get; set; }
@@ -539,7 +668,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU resources.</para>
+        /// <para>The number of CPU cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -559,7 +688,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the direct port connection feature is enabled for the VPC in which the instance resides.</para>
+        /// <para>Indicates whether the port direct connection feature is enabled for the VPC where the current instance resides.</para>
+        /// <list type="bullet">
+        /// <item><description>A value of true indicates that the feature is enabled.</description></item>
+        /// <item><description>A value of false indicates that the feature is disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -569,7 +702,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string SecGroupConnValid { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the serverless feature is enabled for the instance.</para>
+        /// <para>Indicates whether the serverless feature is enabled for the current instance.</para>
+        /// <list type="bullet">
+        /// <item><description>A value of true indicates that the feature is enabled.</description></item>
+        /// <item><description>A value of false indicates that the feature is disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -580,6 +717,20 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The status of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>ACTIVE</b>: The instance is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>RESOURCE_CHANGING</b>: The instance specifications are being changed.</para>
+        /// </description></item>
+        /// <item><description><para><b>ORDER_PREPARING</b>: The order is being confirmed.</para>
+        /// </description></item>
+        /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: The resources are being changed and the instance is locked for writes.</para>
+        /// </description></item>
+        /// <item><description><para><b>DELETING</b>: The instance is being deleted.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
@@ -589,7 +740,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage size.</para>
+        /// <para>The size of the storage space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -602,14 +753,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>The zone.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Reserved parameter.</para>
+        /// <para>cn-beijing-h-aliyun</para>
         /// </summary>
         [NameInMap("SubDomain")]
         [Validation(Required=false)]
         public string SubDomain { get; set; }
 
         /// <summary>
-        /// <para>The list of instance labels.</para>
+        /// <para>The instance label list information.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -626,7 +777,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
@@ -636,6 +787,36 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string TagValue { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The algorithm used for TDE on the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AES256</para>
+        /// </summary>
+        [NameInMap("TdeAlgorithm")]
+        [Validation(Required=false)]
+        public string TdeAlgorithm { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether TDE is enabled for the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("TdeEnabled")]
+        [Validation(Required=false)]
+        public bool? TdeEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The TDE mode of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MANAGED</para>
+        /// </summary>
+        [NameInMap("TdeMode")]
+        [Validation(Required=false)]
+        public string TdeMode { get; set; }
 
         /// <summary>
         /// <para>The vSwitch ID.</para>
@@ -675,7 +856,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ActiveClusterName { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the instance.</para>
+            /// <para>The creation time in ISO 8601 format with time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-31T21:01:09Z</para>
@@ -726,6 +907,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
+            /// <item><description><b>RUNNING</b>: The instance is running.</description></item>
+            /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
+            /// <item><description><b>UPDATING</b>: The instance is being updated.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATING</para>

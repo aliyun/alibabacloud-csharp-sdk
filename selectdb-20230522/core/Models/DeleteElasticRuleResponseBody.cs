@@ -20,14 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion is successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Indicates whether the rule was deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

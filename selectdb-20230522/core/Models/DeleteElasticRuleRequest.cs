@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The cloud service.</para>
+        /// <para>The cloud service type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb</para>

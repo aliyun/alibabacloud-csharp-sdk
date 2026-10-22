@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the attribute to modify. Set this parameter to DBInstanceDescription.</para>
+        /// <para>The type of the attribute to modify. Set the value to DBInstanceDescription.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
