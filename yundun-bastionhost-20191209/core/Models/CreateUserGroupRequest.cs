@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateUserGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the user group. The description can be up to 500 characters in length.</para>
+        /// <para>The description of the user group to create. The description can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>comment</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host for which you want to create a user group.</para>
+        /// <para>The ID of the bastion host instance for which you want to create a user group.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,6 +33,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the user group that you want to create. This name can be a up to 128 characters in length.</para>
+        /// <para>The name of the user group to create. The name can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

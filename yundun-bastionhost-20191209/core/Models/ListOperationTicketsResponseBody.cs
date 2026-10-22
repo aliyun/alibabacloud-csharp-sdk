@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationTicketsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of O&amp;M applications pending approval.</para>
+        /// <para>The list of O&amp;M tickets pending approval.</para>
         /// </summary>
         [NameInMap("OperationTickets")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ApplyUsername { get; set; }
 
             /// <summary>
-            /// <para>The remarks provided by the O&amp;M engineer when submitting the O&amp;M application.</para>
+            /// <para>The remarks entered by the O&amp;M engineer when applying for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Comment</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network domain to which the requested asset belongs.</para>
+            /// <para>The ID of the network domain to which the asset for which O&amp;M is requested belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -117,12 +117,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetOs { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset source to which the requested asset belongs. Valid values:</para>
+            /// <para>The name of the asset source to which the asset for which O&amp;M is requested belongs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Local</b>: local host</description></item>
             /// <item><description><b>Ecs</b>: ECS instance</description></item>
             /// <item><description><b>Rds</b>: ApsaraDB RDS instance</description></item>
-            /// <item><description>Name of a third-party asset source</description></item>
+            /// <item><description>name of a third-party asset source</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetSource { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset source to which the requested asset belongs.</para>
+            /// <para>The ID of the asset source to which the asset for which O&amp;M is requested belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetSourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was submitted, in seconds (UNIX timestamp format).</para>
+            /// <para>The time when the application was submitted. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669965908</para>
@@ -153,10 +153,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The logon count limit requested by the O&amp;M engineer. Valid values:</para>
+            /// <para>The limit on the number of logons requested by the O&amp;M engineer. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: no limit on the number of logons. The O&amp;M engineer can log on an unlimited number of times within the validity period.</description></item>
-            /// <item><description><b>1</b>: the O&amp;M engineer can log on only once within the validity period.</description></item>
+            /// <item><description><b>0</b>: No limit is imposed on the number of logons. The O&amp;M engineer can log on an unlimited number of times within the validity period.</description></item>
+            /// <item><description><b>1</b>: The O&amp;M engineer is allowed to log on only once within the validity period.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? EffectCount { get; set; }
 
             /// <summary>
-            /// <para>The end time of the O&amp;M period specified by the O&amp;M engineer, in seconds (UNIX timestamp format).</para>
+            /// <para>The end time of the approved O&amp;M period specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</para>
             /// <remarks>
             /// <para>A value of 0 indicates that the O&amp;M engineer did not specify a time when submitting the application.</para>
             /// </remarks>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? EffectEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the O&amp;M period specified by the O&amp;M engineer, in seconds (UNIX timestamp format).</para>
+            /// <para>The start time of the approved O&amp;M period specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</para>
             /// <remarks>
             /// <para>A value of 0 indicates that the O&amp;M engineer did not specify a time when submitting the application.</para>
             /// </remarks>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? EffectStartTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the O&amp;M application that requires approval.</para>
+            /// <para>The ID of the O&amp;M ticket pending approval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string OperationTicketId { get; set; }
 
             /// <summary>
-            /// <para>The protocol name for the requested O&amp;M.</para>
+            /// <para>The name of the protocol for the O&amp;M request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SSH</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The unique request ID generated by Alibaba Cloud for this request.</para>
+        /// <para>The unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of O&amp;M applications pending approval.</para>
+        /// <para>The total number of O&amp;M tickets pending approval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

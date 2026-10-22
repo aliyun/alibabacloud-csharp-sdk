@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Bastionhost instance for which you want to create a network domain.</para>
+        /// <para>The ID of the Bastionhost instance for which you want to create a network domain.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The type of the network domain to create. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Direct: direct connection. Bastionhost is directly connected to the asset network without an intermediate proxy server.</description></item>
-        /// <item><description>Proxy: proxy connection. If the network where the assets reside is not connected to the Bastionhost network, you can use a proxy server to forward network requests and manage assets in different network environments.</description></item>
+        /// <item><description>Direct: The bastion host directly connects to the asset network without going through an intermediate proxy server.</description></item>
+        /// <item><description>Proxy: When the asset network cannot communicate with the bastion host network, a proxy server forwards network requests to enable O&amp;M on assets in different network environments.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,13 +40,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aek2jpqvnr6yd3a</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
-        /// <para>The only valid value is INSTANCE, which represents a Bastionhost instance.</para>
+        /// <para>The resource type definition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INSTANCE: Bastionhost instance.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

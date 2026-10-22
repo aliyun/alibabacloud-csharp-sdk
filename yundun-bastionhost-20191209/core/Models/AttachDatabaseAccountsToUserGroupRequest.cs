@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The array of database objects.</para>
         /// <remarks>
-        /// <para>A maximum of 10 databases and 10 database accounts are supported. You can leave the database accounts unspecified. If no accounts are specified, permissions are granted at the database level.</para>
+        /// <para>A maximum of 10 databases and 10 database accounts are supported. You can leave the database accounts unspecified. If no database accounts are specified, permissions are granted at the database level.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Databases")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public List<string> DatabaseAccountIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database instance to authorize.</para>
+            /// <para>The ID of the database instance to which you want to grant permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>58</para>
@@ -54,6 +54,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

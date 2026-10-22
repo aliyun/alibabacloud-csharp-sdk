@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyNetworkDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The new remarks of the network domain.</para>
+        /// <para>The new description of the network domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host to which the network domain to modify belongs.</para>
+        /// <para>The instance ID of the Bastionhost instance to which the network domain to be modified belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the parameter value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network domain to modify.</para>
+        /// <para>The ID of the network domain to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,12 +55,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainName { get; set; }
 
         /// <summary>
-        /// <para>The new connection mode of the network domain. Valid values:</para>
+        /// <para>The new type of the network domain. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Direct</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Proxy</b></para>
-        /// </description></item>
+        /// <item><description><b>Direct</b>: Direct connection.</description></item>
+        /// <item><description><b>Proxy</b>: Proxy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,6 +68,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string NetworkDomainType { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<ModifyNetworkDomainRequestProxies> Proxies { get; set; }
         public class ModifyNetworkDomainRequestProxies : TeaModel {
             /// <summary>
-            /// <para>The new IP address of the proxy server.</para>
+            /// <para>The new address of the proxy server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114.21**.**</para>
@@ -92,12 +96,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The node type of the proxy server to modify. Valid values:</para>
+            /// <para>The type of the proxy server node to be modified. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Master</b>: primary proxy server.</para>
-            /// </description></item>
-            /// <item><description><para><b>Slave</b>: secondary proxy server.</para>
-            /// </description></item>
+            /// <item><description><b>Master</b>: Primary proxy server.</description></item>
+            /// <item><description><b>Slave</b>: Secondary proxy server.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The new port of the proxy server.</para>
+            /// <para>The new Server Port of the proxy server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -128,14 +130,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The new proxy mode. Valid values:</para>
+            /// <para>The new proxy type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>SSHProxy</b></para>
-            /// </description></item>
-            /// <item><description><para><b>HTTPProxy</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Socks5Proxy</b></para>
-            /// </description></item>
+            /// <item><description><b>SSHProxy</b>: SSH proxy.</description></item>
+            /// <item><description><b>HTTPProxy</b>: HTTP proxy.</description></item>
+            /// <item><description><b>Socks5Proxy</b>: SOCKS5 proxy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -146,7 +145,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ProxyType { get; set; }
 
             /// <summary>
-            /// <para>The new username of the proxy server account.</para>
+            /// <para>The new username of the proxy server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -158,7 +157,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the bastion host to which the network domain to modify belongs.</para>
+        /// <para>The region ID of the Bastionhost instance to which the network domain to be modified belongs.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsForUserGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the host group that you want to query. Only exact match is supported.</para>
+        /// <para>The name of the host group to query. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostGroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host to which the user group belongs.</para>
+        /// <para>The instance ID of the Bastionhost instance to which the user group belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,12 +34,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the category of the host group that you want to query. Valid values:</para>
+        /// <para>The mode of the host group list to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Authorized</b>: queries the host groups that the user group is authorized to manage. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>Unauthorized</b>: queries the host groups that the user group is not authorized to manage.</para>
-        /// </description></item>
+        /// <item><description><b>Authorized</b>: Authorized host groups. This is the default value.</description></item>
+        /// <item><description><b>Unauthorized</b>: Unauthorized host groups.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page when paging in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,10 +58,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.<br>
-        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries to return on each page when paging in a paged query.<br>The maximum value of the PageSize parameter is 100. The default value is 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Specify a value for the PageSize parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,12 +70,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host to which the user group belongs.</para>
+        /// <para>The region ID of the Bastionhost instance to which the user group belongs.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
@@ -91,9 +94,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user group.</para>
+        /// <para>The ID of the user group to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

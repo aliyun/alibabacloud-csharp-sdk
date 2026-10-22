@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DetachHostAccountsFromUserGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the host and host account on which you want to revoke permissions from the user group.</para>
-        /// <para>You can specify up to 10 host IDs and up to 10 host account IDs for each host. You can specify only host IDs. In this case, the permissions on both the specified hosts and all host accounts of the hosts are revoked from the user group. For more information about this parameter, see the &quot;Description of the Hosts parameter&quot; section of this topic.</para>
+        /// <para>The host IDs and host account IDs that you want to remove from the user group.<br>You can specify up to 10 host IDs, and each host supports up to 10 host account IDs. You do not need to specify host account IDs. If you do not specify host account IDs, the authorized host and all authorized host accounts of the host are removed from the user group. For the specific structure of this parameter, see the Hosts parameter structure description below the request parameters list.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host and the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Hosts { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host in which you want to revoke permissions on the specified hosts and host accounts from the user group.</para>
+        /// <para>The instance ID of the bastion host where the user group from which you want to remove authorization for hosts and host accounts resides.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,14 +37,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host in which you want to revoke permissions on the specified hosts and host accounts from the user group.</para>
+        /// <para>The region ID of the bastion host instance where the user group from which you want to remove authorized hosts and host accounts resides.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,9 +61,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user group from which you want to revoke permissions on the specified hosts and host accounts.</para>
+        /// <para>The ID of the user group from which you want to remove authorized hosts and host accounts.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

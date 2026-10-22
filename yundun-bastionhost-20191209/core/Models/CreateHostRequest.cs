@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The private network address of the host to create. You can specify a domain name or an IP address.</para>
+        /// <para>The private network address of the host to create. You can set this parameter to a domain name or an IP address.</para>
         /// <remarks>
         /// <para>This parameter is required if <b>ActiveAddressType</b> is set to <b>Private</b>.</para>
         /// </remarks>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostPrivateAddress { get; set; }
 
         /// <summary>
-        /// <para>The public address of the host to create. You can specify a domain name or an IP address.</para>
+        /// <para>The public address of the host to create. You can set this parameter to a domain name or an IP address.</para>
         /// <remarks>
         /// <para>This parameter is required if <b>ActiveAddressType</b> is set to <b>Public</b>.</para>
         /// </remarks>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? InstanceMemberId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ECS instance or dedicated cluster host.  </para>
+        /// <para>The region ID of the ECS instance or the host in the dedicated cluster.  </para>
         /// <remarks>
         /// <para>This parameter is required if <b>Source</b> is set to <b>Ecs</b> or <b>Rds</b>.</para>
         /// </remarks>
@@ -138,6 +138,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -161,7 +164,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <list type="bullet">
         /// <item><description><b>Local</b>: on-premises host.</description></item>
         /// <item><description><b>Ecs</b>: ECS instance.</description></item>
-        /// <item><description><b>Rds</b>: ApsaraDB RDS dedicated cluster host.</description></item>
+        /// <item><description><b>Rds</b>: host in an ApsaraDB RDS dedicated cluster.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -173,7 +176,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the ECS instance or dedicated cluster host.  </para>
+        /// <para>The instance ID of the ECS instance or the host in the dedicated cluster.  </para>
         /// <remarks>
         /// <para>This parameter is required if <b>Source</b> is set to <b>Ecs</b> or <b>Rds</b>.</para>
         /// </remarks>

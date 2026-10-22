@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DeleteDatabaseAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the database account that you want to delete.</para>
+        /// <para>The ID of the database account to delete.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseAccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host from which you want to delete the database account.</para>
+        /// <para>The ID of the bastion host instance to which the database account to be deleted belongs.</para>
         /// <remarks>
-        /// <para>You can call the DescribeInstances operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,14 +37,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host from which you want to delete the database account.</para>
+        /// <para>The region ID of the bastion host to which the database account to be deleted belongs.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, <a href="https://help.aliyun.com/document_detail/40654.html">see Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the current page for paging in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,10 +34,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.<br>
-        /// Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries to return on each page for paging in a paged query. Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Specify a value for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,12 +46,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
@@ -75,12 +80,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The state of the authorization rule to query.</para>
+        /// <para>The state of the authorization rule to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Disabled</b></para>
-        /// </description></item>
+        /// <item><description><b>Enabled</b>: Normal.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the command to be approved for execution.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2584310.html">ListApproveCommands</a> operation to query all command IDs that require approval.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2584310.html">ListApproveCommands</a> operation to query the IDs of all commands that require approval.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The instance ID of the bastion host.</para>
         /// <remarks>
-        /// <para>You can call the DescribeInstances operation to obtain the bastion host instance ID.</para>
+        /// <para>You can call the DescribeInstances operation to query the bastion host instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

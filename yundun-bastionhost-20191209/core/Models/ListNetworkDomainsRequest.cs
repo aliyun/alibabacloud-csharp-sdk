@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListNetworkDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Bastionhost instance.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +36,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The type of the network domain. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Direct</b>: direct connection</para>
-        /// </description></item>
-        /// <item><description><para><b>Proxy</b>: proxy connection</para>
-        /// </description></item>
+        /// <item><description><b>Direct</b>: direct connection</description></item>
+        /// <item><description><b>Proxy</b>: proxy</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page for paging in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,9 +58,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.<br> The maximum value is 100. The default value is 20. If you do not specify this parameter, 20 entries are returned on each page.<br></para>
+        /// <para>The maximum number of entries to return on each page for paging in a paged query.<br>Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave the PageSize value empty.</para>
+        /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,6 +70,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

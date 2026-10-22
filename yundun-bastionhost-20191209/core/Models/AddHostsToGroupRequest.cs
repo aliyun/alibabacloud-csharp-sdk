@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the hosts that you want to add to the asset group. This parameter is a JSON-formatted string. A maximum of 100 host IDs are supported.</para>
+        /// <para>The IDs of the hosts that you want to add to the asset group. This parameter is a JSON-formatted string. You can add up to 100 host IDs.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs.</para>
         /// </remarks>
@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

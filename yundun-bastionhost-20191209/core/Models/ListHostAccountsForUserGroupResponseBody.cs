@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsForUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the queried host accounts.</para>
+        /// <para>The host accounts returned.</para>
         /// </summary>
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostAccountName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the host for which the host accounts were queried.</para>
+            /// <para>The ID of the host to which the host account belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>１</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user group is authorized to manage the host account. Valid values:</para>
+            /// <para>Indicates whether the host account is authorized for the current user group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Authorized.</description></item>
+            /// <item><description><b>false</b>: Not authorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,12 +61,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? IsAuthorized { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used by the host. Valid values:</para>
+            /// <para>The protocol name of the host account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>SSH</b></para>
-            /// </description></item>
-            /// <item><description><para><b>RDP</b></para>
-            /// </description></item>
+            /// <item><description><b>SSH</b></description></item>
+            /// <item><description><b>RDP</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +87,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of host accounts that were queried.</para>
+        /// <para>The total number of host accounts returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results of the operation.</para>
+        /// <para>The result of the operation.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetNetworkDomainRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to immediately recheck the status of the proxy server. Valid values:</para>
+        /// <para>Specifies whether to immediately re-check the proxy server status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Immediately rechecks the status of the proxy server and returns the latest ProxyState and ProxyStateErrorCode.</para>
+        /// <item><description><para><b>true</b>: Immediately re-checks the proxy server status and returns the latest ProxyState/ProxyStateErrorCode.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: (Default) Returns the currently recorded status without rechecking the proxy server.</para>
+        /// <item><description><para><b>false</b>: Default value. Does not re-check the proxy server status and directly returns the currently recorded status.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string CheckProxyState { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Bastionhost instance.</para>
+        /// <para>The instance ID of the bastion host.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to get this parameter.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the network domain to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to get this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,14 +53,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string NetworkDomainId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Bastionhost instance.</para>
+        /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

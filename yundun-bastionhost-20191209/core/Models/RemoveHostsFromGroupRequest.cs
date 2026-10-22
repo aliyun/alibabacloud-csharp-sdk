@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class RemoveHostsFromGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the asset group from which you want to remove hosts.</para>
+        /// <para>The ID of the host group from which you want to remove hosts.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the asset group ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the host group ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the hosts that you want to remove from the host group. Specify a JSON string. You can specify up to 100 host IDs.</para>
+        /// <para>The IDs of the hosts that you want to remove. The value is a JSON string. You can specify up to 100 host IDs.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host IDs.</para>
         /// </remarks>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host whose asset group you want to manage.</para>
+        /// <para>The ID of the Bastionhost instance to which the host group from which you want to remove hosts belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,12 +51,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host whose asset group you want to manage.</para>
+        /// <para>The region ID of the Bastionhost instance to which the host group from which you want to remove hosts belongs.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

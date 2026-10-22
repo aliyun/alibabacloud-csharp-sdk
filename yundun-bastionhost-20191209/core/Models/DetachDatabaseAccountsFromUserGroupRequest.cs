@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DetachDatabaseAccountsFromUserGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the database.</para>
+        /// <para>The information about the databases from which you want to remove authorization.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public List<DetachDatabaseAccountsFromUserGroupRequestDatabases> Databases { get; set; }
         public class DetachDatabaseAccountsFromUserGroupRequestDatabases : TeaModel {
             /// <summary>
-            /// <para>An array that consists of database account IDs.</para>
+            /// <para>The IDs of the database accounts from which you want to remove authorization.</para>
             /// </summary>
             [NameInMap("DatabaseAccountIds")]
             [Validation(Required=false)]
             public List<string> DatabaseAccountIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database on which the permissions are to be revoked.</para>
+            /// <para>The instance ID of the database from which you want to remove authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The ID of the bastion host instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,9 +73,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user group from which you want to revoke permissions on databases and database accounts.</para>
+        /// <para>The ID of the user group from which you want to remove authorized databases and database accounts.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

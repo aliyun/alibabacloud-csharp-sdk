@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The new remarks of the authorization rule. It can be up to 500 characters in length.</para>
+        /// <para>The new remarks for the authorization rule. The remarks can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TEST</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The databases and database accounts that a user associated with the modified rule can manage.</para>
+        /// <para>The new list of database instances and database accounts associated with the authorization rule.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public List<ModifyRuleRequestDatabases> Databases { get; set; }
         public class ModifyRuleRequestDatabases : TeaModel {
             /// <summary>
-            /// <para>The database account IDs.</para>
+            /// <para>The list of database account IDs.</para>
             /// </summary>
             [NameInMap("DatabaseAccountIds")]
             [Validation(Required=false)]
             public List<string> DatabaseAccountIds { get; set; }
 
             /// <summary>
-            /// <para>The database ID.</para>
+            /// <para>The database instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The end time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The new end time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672502400</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? EffectiveEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the new validity period of the authorization rule. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The new start time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1669630029</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? EffectiveStartTime { get; set; }
 
         /// <summary>
-        /// <para>The asset groups and asset accounts that a user associated with the modified rule can manage.</para>
+        /// <para>The new list of asset groups and accounts associated with the authorization rule.</para>
         /// </summary>
         [NameInMap("HostGroups")]
         [Validation(Required=false)]
         public List<ModifyRuleRequestHostGroups> HostGroups { get; set; }
         public class ModifyRuleRequestHostGroups : TeaModel {
             /// <summary>
-            /// <para>The names of the asset accounts.</para>
+            /// <para>The list of asset account names.</para>
             /// </summary>
             [NameInMap("HostAccountNames")]
             [Validation(Required=false)]
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>An array that consists of the host IDs and host account IDs with which the modified authorization rule is associated.</para>
+        /// <para>The new array of host IDs and host account IDs associated with the authorization rule.</para>
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
         public List<ModifyRuleRequestHosts> Hosts { get; set; }
         public class ModifyRuleRequestHosts : TeaModel {
             /// <summary>
-            /// <para>The host account IDs.</para>
+            /// <para>The list of host account IDs.</para>
             /// </summary>
             [NameInMap("HostAccountIds")]
             [Validation(Required=false)]
@@ -118,10 +118,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The ID of the bastion host whose authorization rule you want to modify.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
-        /// </remarks>
+        /// <para>The ID of the Bastionhost instance to which the authorization rule to be updated belongs. &gt; You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -131,15 +128,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host to which the authorization rule to modify belongs.</para>
-        /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
-        /// </remarks>
+        /// <para>The region ID of the Bastionhost instance to which the authorization rule to be updated belongs. &gt; For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the authorization rule to modify.</para>
+        /// <para>The ID of the authorization rule to be updated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the authorization rule. The name must be 1 to 128 characters in length and can contain periods (.), underscores (_), hyphens (-), single quotation marks (\&quot;), and spaces. It cannot start with a special character.</para>
+        /// <para>The new name of the authorization rule. The name must be 1 to 128 characters in length and cannot start with a special character. It can contain only periods (.), underscores (_), hyphens (-), single quotation marks (\&quot;), and spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -170,14 +170,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the user groups with which the modified authorization rule is associated.</para>
+        /// <para>The new list of user group IDs associated with the authorization rule.</para>
         /// </summary>
         [NameInMap("UserGroupIds")]
         [Validation(Required=false)]
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the users with whom the modified authorization rule is associated.</para>
+        /// <para>The new list of user IDs associated with the authorization rule.</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]

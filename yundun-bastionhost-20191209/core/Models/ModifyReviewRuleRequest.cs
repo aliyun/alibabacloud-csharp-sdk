@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host. </para>
+        /// <para>The region ID of the Bastionhost instance. </para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the audit policy.</para>
         /// <remarks>
-        /// <para>You can invoke the ListReviewRules operation to query this parameter.</para>
+        /// <para>You can invoke the ListReviewRules operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? ReviewRuleId { get; set; }
 
         /// <summary>
-        /// <para>The type of the auditable asset scope rule after modification. Valid values:</para>
+        /// <para>The type of the asset scope rule for auditable assets. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>1</b>: All projects.</para>
         /// </description></item>

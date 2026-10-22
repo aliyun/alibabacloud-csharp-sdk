@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostShareKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned information about the shared key.</para>
+        /// <para>The details of the shared key.</para>
         /// </summary>
         [NameInMap("HostShareKey")]
         [Validation(Required=false)]
         public GetHostShareKeyResponseBodyHostShareKey HostShareKey { get; set; }
         public class GetHostShareKeyResponseBodyHostShareKey : TeaModel {
             /// <summary>
-            /// <para>The ID of the shared key.</para>
+            /// <para>The ID of the host shared key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10427</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the shared key.</para>
+            /// <para>The name of the host shared key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyName { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the host shared key was last modified, in seconds (UNIX timestamp format).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1644287246</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>

@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the returned host accounts.</para>
+        /// <para>The host accounts returned.</para>
         /// </summary>
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
         public List<ListHostAccountsResponseBodyHostAccounts> HostAccounts { get; set; }
         public class ListHostAccountsResponseBodyHostAccounts : TeaModel {
             /// <summary>
-            /// <para>Indicates whether a password is set for the host account.<br> Valid values:</para>
+            /// <para>Indicates whether a password is set for the host account. <br>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: A password is set.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: No password is set.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: A password is set.</description></item>
+            /// <item><description><b>false</b>: No password is set.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the shared key of the host.</para>
+            /// <para>The ID of the shared key for the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the shared key of the host.</para>
+            /// <para>The name of the shared key for the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyName { get; set; }
 
             /// <summary>
-            /// <para>The fingerprint of the private key of the host account.</para>
+            /// <para>The fingerprint of the private key for the host account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<b>:</b></para>
@@ -93,16 +91,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PrivateKeyFingerprint { get; set; }
 
             /// <summary>
-            /// <para>The permission type of the account.</para>
+            /// <para>The permission type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Privileged</b>: privileged account</para>
-            /// </description></item>
-            /// <item><description><para><b>Normal</b>: regular account</para>
+            /// <item><description><b>Privileged</b>: Privileged account.</description></item>
+            /// <item><description><b>Normal</b>: Regular account.<remarks>
+            /// <para>This parameter is supported only in V3.2.47 and later.</para>
+            /// </remarks>
             /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para>This parameter is available only for Bastionhost instances of V3.2.47 or later.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -112,12 +108,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PrivilegeType { get; set; }
 
             /// <summary>
-            /// <para>The protocol of the host account.<br> Valid values:</para>
+            /// <para>The protocol name of the host account. <br>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>SSH</para>
-            /// </description></item>
-            /// <item><description><para>RDP</para>
-            /// </description></item>
+            /// <item><description>SSH</description></item>
+            /// <item><description>RDP</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,16 +122,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ProtocolName { get; set; }
 
             /// <summary>
-            /// <para>The password change mode of the account.</para>
+            /// <para>The password rotation mode of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Privileged</b>: The password is changed using a privileged account.</para>
-            /// </description></item>
-            /// <item><description><para><b>Self</b>: The password is changed without using a privileged account.</para>
+            /// <item><description><b>Privileged</b>: Uses a privileged account to rotate the password.</description></item>
+            /// <item><description><b>Self</b>: Does not use a privileged account to rotate the password.<remarks>
+            /// <para>This parameter is supported only in V3.2.47 and later.</para>
+            /// </remarks>
             /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para>This parameter is available only for Bastionhost instances of V3.2.47 or later.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Privileged</para>
@@ -159,7 +151,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned host accounts.</para>
+        /// <para>The total number of host accounts returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

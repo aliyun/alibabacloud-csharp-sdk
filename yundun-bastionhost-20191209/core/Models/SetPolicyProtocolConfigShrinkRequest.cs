@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class SetPolicyProtocolConfigShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Bastionhost instance.</para>
+        /// <para>The instance ID of the bastion host.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
+        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the control policy that you want to modify.</para>
+        /// <para>The ID of the control policy to modify.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain the policy ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,6 +37,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -50,9 +56,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ProtocolConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Bastionhost instance resides.</para>
+        /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

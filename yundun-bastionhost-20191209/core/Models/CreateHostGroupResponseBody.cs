@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the created asset group.</para>
+        /// <para>The ID of the asset group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

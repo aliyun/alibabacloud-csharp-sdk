@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ResetHostAccountCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>The type of logon credential to clear. Valid values:</para>
+        /// <para>The type of the logon credential to purge. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Password</b>: The password.</para>
-        /// </description></item>
-        /// <item><description><para><b>PrivateKey</b>: The SSH private key.</para>
-        /// </description></item>
+        /// <item><description><b>Password</b>: password</description></item>
+        /// <item><description><b>PrivateKey</b>: SSH private key</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,9 +25,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string CredentialType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host account. The logon credential of this account will be cleared.</para>
+        /// <para>The ID of the host account whose logon credentials you want to purge.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,9 +39,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Bastionhost instance. The instance contains the host account.</para>
+        /// <para>The instance ID of the Bastionhost instance to which the host account whose logon credentials you want to purge belongs.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,14 +52,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Bastionhost instance.</para>
+        /// <para>The region ID of the Bastionhost instance to which the host account whose logon credentials you want to purge belongs.</para>
         /// <remarks>
-        /// <para>For information about region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

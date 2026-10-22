@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GenerateAssetOperationTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the asset account.</para>
+        /// <para>The ID of the asset account for which you want to apply for an O&amp;M token.</para>
         /// <remarks>
-        /// <para>You must specify at least one of <c>AssetAccountId</c> and <c>AssetAccountName</c>. If you specify both parameters, <c>AssetAccountId</c> is used.</para>
+        /// <para>You must specify at least one of AssetAccountId and AssetAccountName. If both are specified, AssetAccountId takes precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetAccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the asset account. If this parameter specifies a custom account, you must enter the actual account name.</para>
+        /// <para>The name of the host account. If the account is a custom account, specify the actual account name.</para>
         /// <remarks>
-        /// <para>If you specify both <c>AssetAccountId</c> and <c>AssetAccountName</c>, <c>AssetAccountId</c> is used.</para>
+        /// <para>If both AssetAccountId and AssetAccountName are specified, AssetAccountId takes precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetAccountName { get; set; }
 
         /// <summary>
-        /// <para>The password that is encoded in Base64. This parameter is required if you want to generate an O\&amp;M token for a custom account.</para>
+        /// <para>The Base64-encoded password. This parameter is required when you apply for an O&amp;M token for a custom account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVzdHBhc3N3b3Jk</para>
@@ -46,23 +46,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetAccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The protocol that is used to connect to the asset. Valid values:</para>
+        /// <para>The name of the protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>SSH</b></para>
-        /// </description></item>
-        /// <item><description><para><b>RDP</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>SQLServer</b></para>
-        /// </description></item>
+        /// <item><description><b>SSH</b></description></item>
+        /// <item><description><b>RDP</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>SQLServer</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if you want to generate an O\&amp;M token for a custom account.</para>
+        /// <para>This parameter is required when you apply for an O&amp;M token for a custom account.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,7 +67,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetAccountProtocolName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset.</para>
+        /// <para>The ID of the asset for which you want to apply for an O&amp;M token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,12 +78,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset for which you want to generate an O\&amp;M token. Valid values:</para>
+        /// <para>The Asset Type for which you want to apply for a token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Host</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Database</b></para>
-        /// </description></item>
+        /// <item><description><b>Host</b>: host</description></item>
+        /// <item><description><b>Database</b>: database</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -101,9 +93,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetType { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. This parameter is required for a custom account if you set OperationMode to Sso and AssetAccountProtocolName to PostgreSQL or Oracle.</para>
+        /// <para>The name of the database. This parameter is required when OperationMode is set to Sso, AssetAccountProtocolName is set to PostgreSQL or Oracle, and the account is a custom account.</para>
         /// <remarks>
-        /// <para>This parameter is supported only by bastion hosts of V3.2.44 or later.</para>
+        /// <para>This parameter is supported only in Bastionhost V3.2.44 and later.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,9 +106,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseSchema { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host instance.</para>
+        /// <para>The instance ID of the Bastionhost instance for which you want to apply for an O&amp;M token.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -128,16 +120,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The logon attribute. This parameter is required if you set OperationMode to Sso and use a custom Oracle account. Valid values:</para>
+        /// <para>The logon attribute. This parameter is required when OperationMode is set to Sso and the account is a custom Oracle account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>SERVICENAME</b></para>
-        /// </description></item>
-        /// <item><description><para><b>SID</b></para>
+        /// <item><description><b>SERVICENAME</b></description></item>
+        /// <item><description><b>SID</b><remarks>
+        /// <para>This parameter is supported only in Bastionhost V3.2.44 and later.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is supported only by bastion hosts of V3.2.44 or later.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>SID</para>
@@ -150,16 +140,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string LoginAttribute { get; set; }
 
         /// <summary>
-        /// <para>The O\&amp;M mode. Valid values:</para>
+        /// <para>The O&amp;M logon method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>WebToken</b>: generates an O\&amp;M token.</para>
-        /// </description></item>
-        /// <item><description><para><b>Sso</b>: logs on to the client.</para>
+        /// <item><description><b>WebToken</b>: obtain an O&amp;M token</description></item>
+        /// <item><description><b>Sso</b>: log on by using a local client<remarks>
+        /// <para>This parameter is supported only in Bastionhost V3.2.44 and later. If this parameter is left empty, the default value WebToken is used.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is supported only by bastion hosts of V3.2.44 or later. If you do not specify this parameter, WebToken is used.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Sso</para>
@@ -169,7 +157,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OperationMode { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the logon. This parameter is required if your administrator enables logon remarks in the control policy.</para>
+        /// <para>The logon note. This parameter is required when the administrator enables the logon note feature in the control policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>comment</para>
@@ -179,9 +167,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OperationNote { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host instance.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -192,16 +180,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the client that you want to use for O\&amp;M on a Linux asset. This parameter is required if you set OperationMode to Sso and the asset protocol to SSH. Valid values:</para>
+        /// <para>The type of the local client to be opened for O&amp;M operations on Linux assets. This parameter is required when OperationMode is set to Sso and the asset protocol is SSH. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ssh</b>: opens a client that supports the SSH protocol to perform O\&amp;M with SSH permissions.</para>
-        /// </description></item>
-        /// <item><description><para><b>sftp</b>: opens a client that supports the SFTP protocol to perform O\&amp;M with SFTP permissions.</para>
+        /// <item><description><b>ssh</b>: open an SSH client to perform O&amp;M operations with SSH permissions</description></item>
+        /// <item><description><b>sftp</b>: open an SFTP client to perform O&amp;M operations with SFTP permissions<remarks>
+        /// <para>This parameter is supported only in Bastionhost V3.2.44 and later.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is supported only by bastion hosts of V3.2.44 or later.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ssh</para>

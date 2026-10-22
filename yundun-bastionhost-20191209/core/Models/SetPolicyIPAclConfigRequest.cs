@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class SetPolicyIPAclConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The access control settings for source IP addresses.</para>
+        /// <para>The source IP address restriction configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IPAclConfig")]
@@ -18,12 +18,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public SetPolicyIPAclConfigRequestIPAclConfig IPAclConfig { get; set; }
         public class SetPolicyIPAclConfigRequestIPAclConfig : TeaModel {
             /// <summary>
-            /// <para>The mode of access control on source IP addresses. Valid values:</para>
+            /// <para>The source IP address restriction mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>black</b>: blacklist mode.</para>
-            /// </description></item>
-            /// <item><description><para><b>white</b>: whitelist mode.</para>
-            /// </description></item>
+            /// <item><description><b>black</b>: blacklist mode</description></item>
+            /// <item><description><b>white</b>: whitelist mode</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -35,15 +33,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AclType { get; set; }
 
             /// <summary>
-            /// <para>The source IP addresses in the blacklist or whitelist.</para>
+            /// <para>The list of restricted source IP addresses.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is required if AclType is set to white.</para>
-            /// </description></item>
-            /// <item><description><para>If AclType is set to black but you do not want to add IP addresses to the blacklist, you can leave IPs empty.</para>
-            /// </description></item>
+            /// <item><description>When AclType is set to white, the IPs list is required.</description></item>
+            /// <item><description>When AclType is set to black but you do not need to set a source IP blacklist, pass an empty list for IPs.</description></item>
             /// </list>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("IPs")]
@@ -53,9 +49,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The ID of the bastion host instance.</para>
         /// <remarks>
-        /// <para>You can call the DescribeInstances operation to query the bastion host ID.<a href="~~153281~~"></a></para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the bastion host instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the control policy that you want to modify.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,6 +76,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

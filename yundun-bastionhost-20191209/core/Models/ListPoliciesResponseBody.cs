@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<ListPoliciesResponseBodyPolicies> Policies { get; set; }
         public class ListPoliciesResponseBodyPolicies : TeaModel {
             /// <summary>
-            /// <para>The remarks of the control policy.</para>
+            /// <para>The comment of the control policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Comment</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The control policy ID.</para>
+            /// <para>The ID of the control policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the control policy.</para>
+            /// <para>The Policy Name of the control policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of control policies that are returned.</para>
+        /// <para>The total number of control policies returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

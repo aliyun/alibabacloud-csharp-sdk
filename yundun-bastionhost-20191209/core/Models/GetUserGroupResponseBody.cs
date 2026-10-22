@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the user group returned.</para>
+        /// <para>The details of the user group.</para>
         /// </summary>
         [NameInMap("UserGroup")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The ID of the group.</para>
+            /// <para>The ID of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

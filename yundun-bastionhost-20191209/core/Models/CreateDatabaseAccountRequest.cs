@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseId { get; set; }
 
         /// <summary>
-        /// <para>The database name. This parameter is required when the database corresponding to DatabaseId is PostgreSQL or Oracle.</para>
+        /// <para>The database name. This parameter is required when the database that corresponds to DatabaseId is PostgreSQL or Oracle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>orcl</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The logon attribute. This parameter is required for Oracle databases. Valid values:</para>
+        /// <para>The logon property. This parameter is required for Oracle databases. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SERVICENAME</description></item>
         /// <item><description>SID</description></item>
@@ -84,6 +84,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

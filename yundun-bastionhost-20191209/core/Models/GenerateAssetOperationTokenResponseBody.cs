@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GenerateAssetOperationTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asset operation token.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("AssetOperationToken")]
         [Validation(Required=false)]
         public GenerateAssetOperationTokenResponseBodyAssetOperationToken AssetOperationToken { get; set; }
         public class GenerateAssetOperationTokenResponseBodyAssetOperationToken : TeaModel {
             /// <summary>
-            /// <para>The number of remaining uses for the token.</para>
+            /// <para>The remaining number of times the O&amp;M token can be used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? CountLeft { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the token. This value is a UNIX timestamp.</para>
+            /// <para>The expiration time of the O&amp;M token. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709110797</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the token has a use limit.</para>
+            /// <para>Indicates whether the number of uses is limited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? RenewCount { get; set; }
 
             /// <summary>
-            /// <para>The single sign-on (SSO) URL.</para>
+            /// <para>The single sign-on URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sso://eyJOT0RFX0NPTU1PTiI6eyJNb2R******</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SsoUrl { get; set; }
 
             /// <summary>
-            /// <para>The O\&amp;M token that is requested.</para>
+            /// <para>The requested O&amp;M token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NmYyMmEzNmMwYzljNGY******</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>The ID of the O\&amp;M token.</para>
+            /// <para>The ID of the O&amp;M token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

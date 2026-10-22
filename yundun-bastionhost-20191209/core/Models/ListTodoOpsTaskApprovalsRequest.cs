@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListTodoOpsTaskApprovalsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The task name or task remarks to query. Fuzzy match is supported.</para>
+        /// <para>The name or comment of the task to query. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query.<br>The maximum value of the PageSize parameter is 100. The default number of entries per page is 20. If PageSize is left empty, 20 entries are returned by default.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.<br>The maximum value of the PageSize parameter is 100. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Specify a value for the PageSize parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,14 +56,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,11 +80,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The task scheduling type used to filter results. Valid values:</para>
+        /// <para>The scheduling type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FixTime</b>: scheduled execution.</description></item>
-        /// <item><description><b>CycleInterval</b>: periodic execution.</description></item>
-        /// <item><description><b>Manual</b>: manually triggered by the user.</description></item>
+        /// <item><description><b>FixTime</b>: Scheduled execution.</description></item>
+        /// <item><description><b>CycleInterval</b>: Periodic execution.</description></item>
+        /// <item><description><b>Manual</b>: Manually triggered execution.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

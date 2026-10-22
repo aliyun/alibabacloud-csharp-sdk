@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ConfigInstanceWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Bastionhost instance to configure.</para>
+        /// <para>Instance ID of the Bastionhost instance for which you want to configure the public IP address whitelist.</para>
         /// <remarks>
-        /// <para>To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query instance ID of the Bastionhost instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of IP addresses to add to the whitelist.</para>
+        /// <para>The IP address whitelist to be configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.162.XX.XX</para>
@@ -44,21 +44,24 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<string> WhiteList { get; set; }
 
         /// <summary>
-        /// <para>The policies for the public IP address whitelist.</para>
+        /// <para>The IP address whitelist to be configured.</para>
         /// </summary>
         [NameInMap("WhiteListPolicies")]
         [Validation(Required=false)]
         public List<ConfigInstanceWhiteListRequestWhiteListPolicies> WhiteListPolicies { get; set; }
         public class ConfigInstanceWhiteListRequestWhiteListPolicies : TeaModel {
             /// <summary>
-            /// <para>The description of this whitelist rule.</para>
+            /// <para>The remark or description for the whitelist rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses to add to the whitelist. You can specify up to 50 IP addresses, separated by a comma.</para>
+            /// <para>The IP address whitelist to be configured. You can configure up to 50 IP addresses. To add multiple IP addresses to the whitelist, separate them with commas (,). The whitelist cannot contain 0.0.0.0/0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.162.XX.XX,192.168.XX.XX</para>

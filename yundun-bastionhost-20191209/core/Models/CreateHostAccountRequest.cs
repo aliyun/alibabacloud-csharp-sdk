@@ -113,6 +113,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -148,10 +151,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The password rotation mode of the account. Default value: Self.</para>
+        /// <para>The password change mode of the account. Default value: Self.</para>
         /// <list type="bullet">
-        /// <item><description><b>Privileged</b>: uses a privileged account to rotate the password.</description></item>
-        /// <item><description><b>Self</b>: does not use a privileged account to rotate the password.<remarks>
+        /// <item><description><b>Privileged</b>: uses a privileged account to change the password.</description></item>
+        /// <item><description><b>Self</b>: does not use a privileged account to change the password.<remarks>
         /// <para>Only supported in V3.2.47 and later.</para>
         /// </remarks>
         /// </description></item>

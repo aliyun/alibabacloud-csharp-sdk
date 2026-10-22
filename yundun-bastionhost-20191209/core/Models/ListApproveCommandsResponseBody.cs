@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListApproveCommandsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The commands to be reviewed.</para>
+        /// <para>The list of commands.</para>
         /// </summary>
         [NameInMap("ApproveCommands")]
         [Validation(Required=false)]
         public List<ListApproveCommandsResponseBodyApproveCommands> ApproveCommands { get; set; }
         public class ListApproveCommandsResponseBodyApproveCommands : TeaModel {
             /// <summary>
-            /// <para>The ID of the command to be reviewed.</para>
+            /// <para>The ID of the command pending approval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ApproveCommandId { get; set; }
 
             /// <summary>
-            /// <para>The username of the asset account that is used for O\&amp;M.</para>
+            /// <para>The name of the asset account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetAccountName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the asset for O\&amp;M.</para>
+            /// <para>The IP address of the O&amp;M asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.167.XX.XX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset.</para>
+            /// <para>The name of the O&amp;M asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>poros-test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The Bastionhost user who submitted the O\&amp;M application.</para>
+            /// <para>The Bastionhost user who submitted the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ClientUser { get; set; }
 
             /// <summary>
-            /// <para>The command to be reviewed.</para>
+            /// <para>The command pending approval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/bin/bash</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Command { get; set; }
 
             /// <summary>
-            /// <para>The time when the O\&amp;M application was submitted. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the application was submitted. Unit: seconds. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1679393152</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The O\&amp;M protocol.</para>
+            /// <para>The name of the O&amp;M protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SSH</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ProtocolName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the O\&amp;M session that triggered the review.</para>
+            /// <para>The ID of the O&amp;M session that triggered the approval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>95f873ab64a76d5b0000000000004d5e</para>
@@ -117,7 +117,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the review. Valid values: <b>Wait</b>: The command is pending review.</para>
+            /// <para>The approval status.
+            /// <b>Wait</b>: Pending approval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Wait</para>
@@ -129,7 +130,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E3EF7711-766D-5888-997B-EFBA76809229</para>
@@ -139,7 +140,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of commands to be reviewed.</para>
+        /// <para>The total number of commands pending approval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

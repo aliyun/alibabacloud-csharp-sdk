@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreatePolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The control policy ID.</para>
+        /// <para>The ID of the control policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

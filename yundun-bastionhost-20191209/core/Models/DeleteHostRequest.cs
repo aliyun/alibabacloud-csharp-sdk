@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DeleteHostRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the host that you want to delete.</para>
+        /// <para>The ID of the host to be deleted.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</para>
         /// </remarks>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the bastion host where the host that you want to delete resides.</para>
+        /// <para>The instance ID of the bastion host to which the host to be deleted belongs.</para>
         /// <remarks>
         /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
@@ -39,13 +39,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host instance where the host that you want to delete resides.</para>
+        /// <para>The region ID of the bastion host instance to which the host to be deleted belongs.</para>
         /// <remarks>
         /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

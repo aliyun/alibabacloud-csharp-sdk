@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class SetPolicyUserScopeRequest : TeaModel {
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The ID of the bastion host instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the control policy that you want to modify.</para>
+        /// <para>The ID of the control policy to modify.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,6 +37,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,14 +61,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scope of users to whom the control policy applies. Valid values:</para>
+        /// <para>The user scope for the control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>All</b>: The control policy applies to all users.</para>
-        /// </description></item>
-        /// <item><description><para><b>User</b>: The control policy applies to specified users.</para>
-        /// </description></item>
-        /// <item><description><para><b>UserGroup</b>: The control policy applies to specified user groups.</para>
-        /// </description></item>
+        /// <item><description><b>All</b>: The policy applies to all users.</description></item>
+        /// <item><description><b>User</b>: The policy applies to selected users.</description></item>
+        /// <item><description><b>UserGroup</b>: The policy applies to selected user groups.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,9 +77,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ScopeType { get; set; }
 
         /// <summary>
-        /// <para>The user groups to which the control policy applies.</para>
+        /// <para>The user group scope for the control policy.</para>
         /// <remarks>
-        /// <para>This parameter is required if ScopeType is set to UserGroup. You can specify up to 100 user group IDs.</para>
+        /// <para>This parameter is required when ScopeType is set to UserGroup. A maximum of 100 user groups can be specified.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UserGroupIds")]
@@ -84,9 +87,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The users to whom the control policy applies.</para>
+        /// <para>The user scope for the control policy.</para>
         /// <remarks>
-        /// <para>This parameter is required if ScopeType is set to User. You can specify up to 500 user IDs.</para>
+        /// <para>This parameter is required when ScopeType is set to User. A maximum of 500 users can be specified.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UserIds")]

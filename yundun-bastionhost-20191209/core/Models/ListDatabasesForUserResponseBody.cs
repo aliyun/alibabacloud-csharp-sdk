@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListDatabasesForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The databases returned.</para>
+        /// <para>The list of databases.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -19,10 +19,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The address type of the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Public</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Private</b></para>
-            /// </description></item>
+            /// <item><description><b>Public</b>: public endpoint</description></item>
+            /// <item><description><b>Private</b>: private endpoint in the private network</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ActiveAddressType { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the database.</para>
+            /// <para>The description of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The database ID.</para>
+            /// <para>The instance ID of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseId { get; set; }
 
             /// <summary>
-            /// <para>The database name.</para>
+            /// <para>The name of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL56</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// <para>The database port.</para>
+            /// <para>The port of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3306</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? DatabasePort { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint of the database. The value is a domain name or an IP address.</para>
+            /// <para>The private endpoint of the database in the private network, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabasePrivateAddress { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint of the database. The value is a domain name or an IP address.</para>
+            /// <para>The public address of the database, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -93,16 +91,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabasePublicAddress { get; set; }
 
             /// <summary>
-            /// <para>The database engine. Valid values:</para>
+            /// <para>The type of the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MySQL</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Oracle</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PostgreSQL</b></para>
-            /// </description></item>
-            /// <item><description><para><b>SQLServer</b></para>
-            /// </description></item>
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>PostgreSQL</b></description></item>
+            /// <item><description><b>SQLServer</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,7 +107,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network domain where the database resides.</para>
+            /// <para>The ID of the network domain to which the database belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -122,23 +116,32 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string NetworkDomainId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the project to which the database belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The database type. Valid values:</para>
+            /// <para>The source of the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Local</b>: on-premises database.</para>
-            /// </description></item>
-            /// <item><description><para><b>Rds</b>: ApsaraDB RDS instance.</para>
-            /// </description></item>
-            /// <item><description><para><b>PolarDB</b>: PolarDB cluster.</para>
-            /// </description></item>
+            /// <item><description><b>Local</b>: local database instance</description></item>
+            /// <item><description><b>Rds</b>: ApsaraDB RDS instance</description></item>
+            /// <item><description><b>PolarDB</b>: PolarDB instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,9 +152,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ApsaraDB RDS instance or PolarDB cluster.</para>
+            /// <para>The instance ID of the ApsaraDB RDS or PolarDB instance that corresponds to the database.</para>
             /// <remarks>
-            /// <para>No value is returned for this parameter if <b>Source</b> is set to <b>Local</b>.</para>
+            /// <para>If <b>Source</b> is set to <b>Local</b>, this parameter is empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A8A665B9-8550-4942-9DEE-73198051856B</para>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of databases returned.</para>
+        /// <para>The total number of databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

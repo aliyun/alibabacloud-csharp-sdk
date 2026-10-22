@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<ListHostGroupsResponseBodyHostGroups> HostGroups { get; set; }
         public class ListHostGroupsResponseBodyHostGroups : TeaModel {
             /// <summary>
-            /// <para>The remarks of the asset group.</para>
+            /// <para>The description of the asset group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Comment</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The asset group ID.</para>
+            /// <para>The ID of the asset group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

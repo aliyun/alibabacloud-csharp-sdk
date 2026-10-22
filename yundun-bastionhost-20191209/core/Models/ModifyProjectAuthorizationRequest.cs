@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyProjectAuthorizationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the project authorization to modify.</para>
+        /// <para>The ID of the project authorization to be modified.</para>
         /// <remarks>
-        /// <para>You can call the ListProjectAuthorizations operation to query this parameter.</para>
+        /// <para>You can call the ListProjectAuthorizations operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host instance.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scope of manageable assets associated with the authorization after modification. Valid values:</para>
+        /// <para>The scope of assets that can be managed by the authorization after modification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: All projects.</para>
+        /// <item><description><para><b>1</b>: all projects</para>
         /// </description></item>
-        /// <item><description><para><b>2</b>: Specified projects.</para>
+        /// <item><description><para><b>2</b>: specified projects</para>
         /// </description></item>
         /// </list>
         /// 

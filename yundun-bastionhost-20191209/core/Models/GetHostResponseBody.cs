@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned information about the host.</para>
+        /// <para>The information about the queried host.</para>
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public GetHostResponseBodyHost Host { get; set; }
         public class GetHostResponseBodyHost : TeaModel {
             /// <summary>
-            /// <para>The address type of the host. Valid values:</para>
+            /// <para>The host address type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Public</b>: a public address</para>
-            /// </description></item>
-            /// <item><description><para><b>Private</b>: a private address</para>
-            /// </description></item>
+            /// <item><description><b>Public</b>: public address.</description></item>
+            /// <item><description><b>Private</b>: private network address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ActiveAddressType { get; set; }
 
             /// <summary>
-            /// <para>The description of the host.</para>
+            /// <para>The remarks of the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>host</para>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The ID of the host.</para>
+            /// <para>The host ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint of the host. The value is a domain name or an IP address.</para>
+            /// <para>The private network address of the host, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// <para>The public address of the host. The value is a domain name or an IP address.</para>
+            /// <para>The public address of the host, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.XX.XX</para>
@@ -95,10 +93,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The operating system of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Linux</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Windows</b></para>
-            /// </description></item>
+            /// <item><description><b>Linux</b></description></item>
+            /// <item><description><b>Windows</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,16 +105,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string OSType { get; set; }
 
             /// <summary>
-            /// <para>The preferred key exchange algorithm of the host. The value of this parameter is returned if OSType is set to Linux. Valid values:</para>
+            /// <para>The preferred key exchange algorithm configuration of the host. This parameter is returned only when OSType is Linux.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>default</b></para>
-            /// </description></item>
-            /// <item><description><para><b>diffie-hellman-group1-sha1</b></para>
-            /// </description></item>
-            /// <item><description><para><b>diffie-hellman-group14-sha1</b></para>
-            /// </description></item>
-            /// <item><description><para><b>diffie-hellman-group-exchange-sha1</b></para>
-            /// </description></item>
+            /// <item><description><b>default</b>: default mode.</description></item>
+            /// <item><description><b>diffie-hellman-group1-sha1</b>: diffie-hellman-group1-sha1 algorithm compatibility mode.</description></item>
+            /// <item><description><b>diffie-hellman-group14-sha1</b>: diffie-hellman-group14-sha1 algorithm compatibility mode.</description></item>
+            /// <item><description><b>diffie-hellman-group-exchange-sha1</b>: diffie-hellman-group-exchange-sha1 algorithm compatibility mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,14 +121,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PrefKex { get; set; }
 
             /// <summary>
-            /// <para>The protocol information about the host.</para>
+            /// <para>The protocol information of the host.</para>
             /// </summary>
             [NameInMap("Protocols")]
             [Validation(Required=false)]
             public List<GetHostResponseBodyHostProtocols> Protocols { get; set; }
             public class GetHostResponseBodyHostProtocols : TeaModel {
                 /// <summary>
-                /// <para>The fingerprint of the host. This parameter uniquely identifies a host. A value is returned for this parameter only if you have performed O\&amp;M operations on the host by using the bastion host. Otherwise, no value is returned.</para>
+                /// <para>The host fingerprint information, which uniquely identifies a host. The bastion host records the host fingerprint only when you use the bastion host to perform O&amp;M on the target host. Otherwise, this parameter is empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ssh-ed25519|3e:46:5a:e1:1f:0d:39:7e:61:35:d5:fa:7b:2b:<b>:</b></para>
@@ -156,12 +148,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The protocol that is used to connect to the host. Valid values:</para>
+                /// <para>The protocol name used by the host. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>SSH</b></para>
-                /// </description></item>
-                /// <item><description><para><b>RDP</b></para>
-                /// </description></item>
+                /// <item><description><b>SSH</b></description></item>
+                /// <item><description><b>RDP</b></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -176,12 +166,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The source of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Local</b>: a host in a data center</para>
-            /// </description></item>
-            /// <item><description><para><b>Ecs</b>: an Elastic Compute Service (ECS) instance</para>
-            /// </description></item>
-            /// <item><description><para><b>Rds</b>: a host in an ApsaraDB MyBase dedicated cluster</para>
-            /// </description></item>
+            /// <item><description><b>Local</b>: local host.</description></item>
+            /// <item><description><b>Ecs</b>: ECS instance.</description></item>
+            /// <item><description><b>Rds</b>: ApsaraDB RDS dedicated cluster host.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,9 +179,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</para>
+            /// <para>The ECS instance ID or dedicated cluster host ID that corresponds to the host.</para>
             /// <remarks>
-            /// <para>If <b>Local</b> is returned for the <b>Source</b> parameter, no value is returned for this parameter.</para>
+            /// <para>If <b>Source</b> is set to <b>Local</b>, this parameter is empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -205,12 +192,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the host. Valid values:</para>
+            /// <para>The host status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Normal</b>: normal</para>
-            /// </description></item>
-            /// <item><description><para><b>Release</b>: released</para>
-            /// </description></item>
+            /// <item><description><b>Normal</b>: Normal.</description></item>
+            /// <item><description><b>Release</b>: Released.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +208,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID generated by Alibaba Cloud for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>

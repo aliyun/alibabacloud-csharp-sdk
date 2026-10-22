@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the hosts returned.</para>
+        /// <para>The list of hosts queried.</para>
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
@@ -19,10 +19,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The address type of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Public</b>: a public address</para>
-            /// </description></item>
-            /// <item><description><para><b>Private</b>: a private address</para>
-            /// </description></item>
+            /// <item><description><b>Public</b>: public address</description></item>
+            /// <item><description><b>Private</b>: private endpoint in the private network</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? HostAccountCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the host.</para>
+            /// <para>The host ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The private address of the host. The value is a domain name or an IP address.</para>
+            /// <para>The private endpoint in the private network of the host, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// <para>The public address of the host. The value is a domain name or an IP address.</para>
+            /// <para>The public address of the host, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.XX.XX</para>
@@ -95,10 +93,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The operating system of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Linux</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Windows</b></para>
-            /// </description></item>
+            /// <item><description><b>Linux</b></description></item>
+            /// <item><description><b>Windows</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,12 +107,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The source of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Local</b>: a host in a data center</para>
-            /// </description></item>
-            /// <item><description><para><b>Ecs</b>: an ECS instance</para>
-            /// </description></item>
-            /// <item><description><para><b>Rds</b>: a host in an ApsaraDB MyBase dedicated cluster</para>
-            /// </description></item>
+            /// <item><description><b>Local</b>: local host</description></item>
+            /// <item><description><b>Ecs</b>: ECS instance</description></item>
+            /// <item><description><b>Rds</b>: ApsaraDB RDS dedicated cluster host</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,9 +120,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</para>
+            /// <para>The ECS instance ID or the dedicated cluster host ID that corresponds to the host.</para>
             /// <remarks>
-            /// <para>No value is returned for this parameter if the <b>Source</b> parameter is set to <b>Local</b>.</para>
+            /// <para>If <b>Source</b> is <b>Local</b>, this parameter is empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -142,10 +135,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The status of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Normal</b>: normal</para>
-            /// </description></item>
-            /// <item><description><para><b>Release</b>: released</para>
-            /// </description></item>
+            /// <item><description><b>Normal</b>: normal</description></item>
+            /// <item><description><b>Release</b>: released</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +149,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -168,7 +159,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of hosts returned.</para>
+        /// <para>The total number of hosts queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

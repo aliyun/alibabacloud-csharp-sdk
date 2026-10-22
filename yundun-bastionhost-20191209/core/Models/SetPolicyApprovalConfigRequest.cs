@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class SetPolicyApprovalConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The O\&amp;M approval setting in the control policy.</para>
+        /// <para>The O&amp;M approval configuration in the control policy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApprovalConfig")]
@@ -18,12 +18,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public SetPolicyApprovalConfigRequestApprovalConfig ApprovalConfig { get; set; }
         public class SetPolicyApprovalConfigRequestApprovalConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable O\&amp;M approval in the control policy. Valid values:</para>
+            /// <para>The O&amp;M approval configuration in the control policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>On</b>: enables O\&amp;M approval.</para>
-            /// </description></item>
-            /// <item><description><para><b>Off</b>: disables O\&amp;M approval.</para>
-            /// </description></item>
+            /// <item><description><b>On</b>: Enables O&amp;M approval.</description></item>
+            /// <item><description><b>Off</b>: Disables O&amp;M approval.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -37,9 +35,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The Bastionhost instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the DescribeInstances operation to obtain the Bastionhost instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the control policy that you want to modify.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,14 +62,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

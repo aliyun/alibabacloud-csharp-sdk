@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The command approval settings.</para>
             /// <remarks>
-            /// <para>A command approval policy is used to approve the commands that are excluded from a whitelist or blacklist specified in a command control policy. The command control policy takes precedence over the command approval policy in validation.</para>
+            /// <para>Command approval applies to commands that are not subject to command control (whitelist or blacklist). Command control policies take precedence over command approval.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Approval")]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public SetPolicyCommandConfigRequestCommandConfigApproval Approval { get; set; }
             public class SetPolicyCommandConfigRequestCommandConfigApproval : TeaModel {
                 /// <summary>
-                /// <para>The commands that can be run only after approval.</para>
+                /// <para>The list of commands that require approval.</para>
                 /// </summary>
                 [NameInMap("Commands")]
                 [Validation(Required=false)]
@@ -48,12 +48,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public SetPolicyCommandConfigRequestCommandConfigDeny Deny { get; set; }
             public class SetPolicyCommandConfigRequestCommandConfigDeny : TeaModel {
                 /// <summary>
-                /// <para>The type of command control. Valid values:</para>
+                /// <para>The command control type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>black</b>: blacklist mode.</para>
-                /// </description></item>
-                /// <item><description><para><b>white</b>: whitelist mode.</para>
-                /// </description></item>
+                /// <item><description><b>black</b>: blacklist mode</description></item>
+                /// <item><description><b>white</b>: whitelist mode</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -65,9 +63,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string AclType { get; set; }
 
                 /// <summary>
-                /// <para>The commands to be controlled.</para>
+                /// <para>The list of commands.</para>
                 /// <remarks>
-                /// <para>This parameter is required if AclType is set to white.</para>
+                /// <para>If AclType is set to white, Commands is required.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Commands")]
@@ -79,9 +77,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the control policy that you want to modify.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -106,12 +104,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

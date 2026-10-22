@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The new remarks of the control policy.</para>
+        /// <para>The new description of the control policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,10 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host to which the control policy to modify belongs.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
-        /// </remarks>
+        /// <para>The ID of the Bastionhost instance to which the control policy belongs. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +31,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the control policy that you want to modify.</para>
+        /// <para>The ID of the control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the control policy.</para>
+        /// <para>The new Policy Name of the control policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -55,7 +52,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The priority of the modified control policy. Valid values: 1 to 100. The smaller the value, the higher the priority. Default value: 1.</para>
+        /// <para>The new priority of the control policy. Valid values: 1 to 100. A smaller value indicates a higher priority. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -64,15 +61,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string Priority { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host to which the control policy to modify belongs.</para>
-        /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
-        /// </remarks>
+        /// <para>The region ID of the Bastionhost instance to which the control policy belongs. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationDatabaseAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The database accounts returned.</para>
+        /// <para>The list of database accounts.</para>
         /// </summary>
         [NameInMap("DatabaseAccounts")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The database account ID.</para>
+            /// <para>The ID of the database account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseAccountName { get; set; }
 
             /// <summary>
-            /// <para>The database ID.</para>
+            /// <para>The database instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a password is configured for the database host account.</para>
+            /// <para>Indicates whether a password is set for the database host account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,12 +67,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HasPassword { get; set; }
 
             /// <summary>
-            /// <para>The logon attribute. One of the following values is returned if the database engine is Oracle:</para>
+            /// <para>The logon attribute. This parameter has a return value only for Oracle databases. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>SERVICENAME</b></para>
-            /// </description></item>
-            /// <item><description><para><b>SID</b></para>
-            /// </description></item>
+            /// <item><description><b>SERVICENAME</b></description></item>
+            /// <item><description><b>SID</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string LoginAttribute { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used by the database account.</para>
+            /// <para>The protocol name of the database account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of queried manageable database accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host.</para>
+        /// <para>The ID of the host to be updated.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the host ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the host. The name can be up to 128 characters.</para>
+        /// <para>The new name of the host. The name can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestHost</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The new internal endpoint of the host. You can set this parameter to a domain name or an IP address.</para>
+        /// <para>The new private network address of the host. You can specify a domain name or an IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>193.168.XX.XX</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostPrivateAddress { get; set; }
 
         /// <summary>
-        /// <para>The new public endpoint of the host. You can set this parameter to a domain name or an IP address.</para>
+        /// <para>The new public address of the host. You can specify a domain name or an IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200.1.XX.XX</para>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostPublicAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host on which you want to modify the information about the host.</para>
+        /// <para>The ID of the Bastionhost instance to which the host belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new network domain to which the host belongs.</para>
+        /// <para>The ID of the network domain to which the host belongs.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</para>
         /// </remarks>
@@ -91,12 +91,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainId { get; set; }
 
         /// <summary>
-        /// <para>The new operating system of the host. Valid values:</para>
+        /// <para>The new operating system type of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Linux</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Windows</b></para>
-        /// </description></item>
+        /// <item><description><b>Linux</b></description></item>
+        /// <item><description><b>Windows</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,16 +105,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OSType { get; set; }
 
         /// <summary>
-        /// <para>The preferred key exchange algorithm of the host. If you set OSType to Linux, you can modify this parameter. Valid values:</para>
+        /// <para>The preferred key exchange algorithm for the host. You can modify this parameter only when the OSType parameter is set to Linux. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>default</b></para>
-        /// </description></item>
-        /// <item><description><para><b>diffie-hellman-group1-sha1</b></para>
-        /// </description></item>
-        /// <item><description><para><b>diffie-hellman-group14-sha1</b></para>
-        /// </description></item>
-        /// <item><description><para><b>diffie-hellman-group-exchange-sha1</b></para>
-        /// </description></item>
+        /// <item><description><b>default</b>: Default mode.</description></item>
+        /// <item><description><b>diffie-hellman-group1-sha1</b>: Compatibility mode for the diffie-hellman-group1-sha1 algorithm.</description></item>
+        /// <item><description><b>diffie-hellman-group14-sha1</b>: Compatibility mode for the diffie-hellman-group14-sha1 algorithm.</description></item>
+        /// <item><description><b>diffie-hellman-group-exchange-sha1</b>: Compatibility mode for the diffie-hellman-group-exchange-sha1 algorithm.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,12 +120,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PrefKex { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host on which you want to modify the information about the host.</para>
+        /// <para>The region ID of the Bastionhost instance to which the host belongs.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

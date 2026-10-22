@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The address type of the new database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Public: public address</description></item>
-        /// <item><description>Private: private network address</description></item>
+        /// <item><description>Public: public endpoint.</description></item>
+        /// <item><description>Private: private endpoint.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ActiveAddressType { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the new database. The value can be up to 500 characters in length.</para>
+        /// <para>The description of the new database. The value can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpp</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The name of the new database instance. This parameter is required when the database source is <b>Local</b>.</para>
+        /// <para>The name of the new database instance. This parameter is required if Source is set to <b>Local</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test01</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The port used to access the database. This parameter is required when the database source is <b>Local</b>.</para>
+        /// <para>The port of the database. This parameter is required if Source is set to <b>Local</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5433</para>
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? DatabasePort { get; set; }
 
         /// <summary>
-        /// <para>The private network address. IPv4 addresses and domain name formats are supported.</para>
+        /// <para>The private endpoint. IPv4 addresses and domain names are supported.</para>
         /// <remarks>
-        /// <para>This parameter is required when ActiveAddressType is set to Private.</para>
+        /// <para>This parameter is required if ActiveAddressType is set to Private.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabasePrivateAddress { get; set; }
 
         /// <summary>
-        /// <para>The public address. IPv4 addresses and domain name formats are supported.</para>
+        /// <para>The public endpoint. IPv4 addresses and domain names are supported.</para>
         /// <remarks>
-        /// <para>This parameter is required when ActiveAddressType is set to Public.</para>
+        /// <para>This parameter is required if ActiveAddressType is set to Public.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabasePublicAddress { get; set; }
 
         /// <summary>
-        /// <para>The database type. Valid values:</para>
+        /// <para>The type of the database. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
         /// <item><description><b>Oracle</b></description></item>
@@ -135,10 +135,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint type of the PolarDB cluster. This parameter is required when Source is set to PolarDB. Valid values:</para>
+        /// <para>The endpoint type of the PolarDB cluster. This parameter is required if Source is set to PolarDB. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Cluster: cluster endpoint</description></item>
-        /// <item><description>Primary: primary endpoint</description></item>
+        /// <item><description>Cluster: cluster endpoint.</description></item>
+        /// <item><description>Primary: primary endpoint.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,6 +150,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -171,9 +174,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The source of the new database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Local: self-managed database instance</description></item>
-        /// <item><description>Rds: ApsaraDB RDS instance</description></item>
-        /// <item><description>PolarDB: PolarDB cluster</description></item>
+        /// <item><description>Local: self-managed database instance.</description></item>
+        /// <item><description>Rds: ApsaraDB RDS instance.</description></item>
+        /// <item><description>PolarDB: PolarDB cluster.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -187,7 +190,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The instance ID of the new database.  </para>
         /// <remarks>
-        /// <para>This parameter is required when <b>Source</b> is set to <b>Rds</b> or <b>PolarDB</b>.</para>
+        /// <para>This parameter is required if <b>Source</b> is set to <b>Rds</b> or <b>PolarDB</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -200,7 +203,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the new database instance.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>Source</b> is set to <b>Rds</b> or <b>PolarDB</b>.</para>
+        /// <para>This parameter is required if <b>Source</b> is set to <b>Rds</b> or <b>PolarDB</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

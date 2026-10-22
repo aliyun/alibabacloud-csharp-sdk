@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class SetPolicyAssetScopeRequest : TeaModel {
         /// <summary>
-        /// <para>The databases to which the control policy applies.</para>
+        /// <para>The scope of database assets to which the control policy applies.</para>
         /// <remarks>
-        /// <para>Required when ScopeType is set to Database. A maximum of 500 databases can be specified.</para>
+        /// <para>Required when ScopeType is set to Database. You can specify up to 500 databases.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Databases")]
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The scope of database accounts to which the control policy applies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>All</b>: applies to all accounts in the database.</description></item>
-            /// <item><description><b>AccountId</b>: applies to specified accounts in the database.</description></item>
+            /// <item><description><b>All</b>: all accounts in the database</description></item>
+            /// <item><description><b>AccountId</b>: specified accounts in the database</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AccountScopeType { get; set; }
 
             /// <summary>
-            /// <para>The database accounts to which the control policy applies.</para>
+            /// <para>The scope of database accounts to which the control policy applies.</para>
             /// <remarks>
             /// <para>Required when AccountScopeType is set to AccountId.</para>
             /// </remarks>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The asset groups to which the control policy applies.</para>
+        /// <para>The scope of asset groups to which the control policy applies.</para>
         /// <remarks>
-        /// <para>Required when ScopeType is set to HostGroup. A maximum of 100 asset groups can be specified.</para>
+        /// <para>Required when ScopeType is set to HostGroup. You can specify up to 100 asset groups.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("HostGroups")]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<SetPolicyAssetScopeRequestHostGroups> HostGroups { get; set; }
         public class SetPolicyAssetScopeRequestHostGroups : TeaModel {
             /// <summary>
-            /// <para>The asset accounts to which the control policy applies.</para>
+            /// <para>The scope of asset accounts to which the control policy applies.</para>
             /// <remarks>
             /// <para>Required when AccountScopeType is set to AccountNames.</para>
             /// </remarks>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The scope of asset accounts to which the control policy applies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>All</b>: applies to all accounts in the asset group.</description></item>
-            /// <item><description><b>AccountName</b>: applies to specified accounts in the asset group.</description></item>
+            /// <item><description><b>All</b>: all accounts in the asset group</description></item>
+            /// <item><description><b>AccountName</b>: specified accounts in the asset group</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AccountScopeType { get; set; }
 
             /// <summary>
-            /// <para>The asset group ID.</para>
+            /// <para>The ID of the asset group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86</para>
@@ -102,9 +102,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The hosts to which the control policy applies.</para>
+        /// <para>The scope of hosts to which the control policy applies.</para>
         /// <remarks>
-        /// <para>Required when ScopeType is set to Host. A maximum of 500 hosts can be specified.</para>
+        /// <para>Required when ScopeType is set to Host. You can specify up to 500 hosts.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Hosts")]
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The scope of host accounts to which the control policy applies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>All</b>: applies to all accounts on the host.</description></item>
-            /// <item><description><b>AccountId</b>: applies to specified accounts on the host.</description></item>
+            /// <item><description><b>All</b>: all accounts on the host</description></item>
+            /// <item><description><b>AccountId</b>: specified accounts on the host</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AccountScopeType { get; set; }
 
             /// <summary>
-            /// <para>The host accounts to which the control policy applies.</para>
+            /// <para>The scope of host accounts to which the control policy applies.</para>
             /// <remarks>
             /// <para>Required when AccountScopeType is set to AccountId.</para>
             /// </remarks>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public List<string> HostAccountIds { get; set; }
 
             /// <summary>
-            /// <para>The host ID.</para>
+            /// <para>The ID of the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The Bastionhost instance ID.</para>
         /// <remarks>
         /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
@@ -177,13 +177,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
         /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
@@ -196,12 +199,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The asset scope for the control policy. Valid values:</para>
+        /// <para>The scope of assets to which the control policy applies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: applies to all assets.</description></item>
-        /// <item><description><b>Host</b>: applies to selected hosts.</description></item>
-        /// <item><description><b>Database</b>: applies to selected databases.</description></item>
-        /// <item><description><b>HostGroup</b>: applies to selected asset groups.</description></item>
+        /// <item><description><b>All</b>: all assets</description></item>
+        /// <item><description><b>Host</b>: selected hosts</description></item>
+        /// <item><description><b>Database</b>: selected databases</description></item>
+        /// <item><description><b>HostGroup</b>: selected asset groups</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

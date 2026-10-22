@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListNetworkDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of network domains.</para>
+        /// <para>The network domains.</para>
         /// </summary>
         [NameInMap("NetworkDomains")]
         [Validation(Required=false)]
         public List<ListNetworkDomainsResponseBodyNetworkDomains> NetworkDomains { get; set; }
         public class ListNetworkDomainsResponseBodyNetworkDomains : TeaModel {
             /// <summary>
-            /// <para>The comments on the network domain.</para>
+            /// <para>The description of the network domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -27,12 +27,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the network domain is a built-in domain.</para>
+            /// <para>Indicates whether the network domain is a built-in network domain.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,10 +63,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The type of the network domain. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Direct</b>: direct connection</para>
-            /// </description></item>
-            /// <item><description><para><b>Proxy</b>: proxy connection</para>
-            /// </description></item>
+            /// <item><description><b>Direct</b>: direct connection</description></item>
+            /// <item><description><b>Proxy</b>: proxy</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,12 +82,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public List<ListNetworkDomainsResponseBodyNetworkDomainsProxiesState> ProxiesState { get; set; }
             public class ListNetworkDomainsResponseBodyNetworkDomainsProxiesState : TeaModel {
                 /// <summary>
-                /// <para>The node type of the proxy server. Valid values:</para>
+                /// <para>The type of the proxy server node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Master</b>: the master proxy server</para>
-                /// </description></item>
-                /// <item><description><para><b>Slave</b>: the slave proxy server</para>
-                /// </description></item>
+                /// <item><description><b>Master</b>: primary proxy server</description></item>
+                /// <item><description><b>Slave</b>: secondary proxy server</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -102,12 +96,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the proxy server. Valid values:</para>
+                /// <para>The status of the proxy server.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Available</b></para>
-                /// </description></item>
-                /// <item><description><para><b>Unavailable</b></para>
-                /// </description></item>
+                /// <item><description><b>Available</b>: available</description></item>
+                /// <item><description><b>Unavailable</b>: unavailable</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

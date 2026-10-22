@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyHostsActiveAddressTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The new portal type of the host. Valid values:</para>
+        /// <para>The new endpoint type of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Public</b>: public portal</para>
-        /// </description></item>
-        /// <item><description><para><b>Private</b>: internal portal</para>
-        /// </description></item>
+        /// <item><description><b>Public</b>: Internet</description></item>
+        /// <item><description><b>Private</b>: private network</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,10 +25,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ActiveAddressType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host for which you want to change the portal type. The value is a JSON string. You can add up to 100 host IDs.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</para>
-        /// </remarks>
+        /// <para>The IDs of the hosts whose endpoint types you want to modify. The value is a character string in JSON format. You can specify up to 100 host IDs.
+        /// You can invoke the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +37,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host for which you want to change the portal type of the host.</para>
+        /// <para>The instance ID of the Bastionhost instance to which the host whose endpoint type you want to modify belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,14 +50,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host for which you want to change the portal type of the host.</para>
+        /// <para>The area ID of the Bastionhost instance to which the host whose endpoint type you want to modify belongs.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between area IDs and area names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and active zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

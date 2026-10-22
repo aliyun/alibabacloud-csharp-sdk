@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The databases.</para>
+        /// <para>The list of database instances.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public List<ListOperationDatabasesResponseBodyDatabases> Databases { get; set; }
         public class ListOperationDatabasesResponseBodyDatabases : TeaModel {
             /// <summary>
-            /// <para>The endpoint type of the database. Valid values:</para>
+            /// <para>The address type of the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Public</b>: a public endpoint</para>
-            /// </description></item>
-            /// <item><description><para><b>Private</b>: a private endpoint</para>
-            /// </description></item>
+            /// <item><description><b>Public</b>: The public network address is valid.</description></item>
+            /// <item><description><b>Private</b>: The private network address is valid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ActiveAddressType { get; set; }
 
             /// <summary>
-            /// <para>The comment on the database.</para>
+            /// <para>The description of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpp</para>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database.</para>
+            /// <para>The instance ID of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26</para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseId { get; set; }
 
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The name of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zDatabase</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// <para>The database port.</para>
+            /// <para>The port of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3306</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? DatabasePort { get; set; }
 
             /// <summary>
-            /// <para>The private endpoint of the database.</para>
+            /// <para>The private network address of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-b******9b.mysql.rds.aliyuncs.com</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabasePrivateAddress { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint of the database.</para>
+            /// <para>The public IP address of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-uf******p45.mysql.rds.aliyuncs.com</para>
@@ -95,14 +93,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The database type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MySQL</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PostgreSQL</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Oracle</b></para>
-            /// </description></item>
-            /// <item><description><para><b>SQLServer</b></para>
-            /// </description></item>
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>PostgreSQL</b></description></item>
+            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>SQLServer</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,14 +107,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DatabaseType { get; set; }
 
             /// <summary>
-            /// <para>The source of the database.</para>
+            /// <para>The source of the database instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Local</b>: a local database</para>
-            /// </description></item>
-            /// <item><description><para><b>Rds</b>: an ApsaraDB RDS database</para>
-            /// </description></item>
-            /// <item><description><para><b>PolarDB</b>: a PolarDB database</para>
-            /// </description></item>
+            /// <item><description><b>Local</b>: on-premises host</description></item>
+            /// <item><description><b>Rds</b>: ApsaraDB RDS database</description></item>
+            /// <item><description><b>PolarDB</b>: PolarDB database</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +122,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source instance.</para>
+            /// <para>The instance ID of the ApsaraDB RDS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-wz9225bhipya******</para>
@@ -141,7 +132,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the source instance.</para>
+            /// <para>The region ID of the source ApsaraDB RDS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -151,12 +142,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SourceInstanceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the source instance:</para>
+            /// <para>The status of the database instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Normal</b>: The instance is running.</para>
-            /// </description></item>
-            /// <item><description><para><b>Release</b>: The instance is released.</para>
-            /// </description></item>
+            /// <item><description><b>Normal</b>: normal</description></item>
+            /// <item><description><b>Release</b>: released</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

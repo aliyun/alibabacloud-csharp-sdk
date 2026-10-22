@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListDatabasesForUserGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The address of the database that you want to query. Only term query is supported.</para>
+        /// <para>The address of the database to query. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>47.101.**.**</c></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the database instance that you want to query.</para>
+        /// <para>The name of the database instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,16 +30,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The type of the database that you want to query. Valid values:</para>
+        /// <para>The type of the database to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>SQLServer</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>SQLServer</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,9 +46,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Bastionhost instance.</para>
+        /// <para>The instance ID of the Bastionhost.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,7 +70,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the paged query. Default value: 1.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -84,9 +80,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page for a paged query.<br> The maximum value of the PageSize parameter is 100. By default, 20 entries are returned on each page. If you leave the PageSize parameter empty, 20 entries are returned.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query. Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave the PageSize parameter empty.</para>
+        /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,6 +92,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsForUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The host groups returned.</para>
+        /// <para>The list of host groups returned.</para>
         /// </summary>
         [NameInMap("HostGroups")]
         [Validation(Required=false)]

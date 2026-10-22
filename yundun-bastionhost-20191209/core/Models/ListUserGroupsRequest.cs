@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListUserGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bastion host on which you want to query user groups.</para>
+        /// <para>The ID of the Bastionhost instance whose user groups you want to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances </a>operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number for paging. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries to return on each page for paging. Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</para>
+        /// <remarks>
+        /// <para>Specify a value for this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -43,14 +46,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host on which you want to query user groups.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/462924.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +70,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the user group that you want to query. Only exact match is supported.</para>
+        /// <para>The name of the user group to query. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestGroup01</para>

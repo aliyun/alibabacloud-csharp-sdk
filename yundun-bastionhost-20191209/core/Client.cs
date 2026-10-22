@@ -106,12 +106,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
+        /// <para>If an O&amp;M engineer runs a command that is configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be run only after the administrator approves the request. If the administrator rejects the request, the command cannot be run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// <para>Approves a command execution request from an O&amp;M engineer.
         /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
@@ -166,12 +166,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
+        /// <para>If an O&amp;M engineer runs a command that is configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be run only after the administrator approves the request. If the administrator rejects the request, the command cannot be run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// <para>Approves a command execution request from an O&amp;M engineer.
         /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
@@ -226,12 +226,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
+        /// <para>If an O&amp;M engineer runs a command that is configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be run only after the administrator approves the request. If the administrator rejects the request, the command cannot be run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// <para>Approves a command execution request from an O&amp;M engineer.
         /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
@@ -250,12 +250,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
+        /// <para>If an O&amp;M engineer runs a command that is configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be run only after the administrator approves the request. If the administrator rejects the request, the command cannot be run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// <para>Approves a command execution request from an O&amp;M engineer.
         /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
@@ -274,13 +274,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must submit an O&amp;M request and obtain administrator approval before they can log on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
-        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
+        /// <para>Approves an O&amp;M request submitted by an O&amp;M engineer.
+        /// The China site Chinese version of this China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -350,13 +350,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must submit an O&amp;M request and obtain administrator approval before they can log on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
-        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
+        /// <para>Approves an O&amp;M request submitted by an O&amp;M engineer.
+        /// The China site Chinese version of this China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -426,13 +426,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must submit an O&amp;M request and obtain administrator approval before they can log on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
-        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
+        /// <para>Approves an O&amp;M request submitted by an O&amp;M engineer.
+        /// The China site Chinese version of this China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -450,13 +450,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must submit an O&amp;M request and obtain administrator approval before they can log on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
-        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
+        /// <para>Approves an O&amp;M request submitted by an O&amp;M engineer.
+        /// The China site Chinese version of this China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -625,7 +625,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <description>
         /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -690,7 +690,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <description>
         /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -755,7 +755,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <description>
         /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -780,7 +780,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <description>
         /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -942,7 +942,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h3>Operation description</h3>
         /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1008,7 +1008,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h3>Operation description</h3>
         /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1074,7 +1074,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h3>Operation description</h3>
         /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1100,7 +1100,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h3>Operation description</h3>
         /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3178,13 +3178,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
+        /// <para>Adds specified public IP addresses to the whitelist of a Bastionhost instance after public network access is enabled to allow public network traffic to access the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
-        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
+        /// <para>Configures the public IP address whitelist for a Bastionhost instance. By default, all public IP addresses are allowed to access the Bastionhost instance. To restrict public network access, call this operation to add specified public IP addresses to the whitelist and restrict public network traffic to the Bastionhost instance.
+        /// The queries per second (QPS) limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3238,13 +3238,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
+        /// <para>Adds specified public IP addresses to the whitelist of a Bastionhost instance after public network access is enabled to allow public network traffic to access the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
-        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
+        /// <para>Configures the public IP address whitelist for a Bastionhost instance. By default, all public IP addresses are allowed to access the Bastionhost instance. To restrict public network access, call this operation to add specified public IP addresses to the whitelist and restrict public network traffic to the Bastionhost instance.
+        /// The queries per second (QPS) limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3298,13 +3298,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
+        /// <para>Adds specified public IP addresses to the whitelist of a Bastionhost instance after public network access is enabled to allow public network traffic to access the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
-        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
+        /// <para>Configures the public IP address whitelist for a Bastionhost instance. By default, all public IP addresses are allowed to access the Bastionhost instance. To restrict public network access, call this operation to add specified public IP addresses to the whitelist and restrict public network traffic to the Bastionhost instance.
+        /// The queries per second (QPS) limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3322,13 +3322,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
+        /// <para>Adds specified public IP addresses to the whitelist of a Bastionhost instance after public network access is enabled to allow public network traffic to access the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
-        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
+        /// <para>Configures the public IP address whitelist for a Bastionhost instance. By default, all public IP addresses are allowed to access the Bastionhost instance. To restrict public network access, call this operation to add specified public IP addresses to the whitelist and restrict public network traffic to the Bastionhost instance.
+        /// The queries per second (QPS) limit for a single user is 30 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3346,7 +3346,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, PostgreSQL, and Oracle for ApsaraDB RDS instances, MySQL, PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3448,7 +3448,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, PostgreSQL, and Oracle for ApsaraDB RDS instances, MySQL, PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3550,7 +3550,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, PostgreSQL, and Oracle for ApsaraDB RDS instances, MySQL, PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3568,7 +3568,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, PostgreSQL, and Oracle for ApsaraDB RDS instances, MySQL, PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4114,7 +4114,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
+        /// <para>After you add a host to Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After a host account is created, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4200,7 +4200,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
+        /// <para>After you add a host to Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After a host account is created, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4286,7 +4286,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
+        /// <para>After you add a host to Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After a host account is created, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4304,7 +4304,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
+        /// <para>After you add a host to Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After a host account is created, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4474,7 +4474,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After a private key is stored, it can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4536,7 +4536,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After a private key is stored, it can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4598,7 +4598,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After a private key is stored, it can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4616,7 +4616,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After a private key is stored, it can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4634,7 +4634,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
+        /// <para>To centrally manage assets that are distributed across different network environments or that cannot communicate with the virtual private cloud (VPC) where Bastionhost is deployed, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost, add the proxy server to the network domain, and then add the assets to the network domain. This way, you can manage the assets through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4700,7 +4700,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
+        /// <para>To centrally manage assets that are distributed across different network environments or that cannot communicate with the virtual private cloud (VPC) where Bastionhost is deployed, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost, add the proxy server to the network domain, and then add the assets to the network domain. This way, you can manage the assets through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4766,7 +4766,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
+        /// <para>To centrally manage assets that are distributed across different network environments or that cannot communicate with the virtual private cloud (VPC) where Bastionhost is deployed, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost, add the proxy server to the network domain, and then add the assets to the network domain. This way, you can manage the assets through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4784,7 +4784,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
+        /// <para>To centrally manage assets that are distributed across different network environments or that cannot communicate with the virtual private cloud (VPC) where Bastionhost is deployed, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost, add the proxy server to the network domain, and then add the assets to the network domain. This way, you can manage the assets through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4802,7 +4802,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4880,7 +4880,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4958,7 +4958,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4976,7 +4976,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in a control policy, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4994,7 +4994,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
+        /// <para>Manages O&amp;M behaviors by configuring command control, command approval, protocol control, and access control policies to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5056,7 +5056,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
+        /// <para>Manages O&amp;M behaviors by configuring command control, command approval, protocol control, and access control policies to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5118,7 +5118,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
+        /// <para>Manages O&amp;M behaviors by configuring command control, command approval, protocol control, and access control policies to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5136,7 +5136,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
+        /// <para>Manages O&amp;M behaviors by configuring command control, command approval, protocol control, and access control policies to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5770,7 +5770,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// <para>Creates an authorization rule to grant multiple users batch access to assets and set the validity period for their access. The authorization rule feature improves the efficiency of managing users and assets, and controls the time period during which users can access assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5856,7 +5856,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// <para>Creates an authorization rule to grant multiple users batch access to assets and set the validity period for their access. The authorization rule feature improves the efficiency of managing users and assets, and controls the time period during which users can access assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5942,7 +5942,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// <para>Creates an authorization rule to grant multiple users batch access to assets and set the validity period for their access. The authorization rule feature improves the efficiency of managing users and assets, and controls the time period during which users can access assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5960,7 +5960,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create authorization rules to authorize multiple users to manage assets. You can also specify a validity period for an authorization rule. This way, you can manage users and assets in a more efficient manner and limit the time periods during which users can access assets.</para>
+        /// <para>Creates an authorization rule to grant multiple users batch access to assets and set the validity period for their access. The authorization rule feature improves the efficiency of managing users and assets, and controls the time period during which users can access assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6263,8 +6263,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Creates a user group for a bastion host. Bastion host administrators can use this operation to create a user group and then call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group in batches. Adding users to the same user group enables unified authorization and management of bastion host users.
+        /// The China site Chinese edition single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6327,8 +6327,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Creates a user group for a bastion host. Bastion host administrators can use this operation to create a user group and then call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group in batches. Adding users to the same user group enables unified authorization and management of bastion host users.
+        /// The China site Chinese edition single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6391,8 +6391,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Creates a user group for a bastion host. Bastion host administrators can use this operation to create a user group and then call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group in batches. Adding users to the same user group enables unified authorization and management of bastion host users.
+        /// The China site Chinese edition single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6415,8 +6415,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Creates a user group for a bastion host. Bastion host administrators can use this operation to create a user group and then call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group in batches. Adding users to the same user group enables unified authorization and management of bastion host users.
+        /// The China site Chinese edition single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6758,7 +6758,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account.</para>
+        /// <para>Deletes a single database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6812,7 +6812,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account.</para>
+        /// <para>Deletes a single database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6866,7 +6866,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account.</para>
+        /// <para>Deletes a single database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6884,7 +6884,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account.</para>
+        /// <para>Deletes a single database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7057,7 +7057,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
         /// <h3>Rate limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Use this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7122,7 +7122,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
         /// <h3>Rate limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Use this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7187,7 +7187,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
         /// <h3>Rate limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Use this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7216,7 +7216,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
         /// <h3>Rate limit</h3>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Use this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7239,7 +7239,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <para>This operation deletes a single host group. If all hosts in a host group on a bastion host no longer need to be managed through the bastion host, you can call this operation to delete the host group.</para>
         /// <h3>QPS limit</h3>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
@@ -7300,7 +7300,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <para>This operation deletes a single host group. If all hosts in a host group on a bastion host no longer need to be managed through the bastion host, you can call this operation to delete the host group.</para>
         /// <h3>QPS limit</h3>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
@@ -7361,7 +7361,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <para>This operation deletes a single host group. If all hosts in a host group on a bastion host no longer need to be managed through the bastion host, you can call this operation to delete the host group.</para>
         /// <h3>QPS limit</h3>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
@@ -7386,7 +7386,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <para>This operation deletes a single host group. If all hosts in a host group on a bastion host no longer need to be managed through the bastion host, you can call this operation to delete the host group.</para>
         /// <h3>QPS limit</h3>
         /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
@@ -7542,7 +7542,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a network domain.</para>
+        /// <para>Deletes a single network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7596,7 +7596,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a network domain.</para>
+        /// <para>Deletes a single network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7650,7 +7650,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a network domain.</para>
+        /// <para>Deletes a single network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7668,7 +7668,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a network domain.</para>
+        /// <para>Deletes a single network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8374,7 +8374,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authorization rule.</para>
+        /// <para>Deletes a single authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8428,7 +8428,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authorization rule.</para>
+        /// <para>Deletes a single authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8482,7 +8482,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authorization rule.</para>
+        /// <para>Deletes a single authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8500,7 +8500,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authorization rule.</para>
+        /// <para>Deletes a single authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8954,12 +8954,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
+        /// <para>Queries all the attributes of an instance, such as the instance ID and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// <para>You can directly call this operation to purchase an HSM instance. For prepaid products, the payment is deducted synchronously.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9005,12 +9005,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
+        /// <para>Queries all the attributes of an instance, such as the instance ID and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// <para>You can directly call this operation to purchase an HSM instance. For prepaid products, the payment is deducted synchronously.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9056,12 +9056,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
+        /// <para>Queries all the attributes of an instance, such as the instance ID and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// <para>You can directly call this operation to purchase an HSM instance. For prepaid products, the payment is deducted synchronously.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9079,12 +9079,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
+        /// <para>Queries all the attributes of an instance, such as the instance ID and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// <para>You can directly call this operation to purchase an HSM instance. For prepaid products, the payment is deducted synchronously.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9102,7 +9102,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Bastionhost instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9172,7 +9172,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Bastionhost instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9242,7 +9242,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Bastionhost instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9260,7 +9260,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Bastionhost instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9550,7 +9550,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// <para>Removes databases and database accounts that are authorized to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9608,7 +9608,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// <para>Removes databases and database accounts that are authorized to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9666,7 +9666,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// <para>Removes databases and database accounts that are authorized to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9684,7 +9684,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions on databases and database accounts from a user group.</para>
+        /// <para>Removes databases and database accounts that are authorized to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9702,7 +9702,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate host accounts from a shared key.</para>
+        /// <para>Removes the association between host accounts and a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9760,7 +9760,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate host accounts from a shared key.</para>
+        /// <para>Removes the association between host accounts and a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9818,7 +9818,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate host accounts from a shared key.</para>
+        /// <para>Removes the association between host accounts and a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9836,7 +9836,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate host accounts from a shared key.</para>
+        /// <para>Removes the association between host accounts and a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9998,7 +9998,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// <para>Removes authorized hosts and host accounts from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10056,7 +10056,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// <para>Removes authorized hosts and host accounts from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10114,7 +10114,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// <para>Removes authorized hosts and host accounts from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10132,7 +10132,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions on one or more hosts and host accounts from a user group.</para>
+        /// <para>Removes authorized hosts and host accounts from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11702,7 +11702,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
+        /// <para>Applies for a host or database O&amp;M token to perform O&amp;M operations on assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11792,7 +11792,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
+        /// <para>Applies for a host or database O&amp;M token to perform O&amp;M operations on assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11882,7 +11882,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
+        /// <para>Applies for a host or database O&amp;M token to perform O&amp;M operations on assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11900,7 +11900,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
+        /// <para>Applies for a host or database O&amp;M token to perform O&amp;M operations on assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12066,7 +12066,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database.</para>
+        /// <para>Retrieves the details of a specified database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12120,7 +12120,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database.</para>
+        /// <para>Retrieves the details of a specified database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12174,7 +12174,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database.</para>
+        /// <para>Retrieves the details of a specified database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12192,7 +12192,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database.</para>
+        /// <para>Retrieves the details of a specified database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12210,7 +12210,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database account.</para>
+        /// <para>Retrieves the details of a specified database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12264,7 +12264,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database account.</para>
+        /// <para>Retrieves the details of a specified database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12318,7 +12318,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database account.</para>
+        /// <para>Retrieves the details of a specified database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12336,7 +12336,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a database account.</para>
+        /// <para>Retrieves the details of a specified database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12354,7 +12354,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
+        /// <para>Retrieves the details of a configuration backup export task. This operation is supported only for Bastionhost V3.2.44 and later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12404,7 +12404,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
+        /// <para>Retrieves the details of a configuration backup export task. This operation is supported only for Bastionhost V3.2.44 and later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12454,7 +12454,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
+        /// <para>Retrieves the details of a configuration backup export task. This operation is supported only for Bastionhost V3.2.44 and later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12472,7 +12472,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
+        /// <para>Retrieves the details of a configuration backup export task. This operation is supported only for Bastionhost V3.2.44 and later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12490,7 +12490,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
+        /// <para>Includes information such as the hostname, source, host address, and protocol port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12544,7 +12544,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
+        /// <para>Includes information such as the hostname, source, host address, and protocol port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12598,7 +12598,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
+        /// <para>Includes information such as the hostname, source, host address, and protocol port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12616,7 +12616,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
+        /// <para>Includes information such as the hostname, source, host address, and protocol port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12634,7 +12634,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
+        /// <para>Retrieves the details of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12688,7 +12688,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
+        /// <para>Retrieves the details of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12742,7 +12742,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
+        /// <para>Retrieves the details of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12760,7 +12760,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
+        /// <para>Retrieves the details of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12778,7 +12778,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host group.</para>
+        /// <para>Retrieves the details of a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12832,7 +12832,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host group.</para>
+        /// <para>Retrieves the details of a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12886,7 +12886,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host group.</para>
+        /// <para>Retrieves the details of a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12904,7 +12904,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a host group.</para>
+        /// <para>Retrieves the details of a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12922,7 +12922,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a shared key.</para>
+        /// <para>Queries the details of a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12976,7 +12976,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a shared key.</para>
+        /// <para>Queries the details of a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13030,7 +13030,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a shared key.</para>
+        /// <para>Queries the details of a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13048,7 +13048,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a shared key.</para>
+        /// <para>Queries the details of a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13066,15 +13066,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// <para>Queries the Active Directory (AD) authentication configurations of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
-        /// <h3>Limit</h3>
-        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the Active Directory (AD) authentication configurations of a Bastionhost instance. You can use the AD authentication feature of Bastionhost to synchronize users from an AD server to Bastionhost. After the synchronization is complete, users can perform O&amp;M operations on servers by using Bastionhost. For enterprise-level managed operations, you can also refer to Alibaba Cloud Managed Services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the number of API invocations exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13124,15 +13124,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// <para>Queries the Active Directory (AD) authentication configurations of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
-        /// <h3>Limit</h3>
-        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the Active Directory (AD) authentication configurations of a Bastionhost instance. You can use the AD authentication feature of Bastionhost to synchronize users from an AD server to Bastionhost. After the synchronization is complete, users can perform O&amp;M operations on servers by using Bastionhost. For enterprise-level managed operations, you can also refer to Alibaba Cloud Managed Services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the number of API invocations exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13182,15 +13182,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// <para>Queries the Active Directory (AD) authentication configurations of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
-        /// <h3>Limit</h3>
-        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the Active Directory (AD) authentication configurations of a Bastionhost instance. You can use the AD authentication feature of Bastionhost to synchronize users from an AD server to Bastionhost. After the synchronization is complete, users can perform O&amp;M operations on servers by using Bastionhost. For enterprise-level managed operations, you can also refer to Alibaba Cloud Managed Services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the number of API invocations exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13208,15 +13208,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of Active Directory (AD) authentication on a bastion host.</para>
+        /// <para>Queries the Active Directory (AD) authentication configurations of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
-        /// <h3>Limit</h3>
-        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the Active Directory (AD) authentication configurations of a Bastionhost instance. You can use the AD authentication feature of Bastionhost to synchronize users from an AD server to Bastionhost. After the synchronization is complete, users can perform O&amp;M operations on servers by using Bastionhost. For enterprise-level managed operations, you can also refer to Alibaba Cloud Managed Services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the number of API invocations exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13798,7 +13798,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified control policy.</para>
+        /// <para>Retrieves the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13852,7 +13852,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified control policy.</para>
+        /// <para>Retrieves the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13906,7 +13906,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified control policy.</para>
+        /// <para>Retrieves the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13924,7 +13924,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified control policy.</para>
+        /// <para>Retrieves the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13942,7 +13942,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets to which a control policy applies.</para>
+        /// <para>Retrieves the asset scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13996,7 +13996,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets to which a control policy applies.</para>
+        /// <para>Retrieves the asset scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14050,7 +14050,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets to which a control policy applies.</para>
+        /// <para>Retrieves the asset scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14068,7 +14068,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets to which a control policy applies.</para>
+        /// <para>Retrieves the asset scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14086,7 +14086,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// <para>Retrieves the effective user scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14140,7 +14140,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// <para>Retrieves the effective user scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14194,7 +14194,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// <para>Retrieves the effective user scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14212,7 +14212,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scope of users to whom a control policy applies.</para>
+        /// <para>Retrieves the effective user scope of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14638,7 +14638,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// <para>Retrieves the details of a specified authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14692,7 +14692,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// <para>Retrieves the details of a specified authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14746,7 +14746,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// <para>Retrieves the details of a specified authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14764,7 +14764,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an authorization rule.</para>
+        /// <para>Retrieves the details of a specified authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14918,7 +14918,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14972,7 +14972,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15026,7 +15026,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15044,7 +15044,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15218,13 +15218,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries commands to be reviewed.</para>
+        /// <para>Retrieves the list of commands that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries commands pending review as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15282,13 +15282,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries commands to be reviewed.</para>
+        /// <para>Retrieves the list of commands that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries commands pending review as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15346,13 +15346,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries commands to be reviewed.</para>
+        /// <para>Retrieves the list of commands that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries commands pending review as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15370,13 +15370,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries commands to be reviewed.</para>
+        /// <para>Retrieves the list of commands that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries commands pending review as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15394,7 +15394,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database.</para>
+        /// <para>Retrieves a list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15460,7 +15460,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database.</para>
+        /// <para>Retrieves a list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15526,7 +15526,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database.</para>
+        /// <para>Retrieves a list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15544,7 +15544,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database.</para>
+        /// <para>Retrieves a list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15730,7 +15730,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// <para>Queries the list of authorized and unauthorized database accounts for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15800,7 +15800,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// <para>Queries the list of authorized and unauthorized database accounts for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15870,7 +15870,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// <para>Queries the list of authorized and unauthorized database accounts for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15888,7 +15888,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of a database and whether a user group is authorized to manage each database account.</para>
+        /// <para>Queries the list of authorized and unauthorized database accounts for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15906,7 +15906,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// <para>Queries the databases of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15980,7 +15980,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// <para>Queries the databases of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16054,7 +16054,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// <para>Queries the databases of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16072,7 +16072,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that are managed by a bastion host.</para>
+        /// <para>Queries the databases of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16090,7 +16090,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// <para>Queries the list of databases authorized for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16168,7 +16168,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// <para>Queries the list of databases authorized for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16246,7 +16246,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// <para>Queries the list of databases authorized for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16264,7 +16264,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user is authorized to manage.</para>
+        /// <para>Queries the list of databases authorized for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16282,7 +16282,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
+        /// <para>Queries the databases authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16360,7 +16360,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
+        /// <para>Queries the databases authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16438,7 +16438,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
+        /// <para>Queries the databases authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16456,7 +16456,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
+        /// <para>Queries the databases authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16474,7 +16474,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
+        /// <para>Retrieves a list of host accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16548,7 +16548,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
+        /// <para>Retrieves a list of host accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16622,7 +16622,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
+        /// <para>Retrieves a list of host accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16640,7 +16640,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
+        /// <para>Retrieves a list of host accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16658,7 +16658,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// <para>Retrieves the host accounts associated with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16720,7 +16720,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// <para>Retrieves the host accounts associated with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16782,7 +16782,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// <para>Retrieves the host accounts associated with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16800,7 +16800,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts that are associated with a shared key.</para>
+        /// <para>Retrieves the host accounts associated with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16818,7 +16818,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user is authorized to manage each host account.</para>
+        /// <para>Queries the list of authorized and unauthorized host accounts for a specified user on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16888,7 +16888,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user is authorized to manage each host account.</para>
+        /// <para>Queries the list of authorized and unauthorized host accounts for a specified user on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16958,7 +16958,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user is authorized to manage each host account.</para>
+        /// <para>Queries the list of authorized and unauthorized host accounts for a specified user on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16976,7 +16976,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user is authorized to manage each host account.</para>
+        /// <para>Queries the list of authorized and unauthorized host accounts for a specified user on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16994,7 +16994,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</para>
+        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17064,7 +17064,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</para>
+        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17134,7 +17134,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</para>
+        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17152,7 +17152,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the host accounts of a host and whether a user group is authorized to manage each host account.</para>
+        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17170,7 +17170,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17228,7 +17228,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17286,7 +17286,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17304,7 +17304,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a specified user is authorized to manage in a specified host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17322,7 +17322,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user group in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17380,7 +17380,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user group in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17438,7 +17438,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user group in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17456,7 +17456,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of the host accounts that a user group is authorized to manage in a host group.</para>
+        /// <para>Queries the names of host accounts authorized for a specified user group in a specified host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17474,7 +17474,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// <para>Queries the asset groups under a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17536,7 +17536,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// <para>Queries the asset groups under a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17598,7 +17598,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// <para>Queries the asset groups under a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17616,7 +17616,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of asset groups that are managed by a bastion host.</para>
+        /// <para>Queries the asset groups under a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17634,7 +17634,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17704,7 +17704,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17774,7 +17774,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17792,7 +17792,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host groups that a bastion host user is authorized or is not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17810,7 +17810,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17880,7 +17880,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17950,7 +17950,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17968,7 +17968,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a specified user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the authorized or unauthorized host groups for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17986,7 +17986,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// <para>Queries the list of host shared keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18044,7 +18044,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// <para>Queries the list of host shared keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18102,7 +18102,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// <para>Queries the list of host shared keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18120,7 +18120,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the shared keys that are associated with a host.</para>
+        /// <para>Queries the list of host shared keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18138,7 +18138,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts in a bastion host.</para>
+        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18224,7 +18224,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts in a bastion host.</para>
+        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18310,7 +18310,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts in a bastion host.</para>
+        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18328,7 +18328,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts in a bastion host.</para>
+        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18346,7 +18346,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18424,7 +18424,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18502,7 +18502,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18520,7 +18520,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18538,7 +18538,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18616,7 +18616,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18694,7 +18694,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18712,7 +18712,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
+        /// <para>Queries the list of authorized or unauthorized hosts for a specified Bastionhost user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19202,7 +19202,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
+        /// <para>Queries the network domains of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19268,7 +19268,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
+        /// <para>Queries the network domains of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19334,7 +19334,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
+        /// <para>Queries the network domains of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19352,7 +19352,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
+        /// <para>Queries the network domains of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19370,7 +19370,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Retrieves a list of authorized database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19436,7 +19436,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Retrieves a list of authorized database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19502,7 +19502,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Retrieves a list of authorized database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19520,7 +19520,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Retrieves a list of authorized database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19538,7 +19538,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
+        /// <para>Retrieves the list of databases authorized for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19620,7 +19620,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
+        /// <para>Retrieves the list of databases authorized for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19702,7 +19702,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
+        /// <para>Retrieves the list of databases authorized for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19720,7 +19720,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
+        /// <para>Retrieves the list of databases authorized for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19898,7 +19898,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
+        /// <para>Retrieves the list of hosts with authorization for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19980,7 +19980,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
+        /// <para>Retrieves the list of hosts with authorization for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20062,7 +20062,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
+        /// <para>Retrieves the list of hosts with authorization for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20080,7 +20080,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
+        /// <para>Retrieves the list of hosts with authorization for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20098,13 +20098,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
+        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20166,13 +20166,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
+        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20234,13 +20234,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
+        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20258,13 +20258,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
+        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20282,7 +20282,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of control policies.</para>
+        /// <para>Queries the control policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20344,7 +20344,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of control policies.</para>
+        /// <para>Queries the control policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20406,7 +20406,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of control policies.</para>
+        /// <para>Queries the control policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20424,7 +20424,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of control policies.</para>
+        /// <para>Queries the control policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20442,7 +20442,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目授权列表</para>
+        /// <para>Queries the list of project authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20504,7 +20504,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目授权列表</para>
+        /// <para>Queries the list of project authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20566,7 +20566,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目授权列表</para>
+        /// <para>Queries the list of project authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20584,7 +20584,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目授权列表</para>
+        /// <para>Queries the list of project authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20770,7 +20770,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目列表</para>
+        /// <para>Queries a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20832,7 +20832,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目列表</para>
+        /// <para>Queries a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20894,7 +20894,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目列表</para>
+        /// <para>Queries a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20912,7 +20912,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目列表</para>
+        /// <para>Queries a list of projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21586,7 +21586,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// <para>Queries the authorization rules of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21652,7 +21652,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// <para>Queries the authorization rules of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21718,7 +21718,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// <para>Queries the authorization rules of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21736,7 +21736,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of authorization rules of a bastion host.</para>
+        /// <para>Queries the authorization rules of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21754,7 +21754,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys on resources.</para>
+        /// <para>Queries the tags bound to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21812,7 +21812,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys on resources.</para>
+        /// <para>Queries the tags bound to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21870,7 +21870,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys on resources.</para>
+        /// <para>Queries the tags bound to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21888,7 +21888,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys on resources.</para>
+        /// <para>Queries the tags bound to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22066,7 +22066,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approvals.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22132,7 +22132,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approvals.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22198,7 +22198,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approvals.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22216,7 +22216,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approvals.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22234,7 +22234,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// <para>Queries the user groups of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22296,7 +22296,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// <para>Queries the user groups of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22358,7 +22358,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// <para>Queries the user groups of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22376,7 +22376,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user groups on a bastion host.</para>
+        /// <para>Queries the user groups of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23090,7 +23090,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database.</para>
+        /// <para>Modifies the basic information of a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23176,7 +23176,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database.</para>
+        /// <para>Modifies the basic information of a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23262,7 +23262,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database.</para>
+        /// <para>Modifies the basic information of a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23280,7 +23280,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database.</para>
+        /// <para>Modifies the basic information of a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23298,7 +23298,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database account.</para>
+        /// <para>Modifies the basic information of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23364,7 +23364,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database account.</para>
+        /// <para>Modifies the basic information of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23430,7 +23430,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database account.</para>
+        /// <para>Modifies the basic information of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23448,7 +23448,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a database account.</para>
+        /// <para>Modifies the basic information of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23618,14 +23618,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// <para>Updates the address, name, operating system type, and description of a host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <para>This operation updates the basic information of on-premises hosts, ECS hosts, and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// <remarks>
-        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// <para>If you update the basic information of an ECS host or a host in a dedicated ApsaraDB RDS cluster, the changes may be overwritten. This is because Bastionhost periodically synchronizes the basic information of ECS hosts and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23708,14 +23708,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// <para>Updates the address, name, operating system type, and description of a host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <para>This operation updates the basic information of on-premises hosts, ECS hosts, and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// <remarks>
-        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// <para>If you update the basic information of an ECS host or a host in a dedicated ApsaraDB RDS cluster, the changes may be overwritten. This is because Bastionhost periodically synchronizes the basic information of ECS hosts and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23798,14 +23798,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// <para>Updates the address, name, operating system type, and description of a host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <para>This operation updates the basic information of on-premises hosts, ECS hosts, and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// <remarks>
-        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// <para>If you update the basic information of an ECS host or a host in a dedicated ApsaraDB RDS cluster, the changes may be overwritten. This is because Bastionhost periodically synchronizes the basic information of ECS hosts and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23824,14 +23824,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a host. The information includes the address, name, and description of the host and the operating system that the host runs.</para>
+        /// <para>Updates the address, name, operating system type, and description of a host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <para>This operation updates the basic information of on-premises hosts, ECS hosts, and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// <remarks>
-        /// <para>The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.</para>
+        /// <para>If you update the basic information of an ECS host or a host in a dedicated ApsaraDB RDS cluster, the changes may be overwritten. This is because Bastionhost periodically synchronizes the basic information of ECS hosts and hosts in dedicated ApsaraDB RDS clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24050,7 +24050,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name or description of the specified host group.</para>
+        /// <para>Modifies the name or description of an asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24112,7 +24112,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name or description of the specified host group.</para>
+        /// <para>Modifies the name or description of an asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24174,7 +24174,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name or description of the specified host group.</para>
+        /// <para>Modifies the name or description of an asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24192,7 +24192,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name or description of the specified host group.</para>
+        /// <para>Modifies the name or description of an asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24210,7 +24210,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared key.</para>
+        /// <para>Updates a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24276,7 +24276,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared key.</para>
+        /// <para>Updates a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24342,7 +24342,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared key.</para>
+        /// <para>Updates a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24360,7 +24360,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared key.</para>
+        /// <para>Updates a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24378,7 +24378,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Modifies the endpoint type used for host O&amp;M. Bastionhost supports O&amp;M over the Internet and private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24436,7 +24436,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Modifies the endpoint type used for host O&amp;M. Bastionhost supports O&amp;M over the Internet and private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24494,7 +24494,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Modifies the endpoint type used for host O&amp;M. Bastionhost supports O&amp;M over the Internet and private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24512,7 +24512,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Modifies the endpoint type used for host O&amp;M. Bastionhost supports O&amp;M over the Internet and private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24530,18 +24530,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Modifies the ports used by Bastionhost for the RDP and SSH protocols on hosts. By default, Bastionhost uses port 3389 for RDP and port 22 for SSH. If you have configured custom ports on your hosts, you can call this operation to update the port settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation modifies the ports of O&amp;M protocols for multiple hosts. If you consider the standard ports of O&amp;M protocols insecure and vulnerable to attacks, such as port 22 for SSH, you can call this operation to specify custom ports.</para>
         /// <remarks>
-        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not specify a reserved port as a custom port.</para>
         /// </remarks>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second. Requests that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24603,18 +24603,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Modifies the ports used by Bastionhost for the RDP and SSH protocols on hosts. By default, Bastionhost uses port 3389 for RDP and port 22 for SSH. If you have configured custom ports on your hosts, you can call this operation to update the port settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation modifies the ports of O&amp;M protocols for multiple hosts. If you consider the standard ports of O&amp;M protocols insecure and vulnerable to attacks, such as port 22 for SSH, you can call this operation to specify custom ports.</para>
         /// <remarks>
-        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not specify a reserved port as a custom port.</para>
         /// </remarks>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second. Requests that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24676,18 +24676,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Modifies the ports used by Bastionhost for the RDP and SSH protocols on hosts. By default, Bastionhost uses port 3389 for RDP and port 22 for SSH. If you have configured custom ports on your hosts, you can call this operation to update the port settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation modifies the ports of O&amp;M protocols for multiple hosts. If you consider the standard ports of O&amp;M protocols insecure and vulnerable to attacks, such as port 22 for SSH, you can call this operation to specify custom ports.</para>
         /// <remarks>
-        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not specify a reserved port as a custom port.</para>
         /// </remarks>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second. Requests that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24705,18 +24705,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Modifies the ports used by Bastionhost for the RDP and SSH protocols on hosts. By default, Bastionhost uses port 3389 for RDP and port 22 for SSH. If you have configured custom ports on your hosts, you can call this operation to update the port settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation modifies the ports of O&amp;M protocols for multiple hosts. If you consider the standard ports of O&amp;M protocols insecure and vulnerable to attacks, such as port 22 for SSH, you can call this operation to specify custom ports.</para>
         /// <remarks>
-        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not specify a reserved port as a custom port.</para>
         /// </remarks>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second. Requests that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24886,7 +24886,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the Active Directory (AD) authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25012,7 +25012,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the Active Directory (AD) authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25138,7 +25138,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the Active Directory (AD) authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25156,7 +25156,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the Active Directory (AD) authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25706,7 +25706,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a network domain.</para>
+        /// <para>Modifies the basic information of a network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25776,7 +25776,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a network domain.</para>
+        /// <para>Modifies the basic information of a network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25846,7 +25846,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a network domain.</para>
+        /// <para>Modifies the basic information of a network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25864,7 +25864,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a network domain.</para>
+        /// <para>Modifies the basic information of a network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25882,7 +25882,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a control policy.</para>
+        /// <para>Modifies the basic information of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25948,7 +25948,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a control policy.</para>
+        /// <para>Modifies the basic information of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26014,7 +26014,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a control policy.</para>
+        /// <para>Modifies the basic information of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26032,7 +26032,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a control policy.</para>
+        /// <para>Modifies the basic information of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26690,7 +26690,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26780,7 +26780,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26870,7 +26870,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26888,7 +26888,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27146,7 +27146,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user group.</para>
+        /// <para>Modifies the information of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27208,7 +27208,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user group.</para>
+        /// <para>Modifies the information of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27270,7 +27270,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user group.</para>
+        /// <para>Modifies the information of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27288,7 +27288,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user group.</para>
+        /// <para>Modifies the information of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27466,7 +27466,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// <para>Moves multiple databases to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27524,7 +27524,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// <para>Moves multiple databases to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27582,7 +27582,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// <para>Moves multiple databases to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27600,7 +27600,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a network domain at a time.</para>
+        /// <para>Moves multiple databases to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27618,7 +27618,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// <para>Moves multiple hosts to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27676,7 +27676,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// <para>Moves multiple hosts to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27734,7 +27734,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// <para>Moves multiple hosts to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27752,7 +27752,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple hosts to a network domain at a time.</para>
+        /// <para>Moves multiple hosts to a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27914,13 +27914,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>Rejects a command execution request. If an O&amp;M engineer executes a command configured in a command approval policy, the administrator receives an approval request in the Bastionhost console. The command can be executed only after the administrator approves it. If the request is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to reject command execution requests from O&amp;M engineers.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27974,13 +27974,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>Rejects a command execution request. If an O&amp;M engineer executes a command configured in a command approval policy, the administrator receives an approval request in the Bastionhost console. The command can be executed only after the administrator approves it. If the request is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to reject command execution requests from O&amp;M engineers.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28034,13 +28034,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>Rejects a command execution request. If an O&amp;M engineer executes a command configured in a command approval policy, the administrator receives an approval request in the Bastionhost console. The command can be executed only after the administrator approves it. If the request is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to reject command execution requests from O&amp;M engineers.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28058,13 +28058,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>Rejects a command execution request. If an O&amp;M engineer executes a command configured in a command approval policy, the administrator receives an approval request in the Bastionhost console. The command can be executed only after the administrator approves it. If the request is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation allows administrators to reject command execution requests from O&amp;M engineers.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28226,13 +28226,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
+        /// <para>Rejects an O&amp;M application. If O&amp;M approval is enabled in the control policy configured by the administrator, O&amp;M engineers must apply for O&amp;M and obtain administrator approval before logging on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Rejects an O&amp;M application submitted by an O&amp;M engineer.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28290,13 +28290,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
+        /// <para>Rejects an O&amp;M application. If O&amp;M approval is enabled in the control policy configured by the administrator, O&amp;M engineers must apply for O&amp;M and obtain administrator approval before logging on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Rejects an O&amp;M application submitted by an O&amp;M engineer.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28354,13 +28354,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
+        /// <para>Rejects an O&amp;M application. If O&amp;M approval is enabled in the control policy configured by the administrator, O&amp;M engineers must apply for O&amp;M and obtain administrator approval before logging on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Rejects an O&amp;M application submitted by an O&amp;M engineer.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28378,13 +28378,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
+        /// <para>Rejects an O&amp;M application. If O&amp;M approval is enabled in the control policy configured by the administrator, O&amp;M engineers must apply for O&amp;M and obtain administrator approval before logging on to assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Rejects an O&amp;M application submitted by an O&amp;M engineer.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28546,14 +28546,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// <para>Removes multiple hosts from a specified host group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
-        /// <h1><a href="#qps-"></a>QPS limit</h1>
-        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation removes multiple hosts from a host group. If some hosts no longer require unified management through a host group, you can use this operation to remove them.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28611,14 +28611,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// <para>Removes multiple hosts from a specified host group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
-        /// <h1><a href="#qps-"></a>QPS limit</h1>
-        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation removes multiple hosts from a host group. If some hosts no longer require unified management through a host group, you can use this operation to remove them.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28676,14 +28676,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// <para>Removes multiple hosts from a specified host group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
-        /// <h1><a href="#qps-"></a>QPS limit</h1>
-        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation removes multiple hosts from a host group. If some hosts no longer require unified management through a host group, you can use this operation to remove them.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28701,14 +28701,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple hosts from an asset group at a time.</para>
+        /// <para>Removes multiple hosts from a specified host group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
-        /// <h1><a href="#qps-"></a>QPS limit</h1>
-        /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation removes multiple hosts from a host group. If some hosts no longer require unified management through a host group, you can use this operation to remove them.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28882,14 +28882,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more users from a user group.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation removes multiple users from a user group. You can call this operation to remove users from a user group in batches when users resign or transfer to other departments and their permissions need to be revoked, or when users switch to another user group.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28947,14 +28948,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more users from a user group.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation removes multiple users from a user group. You can call this operation to remove users from a user group in batches when users resign or transfer to other departments and their permissions need to be revoked, or when users switch to another user group.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29012,14 +29014,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more users from a user group.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation removes multiple users from a user group. You can call this operation to remove users from a user group in batches when users resign or transfer to other departments and their permissions need to be revoked, or when users switch to another user group.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29037,14 +29040,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more users from a user group.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation removes multiple users from a user group. You can call this operation to remove users from a user group in batches when users resign or transfer to other departments and their permissions need to be revoked, or when users switch to another user group.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29062,7 +29066,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29116,7 +29120,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29170,7 +29174,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29188,7 +29192,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29206,7 +29210,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
+        /// <para>Purges the logon credentials (password or SSH private key) of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29264,7 +29268,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
+        /// <para>Purges the logon credentials (password or SSH private key) of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29322,7 +29326,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
+        /// <para>Purges the logon credentials (password or SSH private key) of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29340,7 +29344,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
+        /// <para>Purges the logon credentials (password or SSH private key) of a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29358,7 +29362,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the logon period limits in a control policy.</para>
+        /// <para>Configures the logon time limit settings for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29422,7 +29426,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the logon period limits in a control policy.</para>
+        /// <para>Configures the logon time limit settings for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29486,7 +29490,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the logon period limits in a control policy.</para>
+        /// <para>Configures the logon time limit settings for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29504,7 +29508,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the logon period limits in a control policy.</para>
+        /// <para>Configures the logon time limit settings for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29522,7 +29526,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O&amp;M approval configuration for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29586,7 +29590,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O&amp;M approval configuration for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29650,7 +29654,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O&amp;M approval configuration for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29668,7 +29672,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O&amp;M approval configuration for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29686,7 +29690,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the asset scope for a specified control policy.</para>
+        /// <para>Sets the effective asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29756,7 +29760,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the asset scope for a specified control policy.</para>
+        /// <para>Sets the effective asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29826,7 +29830,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the asset scope for a specified control policy.</para>
+        /// <para>Sets the effective asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29844,7 +29848,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the asset scope for a specified control policy.</para>
+        /// <para>Sets the effective asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29862,7 +29866,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// <para>Configures the commands that are allowed or denied, and the commands that require approval for the users and hosts to which a specified policy applies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29926,7 +29930,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// <para>Configures the commands that are allowed or denied, and the commands that require approval for the users and hosts to which a specified policy applies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29990,7 +29994,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// <para>Configures the commands that are allowed or denied, and the commands that require approval for the users and hosts to which a specified policy applies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30008,7 +30012,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the commands that can or cannot be run by the users or on the assets associated with the policy and the commands that must be reviewed.</para>
+        /// <para>Configures the commands that are allowed or denied, and the commands that require approval for the users and hosts to which a specified policy applies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30026,7 +30030,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies whether a source IP address can access the assets to which a control policy applies.</para>
+        /// <para>Configures whether source IP addresses can access hosts to which the current policy applies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30090,7 +30094,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies whether a source IP address can access the assets to which a control policy applies.</para>
+        /// <para>Configures whether source IP addresses can access hosts to which the current policy applies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30154,7 +30158,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies whether a source IP address can access the assets to which a control policy applies.</para>
+        /// <para>Configures whether source IP addresses can access hosts to which the current policy applies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30172,7 +30176,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies whether a source IP address can access the assets to which a control policy applies.</para>
+        /// <para>Configures whether source IP addresses can access hosts to which the current policy applies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30190,7 +30194,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Configures the RDP, SSH, and SFTP options of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30254,7 +30258,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Configures the RDP, SSH, and SFTP options of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30318,7 +30322,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Configures the RDP, SSH, and SFTP options of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30336,7 +30340,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Configures the RDP, SSH, and SFTP options of a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30354,7 +30358,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// <para>Sets the user scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30420,7 +30424,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// <para>Sets the user scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30486,7 +30490,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// <para>Sets the user scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30504,7 +30508,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the users to whom a control policy applies.</para>
+        /// <para>Sets the user scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">

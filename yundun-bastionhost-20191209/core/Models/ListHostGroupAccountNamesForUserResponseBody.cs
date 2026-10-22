@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupAccountNamesForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the names of host accounts.</para>
+        /// <para>The list of host account names.</para>
         /// </summary>
         [NameInMap("HostAccountNames")]
         [Validation(Required=false)]

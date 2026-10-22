@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyDatabaseAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the database account to modify.</para>
+        /// <para>The ID of the database account to be modified.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseAccountId { get; set; }
 
         /// <summary>
-        /// <para>The new username of the database account. The username can be up to 128 characters in length.</para>
+        /// <para>The new name of the database account. The name can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aaa</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseAccountName { get; set; }
 
         /// <summary>
-        /// <para>The new name of the database. This parameter is required if the database engine is PostgreSQL or Oracle.</para>
+        /// <para>The new database schema name. This parameter is required when the database specified by DatabaseId is a PostgreSQL or Oracle database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>orcl</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseSchema { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host that manages the database account to modify.</para>
+        /// <para>The instance ID of the Bastionhost instance where the database account to be modified resides.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -67,12 +67,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host that manages the database account to modify.</para>
+        /// <para>The region ID of the Bastionhost instance where the database account to be modified resides.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

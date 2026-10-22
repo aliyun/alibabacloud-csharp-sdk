@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The host groups returned.</para>
+        /// <para>The list of host groups returned.</para>
         /// </summary>
         [NameInMap("HostGroups")]
         [Validation(Required=false)]
         public List<ListHostGroupsForUserResponseBodyHostGroups> HostGroups { get; set; }
         public class ListHostGroupsForUserResponseBodyHostGroups : TeaModel {
             /// <summary>
-            /// <para>The remarks of the host group.</para>
+            /// <para>The description of the host group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The host group ID.</para>
+            /// <para>The ID of the host group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>１</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>

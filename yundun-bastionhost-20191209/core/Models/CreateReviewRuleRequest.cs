@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The type of the auditable asset scope rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: all projects.</para>
+        /// <item><description><para><b>1</b>: All projects.</para>
         /// </description></item>
-        /// <item><description><para><b>2</b>: specified projects.</para>
+        /// <item><description><para><b>2</b>: Specified projects.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

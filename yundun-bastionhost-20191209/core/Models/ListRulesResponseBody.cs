@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The authorization rules that are returned.</para>
+        /// <para>The authorization rules returned.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListRulesResponseBodyRules> Rules { get; set; }
         public class ListRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The remarks of the authorization rule.</para>
+            /// <para>The description of the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The end time of the validity period of the authorization rule. The value is a timestamp. Unit: seconds.</para>
+            /// <para>The end time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709258400</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? EffectiveEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the validity period of the authorization rule. The value is a timestamp. Unit: seconds.</para>
+            /// <para>The start time of the validity period for the authorization rule. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1685499134</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? EffectiveStartTime { get; set; }
 
             /// <summary>
-            /// <para>The authorization rule ID.</para>
+            /// <para>The ID of the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -77,12 +77,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The state of the authorization rule.</para>
+            /// <para>The state of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Enabled</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Disabled</b></para>
-            /// </description></item>
+            /// <item><description><b>Enabled</b>: Normal.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The total number of authorization rules that are returned.</para>
+        /// <para>The total number of authorization rules returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

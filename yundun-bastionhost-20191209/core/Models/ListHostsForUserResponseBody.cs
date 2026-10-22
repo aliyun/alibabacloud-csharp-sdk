@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The hosts returned.</para>
+        /// <para>The list of hosts returned.</para>
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
         public List<ListHostsForUserResponseBodyHosts> Hosts { get; set; }
         public class ListHostsForUserResponseBodyHosts : TeaModel {
             /// <summary>
-            /// <para>The endpoint type of the host. Valid values:</para>
+            /// <para>The address type of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Public</b>: public endpoint</para>
-            /// </description></item>
-            /// <item><description><para><b>Private</b>: internal endpoint</para>
-            /// </description></item>
+            /// <item><description><b>Public</b>: Public network address.</description></item>
+            /// <item><description><b>Private</b>: Private network address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint of the host. The value is a domain name or an IP address.</para>
+            /// <para>The private network address of the host, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint of the host. The value is a domain name or an IP address.</para>
+            /// <para>The public network address of the host, which can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.158.XX.XX</para>
@@ -83,12 +81,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPublicAddress { get; set; }
 
             /// <summary>
-            /// <para>The operating system of the host. Valid values:</para>
+            /// <para>The operating system type of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Linux</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Windows</b></para>
-            /// </description></item>
+            /// <item><description><b>Linux</b></description></item>
+            /// <item><description><b>Windows</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,10 +94,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string OSType { get; set; }
 
+            /// <summary>
+            /// <para>The project ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
@@ -109,7 +117,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>

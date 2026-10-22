@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostShareKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the shared keys.</para>
+        /// <para>The host shared keys.</para>
         /// </summary>
         [NameInMap("HostShareKeys")]
         [Validation(Required=false)]
         public List<ListHostShareKeysResponseBodyHostShareKeys> HostShareKeys { get; set; }
         public class ListHostShareKeysResponseBodyHostShareKeys : TeaModel {
             /// <summary>
-            /// <para>The number of the associated host accounts.</para>
+            /// <para>The number of associated host accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? HostAccountCount { get; set; }
 
             /// <summary>
-            /// <para>The shared key ID.</para>
+            /// <para>The ID of the host shared key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10247</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the shared key.</para>
+            /// <para>The name of the host shared key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyName { get; set; }
 
             /// <summary>
-            /// <para>The time when the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the key was last modified. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1644806406</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the shared keys.</para>
+        /// <para>The total number of host shared keys returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
