@@ -3475,7 +3475,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签创建</para>
+        /// <para>Creates a label.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3531,7 +3531,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签创建</para>
+        /// <para>Creates a label.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3587,7 +3587,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签创建</para>
+        /// <para>Creates a label.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3605,7 +3605,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签创建</para>
+        /// <para>Creates a label.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3623,7 +3623,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组创建</para>
+        /// <para>Creates a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3675,7 +3675,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组创建</para>
+        /// <para>Creates a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3727,7 +3727,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组创建</para>
+        /// <para>Creates a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3745,7 +3745,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组创建</para>
+        /// <para>Creates a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5515,7 +5515,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签删除</para>
+        /// <para>Deletes a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5571,7 +5571,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签删除</para>
+        /// <para>Deletes a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5627,7 +5627,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签删除</para>
+        /// <para>Deletes a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5645,7 +5645,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签删除</para>
+        /// <para>Deletes a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5663,7 +5663,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组删除</para>
+        /// <para>Deletes a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5715,7 +5715,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组删除</para>
+        /// <para>Deletes a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5767,7 +5767,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组删除</para>
+        /// <para>Deletes a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5785,7 +5785,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组删除</para>
+        /// <para>Deletes a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6879,7 +6879,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签详情</para>
+        /// <para>Retrieves the details of a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6935,7 +6935,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签详情</para>
+        /// <para>Retrieves the details of a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6991,7 +6991,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签详情</para>
+        /// <para>Retrieves the details of a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7009,7 +7009,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签详情</para>
+        /// <para>Retrieves the details of a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7027,7 +7027,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组详情</para>
+        /// <para>Retrieves the details of a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7079,7 +7079,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组详情</para>
+        /// <para>Retrieves the details of a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7131,7 +7131,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组详情</para>
+        /// <para>Retrieves the details of a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7149,7 +7149,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组详情</para>
+        /// <para>Retrieves the details of a tag group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10243,7 +10243,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签查询</para>
+        /// <para>Queries tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10307,7 +10307,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签查询</para>
+        /// <para>Queries tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10371,7 +10371,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签查询</para>
+        /// <para>Queries tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10389,7 +10389,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签查询</para>
+        /// <para>Queries tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10407,7 +10407,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组查询</para>
+        /// <para>Queries tag groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10467,7 +10467,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组查询</para>
+        /// <para>Queries tag groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10527,7 +10527,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组查询</para>
+        /// <para>Queries tag groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10545,7 +10545,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组查询</para>
+        /// <para>Queries tag groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14055,7 +14055,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签编辑</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14115,7 +14115,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签编辑</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14175,7 +14175,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签编辑</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14193,7 +14193,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签编辑</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14211,7 +14211,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组编辑</para>
+        /// <para>Updates a label group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14267,7 +14267,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组编辑</para>
+        /// <para>Updates a label group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14323,7 +14323,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组编辑</para>
+        /// <para>Updates a label group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14341,7 +14341,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签组编辑</para>
+        /// <para>Updates a label group.</para>
         /// </summary>
         /// 
         /// <param name="request">

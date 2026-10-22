@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateTagGroupRequest : TeaModel {
         /// <summary>
+        /// <para>AgentKey</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The client token for idempotence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -26,10 +30,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The name of the tag group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>标签组1</para>
+        /// <para>TagGroup1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DescribeTagResponseBody : TeaModel {
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The creator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32323</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CreateUserId { get; set; }
 
         /// <summary>
+        /// <para>The creator name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateUserName { get; set; }
 
         /// <summary>
+        /// <para>The tag group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>232323</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? GroupId { get; set; }
 
         /// <summary>
+        /// <para>The tag group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7393472</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The modifier ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? ModifyUserId { get; set; }
 
         /// <summary>
+        /// <para>The modifier name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyUserName { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxXxxxxx</para>
         /// </summary>
@@ -82,8 +100,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The tag name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>标签1</para>
+        /// <para>Tag 1</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

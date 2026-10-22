@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListTagGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxXxxxxx</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The tag group information.</para>
+        /// </summary>
         [NameInMap("TagGroups")]
         [Validation(Required=false)]
         public List<ListTagGroupResponseBodyTagGroups> TagGroups { get; set; }
         public class ListTagGroupResponseBodyTagGroups : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>32323</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? CreateUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the default tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>232323</para>
             /// </summary>
@@ -70,14 +87,18 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? DefaultTagId { get; set; }
 
             /// <summary>
+            /// <para>The name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>标签1</para>
+            /// <para>Tag 1</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
+            /// <para>ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7562321</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the modifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? ModifyUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the modifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

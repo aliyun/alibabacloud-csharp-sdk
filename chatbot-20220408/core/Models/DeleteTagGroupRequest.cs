@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteTagGroupRequest : TeaModel {
         /// <summary>
+        /// <para>AgentKey</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The idempotence parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tag group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

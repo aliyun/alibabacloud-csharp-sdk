@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateTagGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the tag group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7393472</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxXxxxxx</para>
         /// </summary>
