@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPluginRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway plug-in ID.</para>
+        /// <para>The ID of the gateway plugin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleResultsValue : TeaModel {
         /// <summary>
-        /// <para>Returned only for APP_WORKSPACE quantity pre-checks. This is the final total quantity to be saved, not the increment for the current operation. The issue quantity is the sum of common issues and reputation issues, and the competitor quantity is the total number of competitors after editing. This field is empty for APP and USER checks.</para>
+        /// <para>Returned only for APP_WORKSPACE: the target total amount for this check, which is the used amount in the saved configuration plus the ResourceValue. If a compatible DesiredTotal is provided, this total amount is used directly. The used amount for issues is the sum of regular and reputation issues in the saved configuration, and the used amount for competitors is the number of competitors. This field is empty for APP and USER checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned only for APP_WORKSPACE quantity pre-checks. This is the maximum number of issues or competitors allowed by the current commodity version, not the remaining quota. This field is empty for APP and USER checks or when the version benefits cannot be determined.</para>
+        /// <para>Returned only for APP_WORKSPACE quantity pre-checks: the maximum number of issues or competitors allowed by the current product edition, which is not the remaining quota. This field is empty for APP and USER checks or when the edition benefits cannot be determined.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public long? Limit { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the check is passed.</para>
+        /// <para>Indicates whether the check passed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? Passed { get; set; }
 
         /// <summary>
-        /// <para>The resource identifier.</para>
+        /// <para>The resource code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InspirationTokens</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a purchasable higher version exists that can accommodate the DesiredTotal. This field is true only when the current version capacity is insufficient and a higher version meets the requirements. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</para>
+        /// <para>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the capacity of the current edition is insufficient and a higher edition meets the requirement. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

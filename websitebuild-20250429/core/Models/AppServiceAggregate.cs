@@ -21,13 +21,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The deletion flag.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Deleted")]
         [Validation(Required=false)]
         public int? Deleted { get; set; }
 
         /// <summary>
-        /// <para>The end time. It is in ISO 8601 format and uses the UTC (Z) time zone.</para>
+        /// <para>The end time. It is in ISO 8601 format and uses the UTC time zone (Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-18T02:23:00Z</para>
@@ -38,6 +41,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>esp bizId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>p20202933455</para>
         /// </summary>
         [NameInMap("EspBizId")]
         [Validation(Required=false)]
@@ -82,6 +88,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The service name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Website design service</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -95,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<TreeNode> NodeList { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for an operation.</para>
+        /// <para>Uniquely identifies an operation.</para>
         /// </summary>
         [NameInMap("OperationAddress")]
         [Validation(Required=false)]
@@ -127,6 +136,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The application identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inst-001</para>
         /// </summary>
         [NameInMap("Slug")]
         [Validation(Required=false)]
@@ -154,6 +166,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123241414</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppPluginRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the plug-in.</para>
+        /// <para>The category of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;Depth\&quot;: 4, \&quot;ParentCategoryId\&quot;: 5281, \&quot;Name\&quot;: \&quot;1\&quot;, \&quot;CategoryId\&quot;: 5282, \&quot;CreateTime\&quot;: \&quot;2025-08-26 10:20:37\&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The description of the plug-in. The value must be 10 to 512 characters in length.</para>
+        /// <para>The description of the skill. The description must be 10 to 512 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The downloadable ZIP URL. This parameter is mutually exclusive with OssKey.</para>
+        /// <para>The URL of the downloadable ZIP file. Specify either this parameter or OssKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv6-inner/common/v1.20230608104522.dex?Expires=1753324652&OSSAccessKeyId=x6R87i97yKeKRggz&Signature=IwS6V56TlgjcX0AgikXLvf3CVtw%3D">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv6-inner/common/v1.20230608104522.dex?Expires=1753324652&amp;OSSAccessKeyId=x6R87i97yKeKRggz&amp;Signature=IwS6V56TlgjcX0AgikXLvf3CVtw%3D</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The extended JSON. This parameter is optional and uses the same format as the extend field in sandbox synchronization. If this parameter is not empty, the value is written to the database.</para>
+        /// <para>The extended JSON data. The format is the same as the extend parameter synchronized with the sandbox. If this parameter is not empty, it is saved to the database. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Icon { get; set; }
 
         /// <summary>
-        /// <para>The OSS key after frontend direct upload. This parameter is mutually exclusive with DownloadUrl.</para>
+        /// <para>The Object Storage Service (OSS) key generated after a direct upload from the frontend. Specify either this parameter or DownloadUrl.</para>
         /// 
         /// <b>Example:</b>
         /// <para>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the plug-in. The value can contain lowercase letters, digits, and hyphens (-), and must be 3 to 64 characters in length.</para>
+        /// <para>The unique identifier of the skill. The identifier must be 3 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>The name of the plug-in. The value must be 2 to 64 characters in length.</para>
+        /// <para>The name of the skill. The name must be 2 to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alisecguard</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginName { get; set; }
 
         /// <summary>
-        /// <para>The version number in semver format. Default value: 0.1.0.</para>
+        /// <para>The version number of the plug-in. The version number must be in the Semantic Versioning (SemVer) format. Default value: 0.1.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.6</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginVersion { get; set; }
 
         /// <summary>
-        /// <para>The tags, separated by commas (,).</para>
+        /// <para>The tags of the skill. Separate multiple tags with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The visibility of the plug-in. Default value: private.</para>
+        /// <para>The visibility of the skill. Default value: private.</para>
         /// 
         /// <b>Example:</b>
         /// <para>private</para>

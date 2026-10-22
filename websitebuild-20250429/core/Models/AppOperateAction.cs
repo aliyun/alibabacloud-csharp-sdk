@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The text used to display the action name in the user interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Renew</para>
         /// </summary>
         [NameInMap("ActionText")]
         [Validation(Required=false)]
@@ -34,7 +37,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The URL to navigate to when the action is clicked.</para>
+        /// <para>The URL to redirect to when the action is clicked.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://common-buy.aliyun.com/?orderType=RENEW&commodityCode=domain_website_public_cn&instanceId=12313213">https://common-buy.aliyun.com/?orderType=RENEW&amp;commodityCode=domain_website_public_cn&amp;instanceId=12313213</a></para>
         /// </summary>
         [NameInMap("Href")]
         [Validation(Required=false)]

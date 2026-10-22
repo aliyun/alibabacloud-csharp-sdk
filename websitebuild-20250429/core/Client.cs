@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a Supabase instance for resource allocation.</para>
+        /// <para>Performs resource allocation for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information associated with a resource.</para>
+        /// <para>Queries the information about the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -115,12 +115,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a Supabase instance for resource allocation.</para>
+        /// <para>Performs resource allocation for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information associated with a resource.</para>
+        /// <para>Queries the information about the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -186,12 +186,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a Supabase instance for resource allocation.</para>
+        /// <para>Performs resource allocation for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information associated with a resource.</para>
+        /// <para>Queries the information about the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -209,12 +209,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a Supabase instance for resource allocation.</para>
+        /// <para>Performs resource allocation for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information associated with a resource.</para>
+        /// <para>Queries the information about the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1009,7 +1009,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1084,7 +1084,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1159,7 +1159,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1182,7 +1182,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1200,12 +1200,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks user resource metering.</para>
+        /// <para>Validates user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1233,6 +1233,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesiredTotal))
+            {
+                query["DesiredTotal"] = request.DesiredTotal;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EspBizId))
             {
@@ -1271,12 +1275,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks user resource metering.</para>
+        /// <para>Validates user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1304,6 +1308,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesiredTotal))
+            {
+                query["DesiredTotal"] = request.DesiredTotal;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EspBizId))
             {
@@ -1342,12 +1350,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks user resource metering.</para>
+        /// <para>Validates user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1365,12 +1373,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks user resource metering.</para>
+        /// <para>Validates user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2244,12 +2252,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
+        /// <para>Generates an SSO logon-free URL for the application assistant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2299,12 +2307,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
+        /// <para>Generates an SSO logon-free URL for the application assistant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2354,12 +2362,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
+        /// <para>Generates an SSO logon-free URL for the application assistant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2377,12 +2385,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
+        /// <para>Generates an SSO logon-free URL for the application assistant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2808,7 +2816,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a passwordless login ticket.</para>
+        /// <para>Creates a logon-free ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2858,7 +2866,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a passwordless login ticket.</para>
+        /// <para>Creates a logon-free ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2908,7 +2916,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a passwordless login ticket.</para>
+        /// <para>Creates a logon-free ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2926,7 +2934,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a passwordless login ticket.</para>
+        /// <para>Creates a logon-free ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3357,7 +3365,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3444,7 +3452,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3531,7 +3539,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3554,7 +3562,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4040,7 +4048,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to create a logo.</para>
+        /// <para>Submits a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4094,7 +4102,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to create a logo.</para>
+        /// <para>Submits a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4148,7 +4156,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to create a logo.</para>
+        /// <para>Submits a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4166,7 +4174,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a task to create a logo.</para>
+        /// <para>Submits a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4184,7 +4192,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subfolder under a parent folder.</para>
+        /// <para>Creates a subfolder in a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4234,7 +4242,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subfolder under a parent folder.</para>
+        /// <para>Creates a subfolder in a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4284,7 +4292,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subfolder under a parent folder.</para>
+        /// <para>Creates a subfolder in a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4302,7 +4310,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subfolder under a parent folder.</para>
+        /// <para>Creates a subfolder in a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4764,7 +4772,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
+        /// <para>Deletes and unbinds the SSL certificate associated with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4810,7 +4818,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
+        /// <para>Deletes and unbinds the SSL certificate associated with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4856,7 +4864,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
+        /// <para>Deletes and unbinds the SSL certificate associated with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4874,7 +4882,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
+        /// <para>Deletes and unbinds the SSL certificate associated with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5472,7 +5480,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application plug-in.</para>
+        /// <para>Deletes an application plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5514,7 +5522,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application plug-in.</para>
+        /// <para>Deletes an application plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5556,7 +5564,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application plug-in.</para>
+        /// <para>Deletes an application plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5574,7 +5582,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application plug-in.</para>
+        /// <para>Deletes an application plugin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6736,7 +6744,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a general-purpose API operation.</para>
+        /// <para>Calls a general API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6794,7 +6802,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a general-purpose API operation.</para>
+        /// <para>Calls a general API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6852,7 +6860,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a general-purpose API operation.</para>
+        /// <para>Calls a general API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6870,7 +6878,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls a general-purpose API operation.</para>
+        /// <para>Calls a general API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7040,7 +7048,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a material file.</para>
+        /// <para>Exports material files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7092,7 +7100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a material file.</para>
+        /// <para>Exports material files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7144,7 +7152,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a material file.</para>
+        /// <para>Exports material files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7162,7 +7170,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a material file.</para>
+        /// <para>Exports material files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7473,7 +7481,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the information of an application instance.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7520,7 +7528,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the information of an application instance.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7567,7 +7575,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the information of an application instance.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7590,7 +7598,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the information of an application instance.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7613,7 +7621,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API operation for creating an AI conversation in Wanxiaozhi 2.0.</para>
+        /// <para>The Wanxiaozhi 2.0 API operation for creating AI conversations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7664,7 +7672,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API operation for creating an AI conversation in Wanxiaozhi 2.0.</para>
+        /// <para>The Wanxiaozhi 2.0 API operation for creating AI conversations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7715,7 +7723,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API operation for creating an AI conversation in Wanxiaozhi 2.0.</para>
+        /// <para>The Wanxiaozhi 2.0 API operation for creating AI conversations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7738,7 +7746,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The API operation for creating an AI conversation in Wanxiaozhi 2.0.</para>
+        /// <para>The Wanxiaozhi 2.0 API operation for creating AI conversations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7756,12 +7764,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the session lock status.</para>
+        /// <para>Retrieves the lock status of a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
+        /// <para>The API operation for creating an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7803,12 +7811,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the session lock status.</para>
+        /// <para>Retrieves the lock status of a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
+        /// <para>The API operation for creating an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7850,12 +7858,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the session lock status.</para>
+        /// <para>Retrieves the lock status of a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
+        /// <para>The API operation for creating an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7873,12 +7881,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the session lock status.</para>
+        /// <para>Retrieves the lock status of a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
+        /// <para>The API operation for creating an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8044,12 +8052,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file content and modification time.</para>
+        /// <para>Retrieves a file and its modification time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8095,12 +8103,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file content and modification time.</para>
+        /// <para>Retrieves a file and its modification time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8146,12 +8154,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file content and modification time.</para>
+        /// <para>Retrieves a file and its modification time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8169,12 +8177,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file content and modification time.</para>
+        /// <para>Retrieves a file and its modification time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8625,7 +8633,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8672,7 +8680,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8719,7 +8727,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8742,7 +8750,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8900,12 +8908,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application plug-in.</para>
+        /// <para>Queries the details of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8947,12 +8955,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application plug-in.</para>
+        /// <para>Queries the details of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8994,12 +9002,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application plug-in.</para>
+        /// <para>Queries the details of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9017,12 +9025,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application plug-in.</para>
+        /// <para>Queries the details of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10953,7 +10961,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the information of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11008,7 +11016,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the information of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11063,7 +11071,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the information of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11086,7 +11094,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the information of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11772,12 +11780,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mini programs associated with a site.</para>
+        /// <para>Queries the mini programs bound to a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the QR code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11833,12 +11841,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mini programs associated with a site.</para>
+        /// <para>Queries the mini programs bound to a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the QR code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11894,12 +11902,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mini programs associated with a site.</para>
+        /// <para>Queries the mini programs bound to a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the QR code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11917,12 +11925,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mini programs associated with a site.</para>
+        /// <para>Queries the mini programs bound to a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the QR code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11940,7 +11948,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a conditional query for mini programs attached to an application instance.</para>
+        /// <para>Queries the mini programs attached to an application instance by using a conditional query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11990,7 +11998,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a conditional query for mini programs attached to an application instance.</para>
+        /// <para>Queries the mini programs attached to an application instance by using a conditional query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12040,7 +12048,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a conditional query for mini programs attached to an application instance.</para>
+        /// <para>Queries the mini programs attached to an application instance by using a conditional query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12058,7 +12066,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a conditional query for mini programs attached to an application instance.</para>
+        /// <para>Queries the mini programs attached to an application instance by using a conditional query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12081,7 +12089,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12128,7 +12136,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12175,7 +12183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12198,7 +12206,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12356,7 +12364,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
+        /// <para>Exchanges a temporary AccessKey for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12402,7 +12410,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
+        /// <para>Exchanges a temporary AccessKey for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12448,7 +12456,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
+        /// <para>Exchanges a temporary AccessKey for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12466,7 +12474,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
+        /// <para>Exchanges a temporary AccessKey for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12636,12 +12644,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Distributes promotional benefits from a partner.</para>
+        /// <para>Grants promotional benefits to partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information for the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12703,12 +12711,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Distributes promotional benefits from a partner.</para>
+        /// <para>Grants promotional benefits to partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information for the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12770,12 +12778,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Distributes promotional benefits from a partner.</para>
+        /// <para>Grants promotional benefits to partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information for the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12793,12 +12801,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Distributes promotional benefits from a partner.</para>
+        /// <para>Grants promotional benefits to partners.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// <para>Retrieves the configuration information for the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12816,12 +12824,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an application plug-in to the current user account.</para>
+        /// <para>Installs an application plugin to the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12867,12 +12875,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an application plug-in to the current user account.</para>
+        /// <para>Installs an application plugin to the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12918,12 +12926,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an application plug-in to the current user account.</para>
+        /// <para>Installs an application plugin to the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12941,12 +12949,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an application plug-in to the current user account.</para>
+        /// <para>Installs an application plugin to the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13260,12 +13268,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the conversation message list of an AI employee by paging.</para>
+        /// <para>Performs a paging query on the list of conversation messages for an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
+        /// <para>Queries the AI conversation history for Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13321,12 +13329,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the conversation message list of an AI employee by paging.</para>
+        /// <para>Performs a paging query on the list of conversation messages for an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
+        /// <para>Queries the AI conversation history for Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13382,12 +13390,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the conversation message list of an AI employee by paging.</para>
+        /// <para>Performs a paging query on the list of conversation messages for an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
+        /// <para>Queries the AI conversation history for Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13405,12 +13413,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the conversation message list of an AI employee by paging.</para>
+        /// <para>Performs a paging query on the list of conversation messages for an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
+        /// <para>Queries the AI conversation history for Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14208,12 +14216,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches the conversation list.</para>
+        /// <para>Queries the conversation list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</para>
+        /// <para>Creates an AI conversation in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14283,12 +14291,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches the conversation list.</para>
+        /// <para>Queries the conversation list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</para>
+        /// <para>Creates an AI conversation in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14358,12 +14366,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches the conversation list.</para>
+        /// <para>Queries the conversation list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</para>
+        /// <para>Creates an AI conversation in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14381,12 +14389,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches the conversation list.</para>
+        /// <para>Queries the conversation list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</para>
+        /// <para>Creates an AI conversation in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14404,7 +14412,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
+        /// <para>Queries the list of HTTP 301 status codes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14454,7 +14462,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
+        /// <para>Queries the list of HTTP 301 status codes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14504,7 +14512,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
+        /// <para>Queries the list of HTTP 301 status codes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14522,7 +14530,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
+        /// <para>Queries the list of HTTP 301 status codes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14732,7 +14740,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14836,7 +14844,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14940,7 +14948,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14958,7 +14966,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15132,12 +15140,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in files.</para>
+        /// <para>Queries the list of application plugin files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15183,12 +15191,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in files.</para>
+        /// <para>Queries the list of application plugin files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15234,12 +15242,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in files.</para>
+        /// <para>Queries the list of application plugin files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15257,12 +15265,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in files.</para>
+        /// <para>Queries the list of application plugin files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15280,12 +15288,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in versions.</para>
+        /// <para>Queries the application plug-in versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15335,12 +15343,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in versions.</para>
+        /// <para>Queries the application plug-in versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15390,12 +15398,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in versions.</para>
+        /// <para>Queries the application plug-in versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15413,12 +15421,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application plug-in versions.</para>
+        /// <para>Queries the application plug-in versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16548,12 +16556,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of my application plug-ins.</para>
+        /// <para>Queries the list of application plugins.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of code generation plug-ins.</para>
+        /// <para>Retrieves the configuration information of code generation plugins.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16611,12 +16619,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of my application plug-ins.</para>
+        /// <para>Queries the list of application plugins.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of code generation plug-ins.</para>
+        /// <para>Retrieves the configuration information of code generation plugins.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16674,12 +16682,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of my application plug-ins.</para>
+        /// <para>Queries the list of application plugins.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of code generation plug-ins.</para>
+        /// <para>Retrieves the configuration information of code generation plugins.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16697,12 +16705,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of my application plug-ins.</para>
+        /// <para>Queries the list of application plugins.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of code generation plug-ins.</para>
+        /// <para>Retrieves the configuration information of code generation plugins.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18184,7 +18192,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material folder.</para>
+        /// <para>Updates a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18234,7 +18242,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material folder.</para>
+        /// <para>Updates a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18284,7 +18292,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material folder.</para>
+        /// <para>Updates a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18302,7 +18310,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material folder.</para>
+        /// <para>Updates a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18320,7 +18328,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material file.</para>
+        /// <para>Updates a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18370,7 +18378,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material file.</para>
+        /// <para>Updates a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18420,7 +18428,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material file.</para>
+        /// <para>Updates a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18438,7 +18446,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a material file.</para>
+        /// <para>Updates a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18456,7 +18464,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a material file.</para>
+        /// <para>Updates the status of material files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18512,7 +18520,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a material file.</para>
+        /// <para>Updates the status of material files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18568,7 +18576,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a material file.</para>
+        /// <para>Updates the status of material files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18586,7 +18594,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a material file.</para>
+        /// <para>Updates the status of material files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18604,7 +18612,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a material file folder.</para>
+        /// <para>Moves an asset folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18658,7 +18666,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a material file folder.</para>
+        /// <para>Moves an asset folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18712,7 +18720,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a material file folder.</para>
+        /// <para>Moves an asset folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18730,7 +18738,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a material file folder.</para>
+        /// <para>Moves an asset folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18748,7 +18756,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves media asset files.</para>
+        /// <para>Moves asset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18804,7 +18812,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves media asset files.</para>
+        /// <para>Moves asset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18860,7 +18868,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves media asset files.</para>
+        /// <para>Moves asset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18878,7 +18886,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves media asset files.</para>
+        /// <para>Moves asset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18896,12 +18904,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a data change notification (for admin).</para>
+        /// <para>Triggers a data change notification for administrators.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application instance information.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18955,12 +18963,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a data change notification (for admin).</para>
+        /// <para>Triggers a data change notification for administrators.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application instance information.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19014,12 +19022,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a data change notification (for admin).</para>
+        /// <para>Triggers a data change notification for administrators.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application instance information.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19037,12 +19045,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a data change notification (for admin).</para>
+        /// <para>Triggers a data change notification for administrators.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application instance information.</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19060,7 +19068,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// <para>Takes a website offline by switching the CDN back-to-origin requests for all domain names under the site to an offline page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19102,7 +19110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// <para>Takes a website offline by switching the CDN back-to-origin requests for all domain names under the site to an offline page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19144,7 +19152,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// <para>Takes a website offline by switching the CDN back-to-origin requests for all domain names under the site to an offline page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19162,7 +19170,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// <para>Takes a website offline by switching the CDN back-to-origin requests for all domain names under the site to an offline page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19180,7 +19188,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// <para>Restores a website to online status by reverting the CDN back-to-origin configuration for all domain names under the site to the normal path rewrite rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19222,7 +19230,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// <para>Restores a website to online status by reverting the CDN back-to-origin configuration for all domain names under the site to the normal path rewrite rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19264,7 +19272,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// <para>Restores a website to online status by reverting the CDN back-to-origin configuration for all domain names under the site to the normal path rewrite rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19282,7 +19290,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// <para>Restores a website to online status by reverting the CDN back-to-origin configuration for all domain names under the site to the normal path rewrite rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19720,12 +19728,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>Retrieves the Supabase instance information for the operated resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>The Supabase instance information for the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19811,12 +19819,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>Retrieves the Supabase instance information for the operated resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>The Supabase instance information for the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19902,12 +19910,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>Retrieves the Supabase instance information for the operated resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>The Supabase instance information for the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19925,12 +19933,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>Retrieves the Supabase instance information for the operated resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
+        /// <para>The Supabase instance information for the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19953,7 +19961,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20020,7 +20028,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20087,7 +20095,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20110,7 +20118,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20332,7 +20340,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the acquisition details of inspiration credits (the quota account list, including expiration marks).</para>
+        /// <para>Queries the acquisition details of inspiration points, including the list of quota accounts and their expiration status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20403,7 +20411,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the acquisition details of inspiration credits (the quota account list, including expiration marks).</para>
+        /// <para>Queries the acquisition details of inspiration points, including the list of quota accounts and their expiration status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20474,7 +20482,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the acquisition details of inspiration credits (the quota account list, including expiration marks).</para>
+        /// <para>Queries the acquisition details of inspiration points, including the list of quota accounts and their expiration status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20497,7 +20505,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the acquisition details of inspiration credits (the quota account list, including expiration marks).</para>
+        /// <para>Queries the acquisition details of inspiration points, including the list of quota accounts and their expiration status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20944,7 +20952,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the material folder tree.</para>
+        /// <para>Queries the asset folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20994,7 +21002,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the material folder tree.</para>
+        /// <para>Queries the asset folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21044,7 +21052,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the material folder tree.</para>
+        /// <para>Queries the asset folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21062,7 +21070,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the material folder tree.</para>
+        /// <para>Queries the asset folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21080,7 +21088,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a material file.</para>
+        /// <para>Queries the details of an asset file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21126,7 +21134,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a material file.</para>
+        /// <para>Queries the details of an asset file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21172,7 +21180,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a material file.</para>
+        /// <para>Queries the details of an asset file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21190,7 +21198,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a material file.</para>
+        /// <para>Queries the details of an asset file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21208,7 +21216,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of material files.</para>
+        /// <para>Queries a list of asset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21316,7 +21324,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of material files.</para>
+        /// <para>Queries a list of asset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21424,7 +21432,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of material files.</para>
+        /// <para>Queries a list of asset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21442,7 +21450,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of material files.</para>
+        /// <para>Queries a list of asset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22516,12 +22524,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22591,12 +22599,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22666,12 +22674,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22689,12 +22697,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
+        /// <para>Queries the authentication configuration of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22712,12 +22720,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22783,12 +22791,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22854,12 +22862,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22877,12 +22885,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22900,12 +22908,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22971,12 +22979,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23042,12 +23050,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23065,12 +23073,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
+        /// <para>Queries the information of the Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24609,7 +24617,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24660,7 +24668,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24711,7 +24719,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24734,7 +24742,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24757,7 +24765,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the details of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24816,7 +24824,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the details of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24875,7 +24883,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the details of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24898,7 +24906,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the details of an application instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24916,12 +24924,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the version of an application plug-in.</para>
+        /// <para>Rolls back the version of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24967,12 +24975,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the version of an application plug-in.</para>
+        /// <para>Rolls back the version of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25018,12 +25026,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the version of an application plug-in.</para>
+        /// <para>Rolls back the version of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25041,12 +25049,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the version of an application plug-in.</para>
+        /// <para>Rolls back the version of an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26896,7 +26904,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
+        /// <para>Unbinds a domain name from a website and deletes the associated DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26942,7 +26950,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
+        /// <para>Unbinds a domain name from a website and deletes the associated DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26988,7 +26996,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
+        /// <para>Unbinds a domain name from a website and deletes the associated DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27006,7 +27014,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
+        /// <para>Unbinds a domain name from a website and deletes the associated DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27024,12 +27032,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an application plugin from the current user account.</para>
+        /// <para>Uninstalls an application plug-in from the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27071,12 +27079,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an application plugin from the current user account.</para>
+        /// <para>Uninstalls an application plug-in from the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27118,12 +27126,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an application plugin from the current user account.</para>
+        /// <para>Uninstalls an application plug-in from the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27141,12 +27149,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an application plugin from the current user account.</para>
+        /// <para>Uninstalls an application plug-in from the current user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27884,12 +27892,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an application plug-in.</para>
+        /// <para>Updates an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27975,12 +27983,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an application plug-in.</para>
+        /// <para>Updates an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28066,12 +28074,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an application plug-in.</para>
+        /// <para>Updates an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28089,12 +28097,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an application plug-in.</para>
+        /// <para>Updates an application plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of a code generation plug-in.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28604,7 +28612,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the binding information of a mini program.</para>
+        /// <para>Updates the binding information for a mini program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28658,7 +28666,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the binding information of a mini program.</para>
+        /// <para>Updates the binding information for a mini program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28712,7 +28720,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the binding information of a mini program.</para>
+        /// <para>Updates the binding information for a mini program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28730,7 +28738,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the binding information of a mini program.</para>
+        /// <para>Updates the binding information for a mini program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29060,12 +29068,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a new version of an application plug-in.</para>
+        /// <para>Uploads an application plugin version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the code generation plug-in configuration information.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29131,12 +29139,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a new version of an application plug-in.</para>
+        /// <para>Uploads an application plugin version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the code generation plug-in configuration information.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29202,12 +29210,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a new version of an application plug-in.</para>
+        /// <para>Uploads an application plugin version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the code generation plug-in configuration information.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29225,12 +29233,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a new version of an application plug-in.</para>
+        /// <para>Uploads an application plugin version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the code generation plug-in configuration information.</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29428,12 +29436,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a material file.</para>
+        /// <para>Uploads an asset file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Supabase instance information corresponding to the operation resource.</para>
+        /// <para>The Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29491,12 +29499,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a material file.</para>
+        /// <para>Uploads an asset file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Supabase instance information corresponding to the operation resource.</para>
+        /// <para>The Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29554,12 +29562,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a material file.</para>
+        /// <para>Uploads an asset file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Supabase instance information corresponding to the operation resource.</para>
+        /// <para>The Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29577,12 +29585,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a material file.</para>
+        /// <para>Uploads an asset file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Supabase instance information corresponding to the operation resource.</para>
+        /// <para>The Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckResourceMeasureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The returned error parameters.</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public CheckResourceMeasureResponseBodyModule Module { get; set; }
         public class CheckResourceMeasureResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the final total quantity to be saved, not the current increment. The issue quantity is the sum of common issues and word-of-mouth issues, and the competitor quantity is the total number of competitors after editing. This field is empty for APP and USER checks.</para>
+            /// <para>The desired total returned only for APP_WORKSPACE. This is the target total for the current check, which is the sum of the existing usage in the saved configuration and ResourceValue. If the compatible DesiredTotal is provided, this total is used directly. The existing usage of issues is the sum of common and word-of-mouth issues in the saved configuration, and the existing usage of competitors is the number of competitors. This parameter is empty for APP and USER checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? DesiredTotal { get; set; }
 
             /// <summary>
-            /// <para>The error code returned when the check fails. This field is null when the check passes.</para>
+            /// <para>The error code returned when the check fails. This parameter is null when the check passes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the check fails. This field is null when the check passes.</para>
+            /// <para>The error message returned when the check fails. This parameter is null when the check passes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stream push failed</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>This field is returned only for APP_WORKSPACE quantity pre-checks. It specifies the maximum number of issues or competitors allowed by the current commodity edition, not the remaining quota. This field is empty for APP and USER checks, or when the edition benefits cannot be determined.</para>
+            /// <para>The limit returned only for APP_WORKSPACE quantity pre-checks. This is the maximum number of issues or competitors allowed by the current commodity edition, not the remaining quota. This parameter is empty for APP and USER checks or when the edition benefits cannot be determined.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ResourceCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the capacity of the current edition is insufficient and a higher edition meets the requirement. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</para>
+            /// <para>Indicates whether a purchasable higher edition that can accommodate the DesiredTotal exists. This parameter is true only when the capacity of the current edition is insufficient and a higher edition meets the requirements. Otherwise, this parameter is false. This parameter may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The root error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>The backup parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

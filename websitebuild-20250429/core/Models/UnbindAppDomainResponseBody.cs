@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UnbindAppDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</para>
+        /// <para>The dynamic error message used to replace the %s placeholder in the ErrMessage response parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public UnbindAppDomainResponseBodyModule Module { get; set; }
         public class UnbindAppDomainResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operation is successful.</para>
+            /// <para>Indicates whether the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The root error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -109,14 +109,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

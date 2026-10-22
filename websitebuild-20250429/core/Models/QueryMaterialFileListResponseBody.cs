@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialFileListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:</para>
+        /// <para>Specifies whether a retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: A retry is not allowed.</description></item>
+        /// <item><description>true: A retry is allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</para>
+        /// <para>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and can be up to 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic code. This parameter is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The error code. The ErrorCode parameter is not returned if the request is successful. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</para>
+        /// <para>The error code. If the request is successful, this parameter is not returned. If the request fails, this parameter is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per query.</para>
+        /// <para>The maximum number of entries to return for a single request.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The query results.</para>
+            /// <para>The request result.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>Apart from pagination limits, the server processes up to 1,000 recent records per query. If the results exceed 1,000 records, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is set to <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is set to <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token that is used to start the next query. If no next query is available, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -209,17 +209,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The root error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationConsumeRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed cause of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retries are allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not used. Ignore this parameter.</para>
+        /// <para>The dynamic message. This field is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the deletion is successful.</para>
+        /// <para>Indicates whether the deletion is successful.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The request results.</para>
+            /// <para>The request result.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -122,6 +122,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The consumption type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1 round of conversation</para>
                 /// </summary>
                 [NameInMap("ConsumeType")]
                 [Validation(Required=false)]
@@ -139,13 +142,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The unique identifier of the consumption record.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RECORD_1</para>
                 /// </summary>
                 [NameInMap("RecordKey")]
                 [Validation(Required=false)]
                 public string RecordKey { get; set; }
 
                 /// <summary>
-                /// <para>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</para>
+                /// <para>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, and AI content creation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Home improvement</para>
@@ -195,6 +201,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The consumption type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1 round of conversation</para>
                 /// </summary>
                 [NameInMap("ConsumeType")]
                 [Validation(Required=false)]
@@ -211,7 +220,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string MetaData { get; set; }
 
                 /// <summary>
-                /// <para>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</para>
+                /// <para>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, and AI content creation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Home improvement</para>
@@ -223,7 +232,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether a next page exists.</para>
+            /// <para>Indicates whether a next page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -243,7 +252,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether a previous page exists.</para>
+            /// <para>Indicates whether a previous page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -253,7 +262,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]

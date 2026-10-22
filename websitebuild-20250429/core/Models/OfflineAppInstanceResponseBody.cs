@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class OfflineAppInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deprecated parameter. You can ignore this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the shift was successful.</para>
+        /// <para>Indicates whether the move succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;TotalPageNum\&quot;: 1, \&quot;ResultLimit\&quot;: False, \&quot;CurrentPageNum\&quot;: 0, \&quot;PageSize\&quot;: 0, \&quot;TotalItemNum\&quot;: 0}</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

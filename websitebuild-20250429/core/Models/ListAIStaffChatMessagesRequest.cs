@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values: 10 to 100.</para>
+        /// <para>The number of entries per page. Valid values: 10 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The gmtCreate value of the last record on the previous page. Leave this parameter empty for the first page.</para>
+        /// <para>The creation time of the last entry on the previous page. Do not specify this parameter when you query the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSandboxPreviewUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed cause of access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic code. This field is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,10 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> variable in the <b>ErrMessage</b> return parameter.</para>
-        /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
-        /// </remarks>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message returned by the <b>ErrMessage</b> parameter. If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -63,14 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The response object.</para>
+        /// <para>The returned object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -103,14 +100,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System exception.</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

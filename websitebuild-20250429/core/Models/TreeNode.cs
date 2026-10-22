@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The node name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Single-channel output</para>
+        /// <para>Single output</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
@@ -72,6 +72,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The operator role.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>System</para>
         /// </summary>
         [NameInMap("OperatorRole")]
         [Validation(Required=false)]

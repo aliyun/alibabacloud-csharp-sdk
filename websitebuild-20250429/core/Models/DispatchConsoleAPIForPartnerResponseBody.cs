@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DispatchConsoleAPIForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</para>
+        /// <para>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

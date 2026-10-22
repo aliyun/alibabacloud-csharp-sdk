@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The environment identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>staging</para>
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
@@ -58,7 +61,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderByClause { get; set; }
 
         /// <summary>
-        /// <para>The column used for sorting.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -88,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

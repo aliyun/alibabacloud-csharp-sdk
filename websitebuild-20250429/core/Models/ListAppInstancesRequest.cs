@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per query.</para>
+        /// <para>The maximum number of results to return for each query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no next query exists.</para>
+        /// <para>The token that is used to start the next query. This parameter is empty if no subsequent query is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>

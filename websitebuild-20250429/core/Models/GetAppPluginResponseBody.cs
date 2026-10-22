@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPluginResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message returned by the <b>ErrMessage</b> parameter.</para>
         /// <remarks>
         /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -119,8 +119,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>The image display mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b> (None): Not displayed.</description></item>
-            /// <item><description><b>1</b> (Always): Always displayed.</description></item>
+            /// <item><description><b>0</b> (None): The image is not displayed.</description></item>
+            /// <item><description><b>1</b> (Always): The image is always displayed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,8 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Display { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether scheduled delivery of resource snapshots is enabled.</para>
-            /// <para>Valid values:</para>
+            /// <para>Indicates whether scheduled delivery of resource snapshots is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>
@@ -149,7 +148,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The extended information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;bindDomainAndPublish\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
+            /// <para>{&quot;deliveryNodeName&quot;:&quot;Bind domain name and publish&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</para>
             /// </summary>
             [NameInMap("Extend")]
             [Validation(Required=false)]
@@ -196,7 +195,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Hooks { get; set; }
 
             /// <summary>
-            /// <para>The popularity count.</para>
+            /// <para>The popularity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -206,7 +205,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? HotCount { get; set; }
 
             /// <summary>
-            /// <para>The plug-in description.</para>
+            /// <para>The plugin description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@lALPM2AwTOg9IUHNAUDNAUA</para>
@@ -216,7 +215,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Icon { get; set; }
 
             /// <summary>
-            /// <para>The bound API Gateway plug-in ID.</para>
+            /// <para>The ID of the associated API gateway plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -226,7 +225,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>The plug-in name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</para>
+            /// <para>The name of the plugin. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tf_testaccapigatewayplugin29311</para>
@@ -236,7 +235,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginName { get; set; }
 
             /// <summary>
-            /// <para>The image repository URL.</para>
+            /// <para>The URL of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -276,7 +275,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The application instance version.</para>
+            /// <para>The version of the application instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-04-02</para>
@@ -328,7 +327,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

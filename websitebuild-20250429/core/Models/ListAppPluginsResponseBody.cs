@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Indicates whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the value of the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return per query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -117,7 +118,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>The image display setting. Valid values:</para>
+            /// <para>Specifies whether to display the image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b> (None): Not displayed.</description></item>
             /// <item><description><b>1</b> (Always): Always displayed.</description></item>
@@ -131,7 +132,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Display { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable scheduled delivery of resource snapshots. Valid values:</para>
+            /// <para>Specifies whether to enable scheduled delivery of resource snapshots.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>
@@ -166,7 +168,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The value is in the ISO 8601 format and the UTC time zone.</para>
+            /// <para>The update time in ISO 8601 format in the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -207,11 +209,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the plugin is deleted. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: No.</description></item>
-            /// <item><description>1: Yes.</description></item>
-            /// </list>
+            /// <para>Indicates whether the item is deleted. Valid values: 0 (no) and 1 (yes).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -224,7 +222,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The name of the plugin.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>File name</para>
+            /// <para>Filename</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -253,7 +251,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. If there is no next query, this value is empty.</para>
+        /// <para>The token used to start the next query. This parameter is empty if no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>

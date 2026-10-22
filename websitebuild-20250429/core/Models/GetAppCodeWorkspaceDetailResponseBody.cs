@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppCodeWorkspaceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reasons for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retry is allowed. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message. This value is used to replace the <c>%s</c> placeholder in the error message returned in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? ActiveLogicalNumber { get; set; }
 
             /// <summary>
-            /// <para>The code commit hash value.</para>
+            /// <para>The code commit hash.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>890243d5977e74d80eebd4734f7b05f626f84cb1</para>
             /// </summary>
             [NameInMap("CommitHash")]
             [Validation(Required=false)]
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? MaxLogicalNumber { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can call <a href="~~ListSites~~">ListSites</a> to retrieve the site ID.</para>
+            /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -128,7 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteId { get; set; }
 
             /// <summary>
-            /// <para>The operation description information.</para>
+            /// <para>The operation description.</para>
             /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
@@ -147,7 +150,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ChangeLog { get; set; }
 
                 /// <summary>
-                /// <para>The creation time in UTC. The time follows the ISO 8601 standard.</para>
+                /// <para>The creation time in UTC. The time is in the ISO 8601 format.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>

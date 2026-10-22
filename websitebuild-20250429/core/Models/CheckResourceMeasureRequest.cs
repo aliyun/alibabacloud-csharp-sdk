@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckResourceMeasureRequest : TeaModel {
         /// <summary>
-        /// <para>The owner ID, which can be a website ID or an Alibaba Cloud user ID.</para>
+        /// <para>The ID of the owner, such as the website ID or Alibaba Cloud user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongId { get; set; }
 
         /// <summary>
-        /// <para>The owner ID type. Valid values: siteId and uid.</para>
+        /// <para>The type of the owner ID. Valid values: siteId and uid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is used only for APP_WORKSPACE. It specifies the final total amount of issues or competitors after editing. For legacy APP or USER, it retains the incremental semantics of ResourceValue.</para>
+        /// <para>The desired total for APP_WORKSPACE. Valid values: 0 to 100000. If this parameter is specified, it takes precedence over ResourceValue and is not added to the existing usage. For new calls, you only need to specify ResourceValue. This parameter is not used for APP or USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>
@@ -80,11 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
-        /// <para>The resource value. This parameter is required only for feature resources and is empty by default. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: Not supported.</description></item>
-        /// <item><description>1: Supported.</description></item>
-        /// </list>
+        /// <para>The resource value. This parameter is empty by default and is required only for feature resources. Valid values: 0: Not supported. 1: Supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

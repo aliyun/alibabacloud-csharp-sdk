@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The list of extension information keys.</para>
+        /// <para>The list of extended information keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SERVER_DOMAIN</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPluginFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway plug-in ID.</para>
+        /// <para>The ID of the gateway plugin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliplayer-react</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>The version number. If not specified, the currently active version is used.</para>
+        /// <para>The version number. If you do not specify this parameter, the currently active version is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.3</para>

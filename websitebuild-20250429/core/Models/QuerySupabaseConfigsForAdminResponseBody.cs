@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseConfigsForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>false: Retries are not allowed.</description></item>
         /// <item><description>true: Retries are allowed.</description></item>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

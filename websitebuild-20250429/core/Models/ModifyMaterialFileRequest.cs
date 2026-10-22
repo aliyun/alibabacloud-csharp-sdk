@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the file after modification.</para>
+        /// <para>The updated file name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试文件</para>
+        /// <para>Test file</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

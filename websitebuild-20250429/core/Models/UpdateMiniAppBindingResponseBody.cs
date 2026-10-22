@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public UpdateMiniAppBindingResponseBodyData Data { get; set; }
         public class UpdateMiniAppBindingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operation is successful.</para>
+            /// <para>Indicates whether the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

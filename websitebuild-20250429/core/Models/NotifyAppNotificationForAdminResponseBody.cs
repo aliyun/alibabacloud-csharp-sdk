@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class NotifyAppNotificationForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</para>
+        /// <para>The application name. It must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). It can be up to 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message. This parameter is used to replace the %s placeholder in the ErrMessage error message.</para>
+        /// <para>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The error arguments.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]

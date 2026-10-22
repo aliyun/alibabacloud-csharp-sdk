@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseAuthConfigsForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The details of the permission check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -76,20 +76,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>The configuration value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>cc_rule: HTTP flood protection rule.</para>
-            /// </description></item>
-            /// <item><description><para>ddos_dispatch: DDoS interaction scheduling.</para>
-            /// </description></item>
-            /// <item><description><para>edge_safe: edge application security.</para>
-            /// </description></item>
-            /// <item><description><para>blocked_regions: Location Blacklist.</para>
-            /// </description></item>
-            /// <item><description><para>http_acl_policy: Accurate Access Control.</para>
-            /// </description></item>
-            /// <item><description><para>bot_manager: bot traffic management.</para>
-            /// </description></item>
-            /// <item><description><para>ip_reputation: IP reputation library.</para>
-            /// </description></item>
+            /// <item><description>cc_rule: CC rules.</description></item>
+            /// <item><description>ddos_dispatch: DDoS interaction scheduling.</description></item>
+            /// <item><description>edge_safe: Edge application security.</description></item>
+            /// <item><description>blocked_regions: Location Blacklist.</description></item>
+            /// <item><description>http_acl_policy: Accurate Access Control.</description></item>
+            /// <item><description>bot_manager: Bot traffic management.</description></item>
+            /// <item><description>ip_reputation: IP reputation library.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("Configs")]
@@ -119,7 +112,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System exception</para>
@@ -129,7 +122,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

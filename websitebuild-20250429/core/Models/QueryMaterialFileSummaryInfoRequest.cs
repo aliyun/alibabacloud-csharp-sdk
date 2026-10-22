@@ -32,17 +32,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The file name.</para>
+        /// <para>The name of the file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文件名</para>
+        /// <para>File name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC, DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The file status.</para>
+        /// <para>The file statuses.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
 
         /// <summary>
-        /// <para>The file type.</para>
+        /// <para>The file types.</para>
         /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]

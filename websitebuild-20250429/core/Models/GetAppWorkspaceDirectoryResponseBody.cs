@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppWorkspaceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The response object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

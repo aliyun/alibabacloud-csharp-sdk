@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The replication status.</para>
+        /// <para>The copy status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>copying</para>
         /// </summary>
         [NameInMap("CopyStatus")]
         [Validation(Required=false)]
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The modification time.</para>
+        /// <para>The update time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +73,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12343131221311</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

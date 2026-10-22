@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The design type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Language_Pack</para>
         /// </summary>
         [NameInMap("DesignType")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The design type description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Language pack</para>
         /// </summary>
         [NameInMap("DesignTypeText")]
         [Validation(Required=false)]
@@ -35,6 +41,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The Lingxiao instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lx-1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -62,6 +71,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The service specification description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Basic edition</para>
         /// </summary>
         [NameInMap("ServiceSpecText")]
         [Validation(Required=false)]

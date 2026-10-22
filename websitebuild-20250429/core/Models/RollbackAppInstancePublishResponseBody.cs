@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class RollbackAppInstancePublishResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public RollbackAppInstancePublishResponseBodyModule Module { get; set; }
         public class RollbackAppInstancePublishResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The publish order ID.</para>
+            /// <para>The release order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -112,14 +112,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

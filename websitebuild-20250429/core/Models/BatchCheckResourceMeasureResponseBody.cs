@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public BatchCheckResourceMeasureResponseBodyModule Module { get; set; }
         public class BatchCheckResourceMeasureResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Indicates whether all checks are passed.</para>
+            /// <para>Indicates whether all checks passed.</para>
             /// </summary>
             [NameInMap("AllPassed")]
             [Validation(Required=false)]
             public bool? AllPassed { get; set; }
 
             /// <summary>
-            /// <para>The check results for each resource. The key is the resourceCode.</para>
+            /// <para>The check results for each resource, where the key is the resourceCode.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The root error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>

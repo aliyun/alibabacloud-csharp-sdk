@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>The order module information. This parameter is automatically populated when it is empty.</para>
+        /// <para>The order component information. This parameter is automatically populated if left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;siteversion&quot;:&quot;test&quot;}</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The creation time in ISO 8601 format in the UTC time zone (Z).</para>
+        /// <para>The creation time in ISO 8601 format, in the UTC time zone (Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-30T02:08:40Z</para>
@@ -31,13 +31,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The deletion flag.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Deleted")]
         [Validation(Required=false)]
         public int? Deleted { get; set; }
 
         /// <summary>
-        /// <para>The end time in ISO 8601 format in the UTC time zone (Z).</para>
+        /// <para>The end time in ISO 8601 format, in the UTC time zone (Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-18T02:23:00Z</para>
@@ -48,13 +51,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>esp bizId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>p20202933455</para>
         /// </summary>
         [NameInMap("EspBizId")]
         [Validation(Required=false)]
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>The modification time.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tue Sep 09 10:27:49 CST 2025</para>
@@ -75,6 +81,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The service name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Website design service</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -113,13 +122,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The application identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inst-001</para>
         /// </summary>
         [NameInMap("Slug")]
         [Validation(Required=false)]
         public string Slug { get; set; }
 
         /// <summary>
-        /// <para>The start time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1754447102000</para>
@@ -140,6 +152,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123241414</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

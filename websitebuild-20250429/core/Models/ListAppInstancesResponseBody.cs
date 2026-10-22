@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The app name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? CurrentPageNum { get; set; }
 
         /// <summary>
-        /// <para>The request result.</para>
+        /// <para>The request results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per query.</para>
+        /// <para>The maximum number of results to return for each query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? NextPage { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no next query exists.</para>
+        /// <para>The token that is used to start the next query. This parameter is empty if no subsequent query is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw+qdTi1EjVSWX/INJdYNw==</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+        /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? ResultLimit { get; set; }
 
         /// <summary>
-        /// <para>The root error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -165,10 +165,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The exception message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System exception</para>
+        /// <para>System error</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

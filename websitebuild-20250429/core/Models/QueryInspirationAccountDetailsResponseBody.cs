@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed. Valid values:</para>
+        /// <para>Specifies whether to allow retries. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>false: Retries are not allowed.</description></item>
         /// <item><description>true: Retries are allowed.</description></item>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application. The system queries the application with this name.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AcquisitionTime { get; set; }
 
                 /// <summary>
-                /// <para>The balance, which is calculated by subtracting the used amount from the initial quota (initQuota - used).</para>
+                /// <para>The balance, calculated by subtracting the used amount from the initial quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? Balance { get; set; }
 
                 /// <summary>
-                /// <para>The exact value of the balance. The value is of the String type to support decimal display.</para>
+                /// <para>The exact balance. The value is a string to support the display of decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BalanceStr { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the validity period. The time is in the YYYY-MM-DD HH:mm:ss Z format, where Z is the time zone offset.</para>
+                /// <para>The expiration time of the validity period. The time is in the YYYY-MM-DD HH:mm:ss Z format, where Z represents the time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-04-11 10:26:27 +0800</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EndDate { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the quota has expired (endDate &lt; current time). The frontend displays the item in gray based on this value.</para>
+                /// <para>Indicates whether the quota has expired. A quota is expired if the expiration time is earlier than the current time. The frontend displays expired quotas in gray based on this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? InitQuota { get; set; }
 
                 /// <summary>
-                /// <para>The exact value of the acquired amount. The value is of the String type to support decimal display.</para>
+                /// <para>The exact acquired amount. The value is a string to support the display of decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InitQuotaStr { get; set; }
 
                 /// <summary>
-                /// <para>The code of the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</para>
+                /// <para>The source type code, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MARKET_CLOUD_DREAM</para>
@@ -185,7 +185,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceTypeName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the inspiration credit account.</para>
+                /// <para>The status of the inspiration point account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ACTIVE</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -211,7 +214,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AcquisitionTime { get; set; }
 
                 /// <summary>
-                /// <para>The balance, which is calculated by subtracting the used amount from the initial quota (initQuota - used).</para>
+                /// <para>The balance, calculated by subtracting the used amount from the initial quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -221,7 +224,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? Balance { get; set; }
 
                 /// <summary>
-                /// <para>The exact value of the balance. The value is of the String type to support decimal display.</para>
+                /// <para>The exact balance. The value is a string to support the display of decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -241,7 +244,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EndDate { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the quota has expired (endDate &lt; current time). The frontend displays the item in gray based on this value.</para>
+                /// <para>Indicates whether the quota has expired. A quota is expired if the expiration time is earlier than the current time. The frontend displays expired quotas in gray based on this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
@@ -261,7 +264,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? InitQuota { get; set; }
 
                 /// <summary>
-                /// <para>The exact value of the acquired amount. The value is of the String type to support decimal display.</para>
+                /// <para>The exact acquired amount. The value is a string to support the display of decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123</para>
@@ -271,7 +274,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InitQuotaStr { get; set; }
 
                 /// <summary>
-                /// <para>The code of the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</para>
+                /// <para>The source type code, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MARKET_CLOUD_DREAM</para>
@@ -303,7 +306,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -323,7 +326,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow down the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
@@ -375,7 +378,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System exception</para>
+        /// <para>System error</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

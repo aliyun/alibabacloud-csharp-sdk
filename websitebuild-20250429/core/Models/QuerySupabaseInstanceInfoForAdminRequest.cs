@@ -32,14 +32,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gmtCreated</para>
         /// </summary>
         [NameInMap("OrderColumn")]
         [Validation(Required=false)]
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC, DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>

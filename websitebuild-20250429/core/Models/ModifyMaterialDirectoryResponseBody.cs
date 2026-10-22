@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModifyMaterialDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</para>
+        /// <para>The error code. If the request succeeds, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the folder was modified successfully.</para>
+        /// <para>Indicates whether the update was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -117,10 +117,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The root error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed synchronously.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

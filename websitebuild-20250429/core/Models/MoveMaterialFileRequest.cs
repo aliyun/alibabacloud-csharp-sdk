@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

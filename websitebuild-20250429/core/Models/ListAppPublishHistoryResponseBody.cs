@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <list type="bullet">
         /// <item><description>ABTest: experiment data table</description></item>
         /// <item><description>ExperimentTool: experiment tool table</description></item>
-        /// <item><description>DataDiagnosis: data diagnostics</description></item>
+        /// <item><description>DataDiagnosis: data diagnosis</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Module")]
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>Specifies whether to display the history of applying alert templates to application groups. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: displayed.</description></item>
-            /// <item><description>false: not displayed. Default value.</description></item>
+            /// <item><description>true: Display.</description></item>
+            /// <item><description>false: Do not display. This is the default value.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("History")]
@@ -121,6 +121,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The commit hash of the code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>890243d5977e74d80eebd4734f7b05f626f84cb1</para>
                 /// </summary>
                 [NameInMap("CommitHash")]
                 [Validation(Required=false)]
@@ -138,6 +141,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The code of the current release step.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>INIT</para>
                 /// </summary>
                 [NameInMap("CurrentStepCode")]
                 [Validation(Required=false)]
@@ -175,6 +181,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The code of the release step where the error occurred.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BUILDING</para>
                 /// </summary>
                 [NameInMap("ErrorStepCode")]
                 [Validation(Required=false)]
@@ -190,8 +199,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <summary>
                 /// <para>Indicates whether the resource allocation for the financial unit is successful. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: successful</description></item>
-                /// <item><description>false: failed</description></item>
+                /// <item><description>true: The allocation is successful.</description></item>
+                /// <item><description>false: The allocation fails.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +221,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// <para>The sort order. Valid values: ASC and DESC.</para>
+                /// <para>The sort type. Valid values: ASC and DESC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DESC</para>
@@ -223,6 +232,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The code of the release order type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DEPLOY</para>
                 /// </summary>
                 [NameInMap("OrderTypeCode")]
                 [Validation(Required=false)]
@@ -259,7 +271,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? PublishOrderId { get; set; }
 
                 /// <summary>
-                /// <para>The release time, in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</para>
+                /// <para>The release time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>

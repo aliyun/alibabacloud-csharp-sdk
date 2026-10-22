@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The Client ID of the device for which you want to revoke the access credential.</para>
+        /// <para>The client ID of the device whose access credentials need to be revoked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d566aaf2-7c88-40a4-982f-6abef0be13c9</para>
@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// <para>The user role that the ticket will assume.</para>
+        /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }

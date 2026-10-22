@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:</para>
+        /// <para>Specifies whether to allow retries. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mar</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -110,17 +110,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Specifies whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

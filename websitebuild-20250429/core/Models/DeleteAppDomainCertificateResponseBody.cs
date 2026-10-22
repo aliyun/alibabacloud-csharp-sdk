@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppDomainCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The details of the permission check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</para>
+        /// <para>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic code. This parameter is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public DeleteAppDomainCertificateResponseBodyModule Module { get; set; }
         public class DeleteAppDomainCertificateResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operation is successful.</para>
+            /// <para>Indicates whether the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -110,17 +110,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

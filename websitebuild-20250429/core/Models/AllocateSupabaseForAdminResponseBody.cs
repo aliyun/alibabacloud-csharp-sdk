@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AllocateSupabaseForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the app.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbPublicUrl { get; set; }
 
             /// <summary>
-            /// <para>The database type.</para>
+            /// <para>The type of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ORACLE</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The extra information.</para>
+            /// <para>The additional information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateFinishedTime { get; set; }
 
             /// <summary>
-            /// <para>The instance creation status.</para>
+            /// <para>The creation status of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? IsDeleted { get; set; }
 
             /// <summary>
-            /// <para>The password used to access the ApsaraDB RDS database.</para>
+            /// <para>The access password of the RDS database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ServiceKey { get; set; }
 
             /// <summary>
-            /// <para>The instance status. Valid values:</para>
+            /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: Paused.</description></item>
             /// <item><description>1: Running.</description></item>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabasePublicUrl { get; set; }
 
             /// <summary>
-            /// <para>The tenant ID.</para>
+            /// <para>The ID of the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GFCBAMJH-zh_CN</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The root error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System exception</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Specifies whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

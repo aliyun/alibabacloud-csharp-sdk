@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The SSL certificate name.</para>
+        /// <para>The name of the SSL certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>The certificate type: default free certificate or customer-owned certificate.</para>
+        /// <para>The certificate type. Valid values: default free certificate and customer-owned certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Server</para>

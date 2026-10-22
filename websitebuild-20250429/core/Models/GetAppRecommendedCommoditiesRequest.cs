@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The extended information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The resource filtering conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("ResourceConditions")]
         [Validation(Required=false)]

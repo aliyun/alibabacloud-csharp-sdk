@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppConversationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details of the permission check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retries are allowed.</para>
+        /// <para>Indicates whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The update time in ISO 8601 format in the UTC time zone.</para>
+            /// <para>The update time. The time is in the ISO 8601 format and the UTC time zone (Z).</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SectionId { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</para>
+            /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -214,14 +214,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System error</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request is processed synchronously.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

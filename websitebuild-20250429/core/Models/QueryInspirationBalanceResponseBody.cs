@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application to query.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,7 +50,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter. If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public QueryInspirationBalanceResponseBodyModule Module { get; set; }
         public class QueryInspirationBalanceResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The remaining quota, which is calculated by subtracting totalUsed from totalQuota.</para>
+            /// <para>The remaining quota (totalQuota - totalUsed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? Remaining { get; set; }
 
             /// <summary>
-            /// <para>The string representation of the remaining quota.</para>
+            /// <para>The string format of the remaining quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RemainingStr { get; set; }
 
             /// <summary>
-            /// <para>The total quota, which is the sum of the initQuota values of all valid accounts.</para>
+            /// <para>The total quota (the sum of initQuota of all valid accounts).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
-            /// <para>The string representation of the total quota.</para>
+            /// <para>The string format of the total quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TotalQuotaStr { get; set; }
 
             /// <summary>
-            /// <para>The used quota, which is the sum of the used values of all valid accounts.</para>
+            /// <para>The consumed quota (the sum of used of all valid accounts).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -124,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? TotalUsed { get; set; }
 
             /// <summary>
-            /// <para>The string representation of the used quota.</para>
+            /// <para>The string format of the consumed quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -166,7 +169,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request is processed synchronously.</para>
+        /// <para>Specifies whether the processing is synchronous.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeployChannel { get; set; }
 
         /// <summary>
-        /// <para>The publish number.</para>
+        /// <para>The release number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

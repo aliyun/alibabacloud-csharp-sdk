@@ -22,13 +22,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The environment identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>staging</para>
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort type. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>

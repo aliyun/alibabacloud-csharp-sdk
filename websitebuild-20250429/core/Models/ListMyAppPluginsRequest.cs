@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListMyAppPluginsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters by category.</para>
+        /// <para>The category used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: \&quot;JGHDDLT\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000952447, \&quot;ParentCategoryId\&quot;: 30000952446}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The search keyword that matches name/description.</para>
+        /// <para>The search keyword. The keyword matches the name or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by status.</para>
+        /// <para>The status used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>

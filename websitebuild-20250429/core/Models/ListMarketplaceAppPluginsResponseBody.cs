@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListMarketplaceAppPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
         /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The request result.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <item><description>cloud_efficiency: ultra disk.</description></item>
                 /// <item><description>cloud_ssd: standard SSD.</description></item>
                 /// <item><description>cloud_essd: ESSD.</description></item>
-                /// <item><description>cloud: basic cloud disk.</description></item>
+                /// <item><description>cloud: basic disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -328,11 +328,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the bucket to which the uploaded file belongs is publicly accessible. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>public</b>: The file is uploaded to a public bucket.</description></item>
-                /// <item><description><b>private</b>: The file is uploaded to a private bucket, and authorization is required for access.</description></item>
-                /// </list>
+                /// <para>Indicates whether the bucket to which the uploaded file belongs is publicly accessible. Valid values: <b>public</b> and <b>private</b>. A value of public indicates that the file is uploaded to a public bucket. A value of private indicates that the file is uploaded to a private bucket and requires authorization for access.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PRIVATE</para>
@@ -374,7 +370,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the query result is limited. In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>

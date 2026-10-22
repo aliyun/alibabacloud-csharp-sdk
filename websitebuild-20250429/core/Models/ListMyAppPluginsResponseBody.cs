@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListMyAppPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The name must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</para>
+        /// <para>The application name. The name must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). It can be up to 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ish-intelligence-store-platform-admin-web</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> return parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<ListMyAppPluginsResponseBodyModuleData> Data { get; set; }
             public class ListMyAppPluginsResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The plug-in category.</para>
+                /// <para>The disk specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NormalMultimaster</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The popularity count.</para>
+                /// <para>The popularity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? HotCount { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in icon.</para>
+                /// <para>The plugin description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Icon { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in ID.</para>
+                /// <para>The plugin ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alipay-isv</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PluginId { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in name.</para>
+                /// <para>The plugin name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>transformer</para>
@@ -196,8 +196,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <summary>
                 /// <para>The visibility. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>PUBLIC</b>: public.</description></item>
-                /// <item><description><b>PRIVATE</b>: private.</description></item>
+                /// <item><description><b>PUBLIC</b>: Public.</description></item>
+                /// <item><description><b>PRIVATE</b>: Private.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public ListMyAppPluginsResponseBodyModuleNext Next { get; set; }
             public class ListMyAppPluginsResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>Converts controlType based on the associated public category.</para>
+                /// <para>The controlType converted based on the associated public category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CRAC</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in icon.</para>
+                /// <para>The plugin description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>@lADPDetfgMsFFUvNAkjNAkg</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Icon { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in ID.</para>
+                /// <para>The plugin ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alipay-isv</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PluginId { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in name.</para>
+                /// <para>The plugin name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>trafficControl</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PluginName { get; set; }
 
                 /// <summary>
-                /// <para>The status. Valid values: unknown, init, testing, online.</para>
+                /// <para>The status. Valid values: unknown, init, testing, and online.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Succeeded</para>
@@ -309,8 +309,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <summary>
                 /// <para>The visibility. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>PUBLIC</b>: public.</description></item>
-                /// <item><description><b>PRIVATE</b>: private.</description></item>
+                /// <item><description><b>PUBLIC</b>: Public.</description></item>
+                /// <item><description><b>PRIVATE</b>: Private.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to pagination limits, the server processes a maximum of 1000 recent records for the current query. If the results exceed 1000 entries, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>The result limit. In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -408,14 +408,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System exception.</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
     public class GrantPromotionOfferForPartnerRequest : TeaModel {
         /// <summary>
         /// <para>The activity code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACT202606001</para>
         /// </summary>
         [NameInMap("ActivityCode")]
         [Validation(Required=false)]
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The employee code.</para>
+        /// <para>The employee ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WB02409424</para>

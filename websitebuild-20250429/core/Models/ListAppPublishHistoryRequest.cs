@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The deployment channel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PC</para>
         /// </summary>
         [NameInMap("DeployChannel")]
         [Validation(Required=false)]
@@ -78,6 +81,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The release environment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PROD</para>
         /// </summary>
         [NameInMap("PublishEnv")]
         [Validation(Required=false)]
@@ -105,6 +111,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The release subchannel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>current</para>
         /// </summary>
         [NameInMap("Subchannel")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppPluginRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway plug-in ID.</para>
+        /// <para>The ID of the gateway plugin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliplayer-react</para>

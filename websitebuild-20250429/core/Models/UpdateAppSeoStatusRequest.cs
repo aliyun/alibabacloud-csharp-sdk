@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The security authentication information.</para>
+        /// <para>The authentication information.</para>
+        /// <para>Security authentication information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123</para>
@@ -41,6 +42,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The index status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("SeIndexStatus")]
         [Validation(Required=false)]

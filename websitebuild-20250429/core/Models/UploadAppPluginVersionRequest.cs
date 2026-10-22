@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UploadAppPluginVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The changelog description.</para>
+        /// <para>The changelog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x x x</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Changelog { get; set; }
 
         /// <summary>
-        /// <para>The description. This parameter is optional. If a non-empty value is specified, the description field in the main table is also updated.</para>
+        /// <para>The description. This parameter is optional. If this parameter is not empty, the description field in the primary table is updated accordingly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The downloadable ZIP URL. This parameter is mutually exclusive with OssKey.</para>
+        /// <para>The downloadable URL of the ZIP file. This parameter and OssKey are mutually exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf">https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf</a></para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The extended JSON. This parameter is optional and uses the same format as the sandbox-synced extend field. If a non-empty value is specified, the extend field in the main table is also updated.</para>
+        /// <para>The extended JSON string. This parameter is optional and must be in the same format as the extend parameter synchronized from the sandbox. If this parameter is not empty, the extend field in the primary table is updated accordingly.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;Delivery QA\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
+        /// <para>{&quot;deliveryNodeName&quot;:&quot;Delivery Quality Inspection&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>The OSS key obtained after frontend direct upload. This parameter is mutually exclusive with DownloadUrl.</para>
+        /// <para>The Object Storage Service (OSS) key after the file is directly uploaded from the frontend. This parameter and DownloadUrl are mutually exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>The gateway plug-in ID.</para>
+        /// <para>The ID of the gateway plugin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliplayer-react</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>The new version number in semver format. The version must be greater than the current version.</para>
+        /// <para>The new version number. The version number must follow the Semantic Versioning (SemVer) specification and be greater than the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>

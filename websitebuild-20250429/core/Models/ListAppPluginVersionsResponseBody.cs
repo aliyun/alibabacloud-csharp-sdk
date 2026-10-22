@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPluginVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The application with this name is queried.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. Currently not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The query results.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Valid values: unknown, init, testing, online.</para>
+                /// <para>The status. Valid values: unknown, init, testing, and online.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Succeeded</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>Apart from pagination limits, the server processes a maximum of 1000 recent records for the current query. If the results exceed 1000 records, <b>ResultLimit</b> is <b>true</b>, and you need to narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System exception.</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

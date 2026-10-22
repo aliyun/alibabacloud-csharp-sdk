@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppConversationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The application with this name is queried.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -60,15 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The error arguments.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return for a single query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -85,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public ListAppConversationsResponseBodyModule Module { get; set; }
         public class ListAppConversationsResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The request result.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -132,7 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ConversationId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time in ISO 8601 format with a time zone offset.</para>
+                /// <para>The creation time in ISO 8601 format, including the time zone offset.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -143,7 +142,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The modification time in ISO 8601 format with the UTC (Z) time zone.</para>
+                /// <para>The update time in ISO 8601 format. The time zone is UTC (Z).</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -184,7 +183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteId { get; set; }
 
                 /// <summary>
-                /// <para>The current viewpoint, equivalent to the news title.</para>
+                /// <para>The current viewpoint, which is equivalent to the news title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Sometimes When We Touch</para>
@@ -226,7 +225,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The resource count that matches the conditional filter criteria.</para>
+            /// <para>The resource count that meets the conditional filters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -238,7 +237,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token that is used to start the next query. If no next query is available, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>

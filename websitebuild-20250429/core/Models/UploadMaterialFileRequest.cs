@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestFile</para>
+        /// <para>Test file</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The OSS object key.</para>
+        /// <para>The key of the OSS object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</para>

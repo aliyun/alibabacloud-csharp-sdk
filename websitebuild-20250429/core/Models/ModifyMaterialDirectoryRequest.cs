@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The ID of the folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the folder.</para>
+        /// <para>The updated name of the folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>视频管理</para>
+        /// <para>Video management</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

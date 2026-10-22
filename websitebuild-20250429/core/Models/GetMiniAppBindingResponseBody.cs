@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ProductionQrCodeUrl { get; set; }
 
             /// <summary>
-            /// <para>The extension information.</para>
+            /// <para>The extended information.</para>
             /// </summary>
             [NameInMap("SettingValues")]
             [Validation(Required=false)]

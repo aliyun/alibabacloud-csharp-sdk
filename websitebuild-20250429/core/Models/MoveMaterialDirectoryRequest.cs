@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The parent folder ID after the move.</para>
+        /// <para>The ID of the target parent folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ParentDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The sort number.</para>
+        /// <para>The sort order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

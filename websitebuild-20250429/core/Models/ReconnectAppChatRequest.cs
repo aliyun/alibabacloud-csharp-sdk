@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The last event ID.</para>
+        /// <para>The ID of the last event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("LastEventId")]
         [Validation(Required=false)]
@@ -38,6 +41,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The creation time of the latest message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-08-28 10:25:41</para>
         /// </summary>
         [NameInMap("LatestMessageCreateTime")]
         [Validation(Required=false)]

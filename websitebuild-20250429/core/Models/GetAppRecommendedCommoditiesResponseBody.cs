@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,10 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message returned by <b>ErrMessage</b>.</para>
-        /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
-        /// </remarks>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter. If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -70,13 +67,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The data table module.</para>
+        /// <para>The data table module. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ABTest: experiment data table</para>
+        /// <item><description><para>ABTest: Experiment data table.</para>
         /// </description></item>
-        /// <item><description><para>ExperimentTool: experiment tool table</para>
+        /// <item><description><para>ExperimentTool: Experiment tool table.</para>
         /// </description></item>
-        /// <item><description><para>DataDiagnosis: data diagnosis</para>
+        /// <item><description><para>DataDiagnosis: Data diagnosis.</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -92,7 +89,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<GetAppRecommendedCommoditiesResponseBodyModuleCommodities> Commodities { get; set; }
             public class GetAppRecommendedCommoditiesResponseBodyModuleCommodities : TeaModel {
                 /// <summary>
-                /// <para>The click action type. Valid values: CONSULT (add WeCom), BUY (purchase), and AUTO (automatic issuance).</para>
+                /// <para>The click action type. Valid values: CONSULT, BUY, and AUTO.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CONSULT</para>
@@ -113,6 +110,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The display description of the recommendation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Add a WeCom consultant to receive inspiration points for free</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public Dictionary<string, string> Extend { get; set; }
 
                 /// <summary>
-                /// <para>The order type. Valid values: BUY (purchase) and UPGRADE (upgrade).</para>
+                /// <para>The order type. Valid values: BUY and UPGRADE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DESC</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PromotionCommodityId { get; set; }
 
                 /// <summary>
-                /// <para>The recommendation type. Valid values: COMMODITY (commodity recommendation) and ACTIVITY (promotion activity recommendation).</para>
+                /// <para>The recommendation type. Valid values: COMMODITY and ACTIVITY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>COMMODITY</para>
@@ -187,6 +187,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The display title of the recommendation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Add a consultant as a friend to receive an extra 1,000 inspiration points</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]

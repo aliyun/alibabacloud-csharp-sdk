@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the application process. This parameter is optional. Default value: false.</para>
+        /// <para>Specifies whether to restart the application process. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

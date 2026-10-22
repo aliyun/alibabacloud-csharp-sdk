@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationConsumeRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. The time is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1762999521</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC, DESC.</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the scenario.</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Skylark-Personnel Authentication</para>
+        /// <para>Bailingniao-Personnel Authentication</para>
         /// </summary>
         [NameInMap("SceneName")]
         [Validation(Required=false)]
         public string SceneName { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time is in ISO 8601 format and the time zone is UTC (Z).</para>
+        /// <para>The start time of the query. The time is in ISO 8601 format and uses the UTC time zone (Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-19T16:00:00Z</para>

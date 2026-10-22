@@ -31,13 +31,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The notification content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;:&quot;UPDATE&quot;,&quot;record&quot;:{&quot;name&quot;:&quot;new&quot;,&quot;contact&quot;:null},&quot;old_record&quot;:{&quot;name&quot;:&quot;old&quot;}}</para>
         /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public string Payload { get; set; }
 
         /// <summary>
-        /// <para>The scene ID.</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8c909373-6c33-41a7-aa38-3650e288a63e</para>

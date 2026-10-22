@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPluginVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number. The value must be an integer greater than 0. Default value: 1.</para>
+        /// <para>The page number. Valid values: integers greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The gateway plug-in ID.</para>
+        /// <para>The ID of the gateway plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>

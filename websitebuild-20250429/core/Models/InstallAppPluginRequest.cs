@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class InstallAppPluginRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway plug-in ID.</para>
+        /// <para>The ID of the gateway plugin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>The locked version. Leave empty to follow the latest version.</para>
+        /// <para>The locked version. If left empty, the latest version is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.7</para>

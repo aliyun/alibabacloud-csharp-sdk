@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAIStaffChatMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the app.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore it.</para>
+        /// <para>The dynamic message. This parameter is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -74,8 +74,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public ListAIStaffChatMessagesResponseBodyModule Module { get; set; }
         public class ListAIStaffChatMessagesResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The sender type.</para>
-            /// <para>Valid values:</para>
+            /// <para>The sender type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ADMIN</b>: System.</description></item>
             /// <item><description><b>CUSTOMER</b>: Visitor.</description></item>
@@ -117,7 +116,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ChatStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data API operation that is called.</para>
+                /// <para>The ID of the invoked data API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>domain cnamen<a href="http://www.buyhao8.com">www.buyhao8.com</a> <a href="http://www.buyhao8.com.a1.initrr.comn">www.buyhao8.com.a1.initrr.comn</a></para>
@@ -157,7 +156,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1591339051000</para>
@@ -177,7 +176,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>The business extension metadata in Map format. The value must be a JSON string.</para>
+                /// <para>The business extension metadata. The value must be a JSON string in map format.</para>
                 /// </summary>
                 [NameInMap("MetaData")]
                 [Validation(Required=false)]
@@ -194,7 +193,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// </description></item>
                 /// <item><description><para>function: Function.</para>
                 /// </description></item>
-                /// <item><description><para>plugin: Plugin.</para>
+                /// <item><description><para>plugin: Plug-in.</para>
                 /// </description></item>
                 /// <item><description><para>tool: Tool.</para>
                 /// </description></item>
@@ -265,7 +264,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System error</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

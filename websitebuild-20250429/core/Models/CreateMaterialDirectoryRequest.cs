@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>图片管理</para>
+        /// <para>Image management</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

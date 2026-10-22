@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPublishStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -95,6 +95,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The code of the current publish step.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>INIT</para>
             /// </summary>
             [NameInMap("CurrentStepCode")]
             [Validation(Required=false)]
@@ -132,6 +135,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The code of the publish step where the error occurred.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BUILDING</para>
             /// </summary>
             [NameInMap("ErrorStepCode")]
             [Validation(Required=false)]
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The sort order.</para>
+            /// <para>The sort type, such as ASC or DESC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DESC</para>
@@ -182,13 +188,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The code of the publish order type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DEPLOY</para>
             /// </summary>
             [NameInMap("OrderTypeCode")]
             [Validation(Required=false)]
             public string OrderTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The task completion percentage.</para>
+            /// <para>The completion percentage of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

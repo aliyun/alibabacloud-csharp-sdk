@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public long? MaxFileSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per query.</para>
+        /// <para>The maximum number of entries to return for a single request.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The website name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token that is used to start the next query. If no next query is available, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string StatusListShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of file suffixes.</para>
+        /// <para>The list of file extensions.</para>
         /// </summary>
         [NameInMap("SuffixList")]
         [Validation(Required=false)]

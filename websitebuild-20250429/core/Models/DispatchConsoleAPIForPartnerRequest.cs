@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DispatchConsoleAPIForPartnerRequest : TeaModel {
         /// <summary>
+        /// <para>The access token obtained by calling GetUserAccessTokenForPartner.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LiveToken")]
@@ -17,13 +18,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string LiveToken { get; set; }
 
         /// <summary>
-        /// <para>The operation to perform on the alert. Valid values:</para>
+        /// <para>Specifies the operation to perform on the alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>deal</b>: handles the alert (quarantine).</description></item>
-        /// <item><description><b>ignore</b>: ignores the alert.</description></item>
-        /// <item><description><b>mark_mis_info</b>: marks the alert as a false positive (adds it to the whitelist).</description></item>
-        /// <item><description><b>rm_mark_mis_info</b>: unmarks the alert as a false positive (removes it from the whitelist).</description></item>
-        /// <item><description><b>offline_handled</b>: marks the alert as handled.</description></item>
+        /// <item><description><b>deal</b>: Handles the alert (quarantine).</description></item>
+        /// <item><description><b>ignore</b>: Ignores the alert.</description></item>
+        /// <item><description><b>mark_mis_info</b>: Marks the alert as a false positive (adds to the whitelist).</description></item>
+        /// <item><description><b>rm_mark_mis_info</b>: Unmarks the alert as a false positive (removes from the whitelist).</description></item>
+        /// <item><description><b>offline_handled</b>: Marks the alert as handled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,6 +56,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string Product { get; set; }
 
+        /// <summary>
+        /// <para>The website domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abcd.scd.wanwang.xin</para>
+        /// </summary>
         [NameInMap("SiteHost")]
         [Validation(Required=false)]
         public string SiteHost { get; set; }
