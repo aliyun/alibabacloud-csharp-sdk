@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query.</para>
+        /// <para>The time follows the ISO 8601 standard and is in the UTC time zone (format: YYYY-MM-DDTHH:mmZ).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
+        /// <para>The start time of the query. The time is in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

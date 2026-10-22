@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The initial model capacity of the instance. The value must be a positive integer. A capacity unit of 1000 is equivalent to one L20N equivalent card.</para>
+        /// <para>The initial model capacity of the instance. The value must be a positive integer. A capacity unit of 1000 is equivalent to one L20N card.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4000</para>
@@ -61,6 +61,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? Capacity { get; set; }
 
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the token on the client side. Ensure that the token is unique across different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -239,10 +245,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>If the billing method is <b>Prepaid</b>, you must pass parameter. Specifies the upfront cluster as yearly or monthly. Valid values: </para>
+        /// <para>This parameter is required when the <b>PayType</b> parameter is set to <b>Prepaid</b>. Specifies the billing cycle of the subscription cluster. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: yearly. The unit is year.</description></item>
-        /// <item><description><b>Month</b>: monthly. The unit is month.</description></item>
+        /// <item><description><b>Year</b>: yearly subscription.</description></item>
+        /// <item><description><b>Month</b>: monthly subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -341,10 +347,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required when the billing method is set to <b>Prepaid</b>.</para>
+        /// <para>The subscription duration. This parameter is required when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the value of <b>UsedTime</b> is an integer ranging from <c>1</c> to <c>9</c>.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the value of <b>UsedTime</b> is an integer ranging from <c>1</c> to <c>3</c>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of <b>UsedTime</b> must be an integer in the range of <c>[1-9]</c>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of <b>UsedTime</b> must be an integer in the range of <c>[1-3]</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -355,7 +361,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

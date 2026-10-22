@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBudgetPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</para>
+        /// <para>The ID of the dimension object. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-p3gk2oh55c**</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetDimensionRefId { get; set; }
 
         /// <summary>
-        /// <para>The policy type. Valid values:</para>
+        /// <para>The type of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ConsumerGroup</b>: total budget for a user group</description></item>
-        /// <item><description><b>Consumer</b>: total budget for a user</description></item>
+        /// <item><description><b>ConsumerGroup</b>: Total budget for consumer groups.</description></item>
+        /// <item><description><b>Consumer</b>: Total budget for consumers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetDimensionType { get; set; }
 
         /// <summary>
-        /// <para>The budget policy ID.</para>
+        /// <para>The ID of the budget policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>023aacc1effc4b56bb154bfbec6baxxx</para>
@@ -90,15 +90,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the object associated with the scope of the budget policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-group</para>
+        /// </summary>
         [NameInMap("ScopeRefName")]
         [Validation(Required=false)]
         public string ScopeRefName { get; set; }
 
         /// <summary>
-        /// <para>The policy status. Valid values:</para>
+        /// <para>The status of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: enabled</description></item>
-        /// <item><description><b>Disenabled</b>: disabled</description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disenabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

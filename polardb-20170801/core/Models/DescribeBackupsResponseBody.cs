@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,8 +120,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>Only PSL4 and PSL5 storage types are supported.</description></item>
-        /// <item><description>Only clusters with the level-2 backup feature enabled are supported.</description></item>
-        /// <item><description>If this parameter is not returned, the level-2 backup size is 0.</description></item>
+        /// <item><description>Only clusters that have the level-2 backup feature enabled are supported.</description></item>
+        /// <item><description>If this parameter is not returned, the size of level-2 backups is 0.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TotalLevel2BackupSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

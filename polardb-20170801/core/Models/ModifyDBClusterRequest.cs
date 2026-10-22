@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The connection resource quota of the AgenticDB cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("ConnectionResourceQuota")]
         [Validation(Required=false)]

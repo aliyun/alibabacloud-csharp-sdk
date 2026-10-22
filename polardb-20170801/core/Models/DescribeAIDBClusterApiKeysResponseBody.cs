@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>API Keys。</para>
+        /// <para>The API keys.</para>
         /// </summary>
         [NameInMap("ApiKeys")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The creation time.</para>
-            /// <para>The time is displayed in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-09T03:19:19Z</para>
@@ -69,10 +69,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        /// <summary>
+        /// <para>The current page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }

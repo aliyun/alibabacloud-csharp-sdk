@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAgenticDBProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The ID of the AgenticDB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The default branch name. Default value: main.</para>
+        /// <para>The name of the default branch. Default value: main.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -41,7 +41,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project name. The name must be unique within the same tenant.</para>
+        /// <para>The retention period for historical data to support creating branches at specific points in time. Default value: 604800 seconds (7 days). Valid values: 3600 to 2592000 seconds (1 hour to 30 days), inclusive. The actual range is subject to the service configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>604800</para>
+        /// </summary>
+        [NameInMap("HistoryRetentionSeconds")]
+        [Validation(Required=false)]
+        public long? HistoryRetentionSeconds { get; set; }
+
+        /// <summary>
+        /// <para>The name of the project. The name must be unique within the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +73,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the project belongs.</para>
+        /// <para>The ID of the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

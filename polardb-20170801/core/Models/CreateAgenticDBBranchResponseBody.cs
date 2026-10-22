@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParentBranchName { get; set; }
 
         /// <summary>
+        /// <para>创建分支时指定的父分支历史时间，采用 UTC RFC3339 格式。未指定历史时间或旧记录可能为空。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-10-15T07:32:00.123456Z</para>
+        /// </summary>
+        [NameInMap("ParentTimestamp")]
+        [Validation(Required=false)]
+        public string ParentTimestamp { get; set; }
+
+        /// <summary>
         /// <para>The ID of the project to which the branch belongs.</para>
         /// 
         /// <b>Example:</b>

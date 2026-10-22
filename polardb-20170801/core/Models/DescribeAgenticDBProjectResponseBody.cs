@@ -51,6 +51,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>项目最近记录的保留时长，旧项目可能为空。查询当前生效值请调用 DescribeAgenticDBProjectHistoryRetention。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>604800</para>
+        /// </summary>
+        [NameInMap("HistoryRetentionSeconds")]
+        [Validation(Required=false)]
+        public long? HistoryRetentionSeconds { get; set; }
+
+        /// <summary>
         /// <para>Project ID</para>
         /// 
         /// <b>Example:</b>

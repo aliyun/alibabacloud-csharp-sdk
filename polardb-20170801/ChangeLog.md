@@ -1,3 +1,19 @@
+2026-10-22 Version: 9.1.0
+- Support API CreateAgenticDBTenant.
+- Support API DeleteAgenticDBTenant.
+- Support API DescribeAgenticDBBranchRestoreWindow.
+- Support API DescribeAgenticDBProjectHistoryRetention.
+- Support API ModifyAgenticDBProjectHistoryRetention.
+- Update API CreateAgenticDBBranch: add request parameters ParentTimestamp.
+- Update API CreateAgenticDBBranch: add response parameters Body.ParentTimestamp.
+- Update API CreateAgenticDBProject: add request parameters HistoryRetentionSeconds.
+- Update API CreateAgenticDBProject: add response parameters Body.HistoryRetentionSeconds.
+- Update API DescribeAgenticDBBranch: add response parameters Body.ParentTimestamp.
+- Update API DescribeAgenticDBBranches: add response parameters Body.Items.$.ParentTimestamp.
+- Update API DescribeAgenticDBProject: add response parameters Body.HistoryRetentionSeconds.
+- Update API DescribeAgenticDBProjects: add response parameters Body.Items.$.HistoryRetentionSeconds.
+
+
 2026-10-21 Version: 9.0.2
 - Update API CreateApplication: add request parameters MemApplicationSpec.PolarAIEmbedderInstanceId.
 - Update API CreateApplication: add request parameters MemApplicationSpec.PolarAIGraphLlmInstanceId.

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAgenticDBComputeClustersResponseBodyItems> Items { get; set; }
         public class DescribeAgenticDBComputeClustersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the associated branch.</para>
+            /// <para>The associated branch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-7g8h9i0j1k2l</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BranchId { get; set; }
 
             /// <summary>
-            /// <para>The name of the associated branch.</para>
+            /// <para>The associated branch name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>feature-analytics</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComputeClusterId { get; set; }
 
             /// <summary>
-            /// <para>The number of compute nodes. The value is fixed to 1 in the first phase.</para>
+            /// <para>The number of compute nodes (fixed to 1 in the first phase).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,8 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? ComputeNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the compute instance was created.</para>
-            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The creation time. The time is in ISO 8601 format and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T11:00:00Z</para>
@@ -68,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the compute instance.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Compute cluster for analytics</para>
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the compute instance is the default branch.</para>
+            /// <para>Indicates whether it is the default branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -88,7 +87,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsDefaultBranch { get; set; }
 
             /// <summary>
-            /// <para>The time when the compute instance was last activated.</para>
+            /// <para>The last activation time.
+            /// The time is in ISO 8601 format and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T12:30:00Z</para>
@@ -128,21 +128,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string OperatorType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent branch. This value is an empty string for the root branch.</para>
+            /// <para>The parent branch ID. An empty string indicates the root branch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>br-1a2b3c4d5e6f</para>
             /// </summary>
             [NameInMap("ParentBranchId")]
             [Validation(Required=false)]
             public string ParentBranchId { get; set; }
 
             /// <summary>
-            /// <para>The name of the parent branch. This value is an empty string for the root branch.</para>
+            /// <para>The parent branch name. An empty string indicates the root branch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>main</para>
             /// </summary>
             [NameInMap("ParentBranchName")]
             [Validation(Required=false)]
             public string ParentBranchName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated project.</para>
+            /// <para>The associated project ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>proj-a1b2c3d4e5f6</para>
@@ -152,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The name of the associated project.</para>
+            /// <para>The associated project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>analytics-prod</para>
@@ -162,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The status of the compute instance.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -172,7 +178,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The amount of data used, in bytes.</para>
+            /// <para>The used data volume (in bytes).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1073741824</para>
@@ -182,7 +188,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? StorageSize { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated tenant.</para>
+            /// <para>The associated tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-4b83e0da66674951</para>
@@ -192,7 +198,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The name of the associated tenant.</para>
+            /// <para>The associated tenant name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-saas-app</para>
@@ -234,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

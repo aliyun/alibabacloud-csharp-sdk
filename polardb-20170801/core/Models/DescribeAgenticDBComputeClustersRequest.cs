@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBComputeClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The compute instance ID for fuzzy match (pc-xxxx), such as pc-2ze8k.</para>
+        /// <para>The compute instance ID for fuzzy matching (pc-xxxx), such as pc-2ze8k.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze8k</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Filters compute instances by status. Valid values: Running, Stopped, and Waiting.</para>
+        /// <para>The status filter. Valid values: Running, Stopped, and Waiting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>

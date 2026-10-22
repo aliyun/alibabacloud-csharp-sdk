@@ -7018,6 +7018,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ParentBranchId"] = request.ParentBranchId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentTimestamp))
+            {
+                query["ParentTimestamp"] = request.ParentTimestamp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
@@ -7083,6 +7087,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentBranchId))
             {
                 query["ParentBranchId"] = request.ParentBranchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentTimestamp))
+            {
+                query["ParentTimestamp"] = request.ParentTimestamp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -7182,6 +7190,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryRetentionSeconds))
+            {
+                query["HistoryRetentionSeconds"] = request.HistoryRetentionSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
@@ -7243,6 +7255,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryRetentionSeconds))
+            {
+                query["HistoryRetentionSeconds"] = request.HistoryRetentionSeconds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -7309,6 +7325,170 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAgenticDBProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an independent business tenant without creating an API key.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticDBTenantRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticDBTenantResponse
+        /// </returns>
+        public CreateAgenticDBTenantResponse CreateAgenticDBTenantWithOptions(CreateAgenticDBTenantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantName))
+            {
+                query["TenantName"] = request.TenantName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgenticDBTenant",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgenticDBTenantResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an independent business tenant without creating an API key.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticDBTenantRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticDBTenantResponse
+        /// </returns>
+        public async Task<CreateAgenticDBTenantResponse> CreateAgenticDBTenantWithOptionsAsync(CreateAgenticDBTenantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantName))
+            {
+                query["TenantName"] = request.TenantName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgenticDBTenant",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgenticDBTenantResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an independent business tenant without creating an API key.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticDBTenantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticDBTenantResponse
+        /// </returns>
+        public CreateAgenticDBTenantResponse CreateAgenticDBTenant(CreateAgenticDBTenantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgenticDBTenantWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an independent business tenant without creating an API key.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticDBTenantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticDBTenantResponse
+        /// </returns>
+        public async Task<CreateAgenticDBTenantResponse> CreateAgenticDBTenantAsync(CreateAgenticDBTenantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgenticDBTenantWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8428,9 +8608,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> appears, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -8505,9 +8685,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> appears, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -8582,9 +8762,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> appears, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -8611,9 +8791,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> appears, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -19145,6 +19325,162 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDBTenantRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDBTenantResponse
+        /// </returns>
+        public DeleteAgenticDBTenantResponse DeleteAgenticDBTenantWithOptions(DeleteAgenticDBTenantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticDBTenant",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticDBTenantResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDBTenantRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDBTenantResponse
+        /// </returns>
+        public async Task<DeleteAgenticDBTenantResponse> DeleteAgenticDBTenantWithOptionsAsync(DeleteAgenticDBTenantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticDBTenant",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticDBTenantResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDBTenantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDBTenantResponse
+        /// </returns>
+        public DeleteAgenticDBTenantResponse DeleteAgenticDBTenant(DeleteAgenticDBTenantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgenticDBTenantWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an AgenticDB tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDBTenantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDBTenantResponse
+        /// </returns>
+        public async Task<DeleteAgenticDBTenantResponse> DeleteAgenticDBTenantAsync(DeleteAgenticDBTenantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgenticDBTenantWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an API key of an AgenticDB tenant.</para>
         /// </summary>
         /// 
@@ -26173,7 +26509,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API key of a model service.</para>
+        /// <para>Queries the API keys for the model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26219,7 +26555,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API key of a model service.</para>
+        /// <para>Queries the API keys for the model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26265,7 +26601,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API key of a model service.</para>
+        /// <para>Queries the API keys for the model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26283,7 +26619,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API key of a model service.</para>
+        /// <para>Queries the API keys for the model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27361,15 +27697,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
-        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
+        /// <item><description>This operation allows you to filter and retrieve a list of model operators by using the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Make sure that the <c>RelativeDBClusterId</c> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27444,15 +27780,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
-        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
+        /// <item><description>This operation allows you to filter and retrieve a list of model operators by using the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Make sure that the <c>RelativeDBClusterId</c> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27527,15 +27863,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
-        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
+        /// <item><description>This operation allows you to filter and retrieve a list of model operators by using the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Make sure that the <c>RelativeDBClusterId</c> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27554,15 +27890,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
-        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
+        /// <item><description>This operation allows you to filter and retrieve a list of model operators by using the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Make sure that the <c>RelativeDBClusterId</c> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29509,6 +29845,158 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询 AgenticDB 分支最早可恢复时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBBranchRestoreWindowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBBranchRestoreWindowResponse
+        /// </returns>
+        public DescribeAgenticDBBranchRestoreWindowResponse DescribeAgenticDBBranchRestoreWindowWithOptions(DescribeAgenticDBBranchRestoreWindowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticDBBranchRestoreWindow",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticDBBranchRestoreWindowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AgenticDB 分支最早可恢复时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBBranchRestoreWindowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBBranchRestoreWindowResponse
+        /// </returns>
+        public async Task<DescribeAgenticDBBranchRestoreWindowResponse> DescribeAgenticDBBranchRestoreWindowWithOptionsAsync(DescribeAgenticDBBranchRestoreWindowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticDBBranchRestoreWindow",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticDBBranchRestoreWindowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AgenticDB 分支最早可恢复时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBBranchRestoreWindowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBBranchRestoreWindowResponse
+        /// </returns>
+        public DescribeAgenticDBBranchRestoreWindowResponse DescribeAgenticDBBranchRestoreWindow(DescribeAgenticDBBranchRestoreWindowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAgenticDBBranchRestoreWindowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AgenticDB 分支最早可恢复时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBBranchRestoreWindowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBBranchRestoreWindowResponse
+        /// </returns>
+        public async Task<DescribeAgenticDBBranchRestoreWindowResponse> DescribeAgenticDBBranchRestoreWindowAsync(DescribeAgenticDBBranchRestoreWindowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAgenticDBBranchRestoreWindowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of AgenticDB branches.</para>
         /// </summary>
         /// 
@@ -29921,7 +30409,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB compute instances.</para>
+        /// <para>Queries a list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29983,7 +30471,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB compute instances.</para>
+        /// <para>Queries a list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30045,7 +30533,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB compute instances.</para>
+        /// <para>Queries a list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30063,7 +30551,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB compute instances.</para>
+        /// <para>Queries a list of AgenticDB compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30225,7 +30713,151 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB projects.</para>
+        /// <para>查询 AgenticDB 项目实际历史保留窗口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public DescribeAgenticDBProjectHistoryRetentionResponse DescribeAgenticDBProjectHistoryRetentionWithOptions(DescribeAgenticDBProjectHistoryRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticDBProjectHistoryRetention",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticDBProjectHistoryRetentionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AgenticDB 项目实际历史保留窗口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public async Task<DescribeAgenticDBProjectHistoryRetentionResponse> DescribeAgenticDBProjectHistoryRetentionWithOptionsAsync(DescribeAgenticDBProjectHistoryRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgenticDBProjectHistoryRetention",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgenticDBProjectHistoryRetentionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AgenticDB 项目实际历史保留窗口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public DescribeAgenticDBProjectHistoryRetentionResponse DescribeAgenticDBProjectHistoryRetention(DescribeAgenticDBProjectHistoryRetentionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAgenticDBProjectHistoryRetentionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AgenticDB 项目实际历史保留窗口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public async Task<DescribeAgenticDBProjectHistoryRetentionResponse> DescribeAgenticDBProjectHistoryRetentionAsync(DescribeAgenticDBProjectHistoryRetentionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAgenticDBProjectHistoryRetentionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30291,7 +30923,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB projects.</para>
+        /// <para>Queries a list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30357,7 +30989,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB projects.</para>
+        /// <para>Queries a list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30375,7 +31007,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgenticDB projects.</para>
+        /// <para>Queries a list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30545,7 +31177,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified API key.</para>
+        /// <para>Queries the details of the API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30599,7 +31231,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified API key.</para>
+        /// <para>Queries the details of the API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30653,7 +31285,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified API key.</para>
+        /// <para>Queries the details of the API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30671,7 +31303,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified API key.</para>
+        /// <para>Queries the details of the API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30694,7 +31326,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30741,7 +31373,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30788,7 +31420,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30811,7 +31443,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32109,7 +32741,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves a list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32175,7 +32807,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves a list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32241,7 +32873,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves a list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32259,7 +32891,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves a list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32757,7 +33389,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup logs and returns their download URLs.</para>
+        /// <para>Queries the list of backup logs and retrieves their download URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32835,7 +33467,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup logs and returns their download URLs.</para>
+        /// <para>Queries the list of backup logs and retrieves their download URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32913,7 +33545,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup logs and returns their download URLs.</para>
+        /// <para>Queries the list of backup logs and retrieves their download URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32931,7 +33563,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup logs and returns their download URLs.</para>
+        /// <para>Queries the list of backup logs and retrieves their download URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33637,7 +34269,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a batch task.</para>
+        /// <para>Queries the status details of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33679,7 +34311,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a batch task.</para>
+        /// <para>Queries the status details of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33721,7 +34353,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a batch task.</para>
+        /// <para>Queries the status details of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33739,7 +34371,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a batch task.</para>
+        /// <para>Queries the status details of a batch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33929,7 +34561,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cost budget policies.</para>
+        /// <para>Queries budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34003,7 +34635,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cost budget policies.</para>
+        /// <para>Queries budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34077,7 +34709,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cost budget policies.</para>
+        /// <para>Queries budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34095,7 +34727,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cost budget policies.</para>
+        /// <para>Queries budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34457,7 +35089,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cold storage instances.</para>
+        /// <para>Queries cold storage instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34555,7 +35187,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cold storage instances.</para>
+        /// <para>Queries cold storage instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34653,7 +35285,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cold storage instances.</para>
+        /// <para>Queries cold storage instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34671,7 +35303,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cold storage instances.</para>
+        /// <para>Queries cold storage instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34841,7 +35473,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumers.</para>
+        /// <para>Queries a list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34911,7 +35543,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumers.</para>
+        /// <para>Queries a list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34981,7 +35613,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumers.</para>
+        /// <para>Queries a list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34999,7 +35631,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumers.</para>
+        /// <para>Queries a list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39353,7 +39985,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
+        /// <para>Queries a list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39475,7 +40107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
+        /// <para>Queries a list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39597,7 +40229,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
+        /// <para>Queries a list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39615,7 +40247,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
+        /// <para>Queries a list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42217,7 +42849,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an PolarDB on ENS cluster.</para>
+        /// <para>Queries the details of an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42279,7 +42911,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an PolarDB on ENS cluster.</para>
+        /// <para>Queries the details of an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42341,7 +42973,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an PolarDB on ENS cluster.</para>
+        /// <para>Queries the details of an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42359,7 +42991,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an PolarDB on ENS cluster.</para>
+        /// <para>Queries the details of an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42905,7 +43537,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of extensions.</para>
+        /// <para>Queries plugin details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42971,7 +43603,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of extensions.</para>
+        /// <para>Queries plugin details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43037,7 +43669,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of extensions.</para>
+        /// <para>Queries plugin details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43055,7 +43687,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of extensions.</para>
+        /// <para>Queries plugin details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62565,6 +63197,158 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyActiveOperationTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the history retention window of an AgenticDB project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public ModifyAgenticDBProjectHistoryRetentionResponse ModifyAgenticDBProjectHistoryRetentionWithOptions(ModifyAgenticDBProjectHistoryRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryRetentionSeconds))
+            {
+                query["HistoryRetentionSeconds"] = request.HistoryRetentionSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgenticDBProjectHistoryRetention",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgenticDBProjectHistoryRetentionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the history retention window of an AgenticDB project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public async Task<ModifyAgenticDBProjectHistoryRetentionResponse> ModifyAgenticDBProjectHistoryRetentionWithOptionsAsync(ModifyAgenticDBProjectHistoryRetentionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryRetentionSeconds))
+            {
+                query["HistoryRetentionSeconds"] = request.HistoryRetentionSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgenticDBProjectHistoryRetention",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgenticDBProjectHistoryRetentionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the history retention window of an AgenticDB project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public ModifyAgenticDBProjectHistoryRetentionResponse ModifyAgenticDBProjectHistoryRetention(ModifyAgenticDBProjectHistoryRetentionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAgenticDBProjectHistoryRetentionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the history retention window of an AgenticDB project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAgenticDBProjectHistoryRetentionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgenticDBProjectHistoryRetentionResponse
+        /// </returns>
+        public async Task<ModifyAgenticDBProjectHistoryRetentionResponse> ModifyAgenticDBProjectHistoryRetentionAsync(ModifyAgenticDBProjectHistoryRetentionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAgenticDBProjectHistoryRetentionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

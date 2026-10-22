@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The generated order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2148126708*****</para>

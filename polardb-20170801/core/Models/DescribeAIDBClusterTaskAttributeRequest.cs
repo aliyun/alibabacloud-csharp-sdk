@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The query mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RelatedAITask</b>: queries task details.</description></item>
+        /// <item><description><b>RelatedAITask</b>: queries task details</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

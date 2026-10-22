@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class SearchMemoriesResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public string Page { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
@@ -118,10 +126,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public string Total { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]
         public string TotalPages { get; set; }

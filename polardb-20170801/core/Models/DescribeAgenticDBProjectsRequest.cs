@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The project ID for exact match.</para>
+        /// <para>The project ID used for exact matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proj-a1b2c3d4e5f6</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The project name for fuzzy match.</para>
+        /// <para>The project name used for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>analytics</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the project belongs.</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>

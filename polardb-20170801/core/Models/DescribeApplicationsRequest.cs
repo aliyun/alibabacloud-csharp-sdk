@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of application IDs. If specified, only the information of these applications is returned.</para>
+        /// <para>The list of application IDs. If specified, only the information about these applications is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The application engine filter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>polardb_polarclaw</para>
         /// </summary>
         [NameInMap("ApplicationTypes")]
         [Validation(Required=false)]

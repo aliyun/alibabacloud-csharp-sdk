@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The query mode for the list. A value of Simple indicates the brief mode, in which only the basic metadata of the clusters is returned.</para>
+        /// <para>The query mode for the list. A value of Simple indicates the simplified mode, in which only the basic metadata of the clusters is returned.</para>
         /// <remarks>
         /// <para>If this parameter is not specified, the detailed mode is used by default, and the detailed information of the clusters is returned.</para>
         /// </remarks>
@@ -145,8 +145,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The billing method. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-        /// <item><description><b>Prepaid</b>: subscription</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

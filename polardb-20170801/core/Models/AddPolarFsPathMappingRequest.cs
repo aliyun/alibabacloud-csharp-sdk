@@ -26,10 +26,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Bucket { get; set; }
 
+            /// <summary>
+            /// <para>The AccessKey ID of the storage bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
             [NameInMap("BucketAccessKeyId")]
             [Validation(Required=false)]
             public string BucketAccessKeyId { get; set; }
 
+            /// <summary>
+            /// <para>The AccessKey secret of the storage bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
             [NameInMap("BucketAccessKeySecret")]
             [Validation(Required=false)]
             public string BucketAccessKeySecret { get; set; }

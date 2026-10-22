@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The subcomponent instance ID.</para>
+        /// <para>The instance ID of the subcomponent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pac-xxx</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ContainerName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format (UTC).</para>
+        /// <para>The end time of the query. The time must be in the <c>yyyy-MM-ddTHH:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>30</b>. Valid values: 30 to 100.</para>
+        /// <para>The number of entries per page. Valid values: 30 to 100. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
+        /// <para>The start time of the query. The time must be in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The log type. This parameter is used for polarclaw instances. Currently, only gateway is supported.</para>
+        /// <para>The log type. This parameter is used for polarclaw instances. Valid value: gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gateway</para>

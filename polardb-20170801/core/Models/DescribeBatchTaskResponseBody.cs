@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBatchTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The target application type of the batch task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>polarclaw</para>
+        /// </summary>
         [NameInMap("ApplicationType")]
         [Validation(Required=false)]
         public string ApplicationType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch task.</para>
+        /// <para>The batch ID of the scheduled task execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcb-xxx</para>
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BatchId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task status.</para>
+        /// <para>The status of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>A list of subtasks.</para>
+        /// <para>The list of subtasks.</para>
         /// </summary>
         [NameInMap("SubTasks")]
         [Validation(Required=false)]
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-pz5f6mvi1p84t35d7</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the subtask started.</para>
+            /// <para>The start time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026/05/28T17:38:20Z</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TaskBegin { get; set; }
 
             /// <summary>
-            /// <para>The time when the subtask ended.</para>
+            /// <para>The end time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026/05/28T20:38:20Z</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The number of successful subtasks.</para>
+        /// <para>The total number of domain names or DNS records that are successfully processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the task started.</para>
+        /// <para>The start time of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026/05/28T16:38:20Z</para>
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskBegin { get; set; }
 
         /// <summary>
-        /// <para>The time when the task ended.</para>
+        /// <para>The end time of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026/05/28T15:23:47Z</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskEnd { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The description of the model service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>batch_task_test</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The total number of subtasks.</para>
+        /// <para>The number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

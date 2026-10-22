@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeBudgetPoliciesResponseBodyItems> Items { get; set; }
         public class DescribeBudgetPoliciesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The alert threshold percentage. Valid values: 0 to 100.</para>
+            /// <para>The alert threshold percentage (0 to 100).</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AlertThresholdPct { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the alert threshold has been triggered.</para>
+            /// <para>Indicates whether the alert threshold is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? AlertTriggered { get; set; }
 
             /// <summary>
-            /// <para>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</para>
+            /// <para>The ID of the dimension object. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-p3gk2oh55c**</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BudgetDimensionRefId { get; set; }
 
             /// <summary>
-            /// <para>The policy type. Valid values:</para>
+            /// <para>The type of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ConsumerGroup</b>: total budget for a user group</description></item>
-            /// <item><description><b>Consumer</b>: total budget for a user</description></item>
+            /// <item><description><b>ConsumerGroup</b>: Total budget for consumer groups.</description></item>
+            /// <item><description><b>Consumer</b>: Total budget for consumers.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BudgetPoints { get; set; }
 
             /// <summary>
-            /// <para>The budget policy ID.</para>
+            /// <para>The ID of the budget policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>023aacc1effc4b56bb154bfbec6ba9**</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The budget type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>GlobalTotal</b>: global total budget</description></item>
-            /// <item><description><b>ConsumerTotal</b>: total budget for a user</description></item>
-            /// <item><description><b>ConsumerGroupTotal</b>: total budget for a user group</description></item>
+            /// <item><description><b>GlobalTotal</b>: Global total budget.</description></item>
+            /// <item><description><b>ConsumerTotal</b>: Total budget for consumers.</description></item>
+            /// <item><description><b>ConsumerGroupTotal</b>: Total budget for consumer groups.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BudgetType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the quota has been exceeded.</para>
+            /// <para>Indicates whether the quota is exceeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Exceeded { get; set; }
 
             /// <summary>
-            /// <para>The time when the policy was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-19T14:13:53+08:00</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the policy was last modified.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-08T10:43:28+08:00</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The day of the month on which the budget resets. Valid values: 1 to 28.</para>
+            /// <para>The day of the month when the budget is reset (1 to 28).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -146,10 +146,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ResetDayOfMonth { get; set; }
 
             /// <summary>
-            /// <para>The policy status. Valid values:</para>
+            /// <para>The status of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled</description></item>
-            /// <item><description><b>Disenabled</b>: disabled</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disenabled</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

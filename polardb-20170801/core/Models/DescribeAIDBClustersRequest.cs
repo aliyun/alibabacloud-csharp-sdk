@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AiNodeType { get; set; }
 
         /// <summary>
-        /// <para>The description of the cluster. Fuzzy match is supported.</para>
+        /// <para>The cluster description. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The status of the cluster. Valid values:</para>
+        /// <para>The cluster status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Creating</b>: The cluster is being created.</description></item>
         /// <item><description><b>Running</b>: The cluster is running.</description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>NetAddressDeleting</b>: The network connectivity is being deleted.</description></item>
         /// <item><description><b>NetAddressModifying</b>: The network connectivity is being modified. </description></item>
         /// <item><description><b>Deleted</b>: The cluster is released.</description></item>
-        /// <item><description><b>ClassChanged</b>: Resources are being revoked after you upgrade or decrease the quota.</description></item>
+        /// <item><description><b>ClassChanged</b>: Resources are being revoked after an upgrade or decrease the quota.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAIDBClustersRequestTag> Tag { get; set; }
         public class DescribeAIDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can filter clusters by tag. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</para>
+            /// <para>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testKey</para>

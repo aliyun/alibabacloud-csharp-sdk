@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeExtensionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The extensions that are installed in the specified database.</para>
+        /// <para>The information about installed plugins in the specified database.</para>
         /// </summary>
         [NameInMap("InstalledExtensions")]
         [Validation(Required=false)]
         public List<DescribeExtensionsResponseBodyInstalledExtensions> InstalledExtensions { get; set; }
         public class DescribeExtensionsResponseBodyInstalledExtensions : TeaModel {
             /// <summary>
-            /// <para>The extension type.</para>
+            /// <para>The plugin category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>geography_space, self_develop</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The description of the extension.</para>
+            /// <para>The plugin description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The default version of the extension.</para>
+            /// <para>The default version of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.7</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The currently installed version of the extension.</para>
+            /// <para>The currently installed version of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.7</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string InstalledVersion { get; set; }
 
             /// <summary>
-            /// <para>The extension name.</para>
+            /// <para>The plugin name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jueming</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The owner of the extension.</para>
+            /// <para>The owner of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alton</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The priority of the extension.</para>
+            /// <para>The priority of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The extensions on which this extension depends.</para>
+            /// <para>The plugins that this plugin depends on during installation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ganos_networking</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Requires { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to restart the application. \<c>true\\</c>: The application is restarted. \<c>false\\</c>: The application is not restarted.</para>
+            /// <para>Specifies whether to restart the application. Valid values: true: Restart. false: Do not restart.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -109,17 +109,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The overview of the extension.</para>
+        /// <para>The plugin overview information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试建单，请忽略</para>
+        /// <para>Test ticket creation, please ignore</para>
         /// </summary>
         [NameInMap("Overview")]
         [Validation(Required=false)]
         public string Overview { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>309073D4-9C99-511C-AF84-0C67A6F52E67</para>
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The extensions that are not installed in the specified database.</para>
+        /// <para>The information about uninstalled plugins in the specified database.</para>
         /// </summary>
         [NameInMap("UninstalledExtensions")]
         [Validation(Required=false)]
         public List<DescribeExtensionsResponseBodyUninstalledExtensions> UninstalledExtensions { get; set; }
         public class DescribeExtensionsResponseBodyUninstalledExtensions : TeaModel {
             /// <summary>
-            /// <para>The extension type.</para>
+            /// <para>The plugin category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>geography_space, self_develop</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The purpose of the extension.</para>
+            /// <para>The purpose of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The default version of the extension.</para>
+            /// <para>The default version of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.7</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The currently installed version of the extension.</para>
+            /// <para>The currently installed version of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.7</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string InstalledVersion { get; set; }
 
             /// <summary>
-            /// <para>The extension name.</para>
+            /// <para>The plugin name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jueming</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The owner of the extension.</para>
+            /// <para>The owner of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alton</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The priority of the extension.</para>
+            /// <para>The priority of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The extensions on which this extension depends.</para>
+            /// <para>The plugins that this plugin depends on during installation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ganos_networking</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Requires { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to restart the application. \<c>true\\</c>: The application is restarted. \<c>false\\</c>: The application is not restarted.</para>
+            /// <para>Specifies whether to restart the application. Valid values: true: Restart. false: Do not restart.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

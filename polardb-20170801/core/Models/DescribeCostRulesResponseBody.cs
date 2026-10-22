@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CacheCostPointsPerMillion { get; set; }
 
             /// <summary>
-            /// <para>The cache creation or write cost points per million tokens.</para>
+            /// <para>The cache creation cost points per million tokens.</para>
             /// 
             /// <b>Example:</b>
             /// <para>400</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CostRuleId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the effective period.</para>
+            /// <para>The end time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-01T00:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EffectiveEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the effective period.</para>
+            /// <para>The start time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01T00:00:00Z</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string InputTokenTier { get; set; }
 
             /// <summary>
-            /// <para>The non-cumulative tiered pricing for input tokens. Each element includes the tier and the input cost points per million tokens.</para>
+            /// <para>The non-cumulative tiered pricing for input tokens. Each element contains Tier and InputCostPointsPerMillion.</para>
             /// </summary>
             [NameInMap("InputTokenTiers")]
             [Validation(Required=false)]
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

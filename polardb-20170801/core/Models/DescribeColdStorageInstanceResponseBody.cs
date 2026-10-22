@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeColdStorageInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned. Default value: 10.</para>
+        /// <para>The maximum number of data entries to read in this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous API call. If there are no more queries, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2FpXzIwMjIwNjI5X2Jhay9zYWlfc3VtbWVyX3RyZWFzdXJlX3Bvb2xfbG9nLkNTVg==</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the OSS bucket is enabled.</para>
+        /// <para>Specifies whether OSS storage space is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disabled</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled</description></item>
+        /// <item><description><b>false</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,14 +54,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OssClusterEnabled { get; set; }
 
         /// <summary>
-        /// <para>The list of OSS addresses for the cold storage instances.</para>
+        /// <para>The list of OSS addresses for the cold storage instance.</para>
         /// </summary>
         [NameInMap("OssClusterInfoList")]
         [Validation(Required=false)]
         public List<DescribeColdStorageInstanceResponseBodyOssClusterInfoList> OssClusterInfoList { get; set; }
         public class DescribeColdStorageInstanceResponseBodyOssClusterInfoList : TeaModel {
             /// <summary>
-            /// <para>The time when the cluster was created.</para>
+            /// <para>The creation time of the cluster. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-10T17:01:16Z</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cold storage instance.</para>
+            /// <para>The cold storage instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-*****************</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string OssClusterId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the task is located.</para>
+            /// <para>The region ID of the region where the task resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -145,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the cluster supports cold storage. If the cluster does not support cold storage, the switch is not displayed on the console.</para>
+        /// <para>Specifies whether the current cluster supports enabling cold storage. For clusters that do not support this feature, the switch is not displayed on the page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -199,22 +197,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Size { get; set; }
 
                 /// <summary>
-                /// <para>The status of the task. Valid values:</para>
+                /// <para>The task status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Scheduled</b>: The task is waiting to be executed.</para>
-                /// </description></item>
-                /// <item><description><para><b>Running</b>: The task is in progress.</para>
-                /// </description></item>
-                /// <item><description><para><b>Succeed</b>: The task is successful.</para>
-                /// </description></item>
-                /// <item><description><para><b>Cancelling</b>: The task is being stopped.</para>
-                /// </description></item>
-                /// <item><description><para><b>Canceled</b>: The task is stopped.</para>
-                /// </description></item>
-                /// <item><description><para><b>Waiting</b>: The task is waiting for a preset time.</para>
-                /// </description></item>
+                /// <item><description><b>Scheduled</b>: waiting for execution</description></item>
+                /// <item><description><b>Running</b>: running</description></item>
+                /// <item><description><b>Succeed</b>: succeeded</description></item>
+                /// <item><description><b>Cancelling</b>: cancelling</description></item>
+                /// <item><description><b>Canceled</b>: canceled</description></item>
+                /// <item><description><b>Waiting</b>: waiting for the preset time</description></item>
                 /// </list>
-                /// <para>To query multiple statuses, separate them with commas (,). If you do not specify this parameter, all statuses are queried.</para>
+                /// <para>To query multiple statuses, separate them with commas (,). The default value is empty, which indicates that all statuses are selected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -226,7 +218,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The database name.</para>
+            /// <para>The name of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_db</para>
@@ -236,7 +228,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DB { get; set; }
 
             /// <summary>
-            /// <para>The database name.</para>
+            /// <para>The name of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_db</para>
@@ -246,7 +238,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The name of the large object (LOB) field.</para>
+            /// <para>The name of the LOB field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -256,7 +248,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the OSS-based cluster.</para>
+            /// <para>The OSS cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-*****************</para>
@@ -286,7 +278,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Size { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -296,7 +288,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The table name.</para>
+            /// <para>The name of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -306,7 +298,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Table { get; set; }
 
             /// <summary>
-            /// <para>The table name.</para>
+            /// <para>The name of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_table</para>
@@ -318,7 +310,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

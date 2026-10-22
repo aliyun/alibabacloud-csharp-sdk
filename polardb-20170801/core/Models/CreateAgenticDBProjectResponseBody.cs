@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAgenticDBProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the compute instance associated with the default branch.</para>
+        /// <para>The ID of the compute instance bound to the default branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-g0lsayq8c5qe</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BranchComputeClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time when the project was created.</para>
-        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time when the project was created. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-10T11:00:00Z</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The default branch ID.</para>
+        /// <para>The ID of the default branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-1a2b3c4d5e6f</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DefaultBranchId { get; set; }
 
         /// <summary>
-        /// <para>The default branch name.</para>
+        /// <para>The name of the default branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -49,6 +48,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DefaultBranchName")]
         [Validation(Required=false)]
         public string DefaultBranchName { get; set; }
+
+        /// <summary>
+        /// <para>The retention period for recent records of the project. This parameter may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>604800</para>
+        /// </summary>
+        [NameInMap("HistoryRetentionSeconds")]
+        [Validation(Required=false)]
+        public long? HistoryRetentionSeconds { get; set; }
 
         /// <summary>
         /// <para>The ID of the new project.</para>
@@ -61,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The project name.</para>
+        /// <para>The name of the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>analytics-prod</para>
@@ -71,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E5F6A7B8-C9D0-1234-EFAB-345678901234</para>
@@ -81,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The ID of the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>

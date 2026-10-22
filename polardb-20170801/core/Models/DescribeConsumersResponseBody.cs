@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeConsumersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of users.</para>
+        /// <para>The list of consumers.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AllowedModels { get; set; }
 
             /// <summary>
-            /// <para>The full API key, returned only in this response.</para>
+            /// <para>The complete API key. This value is returned only in the current response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The user group ID.</para>
+            /// <para>The ID of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-xxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The user group name.</para>
+            /// <para>The name of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerGroupName { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The ID of the consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-mqveroemc***</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The total cumulative usage.</para>
+            /// <para>The cumulative usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MtdCostCount { get; set; }
 
             /// <summary>
-            /// <para>The total cumulative cost.</para>
+            /// <para>The cumulative total cost.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MtdTokenCount { get; set; }
 
             /// <summary>
-            /// <para>The username.</para>
+            /// <para>The name of the consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The nickname.</para>
+            /// <para>The nickname of the consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yonghu</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

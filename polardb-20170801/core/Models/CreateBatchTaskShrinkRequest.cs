@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateBatchTaskShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The target application type of the batch task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>polarclaw</para>
+        /// </summary>
         [NameInMap("ApplicationType")]
         [Validation(Required=false)]
         public string ApplicationType { get; set; }
@@ -22,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The task parameters.</para>
+        /// <para>The archive parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;skillName&quot;:&quot;github&quot;,&quot;version&quot;:&quot;1.0.0&quot;},{&quot;skillName&quot;:&quot;skill-vetter&quot;,&quot;version&quot;:&quot;1.0.1&quot;}]</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters in your account.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the target account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the batch task.</para>
+        /// <para>The description of the model service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

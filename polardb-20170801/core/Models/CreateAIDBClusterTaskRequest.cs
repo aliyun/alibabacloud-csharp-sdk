@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the custom OSS bucket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-bucket</para>
         /// </summary>
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
+        /// <para>The data service mode. A value of custom indicates that custom OSS is used, and a value of cold_storage indicates that cold storage is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cold_storage</para>
         /// </summary>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The type of the model service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>aitrain</b>: Model operator tuning.</description></item>
+        /// <item><description><b>aitrain</b>: model operator fine-tuning.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,8 +87,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the model.</para>
         /// <list type="bullet">
-        /// <item><description><b>For a preset model, specify the selected model name.</b></description></item>
-        /// <item><description><b>For a custom model, specify the path of the model (the trained model in a cold storage instance).</b></description></item>
+        /// <item><description><b>For a preset model, specify the name of the selected model.</b></description></item>
+        /// <item><description><b>For a custom model, specify the path of the model (the model trained in a cold storage instance).</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -98,8 +102,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The source of the model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b>: Preset model.</description></item>
-        /// <item><description><b>custom</b>: Custom model.</description></item>
+        /// <item><description><b>public</b>: preset model.</description></item>
+        /// <item><description><b>custom</b>: custom model.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -177,6 +181,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
+        /// <summary>
+        /// <para>The model fine-tuning architecture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lora</para>
+        /// </summary>
         [NameInMap("TuneArch")]
         [Validation(Required=false)]
         public string TuneArch { get; set; }

@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string BranchTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("DBClusterDescription")]
                 [Validation(Required=false)]
                 public string DBClusterDescription { get; set; }
@@ -179,6 +183,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The connection resource quota (AgenticDB exclusive).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ConnectionResourceQuota")]
         [Validation(Required=false)]
@@ -186,6 +193,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The number of connection resources used (AgenticDB exclusive).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ConnectionResourceUsed")]
         [Validation(Required=false)]
@@ -453,14 +463,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Orca { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("RemoteMemoryMax")]
             [Validation(Required=false)]
             public int? RemoteMemoryMax { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("RemoteMemoryMin")]
             [Validation(Required=false)]
             public int? RemoteMemoryMin { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("RemoteMemoryRecommended")]
             [Validation(Required=false)]
             public int? RemoteMemoryRecommended { get; set; }
@@ -1022,6 +1044,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string StandbyHAMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Enable</para>
+        /// </summary>
         [NameInMap("StorageAutoScale")]
         [Validation(Required=false)]
         public string StorageAutoScale { get; set; }
@@ -1070,6 +1096,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>800</para>
+        /// </summary>
         [NameInMap("StorageUpperBound")]
         [Validation(Required=false)]
         public int? StorageUpperBound { get; set; }

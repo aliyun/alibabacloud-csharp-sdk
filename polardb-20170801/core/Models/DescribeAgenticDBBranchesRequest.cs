@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBBranchesRequest : TeaModel {
         /// <summary>
-        /// <para>The branch name for fuzzy match.</para>
+        /// <para>The branch name for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>feature</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The ID of the AgenticDB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project to which the branch belongs.</para>
+        /// <para>The project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proj-a1b2c3d4e5f6</para>
@@ -72,12 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The status filter. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Running</description></item>
-        /// <item><description>Pending</description></item>
-        /// <item><description>Paused</description></item>
-        /// </list>
+        /// <para>The status used to filter branches. Valid values: Running, Pending, and Paused.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -87,7 +82,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the branch belongs.</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>

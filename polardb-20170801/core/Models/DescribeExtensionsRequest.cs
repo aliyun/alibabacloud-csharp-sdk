@@ -31,6 +31,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the database plugin to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>jueming</para>
+        /// </summary>
         [NameInMap("ExtensionName")]
         [Validation(Required=false)]
         public string ExtensionName { get; set; }

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAgenticDBBranchesResponseBodyItems> Items { get; set; }
         public class DescribeAgenticDBBranchesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the compute cluster associated with the branch.</para>
+            /// <para>The ID of the compute cluster for the branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-g0lsayq8c5qe</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? BranchComputeNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The branch ID.</para>
+            /// <para>The ID of the branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-7g8h9i0j1k2l</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BranchId { get; set; }
 
             /// <summary>
-            /// <para>The branch name.</para>
+            /// <para>The name of the branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>feature-analytics</para>
@@ -57,8 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BranchName { get; set; }
 
             /// <summary>
-            /// <para>The time when the branch was created.</para>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time when the branch was created. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T11:00:00Z</para>
@@ -98,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LastActivatedAt { get; set; }
 
             /// <summary>
-            /// <para>The maximum compute unit.</para>
+            /// <para>The maximum number of compute units (CUs).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -108,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MaxCU { get; set; }
 
             /// <summary>
-            /// <para>The minimum compute unit.</para>
+            /// <para>The minimum number of compute units (CUs).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -138,7 +137,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ParentBranchName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the branch belongs.</para>
+            /// <para>The historical time of the parent branch specified when the branch was created. The time is displayed in RFC 3339 format in UTC. This parameter may be empty if no historical time is specified or for legacy records.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-10-15T07:32:00.123456Z</para>
+            /// </summary>
+            [NameInMap("ParentTimestamp")]
+            [Validation(Required=false)]
+            public string ParentTimestamp { get; set; }
+
+            /// <summary>
+            /// <para>The project ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>proj-a1b2c3d4e5f6</para>
@@ -158,12 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The status of the branch. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Running</description></item>
-            /// <item><description>Pending</description></item>
-            /// <item><description>Paused</description></item>
-            /// </list>
+            /// <para>The status of the branch. Valid values: Running, Pending, and Paused.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -173,7 +177,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant to which the branch belongs.</para>
+            /// <para>The tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-4b83e0da66674951</para>
@@ -205,7 +209,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2C3D4E5-F6A7-8901-BCDE-2345678901BC</para>
@@ -215,7 +219,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
