@@ -1,3 +1,7 @@
+2026-10-22 Version: 5.0.2
+- Update API ListBindings: add request parameters URI.
+
+
 2026-10-08 Version: 5.0.1
 - Update API CreateHighlightTask: add request parameters Output.TargetDuration.
 - Update API GenerateVideoPlaylist: add request parameters Targets.$.Container.

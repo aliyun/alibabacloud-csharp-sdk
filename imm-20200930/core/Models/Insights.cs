@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Insights : TeaModel {
         /// <summary>
-        /// <para>The summary and description of the image.</para>
+        /// <para>The image summary and description.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public ImageInsight Image { get; set; }
 
         /// <summary>
-        /// <para>The summary and description of the video.</para>
+        /// <para>The video summary and description.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListBindingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of binding information between datasets and OSS buckets.</para>
+        /// <para>The list of bindings between datasets and OSS buckets.</para>
         /// </summary>
         [NameInMap("Bindings")]
         [Validation(Required=false)]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The pagination token that is used when the total number of bindings exceeds the MaxResults value.</description></item>
-        /// <item><description>Use this value as the NextToken in the next request to return the remaining results.</description></item>
-        /// <item><description>This parameter has a value only when not all bindings are returned.</description></item>
+        /// <item><description>The pagination token that is used when the total number of bindings exceeds the value of MaxResults.</description></item>
+        /// <item><description>Use this value as NextToken in the next request to obtain the remaining bindings.</description></item>
+        /// <item><description>This parameter is returned only when not all bindings are returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFDFD356-C928-4A36-951A-6EB5A592****</para>

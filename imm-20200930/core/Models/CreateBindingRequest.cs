@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateBindingRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</para>
+        /// <para>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-dataset</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The URI of the OSS bucket to which you bind the dataset.</para>
-        /// <para>Specify the value in the oss\://${Bucket} format. <c>${Bucket}</c> specifies the name of the OSS bucket that resides in the same region as the current project.</para>
+        /// <para>The URI of the OSS bucket bound to the dataset.</para>
+        /// <para>The URI of the OSS bucket is in the format of oss://${Bucket}, where <c>${Bucket}</c> is the name of the OSS bucket that resides in the same region as the current project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

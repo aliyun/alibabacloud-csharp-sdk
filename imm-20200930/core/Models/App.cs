@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class App : TeaModel {
         /// <summary>
-        /// <para>AppDescription</para>
+        /// <para>The application description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>中国最大的电商购物商城</para>
+        /// <para>The largest e-commerce shopping mall in China</para>
         /// </summary>
         [NameInMap("AppDescription")]
         [Validation(Required=false)]
         public string AppDescription { get; set; }
 
         /// <summary>
-        /// <para>AppId</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>AppKey</para>
+        /// <para>The key returned when the application is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ryBOBW0Z6NnQ3fV9</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AppKey { get; set; }
 
         /// <summary>
-        /// <para>AppName</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>淘宝</para>
+        /// <para>Taobao</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>AppRegion</para>
+        /// <para>The region where the application is used. Valid values: 0: Chinese mainland. 1: Outside the Chinese mainland.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? AppRegion { get; set; }
 
         /// <summary>
-        /// <para>AppType</para>
+        /// <para>The application type. Valid values: 0: Android. 1: iOS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? AppType { get; set; }
 
         /// <summary>
-        /// <para>EnglishName</para>
+        /// <para>The English name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Taobao</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EnglishName { get; set; }
 
         /// <summary>
-        /// <para>OwnerId</para>
+        /// <para>The customer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1023210024677934</para>

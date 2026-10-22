@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Runtime : TeaModel {
         /// <summary>
-        /// <para>The hyperparameters.</para>
+        /// <para>The hyperparameter information for the model training runtime.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Hyperparameters")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Hyperparameters Hyperparameters { get; set; }
 
         /// <summary>
-        /// <para>The resource.</para>
+        /// <para>The execution resource configuration information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resource")]

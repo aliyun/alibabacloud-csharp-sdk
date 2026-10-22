@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListBindingsRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset name. For information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.</para>
+        /// <para>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-dataset</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <list type="bullet">
         /// <item><description>The maximum number of bindings to return. Valid values: 0 to 200.</description></item>
-        /// <item><description>If this parameter is not set or is set to 0, the default value 100 is used.</description></item>
+        /// <item><description>If this parameter is not specified or is set to 0, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The pagination token that is used when the total number of bindings exceeds the MaxResults value.</description></item>
-        /// <item><description>Binding information is returned in alphabetical order starting from the NextToken value.</description></item>
-        /// <item><description>Leave this parameter empty for the first request.</description></item>
+        /// <item><description>The pagination token that is used when the total number of bindings exceeds the value of MaxResults.</description></item>
+        /// <item><description>The list of bindings is returned in lexicographical order starting from the NextToken value.</description></item>
+        /// <item><description>Leave this parameter empty when you call this operation for the first time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +66,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        /// <summary>
+        /// <para>The URI of the source OSS bucket, which is used to filter the bindings associated with the bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://example-bucket</para>
+        /// </summary>
+        [NameInMap("URI")]
+        [Validation(Required=false)]
+        public string URI { get; set; }
 
     }
 

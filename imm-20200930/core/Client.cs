@@ -2635,21 +2635,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// <para>Attaches a dataset to an Object Storage Service (OSS) bucket for automatic synchronization and indexing of full and incremental files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2743997.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></para>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2743997.html">pricing</a> of Intelligent Media Management (IMM) before you call this operation.</em>*</para>
         /// <remarks>
-        /// <para>Asynchronous processing does not guarantee timely task completion.
-        /// Before you create a binding, make sure that the project and the dataset that you want to use exist.</para>
+        /// <para>Notice: Asynchronous tasks do not guarantee immediate completion.
+        /// Before you create a binding relationship, make sure that you have created the corresponding project and dataset.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
-        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
-        /// <para>The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
-        /// After you create a binding between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are uploaded to the OSS bucket, IMM tracks and scans the objects and updates the index. For objects whose metadata index is created by calling this operation, you can call query operations, such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a>, to query objects, manage objects, and collect statistics on objects.</para>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a><remarks>
+        /// <para>Data binding uses the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> specified when the project or dataset is created to process files.
+        /// After the binding relationship is created, IMM first performs a full scan on the existing data in the OSS bucket and extracts file metadata for indexing. After the full scan is complete, IMM continues to perform near real-time incremental tracking, extraction, and indexing for new files in the OSS bucket. After files are indexed in this way, you can use file query operations such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> to query, manage, and collect statistics on the files.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2702,21 +2702,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// <para>Attaches a dataset to an Object Storage Service (OSS) bucket for automatic synchronization and indexing of full and incremental files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2743997.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></para>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2743997.html">pricing</a> of Intelligent Media Management (IMM) before you call this operation.</em>*</para>
         /// <remarks>
-        /// <para>Asynchronous processing does not guarantee timely task completion.
-        /// Before you create a binding, make sure that the project and the dataset that you want to use exist.</para>
+        /// <para>Notice: Asynchronous tasks do not guarantee immediate completion.
+        /// Before you create a binding relationship, make sure that you have created the corresponding project and dataset.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
-        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
-        /// <para>The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
-        /// After you create a binding between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are uploaded to the OSS bucket, IMM tracks and scans the objects and updates the index. For objects whose metadata index is created by calling this operation, you can call query operations, such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a>, to query objects, manage objects, and collect statistics on objects.</para>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a><remarks>
+        /// <para>Data binding uses the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> specified when the project or dataset is created to process files.
+        /// After the binding relationship is created, IMM first performs a full scan on the existing data in the OSS bucket and extracts file metadata for indexing. After the full scan is complete, IMM continues to perform near real-time incremental tracking, extraction, and indexing for new files in the OSS bucket. After files are indexed in this way, you can use file query operations such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> to query, manage, and collect statistics on the files.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2769,21 +2769,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// <para>Attaches a dataset to an Object Storage Service (OSS) bucket for automatic synchronization and indexing of full and incremental files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2743997.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></para>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2743997.html">pricing</a> of Intelligent Media Management (IMM) before you call this operation.</em>*</para>
         /// <remarks>
-        /// <para>Asynchronous processing does not guarantee timely task completion.
-        /// Before you create a binding, make sure that the project and the dataset that you want to use exist.</para>
+        /// <para>Notice: Asynchronous tasks do not guarantee immediate completion.
+        /// Before you create a binding relationship, make sure that you have created the corresponding project and dataset.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
-        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
-        /// <para>The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
-        /// After you create a binding between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are uploaded to the OSS bucket, IMM tracks and scans the objects and updates the index. For objects whose metadata index is created by calling this operation, you can call query operations, such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a>, to query objects, manage objects, and collect statistics on objects.</para>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a><remarks>
+        /// <para>Data binding uses the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> specified when the project or dataset is created to process files.
+        /// After the binding relationship is created, IMM first performs a full scan on the existing data in the OSS bucket and extracts file metadata for indexing. After the full scan is complete, IMM continues to perform near real-time incremental tracking, extraction, and indexing for new files in the OSS bucket. After files are indexed in this way, you can use file query operations such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> to query, manage, and collect statistics on the files.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2804,21 +2804,21 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// <para>Attaches a dataset to an Object Storage Service (OSS) bucket for automatic synchronization and indexing of full and incremental files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2743997.html">billing</a> of Intelligent Media Management (IMM).\<em>\</em>\<em>\</em></para>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2743997.html">pricing</a> of Intelligent Media Management (IMM) before you call this operation.</em>*</para>
         /// <remarks>
-        /// <para>Asynchronous processing does not guarantee timely task completion.
-        /// Before you create a binding, make sure that the project and the dataset that you want to use exist.</para>
+        /// <para>Notice: Asynchronous tasks do not guarantee immediate completion.
+        /// Before you create a binding relationship, make sure that you have created the corresponding project and dataset.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
-        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
-        /// <para>The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
-        /// After you create a binding between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are uploaded to the OSS bucket, IMM tracks and scans the objects and updates the index. For objects whose metadata index is created by calling this operation, you can call query operations, such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a>, to query objects, manage objects, and collect statistics on objects.</para>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a><remarks>
+        /// <para>Data binding uses the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> specified when the project or dataset is created to process files.
+        /// After the binding relationship is created, IMM first performs a full scan on the existing data in the OSS bucket and extracts file metadata for indexing. After the full scan is complete, IMM continues to perform near real-time incremental tracking, extraction, and indexing for new files in the OSS bucket. After files are indexed in this way, you can use file query operations such as <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> to query, manage, and collect statistics on the files.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13875,14 +13875,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// <para>Queries the details of the binding relationship between a specified dataset and an Object Storage Service (OSS) bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// <item><description><b>Ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before you call this operation.</b></description></item>
+        /// <item><description>Ensure that you have created the corresponding binding relationship by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13933,14 +13933,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// <para>Queries the details of the binding relationship between a specified dataset and an Object Storage Service (OSS) bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// <item><description><b>Ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before you call this operation.</b></description></item>
+        /// <item><description>Ensure that you have created the corresponding binding relationship by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13991,14 +13991,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// <para>Queries the details of the binding relationship between a specified dataset and an Object Storage Service (OSS) bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// <item><description><b>Ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before you call this operation.</b></description></item>
+        /// <item><description>Ensure that you have created the corresponding binding relationship by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14017,14 +14017,14 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// <para>Queries the details of the binding relationship between a specified dataset and an Object Storage Service (OSS) bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></description></item>
-        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// <item><description><b>Ensure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before you call this operation.</b></description></item>
+        /// <item><description>Ensure that you have created the corresponding binding relationship by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16703,12 +16703,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
+        /// <para>Queries the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you are familiar with the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</em>*</para>
+        /// <para><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16745,6 +16745,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["ProjectName"] = request.ProjectName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URI))
+            {
+                query["URI"] = request.URI;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16766,12 +16770,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
+        /// <para>Queries the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you are familiar with the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</em>*</para>
+        /// <para><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16808,6 +16812,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["ProjectName"] = request.ProjectName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.URI))
+            {
+                query["URI"] = request.URI;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16829,12 +16837,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
+        /// <para>Queries the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you are familiar with the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</em>*</para>
+        /// <para><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16852,12 +16860,12 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
+        /// <para>Queries the list of bindings between datasets and Object Storage Service (OSS) buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you are familiar with the billing method and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</em>*</para>
+        /// <para><em>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
