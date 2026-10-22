@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListDigitalEmployeeSkillVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of previous skill versions.</para>
+        /// <para>The historical versions.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListDigitalEmployeeSkillVersionsResponseBodyData> Data { get; set; }
         public class ListDigitalEmployeeSkillVersionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the skill version was created.</para>
+            /// <para>The creation time in RFC 3339 format with the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the skill version is enabled.</para>
+            /// <para>Indicates whether the version is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The remark for the skill version.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remark</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The time when the skill version was last updated.</para>
+            /// <para>The update time in RFC 3339 format with the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The version number.</para>
+            /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1770386951147366810</para>

@@ -17,14 +17,17 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public List<ListDigitalEmployeesResponseBodyDigitalEmployees> DigitalEmployees { get; set; }
         public class ListDigitalEmployeesResponseBodyDigitalEmployees : TeaModel {
             /// <summary>
-            /// <para>The attributes.</para>
+            /// <para>The attributes of the digital employee.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
             /// </summary>
             [NameInMap("attributes")]
             [Validation(Required=false)]
             public Dictionary<string, string> Attributes { get; set; }
 
             /// <summary>
-            /// <para>The channel type of the digital employee.</para>
+            /// <para>The channel type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in RFC 3339 format. The time zone is UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -92,14 +95,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges Knowledges { get; set; }
             public class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges : TeaModel {
                 /// <summary>
-                /// <para>The list of Bailian knowledge bases.</para>
+                /// <para>The list of Model Studio knowledge bases.</para>
                 /// </summary>
                 [NameInMap("bailian")]
                 [Validation(Required=false)]
                 public List<ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian> Bailian { get; set; }
                 public class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian : TeaModel {
                     /// <summary>
-                    /// <para>The knowledge base attributes.</para>
+                    /// <para>The attributes of the knowledge base.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Attributes { get; set; }
 
                     /// <summary>
-                    /// <para>The Bailian index ID.</para>
+                    /// <para>The Model Studio index ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>index-xxxx</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Region { get; set; }
 
                     /// <summary>
-                    /// <para>The Bailian workspace ID.</para>
+                    /// <para>The Model Studio workspace ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>llm-xxxx</para>
@@ -180,6 +183,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string RoleArn { get; set; }
 
             /// <summary>
+            /// <para>The status of the digital employee. Valid values: 0: Normal. 1: Disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            /// <summary>
             /// <para>The tags.</para>
             /// </summary>
             [NameInMap("tags")]
@@ -187,7 +200,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time in RFC 3339 format. The time zone is UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

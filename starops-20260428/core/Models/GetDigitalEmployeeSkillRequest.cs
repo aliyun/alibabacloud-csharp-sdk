@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetDigitalEmployeeSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The version of the skill to retrieve. If this parameter is not specified, the latest version is returned.</para>
+        /// <para>The historical version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770386951147366810</para>

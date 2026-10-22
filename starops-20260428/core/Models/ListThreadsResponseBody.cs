@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListThreadsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results to return. The maximum value is 200.</para>
+        /// <para>The maximum number of results to return. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A token to retrieve the next page of results. If this parameter is absent, no more results are available.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD8BA7D6-995D-578D-9941-xxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The thread ID.</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>thread-123123</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string ThreadId { get; set; }
 
         /// <summary>
-        /// <para>A list of threads.</para>
+        /// <para>The sessions.</para>
         /// </summary>
         [NameInMap("threads")]
         [Validation(Required=false)]
         public List<ListThreadsResponseBodyThreads> Threads { get; set; }
         public class ListThreadsResponseBodyThreads : TeaModel {
             /// <summary>
-            /// <para>A map of key-value pairs that you can attach to the thread.</para>
+            /// <para>The properties.</para>
             /// </summary>
             [NameInMap("attributes")]
             [Validation(Required=false)]
             public Dictionary<string, string> Attributes { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the thread, in ISO 8601 format.</para>
+            /// <para>The creation time in RFC 3339 format, including the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-19T15:19:55.040403272+08:00</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The digital employee name.</para>
+            /// <para>The name of the digital employee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string DigitalEmployeeName { get; set; }
 
             /// <summary>
-            /// <para>The thread status.</para>
+            /// <para>The session status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The thread ID.</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>thread-123123</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string ThreadId { get; set; }
 
             /// <summary>
-            /// <para>The thread title.</para>
+            /// <para>The session title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the thread, in ISO 8601 format.</para>
+            /// <para>The update time in RFC 3339 format, including the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-19T15:19:55.040403272+08:00</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The thread variables.</para>
+            /// <para>The session properties.</para>
             /// </summary>
             [NameInMap("variables")]
             [Validation(Required=false)]
             public ListThreadsResponseBodyThreadsVariables Variables { get; set; }
             public class ListThreadsResponseBodyThreadsVariables : TeaModel {
                 /// <summary>
-                /// <para>The project in SLS.</para>
+                /// <para>SLS project。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>project</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             }
 
             /// <summary>
-            /// <para>The thread version.</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>The total number of threads.</para>
+        /// <para>The total number of sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

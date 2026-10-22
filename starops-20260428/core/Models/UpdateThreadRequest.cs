@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class UpdateThreadRequest : TeaModel {
         /// <summary>
-        /// <para>The attributes of the thread.</para>
+        /// <para>The properties.</para>
         /// </summary>
         [NameInMap("attributes")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>The status of the thread.</para>
+        /// <para>The session status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The title of the thread.</para>
+        /// <para>The session title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title</para>

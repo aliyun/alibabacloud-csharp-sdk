@@ -158,27 +158,27 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>The tool calling security policy configuration of the digital employee.</para>
+        /// <para>The security policy configuration for tool calling of the digital employee.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</para>
+        /// <para>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</para>
         /// </summary>
         [NameInMap("toolPolicy")]
         [Validation(Required=false)]
         public UpdateDigitalEmployeeRequestToolPolicy ToolPolicy { get; set; }
         public class UpdateDigitalEmployeeRequestToolPolicy : TeaModel {
             /// <summary>
-            /// <para>The Aliyun CLI tool calling security policy configuration.</para>
+            /// <para>The security policy configuration for Aliyun CLI tool calling.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</para>
+            /// <para>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</para>
             /// </summary>
             [NameInMap("aliyun")]
             [Validation(Required=false)]
             public UpdateDigitalEmployeeRequestToolPolicyAliyun Aliyun { get; set; }
             public class UpdateDigitalEmployeeRequestToolPolicyAliyun : TeaModel {
                 /// <summary>
-                /// <para>The automatic pass-through policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically allowed without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically allowed. Unmatched actions require human-in-the-loop (HIL) confirmation.</para>
+                /// <para>The list of auto-approved RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<string> AutoPassPolicy { get; set; }
 
                 /// <summary>
-                /// <para>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. STAROps directly denies matched actions. Pop performs secondary enforcement.</para>
+                /// <para>The list of denied RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</para>
@@ -244,7 +244,12 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string ApiVersion { get; set; }
 
                     /// <summary>
-                    /// <para>The execution policy.</para>
+                    /// <para>The execution policy. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>allow: Allowed.</description></item>
+                    /// <item><description>deny: Denied.</description></item>
+                    /// <item><description>user_ack: Requires user confirmation before execution.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>user_ack</para>
@@ -254,7 +259,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Decision { get; set; }
 
                     /// <summary>
-                    /// <para>The cloud product code.</para>
+                    /// <para>The cloud service code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Cms</para>

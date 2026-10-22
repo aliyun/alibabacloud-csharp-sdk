@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class CreateDigitalEmployeeRequest : TeaModel {
         /// <summary>
-        /// <para>The attributes.</para>
+        /// <para>The digital employee properties.</para>
         /// </summary>
         [NameInMap("attributes")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>数字员工渠道类型。不填时使用默认渠道。</para>
+        /// <para>The channel type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -57,21 +57,21 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base list.</para>
+        /// <para>The list of knowledge bases.</para>
         /// </summary>
         [NameInMap("knowledges")]
         [Validation(Required=false)]
         public CreateDigitalEmployeeRequestKnowledges Knowledges { get; set; }
         public class CreateDigitalEmployeeRequestKnowledges : TeaModel {
             /// <summary>
-            /// <para>The Bailian knowledge base list.</para>
+            /// <para>The list of Bailian knowledge bases.</para>
             /// </summary>
             [NameInMap("bailian")]
             [Validation(Required=false)]
             public List<CreateDigitalEmployeeRequestKnowledgesBailian> Bailian { get; set; }
             public class CreateDigitalEmployeeRequestKnowledgesBailian : TeaModel {
                 /// <summary>
-                /// <para>The knowledge base attributes.</para>
+                /// <para>The knowledge base properties.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             }
 
             /// <summary>
-            /// <para>The SOP knowledge base list.</para>
+            /// <para>The list of SOP knowledge bases.</para>
             /// </summary>
             [NameInMap("sop")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the RAM role.</para>
+        /// <para>The RAM role ARN.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -164,14 +164,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public CreateDigitalEmployeeRequestSandboxNetworkPolicy SandboxNetworkPolicy { get; set; }
         public class CreateDigitalEmployeeRequestSandboxNetworkPolicy : TeaModel {
             /// <summary>
-            /// <para>The list of allowed CIDRs or IP addresses. A maximum of 50 entries are supported.</para>
+            /// <para>The list of allowed CIDRs or IP addresses.</para>
             /// </summary>
             [NameInMap("allowCidrs")]
             [Validation(Required=false)]
             public List<string> AllowCidrs { get; set; }
 
             /// <summary>
-            /// <para>The list of allowed FQDNs. A maximum of 50 entries are supported.</para>
+            /// <para>The list of allowed FQDNs.</para>
             /// </summary>
             [NameInMap("allowFqdns")]
             [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// <para>The tool calling security policy configuration of the digital employee.</para>
+        /// <para>The tool policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public CreateDigitalEmployeeRequestToolPolicy ToolPolicy { get; set; }
         public class CreateDigitalEmployeeRequestToolPolicy : TeaModel {
             /// <summary>
-            /// <para>The Aliyun MCP tool calling security policy configuration.</para>
+            /// <para>The security policy configuration for Aliyun CLI tool invocation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public CreateDigitalEmployeeRequestToolPolicyAliyun Aliyun { get; set; }
             public class CreateDigitalEmployeeRequestToolPolicyAliyun : TeaModel {
                 /// <summary>
-                /// <para>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically approved without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically approved. Unmatched actions require human-in-the-loop (HIL) confirmation.</para>
+                /// <para>The RAM actions that are automatically allowed. The format is <em>, product:ApiName, or product:Prefix</em>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<string> AutoPassPolicy { get; set; }
 
                 /// <summary>
-                /// <para>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no actions are actively denied. STAROps directly denies matched actions. The Pop side performs secondary fallback enforcement.</para>
+                /// <para>The RAM actions that are denied. The format is <em>, product:ApiName, or product:Prefix</em>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<string> DenyPolicy { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the Aliyun MCP tool policy. The policy is enabled by default and is disabled only when this parameter is explicitly set to false.</para>
+                /// <para>Specifies whether to enable the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para><b>[Deprecated]</b> Use denyPolicy and autoPassPolicy instead. This parameter is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</para>
+                /// <para><b>[Deprecated]</b> Use denyPolicy and autoPassPolicy instead. This field is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<CreateDigitalEmployeeRequestToolPolicyAliyunStatements> Statements { get; set; }
                 public class CreateDigitalEmployeeRequestToolPolicyAliyunStatements : TeaModel {
                     /// <summary>
-                    /// <para>The list of Aliyun OpenAPI actions in the format of product:ApiName, product:Prefix*, or product:*.</para>
+                    /// <para>The list of Aliyun OpenAPI actions. The format is product:ApiName, product:Prefix*, or product:*.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string ApiVersion { get; set; }
 
                     /// <summary>
-                    /// <para>The execution policy when this API is matched.</para>
+                    /// <para>The execution policy when the API is matched.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>user_ack</para>

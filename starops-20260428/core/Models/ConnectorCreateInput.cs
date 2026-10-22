@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ConnectorCreateInput : TeaModel {
         /// <summary>
-        /// <para>The authentication configuration used to access the target service.</para>
+        /// <para>The authentication configuration for accessing the target service.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("authentication")]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the connector is enabled after creation.</para>
+        /// <para>Specifies whether to enable the connector after creation.</para>
         /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The execution policy of the connector.</para>
+        /// <para>The execution policy for the connector.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("policy")]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>The runtime configuration of the connector.</para>
+        /// <para>The runtime configuration for the connector.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("runtime")]

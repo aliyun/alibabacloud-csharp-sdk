@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListThreadsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the results. If this parameter is omitted, the operation returns all threads in the instance.</para>
+        /// <para>The filter conditions for the query. If this parameter is not specified, all topics under the instance are queried.</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public List<ListThreadsRequestFilter> Filter { get; set; }
         public class ListThreadsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key. Supported values are title, workspace, and project.</para>
+            /// <para>The filter key. Valid values: title, workspace, and project.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value for the filter key.</para>
+            /// <para>The value to set.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to include threads created by missions.</para>
+        /// <para>Specifies whether to include threads created by mission.</para>
         /// </summary>
         [NameInMap("includeMission")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The status of the thread.</para>
+        /// <para>The session status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The thread ID.</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>thread-123123</para>

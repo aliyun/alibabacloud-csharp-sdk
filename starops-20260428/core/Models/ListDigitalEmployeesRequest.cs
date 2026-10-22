@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListDigitalEmployeesRequest : TeaModel {
         /// <summary>
-        /// <para>Filters digital employees by channel type. If this parameter is not specified, the default channel is used.</para>
+        /// <para>The channel type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string EmployeeType { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to return per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public Dictionary<string, string> KeyInfo { get; set; }
 
                 /// <summary>
-                /// <para>The authentication type. Currently, only bearer is supported.</para>
+                /// <para>The authentication type. Currently, bearer is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bearer</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The custom headers.</para>
+            /// <para>The custom HTTP request headers appended when calling the MCP service.</para>
             /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
             public Dictionary<string, string> Headers { get; set; }
 
             /// <summary>
-            /// <para>The platform type of the MCP service. Valid values: AIGateway and Custom.</para>
+            /// <para>The MCP service platform type. Valid values: AIGateway and Custom.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             /// <para>The description of the MCP tool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Query logs in a specified Logstore</para>
+            /// <para>Queries logs in a specified Logstore</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]

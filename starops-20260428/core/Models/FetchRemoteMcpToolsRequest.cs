@@ -35,7 +35,10 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public Dictionary<string, string> KeyInfo { get; set; }
 
                 /// <summary>
-                /// <para>The authentication type. Currently, only bearer is supported.</para>
+                /// <para>The authentication type. Currently, only bearer is supported. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>bearer: Bearer token authentication.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bearer</para>
@@ -57,12 +60,19 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            /// <summary>
+            /// <para>The custom HTTP request headers appended when calling the MCP service.</para>
+            /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
             public Dictionary<string, string> Headers { get; set; }
 
             /// <summary>
-            /// <para>The MCP service platform type. Valid values: AIGateway and Custom.</para>
+            /// <para>The MCP service platform type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>AIGateway: AI gateway.</description></item>
+            /// <item><description>Custom: custom MCP service.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Custom</para>
@@ -82,7 +92,11 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public long? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The transport protocol of the MCP service. Valid values: http and sse.</para>
+            /// <para>The transport protocol of the MCP service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>sse: Server-Sent Events (SSE) transport protocol.</description></item>
+            /// <item><description>http: HTTP transport protocol.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -142,7 +156,11 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The network access mode of the MCP service. Valid values: public and vpc.</para>
+            /// <para>The network access mode of the MCP service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>public: Direct Internet Access mode.</description></item>
+            /// <item><description>vpc: VPC mode.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>public</para>

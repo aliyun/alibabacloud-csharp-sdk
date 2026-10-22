@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DigitalEmployee.</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DigitalEmployee.</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -561,7 +561,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DigitalEmployee.</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -585,7 +585,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DigitalEmployee.</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1951,8 +1951,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tool list from a remote MCP server.</para>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchRemoteMcpToolsRequest
@@ -2001,8 +2006,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tool list from a remote MCP server.</para>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchRemoteMcpToolsRequest
@@ -2051,8 +2061,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tool list from a remote MCP server.</para>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchRemoteMcpToolsRequest
@@ -2070,8 +2085,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tool list from a remote MCP server.</para>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the tool list from a remote MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchRemoteMcpToolsRequest
@@ -2561,8 +2581,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entity data of a digital employee.</para>
+        /// <para>Queries the entity data of a digital human.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the entity data of a digital human.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeEntityDataRequest
@@ -2615,8 +2640,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entity data of a digital employee.</para>
+        /// <para>Queries the entity data of a digital human.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the entity data of a digital human.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeEntityDataRequest
@@ -2669,8 +2699,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entity data of a digital employee.</para>
+        /// <para>Queries the entity data of a digital human.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the entity data of a digital human.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeEntityDataRequest
@@ -2688,8 +2723,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the entity data of a digital employee.</para>
+        /// <para>Queries the entity data of a digital human.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the entity data of a digital human.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeEntityDataRequest
@@ -2707,12 +2747,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific skill.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2758,12 +2798,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific skill.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2809,12 +2849,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific skill.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2833,12 +2873,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific skill.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2978,6 +3018,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Queries an MCP service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration of an MCP service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMcpServiceRequest
         /// </param>
@@ -3017,6 +3062,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <summary>
         /// <para>Queries an MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration of an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMcpServiceRequest
@@ -3058,6 +3108,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Queries an MCP service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration of an MCP service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMcpServiceRequest
         /// </param>
@@ -3077,6 +3132,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Queries an MCP service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration of an MCP service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMcpServiceRequest
         /// </param>
@@ -3093,12 +3153,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3138,12 +3198,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3183,12 +3243,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3207,12 +3267,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a thread.</para>
+        /// <para>Retrieves a session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3555,12 +3615,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the versions of a skill.</para>
+        /// <para>Lists skill versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the previous versions of a skill.</para>
+        /// <para>Lists historical versions of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3600,12 +3660,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the versions of a skill.</para>
+        /// <para>Lists skill versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the previous versions of a skill.</para>
+        /// <para>Lists historical versions of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3645,12 +3705,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the versions of a skill.</para>
+        /// <para>Lists skill versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the previous versions of a skill.</para>
+        /// <para>Lists historical versions of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3669,12 +3729,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the versions of a skill.</para>
+        /// <para>Lists skill versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the previous versions of a skill.</para>
+        /// <para>Lists historical versions of a skill.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3693,12 +3753,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the skills of a digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the skills of a specified digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3752,12 +3812,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the skills of a digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the skills of a specified digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3811,12 +3871,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the skills of a digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the skills of a specified digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3835,12 +3895,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the skills of a digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the skills of a specified digital employee.</para>
+        /// <para>Lists skills.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4080,6 +4140,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Queries the list of MCP services.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of MCP services.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListMcpServicesRequest
         /// </param>
@@ -4129,6 +4194,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <summary>
         /// <para>Queries the list of MCP services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of MCP services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMcpServicesRequest
@@ -4180,6 +4250,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Queries the list of MCP services.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of MCP services.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListMcpServicesRequest
         /// </param>
@@ -4199,6 +4274,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Queries the list of MCP services.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of MCP services.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListMcpServicesRequest
         /// </param>
@@ -4215,12 +4295,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4292,12 +4372,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4369,12 +4449,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4393,12 +4473,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List sessions</para>
+        /// <para>Lists sessions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4938,6 +5018,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an MCP service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateMcpServiceRequest
         /// </param>
@@ -5003,6 +5088,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <summary>
         /// <para>Updates an MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMcpServiceRequest
@@ -5070,6 +5160,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an MCP service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateMcpServiceRequest
         /// </param>
@@ -5089,6 +5184,11 @@ namespace AlibabaCloud.SDK.STAROps20260428
         /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an MCP service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateMcpServiceRequest
         /// </param>
@@ -5105,12 +5205,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5164,12 +5264,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5223,12 +5323,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5247,12 +5347,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a thread.</para>
+        /// <para>Updates a session.</para>
         /// </description>
         /// 
         /// <param name="request">

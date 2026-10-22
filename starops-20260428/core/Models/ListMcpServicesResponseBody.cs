@@ -58,7 +58,10 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                         public Dictionary<string, string> KeyInfo { get; set; }
 
                         /// <summary>
-                        /// <para>The authentication type. Currently, bearer is supported.</para>
+                        /// <para>The authentication type. Currently, only bearer is supported. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>bearer: Bearer token authentication.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>bearer</para>
@@ -79,12 +82,22 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     [Validation(Required=false)]
                     public string Endpoint { get; set; }
 
+                    /// <summary>
+                    /// <para>The custom HTTP request headers appended when calling the MCP service.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;X-Custom-Header&quot;:&quot;example-value&quot;}</para>
+                    /// </summary>
                     [NameInMap("headers")]
                     [Validation(Required=false)]
                     public Dictionary<string, string> Headers { get; set; }
 
                     /// <summary>
-                    /// <para>The platform type of the MCP service. Valid values: AIGateway and Custom.</para>
+                    /// <para>The platform type of the MCP service. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>AIGateway: AI gateway.</description></item>
+                    /// <item><description>Custom: custom MCP service.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Custom</para>
@@ -94,7 +107,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Platform { get; set; }
 
                     /// <summary>
-                    /// <para>The timeout period for requests to the MCP service. Unit: milliseconds.</para>
+                    /// <para>The timeout period for requests to the MCP service, in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5000</para>
@@ -104,7 +117,11 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public long? Timeout { get; set; }
 
                     /// <summary>
-                    /// <para>The transport protocol of the MCP service. Valid values: http and sse.</para>
+                    /// <para>The transport protocol of the MCP service. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>sse: Server-Sent Events (SSE) transport protocol.</description></item>
+                    /// <item><description>http: HTTP transport protocol.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>http</para>
@@ -119,7 +136,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 /// <para>The description of the MCP service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>通过 MCP 调用日志查询工具。</para>
+                /// <para>Call the log query tool through MCP</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -129,7 +146,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 /// <para>The display name of the MCP service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>日志查询</para>
+                /// <para>Log Query</para>
                 /// </summary>
                 [NameInMap("displayName")]
                 [Validation(Required=false)]
@@ -203,7 +220,11 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string McpServerId { get; set; }
 
                     /// <summary>
-                    /// <para>The network access mode of the MCP service. Valid values: public and vpc.</para>
+                    /// <para>The network access mode of the MCP service. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>public: direct public network access mode.</description></item>
+                    /// <item><description>vpc: Virtual Private Cloud (VPC) mode.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>public</para>
@@ -275,7 +296,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public Dictionary<string, object> Annotations { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether user confirmation is required before calling the MCP tool.</para>
+                    /// <para>Specifies whether user confirmation is required before calling the MCP tool.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -288,7 +309,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     /// <para>The description of the MCP tool.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>查询指定日志库中的日志。</para>
+                    /// <para>Query logs in a specified Logstore</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -298,7 +319,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     /// <para>The display name of the MCP tool.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>日志查询工具</para>
+                    /// <para>Log Query Tool</para>
                     /// </summary>
                     [NameInMap("displayName")]
                     [Validation(Required=false)]
@@ -368,7 +389,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     /// <para>The title of the MCP tool.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>查询日志</para>
+                    /// <para>Query Logs</para>
                     /// </summary>
                     [NameInMap("title")]
                     [Validation(Required=false)]

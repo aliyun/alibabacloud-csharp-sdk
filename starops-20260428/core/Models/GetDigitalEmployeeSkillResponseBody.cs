@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetDigitalEmployeeSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the skill was created.</para>
+        /// <para>The creation time in RFC 3339 format with the UTC time zone.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The file list of the skill.</para>
+        /// <para>The list of skill files.</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>A user-provided remark about the skill.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the skill.</para>
+        /// <para>The skill name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The time when the skill was last updated.</para>
+        /// <para>The update time in RFC 3339 format with the UTC time zone.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The version of the skill.</para>
+        /// <para>The version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770386951147366810</para>

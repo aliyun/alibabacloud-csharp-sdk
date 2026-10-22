@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListDigitalEmployeeSkillsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in the response.</para>
+        /// <para>The maximum number of records to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in a subsequent request to retrieve the next page of results. To retrieve the first page, do not specify this parameter.</para>
+        /// <para>The token for the next page. A value of null indicates that there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the skill.</para>
+        /// <para>The skill name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

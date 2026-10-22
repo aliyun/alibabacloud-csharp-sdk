@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListDigitalEmployeeSkillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of results returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token to retrieve the next page of results. If this parameter is not returned, it indicates that no more results are available.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public List<ListDigitalEmployeeSkillsResponseBodySkills> Skills { get; set; }
         public class ListDigitalEmployeeSkillsResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The time at which the skill was created.</para>
+            /// <para>The creation time in RFC 3339 format with the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the skill.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The name of the skill.</para>
+            /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The time at which the skill was last updated.</para>
+            /// <para>The update time in RFC 3339 format with the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries that match the query.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

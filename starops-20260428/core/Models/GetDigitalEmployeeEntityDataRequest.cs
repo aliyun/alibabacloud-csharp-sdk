@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>Only the .entity or .topo semantic sources of the current digital employee can be queried. Explicit access to internal storage or external data sources is prohibited.</para>
+        /// <para>Only the .entity or .topo semantic sources of the current digital human can be queried. Explicit access to internal storage or external data sources is prohibited.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
