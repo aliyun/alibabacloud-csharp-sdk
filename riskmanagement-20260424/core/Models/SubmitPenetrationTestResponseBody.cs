@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitPenetrationTestResponseBodyData Data { get; set; }
         public class SubmitPenetrationTestResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned data.</para>
+            /// <para>The response data.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 /// <para>The type of the asset. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>EIP</b>: The public IP address of a virtual private cloud (VPC).</description></item>
-                /// <item><description><b>SLB</b>: load balancing</description></item>
+                /// <item><description><b>SLB</b>: load balancing.</description></item>
                 /// <item><description><b>ECS</b>: The public IP address of an Elastic Compute Service (ECS) instance in the classic network.</description></item>
                 /// </list>
                 /// 
@@ -85,10 +85,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The call status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

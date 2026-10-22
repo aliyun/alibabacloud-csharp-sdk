@@ -1539,7 +1539,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately ends a penetration test.</para>
+        /// <para>Immediately terminates a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1581,7 +1581,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately ends a penetration test.</para>
+        /// <para>Immediately terminates a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1623,7 +1623,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately ends a penetration test.</para>
+        /// <para>Immediately terminates a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1641,7 +1641,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately ends a penetration test.</para>
+        /// <para>Immediately terminates a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4307,6 +4307,198 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>解封申请列表及分页信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryForOperationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryForOperationResponse
+        /// </returns>
+        public QueryForOperationResponse QueryForOperationWithOptions(QueryForOperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyTimeEnd))
+            {
+                query["ApplyTimeEnd"] = request.ApplyTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyTimeStart))
+            {
+                query["ApplyTimeStart"] = request.ApplyTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetType))
+            {
+                query["AssetType"] = request.AssetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditTimeEnd))
+            {
+                query["AuditTimeEnd"] = request.AuditTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditTimeStart))
+            {
+                query["AuditTimeStart"] = request.AuditTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryForOperation",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryForOperationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解封申请列表及分页信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryForOperationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryForOperationResponse
+        /// </returns>
+        public async Task<QueryForOperationResponse> QueryForOperationWithOptionsAsync(QueryForOperationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyTimeEnd))
+            {
+                query["ApplyTimeEnd"] = request.ApplyTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyTimeStart))
+            {
+                query["ApplyTimeStart"] = request.ApplyTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetType))
+            {
+                query["AssetType"] = request.AssetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditTimeEnd))
+            {
+                query["AuditTimeEnd"] = request.AuditTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditTimeStart))
+            {
+                query["AuditTimeStart"] = request.AuditTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryForOperation",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryForOperationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解封申请列表及分页信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryForOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryForOperationResponse
+        /// </returns>
+        public QueryForOperationResponse QueryForOperation(QueryForOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryForOperationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解封申请列表及分页信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryForOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryForOperationResponse
+        /// </returns>
+        public async Task<QueryForOperationResponse> QueryForOperationAsync(QueryForOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryForOperationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the subscription status of the cloud security guide.</para>
         /// </summary>
         /// 
@@ -4531,7 +4723,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试申请列表</para>
+        /// <para>Queries the list of penetration test applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4577,7 +4769,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试申请列表</para>
+        /// <para>Queries the list of penetration test applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4623,7 +4815,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试申请列表</para>
+        /// <para>Queries the list of penetration test applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4641,7 +4833,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试申请列表</para>
+        /// <para>Queries the list of penetration test applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5567,6 +5759,174 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitApplyRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交 TCP25端口免审解封申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAutoAuditUnblockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAutoAuditUnblockResponse
+        /// </returns>
+        public SubmitAutoAuditUnblockResponse SubmitAutoAuditUnblockWithOptions(SubmitAutoAuditUnblockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetList))
+            {
+                query["AssetList"] = request.AssetList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Auditor))
+            {
+                query["Auditor"] = request.Auditor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailType))
+            {
+                query["EmailType"] = request.EmailType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasUnsubscribe))
+            {
+                query["HasUnsubscribe"] = request.HasUnsubscribe;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendCount))
+            {
+                query["SendCount"] = request.SendCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDesc))
+            {
+                query["UseDesc"] = request.UseDesc;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAutoAuditUnblock",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAutoAuditUnblockResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交 TCP25端口免审解封申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAutoAuditUnblockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAutoAuditUnblockResponse
+        /// </returns>
+        public async Task<SubmitAutoAuditUnblockResponse> SubmitAutoAuditUnblockWithOptionsAsync(SubmitAutoAuditUnblockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetList))
+            {
+                query["AssetList"] = request.AssetList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Auditor))
+            {
+                query["Auditor"] = request.Auditor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailType))
+            {
+                query["EmailType"] = request.EmailType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasUnsubscribe))
+            {
+                query["HasUnsubscribe"] = request.HasUnsubscribe;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendCount))
+            {
+                query["SendCount"] = request.SendCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseDesc))
+            {
+                query["UseDesc"] = request.UseDesc;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAutoAuditUnblock",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAutoAuditUnblockResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交 TCP25端口免审解封申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAutoAuditUnblockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAutoAuditUnblockResponse
+        /// </returns>
+        public SubmitAutoAuditUnblockResponse SubmitAutoAuditUnblock(SubmitAutoAuditUnblockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitAutoAuditUnblockWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交 TCP25端口免审解封申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAutoAuditUnblockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAutoAuditUnblockResponse
+        /// </returns>
+        public async Task<SubmitAutoAuditUnblockResponse> SubmitAutoAuditUnblockAsync(SubmitAutoAuditUnblockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitAutoAuditUnblockWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

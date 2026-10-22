@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class SubmitPenetrationTestRequest : TeaModel {
         /// <summary>
-        /// <para>The list of assets.</para>
+        /// <para>The asset list.</para>
         /// <remarks>
         /// <para>The array supports a maximum of 50 IP addresses.</para>
         /// </remarks>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string AssetList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a third-party testing service provider is used. Valid values:</para>
+        /// <para>Specifies whether the test is performed by a third-party testing service provider. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: Yes.</para>
         /// </description></item>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The source IP addresses used for the test.</para>
         /// <remarks>
-        /// <para>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). 0.0.0.0 indicates that all IP addresses are allowed. CIDR blocks are not supported, such as 140.168.0.0/16.</para>
+        /// <para>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). 0.0.0.0 indicates that all IP addresses are allowed. CIDR blocks such as 140.168.0.0/16 are not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The test steps.</para>
         /// <remarks>
-        /// <para>The content must not exceed 500 characters. Provide detailed information to facilitate the approval process.</para>
+        /// <para>The steps must not exceed 500 characters. Provide detailed information to facilitate the approval process.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

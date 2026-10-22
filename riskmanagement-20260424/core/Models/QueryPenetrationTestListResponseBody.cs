@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class QueryPenetrationTestListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// <list type="bullet">
+        /// <item><description><b>200</b>: Successful.</description></item>
+        /// <item><description><b>Other values (such as 400 and 500)</b>: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,15 +23,23 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The query results.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryPenetrationTestListResponseBodyData Data { get; set; }
         public class QueryPenetrationTestListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The event data.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<QueryPenetrationTestListResponseBodyDataList> List { get; set; }
             public class QueryPenetrationTestListResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>The application time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1788873796000</para>
                 /// </summary>
@@ -34,6 +48,13 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public long? ApplyTime { get; set; }
 
                 /// <summary>
+                /// <para>The type of the asset. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>EIP</b>: Public IP address of a VPC.</description></item>
+                /// <item><description><b>SLB</b>: Server Load Balancer (SLB) instance for load balancing.</description></item>
+                /// <item><description><b>ECS</b>: Public IP address of an ECS instance in the classic network.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>EIP</para>
                 /// </summary>
@@ -42,6 +63,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string AssetType { get; set; }
 
                 /// <summary>
+                /// <para>The unique identity ID of the alerting event record.</para>
+                /// <remarks>
+                /// <para>The data type of this field is Long. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Make sure that the value does not exceed 9007199254740991.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>710864062</para>
                 /// </summary>
@@ -50,6 +76,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The IP address of the asset.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10.0.158.58</para>
                 /// </summary>
@@ -58,6 +86,15 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Ip { get; set; }
 
                 /// <summary>
+                /// <para>The task status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>early_end</b>: The user applied for early termination.</description></item>
+                /// <item><description><b>expired</b>: The authorization expired.</description></item>
+                /// <item><description><b>auditing</b>: Under review.</description></item>
+                /// <item><description><b>approved</b>: Approved.</description></item>
+                /// <item><description><b>rejected</b>: Rejected.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>early_end</para>
                 /// </summary>
@@ -66,6 +103,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The end time of the test.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1788873796000</para>
                 /// </summary>
@@ -74,6 +113,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public long? TestEndDate { get; set; }
 
                 /// <summary>
+                /// <para>The start date of the test.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1788873796000</para>
                 /// </summary>
@@ -83,11 +124,19 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
             }
 
+            /// <summary>
+            /// <para>The pagination information.</para>
+            /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
             public QueryPenetrationTestListResponseBodyDataPageInfo PageInfo { get; set; }
             public class QueryPenetrationTestListResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
+                /// <para>The page number of the returned page.</para>
+                /// <remarks>
+                /// <para>Default value: 1, which indicates the first page.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -96,6 +145,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
+                /// <para>The number of entries returned per page.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>24</para>
                 /// </summary>
@@ -104,6 +155,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
+                /// <para>The total number of events.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -116,6 +169,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -124,6 +179,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</para>
         /// </summary>
@@ -132,6 +189,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.                               </description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

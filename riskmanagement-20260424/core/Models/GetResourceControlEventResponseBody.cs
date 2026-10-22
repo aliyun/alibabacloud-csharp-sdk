@@ -20,19 +20,78 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetResourceControlEventResponseBodyData Data { get; set; }
         public class GetResourceControlEventResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of application records.</para>
+            /// <para>The list of application record information.</para>
             /// </summary>
             [NameInMap("ApplyRecordList")]
             [Validation(Required=false)]
             public List<GetResourceControlEventResponseBodyDataApplyRecordList> ApplyRecordList { get; set; }
             public class GetResourceControlEventResponseBodyDataApplyRecordList : TeaModel {
+                /// <summary>
+                /// <para>The details of abnormal hours for CDN traffic exceptions.</para>
+                /// </summary>
+                [NameInMap("AnomalyHours")]
+                [Validation(Required=false)]
+                public List<GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours> AnomalyHours { get; set; }
+                public class GetResourceControlEventResponseBodyDataApplyRecordListAnomalyHours : TeaModel {
+                    /// <summary>
+                    /// <para>The traffic exceptions in bytes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>150323855</para>
+                    /// </summary>
+                    [NameInMap("AbnormalBytes")]
+                    [Validation(Required=false)]
+                    public long? AbnormalBytes { get; set; }
+
+                    /// <summary>
+                    /// <para>The anomaly description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The traffic for the domain name cdn-newfile.stomics.tech increased to 54.78 GB between 03:00 and 04:00 on October 22, 2026, approximately 386 times the historical baseline of 0.14 GB. During this period, about 99.7% of the traffic was concentrated in the 14.22.49 CIDR block. Approximately 160 IP addresses accessed the domain, with no single IP accounting for a large proportion. The traffic involved 258 large files, primarily in tar.gz format, with an empty Referer header, indicating batch downloads or abnormal data pulling. Verify whether this was caused by a version release, image synchronization, or partner downloads. If the cause cannot be confirmed, temporarily throttle or block this CIDR block and implement access control for large files</para>
+                    /// </summary>
+                    [NameInMap("AnomalyDesc")]
+                    [Validation(Required=false)]
+                    public string AnomalyDesc { get; set; }
+
+                    /// <summary>
+                    /// <para>The baseline traffic in bytes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>58819577119</para>
+                    /// </summary>
+                    [NameInMap("BaselineBytes")]
+                    [Validation(Required=false)]
+                    public long? BaselineBytes { get; set; }
+
+                    /// <summary>
+                    /// <para>The anomaly hour.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2026-10-22 03:00:23</para>
+                    /// </summary>
+                    [NameInMap("Hour")]
+                    [Validation(Required=false)]
+                    public string Hour { get; set; }
+
+                    /// <summary>
+                    /// <para>The traffic multiplier.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>391.29</para>
+                    /// </summary>
+                    [NameInMap("TrafRatio")]
+                    [Validation(Required=false)]
+                    public double? TrafRatio { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The reason for approval.</para>
                 /// 
@@ -51,7 +110,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public GetResourceControlEventResponseBodyDataApplyRecordListEventTimeRecord EventTimeRecord { get; set; }
                 public class GetResourceControlEventResponseBodyDataApplyRecordListEventTimeRecord : TeaModel {
                     /// <summary>
-                    /// <para>The time when the alert ended.</para>
+                    /// <para>The end time of the alert.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -64,7 +123,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AlertEndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the first alert was triggered.</para>
+                    /// <para>The time of the first alert.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -77,7 +136,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AlertStartTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the control action was lifted.</para>
+                    /// <para>The time when the restriction is lifted.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -103,7 +162,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string ApplyTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the alert was ignored.</para>
+                    /// <para>The time when the alert is ignored.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -116,7 +175,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string IgnoreAlertTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the instance was shut down.</para>
+                    /// <para>The time when the instance is shut down.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -129,7 +188,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string InstanceCloseTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the instance was scanned.</para>
+                    /// <para>The time when the instance is scanned.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -142,7 +201,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string InstanceScanTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time of the latest detection.</para>
+                    /// <para>The time of the latest check.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -155,7 +214,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string LastCheckTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the mining alert was processed.</para>
+                    /// <para>The processing time of the mining alert.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -194,7 +253,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string ProcessTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the control action ended.</para>
+                    /// <para>The end time of the restriction.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -207,7 +266,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string PunishEndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the control action started.</para>
+                    /// <para>The start time of the restriction.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -233,7 +292,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string RejectTime { get; set; }
 
                     /// <summary>
-                    /// <para>The removal time.</para>
+                    /// <para>The time when the restriction is removed.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -246,7 +305,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string RemoveTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the risk check succeeded.</para>
+                    /// <para>The time when the risk check succeeds.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -271,7 +330,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string RejectReason { get; set; }
 
                 /// <summary>
-                /// <para>The remarks.</para>
+                /// <para>The remark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test Desc for Draft</para>
@@ -281,13 +340,13 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The task status. Valid values:</para>
+                /// <para>The task status.</para>
                 /// <list type="bullet">
-                /// <item><description><b>Executing</b>: executing</description></item>
-                /// <item><description><b>Removed</b>: removed</description></item>
-                /// <item><description><b>Alerting</b>: alerting</description></item>
-                /// <item><description><b>Ended</b>: ended</description></item>
-                /// <item><description><b>Processed</b>: processed by the user and under platform review</description></item>
+                /// <item><description><b>Executing</b>: In progress.</description></item>
+                /// <item><description><b>Removed</b>: Removed.</description></item>
+                /// <item><description><b>Alerting</b>: Alerting.</description></item>
+                /// <item><description><b>Ended</b>: Ended.</description></item>
+                /// <item><description><b>Processed</b>: Processed by the user and under platform review.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -300,7 +359,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             }
 
             /// <summary>
-            /// <para>The recommended action from the assistant.</para>
+            /// <para>The handling suggestions from the assistant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>assistant tip</para>
@@ -322,8 +381,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             /// <summary>
             /// <para>The traffic direction. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>in</b>: inbound to the cloud. </description></item>
-            /// <item><description><b>out</b>: outbound from the cloud.</description></item>
+            /// <item><description><b>in</b>: Inbound to the cloud. </description></item>
+            /// <item><description><b>out</b>: Outbound from the cloud.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -414,7 +473,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string SnapshotUrl { get; set; }
 
             /// <summary>
-            /// <para>The attack source IP address.</para>
+            /// <para>The source IP address of the attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36.134.124.185</para>
@@ -434,7 +493,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string SrcPort { get; set; }
 
             /// <summary>
-            /// <para>The recommended action.</para>
+            /// <para>The handling suggestions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Suggestion</para>
@@ -446,7 +505,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
-        /// <para>The prompt message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful‌</para>
@@ -466,10 +525,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

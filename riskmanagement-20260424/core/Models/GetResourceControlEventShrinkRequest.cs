@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class GetResourceControlEventShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language. Valid values:</para>
+        /// <para>The language environment.</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description>Chinese (default): <b>zh</b></description></item>
+        /// <item><description>English: <b>en</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>The alert event ID.</para>
+        /// <para>The ID of the alert event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The list of specified event IDs.</para>
+        /// <para>The list of event IDs.</para>
         /// </summary>
         [NameInMap("EventIdList")]
         [Validation(Required=false)]
