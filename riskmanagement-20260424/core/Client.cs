@@ -4307,7 +4307,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解封申请列表及分页信息</para>
+        /// <para>Queries the list of port unblocking applications and pagination information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4385,7 +4385,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解封申请列表及分页信息</para>
+        /// <para>Queries the list of port unblocking applications and pagination information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4463,7 +4463,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解封申请列表及分页信息</para>
+        /// <para>Queries the list of port unblocking applications and pagination information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4481,7 +4481,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解封申请列表及分页信息</para>
+        /// <para>Queries the list of port unblocking applications and pagination information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5763,7 +5763,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 TCP25端口免审解封申请</para>
+        /// <para>Claims privileges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5829,7 +5829,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 TCP25端口免审解封申请</para>
+        /// <para>Claims privileges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5895,7 +5895,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 TCP25端口免审解封申请</para>
+        /// <para>Claims privileges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5913,7 +5913,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 TCP25端口免审解封申请</para>
+        /// <para>Claims privileges.</para>
         /// </summary>
         /// 
         /// <param name="request">
