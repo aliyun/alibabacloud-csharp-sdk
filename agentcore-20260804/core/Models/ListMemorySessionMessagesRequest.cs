@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMemorySessionMessagesRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID. At least one of UserId and AgentId must be provided. The length must be 1 to 128 UTF-8 bytes. The value cannot contain forward slashes (/) or asterisks (*).</para>
+        /// <para>The agent ID. You must specify at least one of AgentId and UserId. The length is limited to 1 to 128 UTF-8 bytes. The forward slash (/) and asterisk (*) are not allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The session ID. The length must be 1 to 128 UTF-8 bytes. The value cannot contain forward slashes (/) or asterisks (*).</para>
+        /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The forward slash (/) and asterisk (*) are not allowed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID. At least one of UserId and AgentId must be provided. The length must be 1 to 128 UTF-8 bytes. The value cannot contain forward slashes (/) or asterisks (*).</para>
+        /// <para>The user ID. You must specify at least one of UserId and AgentId. The length is limited to 1 to 128 UTF-8 bytes. The forward slash (/) and asterisk (*) are not allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-001</para>

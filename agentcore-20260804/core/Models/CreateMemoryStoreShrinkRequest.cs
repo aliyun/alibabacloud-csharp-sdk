@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateMemoryStoreShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request to create a memory store.</para>
+        /// <para>The MemoryStore creation request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The client request token.</para>
+        /// <para>The client token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memory-store-create-20260909-001</para>

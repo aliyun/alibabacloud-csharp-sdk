@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateCustomAgentRequestBody Body { get; set; }
         public class CreateCustomAgentRequestBody : TeaModel {
             /// <summary>
-            /// <para>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and ossMounts cannot exceed 10. If you omit this parameter or pass an empty array [] during creation, no additional mounts are configured. If you omit this parameter during an update, the original value is retained. If you pass an empty array [], the mounts are cleared. You cannot pass null.</para>
+            /// <para>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and ossMounts cannot exceed 10. If you omit this parameter or pass [] during creation, no additional mounts are configured. If you omit this parameter during an update, the original value is retained. If you pass [], the list is cleared. You cannot pass null.</para>
             /// </summary>
             [NameInMap("agenticFsMounts")]
             [Validation(Required=false)]
             public List<CreateCustomAgentRequestBodyAgenticFsMounts> AgenticFsMounts { get; set; }
             public class CreateCustomAgentRequestBodyAgenticFsMounts : TeaModel {
                 /// <summary>
-                /// <para>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or overlap in parent-child relationships.</para>
+                /// <para>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or form parent-child overrides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/agenticfs/data</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The existing non-empty relative directory under the access point. This parameter is required for each mount item. Root directories, absolute paths, and parent directory references are not allowed.</para>
+                /// <para>The existing non-empty relative directory under the access point. This parameter is required for each mount item. Root directories, absolute paths, and parent directory traversals are not allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>workspace/data</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The domain name of the access point. This parameter is required for each mount item. Use the DomainName from the NAS ListAccessPoints response. Do not include the protocol, port, or path.</para>
+                /// <para>The domain name of the access point. This parameter is required for each mount item. Use the DomainName from the ListAccessPoints response of NAS. Do not include the protocol, port, or path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The deployment artifact configuration. Currently, only ACR container images are supported. Specify container and the service listening port in port, and omit code.</para>
+            /// <para>The deployment artifact configuration. You must specify the service listening port and choose either code or container as the deployment method.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("artifact")]
@@ -74,40 +74,40 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateCustomAgentRequestBodyArtifact Artifact { get; set; }
             public class CreateCustomAgentRequestBodyArtifact : TeaModel {
                 /// <summary>
-                /// <para>The code package deployment configuration. This is not currently supported. Omit this parameter and use artifact.container.</para>
+                /// <para>The code package deployment configuration. This parameter is mutually exclusive with container. Code packages use the ZIP or TAR.GZ format. Dependencies must be packaged by the user. The platform does not install dependencies or perform online builds.</para>
                 /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public CreateCustomAgentRequestBodyArtifactCode Code { get; set; }
                 public class CreateCustomAgentRequestBodyArtifactCode : TeaModel {
                     /// <summary>
-                    /// <para>The startup entry point for the code package. Code package deployment is not currently supported. Omit this parameter.</para>
+                    /// <para>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>python app.py</para>
+                    /// <para>python main.py</para>
                     /// </summary>
                     [NameInMap("entrypoint")]
                     [Validation(Required=false)]
                     public string Entrypoint { get; set; }
 
                     /// <summary>
-                    /// <para>The language runtime identifier for the code package. Code package deployment is not currently supported. Omit this parameter.</para>
+                    /// <para>The code runtime environment identifier, such as python3.12. When you create or switch environments, use the identifier returned by ListAgentCodeRuntimes. The identifier is validated by the current version catalog and is not a fixed enumeration.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>python</para>
+                    /// <para>python3.12</para>
                     /// </summary>
                     [NameInMap("languageRuntime")]
                     [Validation(Required=false)]
                     public string LanguageRuntime { get; set; }
 
                     /// <summary>
-                    /// <para>The source URI of the code package. Code package deployment is not currently supported. Omit this parameter.</para>
+                    /// <para>The source address of the code package. OSS addresses (oss://) or HTTPS object addresses of standard OSS public domain names, including OSS signed URLs, are supported. Arbitrary external sites, custom domain names, and additional authentication request headers are not supported. For local uploads, use the sourceUri returned by GetAgentCodePackageUploadUrl. The address is revalidated and transferred during creation or updates. After the address is saved, a fixed oss:// address of the platform is returned. You can reuse this fixed address for regular updates.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>oss://my-agent-bucket/packages/agent.zip</para>
+                    /// <para>oss://my-agent-bucket/packages/main.zip</para>
                     /// </summary>
                     [NameInMap("sourceUri")]
                     [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The ACR container image configuration. You must specify type, instanceId, namespace, repo, and tag. Do not configure code at the same time.</para>
+                /// <para>The Container Registry (ACR) container image configuration. You must specify type, instanceId, namespace, repo, and tag. Do not configure code at the same time.</para>
                 /// </summary>
                 [NameInMap("container")]
                 [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Repo { get; set; }
 
                     /// <summary>
-                    /// <para>The image tag used for deployment. This parameter cannot be empty. When updating the tag, you must also specify artifact.port and other required image fields.</para>
+                    /// <para>The image tag used for deployment. This parameter cannot be empty. When you update the tag, you must also specify artifact.port and other required image fields.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Tag { get; set; }
 
                     /// <summary>
-                    /// <para>The image source type. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</para>
+                    /// <para>The image source type. Only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The TCP port on which the agent service listens. Valid values: 1 to 65535.</para>
+                /// <para>The TCP port listened by the agent service. Valid values: 1 to 65535.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -203,10 +203,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The description of the agent\&quot;s purpose. The maximum length is 1,024 characters after leading and trailing whitespace is removed.</para>
+            /// <para>The description of the agent purpose. The maximum length is 1,024 characters after leading and trailing spaces are removed.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Custom agent that provides conversational services</para>
+            /// <para>Custom agent that provides conversation services</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<CreateCustomAgentRequestBodyEnvironmentVariables> Variables { get; set; }
                 public class CreateCustomAgentRequestBodyEnvironmentVariables : TeaModel {
                     /// <summary>
-                    /// <para>The name of the environment variable. This parameter cannot be empty and must be unique within the current environment variable list.</para>
+                    /// <para>The name of the environment variable. This parameter cannot be empty and must be unique in the current environment variable list.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateCustomAgentRequestBodyHealthCheck HealthCheck { get; set; }
             public class CreateCustomAgentRequestBodyHealthCheck : TeaModel {
                 /// <summary>
-                /// <para>This parameter does not currently take effect. Omit this parameter.</para>
+                /// <para>This parameter does not take effect. Omit this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The port accessed for health checks. This parameter is required when configuring a health check. Valid values: 1 to 65535.</para>
+                /// <para>The port accessed for health checks. This parameter is required when you configure a health check. Valid values: 1 to 65535.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public int? TimeoutSeconds { get; set; }
 
                 /// <summary>
-                /// <para>The number of consecutive health check failures required to mark the agent as unhealthy. It must be a positive integer. If this parameter is omitted, the default value is 3.</para>
+                /// <para>The number of consecutive health check failures after which the agent is considered unhealthy. It must be a positive integer. If this parameter is omitted, the default value is 3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateCustomAgentRequestBodyLogging Logging { get; set; }
             public class CreateCustomAgentRequestBodyLogging : TeaModel {
                 /// <summary>
-                /// <para>The Simple Log Service log delivery destination. When configuring this object, neither project nor logstore can be empty.</para>
+                /// <para>The Simple Log Service log delivery destination. When you configure this object, neither project nor logstore can be empty.</para>
                 /// </summary>
                 [NameInMap("sls")]
                 [Validation(Required=false)]
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The name of the custom agent. The length must be 1 to 128 characters after leading and trailing whitespace is removed. The name must be unique within the same workspace.</para>
+            /// <para>The name of the custom agent. The length is 1 to 128 characters after leading and trailing spaces are removed. The name must be unique within the same workspace.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network access configuration of the agent. If this object is provided, omitted access items are treated as allowed. The actual accessible scope is still limited by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</para>
+            /// <para>The network access configuration of the agent. If this object is provided, omitted access items are treated as allowed. The actual accessible range is still limited by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</para>
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateCustomAgentRequestBodyNetworkAccessInternet AccessInternet { get; set; }
                 public class CreateCustomAgentRequestBodyNetworkAccessInternet : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to allow the agent to access the Internet. A Boolean value must be provided when configuring accessInternet. For this to take effect, the workspace must also allow Internet access.</para>
+                    /// <para>Specifies whether to allow the agent to access the Internet. A Boolean value must be provided when you configure accessInternet. For this configuration to take effect, the workspace must also allow Internet access.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateCustomAgentRequestBodyNetworkAccessVpc AccessVpc { get; set; }
                 public class CreateCustomAgentRequestBodyNetworkAccessVpc : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value must be provided when configuring accessVpc. For this to take effect, the workspace must also allow VPC access.</para>
+                    /// <para>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value must be provided when you configure accessVpc. For this configuration to take effect, the workspace must also allow VPC access.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateCustomAgentRequestBodyObservability Observability { get; set; }
             public class CreateCustomAgentRequestBodyObservability : TeaModel {
                 /// <summary>
-                /// <para>Default value: true. If set to false, the platform Python probe is not loaded at runtime, and you must collect observability data yourself.</para>
+                /// <para>Specifies whether to enable agent observability.</para>
                 /// </summary>
                 [NameInMap("enabled")]
                 [Validation(Required=false)]
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The list of OSS mounts. A maximum of 10 items are allowed in total with agenticFsMounts. Each item must specify bucketName, path, and mountPath. Mount targets must not be duplicated or overlap with each other. When you update the agent, the entire list is replaced. Pass an empty array [] to clear the list.</para>
+            /// <para>The list of OSS mounts. The total number of items in this list and agenticFsMounts cannot exceed 10. Each item must include bucketName, path, and mountPath. Mount targets must not be duplicated or overlap with each other. When you update this list, the entire list is replaced. Pass an empty array [] to clear the list.</para>
             /// </summary>
             [NameInMap("ossMounts")]
             [Validation(Required=false)]
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing slashes (/) are removed. The root directory is not supported. Do not use parent directory traversal.</para>
+                /// <para>The non-empty object directory prefix in the bucket, such as datasets/train. Leading and trailing slashes are removed. The root directory is not supported. Do not use parent directory traversal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>datasets/train</para>
@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. When you update the agent, the entire list is replaced.</para>
+            /// <para>The list of invocation protocols supported by the agent. Each item includes the protocol type and optional paths and request headers. When you update this list, the entire list is replaced.</para>
             /// </summary>
             [NameInMap("protocol")]
             [Validation(Required=false)]
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<CreateCustomAgentRequestBodyProtocolPaths> Paths { get; set; }
                 public class CreateCustomAgentRequestBodyProtocolPaths : TeaModel {
                     /// <summary>
-                    /// <para>The purpose description of the current API path.</para>
+                    /// <para>The usage description of the current API path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AG-UI conversation API</para>
@@ -518,7 +518,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The invocation protocol type. Valid values: agui: AG-UI protocol; openai-chat-completion: OpenAI Chat Completions compatible protocol; custom: custom protocol.</para>
+                /// <para>The invocation protocol type. Valid values: agui: AG-UI protocol. openai-chat-completion: OpenAI Chat Completions compatible protocol. custom: Custom protocol.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -531,7 +531,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The ARN of the RAM role used when the agent accesses user cloud resources. The role must have permissions to access the cloud resources.</para>
+            /// <para>The ARN of the RAM role used by the agent to access user cloud resources. The role must have permissions to access the cloud resources.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The runtime configuration, including compute specifications, session policies, and optional elastic policy. Both compute and sessionPolicy must be specified at the same time.</para>
+            /// <para>The runtime configuration, including compute specifications, session policies, and an optional elastic policy. Both compute and sessionPolicy must be specified at the same time.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("runtime")]
@@ -558,7 +558,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateCustomAgentRequestBodyRuntimeCompute Compute { get; set; }
                 public class CreateCustomAgentRequestBodyRuntimeCompute : TeaModel {
                     /// <summary>
-                    /// <para>The compute specification. Valid values: INTERACTIVE: 1 vCPU and 2 GiB of memory; STANDARD: 2 vCPUs and 4 GiB of memory; HEAVY: 4 vCPUs and 8 GiB of memory.</para>
+                    /// <para>The compute specification. Valid values: INTERACTIVE: 1 vCPU and 2 GiB of memory. STANDARD: 2 vCPUs and 4 GiB of memory. HEAVY: 4 vCPUs and 8 GiB of memory.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateCustomAgentRequestBodyRuntimeHpa Hpa { get; set; }
                 public class CreateCustomAgentRequestBodyRuntimeHpa : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. When runtime is provided, if this field is omitted, the default value false is used.</para>
+                    /// <para>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. When runtime is provided, if this field is omitted, the default value is false.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("enabled")]
@@ -586,7 +586,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, if this field is omitted, the default value 100 is used.</para>
+                    /// <para>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, if this field is omitted, the default value is 100.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -596,7 +596,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MaxConcurrentSessionsPerSandbox { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, if this field is omitted, the default value 10 is used.</para>
+                    /// <para>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, if this field is omitted, the default value is 10.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -606,7 +606,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MaxSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, if this field is omitted, the default value 1 is used.</para>
+                    /// <para>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, if this field is omitted, the default value is 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -616,7 +616,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, if this field is omitted, the default value 600 is used.</para>
+                    /// <para>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, if this field is omitted, the default value is 600.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>600</para>
@@ -646,7 +646,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string HeaderName { get; set; }
 
                     /// <summary>
-                    /// <para>The session policy type. Valid values: AFFINITY: session affinity. ISOLATED_HEADER_FIELD: uses the request header specified by headerName to associate sessions. ISOLATED_COOKIE: not recommended for now. DISABLED: compatibility option, and the response returns AFFINITY.</para>
+                    /// <para>The session policy type. Valid values: AFFINITY: Session affinity. ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified by headerName. ISOLATED_COOKIE: Not recommended for now. DISABLED: A compatibility option. The response returns AFFINITY.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -661,7 +661,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to use the image cache. If omitted during creation, the default value is false. You can explicitly set it to true or false. The new contract rejects null and invalid types. Existing compatibility endpoints are processed according to migration agreements.</para>
+            /// <para>Specifies whether to use the image cache. If omitted during creation, the default value is false. You can explicitly set this parameter to true or false. The new contract rejects null and invalid types. Existing compatibility endpoints are processed according to migration agreements.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreName { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle state of the MemoryStore.</para>
+            /// <para>The lifecycle status of the MemoryStore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ready</para>

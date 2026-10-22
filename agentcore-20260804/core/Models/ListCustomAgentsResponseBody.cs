@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListCustomAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code of the request. The value is SUCCESS if the request is successful.</para>
+        /// <para>The request result code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the request. The value is 200 if the request is successful.</para>
+        /// <para>The HTTP status code of the current request. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of custom agent summaries on the current page. To obtain the complete configuration and the execution results of the latest version, call GetCustomAgent.</para>
+        /// <para>The list of custom agent summaries on the current page. To query the complete configuration and the execution result of the latest version, call the GetCustomAgent operation.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListCustomAgentsResponseBodyItems> Items { get; set; }
         public class ListCustomAgentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the custom agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</para>
+            /// <para>The unique identifier of the custom agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-550e8400e29b41d4a716446655440000</para>
@@ -45,6 +45,201 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("agentId")]
             [Validation(Required=false)]
             public string AgentId { get; set; }
+
+            /// <summary>
+            /// <para>The agent artifact.</para>
+            /// </summary>
+            [NameInMap("artifact")]
+            [Validation(Required=false)]
+            public ListCustomAgentsResponseBodyItemsArtifact Artifact { get; set; }
+            public class ListCustomAgentsResponseBodyItemsArtifact : TeaModel {
+                /// <summary>
+                /// <para>The code package deployment configuration. This parameter is mutually exclusive with container. The code package uses the ZIP or TAR.GZ format. Dependencies are packaged by the user. The platform does not install dependencies or perform online builds.</para>
+                /// </summary>
+                [NameInMap("code")]
+                [Validation(Required=false)]
+                public ListCustomAgentsResponseBodyItemsArtifactCode Code { get; set; }
+                public class ListCustomAgentsResponseBodyItemsArtifactCode : TeaModel {
+                    /// <summary>
+                    /// <para>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escape characters are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>python main.py</para>
+                    /// </summary>
+                    [NameInMap("entrypoint")]
+                    [Validation(Required=false)]
+                    public string Entrypoint { get; set; }
+
+                    /// <summary>
+                    /// <para>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses a saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>python3.12</para>
+                    /// </summary>
+                    [NameInMap("languageRuntime")]
+                    [Validation(Required=false)]
+                    public string LanguageRuntime { get; set; }
+
+                    /// <summary>
+                    /// <para>The fixed oss:// address of the platform code package referenced by the currently saved configuration. This address does not include the signature parameters of the source HTTPS link. You can use this address to reuse an existing code package. To download the content, call the GetAgentCodePackageDownloadUrl operation.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>oss://agentcore-platform-example/code-packages/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip</para>
+                    /// </summary>
+                    [NameInMap("sourceUri")]
+                    [Validation(Required=false)]
+                    public string SourceUri { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The container image deployment configuration.</para>
+                /// </summary>
+                [NameInMap("container")]
+                [Validation(Required=false)]
+                public ListCustomAgentsResponseBodyItemsArtifactContainer Container { get; set; }
+                public class ListCustomAgentsResponseBodyItemsArtifactContainer : TeaModel {
+                    /// <summary>
+                    /// <para>The custom container startup command and parameters. If this parameter is not configured, the default startup method of the image is used.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>python main.py</para>
+                    /// </summary>
+                    [NameInMap("entrypoint")]
+                    [Validation(Required=false)]
+                    public string Entrypoint { get; set; }
+
+                    /// <summary>
+                    /// <para>The ID of the Container Registry Enterprise instance.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cri-example</para>
+                    /// </summary>
+                    [NameInMap("instanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    /// <summary>
+                    /// <para>The namespace of the Container Registry instance.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>team</para>
+                    /// </summary>
+                    [NameInMap("namespace")]
+                    [Validation(Required=false)]
+                    public string Namespace { get; set; }
+
+                    /// <summary>
+                    /// <para>The name of the Container Registry image repository.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>app</para>
+                    /// </summary>
+                    [NameInMap("repo")]
+                    [Validation(Required=false)]
+                    public string Repo { get; set; }
+
+                    /// <summary>
+                    /// <para>The tag of the image.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>v1</para>
+                    /// </summary>
+                    [NameInMap("tag")]
+                    [Validation(Required=false)]
+                    public string Tag { get; set; }
+
+                    /// <summary>
+                    /// <para>The source type of the container image.</para>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>acr</para>
+                    /// </summary>
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The listening port of the agent service.</para>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8080</para>
+                /// </summary>
+                [NameInMap("port")]
+                [Validation(Required=false)]
+                public int? Port { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The currently saved code package information.</para>
+            /// </summary>
+            [NameInMap("codePackageInfo")]
+            [Validation(Required=false)]
+            public ListCustomAgentsResponseBodyItemsCodePackageInfo CodePackageInfo { get; set; }
+            public class ListCustomAgentsResponseBodyItemsCodePackageInfo : TeaModel {
+                /// <summary>
+                /// <para>The CRC64 value of the code package object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>456</para>
+                /// </summary>
+                [NameInMap("crc64")]
+                [Validation(Required=false)]
+                public string Crc64 { get; set; }
+
+                /// <summary>
+                /// <para>The ETag of the code package object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>fixed-etag</para>
+                /// </summary>
+                [NameInMap("etag")]
+                [Validation(Required=false)]
+                public string Etag { get; set; }
+
+                /// <summary>
+                /// <para>The original file name of the code package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>main.zip</para>
+                /// </summary>
+                [NameInMap("fileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
+
+                /// <summary>
+                /// <para>The compressed size of the code package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
+                [NameInMap("fileSize")]
+                [Validation(Required=false)]
+                public long? FileSize { get; set; }
+
+                /// <summary>
+                /// <para>The format of the code package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zip</para>
+                /// </summary>
+                [NameInMap("format")]
+                [Validation(Required=false)]
+                public string Format { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The creation method of the agent. The value is CUSTOM for custom agents.</para>
@@ -77,10 +272,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The description of the agent.</para>
+            /// <para>The description of the agent\&quot;s purpose.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Custom agent that provides conversational services</para>
+            /// <para>Custom agent that provides conversation services</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -114,7 +309,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListCustomAgentsResponseBodyItemsProtocol> Protocol { get; set; }
             public class ListCustomAgentsResponseBodyItemsProtocol : TeaModel {
                 /// <summary>
-                /// <para>The request header configuration of the current protocol. The key is the header name and the value is a string.</para>
+                /// <para>The request header configuration for the current protocol. The key is the header name and the value is a string.</para>
                 /// </summary>
                 [NameInMap("headers")]
                 [Validation(Required=false)]
@@ -128,7 +323,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<ListCustomAgentsResponseBodyItemsProtocolPaths> Paths { get; set; }
                 public class ListCustomAgentsResponseBodyItemsProtocolPaths : TeaModel {
                     /// <summary>
-                    /// <para>The description of the current API path.</para>
+                    /// <para>The purpose description of the current API path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AG-UI conversation API</para>
@@ -151,12 +346,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The invocation protocol type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>agui: AG-UI protocol.</description></item>
-                /// <item><description>openai-chat-completion: OpenAI Chat Completions compatible protocol.</description></item>
-                /// <item><description>custom: Custom protocol.</description></item>
-                /// </list>
+                /// <para>The invoke Protocol Type. Valid values: agui (AG-UI protocol), openai-chat-completion (OpenAI Chat Completions compatible protocol), and custom (custom protocol).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -179,16 +369,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The overall status of the agent. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The agent is being created.</description></item>
-            /// <item><description>Running: The agent is running.</description></item>
-            /// <item><description>Failed: The agent failed.</description></item>
-            /// <item><description>Updating: The agent is being updated.</description></item>
-            /// <item><description>Deleting: The agent is being deleted.</description></item>
-            /// <item><description>Deleted: The agent is deleted.
-            /// To check the execution progress of the latest configuration, call GetCustomAgent.</description></item>
-            /// </list>
+            /// <para>The overall status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted. To query the execution progress of the latest configuration, call the GetCustomAgent operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -220,7 +401,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page for this query.</para>
+        /// <para>The maximum number of results returned per page for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -230,7 +411,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The description of the processing result for this request. The value is success if the request is successful.</para>
+        /// <para>The message that describes the processing result of the request. The value is success if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -240,7 +421,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The opaque token used to query the next page. If this value is empty, no more pages are available. Pass this value as is in subsequent requests.</para>
+        /// <para>The opaque token used to query the next page. An empty value indicates that no more pages exist. Pass this token as is in subsequent requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</para>
@@ -250,7 +431,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</para>
+        /// <para>The unique identifier of the request, used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550E8400-E29B-41D4-A716-446655440000</para>
@@ -260,7 +441,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not indicate that the background operation is complete.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

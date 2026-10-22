@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateMemoryShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request to update a memory.</para>
+        /// <para>The update memory request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

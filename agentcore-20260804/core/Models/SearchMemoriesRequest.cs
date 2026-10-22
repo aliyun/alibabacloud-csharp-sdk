@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public SearchMemoriesRequestBodyScope Scope { get; set; }
             public class SearchMemoriesRequestBodyScope : TeaModel {
                 /// <summary>
-                /// <para>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with an agent ID, this field is not returned.</para>
+                /// <para>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with an agent ID, this field is not returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-001</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a session ID, this field is not returned.</para>
+                /// <para>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with a session ID, this field is not returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>session-001</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a user ID, this field is not returned.</para>
+                /// <para>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with a user ID, this field is not returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>

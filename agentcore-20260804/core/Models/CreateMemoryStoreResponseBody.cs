@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The memory store details.</para>
+        /// <para>The MemoryStore details.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The memory store description.</para>
+            /// <para>The MemoryStore description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Used to store long-term user preferences</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The custom extraction instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only long-term preferences explicitly expressed by the user</para>
+            /// <para>Extract only explicitly expressed long-term user preferences</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
             public string ExtractInstructions { get; set; }
 
             /// <summary>
-            /// <para>The memory store ID.</para>
+            /// <para>The MemoryStore ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ms-2f5f9c5a8d0e4c3b</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreId { get; set; }
 
             /// <summary>
-            /// <para>The name of the memory store. The name cannot be modified after creation.</para>
+            /// <para>The name of the MemoryStore. The name cannot be modified after creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer-memory</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreName { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle status of the memory store.</para>
+            /// <para>The lifecycle state of the MemoryStore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ready</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last updated time.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:05:00Z</para>

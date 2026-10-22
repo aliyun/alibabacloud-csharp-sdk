@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateMemoryStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The request to create a memory store.</para>
+        /// <para>The MemoryStore creation request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateMemoryStoreRequestBody Body { get; set; }
         public class CreateMemoryStoreRequestBody : TeaModel {
             /// <summary>
-            /// <para>The description of the memory store. Maximum of 1,024 characters.</para>
+            /// <para>The description of the MemoryStore. Maximum length: 1,024 characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Used to store long-term user preferences</para>
@@ -28,17 +28,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The custom extraction instructions. Maximum of 4,096 characters.</para>
+            /// <para>The custom extraction instructions. Maximum length: 4,096 characters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only long-term preferences explicitly expressed by the user</para>
+            /// <para>Extract only explicitly expressed long-term user preferences</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
             public string ExtractInstructions { get; set; }
 
             /// <summary>
-            /// <para>The name of the memory store. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</para>
+            /// <para>The name of the MemoryStore. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client request token.</para>
+        /// <para>The client token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memory-store-create-20260909-001</para>

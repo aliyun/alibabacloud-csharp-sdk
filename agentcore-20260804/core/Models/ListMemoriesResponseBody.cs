@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The memory list.</para>
+        /// <para>The list of memory records.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]

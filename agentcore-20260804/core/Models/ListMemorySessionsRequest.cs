@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMemorySessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID. If this parameter is not specified, all agents are matched. The length is limited to 1 to 128 UTF-8 bytes, and the value cannot contain / or *.</para>
+        /// <para>The agent ID. If you do not specify this parameter, all agents are matched. The value must be 1 to 128 bytes in length and cannot contain forward slashes (/) or asterisks (*).</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The user ID. If this parameter is not specified, all users are matched. The length is limited to 1 to 128 UTF-8 bytes, and the value cannot contain / or *.</para>
+        /// <para>The user ID. If you do not specify this parameter, all users are matched. The value must be 1 to 128 bytes in length and cannot contain forward slashes (/) or asterisks (*).</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-001</para>

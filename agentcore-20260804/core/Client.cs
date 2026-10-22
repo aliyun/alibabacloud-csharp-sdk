@@ -39,12 +39,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -96,12 +96,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -153,12 +153,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -177,12 +177,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId that can be queried by using GetMemoryTask.</para>
+        /// <para>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1351,15 +1351,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace and submits a container image deployment configuration. The creation is an asynchronous process. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, an ACR container image, and a runtime configuration. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// Currently, only ACR container image deployment is supported. Use artifact.container and specify the service listening port in artifact.port. Omit artifact.code. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// The creation is an asynchronous process. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status for the corresponding latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure an access endpoint.
-        /// The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</para>
+        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
+        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1417,15 +1419,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace and submits a container image deployment configuration. The creation is an asynchronous process. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, an ACR container image, and a runtime configuration. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// Currently, only ACR container image deployment is supported. Use artifact.container and specify the service listening port in artifact.port. Omit artifact.code. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// The creation is an asynchronous process. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status for the corresponding latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure an access endpoint.
-        /// The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</para>
+        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
+        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1483,15 +1487,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace and submits a container image deployment configuration. The creation is an asynchronous process. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, an ACR container image, and a runtime configuration. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// Currently, only ACR container image deployment is supported. Use artifact.container and specify the service listening port in artifact.port. Omit artifact.code. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// The creation is an asynchronous process. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status for the corresponding latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure an access endpoint.
-        /// The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</para>
+        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
+        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1510,15 +1516,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace and submits a container image deployment configuration. The creation is an asynchronous process. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, an ACR container image, and a runtime configuration. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// Currently, only ACR container image deployment is supported. Use artifact.container and specify the service listening port in artifact.port. Omit artifact.code. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// The creation is an asynchronous process. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status for the corresponding latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure an access endpoint.
-        /// The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</para>
+        /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
+        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1861,8 +1869,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace to enable single sign-on and organization member synchronization for workspace users. Each workspace can be bound to a maximum of one external identity provider. This is an asynchronous operation. After the API call returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. You can bind up to one external identity provider to each workspace. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. You do not need to save SAML first. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding can be returned. You cannot treat all states as repeatable creations.
+        /// For DingTalk, the metadata parameter requires appKey, appSecret, and corpId. For Feishu, appId and appSecret are required. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>POST /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API based on the region of the target workspace. Use an AccessKey pair or STS token that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
+        /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may return 503 IdentityProviderProvisioningUnavailable if it fails. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateIdentityProviderRequest
@@ -1913,8 +1948,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace to enable single sign-on and organization member synchronization for workspace users. Each workspace can be bound to a maximum of one external identity provider. This is an asynchronous operation. After the API call returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. You can bind up to one external identity provider to each workspace. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. You do not need to save SAML first. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding can be returned. You cannot treat all states as repeatable creations.
+        /// For DingTalk, the metadata parameter requires appKey, appSecret, and corpId. For Feishu, appId and appSecret are required. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>POST /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API based on the region of the target workspace. Use an AccessKey pair or STS token that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
+        /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may return 503 IdentityProviderProvisioningUnavailable if it fails. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateIdentityProviderRequest
@@ -1965,8 +2027,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace to enable single sign-on and organization member synchronization for workspace users. Each workspace can be bound to a maximum of one external identity provider. This is an asynchronous operation. After the API call returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. You can bind up to one external identity provider to each workspace. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. You do not need to save SAML first. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding can be returned. You cannot treat all states as repeatable creations.
+        /// For DingTalk, the metadata parameter requires appKey, appSecret, and corpId. For Feishu, appId and appSecret are required. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>POST /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API based on the region of the target workspace. Use an AccessKey pair or STS token that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
+        /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may return 503 IdentityProviderProvisioningUnavailable if it fails. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIdentityProviderRequest
@@ -1984,8 +2073,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace to enable single sign-on and organization member synchronization for workspace users. Each workspace can be bound to a maximum of one external identity provider. This is an asynchronous operation. After the API call returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. You can bind up to one external identity provider to each workspace. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. You do not need to save SAML first. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding can be returned. You cannot treat all states as repeatable creations.
+        /// For DingTalk, the metadata parameter requires appKey, appSecret, and corpId. For Feishu, appId and appSecret are required. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>POST /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API based on the region of the target workspace. Use an AccessKey pair or STS token that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
+        /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may return 503 IdentityProviderProvisioningUnavailable if it fails. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIdentityProviderRequest
@@ -1999,6 +2115,212 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateIdentityProviderWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a manual synchronization of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a one-time user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. Prerequisites: the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other pending identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check the failureReason. The workspace user quota still applies, and previously synchronized users are not automatically deleted if the scope is reduced.
+        /// Authorization information: RAM action agentcore:CreateIdentityProviderSyncJob, access level Write, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+        /// Idempotency and retry: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid blindly resubmitting the request.
+        /// Calling this API is free of charge, and operation records support ActionTrail auditing.
+        /// Initial selective synchronization process: CreateIdentityProvider (syncOnBind=false, it is recommended to keep syncEnabled=false initially) → GetIdentityProvider and wait for READY → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for READY → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the terminal state. If incremental synchronization is required, configure callbacks and event subscriptions, and then update syncEnabled=true.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;PENDING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIdentityProviderSyncJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentityProviderSyncJobResponse
+        /// </returns>
+        public CreateIdentityProviderSyncJobResponse CreateIdentityProviderSyncJobWithOptions(string workspaceId, string identityProviderType, CreateIdentityProviderSyncJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIdentityProviderSyncJob",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/sync-jobs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIdentityProviderSyncJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a manual synchronization of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a one-time user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. Prerequisites: the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other pending identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check the failureReason. The workspace user quota still applies, and previously synchronized users are not automatically deleted if the scope is reduced.
+        /// Authorization information: RAM action agentcore:CreateIdentityProviderSyncJob, access level Write, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+        /// Idempotency and retry: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid blindly resubmitting the request.
+        /// Calling this API is free of charge, and operation records support ActionTrail auditing.
+        /// Initial selective synchronization process: CreateIdentityProvider (syncOnBind=false, it is recommended to keep syncEnabled=false initially) → GetIdentityProvider and wait for READY → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for READY → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the terminal state. If incremental synchronization is required, configure callbacks and event subscriptions, and then update syncEnabled=true.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;PENDING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIdentityProviderSyncJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentityProviderSyncJobResponse
+        /// </returns>
+        public async Task<CreateIdentityProviderSyncJobResponse> CreateIdentityProviderSyncJobWithOptionsAsync(string workspaceId, string identityProviderType, CreateIdentityProviderSyncJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIdentityProviderSyncJob",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/sync-jobs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIdentityProviderSyncJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a manual synchronization of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a one-time user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. Prerequisites: the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other pending identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check the failureReason. The workspace user quota still applies, and previously synchronized users are not automatically deleted if the scope is reduced.
+        /// Authorization information: RAM action agentcore:CreateIdentityProviderSyncJob, access level Write, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+        /// Idempotency and retry: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid blindly resubmitting the request.
+        /// Calling this API is free of charge, and operation records support ActionTrail auditing.
+        /// Initial selective synchronization process: CreateIdentityProvider (syncOnBind=false, it is recommended to keep syncEnabled=false initially) → GetIdentityProvider and wait for READY → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for READY → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the terminal state. If incremental synchronization is required, configure callbacks and event subscriptions, and then update syncEnabled=true.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;PENDING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIdentityProviderSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentityProviderSyncJobResponse
+        /// </returns>
+        public CreateIdentityProviderSyncJobResponse CreateIdentityProviderSyncJob(string workspaceId, string identityProviderType, CreateIdentityProviderSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateIdentityProviderSyncJobWithOptions(workspaceId, identityProviderType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a manual synchronization of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initiates a one-time user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. Prerequisites: the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other pending identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check the failureReason. The workspace user quota still applies, and previously synchronized users are not automatically deleted if the scope is reduced.
+        /// Authorization information: RAM action agentcore:CreateIdentityProviderSyncJob, access level Write, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+        /// Idempotency and retry: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid blindly resubmitting the request.
+        /// Calling this API is free of charge, and operation records support ActionTrail auditing.
+        /// Initial selective synchronization process: CreateIdentityProvider (syncOnBind=false, it is recommended to keep syncEnabled=false initially) → GetIdentityProvider and wait for READY → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for READY → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the terminal state. If incremental synchronization is required, configure callbacks and event subscriptions, and then update syncEnabled=true.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;PENDING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIdentityProviderSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentityProviderSyncJobResponse
+        /// </returns>
+        public async Task<CreateIdentityProviderSyncJobResponse> CreateIdentityProviderSyncJobAsync(string workspaceId, string identityProviderType, CreateIdentityProviderSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateIdentityProviderSyncJobWithOptionsAsync(workspaceId, identityProviderType, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4665,8 +4987,32 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Disconnects the external identity provider from a specified workspace and cleans up the users synchronized by the identity provider. The disconnection is an asynchronous operation. After the API returns a response, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>This is a complete disconnection, not just disabling logon. Disconnecting CustomSSO cleans up the AC users imported from this identity source, remote shared user pools and related resources, logon publishing configurations, and bindings. Therefore, both SAML and SCIM are affected. It does not delete the enterprise applications created by users on external platforms such as Azure. The system first checks the references between users and Teams. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that a partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameter content of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;DISCONNECTING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a Team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. An asynchronous failure may result in a partial cleanup. You cannot claim completion based solely on the first response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIdentityProviderRequest
@@ -4711,8 +5057,32 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Disconnects the external identity provider from a specified workspace and cleans up the users synchronized by the identity provider. The disconnection is an asynchronous operation. After the API returns a response, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>This is a complete disconnection, not just disabling logon. Disconnecting CustomSSO cleans up the AC users imported from this identity source, remote shared user pools and related resources, logon publishing configurations, and bindings. Therefore, both SAML and SCIM are affected. It does not delete the enterprise applications created by users on external platforms such as Azure. The system first checks the references between users and Teams. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that a partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameter content of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;DISCONNECTING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a Team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. An asynchronous failure may result in a partial cleanup. You cannot claim completion based solely on the first response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIdentityProviderRequest
@@ -4757,8 +5127,32 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Disconnects the external identity provider from a specified workspace and cleans up the users synchronized by the identity provider. The disconnection is an asynchronous operation. After the API returns a response, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>This is a complete disconnection, not just disabling logon. Disconnecting CustomSSO cleans up the AC users imported from this identity source, remote shared user pools and related resources, logon publishing configurations, and bindings. Therefore, both SAML and SCIM are affected. It does not delete the enterprise applications created by users on external platforms such as Azure. The system first checks the references between users and Teams. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that a partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameter content of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;DISCONNECTING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a Team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. An asynchronous failure may result in a partial cleanup. You cannot claim completion based solely on the first response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIdentityProviderRequest
@@ -4776,8 +5170,32 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
+        /// <para>Disconnects the external identity provider from a specified workspace and cleans up the users synchronized by the identity provider. The disconnection is an asynchronous operation. After the API returns a response, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>This is a complete disconnection, not just disabling logon. Disconnecting CustomSSO cleans up the AC users imported from this identity source, remote shared user pools and related resources, logon publishing configurations, and bindings. Therefore, both SAML and SCIM are affected. It does not delete the enterprise applications created by users on external platforms such as Azure. The system first checks the references between users and Teams. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that a partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameter content of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;DISCONNECTING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a Team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. An asynchronous failure may result in a partial cleanup. You cannot claim completion based solely on the first response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIdentityProviderRequest
@@ -5351,12 +5769,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5396,12 +5814,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5441,12 +5859,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5465,12 +5883,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously deletes a MemoryStore and all its long-term memory.</para>
+        /// <para>Asynchronously deletes a MemoryStore and all long-term memory within it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7193,6 +7611,464 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the download URL for the saved code package of an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageDownloadUrlResponse
+        /// </returns>
+        public GetAgentCodePackageDownloadUrlResponse GetAgentCodePackageDownloadUrlWithOptions(string workspaceId, string agentId, GetAgentCodePackageDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentCodePackageDownloadUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/code-package/download-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentCodePackageDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the download URL for the saved code package of an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageDownloadUrlResponse
+        /// </returns>
+        public async Task<GetAgentCodePackageDownloadUrlResponse> GetAgentCodePackageDownloadUrlWithOptionsAsync(string workspaceId, string agentId, GetAgentCodePackageDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentCodePackageDownloadUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/code-package/download-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentCodePackageDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the download URL for the saved code package of an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageDownloadUrlResponse
+        /// </returns>
+        public GetAgentCodePackageDownloadUrlResponse GetAgentCodePackageDownloadUrl(string workspaceId, string agentId, GetAgentCodePackageDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentCodePackageDownloadUrlWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the download URL for the saved code package of an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageDownloadUrlResponse
+        /// </returns>
+        public async Task<GetAgentCodePackageDownloadUrlResponse> GetAgentCodePackageDownloadUrlAsync(string workspaceId, string agentId, GetAgentCodePackageDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentCodePackageDownloadUrlWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS RAM authorization URL for the agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. The client cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
+        /// This authorization reuses the OSSObjectRestoreCustom template, which includes permissions to read, write, and delete objects, and is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageOssRamAuthorizeUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageOssRamAuthorizeUrlResponse
+        /// </returns>
+        public GetAgentCodePackageOssRamAuthorizeUrlResponse GetAgentCodePackageOssRamAuthorizeUrlWithOptions(string workspaceId, GetAgentCodePackageOssRamAuthorizeUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["ossBucketName"] = request.OssBucketName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentCodePackageOssRamAuthorizeUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/oss/authorize",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentCodePackageOssRamAuthorizeUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS RAM authorization URL for the agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. The client cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
+        /// This authorization reuses the OSSObjectRestoreCustom template, which includes permissions to read, write, and delete objects, and is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageOssRamAuthorizeUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageOssRamAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetAgentCodePackageOssRamAuthorizeUrlResponse> GetAgentCodePackageOssRamAuthorizeUrlWithOptionsAsync(string workspaceId, GetAgentCodePackageOssRamAuthorizeUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["ossBucketName"] = request.OssBucketName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentCodePackageOssRamAuthorizeUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/oss/authorize",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentCodePackageOssRamAuthorizeUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS RAM authorization URL for the agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. The client cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
+        /// This authorization reuses the OSSObjectRestoreCustom template, which includes permissions to read, write, and delete objects, and is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageOssRamAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageOssRamAuthorizeUrlResponse
+        /// </returns>
+        public GetAgentCodePackageOssRamAuthorizeUrlResponse GetAgentCodePackageOssRamAuthorizeUrl(string workspaceId, GetAgentCodePackageOssRamAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentCodePackageOssRamAuthorizeUrlWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS RAM authorization URL for the agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. The client cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
+        /// This authorization reuses the OSSObjectRestoreCustom template, which includes permissions to read, write, and delete objects, and is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageOssRamAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageOssRamAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetAgentCodePackageOssRamAuthorizeUrlResponse> GetAgentCodePackageOssRamAuthorizeUrlAsync(string workspaceId, GetAgentCodePackageOssRamAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentCodePackageOssRamAuthorizeUrlWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for an agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ filename without directories. The format must match the file extension. The fileSize is in bytes, with valid values ranging from 1 to 500,000,000.
+        /// Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. Retrieve a new URL after it expires. The example URL is desensitized and cannot be used for actual uploads. Use the original URL and request headers from this response.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetAgentCodePackageUploadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageUploadUrlResponse
+        /// </returns>
+        public GetAgentCodePackageUploadUrlResponse GetAgentCodePackageUploadUrlWithOptions(string workspaceId, GetAgentCodePackageUploadUrlRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAgentCodePackageUploadUrlShrinkRequest request = new GetAgentCodePackageUploadUrlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentCodePackageUploadUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/upload-url",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentCodePackageUploadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for an agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ filename without directories. The format must match the file extension. The fileSize is in bytes, with valid values ranging from 1 to 500,000,000.
+        /// Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. Retrieve a new URL after it expires. The example URL is desensitized and cannot be used for actual uploads. Use the original URL and request headers from this response.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetAgentCodePackageUploadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageUploadUrlResponse
+        /// </returns>
+        public async Task<GetAgentCodePackageUploadUrlResponse> GetAgentCodePackageUploadUrlWithOptionsAsync(string workspaceId, GetAgentCodePackageUploadUrlRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAgentCodePackageUploadUrlShrinkRequest request = new GetAgentCodePackageUploadUrlShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentCodePackageUploadUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/upload-url",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentCodePackageUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for an agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ filename without directories. The format must match the file extension. The fileSize is in bytes, with valid values ranging from 1 to 500,000,000.
+        /// Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. Retrieve a new URL after it expires. The example URL is desensitized and cannot be used for actual uploads. Use the original URL and request headers from this response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageUploadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageUploadUrlResponse
+        /// </returns>
+        public GetAgentCodePackageUploadUrlResponse GetAgentCodePackageUploadUrl(string workspaceId, GetAgentCodePackageUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentCodePackageUploadUrlWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload URL for an agent code package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ filename without directories. The format must match the file extension. The fileSize is in bytes, with valid values ranging from 1 to 500,000,000.
+        /// Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. Retrieve a new URL after it expires. The example URL is desensitized and cannot be used for actual uploads. Use the original URL and request headers from this response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentCodePackageUploadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentCodePackageUploadUrlResponse
+        /// </returns>
+        public async Task<GetAgentCodePackageUploadUrlResponse> GetAgentCodePackageUploadUrlAsync(string workspaceId, GetAgentCodePackageUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentCodePackageUploadUrlWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a specified agent IM channel.</para>
         /// </summary>
         /// 
@@ -8054,8 +8930,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create or update a custom agent, you can poll this operation to query the execution result of the latest configuration version. <c>latestVersionStatus</c> corresponds to <c>latestSpecVersion</c>. <c>latestExecutionError</c> indicates the cause of the pending or failed status for this version. If <c>retryable</c> is true, you can query again later.
-        /// The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <c>latestVersionStatus</c>, the overall agent status <c>status</c>, and the running instance statistics <c>sandboxPhaseCounts</c>.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
+        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -8101,8 +8977,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create or update a custom agent, you can poll this operation to query the execution result of the latest configuration version. <c>latestVersionStatus</c> corresponds to <c>latestSpecVersion</c>. <c>latestExecutionError</c> indicates the cause of the pending or failed status for this version. If <c>retryable</c> is true, you can query again later.
-        /// The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <c>latestVersionStatus</c>, the overall agent status <c>status</c>, and the running instance statistics <c>sandboxPhaseCounts</c>.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
+        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -8148,8 +9024,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create or update a custom agent, you can poll this operation to query the execution result of the latest configuration version. <c>latestVersionStatus</c> corresponds to <c>latestSpecVersion</c>. <c>latestExecutionError</c> indicates the cause of the pending or failed status for this version. If <c>retryable</c> is true, you can query again later.
-        /// The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <c>latestVersionStatus</c>, the overall agent status <c>status</c>, and the running instance statistics <c>sandboxPhaseCounts</c>.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
+        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -8174,8 +9050,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create or update a custom agent, you can poll this operation to query the execution result of the latest configuration version. <c>latestVersionStatus</c> corresponds to <c>latestSpecVersion</c>. <c>latestExecutionError</c> indicates the cause of the pending or failed status for this version. If <c>retryable</c> is true, you can query again later.
-        /// The returned configuration is the most recently submitted configuration and may not have taken effect. Verify the deployment and running status by checking <c>latestVersionStatus</c>, the overall agent status <c>status</c>, and the running instance statistics <c>sandboxPhaseCounts</c>.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
+        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -8471,8 +9347,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding details of the external identity provider for a specified workspace, including the binding status, application configurations, and callback URLs to be configured on the identity provider side. Application secret configurations are not returned.</para>
+        /// <para>Queries the binding details of an external identity provider for a specified workspace, including the binding status, application configurations, and the callback URL to be configured on the identity provider side. Application secret configurations are not returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Reads existing bindings by type. For CustomSSO, the API returns the saved protocol, standardized SAML, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. If SAML is configured, the API additionally queries AgentIdentity, and the configuration field represents the actual SSO/JIT configuration. The saml field serves as the data source for the edit form. The status switches in the configuration field are Enabled and Disabled. If the upstream query fails, an error is returned. This failure must not be treated as an unconfigured state.
+        /// Only this API reads back the actual SAML configuration. The list and write APIs do not guarantee that the configuration field is returned. A READY user pool does not indicate that SAML is configured. The UPDATING and UPDATE_FAILED statuses describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Calling convention: Call this API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, rather than the extra body wrapper of the backend direct-connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the specified type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Authentication errors and workspace-not-found errors follow common error handling procedures.
+        /// 404 IdentityProviderNotFound: No binding exists, or the specified type is inconsistent with the current binding. If SAML is already configured, an upstream read failure does not degrade to a successful empty configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -8511,8 +9413,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding details of the external identity provider for a specified workspace, including the binding status, application configurations, and callback URLs to be configured on the identity provider side. Application secret configurations are not returned.</para>
+        /// <para>Queries the binding details of an external identity provider for a specified workspace, including the binding status, application configurations, and the callback URL to be configured on the identity provider side. Application secret configurations are not returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Reads existing bindings by type. For CustomSSO, the API returns the saved protocol, standardized SAML, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. If SAML is configured, the API additionally queries AgentIdentity, and the configuration field represents the actual SSO/JIT configuration. The saml field serves as the data source for the edit form. The status switches in the configuration field are Enabled and Disabled. If the upstream query fails, an error is returned. This failure must not be treated as an unconfigured state.
+        /// Only this API reads back the actual SAML configuration. The list and write APIs do not guarantee that the configuration field is returned. A READY user pool does not indicate that SAML is configured. The UPDATING and UPDATE_FAILED statuses describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Calling convention: Call this API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, rather than the extra body wrapper of the backend direct-connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the specified type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Authentication errors and workspace-not-found errors follow common error handling procedures.
+        /// 404 IdentityProviderNotFound: No binding exists, or the specified type is inconsistent with the current binding. If SAML is already configured, an upstream read failure does not degrade to a successful empty configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -8551,8 +9479,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding details of the external identity provider for a specified workspace, including the binding status, application configurations, and callback URLs to be configured on the identity provider side. Application secret configurations are not returned.</para>
+        /// <para>Queries the binding details of an external identity provider for a specified workspace, including the binding status, application configurations, and the callback URL to be configured on the identity provider side. Application secret configurations are not returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Reads existing bindings by type. For CustomSSO, the API returns the saved protocol, standardized SAML, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. If SAML is configured, the API additionally queries AgentIdentity, and the configuration field represents the actual SSO/JIT configuration. The saml field serves as the data source for the edit form. The status switches in the configuration field are Enabled and Disabled. If the upstream query fails, an error is returned. This failure must not be treated as an unconfigured state.
+        /// Only this API reads back the actual SAML configuration. The list and write APIs do not guarantee that the configuration field is returned. A READY user pool does not indicate that SAML is configured. The UPDATING and UPDATE_FAILED statuses describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Calling convention: Call this API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, rather than the extra body wrapper of the backend direct-connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the specified type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Authentication errors and workspace-not-found errors follow common error handling procedures.
+        /// 404 IdentityProviderNotFound: No binding exists, or the specified type is inconsistent with the current binding. If SAML is already configured, an upstream read failure does not degrade to a successful empty configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -8570,8 +9524,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding details of the external identity provider for a specified workspace, including the binding status, application configurations, and callback URLs to be configured on the identity provider side. Application secret configurations are not returned.</para>
+        /// <para>Queries the binding details of an external identity provider for a specified workspace, including the binding status, application configurations, and the callback URL to be configured on the identity provider side. Application secret configurations are not returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Reads existing bindings by type. For CustomSSO, the API returns the saved protocol, standardized SAML, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. If SAML is configured, the API additionally queries AgentIdentity, and the configuration field represents the actual SSO/JIT configuration. The saml field serves as the data source for the edit form. The status switches in the configuration field are Enabled and Disabled. If the upstream query fails, an error is returned. This failure must not be treated as an unconfigured state.
+        /// Only this API reads back the actual SAML configuration. The list and write APIs do not guarantee that the configuration field is returned. A READY user pool does not indicate that SAML is configured. The UPDATING and UPDATE_FAILED statuses describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Calling convention: Call this API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, rather than the extra body wrapper of the backend direct-connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the specified type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Authentication errors and workspace-not-found errors follow common error handling procedures.
+        /// 404 IdentityProviderNotFound: No binding exists, or the specified type is inconsistent with the current binding. If SAML is already configured, an upstream read failure does not degrade to a successful empty configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -8585,6 +9565,478 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetIdentityProviderWithOptionsAsync(workspaceId, identityProviderType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an identity provider synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task by using the local taskId of AgentCore. The taskId must be obtained from CreateIdentityProviderSyncJob in the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not equal the number of newly added users or the progress percentage.
+        /// Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncJob, the access level is Read, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be repeatedly queried.
+        /// Calling this API operation is free of charge, and operation records support ActionTrail auditing.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;SUCCESS&quot;,
+        ///     &quot;currentStep&quot;: &quot;SYNC&quot;,
+        ///     &quot;synchronizationJobId&quot;: &quot;syncjob_0123456789abcdef0123456789abcdef&quot;,
+        ///     &quot;syncedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncJobResponse
+        /// </returns>
+        public GetIdentityProviderSyncJobResponse GetIdentityProviderSyncJobWithOptions(string workspaceId, string identityProviderType, string taskId, GetIdentityProviderSyncJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityProviderSyncJob",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/sync-jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityProviderSyncJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an identity provider synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task by using the local taskId of AgentCore. The taskId must be obtained from CreateIdentityProviderSyncJob in the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not equal the number of newly added users or the progress percentage.
+        /// Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncJob, the access level is Read, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be repeatedly queried.
+        /// Calling this API operation is free of charge, and operation records support ActionTrail auditing.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;SUCCESS&quot;,
+        ///     &quot;currentStep&quot;: &quot;SYNC&quot;,
+        ///     &quot;synchronizationJobId&quot;: &quot;syncjob_0123456789abcdef0123456789abcdef&quot;,
+        ///     &quot;syncedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncJobResponse
+        /// </returns>
+        public async Task<GetIdentityProviderSyncJobResponse> GetIdentityProviderSyncJobWithOptionsAsync(string workspaceId, string identityProviderType, string taskId, GetIdentityProviderSyncJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityProviderSyncJob",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/sync-jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityProviderSyncJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an identity provider synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task by using the local taskId of AgentCore. The taskId must be obtained from CreateIdentityProviderSyncJob in the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not equal the number of newly added users or the progress percentage.
+        /// Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncJob, the access level is Read, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be repeatedly queried.
+        /// Calling this API operation is free of charge, and operation records support ActionTrail auditing.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;SUCCESS&quot;,
+        ///     &quot;currentStep&quot;: &quot;SYNC&quot;,
+        ///     &quot;synchronizationJobId&quot;: &quot;syncjob_0123456789abcdef0123456789abcdef&quot;,
+        ///     &quot;syncedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncJobResponse
+        /// </returns>
+        public GetIdentityProviderSyncJobResponse GetIdentityProviderSyncJob(string workspaceId, string identityProviderType, string taskId, GetIdentityProviderSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetIdentityProviderSyncJobWithOptions(workspaceId, identityProviderType, taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an identity provider synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task by using the local taskId of AgentCore. The taskId must be obtained from CreateIdentityProviderSyncJob in the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not equal the number of newly added users or the progress percentage.
+        /// Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncJob, the access level is Read, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be repeatedly queried.
+        /// Calling this API operation is free of charge, and operation records support ActionTrail auditing.
+        /// Response example:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
+        ///     &quot;status&quot;: &quot;SUCCESS&quot;,
+        ///     &quot;currentStep&quot;: &quot;SYNC&quot;,
+        ///     &quot;synchronizationJobId&quot;: &quot;syncjob_0123456789abcdef0123456789abcdef&quot;,
+        ///     &quot;syncedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncJobResponse
+        /// </returns>
+        public async Task<GetIdentityProviderSyncJobResponse> GetIdentityProviderSyncJobAsync(string workspaceId, string identityProviderType, string taskId, GetIdentityProviderSyncJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetIdentityProviderSyncJobWithOptionsAsync(workspaceId, identityProviderType, taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the synchronization scope of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the saved synchronization scope, the validity of selected departments, and the estimated user count downstream of the identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not prove that the organization has no sub-departments. The estimation can be used only when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
+        /// Authorization information: RAM operation agentcore:GetIdentityProviderSyncScope, access level Read, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be queried repeatedly.
+        /// Calling this API operation is free of charge. Operation records support ActionTrail auditing.
+        /// Sample response:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;syncScope&quot;: {
+        ///       &quot;mode&quot;: &quot;SelectedDepartments&quot;,
+        ///       &quot;departmentIds&quot;: [
+        ///         &quot;10001&quot;
+        ///       ]
+        ///     },
+        ///     &quot;selectedDepartments&quot;: [
+        ///       {
+        ///         &quot;id&quot;: &quot;10001&quot;,
+        ///         &quot;name&quot;: &quot;R&amp;D Department&quot;,
+        ///         &quot;exists&quot;: true
+        ///       }
+        ///     ],
+        ///     &quot;estimateStatus&quot;: &quot;Ready&quot;,
+        ///     &quot;expandedDepartmentCount&quot;: 2,
+        ///     &quot;estimatedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public GetIdentityProviderSyncScopeResponse GetIdentityProviderSyncScopeWithOptions(string workspaceId, string identityProviderType, GetIdentityProviderSyncScopeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityProviderSyncScope",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/sync-scope",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityProviderSyncScopeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the synchronization scope of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the saved synchronization scope, the validity of selected departments, and the estimated user count downstream of the identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not prove that the organization has no sub-departments. The estimation can be used only when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
+        /// Authorization information: RAM operation agentcore:GetIdentityProviderSyncScope, access level Read, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be queried repeatedly.
+        /// Calling this API operation is free of charge. Operation records support ActionTrail auditing.
+        /// Sample response:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;syncScope&quot;: {
+        ///       &quot;mode&quot;: &quot;SelectedDepartments&quot;,
+        ///       &quot;departmentIds&quot;: [
+        ///         &quot;10001&quot;
+        ///       ]
+        ///     },
+        ///     &quot;selectedDepartments&quot;: [
+        ///       {
+        ///         &quot;id&quot;: &quot;10001&quot;,
+        ///         &quot;name&quot;: &quot;R&amp;D Department&quot;,
+        ///         &quot;exists&quot;: true
+        ///       }
+        ///     ],
+        ///     &quot;estimateStatus&quot;: &quot;Ready&quot;,
+        ///     &quot;expandedDepartmentCount&quot;: 2,
+        ///     &quot;estimatedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public async Task<GetIdentityProviderSyncScopeResponse> GetIdentityProviderSyncScopeWithOptionsAsync(string workspaceId, string identityProviderType, GetIdentityProviderSyncScopeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityProviderSyncScope",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/sync-scope",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityProviderSyncScopeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the synchronization scope of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the saved synchronization scope, the validity of selected departments, and the estimated user count downstream of the identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not prove that the organization has no sub-departments. The estimation can be used only when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
+        /// Authorization information: RAM operation agentcore:GetIdentityProviderSyncScope, access level Read, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be queried repeatedly.
+        /// Calling this API operation is free of charge. Operation records support ActionTrail auditing.
+        /// Sample response:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;syncScope&quot;: {
+        ///       &quot;mode&quot;: &quot;SelectedDepartments&quot;,
+        ///       &quot;departmentIds&quot;: [
+        ///         &quot;10001&quot;
+        ///       ]
+        ///     },
+        ///     &quot;selectedDepartments&quot;: [
+        ///       {
+        ///         &quot;id&quot;: &quot;10001&quot;,
+        ///         &quot;name&quot;: &quot;R&amp;D Department&quot;,
+        ///         &quot;exists&quot;: true
+        ///       }
+        ///     ],
+        ///     &quot;estimateStatus&quot;: &quot;Ready&quot;,
+        ///     &quot;expandedDepartmentCount&quot;: 2,
+        ///     &quot;estimatedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public GetIdentityProviderSyncScopeResponse GetIdentityProviderSyncScope(string workspaceId, string identityProviderType, GetIdentityProviderSyncScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetIdentityProviderSyncScopeWithOptions(workspaceId, identityProviderType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the synchronization scope of an identity provider.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the saved synchronization scope, the validity of selected departments, and the estimated user count downstream of the identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not prove that the organization has no sub-departments. The estimation can be used only when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
+        /// Authorization information: RAM operation agentcore:GetIdentityProviderSyncScope, access level Read, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+        /// Idempotence and retry: This operation is read-only and can be queried repeatedly.
+        /// Calling this API operation is free of charge. Operation records support ActionTrail auditing.
+        /// Sample response:</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+        ///   &quot;message&quot;: &quot;success&quot;,
+        ///   &quot;httpStatusCode&quot;: 200,
+        ///   &quot;code&quot;: &quot;SUCCESS&quot;,
+        ///   &quot;success&quot;: true,
+        ///   &quot;data&quot;: {
+        ///     &quot;syncScope&quot;: {
+        ///       &quot;mode&quot;: &quot;SelectedDepartments&quot;,
+        ///       &quot;departmentIds&quot;: [
+        ///         &quot;10001&quot;
+        ///       ]
+        ///     },
+        ///     &quot;selectedDepartments&quot;: [
+        ///       {
+        ///         &quot;id&quot;: &quot;10001&quot;,
+        ///         &quot;name&quot;: &quot;R&amp;D Department&quot;,
+        ///         &quot;exists&quot;: true
+        ///       }
+        ///     ],
+        ///     &quot;estimateStatus&quot;: &quot;Ready&quot;,
+        ///     &quot;expandedDepartmentCount&quot;: 2,
+        ///     &quot;estimatedUserCount&quot;: 12
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public async Task<GetIdentityProviderSyncScopeResponse> GetIdentityProviderSyncScopeAsync(string workspaceId, string identityProviderType, GetIdentityProviderSyncScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetIdentityProviderSyncScopeWithOptionsAsync(workspaceId, identityProviderType, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11709,6 +13161,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the runtime environments supported for code deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the directories in the current workspace that can be used to create code package agents or switch runtime environments. Runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
+        /// If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If a directory change invalidates the token, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scaling, and regular updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentCodeRuntimesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentCodeRuntimesResponse
+        /// </returns>
+        public ListAgentCodeRuntimesResponse ListAgentCodeRuntimesWithOptions(string workspaceId, ListAgentCodeRuntimesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentCodeRuntimes",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-runtimes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentCodeRuntimesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the runtime environments supported for code deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the directories in the current workspace that can be used to create code package agents or switch runtime environments. Runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
+        /// If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If a directory change invalidates the token, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scaling, and regular updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentCodeRuntimesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentCodeRuntimesResponse
+        /// </returns>
+        public async Task<ListAgentCodeRuntimesResponse> ListAgentCodeRuntimesWithOptionsAsync(string workspaceId, ListAgentCodeRuntimesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentCodeRuntimes",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-runtimes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentCodeRuntimesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the runtime environments supported for code deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the directories in the current workspace that can be used to create code package agents or switch runtime environments. Runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
+        /// If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If a directory change invalidates the token, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scaling, and regular updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentCodeRuntimesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentCodeRuntimesResponse
+        /// </returns>
+        public ListAgentCodeRuntimesResponse ListAgentCodeRuntimes(string workspaceId, ListAgentCodeRuntimesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAgentCodeRuntimesWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the runtime environments supported for code deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the directories in the current workspace that can be used to create code package agents or switch runtime environments. Runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
+        /// If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If a directory change invalidates the token, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scaling, and regular updates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentCodeRuntimesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentCodeRuntimesResponse
+        /// </returns>
+        public async Task<ListAgentCodeRuntimesResponse> ListAgentCodeRuntimesAsync(string workspaceId, ListAgentCodeRuntimesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAgentCodeRuntimesWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </summary>
         /// 
@@ -12749,14 +14363,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summaries of custom agents in a specified workspace by using paging. For the complete configuration and the execution results of the latest version, call GetCustomAgent.</para>
+        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. In subsequent requests, pass the nextToken value returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. If the token in the response is empty, it indicates that no more pages are available.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configuration or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12806,14 +14420,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summaries of custom agents in a specified workspace by using paging. For the complete configuration and the execution results of the latest version, call GetCustomAgent.</para>
+        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. In subsequent requests, pass the nextToken value returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. If the token in the response is empty, it indicates that no more pages are available.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configuration or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12863,14 +14477,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summaries of custom agents in a specified workspace by using paging. For the complete configuration and the execution results of the latest version, call GetCustomAgent.</para>
+        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. In subsequent requests, pass the nextToken value returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. If the token in the response is empty, it indicates that no more pages are available.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configuration or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12889,14 +14503,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summaries of custom agents in a specified workspace by using paging. For the complete configuration and the execution results of the latest version, call GetCustomAgent.</para>
+        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. In subsequent requests, pass the nextToken value returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. If the token in the response is empty, it indicates that no more pages are available.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configuration or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13073,8 +14687,204 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the departments of an identity provider by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries DingTalk or Feishu departments by hierarchy and page. Prerequisites include a bound identity provider, a user pool, valid application credentials, and address book read authorization. If you do not specify parentDepartmentId, the root hierarchy is queried. When expanding a node, specify the ID of the node to query its direct child departments. The hasChildren field indicates whether the node can be expanded and does not mean that child nodes are returned. The nextToken field is used only to query the next page of child departments under the current parent department. This query only reads the directory. It does not save the synchronization scope or import users. If a new department is added to a DingTalk or Feishu organization, re-query the corresponding parent department because the previous list does not reflect the latest directory.\n\nAuthorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.\n\nIdempotency and retry: This operation is read-only and can be called repeatedly.\n\nCalling this API is free of charge. Operation records support ActionTrail auditing.\n\nResponse example:\n<c>json\\n{\\n  &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,\\n  &quot;message&quot;: &quot;success&quot;,\\n  &quot;httpStatusCode&quot;: 200,\\n  &quot;code&quot;: &quot;SUCCESS&quot;,\\n  &quot;success&quot;: true,\\n  &quot;maxResults&quot;: 50,\\n  &quot;nextToken&quot;: &quot;&quot;,\\n  &quot;items&quot;: [\\n    {\\n      &quot;id&quot;: &quot;10001&quot;,\\n      &quot;name&quot;: &quot;R&amp;D Department&quot;,\\n      &quot;parentId&quot;: &quot;1&quot;,\\n      &quot;memberCount&quot;: 12,\\n      &quot;hasChildren&quot;: true\\n    }\\n  ]\\n}\\n</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public ListIdentityProviderDepartmentsResponse ListIdentityProviderDepartmentsWithOptions(string workspaceId, string identityProviderType, ListIdentityProviderDepartmentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDepartmentId))
+            {
+                query["parentDepartmentId"] = request.ParentDepartmentId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityProviderDepartments",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/departments",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityProviderDepartmentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the departments of an identity provider by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries DingTalk or Feishu departments by hierarchy and page. Prerequisites include a bound identity provider, a user pool, valid application credentials, and address book read authorization. If you do not specify parentDepartmentId, the root hierarchy is queried. When expanding a node, specify the ID of the node to query its direct child departments. The hasChildren field indicates whether the node can be expanded and does not mean that child nodes are returned. The nextToken field is used only to query the next page of child departments under the current parent department. This query only reads the directory. It does not save the synchronization scope or import users. If a new department is added to a DingTalk or Feishu organization, re-query the corresponding parent department because the previous list does not reflect the latest directory.\n\nAuthorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.\n\nIdempotency and retry: This operation is read-only and can be called repeatedly.\n\nCalling this API is free of charge. Operation records support ActionTrail auditing.\n\nResponse example:\n<c>json\\n{\\n  &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,\\n  &quot;message&quot;: &quot;success&quot;,\\n  &quot;httpStatusCode&quot;: 200,\\n  &quot;code&quot;: &quot;SUCCESS&quot;,\\n  &quot;success&quot;: true,\\n  &quot;maxResults&quot;: 50,\\n  &quot;nextToken&quot;: &quot;&quot;,\\n  &quot;items&quot;: [\\n    {\\n      &quot;id&quot;: &quot;10001&quot;,\\n      &quot;name&quot;: &quot;R&amp;D Department&quot;,\\n      &quot;parentId&quot;: &quot;1&quot;,\\n      &quot;memberCount&quot;: 12,\\n      &quot;hasChildren&quot;: true\\n    }\\n  ]\\n}\\n</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public async Task<ListIdentityProviderDepartmentsResponse> ListIdentityProviderDepartmentsWithOptionsAsync(string workspaceId, string identityProviderType, ListIdentityProviderDepartmentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDepartmentId))
+            {
+                query["parentDepartmentId"] = request.ParentDepartmentId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityProviderDepartments",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/identity-providers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(identityProviderType) + "/departments",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityProviderDepartmentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the departments of an identity provider by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries DingTalk or Feishu departments by hierarchy and page. Prerequisites include a bound identity provider, a user pool, valid application credentials, and address book read authorization. If you do not specify parentDepartmentId, the root hierarchy is queried. When expanding a node, specify the ID of the node to query its direct child departments. The hasChildren field indicates whether the node can be expanded and does not mean that child nodes are returned. The nextToken field is used only to query the next page of child departments under the current parent department. This query only reads the directory. It does not save the synchronization scope or import users. If a new department is added to a DingTalk or Feishu organization, re-query the corresponding parent department because the previous list does not reflect the latest directory.\n\nAuthorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.\n\nIdempotency and retry: This operation is read-only and can be called repeatedly.\n\nCalling this API is free of charge. Operation records support ActionTrail auditing.\n\nResponse example:\n<c>json\\n{\\n  &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,\\n  &quot;message&quot;: &quot;success&quot;,\\n  &quot;httpStatusCode&quot;: 200,\\n  &quot;code&quot;: &quot;SUCCESS&quot;,\\n  &quot;success&quot;: true,\\n  &quot;maxResults&quot;: 50,\\n  &quot;nextToken&quot;: &quot;&quot;,\\n  &quot;items&quot;: [\\n    {\\n      &quot;id&quot;: &quot;10001&quot;,\\n      &quot;name&quot;: &quot;R&amp;D Department&quot;,\\n      &quot;parentId&quot;: &quot;1&quot;,\\n      &quot;memberCount&quot;: 12,\\n      &quot;hasChildren&quot;: true\\n    }\\n  ]\\n}\\n</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public ListIdentityProviderDepartmentsResponse ListIdentityProviderDepartments(string workspaceId, string identityProviderType, ListIdentityProviderDepartmentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListIdentityProviderDepartmentsWithOptions(workspaceId, identityProviderType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the departments of an identity provider by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries DingTalk or Feishu departments by hierarchy and page. Prerequisites include a bound identity provider, a user pool, valid application credentials, and address book read authorization. If you do not specify parentDepartmentId, the root hierarchy is queried. When expanding a node, specify the ID of the node to query its direct child departments. The hasChildren field indicates whether the node can be expanded and does not mean that child nodes are returned. The nextToken field is used only to query the next page of child departments under the current parent department. This query only reads the directory. It does not save the synchronization scope or import users. If a new department is added to a DingTalk or Feishu organization, re-query the corresponding parent department because the previous list does not reflect the latest directory.\n\nAuthorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.\n\nIdempotency and retry: This operation is read-only and can be called repeatedly.\n\nCalling this API is free of charge. Operation records support ActionTrail auditing.\n\nResponse example:\n<c>json\\n{\\n  &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,\\n  &quot;message&quot;: &quot;success&quot;,\\n  &quot;httpStatusCode&quot;: 200,\\n  &quot;code&quot;: &quot;SUCCESS&quot;,\\n  &quot;success&quot;: true,\\n  &quot;maxResults&quot;: 50,\\n  &quot;nextToken&quot;: &quot;&quot;,\\n  &quot;items&quot;: [\\n    {\\n      &quot;id&quot;: &quot;10001&quot;,\\n      &quot;name&quot;: &quot;R&amp;D Department&quot;,\\n      &quot;parentId&quot;: &quot;1&quot;,\\n      &quot;memberCount&quot;: 12,\\n      &quot;hasChildren&quot;: true\\n    }\\n  ]\\n}\\n</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public async Task<ListIdentityProviderDepartmentsResponse> ListIdentityProviderDepartmentsAsync(string workspaceId, string identityProviderType, ListIdentityProviderDepartmentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListIdentityProviderDepartmentsWithOptionsAsync(workspaceId, identityProviderType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the external identity providers bound to a specified workspace. Each workspace can be bound to at most one external identity provider, so the response returns at most one record. Application secret configurations are not returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Returns the local binding summary without querying the actual SAML or SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid range is 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and fictitious multi-page results are not supported.
+        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must check protocol and saml to determine whether SAML is configured. To query SCIM configurations, independently call GetIdentityProviderSCIM. The list operation does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or Security Token Service (STS) token that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;items&quot;: [
+        ///     {
+        ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;loginEnabled&quot;: false,
+        ///       &quot;syncEnabled&quot;: false
+        ///     }
+        ///   ],
+        ///   &quot;maxResults&quot;: 10,
+        ///   &quot;totalCount&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: maxResults is out of bounds, or nextToken is not empty, which is currently not supported. If a query fails, an error is displayed instead of resetting the status to unconfigured.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
@@ -13126,6 +14936,36 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Queries the external identity providers bound to a specified workspace. Each workspace can be bound to at most one external identity provider, so the response returns at most one record. Application secret configurations are not returned.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Returns the local binding summary without querying the actual SAML or SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid range is 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and fictitious multi-page results are not supported.
+        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must check protocol and saml to determine whether SAML is configured. To query SCIM configurations, independently call GetIdentityProviderSCIM. The list operation does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or Security Token Service (STS) token that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;items&quot;: [
+        ///     {
+        ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;loginEnabled&quot;: false,
+        ///       &quot;syncEnabled&quot;: false
+        ///     }
+        ///   ],
+        ///   &quot;maxResults&quot;: 10,
+        ///   &quot;totalCount&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: maxResults is out of bounds, or nextToken is not empty, which is currently not supported. If a query fails, an error is displayed instead of resetting the status to unconfigured.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
         /// </param>
@@ -13176,6 +15016,36 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Queries the external identity providers bound to a specified workspace. Each workspace can be bound to at most one external identity provider, so the response returns at most one record. Application secret configurations are not returned.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Returns the local binding summary without querying the actual SAML or SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid range is 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and fictitious multi-page results are not supported.
+        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must check protocol and saml to determine whether SAML is configured. To query SCIM configurations, independently call GetIdentityProviderSCIM. The list operation does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or Security Token Service (STS) token that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;items&quot;: [
+        ///     {
+        ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;loginEnabled&quot;: false,
+        ///       &quot;syncEnabled&quot;: false
+        ///     }
+        ///   ],
+        ///   &quot;maxResults&quot;: 10,
+        ///   &quot;totalCount&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: maxResults is out of bounds, or nextToken is not empty, which is currently not supported. If a query fails, an error is displayed instead of resetting the status to unconfigured.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
         /// </param>
@@ -13194,6 +15064,36 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <summary>
         /// <para>Queries the external identity providers bound to a specified workspace. Each workspace can be bound to at most one external identity provider, so the response returns at most one record. Application secret configurations are not returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Returns the local binding summary without querying the actual SAML or SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid range is 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and fictitious multi-page results are not supported.
+        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must check protocol and saml to determine whether SAML is configured. To query SCIM configurations, independently call GetIdentityProviderSCIM. The list operation does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or Security Token Service (STS) token that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;items&quot;: [
+        ///     {
+        ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;loginEnabled&quot;: false,
+        ///       &quot;syncEnabled&quot;: false
+        ///     }
+        ///   ],
+        ///   &quot;maxResults&quot;: 10,
+        ///   &quot;totalCount&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: maxResults is out of bounds, or nextToken is not empty, which is currently not supported. If a query fails, an error is displayed instead of resetting the status to unconfigured.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
@@ -14153,12 +16053,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14220,12 +16120,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14287,12 +16187,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14311,12 +16211,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query on long-term memory. Paging is supported, and you can filter the results independently by user ID, agent ID, and session ID.</para>
+        /// <para>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14335,12 +16235,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14402,12 +16302,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14469,12 +16369,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14493,12 +16393,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
+        /// <para>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14517,12 +16417,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14580,12 +16480,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14643,12 +16543,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14667,12 +16567,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for sessions in a MemoryStore, and allows independent filtering by user ID and agent ID.</para>
+        /// <para>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14691,12 +16591,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14746,12 +16646,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14801,12 +16701,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14825,12 +16725,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries MemoryStores in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query for MemoryStores in a specified workspace with paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17983,12 +19883,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18040,12 +19940,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18097,12 +19997,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18121,12 +20021,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves long-term memory from a MemoryStore based on semantics queries.</para>
+        /// <para>Retrieves long-term memory from a MemoryStore based on semantics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19332,10 +21232,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field. Currently, only ACR container image deployment is supported. Omit the artifact.code field.
-        /// When providing the runtime field, both compute and sessionPolicy must be present. If you omit hpa or any of its fields, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them all. When providing the network field, omitted access items are treated as allowed, but actual access is still subject to the workspace network restrictions. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify the port field, and other unspecified items use default values. When providing logging.sls, you must specify both project and logstore.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
         /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
         /// </description>
         /// 
@@ -19399,10 +21301,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field. Currently, only ACR container image deployment is supported. Omit the artifact.code field.
-        /// When providing the runtime field, both compute and sessionPolicy must be present. If you omit hpa or any of its fields, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them all. When providing the network field, omitted access items are treated as allowed, but actual access is still subject to the workspace network restrictions. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify the port field, and other unspecified items use default values. When providing logging.sls, you must specify both project and logstore.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
         /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
         /// </description>
         /// 
@@ -19466,10 +21370,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field. Currently, only ACR container image deployment is supported. Omit the artifact.code field.
-        /// When providing the runtime field, both compute and sessionPolicy must be present. If you omit hpa or any of its fields, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them all. When providing the network field, omitted access items are treated as allowed, but actual access is still subject to the workspace network restrictions. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify the port field, and other unspecified items use default values. When providing logging.sls, you must specify both project and logstore.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
         /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
         /// </description>
         /// 
@@ -19494,10 +21400,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field. Currently, only ACR container image deployment is supported. Omit the artifact.code field.
-        /// When providing the runtime field, both compute and sessionPolicy must be present. If you omit hpa or any of its fields, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them all. When providing the network field, omitted access items are treated as allowed, but actual access is still subject to the workspace network restrictions. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify the port field, and other unspecified items use default values. When providing logging.sls, you must specify both project and logstore.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
         /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
         /// </description>
         /// 
@@ -19691,8 +21599,50 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the logon switch, member synchronization switch, or application configuration of a specified external identity provider for a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>CustomSSO uses protocol=SAML and saml to save logon configurations. It does not accept legacy metadata or syncEnabled. To toggle the SCIM switch, you must call UpdateIdentityProviderSCIM. OIDC is not supported. You can either import XML or manually enter fields. If you import XML, metadataXml must be a single IdP EntityDescriptor XML text of up to 1 MiB. URLs or file paths are not accepted, and DTDs or external entities are prohibited. If you manually enter fields, you must provide entityId, loginUrl, bindingType, and a non-empty x509Certificates array at the same time. The entityId must be non-empty and up to 2,048 characters in length, and cannot be replaced after configuration. The loginUrl must be an absolute HTTPS URL without user credentials or fragments. The bindingType must be HTTP-Redirect or HTTP-POST. Signing certificates must be valid X.509 certificates, and up to 10 certificates are supported.
+        /// Saving the configuration does not automatically enable logon. A valid SAML configuration must exist before you enable logon. Setting loginEnabled=false only disables logon and does not clear SAML or SCIM configurations. You can independently pass Boolean values for jitProvisionEnabled and jitUpdateEnabled. If omitted, the existing values are retained. If omitted for the first time, the default value is false. Updating only the JIT switches also requires a valid SAML configuration. If the request is unchanged, the current binding may be returned directly without generating a new task. A successful update returns UPDATING. You can call GetIdentityProvider and wait for READY or UPDATE_FAILED. If the update fails, you can resubmit the request. An HTTP success response does not indicate that the upstream configuration has taken effect.
+        /// DingTalk and Feishu continue to use vendor metadata and logon or synchronization switches. They do not accept protocol or saml. Updating vendor metadata supports partial updates. You only need to submit the fields to be modified. Unsubmitted fields and saved credentials remain unchanged. The server merges the new and old values and then validates the complete configuration. Explicitly submitted fields cannot be null, empty strings, or blank strings. For example, you can submit only appSecret to update the secret. The existing vendor semantics of syncScope are retained. Saving the scope does not automatically trigger full synchronization.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>PUT /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">PUT /workspaces/ws-example/identity-providers/CustomSSO
+        /// {
+        ///   &quot;protocol&quot;: &quot;SAML&quot;,
+        ///   &quot;saml&quot;: {
+        ///     &quot;entityId&quot;: &quot;https://idp.example.com/entity&quot;,
+        ///     &quot;loginUrl&quot;: &quot;https://idp.example.com/sso&quot;,
+        ///     &quot;bindingType&quot;: &quot;HTTP-Redirect&quot;,
+        ///     &quot;x509Certificates&quot;: [
+        ///       &quot;&lt;Valid PEM X.509 certificate text&gt;&quot;
+        ///     ],
+        ///     &quot;jitProvisionEnabled&quot;: false,
+        ///     &quot;jitUpdateEnabled&quot;: false
+        ///   }
+        /// }
+        /// Toggle logon only: {&quot;loginEnabled&quot;: true}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;UPDATING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: XML and manual entry are mixed, manual entry items are missing, certificates are invalid, the protocol is not supported, entityId is changed, logon is enabled without configuration, or CustomSSO submits metadata or syncEnabled. 409 IdentityProviderOperationConflict: The current binding does not allow updates. CustomSSO supports resubmitting configurations from UPDATE_FAILED.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateIdentityProviderRequest
@@ -19743,8 +21693,50 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the logon switch, member synchronization switch, or application configuration of a specified external identity provider for a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>CustomSSO uses protocol=SAML and saml to save logon configurations. It does not accept legacy metadata or syncEnabled. To toggle the SCIM switch, you must call UpdateIdentityProviderSCIM. OIDC is not supported. You can either import XML or manually enter fields. If you import XML, metadataXml must be a single IdP EntityDescriptor XML text of up to 1 MiB. URLs or file paths are not accepted, and DTDs or external entities are prohibited. If you manually enter fields, you must provide entityId, loginUrl, bindingType, and a non-empty x509Certificates array at the same time. The entityId must be non-empty and up to 2,048 characters in length, and cannot be replaced after configuration. The loginUrl must be an absolute HTTPS URL without user credentials or fragments. The bindingType must be HTTP-Redirect or HTTP-POST. Signing certificates must be valid X.509 certificates, and up to 10 certificates are supported.
+        /// Saving the configuration does not automatically enable logon. A valid SAML configuration must exist before you enable logon. Setting loginEnabled=false only disables logon and does not clear SAML or SCIM configurations. You can independently pass Boolean values for jitProvisionEnabled and jitUpdateEnabled. If omitted, the existing values are retained. If omitted for the first time, the default value is false. Updating only the JIT switches also requires a valid SAML configuration. If the request is unchanged, the current binding may be returned directly without generating a new task. A successful update returns UPDATING. You can call GetIdentityProvider and wait for READY or UPDATE_FAILED. If the update fails, you can resubmit the request. An HTTP success response does not indicate that the upstream configuration has taken effect.
+        /// DingTalk and Feishu continue to use vendor metadata and logon or synchronization switches. They do not accept protocol or saml. Updating vendor metadata supports partial updates. You only need to submit the fields to be modified. Unsubmitted fields and saved credentials remain unchanged. The server merges the new and old values and then validates the complete configuration. Explicitly submitted fields cannot be null, empty strings, or blank strings. For example, you can submit only appSecret to update the secret. The existing vendor semantics of syncScope are retained. Saving the scope does not automatically trigger full synchronization.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>PUT /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">PUT /workspaces/ws-example/identity-providers/CustomSSO
+        /// {
+        ///   &quot;protocol&quot;: &quot;SAML&quot;,
+        ///   &quot;saml&quot;: {
+        ///     &quot;entityId&quot;: &quot;https://idp.example.com/entity&quot;,
+        ///     &quot;loginUrl&quot;: &quot;https://idp.example.com/sso&quot;,
+        ///     &quot;bindingType&quot;: &quot;HTTP-Redirect&quot;,
+        ///     &quot;x509Certificates&quot;: [
+        ///       &quot;&lt;Valid PEM X.509 certificate text&gt;&quot;
+        ///     ],
+        ///     &quot;jitProvisionEnabled&quot;: false,
+        ///     &quot;jitUpdateEnabled&quot;: false
+        ///   }
+        /// }
+        /// Toggle logon only: {&quot;loginEnabled&quot;: true}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;UPDATING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: XML and manual entry are mixed, manual entry items are missing, certificates are invalid, the protocol is not supported, entityId is changed, logon is enabled without configuration, or CustomSSO submits metadata or syncEnabled. 409 IdentityProviderOperationConflict: The current binding does not allow updates. CustomSSO supports resubmitting configurations from UPDATE_FAILED.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateIdentityProviderRequest
@@ -19795,8 +21787,50 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the logon switch, member synchronization switch, or application configuration of a specified external identity provider for a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>CustomSSO uses protocol=SAML and saml to save logon configurations. It does not accept legacy metadata or syncEnabled. To toggle the SCIM switch, you must call UpdateIdentityProviderSCIM. OIDC is not supported. You can either import XML or manually enter fields. If you import XML, metadataXml must be a single IdP EntityDescriptor XML text of up to 1 MiB. URLs or file paths are not accepted, and DTDs or external entities are prohibited. If you manually enter fields, you must provide entityId, loginUrl, bindingType, and a non-empty x509Certificates array at the same time. The entityId must be non-empty and up to 2,048 characters in length, and cannot be replaced after configuration. The loginUrl must be an absolute HTTPS URL without user credentials or fragments. The bindingType must be HTTP-Redirect or HTTP-POST. Signing certificates must be valid X.509 certificates, and up to 10 certificates are supported.
+        /// Saving the configuration does not automatically enable logon. A valid SAML configuration must exist before you enable logon. Setting loginEnabled=false only disables logon and does not clear SAML or SCIM configurations. You can independently pass Boolean values for jitProvisionEnabled and jitUpdateEnabled. If omitted, the existing values are retained. If omitted for the first time, the default value is false. Updating only the JIT switches also requires a valid SAML configuration. If the request is unchanged, the current binding may be returned directly without generating a new task. A successful update returns UPDATING. You can call GetIdentityProvider and wait for READY or UPDATE_FAILED. If the update fails, you can resubmit the request. An HTTP success response does not indicate that the upstream configuration has taken effect.
+        /// DingTalk and Feishu continue to use vendor metadata and logon or synchronization switches. They do not accept protocol or saml. Updating vendor metadata supports partial updates. You only need to submit the fields to be modified. Unsubmitted fields and saved credentials remain unchanged. The server merges the new and old values and then validates the complete configuration. Explicitly submitted fields cannot be null, empty strings, or blank strings. For example, you can submit only appSecret to update the secret. The existing vendor semantics of syncScope are retained. Saving the scope does not automatically trigger full synchronization.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>PUT /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">PUT /workspaces/ws-example/identity-providers/CustomSSO
+        /// {
+        ///   &quot;protocol&quot;: &quot;SAML&quot;,
+        ///   &quot;saml&quot;: {
+        ///     &quot;entityId&quot;: &quot;https://idp.example.com/entity&quot;,
+        ///     &quot;loginUrl&quot;: &quot;https://idp.example.com/sso&quot;,
+        ///     &quot;bindingType&quot;: &quot;HTTP-Redirect&quot;,
+        ///     &quot;x509Certificates&quot;: [
+        ///       &quot;&lt;Valid PEM X.509 certificate text&gt;&quot;
+        ///     ],
+        ///     &quot;jitProvisionEnabled&quot;: false,
+        ///     &quot;jitUpdateEnabled&quot;: false
+        ///   }
+        /// }
+        /// Toggle logon only: {&quot;loginEnabled&quot;: true}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;UPDATING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: XML and manual entry are mixed, manual entry items are missing, certificates are invalid, the protocol is not supported, entityId is changed, logon is enabled without configuration, or CustomSSO submits metadata or syncEnabled. 409 IdentityProviderOperationConflict: The current binding does not allow updates. CustomSSO supports resubmitting configurations from UPDATE_FAILED.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIdentityProviderRequest
@@ -19814,8 +21848,50 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the logon switch, member synchronization switch, or application configuration of a specified external identity provider for a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>CustomSSO uses protocol=SAML and saml to save logon configurations. It does not accept legacy metadata or syncEnabled. To toggle the SCIM switch, you must call UpdateIdentityProviderSCIM. OIDC is not supported. You can either import XML or manually enter fields. If you import XML, metadataXml must be a single IdP EntityDescriptor XML text of up to 1 MiB. URLs or file paths are not accepted, and DTDs or external entities are prohibited. If you manually enter fields, you must provide entityId, loginUrl, bindingType, and a non-empty x509Certificates array at the same time. The entityId must be non-empty and up to 2,048 characters in length, and cannot be replaced after configuration. The loginUrl must be an absolute HTTPS URL without user credentials or fragments. The bindingType must be HTTP-Redirect or HTTP-POST. Signing certificates must be valid X.509 certificates, and up to 10 certificates are supported.
+        /// Saving the configuration does not automatically enable logon. A valid SAML configuration must exist before you enable logon. Setting loginEnabled=false only disables logon and does not clear SAML or SCIM configurations. You can independently pass Boolean values for jitProvisionEnabled and jitUpdateEnabled. If omitted, the existing values are retained. If omitted for the first time, the default value is false. Updating only the JIT switches also requires a valid SAML configuration. If the request is unchanged, the current binding may be returned directly without generating a new task. A successful update returns UPDATING. You can call GetIdentityProvider and wait for READY or UPDATE_FAILED. If the update fails, you can resubmit the request. An HTTP success response does not indicate that the upstream configuration has taken effect.
+        /// DingTalk and Feishu continue to use vendor metadata and logon or synchronization switches. They do not accept protocol or saml. Updating vendor metadata supports partial updates. You only need to submit the fields to be modified. Unsubmitted fields and saved credentials remain unchanged. The server merges the new and old values and then validates the complete configuration. Explicitly submitted fields cannot be null, empty strings, or blank strings. For example, you can submit only appSecret to update the secret. The existing vendor semantics of syncScope are retained. Saving the scope does not automatically trigger full synchronization.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>PUT /workspaces/{workspaceId}/identity-providers/{identityProviderType}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">PUT /workspaces/ws-example/identity-providers/CustomSSO
+        /// {
+        ///   &quot;protocol&quot;: &quot;SAML&quot;,
+        ///   &quot;saml&quot;: {
+        ///     &quot;entityId&quot;: &quot;https://idp.example.com/entity&quot;,
+        ///     &quot;loginUrl&quot;: &quot;https://idp.example.com/sso&quot;,
+        ///     &quot;bindingType&quot;: &quot;HTTP-Redirect&quot;,
+        ///     &quot;x509Certificates&quot;: [
+        ///       &quot;&lt;Valid PEM X.509 certificate text&gt;&quot;
+        ///     ],
+        ///     &quot;jitProvisionEnabled&quot;: false,
+        ///     &quot;jitUpdateEnabled&quot;: false
+        ///   }
+        /// }
+        /// Toggle logon only: {&quot;loginEnabled&quot;: true}
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
+        ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;loginEnabled&quot;: false,
+        ///     &quot;syncEnabled&quot;: false,
+        ///     &quot;status&quot;: &quot;UPDATING&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: XML and manual entry are mixed, manual entry items are missing, certificates are invalid, the protocol is not supported, entityId is changed, logon is enabled without configuration, or CustomSSO submits metadata or syncEnabled. 409 IdentityProviderOperationConflict: The current binding does not allow updates. CustomSSO supports resubmitting configurations from UPDATE_FAILED.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIdentityProviderRequest
@@ -20347,12 +22423,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20404,12 +22480,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20461,12 +22537,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20485,12 +22561,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the long-term memory text or metadata based on the memory ID.</para>
+        /// <para>Updates the text or metadata of a long-term memory based on the memory ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22327,6 +24403,322 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UploadSkillViaOssWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the OSS code package source for an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses the current workspace role to check whether the customer\&quot;s OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
+        /// The validation uses object metadata and read probing. It does not perform full downloads, transfers, or decompression, nor does it generate a SHA-256 hash. Passing the validation does not mean that the archive content is complete or can be started. When you submit a CreateCustomAgent or UpdateCustomAgent request, the system re-validates and transfers the package. You do not need to invoke this operation in advance as a prerequisite for submission.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ValidateAgentCodePackageFromOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAgentCodePackageFromOssResponse
+        /// </returns>
+        public ValidateAgentCodePackageFromOssResponse ValidateAgentCodePackageFromOssWithOptions(string workspaceId, ValidateAgentCodePackageFromOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ValidateAgentCodePackageFromOssShrinkRequest request = new ValidateAgentCodePackageFromOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateAgentCodePackageFromOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/validate-from-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateAgentCodePackageFromOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the OSS code package source for an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses the current workspace role to check whether the customer\&quot;s OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
+        /// The validation uses object metadata and read probing. It does not perform full downloads, transfers, or decompression, nor does it generate a SHA-256 hash. Passing the validation does not mean that the archive content is complete or can be started. When you submit a CreateCustomAgent or UpdateCustomAgent request, the system re-validates and transfers the package. You do not need to invoke this operation in advance as a prerequisite for submission.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ValidateAgentCodePackageFromOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAgentCodePackageFromOssResponse
+        /// </returns>
+        public async Task<ValidateAgentCodePackageFromOssResponse> ValidateAgentCodePackageFromOssWithOptionsAsync(string workspaceId, ValidateAgentCodePackageFromOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ValidateAgentCodePackageFromOssShrinkRequest request = new ValidateAgentCodePackageFromOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateAgentCodePackageFromOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/validate-from-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateAgentCodePackageFromOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the OSS code package source for an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses the current workspace role to check whether the customer\&quot;s OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
+        /// The validation uses object metadata and read probing. It does not perform full downloads, transfers, or decompression, nor does it generate a SHA-256 hash. Passing the validation does not mean that the archive content is complete or can be started. When you submit a CreateCustomAgent or UpdateCustomAgent request, the system re-validates and transfers the package. You do not need to invoke this operation in advance as a prerequisite for submission.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ValidateAgentCodePackageFromOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAgentCodePackageFromOssResponse
+        /// </returns>
+        public ValidateAgentCodePackageFromOssResponse ValidateAgentCodePackageFromOss(string workspaceId, ValidateAgentCodePackageFromOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ValidateAgentCodePackageFromOssWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the OSS code package source for an agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses the current workspace role to check whether the customer\&quot;s OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
+        /// The validation uses object metadata and read probing. It does not perform full downloads, transfers, or decompression, nor does it generate a SHA-256 hash. Passing the validation does not mean that the archive content is complete or can be started. When you submit a CreateCustomAgent or UpdateCustomAgent request, the system re-validates and transfers the package. You do not need to invoke this operation in advance as a prerequisite for submission.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ValidateAgentCodePackageFromOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAgentCodePackageFromOssResponse
+        /// </returns>
+        public async Task<ValidateAgentCodePackageFromOssResponse> ValidateAgentCodePackageFromOssAsync(string workspaceId, ValidateAgentCodePackageFromOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ValidateAgentCodePackageFromOssWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查智能体代码包 OSS RAM 授权状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>检查当前 Workspace 角色是否绑定所选源 Bucket 对应的自定义 RAM 策略，复用已有挂载授权。仅返回策略绑定状态，不验证代码包存在或可读、不修改默认桶。授权状态不能替代 ValidateAgentCodePackageFromOss 的实际对象读取校验。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyAgentCodePackageOssRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyAgentCodePackageOssRamAuthorizationResponse
+        /// </returns>
+        public VerifyAgentCodePackageOssRamAuthorizationResponse VerifyAgentCodePackageOssRamAuthorizationWithOptions(string workspaceId, VerifyAgentCodePackageOssRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["ossBucketName"] = request.OssBucketName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyAgentCodePackageOssRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/oss/authorize/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyAgentCodePackageOssRamAuthorizationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查智能体代码包 OSS RAM 授权状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>检查当前 Workspace 角色是否绑定所选源 Bucket 对应的自定义 RAM 策略，复用已有挂载授权。仅返回策略绑定状态，不验证代码包存在或可读、不修改默认桶。授权状态不能替代 ValidateAgentCodePackageFromOss 的实际对象读取校验。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyAgentCodePackageOssRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyAgentCodePackageOssRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyAgentCodePackageOssRamAuthorizationResponse> VerifyAgentCodePackageOssRamAuthorizationWithOptionsAsync(string workspaceId, VerifyAgentCodePackageOssRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["ossBucketName"] = request.OssBucketName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyAgentCodePackageOssRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-code-packages/oss/authorize/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyAgentCodePackageOssRamAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查智能体代码包 OSS RAM 授权状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>检查当前 Workspace 角色是否绑定所选源 Bucket 对应的自定义 RAM 策略，复用已有挂载授权。仅返回策略绑定状态，不验证代码包存在或可读、不修改默认桶。授权状态不能替代 ValidateAgentCodePackageFromOss 的实际对象读取校验。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyAgentCodePackageOssRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyAgentCodePackageOssRamAuthorizationResponse
+        /// </returns>
+        public VerifyAgentCodePackageOssRamAuthorizationResponse VerifyAgentCodePackageOssRamAuthorization(string workspaceId, VerifyAgentCodePackageOssRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VerifyAgentCodePackageOssRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查智能体代码包 OSS RAM 授权状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>检查当前 Workspace 角色是否绑定所选源 Bucket 对应的自定义 RAM 策略，复用已有挂载授权。仅返回策略绑定状态，不验证代码包存在或可读、不修改默认桶。授权状态不能替代 ValidateAgentCodePackageFromOss 的实际对象读取校验。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyAgentCodePackageOssRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyAgentCodePackageOssRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyAgentCodePackageOssRamAuthorizationResponse> VerifyAgentCodePackageOssRamAuthorizationAsync(string workspaceId, VerifyAgentCodePackageOssRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VerifyAgentCodePackageOssRamAuthorizationWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateIdentityProviderShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for updating the external identity provider.</para>
+        /// <para>The request content for updating the external identity provider.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

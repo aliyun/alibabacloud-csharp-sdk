@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The description of the MemoryStore.</para>
+            /// <para>The MemoryStore description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Used to store long-term user preferences</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreId { get; set; }
 
             /// <summary>
-            /// <para>The name of the MemoryStore. It cannot be modified after creation.</para>
+            /// <para>The MemoryStore name. It cannot be modified after creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer-memory</para>
