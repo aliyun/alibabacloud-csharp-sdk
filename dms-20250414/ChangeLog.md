@@ -1,3 +1,8 @@
+2026-10-22 Version: 4.3.1
+- Update API SendChatMessage: add request parameters DataSource.Uri.
+- Update API SendChatMessage: add request parameters DataSources.$.Uri.
+
+
 2026-10-21 Version: 4.3.0
 - Support API ListAgenticGlobalSqlExecutionHistories.
 - Support API ListAgenticSqlExecutionHistories.

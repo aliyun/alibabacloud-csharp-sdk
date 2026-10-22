@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class SendChatMessageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para><b>[Optimized]</b> This field is now automatically obtained by the backend. You do not need to specify this field.</para>
+        /// <para><b>[Optimized]</b> This field is now automatically retrieved in the background. You do not need to specify it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent_***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para><b>[Optimized]</b> This field is now automatically obtained by the backend. You do not need to specify this field when calling the API.</para>
+        /// <para><b>[Optimized]</b> This field is now automatically retrieved in the background. You do not need to specify it when calling the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The data source information. This parameter can be left empty. This parameter supports only one data source. Use the DataSources parameter instead.</para>
+        /// <para>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. Use the DataSources parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DataSourcesShrink { get; set; }
 
         /// <summary>
-        /// <para>The message content to send to the Agent.</para>
+        /// <para>The content of the message sent to the agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,15 +58,15 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The message type. Default value: <c>[primary]</c>.  </para>
+        /// <para>The message type. Default value: <c>primary</c>.  </para>
         /// <list type="bullet">
-        /// <item><description><para>For regular interactions with the Agent, set the message type to <c>[primary]</c>.</para>
+        /// <item><description><para>In normal interactions with the agent, the message type is <c>primary</c>.</para>
         /// </description></item>
-        /// <item><description><para>When the message is a response to the Agent\&quot;s Human-in-Loop question, set the type to <c>[additional]</c>.</para>
+        /// <item><description><para>When the message is a response to a human-in-the-loop question from the agent, the type must be <c>additional</c>.</para>
         /// </description></item>
-        /// <item><description><para>When the message is intended to trigger report generation, set the type to <c>[report]</c>.</para>
+        /// <item><description><para>When the message is intended to trigger report generation, the type must be <c>report</c>.</para>
         /// </description></item>
-        /// <item><description><para>When the message is intended to cancel the current session, set the type to <c>[cancel]</c>.</para>
+        /// <item><description><para>When the message is intended to cancel the current session, the type must be <c>cancel</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string MessageType { get; set; }
 
         /// <summary>
-        /// <para>The parent session ID.</para>
+        /// <para>The ID of the parent session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20qrliuoo7p2vlsfg*****</para>
@@ -88,17 +88,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ParentSessionId { get; set; }
 
         /// <summary>
-        /// <para>This field is required when the message type is <c>additional</c>. Specify the specific question that the Agent asks the user through Human-in-Loop.</para>
+        /// <para>Required when the message type is <c>additional</c>. Specifies the specific question asked by the agent to the user through human-in-the-loop.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Provide the criteria for calculating GMV</para>
+        /// <para>Provide the calculation criteria for GMV</para>
         /// </summary>
         [NameInMap("Question")]
         [Validation(Required=false)]
         public string Question { get; set; }
 
         /// <summary>
-        /// <para>The quoted content. This is typically used during interactions with the Agent.</para>
+        /// <para>The quoted content. This is typically used when interacting with the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;version&quot;:&quot;v0&quot;}</para>
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para><b>Important</b></para>
-        /// <para>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried in that Agent message. If this message is not a targeted reply, such as requesting the Agent to perform further in-depth analysis after analysis is complete, you can leave reply_to empty or set it to &quot;0&quot;.  </para>
-        /// <para>This field affects how the Agent decides to process the message. Incorrect values may lead to analysis results that do not meet expectations.</para>
+        /// <para>When this message is a reply to an agent message, such as an agent asking for clarification through ASK_HUMAN, <c>reply_to</c> must exactly match the checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave <c>reply_to</c> empty or set it to &quot;0&quot;.  </para>
+        /// <para>This field affects how the agent decides to process the message. Passing an incorrect value may lead to suboptimal analysis results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ReplyTo { get; set; }
 
         /// <summary>
-        /// <para>The special configuration for the current session. For the same session, only the configuration included in the first SendMessage call takes effect.</para>
+        /// <para>The special configurations for the current session. For the same session, only the configurations specified in the first SendMessage call take effect.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -130,11 +130,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SessionConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The session ID. This is an optional field used for multi-turn sessions.</para>
+        /// <para>The session ID. This optional field is used for multi-turn sessions.</para>
         /// <list type="bullet">
-        /// <item><description>You can start a session without specifying this field. The response includes the SessionID of the current session.</description></item>
+        /// <item><description>You can start a session without specifying this field. The response will include the session ID for the current session.</description></item>
         /// <item><description>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating a session.</description></item>
-        /// <item><description>For multi-turn conversations (such as follow-up questions or confirming execution plans), specify the SessionID returned by the previous SendChatMessage call.</description></item>
+        /// <item><description>If you need multi-turn conversations, such as follow-up questions or confirming execution plans, specify the session ID returned by the previous SendChatMessage operation in this operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string TaskConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket of the user. If this parameter is not specified, the analysis data is securely stored in built-in storage.</para>
+        /// <para>The Object Storage Service (OSS) bucket of the user. If this parameter is left empty, the analysis process is securely stored in the built-in storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-bucket</para>
