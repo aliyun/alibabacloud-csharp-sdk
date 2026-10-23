@@ -4423,15 +4423,15 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets column encryption permissions for database accounts in batches.</para>
+        /// <para>Sets the column encryption permissions for multiple database accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the same column encryption access permissions for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each entry must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess denies decryption and is supported only for specific DPI engines and key patterns. Only fullAccess supports configuring a validity period. After a successful request, invoke ListDataAssetAccounts to verify the results.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the region, resource identities, and configuration values obtained from your account.
-        /// Use the endpoint of the region where the target asset resides and set the common parameter RegionId, for example, cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-        /// This operation returns only RequestId. A successful request does not indicate that the operation is complete. Verify the status by invoking the corresponding query operation as described in the operation description.</para>
+        /// <para>Sets the same column encryption access permissions Settings for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports configuring an expiration time. After a successful request, invoke ListDataAssetAccounts to read back the results.
+        /// The parameter examples are for format illustration only. When invoking this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+        /// Use the service registration endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+        /// This operation returns only RequestId. Request acceptance does not mean the business operation is complete. You must read back the status as described in the operation description.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4503,15 +4503,15 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets column encryption permissions for database accounts in batches.</para>
+        /// <para>Sets the column encryption permissions for multiple database accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the same column encryption access permissions for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each entry must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess denies decryption and is supported only for specific DPI engines and key patterns. Only fullAccess supports configuring a validity period. After a successful request, invoke ListDataAssetAccounts to verify the results.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the region, resource identities, and configuration values obtained from your account.
-        /// Use the endpoint of the region where the target asset resides and set the common parameter RegionId, for example, cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-        /// This operation returns only RequestId. A successful request does not indicate that the operation is complete. Verify the status by invoking the corresponding query operation as described in the operation description.</para>
+        /// <para>Sets the same column encryption access permissions Settings for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports configuring an expiration time. After a successful request, invoke ListDataAssetAccounts to read back the results.
+        /// The parameter examples are for format illustration only. When invoking this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+        /// Use the service registration endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+        /// This operation returns only RequestId. Request acceptance does not mean the business operation is complete. You must read back the status as described in the operation description.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4583,15 +4583,15 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets column encryption permissions for database accounts in batches.</para>
+        /// <para>Sets the column encryption permissions for multiple database accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the same column encryption access permissions for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each entry must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess denies decryption and is supported only for specific DPI engines and key patterns. Only fullAccess supports configuring a validity period. After a successful request, invoke ListDataAssetAccounts to verify the results.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the region, resource identities, and configuration values obtained from your account.
-        /// Use the endpoint of the region where the target asset resides and set the common parameter RegionId, for example, cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-        /// This operation returns only RequestId. A successful request does not indicate that the operation is complete. Verify the status by invoking the corresponding query operation as described in the operation description.</para>
+        /// <para>Sets the same column encryption access permissions Settings for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports configuring an expiration time. After a successful request, invoke ListDataAssetAccounts to read back the results.
+        /// The parameter examples are for format illustration only. When invoking this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+        /// Use the service registration endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+        /// This operation returns only RequestId. Request acceptance does not mean the business operation is complete. You must read back the status as described in the operation description.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4609,15 +4609,15 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets column encryption permissions for database accounts in batches.</para>
+        /// <para>Sets the column encryption permissions for multiple database accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the same column encryption access permissions for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each entry must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess denies decryption and is supported only for specific DPI engines and key patterns. Only fullAccess supports configuring a validity period. After a successful request, invoke ListDataAssetAccounts to verify the results.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the region, resource identities, and configuration values obtained from your account.
-        /// Use the endpoint of the region where the target asset resides and set the common parameter RegionId, for example, cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-        /// This operation returns only RequestId. A successful request does not indicate that the operation is complete. Verify the status by invoking the corresponding query operation as described in the operation description.</para>
+        /// <para>Sets the same column encryption access permissions Settings for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports configuring an expiration time. After a successful request, invoke ListDataAssetAccounts to read back the results.
+        /// The parameter examples are for format illustration only. When invoking this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+        /// Use the service registration endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+        /// This operation returns only RequestId. Request acceptance does not mean the business operation is complete. You must read back the status as described in the operation description.</para>
         /// </description>
         /// 
         /// <param name="request">
