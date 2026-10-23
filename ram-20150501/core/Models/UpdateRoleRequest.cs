@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateRoleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the RAM role is allowed to log on to the console.</para>
+        /// <para>Specifies whether to allow the RAM role to log on to the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,8 +30,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string NewAssumeRolePolicyDocument { get; set; }
 
         /// <summary>
-        /// <para>The description of the RAM role.</para>
-        /// <para>The description must be 1 to 1024 characters in length.</para>
+        /// <para>The description of the RAM role. The description must be 1 to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS management role</para>
@@ -41,8 +40,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string NewDescription { get; set; }
 
         /// <summary>
-        /// <para>The maximum session duration of the RAM role.</para>
-        /// <para>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</para>
+        /// <para>The maximum session duration of the RAM role. Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -52,8 +50,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public long? NewMaxSessionDuration { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role.</para>
-        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
+        /// <para>The name of the RAM role. The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECSAdmin</para>

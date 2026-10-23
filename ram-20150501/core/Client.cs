@@ -18,32 +18,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-beijing", "ram.aliyuncs.com"},
-                {"cn-qingdao", "ram.aliyuncs.com"},
-                {"cn-shanghai", "ram.aliyuncs.com"},
-                {"cn-hongkong", "ram.aliyuncs.com"},
-                {"cn-zhangjiakou", "ram.aliyuncs.com"},
-                {"cn-shenzhen", "ram.aliyuncs.com"},
-                {"ap-northeast-1", "ram.aliyuncs.com"},
-                {"cn-chengdu", "ram.aliyuncs.com"},
-                {"ap-southeast-1", "ram.aliyuncs.com"},
-                {"ap-southeast-3", "ram.aliyuncs.com"},
-                {"cn-huhehaote", "ram.aliyuncs.com"},
-                {"ap-southeast-5", "ram.aliyuncs.com"},
-                {"cn-hangzhou", "ram.aliyuncs.com"},
-                {"us-east-1", "ram.aliyuncs.com"},
-                {"eu-west-1", "ram.aliyuncs.com"},
-                {"us-west-1", "ram.aliyuncs.com"},
-                {"eu-central-1", "ram.aliyuncs.com"},
-                {"me-east-1", "ram.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "ram.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "ram.aliyuncs.com"},
-                {"cn-beijing-finance-1", "ram.aliyuncs.com"},
-                {"cn-hangzhou-finance", "ram.aliyuncs.com"},
-            };
+            this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("ram", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1757,7 +1732,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
+        /// <h3>Usage notes</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// </description>
         /// 
@@ -1831,7 +1806,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
+        /// <h3>Usage notes</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// </description>
         /// 
@@ -1905,7 +1880,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
+        /// <h3>Usage notes</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// </description>
         /// 
@@ -1929,7 +1904,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
+        /// <h3>Usage notes</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// </description>
         /// 
@@ -2376,7 +2351,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decodes the permission diagnostic information from the response body of a request that was denied due to missing RAM permissions.</para>
+        /// <para>Decodes the diagnostic information from the response body of a request that is denied due to insufficient RAM permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2418,7 +2393,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decodes the permission diagnostic information from the response body of a request that was denied due to missing RAM permissions.</para>
+        /// <para>Decodes the diagnostic information from the response body of a request that is denied due to insufficient RAM permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2460,7 +2435,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decodes the permission diagnostic information from the response body of a request that was denied due to missing RAM permissions.</para>
+        /// <para>Decodes the diagnostic information from the response body of a request that is denied due to insufficient RAM permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2478,7 +2453,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decodes the permission diagnostic information from the response body of a request that was denied due to missing RAM permissions.</para>
+        /// <para>Decodes the diagnostic information from the response body of a request that is denied due to insufficient RAM permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4096,6 +4071,134 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>产生最近访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateServiceLastAccessedDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateServiceLastAccessedDetailsResponse
+        /// </returns>
+        public GenerateServiceLastAccessedDetailsResponse GenerateServiceLastAccessedDetailsWithOptions(GenerateServiceLastAccessedDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
+            {
+                query["Arn"] = request.Arn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["Granularity"] = request.Granularity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateServiceLastAccessedDetails",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateServiceLastAccessedDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>产生最近访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateServiceLastAccessedDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateServiceLastAccessedDetailsResponse
+        /// </returns>
+        public async Task<GenerateServiceLastAccessedDetailsResponse> GenerateServiceLastAccessedDetailsWithOptionsAsync(GenerateServiceLastAccessedDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
+            {
+                query["Arn"] = request.Arn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["Granularity"] = request.Granularity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateServiceLastAccessedDetails",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateServiceLastAccessedDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>产生最近访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateServiceLastAccessedDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateServiceLastAccessedDetailsResponse
+        /// </returns>
+        public GenerateServiceLastAccessedDetailsResponse GenerateServiceLastAccessedDetails(GenerateServiceLastAccessedDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateServiceLastAccessedDetailsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>产生最近访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateServiceLastAccessedDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateServiceLastAccessedDetailsResponse
+        /// </returns>
+        public async Task<GenerateServiceLastAccessedDetailsResponse> GenerateServiceLastAccessedDetailsAsync(GenerateServiceLastAccessedDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateServiceLastAccessedDetailsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the last time when an AccessKey pair was used.</para>
         /// </summary>
         /// 
@@ -5108,6 +5211,142 @@ namespace AlibabaCloud.SDK.Ram20150501
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSecurityPreferenceWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询最后访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceLastAccessedDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceLastAccessedDetailsResponse
+        /// </returns>
+        public GetServiceLastAccessedDetailsResponse GetServiceLastAccessedDetailsWithOptions(GetServiceLastAccessedDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                query["Marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxItems))
+            {
+                query["MaxItems"] = request.MaxItems;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceLastAccessedDetails",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceLastAccessedDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询最后访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceLastAccessedDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceLastAccessedDetailsResponse
+        /// </returns>
+        public async Task<GetServiceLastAccessedDetailsResponse> GetServiceLastAccessedDetailsWithOptionsAsync(GetServiceLastAccessedDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
+            {
+                query["Marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxItems))
+            {
+                query["MaxItems"] = request.MaxItems;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceLastAccessedDetails",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceLastAccessedDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询最后访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceLastAccessedDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceLastAccessedDetailsResponse
+        /// </returns>
+        public GetServiceLastAccessedDetailsResponse GetServiceLastAccessedDetails(GetServiceLastAccessedDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetServiceLastAccessedDetailsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询最后访问信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceLastAccessedDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceLastAccessedDetailsResponse
+        /// </returns>
+        public async Task<GetServiceLastAccessedDetailsResponse> GetServiceLastAccessedDetailsAsync(GetServiceLastAccessedDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetServiceLastAccessedDetailsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9092,12 +9331,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UpdateRole operation to update the information of a RAM role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to update the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
+        /// <para>This topic provides an example of updating the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9155,12 +9394,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UpdateRole operation to update the information of a RAM role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to update the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
+        /// <para>This topic provides an example of updating the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9218,12 +9457,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UpdateRole operation to update the information of a RAM role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to update the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
+        /// <para>This topic provides an example of updating the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9241,12 +9480,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UpdateRole operation to update the information of a RAM role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to update the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
+        /// <para>This topic provides an example of updating the description of the RAM role <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">

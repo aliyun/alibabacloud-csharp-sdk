@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the RAM role.</para>
+        /// <para>The information about the RAM role.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public UpdateRoleResponseBodyRole Role { get; set; }
         public class UpdateRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the RAM role is allowed to log on to the console.</para>
+            /// <para>Specifies whether to allow the RAM role to log on to the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string AssumeRolePolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM role was created.</para>
+            /// <para>The time when the RAM role was created. The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM role was updated.</para>
+            /// <para>The time when the RAM role was updated. The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>

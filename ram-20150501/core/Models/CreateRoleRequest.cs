@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateRoleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether console logon is allowed for the RAM role. Valid values:</para>
+        /// <para>Specifies whether the RAM role is allowed to log on to the console. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Console logon is allowed.</description></item>
-        /// <item><description>false: Console logon is not allowed.</description></item>
+        /// <item><description>true: allowed</description></item>
+        /// <item><description>false: not allowed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? AllowConsoleLogin { get; set; }
 
         /// <summary>
-        /// <para>The trust policy. Specifies one or more principals that are allowed to assume the RAM role. The principal can be an Alibaba Cloud account, an Alibaba Cloud service, or an identity provider.</para>
+        /// <para>The trust policy. Specifies one or more principals that are allowed to assume the RAM role. The principals can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers.</para>
         /// <remarks>
         /// <para>Resource Access Management (RAM) users cannot assume RAM roles whose trusted entity is an Alibaba Cloud service.</para>
         /// </remarks>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The description of the RAM role.</para>
-        /// <para>The description must be 1 to 1024 characters in length.</para>
+        /// <para>The description must be 1 to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS management role.</para>
+        /// <para>ECS management role</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>The maximum session duration of the RAM role.</para>
         /// <para>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</para>
-        /// <para>If you leave this parameter empty, the default value is used.</para>
+        /// <para>If this parameter is left empty, the default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>

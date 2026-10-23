@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the RAM role.</para>
+        /// <para>The RAM role information.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public CreateRoleResponseBodyRole Role { get; set; }
         public class CreateRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>Indicates whether console logon is allowed for the RAM role.</para>
+            /// <para>Indicates whether the RAM role is allowed to log on to the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string AssumeRolePolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM role was created.</para>
+            /// <para>The creation time. The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <para>The description of the RAM role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ECS management role.</para>
+            /// <para>ECS management role</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
