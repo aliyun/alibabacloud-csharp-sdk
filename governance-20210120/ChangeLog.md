@@ -1,3 +1,7 @@
+2026-10-23 Version: 0.6.0
+- Support API GetGovernanceServiceStatus.
+
+
 2026-09-29 Version: 0.5.0
 - Support API DecommissionGovernance.
 - Support API OpenGovernanceService.
