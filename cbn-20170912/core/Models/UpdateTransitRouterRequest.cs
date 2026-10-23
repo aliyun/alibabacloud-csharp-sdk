@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>Specifies whether to perform a dry run for this modification request, including permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): Sends a normal request. After the request passes the check, the transit router instance information is directly modified.</description></item>
-        /// <item><description><b>true</b>: Sends a check request. Only the check is performed, and the transit router instance information is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the validation is performed, and the transit router instance information is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

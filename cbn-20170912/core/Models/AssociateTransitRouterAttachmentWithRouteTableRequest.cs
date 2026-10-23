@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class AssociateTransitRouterAttachmentWithRouteTableRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client. Make sure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to execute a dry run. The dry run checks parameter validity, instance status, and whether the network instance connection can be associated with the forward route table. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. The dry run includes checks on permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a Normal request. If the request passes the check, the route table association is created.</description></item>
-        /// <item><description><b>true</b>: sends a check request. No route table association is created after the request passes the check. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error message is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, the route table association is created.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the route table association. The system checks whether required parameters are specified and whether the request format is valid. If the request fails the dry run, an error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

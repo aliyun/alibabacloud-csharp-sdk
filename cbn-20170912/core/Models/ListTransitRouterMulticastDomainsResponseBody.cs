@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is to be sent.</description></item>
         /// <item><description>If <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
         /// </list>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions Options { get; set; }
             public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether IGMP is enabled for the multicast domain.</para>
+                /// <para>Specifies whether the Internet Group Management Protocol (IGMP) feature is enabled for the multicast domain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enable</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Igmpv2Support { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether strict multicast source control is enabled for the multicast domain.</para>
+                /// <para>Specifies whether the strict multicast source control feature is enabled for the multicast domain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enable</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The transit router instance ID.</para>
+            /// <para>The ID of the transit router instance, which is used to forward traffic and manage routing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-bp1c23ijrl6d6c226h***</para>

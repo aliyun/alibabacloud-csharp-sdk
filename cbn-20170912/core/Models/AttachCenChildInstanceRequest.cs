@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance to attach.</para>
+        /// <para>The ID of the network instance to be attached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The Alibaba Cloud account ID to which the network instance belongs.</para>
         /// <remarks>
-        /// <para>This parameter is required if you want to attach a cross-account network instance.</para>
+        /// <para>This parameter is required if you want to load a cross-account network instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ChildInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the network instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the network instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// <item><description><para><b>VPC</b>: VPC.</para>
         /// </description></item>
-        /// <item><description><para><b>VBR</b>: border router.</para>
+        /// <item><description><para><b>VBR</b>: VBR.</para>
         /// </description></item>
-        /// <item><description><para><b>CCN</b>: Cloud Connect Network.</para>
+        /// <item><description><para><b>CCN</b>: CCN.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run for this deletion request, including permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the transit router instance is deleted.</description></item>
-        /// <item><description><b>true</b>: Sends a check request. Only the check is performed. The transit router instance is not deleted. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the validation is performed, and the transit router instance is not deleted. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

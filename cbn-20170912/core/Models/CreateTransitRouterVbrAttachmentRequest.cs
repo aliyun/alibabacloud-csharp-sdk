@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVbrAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow the Enterprise Edition transit router to automatically publish route entries to the VBR instance.</para>
+        /// <para>Specifies whether to enable the Enterprise Edition transit router instance that can forward traffic to automatically publish route entry and routing information to the VBR instance.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): no.</description></item>
         /// <item><description><b>true</b>: yes.</description></item>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID. This parameter is required when TransitRouterId is not specified. The system performs automatic creation of an Enterprise Edition transit router instance that can forward and perform routing in the region specified by RegionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-j3jzhw1zpau2km****</para>
@@ -34,10 +35,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request, including permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, the VBR connection is created.</description></item>
-        /// <item><description><b>true</b>: sends a check request. Only verification is performed without creating the VBR connection. The system checks whether required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request and creates the VBR connection after the check passes.</description></item>
+        /// <item><description><b>true</b>: sends a check request and only performs the check without creating the VBR connection. The check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check passes, the request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VBR instance.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the VBR. This parameter is required and must be used in combination with VbrId and CenId or TransitRouterId.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateTransitRouterVbrAttachmentRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
+            /// <para>The tag value cannot be empty. It can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</para>
+            /// <para>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentName { get; set; }
 
         /// <summary>
-        /// <para>The Enterprise Edition transit router instance ID.</para>
+        /// <para>The Enterprise Edition transit router instance ID. This parameter is required when CenId is not specified. It is used to create a VBR connection on an existing Enterprise Edition transit router instance that can forward and perform routing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-bp1su1ytdxtataupl****</para>
@@ -166,9 +166,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VbrId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the Alibaba Cloud account that owns the VBR instance. The default value is the Alibaba Cloud account ID of the current logon account.</para>
+        /// <para>The Alibaba Cloud account ID to which the VBR instance belongs. The default value is the Alibaba Cloud account ID of the current logon.</para>
         /// <remarks>
-        /// <para>This parameter is required if you want to load a network instance that belongs to a different account.</para>
+        /// <para>This parameter is required if you want to load a cross-account network instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

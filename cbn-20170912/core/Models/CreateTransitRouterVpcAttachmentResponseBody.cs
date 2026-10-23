@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC connection.</para>
+        /// <para>The ID of the VPC attachment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-ia340z7xis7t5s****</para>

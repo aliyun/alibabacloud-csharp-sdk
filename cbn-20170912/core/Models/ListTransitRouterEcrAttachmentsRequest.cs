@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterEcrAttachmentsRequest : TeaModel {
         /// <summary>
-        /// <para>The CEN instance ID.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID. If you specify this parameter, you must also specify RegionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-7qthudw0ll6jmc****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return per page. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. Valid values: </para>
+        /// <para>The token used to start the next query. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists. </description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is available. </description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the transit router instance.</para>
+        /// <para>The region ID of the transit router. If you specify this parameter, you must also specify CenId.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class ListTransitRouterEcrAttachmentsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
             /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>The tag value can be an empty string or up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
+            /// <para>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
+            /// <para>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The ECR connection ID.</para>
+        /// <para>The ID of the ECR connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-nls9fzkfat8934****</para>
