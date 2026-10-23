@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The entity ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:123456::test_project::test_tbl</para>
+        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

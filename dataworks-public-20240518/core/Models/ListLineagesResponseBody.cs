@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination result.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListLineagesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListLineagesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The list of lineage information.</para>
+            /// <para>The lineage information list.</para>
             /// </summary>
             [NameInMap("Lineages")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned data, which is used for pagination.</para>
+            /// <para>The requested page number, which is used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DstEntityId { get; set; }
 
         /// <summary>
-        /// <para>The destination entity name. Fuzzy match is supported.</para>
+        /// <para>The destination entity name. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dstName1</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending order</description></item>
-        /// <item><description>Desc: descending order</description></item>
+        /// <item><description>Asc: Ascending order.</description></item>
+        /// <item><description>Desc: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,6 +73,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Queries the lineage relationships that take effect within the specified number of recent calendar days. Valid values: 1 to 30. For example, 1 indicates starting from midnight of the current day, and 7 indicates starting from midnight 6 days ago. If this parameter is not specified, the system filters the data based on the configured lineage validity period.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("RecentDays")]
         [Validation(Required=false)]
         public int? RecentDays { get; set; }
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SrcEntityId { get; set; }
 
         /// <summary>
-        /// <para>The source entity name. Fuzzy match is supported.</para>
+        /// <para>The source entity name. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>srcName1</para>

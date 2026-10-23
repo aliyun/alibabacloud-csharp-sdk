@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The data source name mappings for data backfill runs. The key of the map is DataSource.Name in the node definition, and the value is DataSource.Name used during data backfill runs. This parameter takes effect only when Type is set to SupplementData. If this parameter is not configured, an empty map is passed, or the key is not matched, the node continues to use the original data source. Currently, only EMR Spark SQL, EMR Shell, and EMR Spark nodes are supported.</para>
+            /// <para>The data source name mappings for data backfill runs. The key of the map is DataSource.Name in the task definition, and the value is DataSource.Name used during data backfill runs. This parameter takes effect only when Type is set to SupplementData. If this parameter is not configured, an empty map is passed, or the key is not matched, the task continues to use the original data source. Currently, only EMR Spark SQL, EMR Shell, and EMR Spark tasks are supported.</para>
             /// </summary>
             [NameInMap("DataSourceNameMappings")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<long?> ExcludeProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of node IDs to exclude from the run.</para>
+            /// <para>The list of task IDs to exclude from the run.</para>
             /// </summary>
             [NameInMap("ExcludeTaskIds")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<long?> IncludeProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of node IDs to include in the run.</para>
+            /// <para>The list of task IDs to include in the run.</para>
             /// </summary>
             [NameInMap("IncludeTaskIds")]
             [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <list type="bullet">
             /// <item><description>General: general mode. You can specify only one value for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the value of RootTaskIds is included by default.</description></item>
             /// <item><description>ManualSelection: manual selection mode. You can specify multiple values for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the values of RootTaskIds are included by default.</description></item>
-            /// <item><description>Chain: chain mode. RootTaskIds must be left empty. You must specify two IDs for IncludeTaskIds, which are the start and end nodes.</description></item>
+            /// <item><description>Chain: chain mode. RootTaskIds must be left empty. You must specify two IDs for IncludeTaskIds, which are the start and end tasks.</description></item>
             /// <item><description>AllDownstream: all downstream mode. You can specify only one value for RootTaskIds.</description></item>
             /// </list>
             /// 
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Order { get; set; }
 
             /// <summary>
-            /// <para>The number of parallel nodes. A value of 2 to 10 indicates the parallelism, and a value of 1 indicates serial execution. This parameter is required when Type is set to SupplementData.</para>
+            /// <para>The number of parallel tasks. A value of 2 to 10 indicates the parallelism, and a value of 1 indicates serial execution. This parameter is required when Type is set to SupplementData.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -204,12 +204,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PriorityWeightStrategy { get; set; }
 
             /// <summary>
-            /// <para>The list of root node IDs.</para>
+            /// <para>The list of root task IDs.</para>
             /// <list type="bullet">
             /// <item><description>When Type is set to SupplementData, RootTaskIds is required except when Mode is set to Chain.</description></item>
             /// <item><description>When Type is set to ManualWorkflow, RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manually triggered workflow is used.</description></item>
-            /// <item><description>When Type is set to Manual, RootTaskIds is required and specifies the list of manually triggered nodes to be run.</description></item>
-            /// <item><description>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test nodes to be run.</description></item>
+            /// <item><description>When Type is set to Manual, RootTaskIds is required and specifies the list of manual tasks to be run.</description></item>
+            /// <item><description>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test tasks to be run.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("RootTaskIds")]
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<long?> RootTaskIds { get; set; }
 
             /// <summary>
-            /// <para>The run policy. If this field is left empty, the node configuration is used.</para>
+            /// <para>The run policy. If this field is left empty, the task configuration is used.</para>
             /// </summary>
             [NameInMap("RunPolicy")]
             [Validation(Required=false)]
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The identifier of the custom scheduling resource group. If this field is left empty, the node configuration is used.</para>
+            /// <para>The identifier of the custom scheduling resource group. If this field is left empty, the task configuration is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The node parameters, which are used to set parameters for specific nodes. The value is in JSON format. The key is the node ID, and the value format refers to the node script parameters (Task.Script.Parameter in the response of the GetTask operation).</para>
+        /// <para>The task parameters, which are used to set parameters for specific tasks. The value is in JSON format. The key is the task ID, and the value format refers to the task script parameters (Task.Script.Parameter in the response of the GetTask operation).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -441,8 +441,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <list type="bullet">
         /// <item><description>SupplementData: data backfill. The methods for specifying RootTaskIds and IncludeTaskIds vary based on the data backfill mode. For more information, see the parameter description of DefaultRunProperties.Mode.</description></item>
         /// <item><description>ManualWorkflow: manually triggered workflow. You must set WorkflowId to the ID of the manually triggered workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manually triggered workflow is used.</description></item>
-        /// <item><description>Manual: manually triggered node. You only need to specify RootTaskIds, which is the list of manually triggered nodes to be run.</description></item>
-        /// <item><description>SmokeTest: smoke test. You only need to specify RootTaskIds, which is the list of test nodes to be run.</description></item>
+        /// <item><description>Manual: manually triggered task. You only need to specify RootTaskIds, which is the list of manually triggered tasks to be run.</description></item>
+        /// <item><description>SmokeTest: smoke test. You only need to specify RootTaskIds, which is the list of test tasks to be run.</description></item>
         /// <item><description>TriggerWorkflow: event-triggered workflow. You must set WorkflowId to the ID of the event-triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow to which the node belongs. The WorkflowId of a periodic node is always 1.</para>
+        /// <para>The ID of the workflow. The WorkflowId of a scheduled task is always 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowId { get; set; }
 
         /// <summary>
-        /// <para>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is key=value, and the priority is lower than that of node parameters. For a manually triggered workflow, the format is JSON, and the priority is higher than that of node parameters.</para>
+        /// <para>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is key=value, and the priority is lower than that of task parameters. For a manually triggered workflow, the format is JSON, and the priority is higher than that of task parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;key=value&quot; format:
