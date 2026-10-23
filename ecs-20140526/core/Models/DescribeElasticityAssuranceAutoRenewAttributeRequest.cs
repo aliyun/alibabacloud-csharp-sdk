@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The list of elasticity assurance service IDs.</para>
-            /// <para><b>Limit</b>: You can query up to 50 elasticity assurance services at a time.</para>
+            /// <para>The list of elasticity assurance IDs. This parameter is required. If this parameter is not specified, the API returns MissingParameter.PrivatePoolOptionsId.</para>
+            /// <para><b>Limits</b>: You can query up to 50 elasticity assurances at a time.</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the elasticity assurance service. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

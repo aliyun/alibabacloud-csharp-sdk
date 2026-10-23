@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. You can use the instance type to query only active capacity reservations. Released capacity reservations can only be queried by using PrivatePoolOptions.Ids.</para>
+        /// <para>The instance type. You can use the instance type to query only active capacity reservations. Released capacity reservations can be queried only by using PrivatePoolOptions.Ids.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -155,8 +155,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeCapacityReservationsRequestTag> Tag { get; set; }
         public class DescribeCapacityReservationsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. N indicates that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>The tag key. N specifies that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. N indicates that you can specify multiple tag values for filtering. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value. N specifies that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

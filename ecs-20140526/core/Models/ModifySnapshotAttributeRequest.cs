@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable the snapshot instant access feature. Valid values:</para>
+        /// <para>Specifies whether to shutdown the instant access feature for the snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Disables the snapshot instant access feature.</description></item>
-        /// <item><description>false: Does not disable the snapshot instant access feature.</description></item>
+        /// <item><description>true: shutdown the instant access feature.</description></item>
+        /// <item><description>false: do not shutdown the instant access feature.
+        /// Default value: false.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. Standard snapshots of ESSD cloud disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to perform additional configurations, and no additional fees are incurred.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the snapshot is retained. The retention period is calculated from the snapshot <b>creation time</b> (represented in the ISO 8601 standard and in UTC+0 time in the yyyy-MM-ddTHH:mm:ssZ format). Valid values: 1 to 65536.</para>
+        /// <para>The retention period of the snapshot in days. When you specify this parameter, the retention period is calculated from the <b>creation time</b> of the snapshot. The creation time is represented in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC. Valid values: 1 to 65536.</para>
         /// <remarks>
-        /// <para>The snapshot retention period can only be extended. Shortening the existing retention period of a snapshot is not supported.</para>
+        /// <para>You can only extend the retention period of a snapshot. You cannot shorten the existing retention period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,8 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), or hyphens (-).</para>
-        /// <para>The name cannot start with auto to avoid conflicts with automatic snapshot names.</para>
+        /// <para>The display name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-). To prevent name conflicts with automatic snapshots, the name cannot start with auto.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSnapshotName</para>

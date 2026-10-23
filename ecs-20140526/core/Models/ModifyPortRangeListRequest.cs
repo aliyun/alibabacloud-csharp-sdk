@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPortRangeListRequest : TeaModel {
         /// <summary>
-        /// <para>The entries to add or modify in the port range list.</para>
+        /// <para>The array of port list entries to be added or modified.</para>
         /// </summary>
         [NameInMap("AddEntry")]
         [Validation(Required=false)]
         public List<ModifyPortRangeListRequestAddEntry> AddEntry { get; set; }
         public class ModifyPortRangeListRequestAddEntry : TeaModel {
             /// <summary>
-            /// <para>The description of the port range. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</para>
+            /// <para>The description of the port range. The description must be 2 to 32 characters in length, and cannot start with http:// or https://. Valid values of N: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is description.</para>
@@ -27,13 +27,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The port range. Valid values of N: 0 to 200. Settings:</para>
+            /// <para>The port range. Valid values of N: 0 to 200. Limits:</para>
             /// <list type="bullet">
-            /// <item><description><para>The number of entries cannot exceed the maximum number of entries (MaxEntries).</para>
+            /// <item><description><para>The number of entries cannot exceed the maximum entry capacity (<c>MaxEntries</c>).</para>
             /// </description></item>
-            /// <item><description><para>You cannot specify duplicate PortRange values.</para>
+            /// <item><description><para>Duplicate <c>PortRange</c> values are not allowed.</para>
             /// </description></item>
-            /// <item><description><para>The value cannot be the same as a RemoveEntry.N.PortRange parameter value.</para>
+            /// <item><description><para>The value cannot be the same as the <c>RemoveEntry.N.PortRange</c> parameter value.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Ensures the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the port range list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the port list. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is description.</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the port range list to modify.</para>
+        /// <para>The ID of the port list to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PortRangeListId { get; set; }
 
         /// <summary>
-        /// <para>The name of the port range list. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http://, https://, com.aliyun, or com.alibabacloud. It can contain letters, Chinese characters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the port list. The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It cannot start with http://, https://, com.aliyun, or com.alibabacloud. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>PortRangeListNameSample</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PortRangeListName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the port range list. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,18 +107,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The entries to delete from the port range list.</para>
+        /// <para>The array of port list entries to be deleted.</para>
         /// </summary>
         [NameInMap("RemoveEntry")]
         [Validation(Required=false)]
         public List<ModifyPortRangeListRequestRemoveEntry> RemoveEntry { get; set; }
         public class ModifyPortRangeListRequestRemoveEntry : TeaModel {
             /// <summary>
-            /// <para>The port range. Valid values of N: 0 to 200. Settings:</para>
+            /// <para>The port range. Valid values of N: 0 to 200. Limits:</para>
             /// <list type="bullet">
-            /// <item><description><para>You cannot specify duplicate PortRange values.</para>
+            /// <item><description><para>Duplicate <c>PortRange</c> values are not allowed.</para>
             /// </description></item>
-            /// <item><description><para>The value cannot be the same as an AddEntry.N.PortRange parameter value.</para>
+            /// <item><description><para>The value cannot be the same as the <c>AddEntry.N.PortRange</c> parameter value.</para>
             /// </description></item>
             /// </list>
             /// 

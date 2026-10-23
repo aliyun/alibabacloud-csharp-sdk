@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. If <b>InstanceId</b> is set, this parameter is ignored.</para>
+        /// <para>The maximum number of entries to return on each page during a paged query. This parameter is invalid if the <b>InstanceId</b> parameter Settings are configured.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</para>
+        /// <para>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to perform paged queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</para>
+        /// <para>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to perform paged queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

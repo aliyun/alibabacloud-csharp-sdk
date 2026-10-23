@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListAssociationsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for paging.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned in the previous call. You do not need to set this parameter for the first request.</para>
+        /// <para>The query token. Set the value to the <c>NextToken</c> value returned from the previous call to this operation. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

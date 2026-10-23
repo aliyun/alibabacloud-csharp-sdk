@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to force delete the custom image. Valid values: </para>
+        /// <para>Specifies whether to force delete the custom image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Force deletes the custom image, regardless of whether the image is being used by other instances.</description></item>
-        /// <item><description>false: Deletes the custom image only after checking that the image is not being used by other instances.</description></item>
+        /// <item><description>true: Forces the deletion of the custom image, regardless of whether the image is in use by other instances.</description></item>
+        /// <item><description>false: Deletes the custom image normally and checks whether the image is in use by other instances before deletion.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

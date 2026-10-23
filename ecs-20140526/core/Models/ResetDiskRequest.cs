@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the disk to be rolled back.</para>
+        /// <para>The ID of the cloud disk to be rolled back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run without actually rolling back the disk. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description>false: performs a dry run and sends the request. If the check succeeds, the disk rollback operation is initiated.</description></item>
+        /// <item><description>true: Performs a dry run. The system checks the required parameters, request format, and resource status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: Performs a normal request. If the request passes the dry run, the cloud disk is rolled back.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot to use for rolling back the disk.</para>
+        /// <para>The ID of the historical snapshot used to roll back the cloud disk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

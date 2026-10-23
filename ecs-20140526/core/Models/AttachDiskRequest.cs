@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to attach the disk as a system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The disk is attached as a system disk.</para>
+        /// <item><description><para>true: Yes.</para>
         /// </description></item>
-        /// <item><description><para>false: The disk is not attached as a system disk.</para>
+        /// <item><description><para>false: No.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>If you set <c>Bootable=true</c>, the destination ECS instance must have no system disk attached.</para>
+        /// <para>If you set this parameter to <c>Bootable=true</c>, the destination ECS instance must not have a system disk attached.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,17 +32,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to release the disk when the instance is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The disk is released together with the instance.</description></item>
-        /// <item><description>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</description></item>
+        /// <item><description>true: The disk is released.</description></item>
+        /// <item><description>false: The disk is not released. The disk is retained and converted to a pay-as-you-go data disk.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>Take note of the following items when you configure this parameter:</para>
+        /// <para>When you configure this parameter, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>DeleteWithInstance</c> to <c>false</c> and the ECS instance is locked for security reasons, which means <c>OperationLocks</c> contains <c>&quot;LockReason&quot; : &quot;security&quot;</c>, this parameter is ignored when the ECS instance is released, and the disk is released together with the instance.</para>
+        /// <item><description><para>If you set <c>DeleteWithInstance</c> to <c>false</c> and the ECS instance is locked for security reasons (that is, <c>&quot;LockReason&quot; : &quot;security&quot;</c> is marked in <c>OperationLocks</c>), this property of the disk is ignored and the disk is released when the ECS instance is released.</para>
         /// </description></item>
-        /// <item><description><para>If the disk that you want to attach is an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</para>
+        /// <item><description><para>If the destination disk that you want to attach is an <c>elastic ephemeral disk</c>, you must set the <c>DeleteWithInstance</c> parameter to <c>true</c>.</para>
         /// </description></item>
-        /// <item><description><para>Disks with the multi-attach feature enabled do not support this parameter.</para>
+        /// <item><description><para>This parameter cannot be configured for disks with the multi-attach feature enabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The device name of the disk.</para>
         /// <remarks>
-        /// <para>This parameter will be deprecated soon. To improve compatibility, use other parameters to identify the disk.</para>
+        /// <para>This parameter is being deprecated. To improve compatibility, we recommend that you use other parameters to identify the disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Device { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk to be attached. The disk (<c>DiskId</c>) and the instance (<c>InstanceId</c>) must be in the same zone.</para>
+        /// <para>The ID of the disk that you want to attach. The disk (<c>DiskId</c>) and the instance (<c>InstanceId</c>) must be in the same zone.</para>
         /// <remarks>
-        /// <para>Both data disks and system disks can be attached. For related constraints, see the operation description section above.</para>
+        /// <para>You can attach data disks and system disks. For the related constraints, see the operation description section above.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully attach the disk. Valid values:</para>
+        /// <para>Specifies whether to forcibly attach the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Forcefully attaches the disk.</description></item>
-        /// <item><description>false: Does not forcefully attach the disk.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>Currently, only regional ESSDs (cloud_regional_disk_auto) support setting this parameter to true.</para>
+        /// <para>Currently, only regional Enterprise SSDs (ESSDs) (<c>cloud_regional_disk_auto</c>) support setting this parameter to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,11 +110,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSH key pair that is bound to the Linux ECS instance when you attach a system disk.</para>
+        /// <para>The name of the SSH key pair to bind to a Linux ECS instance when you attach a system disk.</para>
         /// <list type="bullet">
-        /// <item><description><para>Windows Server instances: SSH key pairs are not supported. Even if this parameter is specified, only the <c>Password</c> configuration takes effect.</para>
+        /// <item><description><para>Windows Server: SSH key pairs are not supported. Even if you specify this parameter, only the <c>Password</c> configuration is applied.</para>
         /// </description></item>
-        /// <item><description><para>Linux instances: The password-based logon method is disabled by default.</para>
+        /// <item><description><para>Linux: Password-based logon is disabled by default.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password that is set for the instance when you attach a system disk. The password is applicable only to the administrator and root usernames and does not apply to other usernames. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
+        /// <para>The logon password of the instance, which is configured when you attach a system disk. This parameter takes effect only for the administrator and root usernames and does not take effect for other usernames. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The special characters can be:</para>
         /// <pre><c>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
         /// </c></pre>
         /// <para>For Windows instances, the password cannot start with a forward slash (/).</para>

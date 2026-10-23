@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Renews the instance to a <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</para>
-        /// <para>To use this parameter, you must <a href="~~63396#694cb636c0rp6~~">set a unified expiration date for ECS instances</a>. The value of this parameter must match the unified expiration date that you have set. Otherwise, the call fails.</para>
+        /// <para>The day on which to renew the instance to a <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</para>
+        /// <para>To use this parameter, you must first <a href="~~63396#694cb636c0rp6~~">set a unified expiration date for ECS instances</a>. The value of this parameter must match the unified expiration date that you have set. Otherwise, the call fails.</para>
         /// <remarks>
         /// <para>You must specify either the renewal period parameters (Period and PeriodUnit) or the unified expiration date parameter (ExpectedRenewDay), but not both.</para>
         /// </remarks>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? ExpectedRenewDay { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the instance that you want to renewal.</para>
+        /// <para>The ID of the instance that you want to renew.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal period. This parameter specifies the unit of Period. Valid values:</para>
+        /// <para>The unit of the renewal period. This parameter specifies the unit for the Period parameter. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>Week.</description></item>

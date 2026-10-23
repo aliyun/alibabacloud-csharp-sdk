@@ -1,3 +1,7 @@
+2026-10-23 Version: 7.11.7
+- Update API DescribeDisks: add request parameters PerformanceLevel.
+
+
 2026-09-22 Version: 7.11.6
 - Generated csharp 2014-05-26 for Ecs.
 

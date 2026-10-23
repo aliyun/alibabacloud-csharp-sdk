@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeDisksRequestFilter> Filter { get; set; }
         public class DescribeDisksRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key used to query resources. Set the value to <c>CreationStartTime</c>. You can specify both Filter.1.Key and Filter.1.Value to query resources that were created after the specified point in time.</para>
+            /// <para>The filter key used to query resources. Set the value to <c>CreationStartTime</c>. If you specify both <c>Filter.1.Key</c> and <c>Filter.1.Value</c>, you can query resources created after the specified time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreationStartTime</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value used to query resources. When you specify this parameter, you must also specify the Filter.1.Key parameter. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format in UTC.</para>
+            /// <para>The filter value used to query resources. If you specify this parameter, you must also specify the <c>Filter.1.Key</c> parameter. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-05T22:40Z</para>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The list of additional attribute values. The only valid value is <c>Placement</c>, which queries the data storage location of the disk.</para>
+        /// <para>The list of additional attributes. Currently, only <c>Placement</c> is supported, which indicates the data storage location of the disk.</para>
         /// <remarks>
-        /// <para>Only regional disks have a data storage location.</para>
+        /// <para>Currently, only regional disks have a data storage location.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> AdditionalAttributes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic snapshot policy used to query disks.</para>
+        /// <para>The ID of the automatic snapshot policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-m5e2w2jutw8bv31****</para>
@@ -59,18 +59,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The category of the disk. Valid values: </para>
+        /// <para>The disk category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all: all disks, local disks, and elastic ephemeral disks.</description></item>
+        /// <item><description>all: all cloud disks, local disks, and elastic ephemeral disks.</description></item>
         /// <item><description>cloud: basic disk.</description></item>
         /// <item><description>cloud_efficiency: ultra disk.</description></item>
         /// <item><description>cloud_ssd: standard SSD.</description></item>
-        /// <item><description>cloud_essd: enterprise SSD (ESSD).</description></item>
+        /// <item><description>cloud_essd: enterprise SSD.</description></item>
         /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
         /// <item><description>cloud_regional_disk_auto: regional ESSD.</description></item>
         /// <item><description>cloud_essd_entry: ESSD Entry disk.</description></item>
-        /// <item><description>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard.</description></item>
-        /// <item><description>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium.</description></item>
+        /// <item><description>elastic_ephemeral_disk_standard: standard elastic ephemeral disk.</description></item>
+        /// <item><description>elastic_ephemeral_disk_premium: premium elastic ephemeral disk.</description></item>
         /// <item><description>local_ssd_pro: I/O-intensive local disk.</description></item>
         /// <item><description>local_hdd_pro: throughput-intensive local disk.</description></item>
         /// <item><description>ephemeral: (retired) local disk.</description></item>
@@ -86,12 +86,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether automatic snapshots are released when the disk is released.</para>
+        /// <para>Specifies whether automatic snapshots are released when the cloud disk is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Yes.</para>
-        /// </description></item>
-        /// <item><description><para>false: No.</para>
-        /// </description></item>
+        /// <item><description>true: Automatic snapshots are released.</description></item>
+        /// <item><description>false: Automatic snapshots are not released.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -103,10 +101,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeleteAutoSnapshot { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the disk is set to be released together with the instance. Valid values:</para>
+        /// <para>Specifies whether the disk is released together with the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The disk is released together with the instance.</description></item>
-        /// <item><description>false: The disk is retained and converted to a pay-as-you-go data disk when the instance is released.</description></item>
+        /// <item><description>false: The disk is retained and not released. It is converted to a pay-as-you-go data disk.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -132,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of disks, local disks, or elastic ephemeral disks. The value is a JSON array that can contain up to 100 IDs. Separate the IDs with commas (,).</para>
+        /// <para>The IDs of the cloud disks, local disks, or elastic ephemeral disks. The value is a JSON array that contains up to 100 IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;d-bp67acfmxazb4p****&quot;, &quot;d-bp67acfmxazb4g****&quot;, … &quot;d-bp67acfmxazb4d****&quot;]</para>
@@ -142,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the letter category (including letters from various languages, digits, and other characters). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
+        /// <para>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode letters, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDiskName</para>
@@ -152,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>The type of the disk, local disk, or elastic ephemeral disk to query. Valid values: </para>
+        /// <para>The type of the cloud disk, local disk, or elastic ephemeral disk to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>all: queries both system disks and data disks.</description></item>
         /// <item><description>system: queries only system disks.</description></item>
@@ -171,10 +169,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to only perform a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the resources are queried.</description></item>
+        /// <item><description>true: send a check request and do not query resources. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: send a Normal request. If the request passes the check, a 2xx HTTP status code is returned and resources are queried.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -186,13 +184,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the automatic snapshot policy feature is enabled for the disk.</para>
+        /// <para>Specifies whether the automatic snapshot policy feature is enabled for the cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Not enabled.</description></item>
+        /// <item><description>true: The feature is enabled.</description></item>
+        /// <item><description>false: The feature is not enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is deprecated. The automatic snapshot policy feature is enabled by default for disks after creation. You only need to associate an automatic snapshot policy with the disk.</para>
+        /// <para>This parameter is deprecated. The automatic snapshot policy feature is enabled by default for newly created cloud disks. You only need to apply an automatic snapshot policy to the cloud disk to use the feature.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -203,10 +201,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? EnableAutoSnapshot { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether an automatic snapshot policy is configured for the disk.</para>
+        /// <para>Specifies whether an automatic snapshot policy is applied to the cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Configured.</description></item>
-        /// <item><description>false: Not configured.</description></item>
+        /// <item><description>true: An automatic snapshot policy is applied.</description></item>
+        /// <item><description>false: No automatic snapshot policy is applied.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -218,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? EnableAutomatedSnapshotPolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the disk is a Shared Block Storage device.</para>
+        /// <para>Specifies whether the block storage device is Shared Block Storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -228,12 +226,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? EnableShared { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only encrypted disks.</para>
+        /// <para>Specifies whether to query only encrypted cloud disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: queries only encrypted disks.</para>
-        /// </description></item>
-        /// <item><description><para>false: does not filter disks by encryption status.</para>
-        /// </description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -245,7 +241,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the instance to which the disk, local disk, or elastic ephemeral disk is attached.</para>
+        /// <para>The instance ID to which the disk, local disk, or elastic ephemeral disk is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxazb4q****</para>
@@ -255,7 +251,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Key Management Service (KMS) key used by the disk.</para>
+        /// <para>The ID of the Key Management Service (KMS) key used by the cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -267,7 +263,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The reason why the disk is locked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>financial: The disk is locked because of overdue payments.</description></item>
+        /// <item><description>financial: The disk is locked due to overdue payments.</description></item>
         /// <item><description>security: The disk is locked for security reasons.</description></item>
         /// </list>
         /// 
@@ -282,8 +278,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The maximum number of entries to return. Valid values: 10 to 500.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified or is set to a value less than 10, the default value is 10.</description></item>
-        /// <item><description>If the value is greater than 500, the default value is 500.</description></item>
+        /// <item><description>If this parameter is not specified or the specified value is less than 10, the default value is 10.</description></item>
+        /// <item><description>If the specified value is greater than 500, the default value is 500.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -296,9 +292,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the multi-attach feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Disabled: not enabled.</description></item>
-        /// <item><description>Enabled: enabled.</description></item>
-        /// <item><description>LegacyShared: queries Shared Block Storage devices.</description></item>
+        /// <item><description>Disabled: The feature is disabled.</description></item>
+        /// <item><description>Enabled: The feature is enabled.</description></item>
+        /// <item><description>LegacyShared: Used to query shared block storage devices.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -309,8 +305,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MultiAttach { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
-        /// <para>For information about how to view the returned data, see the operation description section above.</para>
+        /// <para>The query token. The value is the <c>NextToken</c> value returned from the previous API call.</para>
+        /// <para>For more information about how to configure the returned data for this operation, see the operation description section above.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -329,7 +325,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</para>
+        /// <para>This parameter is about to go offline. We recommend that you use the <c>NextToken</c> and <c>MaxResults</c> parameters to perform paging and complete the paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -341,7 +337,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</para>
+        /// <para>This parameter is about to go offline. We recommend that you use the <c>NextToken</c> and <c>MaxResults</c> parameters to perform paging and complete the paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -352,14 +348,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the disk is removable. Valid values:</para>
+        /// <para>The performance level (PL) of the ESSD disk. Valid values: PL0, PL1, PL2, and PL3.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PL0</para>
+        /// </summary>
+        [NameInMap("PerformanceLevel")]
+        [Validation(Required=false)]
+        public string PerformanceLevel { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether the disk can be detached. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The disk is removable. The disk can exist independently and can be attached to or detached from instances within the same zone.</para>
-        /// </description></item>
-        /// <item><description><para>false: The disk is not removable. The disk cannot exist independently and cannot be attached to or detached from instances within the same zone.</para>
-        /// </description></item>
+        /// <item><description>true: The disk can be detached. It can exist independently and can be freely attached and detached within a zone.</description></item>
+        /// <item><description>false: The disk cannot be detached. It cannot exist independently and cannot be freely attached or detached within a zone.</description></item>
         /// </list>
-        /// <para>The Portable attribute of the following types of block storage devices is false, and their lifecycle is the same as that of the associated instance:</para>
+        /// <para>The <c>Portable</c> attribute is <c>false</c> for the following types of block storage devices, and their lifecycles are the same as those of the instances:</para>
         /// <list type="bullet">
         /// <item><description>Local disks.</description></item>
         /// <item><description>Local SSDs.</description></item>
@@ -374,7 +378,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Portable { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the block storage device. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the block storage device. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -385,7 +389,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the disk belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
+        /// <para>The ID of the enterprise resource group to which the disk belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -406,7 +410,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot used to create the disk.</para>
+        /// <para>The ID of the snapshot used to create the cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp67acfmxazb4p****</para>
@@ -416,14 +420,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The status of the disk. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</para>
+        /// <para>The disk status. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>In_use: in use.</description></item>
-        /// <item><description>Available: to be attached.</description></item>
-        /// <item><description>Attaching: being attached.</description></item>
-        /// <item><description>Detaching: being detached.</description></item>
-        /// <item><description>Creating: being created.</description></item>
-        /// <item><description>ReIniting: being initialized.</description></item>
+        /// <item><description>In_use: The disk is in use.</description></item>
+        /// <item><description>Available: The disk is available for attachment.</description></item>
+        /// <item><description>Attaching: The disk is being attached.</description></item>
+        /// <item><description>Detaching: The disk is being detached.</description></item>
+        /// <item><description>Creating: The disk is being created.</description></item>
+        /// <item><description>ReIniting: The disk is being initialized.</description></item>
         /// <item><description>All: all statuses.</description></item>
         /// </list>
         /// <para>Default value: All.</para>
@@ -444,7 +448,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeDisksRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the disk. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that attach multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>

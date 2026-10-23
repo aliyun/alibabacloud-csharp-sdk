@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocatePublicIpAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the instance to which you want to allocate a public IP address.</para>
+        /// <para>The ID of the instance to which you want to assign an IP address.</para>
         /// <remarks>
-        /// <para>The public bandwidth of the instance must be greater than 0.</para>
+        /// <para>The bandwidth of the instance must be greater than 0.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the instance. If this parameter is left empty, the system randomly assigns an IP address.</para>
+        /// <para>The public IP address of the instance. If this parameter is empty, the system randomly assigns an IP address by default.</para>
         /// <remarks>
-        /// <para>Only users in the whitelist can specify this parameter. Regular users cannot specify an IP address.</para>
+        /// <para>Only whitelisted users can specify this parameter. Regular users cannot specify an IP address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The VLAN ID of the instance.</para>
         /// <remarks>
-        /// <para>This parameter will be deprecated. For better compatibility, use other parameters.</para>
+        /// <para>This parameter is deprecated. To improve compatibility, use other parameters instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

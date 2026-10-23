@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResizeDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// <remarks>
-        /// <para>An order ID is returned only when you expand a subscription disk.</para>
+        /// <para>The order ID is returned only when you resize a subscription cloud disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

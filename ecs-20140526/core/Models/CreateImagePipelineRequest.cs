@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateImagePipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID to which the destination image is shared through image sharing. Valid values of N: 1 to 20.</para>
+        /// <para>The Alibaba Cloud account ID for image sharing of the destination image. Valid values of N: 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<long?> AddAccount { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration.</para>
+        /// <para>The advanced settings.</para>
         /// </summary>
         [NameInMap("AdvancedOptions")]
         [Validation(Required=false)]
         public CreateImagePipelineRequestAdvancedOptions AdvancedOptions { get; set; }
         public class CreateImagePipelineRequestAdvancedOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to disable the automatic suffix for the destination image name. Valid values:</para>
+            /// <para>Specifies whether to disable the automatic addition of a suffix to the destination image name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disable: The automatic suffix is disabled.</description></item>
+            /// <item><description>disable: disables the automatic addition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageNameSuffix { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to retain Cloud Assistant. During the build process, the system automatically installs Cloud Assistant on the intermediate instance to run commands. You can choose whether to retain Cloud Assistant in the destination image. Valid values:</para>
+            /// <para>Specifies whether to retain Cloud Assistant. During the build process, the system automatically installs Cloud Assistant on the intermediate instance to execute commands. You can choose whether to retain it in the built destination image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Cloud Assistant is retained.</description></item>
-            /// <item><description>false: Cloud Assistant is not retained.</description></item>
+            /// <item><description>true: retains Cloud Assistant.</description></item>
+            /// <item><description>false: does not retain Cloud Assistant.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// <remarks>
-            /// <para>This setting does not affect Cloud Assistant that is already included in your image.</para>
+            /// <para>This setting does not affect the Cloud Assistant that is pre-installed in your image.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The source image.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>BaseImageType=IMAGE</c>, set this parameter to an image ID.</description></item>
-        /// <item><description>If <c>BaseImageType=IMAGE_FAMILY</c>, set this parameter to an image family name.</description></item>
-        /// <item><description>If <c>BaseImageType=OSS</c>, you do not need to set this parameter.</description></item>
+        /// <item><description>If BaseImageType is set to IMAGE, set this parameter to the image ID.</description></item>
+        /// <item><description>If BaseImageType is set to IMAGE_FAMILY, set this parameter to the image family name.</description></item>
+        /// <item><description>If BaseImageType is set to OSS, you do not need to specify this parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BaseImage { get; set; }
 
         /// <summary>
-        /// <para>The type of the source image. Valid values:</para>
+        /// <para>The source image type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>IMAGE: image.</description></item>
         /// <item><description>IMAGE_FAMILY: image family.</description></item>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BuildContent { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the intermediate instance if the image fails to be built. Valid values:</para>
+        /// <para>Specifies whether to release the intermediate instance if the image build fails. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The intermediate instance is released.</description></item>
-        /// <item><description>false: The intermediate instance is not released.</description></item>
+        /// <item><description>true: releases the instance.</description></item>
+        /// <item><description>false: does not release the instance.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The destination image properties.</para>
+        /// <para>The properties of the destination image.</para>
         /// </summary>
         [NameInMap("ImageOptions")]
         [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination image family. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot start with aliyun or acs:. The name cannot contain http:// or https://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The target image family. The value must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and cannot start with aliyun or acs:. It cannot contain http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>family</para>
@@ -199,18 +199,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageFamily { get; set; }
 
             /// <summary>
-            /// <para>The feature properties of the destination image.</para>
+            /// <para>The properties related to destination image features.</para>
             /// </summary>
             [NameInMap("ImageFeatures")]
             [Validation(Required=false)]
             public CreateImagePipelineRequestImageOptionsImageFeatures ImageFeatures { get; set; }
             public class CreateImagePipelineRequestImageOptionsImageFeatures : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether the destination image supports NVMe. Valid values:</para>
+                /// <para>Specifies whether the built destination image supports NVMe. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>supported: Instances created from this image support the NVMe protocol.</description></item>
-                /// <item><description>unsupported: Instances created from this image do not support the NVMe protocol.</description></item>
-                /// <item><description>auto: The system automatically detects whether your image has the NVMe driver installed. This detection occurs before the build phase. If you install or uninstall the NVMe driver during the build, the result may be inaccurate. Set this parameter to supported or unsupported based on your build content.</description></item>
+                /// <item><description>supported: supported. This indicates that instances created from this image support the NVMe protocol.</description></item>
+                /// <item><description>unsupported: not supported. This indicates that instances created from this image do not support the NVMe protocol.</description></item>
+                /// <item><description>auto: automatic detection. The system automatically detects whether the NVMe driver is installed in your image. This detection occurs before the build phase. If you install or uninstall the NVMe driver during the build, the detection result may be inaccurate. We recommend that you set this parameter to supported or unsupported based on the build content.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -223,8 +223,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The prefix of the destination image name. The name must be 2 to 64 characters in length and must start with a letter or a Chinese character. The name cannot start with <c>http://</c> or <c>https://</c>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-            /// <para>The final complete image name is automatically generated by the system by concatenating the name prefix with the build task ID (<c>ExecutionId</c>) in the format of <c>{ImageName}_{ExecutionId}</c>.</para>
+            /// <para>The prefix of the target image name. The prefix must be 2 to 64 characters in length and must start with a letter or a Chinese character. It cannot start with http:// or https://. It can contain letters, Chinese characters, digits, colons (:), underscores (<em>), periods (.), and hyphens (-). The system automatically generates the final image name by concatenating the prefix and the build task ID (ExecutionId) in the {ImageName}</em>{ExecutionId} format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testImageName</para>
@@ -241,7 +240,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateImagePipelineRequestImageOptionsImageTags> ImageTags { get; set; }
             public class CreateImagePipelineRequestImageOptionsImageTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The tag key. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -251,7 +250,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The tag value. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -265,17 +264,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The properties and settings for importing an image. This parameter is required when <c>BaseImageType=OSS</c>.</para>
+        /// <para>The properties and settings of the imported image. This parameter is required when BaseImageType is set to OSS.</para>
         /// </summary>
         [NameInMap("ImportImageOptions")]
         [Validation(Required=false)]
         public CreateImagePipelineRequestImportImageOptions ImportImageOptions { get; set; }
         public class CreateImagePipelineRequestImportImageOptions : TeaModel {
             /// <summary>
-            /// <para>The system architecture of the system disk when a data disk snapshot is used as the image for the system disk. Valid values:</para>
+            /// <para>The system architecture of the system disk. After you specify a data disk snapshot to create a system disk, you must use Architecture to determine the system architecture of the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>x86_64.</description></item>
-            /// <item><description>arm64.</description></item>
+            /// <item><description>x86_64</description></item>
+            /// <item><description>arm64</description></item>
             /// </list>
             /// <para>Default value: x86_64.</para>
             /// 
@@ -292,10 +291,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>BIOS: BIOS boot mode.</description></item>
             /// <item><description>UEFI: UEFI boot mode.</description></item>
             /// </list>
-            /// <para>Default value: BIOS. If <c>Architecture=arm64</c>, the default value is UEFI, and only UEFI can be specified.</para>
+            /// <para>Default value: BIOS. If Architecture is set to arm64, the default value is UEFI, and you can only set this parameter to UEFI.</para>
             /// <notice>
             /// 
-            /// <para>To prevent instances from failing to start due to an unsupported boot mode, make sure that you understand the boot modes supported by the destination image before you set this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</para>
+            /// <para>To prevent instances from failing to start due to unsupported boot modes, make sure that you understand the boot modes supported by the destination image before you specify this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</para>
             /// </notice>
             /// 
             /// <b>Example:</b>
@@ -316,10 +315,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The information about the custom image.</para>
+            /// <para>The list of custom image information to be created.</para>
             /// <list type="bullet">
-            /// <item><description>When N=1, the system disk is specified.</description></item>
-            /// <item><description>When N=2 to 17, data disks are specified.</description></item>
+            /// <item><description>If N is set to 1, it indicates the system disk.</description></item>
+            /// <item><description>If N is set to 2 to 17, it indicates data disks.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("DiskDeviceMappings")]
@@ -328,10 +327,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings : TeaModel {
                 /// <summary>
                 /// <para>The size of the custom image after the image is imported.</para>
-                /// <para>The size consists of the system disk and data disks. Make sure that the system disk size is greater than or equal to the size of the imported image file. Valid values:</para>
+                /// <para>The space consists of the system disk and data disks. You must ensure that the size of the system disk is greater than or equal to the size of the imported image file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>When N=1, the system disk is specified. Valid values: 1 GiB to 2048 GiB.</description></item>
-                /// <item><description>When N=2 to 17, data disks are specified. Valid values: 1 GiB to 2048 GiB.</description></item>
+                /// <item><description>If N is set to 1, it indicates the system disk. Valid values: 1 to 2048. Unit: GiB.</description></item>
+                /// <item><description>If N is set to 2 to 17, it indicates data disks. Valid values: 1 to 2048. Unit: GiB.</description></item>
                 /// </list>
                 /// <para>After you upload the source image file to OSS, you can view the size of the image file in the OSS bucket.</para>
                 /// 
@@ -345,11 +344,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The image format. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>RAW.</description></item>
-                /// <item><description>VHD.</description></item>
-                /// <item><description>QCOW2.</description></item>
+                /// <item><description>RAW</description></item>
+                /// <item><description>VHD</description></item>
+                /// <item><description>QCOW2</description></item>
                 /// </list>
-                /// <para>Default value: empty, which indicates that Alibaba Cloud automatically detects the image format. The detected format prevails.</para>
+                /// <para>Default value: none. This indicates that Alibaba Cloud automatically detects the image format, and the detected format prevails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RAW</para>
@@ -359,7 +358,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>The OSS bucket in which the image file is stored.</para>
+                /// <para>The OSS bucket where the image file is stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecsimageos</para>
@@ -369,7 +368,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string OSSBucket { get; set; }
 
                 /// <summary>
-                /// <para>The name (key) of the image file that is stored in the OSS bucket after the image is uploaded to OSS.</para>
+                /// <para>The name (key) of the image file saved in the OSS bucket after the image is uploaded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CentOS_5.4_32.raw</para>
@@ -381,7 +380,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The image feature properties.</para>
+            /// <para>The properties related to image features.</para>
             /// </summary>
             [NameInMap("Features")]
             [Validation(Required=false)]
@@ -390,9 +389,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The metadata access mode of the image. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to &quot;hardened mode only&quot;.</para>
+                /// <item><description><para>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to &quot;Reinforced mode only&quot;.</para>
                 /// </description></item>
-                /// <item><description><para>v2: When you create an ECS instance from this image, you can set the metadata access mode to &quot;hardened mode only&quot;.</para>
+                /// <item><description><para>v2: When you create an ECS instance from this image, you can set the metadata access mode to &quot;Reinforced mode only&quot;.</para>
                 /// </description></item>
                 /// </list>
                 /// <para>Default value: v1.</para>
@@ -407,8 +406,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>Specifies whether the imported original image supports NVMe. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>supported: Instances created from this image support the NVMe protocol.</description></item>
-                /// <item><description>unsupported: Instances created from this image do not support the NVMe protocol.</description></item>
+                /// <item><description>supported: supported. This indicates that instances created from this image support the NVMe protocol.</description></item>
+                /// <item><description>unsupported: not supported. This indicates that instances created from this image do not support the NVMe protocol.</description></item>
                 /// </list>
                 /// <para>Default value: unsupported.</para>
                 /// 
@@ -432,7 +431,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The tags of the image.</para>
+            /// <para>The list of tags for the image.</para>
             /// </summary>
             [NameInMap("ImportImageTags")]
             [Validation(Required=false)]
@@ -463,9 +462,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The license type used to activate the operating system after the image is imported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Auto: Alibaba Cloud detects the source operating system and assigns a license. In Auto mode, the system first searches for a license from an official Alibaba Cloud channel based on the <c>Platform</c> you specified and assigns it to the imported image. If no such license is available, the system switches to the BYOL (Bring Your Own License) method.</description></item>
-            /// <item><description>Aliyun: A license from an official Alibaba Cloud channel is used based on the <c>Platform</c> you specified.</description></item>
-            /// <item><description>BYOL: The license that comes with the source operating system is used. When you use BYOL, make sure that your license key supports use on Alibaba Cloud.</description></item>
+            /// <item><description>Auto: Alibaba Cloud detects the source operating system and assigns a license. In auto mode, the system first checks whether the Platform you specified has a license from official Alibaba Cloud channels and assigns it to the imported image. If no such license is available, the system switches to the Bring Your Own License (BYOL) method.</description></item>
+            /// <item><description>Aliyun: uses a license from official Alibaba Cloud channels based on the Platform you specified.</description></item>
+            /// <item><description>BYOL: uses the license provided by the source operating system. If you use BYOL, you must ensure that your license key is supported on Alibaba Cloud.</description></item>
             /// </list>
             /// <para>Default value: Auto.</para>
             /// 
@@ -479,8 +478,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The operating system type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>windows.</description></item>
-            /// <item><description>linux.</description></item>
+            /// <item><description>windows</description></item>
+            /// <item><description>linux</description></item>
             /// </list>
             /// <para>Default value: linux.</para>
             /// 
@@ -522,7 +521,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>Windows Server 2003</description></item>
             /// <item><description>Other Windows</description></item>
             /// </list>
-            /// <para>Default value: Others Linux when the operating system type is Linux. Otherwise, the default value is Other Windows.</para>
+            /// <para>Default value: Others Linux if the operating system type is Linux, or Other Windows if the operating system type is Windows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Aliyun</para>
@@ -532,7 +531,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para><b>[Deprecated]</b> Use ImportImageOptions.RetentionStrategy instead.</para>
+            /// <notice>
+            /// **[Deprecated]** Use ImportImageOptions.RetentionStrategy instead.
+            /// </notice>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -544,14 +545,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The data retention policy for the imported image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>RetainOnlySuccessful: The image is retained only if the build succeeds.</para>
-            /// </description></item>
-            /// <item><description><para>RetainOnlyFailed: The image is retained only if the build fails.</para>
-            /// </description></item>
-            /// <item><description><para>RetainAlways: The image is always retained regardless of the build result.</para>
-            /// </description></item>
-            /// <item><description><para>RetainNever: The image is never retained regardless of the build result.</para>
-            /// </description></item>
+            /// <item><description>RetainOnlySuccessful: retains the image only if the build succeeds.</description></item>
+            /// <item><description>RetainOnlyFailed: retains the image only if the build fails.</description></item>
+            /// <item><description>RetainAlways: always retains the image regardless of the build result.</description></item>
+            /// <item><description>RetainNever: never retains the image regardless of the build result.</description></item>
             /// </list>
             /// <para>Default value: RetainNever.</para>
             /// 
@@ -563,7 +560,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RetentionStrategy { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role used to import the image.</para>
+            /// <para>The name of the RAM role used when the image is imported.</para>
             /// </summary>
             [NameInMap("RoleName")]
             [Validation(Required=false)]
@@ -572,8 +569,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query different instance types.</para>
-        /// <para>If you do not specify this parameter, the instance type is automatically set based on the principle of minimum vCPUs and memory, subject to the inventory of the instance type. For example, the ecs.g6.large instance type is selected by default. If the inventory is insufficient, the ecs.g6.xlarge instance type is selected.</para>
+        /// <para>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query available instance types.</para>
+        /// <para>If you do not specify this parameter, the system automatically selects an instance type with the minimum number of vCPUs and memory size based on resource availability. For example, the system selects the ecs.g6.large instance type by default. If ecs.g6.large is out of stock, the system selects ecs.g6.xlarge.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -594,9 +591,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>The template name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot start with <c>http://</c> or <c>https://</c>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The template name. It must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
-        /// <para>If you do not specify <c>Name</c>, the return value of <c>ImagePipelineId</c> is used by default.</para>
+        /// <para>If you do not specify <c>Name</c>, the value of <c>ImagePipelineId</c> is used by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -609,7 +606,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether the destination image supports NVMe.
+        /// <para>Specifies whether the built destination image supports NVMe.
         /// <notice>
         /// <b>[Deprecated]</b> Use ImageOptions.ImageFeatures.NvmeSupport instead.
         /// </notice></para>
@@ -631,7 +628,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -644,30 +641,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The image repair items.</para>
         /// <list type="bullet">
-        /// <item><description>Repair items supported for Linux:<list type="bullet">
-        /// <item><description>fstab: repairs disk mount configuration issues.</description></item>
-        /// <item><description>grub: repairs GRUB boot configuration issues.</description></item>
-        /// <item><description>dhcp: repairs network DHCP issues.</description></item>
-        /// <item><description>selinux: repairs Security-Enhanced Linux issues.</description></item>
-        /// <item><description>growpart: repairs root partition online auto-expansion issues.</description></item>
+        /// <item><description>Repair items supported by Linux:<list type="bullet">
+        /// <item><description>fstab: fixes disk attach configuration issues.</description></item>
+        /// <item><description>grub: fixes GRUB boot configuration issues.</description></item>
+        /// <item><description>dhcp: fixes network DHCP issues.</description></item>
+        /// <item><description>selinux: fixes Security-Enhanced Linux (SELinux) issues.</description></item>
+        /// <item><description>growpart: fixes online automatic scale-out issues of the root partition.</description></item>
         /// <item><description>cloudinit: installs the cloud-init initialization service.</description></item>
-        /// <item><description>aegis: installs the China Cloud Security Center Agent service.</description></item>
-        /// <item><description>nvme: repairs NVMe driver issues.</description></item>
-        /// <item><description>virtio: repairs virtio driver issues.</description></item>
-        /// <item><description>standardizedtimezone: repairs standardized time zone issues.</description></item>
+        /// <item><description>aegis: installs the Security Center agent.</description></item>
+        /// <item><description>nvme: fixes NVMe driver issues.</description></item>
+        /// <item><description>virtio: fixes virtio driver issues.</description></item>
+        /// <item><description>standardizedtimezone: fixes standard time zone issues.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Repair items supported for Windows:<list type="bullet">
-        /// <item><description>bcd: repairs boot configuration data file issues.</description></item>
-        /// <item><description>hotfix: repairs Windows patch issues.</description></item>
-        /// <item><description>disk: repairs disk setting issues.</description></item>
-        /// <item><description>update: repairs Update process issues.</description></item>
-        /// <item><description>server: repairs service configuration issues.</description></item>
-        /// <item><description>bootmgr: repairs Windows Boot Manager issues.</description></item>
-        /// <item><description>vminit: repairs Windows initialization Agent issues.</description></item>
-        /// <item><description>osloader: repairs Windows OS Loader issues.</description></item>
-        /// <item><description>virtio: repairs virtio driver issues.</description></item>
-        /// <item><description>standardizedtimezone: repairs standardized time zone issues.</description></item>
+        /// <item><description>Repair items supported by Windows:<list type="bullet">
+        /// <item><description>bcd: fixes boot configuration data file issues.</description></item>
+        /// <item><description>hotfix: fixes Windows patch issues.</description></item>
+        /// <item><description>disk: fixes disk Settings issues.</description></item>
+        /// <item><description>update: fixes Windows Update process issues.</description></item>
+        /// <item><description>server: fixes service configuration issues.</description></item>
+        /// <item><description>bootmgr: fixes Windows Boot Manager issues.</description></item>
+        /// <item><description>vminit: fixes Windows initialization agent issues.</description></item>
+        /// <item><description>osloader: fixes Windows OS Loader issues.</description></item>
+        /// <item><description>virtio: fixes virtio driver issues.</description></item>
+        /// <item><description>standardizedtimezone: fixes standard time zone issues.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -677,11 +674,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> RepairItem { get; set; }
 
         /// <summary>
-        /// <para>The repair option in the image template.</para>
+        /// <para>The repair mode in the image template.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Standard: standard repair mode.</para>
-        /// <para>The standard repair package for Linux includes the following items:</para>
+        /// <para>The standard repair package for Linux includes:</para>
         /// <list type="bullet">
         /// <item><description>GUESTOS.CloudInit</description></item>
         /// <item><description>GUESTOS.Dhcp</description></item>
@@ -691,7 +688,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>GUESTOS.Fstab</description></item>
         /// <item><description>GUESTOS.Nvme</description></item>
         /// </list>
-        /// <para>The standard repair package for Windows includes the following items:</para>
+        /// <para>The standard repair package for Windows includes:</para>
         /// <list type="bullet">
         /// <item><description>GUESTOS.Virtio</description></item>
         /// <item><description>GUESTOS.Update</description></item>
@@ -705,12 +702,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// </description></item>
         /// <item><description><para>All: full repair mode.</para>
-        /// <para>The full repair package for Linux includes all items in the standard repair package, plus the following items:</para>
+        /// <para>The full repair package for Linux includes the following items in addition to those in the standard repair package:</para>
         /// <list type="bullet">
         /// <item><description>GUESTOS.Selinux</description></item>
         /// <item><description>GUESTOS.SecurityCenterAgent</description></item>
         /// </list>
-        /// <para>The full repair package for Windows includes all items in the standard repair package, plus the following item:</para>
+        /// <para>The full repair package for Windows includes the following items in addition to those in the standard repair package:</para>
         /// <list type="bullet">
         /// <item><description>GUESTOS.Server</description></item>
         /// </list>
@@ -719,7 +716,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>As detection and repair capabilities continue to improve, the included repair items may increase. For more information about the specific meaning of each repair item, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image detection</a>.</para>
+        /// <para>As the detection and repair capabilities improve, the included repair items may increase. For more information about the specific meanings of repair items, see <a href="https://help.aliyun.com/document_detail/439819.html">Image check overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -730,7 +727,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RepairMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enterprise resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -759,14 +756,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SystemDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateImagePipelineRequestTag> Tag { get; set; }
         public class CreateImagePipelineRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -776,7 +773,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -799,8 +796,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TestContent { get; set; }
 
         /// <summary>
-        /// <para>The regions to which to distribute the destination image. Valid values of N: 1 to 20.</para>
-        /// <para>If you do not specify this parameter, the image is created only in the current region.</para>
+        /// <para>The list of regions to which the destination image is distributed. Valid values of N: 1 to 20.</para>
+        /// <para>If you do not specify this parameter, the image is created only in the current region by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -810,8 +807,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> ToRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in the VPC.</para>
-        /// <para>If you do not specify this parameter, a new VPC and vSwitch are created by default. Make sure that the VPC resource quota in your account is sufficient. For more information, see <a href="https://help.aliyun.com/document_detail/27750.html">Limits</a>.</para>
+        /// <para>The vSwitch ID of the VPC.</para>
+        /// <para>If you do not specify this parameter, a new VPC and vSwitch are created by default. Make sure that your account has sufficient VPC resource quotas. For more information, see <a href="https://help.aliyun.com/document_detail/27750.html">Limits</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp67acfmxazb4p****</para>

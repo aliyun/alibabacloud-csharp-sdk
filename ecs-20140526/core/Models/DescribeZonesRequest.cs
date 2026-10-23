@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </para>
+        /// <para>The language used to filter the returned results, such as Chinese, English, or Japanese. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description>zh-CN: Simplified Chinese.</description></item>
         /// <item><description>zh-TW: Traditional Chinese.</description></item>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The billing method supported by resources in the zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </para>
+        /// <para>The billing method of the resources supported in the zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>PrePaid: subscription.</description></item>
         /// <item><description>PostPaid: pay-as-you-go.</description></item>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the zones are located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,11 +72,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The bidding policy for pay-as-you-go instances. You can specify this parameter when <c>InstanceChargeType=PostPaid</c>. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Spot instances</a>. Valid values:</para>
+        /// <para>The bidding policy for pay-as-you-go instances. You can specify this parameter when <c>InstanceChargeType</c> is set to <c>PostPaid</c>. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Spot instances</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>NoSpot: regular pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: spot instance with a maximum price limit.</description></item>
-        /// <item><description>SpotAsPriceGo: spot instance priced at the market price with the pay-as-you-go price as the upper limit.</description></item>
+        /// <item><description>SpotWithPriceLimit: spot instance with a maximum price.</description></item>
+        /// <item><description>SpotAsPriceGo: spot instance whose price is automatically offered by the system, up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>
         /// 
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display detailed information.</para>
+        /// <para>Specifies whether to display detailed information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Display detailed information.</description></item>
-        /// <item><description>false: Do not display detailed information.</description></item>
+        /// <item><description>true: Displays detailed information.</description></item>
+        /// <item><description>false: Does not display detailed information.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 

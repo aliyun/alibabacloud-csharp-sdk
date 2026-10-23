@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeVscsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query token. The value is the NextToken parameter value returned by the previous API call.</para>
+        /// <para>The query token. The value is the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+            /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
             /// <remarks>
             /// <para>Filtering by the default resource group is not supported.</para>
             /// </remarks>
@@ -72,11 +72,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The status of the VSC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>In_use: in use.</description></item>
-            /// <item><description>Attaching: being attached.</description></item>
-            /// <item><description>Detaching: being detached.</description></item>
-            /// <item><description>AttachFailed: failed to attach.</description></item>
-            /// <item><description>DetachFailed: failed to detach.</description></item>
+            /// <item><description>In_use: In use.</description></item>
+            /// <item><description>Attaching: Attaching.</description></item>
+            /// <item><description>Detaching: Detaching.</description></item>
+            /// <item><description>AttachFailed: Attachment failed.</description></item>
+            /// <item><description>DetachFailed: Detachment failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag keys of snapshots in the snapshot-consistent group. The default values of Key and Value provide the snapshot source information.</para>
+            /// <para>The tag keys of the snapshots in the snapshot consistency group. The default values of Key and Value provide the snapshot source information.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>VSC ID。</para>
+            /// <para>The VSC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-hp34ue**g0wmycb27bwal</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string VscName { get; set; }
 
             /// <summary>
-            /// <para>The type of the VSC. Valid values: Primary or Secondary.</para>
+            /// <para>The type of the VSC. Valid values: Primary and Secondary.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Primary</para>

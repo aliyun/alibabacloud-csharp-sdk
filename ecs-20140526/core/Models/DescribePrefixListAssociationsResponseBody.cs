@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token returned in this call. If the return value is empty, no more data is available.</para>
+        /// <para>The query token returned by the current call. If this value is empty, it indicates that no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>

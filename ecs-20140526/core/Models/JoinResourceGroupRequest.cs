@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource. For example, when ResourceType is set to instance, ResourceId is the instance ID.</para>
+        /// <para>The ID of the resource. For example, if ResourceType is set to instance, ResourceId specifies the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp67acfmxazb4p****</para>
@@ -58,21 +58,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the ECS resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: instance.</description></item>
-        /// <item><description>disk: block storage.</description></item>
-        /// <item><description>snapshot: snapshot.</description></item>
-        /// <item><description>image: image.</description></item>
-        /// <item><description>securitygroup: security group.</description></item>
-        /// <item><description>ddh: dedicated host.</description></item>
-        /// <item><description>ddhcluster: dedicated host cluster.</description></item>
-        /// <item><description>eni: network interface controller (NIC).</description></item>
-        /// <item><description>keypair: key pair.</description></item>
-        /// <item><description>launchtemplate: launch template.</description></item>
-        /// <item><description>command: Cloud Assistant command.</description></item>
-        /// <item><description>activation: Cloud Assistant managed instance activation code.</description></item>
-        /// <item><description>managedinstance: Cloud Assistant managed instance.</description></item>
+        /// <item><description>instance: instance</description></item>
+        /// <item><description>disk: block storage</description></item>
+        /// <item><description>snapshot: snapshot</description></item>
+        /// <item><description>image: image</description></item>
+        /// <item><description>securitygroup: security group</description></item>
+        /// <item><description>ddh: dedicated host</description></item>
+        /// <item><description>ddhcluster: dedicated host cluster</description></item>
+        /// <item><description>eni: Elastic Network Interface (ENI)</description></item>
+        /// <item><description>keypair: key pair</description></item>
+        /// <item><description>launchtemplate: launch template</description></item>
+        /// <item><description>command: Cloud Assistant command</description></item>
+        /// <item><description>activation: activation code for managed instances</description></item>
+        /// <item><description>managedinstance: managed instance</description></item>
         /// </list>
-        /// <para>The preceding parameter values are case-sensitive.</para>
+        /// <para>The values are case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>securitygroup</para>

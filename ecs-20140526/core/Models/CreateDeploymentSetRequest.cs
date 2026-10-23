@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? Affinity { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
-        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests.</para>
+        /// <para>The <b>ClientToken</b> parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment set. The name must be 2 to 128 characters in length and must start with a letter. It cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDeploymentSetName</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The number of groups for the high availability group strategy. Valid values: 1 to 7.</para>
+        /// <para>The number of groups for the high availability strategy of deployment set groups. Valid values: 1 to 7.</para>
         /// <para>Default value: 3.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <c>Strategy=AvailabilityGroup</c>.</para>
+        /// <para>This parameter takes effect only when <c>Strategy</c> is set to <c>AvailabilityGroup</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? GroupCount { get; set; }
 
         /// <summary>
-        /// <para>The emergency solution to use when an instance in the deployment set cannot be evenly distributed to available inventory after a failover. Valid values: </para>
+        /// <para>The emergency plan used when an instance in the deployment set is migrated due to a host failure and there is insufficient instance inventory for dispersion. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>CancelMembershipAndStart: Removes the instance from the deployment set and starts the instance immediately after the failover.</description></item>
-        /// <item><description>KeepStopped: Keeps the deployment set attributes of the instance and leaves the instance in the Stopped state.</description></item>
+        /// <item><description>CancelMembershipAndStart: Removes the instance from the deployment set and starts the instance immediately after the migration.</description></item>
+        /// <item><description>KeepStopped: Retains the deployment set attributes of the instance and keeps the instance in the stopped state.</description></item>
         /// </list>
         /// <para>Default value: CancelMembershipAndStart.</para>
         /// 
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,9 +133,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Availability: High availability strategy.</description></item>
-        /// <item><description>AvailabilityGroup: High availability group strategy.</description></item>
-        /// <item><description>LowLatency: Low network latency strategy.</description></item>
+        /// <item><description>Availability: high availability strategy</description></item>
+        /// <item><description>AvailabilityGroup: high availability strategy for deployment set groups</description></item>
+        /// <item><description>LowLatency: low network latency strategy</description></item>
         /// </list>
         /// <para>Default value: Availability.</para>
         /// 
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>host: physical server</description></item>
+        /// <item><description>host: physical machine</description></item>
         /// <item><description>sw: vSwitch</description></item>
         /// <item><description>rack: rack</description></item>
         /// </list>

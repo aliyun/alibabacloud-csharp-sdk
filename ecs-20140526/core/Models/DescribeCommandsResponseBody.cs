@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -199,6 +199,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The total number of commands.</para>
+        /// <remarks>
+        /// <para>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

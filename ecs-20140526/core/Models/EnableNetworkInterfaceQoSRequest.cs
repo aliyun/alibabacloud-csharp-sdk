@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class EnableNetworkInterfaceQoSRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the network interface controller (NIC).</para>
+        /// <para>The ID of the Elastic Network Interface (ENI).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The QoS rate limiting settings.</para>
+        /// <para>The QoS bandwidth throttling settings.</para>
         /// </summary>
         [NameInMap("QoS")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class EnableNetworkInterfaceQoSRequestQoS : TeaModel {
             /// <summary>
             /// <para>The maximum inbound internal bandwidth limit.</para>
-            /// <para>Unit: kbit/s. Increment: 1000 (1 Mbit/s). Value range: [50000, +∞).</para>
+            /// <para>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The maximum outbound internal bandwidth limit.</para>
-            /// <para>Unit: kbit/s. Increment: 1000 (1 Mbit/s). Value range: [50000, +∞).</para>
+            /// <para>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The maximum number of sessions.</para>
-            /// <para>Increment: 10000. Value range: [10000, +∞).</para>
+            /// <para>Step size: 10000. Valid values: [10000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The inbound internal packet forwarding rate.</para>
-            /// <para>Unit: pps. Increment: 10000. Value range: [10000, +∞).</para>
+            /// <para>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The outbound internal packet forwarding rate.</para>
-            /// <para>Unit: pps. Increment: 10000. Value range: [10000, +∞).</para>
+            /// <para>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

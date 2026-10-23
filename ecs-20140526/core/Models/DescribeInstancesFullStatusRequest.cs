@@ -14,7 +14,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstancesFullStatusRequestEventPublishTime EventPublishTime { get; set; }
         public class DescribeInstancesFullStatusRequestEventPublishTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end time of the event publication time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-07T00:00:00Z</para>
@@ -24,7 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start time of the event publication time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T00:00:00Z</para>
@@ -40,7 +42,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstancesFullStatusRequestNotBefore NotBefore { get; set; }
         public class DescribeInstancesFullStatusRequestNotBefore : TeaModel {
             /// <summary>
-            /// <para>The end of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end time of the scheduled execution time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T00:00:00Z</para>
@@ -50,7 +53,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start time of the scheduled execution time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-07T00:00:00Z</para>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> EventId { get; set; }
 
         /// <summary>
-        /// <para>The type of a system event. The EventType parameter takes effect only when InstanceEventType.N is not specified. Valid values: </para>
+        /// <para>The type of the event. The EventType parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance. </description></item>
         /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system failure.</description></item>
@@ -93,11 +97,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The health status of the instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>Impaired: The service is impaired. </description></item>
-        /// <item><description>Warning: The instance performance may be degraded due to maintenance.</description></item>
-        /// <item><description>Maintaining: The instance is under maintenance.</description></item>
+        /// <item><description>Impaired: The service is damaged. </description></item>
+        /// <item><description>Warning: A warning is issued. Instance performance may be degraded due to maintenance.</description></item>
+        /// <item><description>Maintaining: The instance is being maintained.</description></item>
         /// <item><description>Initializing: The instance is being initialized. </description></item>
-        /// <item><description>InsufficientData: The data is insufficient. </description></item>
+        /// <item><description>InsufficientData: Data is insufficient. </description></item>
         /// <item><description>NotApplicable: Not applicable.</description></item>
         /// </list>
         /// <para>The values are case-sensitive.</para>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>The list of instance system event types. You can specify up to 30 instance event types.</para>
+        /// <para>The list of instance event types. You can specify up to 30 instance event types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceExpiration.Stop</para>
@@ -138,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results. Valid values: positive integers.</para>
+        /// <para>The page number of the query result. Valid values: positive integers.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -160,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

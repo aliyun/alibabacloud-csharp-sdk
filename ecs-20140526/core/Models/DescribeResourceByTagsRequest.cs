@@ -13,34 +13,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <para>The page number of the results. Minimum value: 1.</para>
-        /// <para>Default value: 1.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
-        /// <para>Default value: 50.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>50</para>
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -54,52 +36,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// <para>The resource type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>instance: ECS instance.</description></item>
-        /// <item><description>disk: cloud disk.</description></item>
-        /// <item><description>snapshot: snapshot.</description></item>
-        /// <item><description>image: image.</description></item>
-        /// <item><description>securitygroup: security group.</description></item>
-        /// <item><description>volume: storage volume.</description></item>
-        /// <item><description>eni: Elastic Network Interface (ENI).</description></item>
-        /// <item><description>ddh: dedicated host.</description></item>
-        /// <item><description>keypair: SSH key pair.</description></item>
-        /// <item><description>launchtemplate: launch template.</description></item>
-        /// </list>
-        /// <para>All valid values are in lowercase.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>instance</para>
-        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        /// <summary>
-        /// <para>The list of tags.</para>
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeResourceByTagsRequestTag> Tag { get; set; }
         public class DescribeResourceByTagsRequestTag : TeaModel {
-            /// <summary>
-            /// <para>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestKey</para>
-            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            /// <summary>
-            /// <para>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>TestValue</para>
-            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

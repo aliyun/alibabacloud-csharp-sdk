@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, the authorization status of the RAM user, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para>true: sends a check request without querying resource status. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is executed.</para>
+        /// <item><description><para>false: sends a Normal request. If the request passes the check, a 2xx HTTP status code is returned and the resource status is directly queried.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The PTP status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>enabled: enables PTP.</para>
+        /// <item><description><para>enabled: Enables PTP.</para>
         /// </description></item>
-        /// <item><description><para>disabled: disables PTP.</para>
+        /// <item><description><para>disabled: Disables PTP.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: disabled.</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PtpStatus { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

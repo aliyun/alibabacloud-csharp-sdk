@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotLinksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page that you specified in the request.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshot chains.</para>
         /// <remarks>
-        /// <para>When you use the MaxResults and NextToken parameters for paged query, the returned TotalCount value is invalid.</para>
+        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for paging in a paged query, the returned <c>TotalCount</c> value is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

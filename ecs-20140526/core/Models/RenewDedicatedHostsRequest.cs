@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RenewDedicatedHostsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The list of dedicated host IDs. You can specify up to 100 subscription dedicated host IDs. Specify multiple dedicated host IDs in a JSON array in the format of <c>[&quot;dh-xxxxxxxxx&quot;, &quot;dh-yyyyyyyyy&quot;, … &quot;dh-zzzzzzzzz&quot;]</c>. Separate IDs with commas (,).</para>
+        /// <para>The list of dedicated host IDs. You can enter up to 100 subscription dedicated host IDs. Specify multiple IDs in a JSON array formatted as <c>[&quot;dh-xxxxxxxxx&quot;, &quot;dh-yyyyyyyyy&quot;, … &quot;dh-zzzzzzzzz&quot;]</c>. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The renewal period. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If PeriodUnit is set to Week: 1, 2, 3, and 4.</description></item>
-        /// <item><description>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
-        /// <item><description>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>When PeriodUnit is set to Week: 1, 2, 3, and 4.</description></item>
+        /// <item><description>When PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
+        /// <item><description>When PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
-        /// <item><description>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>When PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
+        /// <item><description>When PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

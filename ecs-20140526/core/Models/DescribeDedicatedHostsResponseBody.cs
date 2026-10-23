@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The query token returned in this invoke. If the return value is empty when you use MaxResults and NextToken for paging, no more data is available.</para>
+        /// <para>The query token returned by the current invoke. If you use MaxResults and NextToken for paged query and this paging token is empty, no more data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>

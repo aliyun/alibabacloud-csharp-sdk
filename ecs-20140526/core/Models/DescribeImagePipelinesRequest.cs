@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesRequest : TeaModel {
         /// <summary>
-        /// <para>The image template ID. Valid values of N: 1 to 20.</para>
+        /// <para>The ID of the image template. Valid values of N: 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip-2ze5tsl5bp6nf2b3****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> ImagePipelineId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page in a paging query. Valid values: 1 to 500.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The template name.</para>
+        /// <para>The name of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImagePipeline</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set the value to the <c>NextToken</c> value returned in the previous call to this operation. You do not need to set this parameter for the first request.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

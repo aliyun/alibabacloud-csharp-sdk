@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -272,9 +272,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The paging parameter.</para>
+        /// <para>The paging query parameter.</para>
         /// <remarks>
-        /// <para>This parameter is being deprecated. Use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will soon be deprecated. We recommend that you use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -285,9 +285,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The paging parameter.</para>
+        /// <para>The paging query parameter.</para>
         /// <remarks>
-        /// <para>This parameter is being deprecated. Use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will soon be deprecated. We recommend that you use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -308,9 +308,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of Elastic Network Interfaces (ENIs) returned.</para>
+        /// <para>The total number of Elastic Network Interface (ENI) resources returned.</para>
         /// <remarks>
-        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for paging, the returned <c>TotalCount</c> value is meaningless.</para>
+        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for a paging query, the returned <c>TotalCount</c> value is meaningless.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T06:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of times that the activation code can be used to register managed instances.</para>
+            /// <para>The maximum number of times the activation code can be used to register managed instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of hosts that are allowed to use the activation code.</para>
+            /// <para>The IP addresses of the hosts that are allowed to use the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0/0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags of the managed instance activation code.</para>
+            /// <para>The tag information of the managed instance activation code.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned in this response.</para>
+        /// <para>The query token returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The Settings for the number of entries returned per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -198,7 +198,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records that meet the conditional query criteria.</para>
+        /// <remarks>
+        /// <para>When you perform paging in a paged query by using the MaxResults and NextToken parameters, the returned TotalCount value is meaningless.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

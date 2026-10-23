@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Virtual Storage Channel.</para>
+        /// <para>The ID of the virtual storage channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsc-b*d31dq</para>

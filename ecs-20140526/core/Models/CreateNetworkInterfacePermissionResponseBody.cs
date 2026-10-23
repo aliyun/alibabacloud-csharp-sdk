@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the network interface controller (NIC) permissions.</para>
+        /// <para>The collection of information composed of the Elastic network interface controller (NIC) permission list.</para>
         /// </summary>
         [NameInMap("NetworkInterfacePermission")]
         [Validation(Required=false)]
         public CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission NetworkInterfacePermission { get; set; }
         public class CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud partner (certified ISV) account.</para>
+            /// <para>The account ID of the Alibaba Cloud partner (certified ISV).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network interface controller (NIC).</para>
+            /// <para>The ID of the Elastic network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp14v2sdd3v8htln****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network interface controller (NIC) permission.</para>
+            /// <para>The ID of the Elastic network interface controller (NIC) permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-perm-bp1cs4lwn56lfb****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfacePermissionId { get; set; }
 
             /// <summary>
-            /// <para>The network interface controller (NIC) permission.</para>
+            /// <para>The Elastic network interface controller (NIC) permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InstanceAttach</para>
@@ -57,12 +57,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The status of the network interface controller (NIC) permission. Valid values:</para>
+            /// <para>The state of the Elastic network interface controller (NIC) permission. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: Authorization in progress.</description></item>
-            /// <item><description>Granted: Authorization granted.</description></item>
-            /// <item><description>Revoking: Authorization being revoked.</description></item>
-            /// <item><description>Revoked: Authorization revoked.</description></item>
+            /// <item><description>Pending: The authorization is in progress.</description></item>
+            /// <item><description>Granted: The authorization is granted.</description></item>
+            /// <item><description>Revoking: The authorization is being revoked.</description></item>
+            /// <item><description>Revoked: The authorization is revoked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

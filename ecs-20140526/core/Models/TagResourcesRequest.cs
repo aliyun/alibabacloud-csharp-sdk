@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resources. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs. Array length: 1 to 50.</para>
+        /// <para>The array of resource IDs. Array length: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>instance: ECS instance.</description></item>
         /// <item><description>disk: cloud disk.</description></item>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>securitygroup: security group.</description></item>
         /// <item><description>volume: storage volume.</description></item>
         /// <item><description>eni: Elastic Network Interface (ENI).</description></item>
-        /// <item><description>ddh: dedicated host.</description></item>
+        /// <item><description>ddh: ECS dedicated host.</description></item>
         /// <item><description>ddhcluster: dedicated host cluster.</description></item>
         /// <item><description>keypair: SSH key pair.</description></item>
         /// <item><description>launchtemplate: launch template.</description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>elasticityassurance: elasticity assurance.</description></item>
         /// <item><description>capacityreservation: capacity reservation.</description></item>
         /// <item><description>command: Cloud Assistant command.</description></item>
-        /// <item><description>invocation: Cloud Assistant command execution or file sending result.</description></item>
+        /// <item><description>invocation: Cloud Assistant command execution or file delivery result.</description></item>
         /// <item><description>activation: Cloud Assistant managed instance activation code.</description></item>
         /// <item><description>managedinstance: Cloud Assistant managed instance.</description></item>
         /// </list>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key <c>Key</c> must be unique.</para>
+        /// <para>The array of tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key Key must be unique.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. It cannot be empty or an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value cannot be null but can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. It cannot be null but can be an empty string. It can be up to 128 characters in length and cannot contain http:// or https://.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

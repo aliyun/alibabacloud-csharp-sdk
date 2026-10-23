@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If this parameter is specified, NetworkInterfaceId must be left empty.</para>
+        /// <para>If you specify this parameter, NetworkInterfaceId must be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Elastic Network Interface (ENI) ID.</para>
+        /// <para>The ID of the Elastic Network Interface (ENI).</para>
         /// <remarks>
-        /// <para>If this parameter is specified, InstanceId must be left empty.</para>
+        /// <para>If you specify this parameter, InstanceId must be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <list type="bullet">
-        /// <item><description>The region ID is optional when adding an instance to a security group.</description></item>
-        /// <item><description>The region ID is required when adding an Elastic Network Interface (ENI) to a security group. Specify the region where the network interface controller (NIC) resides.</description></item>
+        /// <item><description>The region ID is optional when you add an instance to a security group.</description></item>
+        /// <item><description>The region ID is required when you add a network interface controller (NIC) to a security group. Specify the ID of the region where the network interface controller (NIC) resides.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group ID. You can call <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> to query available security groups.</para>
+        /// <para>The ID of the security group. You can call <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> to query available security groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

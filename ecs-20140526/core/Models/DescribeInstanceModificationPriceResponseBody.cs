@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceModificationPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price information, including the price and discount rule details.</para>
+        /// <para>The price information, including the price and discount rule information.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
@@ -25,6 +25,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
                 /// <para>The currency unit. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>China site: CNY.</para>
+                /// </description></item>
+                /// <item><description><para>International site: USD.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -129,6 +135,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice : TeaModel {
                     /// <summary>
                     /// <para>The currency unit.</para>
+                    /// <para>China site: CNY.</para>
+                    /// <para>International site: USD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CNY</para>

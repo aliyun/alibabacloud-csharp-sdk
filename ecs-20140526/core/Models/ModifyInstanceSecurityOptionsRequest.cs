@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceSecurityOptionsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate the value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The secure boot setting of the instance is not modified. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits.</description></item>
-        /// <item><description>false: performs a dry run and sends the request. If the request passes the dry run, the secure boot setting of the instance is modified.</description></item>
+        /// <item><description>true: performs only a dry run. The secure boot option of the instance is not modified.</description></item>
+        /// <item><description>false: performs a dry run and sends the request. If the request passes the dry run, the secure boot option of the instance is modified.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable UEFI secure boot. Valid values:</para>
+        /// <para>Specifies whether to enable or disable UEFI secure boot. If this parameter is set to true, the instance type must support secure boot. You can call the DescribeInstanceTypes operation and check whether the value of SecurityOptions.SecureBootSupport is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description>true: enables UEFI secure boot.</description></item>
+        /// <item><description>false: disables UEFI secure boot.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <para>This parameter is required.</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? EnableSecureBoot { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent list of regions.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

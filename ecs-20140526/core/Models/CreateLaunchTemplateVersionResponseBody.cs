@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class CreateLaunchTemplateVersionResponseBody : TeaModel {
         /// <summary>
         /// <para>The launch template ID. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</para>
-        /// <para>When you use a launch template to create an instance, you must specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to determine the launch template.</para>
+        /// <para>When you use a launch template to create an instance, you must specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to identify the launch template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-bp1apo0bbbkuy0rj****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the launch template that is created.</para>
+        /// <para>The version number of the created launch template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

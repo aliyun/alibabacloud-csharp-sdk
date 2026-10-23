@@ -14,7 +14,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestEventPublishTime EventPublishTime { get; set; }
         public class DescribeInstanceHistoryEventsRequestEventPublishTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range to query the publish time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end time of the publication time of the system event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-01T06:32:31Z</para>
@@ -24,7 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range to query the publish time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start time of the publication time of the system event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T06:32:31Z</para>
@@ -40,7 +42,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestNotBefore NotBefore { get; set; }
         public class DescribeInstanceHistoryEventsRequestNotBefore : TeaModel {
             /// <summary>
-            /// <para>The end of the time range to query the scheduled execution time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end time of the scheduled execution time of the system event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-01T06:32:31Z</para>
@@ -50,7 +53,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range to query the scheduled execution time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start time of the scheduled execution time of the system event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T06:32:31Z</para>
@@ -62,15 +66,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The lifecycle status of the system event. EventCycleStatus takes effect only when InstanceEventCycleStatus.N is not specified. Valid values: </para>
+        /// <para>The lifecycle status of the system event. The EventCycleStatus parameter is valid only when the InstanceEventCycleStatus.N parameter is not specified. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>Scheduled: The event is waiting to be executed.</description></item>
-        /// <item><description>Avoided: The event has been avoided.</description></item>
+        /// <item><description>Avoided: The event is avoided.</description></item>
         /// <item><description>Executing: The event is being executed.</description></item>
-        /// <item><description>Executed: The event has been executed.</description></item>
-        /// <item><description>Canceled: The event has been canceled.</description></item>
-        /// <item><description>Failed: The event failed to be executed.</description></item>
-        /// <item><description>Inquiring: The event is being inquired.</description></item>
+        /// <item><description>Executed: The event execution is completed.</description></item>
+        /// <item><description>Canceled: The event is canceled.</description></item>
+        /// <item><description>Failed: The event execution failed.</description></item>
+        /// <item><description>Inquiring: The event is in the inquiring state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EventCycleStatus { get; set; }
 
         /// <summary>
-        /// <para>One or more system event IDs. Valid values of N: 1 to 100. Specify multiple values in a repeated list format.</para>
+        /// <para>The IDs of one or more system events. Valid values of N: 1 to 100. Specify multiple values in a repeated list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e-uf64yvznlao4jl2c****</para>
@@ -91,21 +95,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> EventId { get; set; }
 
         /// <summary>
-        /// <para>The type of the system event. EventType takes effect only when InstanceEventType.N is not specified. Valid values: </para>
+        /// <para>The type of the system event. The EventType parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
         /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
-        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system error.</description></item>
+        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system failure.</description></item>
+        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system failure.</description></item>
         /// <item><description>SystemFailure.Delete: The instance is released due to an instance creation failure.</description></item>
-        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
-        /// <item><description>InstanceExpiration.Stop: The instance is stopped due to subscription expiration.</description></item>
-        /// <item><description>InstanceExpiration.Delete: The instance is released due to subscription expiration.</description></item>
+        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</description></item>
+        /// <item><description>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</description></item>
+        /// <item><description>InstanceExpiration.Delete: The subscription instance is released due to expiration.</description></item>
         /// <item><description>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
         /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</para>
+        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview of system events</a>. The value of this parameter can only be an instance system event, not a disk system event.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available for use.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,15 +132,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImpactLevel { get; set; }
 
         /// <summary>
-        /// <para>One or more lifecycle statuses of system events. Valid values of N: 1 to 7. Specify multiple values in a repeated list format. Valid values:</para>
+        /// <para>The lifecycle statuses of one or more system events. Valid values of N: 1 to 7. Specify multiple values in a repeated list. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Scheduled: The event is waiting to be executed.</description></item>
-        /// <item><description>Avoided: The event has been avoided.</description></item>
+        /// <item><description>Avoided: The event is avoided.</description></item>
         /// <item><description>Executing: The event is being executed.</description></item>
-        /// <item><description>Executed: The event has been executed.</description></item>
-        /// <item><description>Canceled: The event has been canceled.</description></item>
-        /// <item><description>Failed: The event failed to be executed.</description></item>
-        /// <item><description>Inquiring: The event is being inquired.</description></item>
+        /// <item><description>Executed: The event execution is completed.</description></item>
+        /// <item><description>Canceled: The event is canceled.</description></item>
+        /// <item><description>Failed: The event execution failed.</description></item>
+        /// <item><description>Inquiring: The event is in the inquiring state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -147,21 +151,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceEventCycleStatus { get; set; }
 
         /// <summary>
-        /// <para>One or more types of system events. Valid values of N: 1 to 30. Specify multiple values in a repeated list format. Valid values:</para>
+        /// <para>The types of one or more system events. Valid values of N: 1 to 30. Specify multiple values in a repeated list. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
         /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
-        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system error.</description></item>
+        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system failure.</description></item>
+        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system failure.</description></item>
         /// <item><description>SystemFailure.Delete: The instance is released due to an instance creation failure.</description></item>
-        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
-        /// <item><description>InstanceExpiration.Stop: The instance is stopped due to subscription expiration.</description></item>
-        /// <item><description>InstanceExpiration.Delete: The instance is released due to subscription expiration.</description></item>
+        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</description></item>
+        /// <item><description>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</description></item>
+        /// <item><description>InstanceExpiration.Delete: The subscription instance is released due to expiration.</description></item>
         /// <item><description>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
         /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</para>
+        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview of system events</a>. The value of this parameter can only be an instance system event, not a disk system event.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceEventType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. If you do not specify an instance ID, the system events of all instances in the specified region are queried.</para>
+        /// <para>The instance ID. If you do not specify this parameter, the system events of all instances in the specified region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-uf678mass4zvr9n1****</para>
@@ -182,11 +186,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query. Valid values: 10 to 100.</para>
+        /// <para>The maximum number of entries per page for paging. Valid values: 10 to 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>When the settings value is greater than 0 but less than 10, the default value is 10.</description></item>
-        /// <item><description>When the settings value is greater than 100, the default value is 100.</description></item>
+        /// <item><description>If the specified value is greater than 0 and less than 10, the default value is 10.</description></item>
+        /// <item><description>If the specified value is greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -197,7 +201,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f1c9fa9de5752***</para>
@@ -216,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated. Use MaxResults and NextToken for pagination queries.</para>
+        /// <para>This parameter will be deprecated soon. Use the MaxResults or NextToken parameter for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -228,7 +232,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated. Use MaxResults and NextToken for pagination queries.</para>
+        /// <para>This parameter will be deprecated soon. Use the MaxResults or NextToken parameter for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -239,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -260,15 +264,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>One or more resource IDs. Valid values of N: 1 to 100. Specify multiple values in a repeated list format. Valid values:</para>
+        /// <para>The IDs of one or more resources. Valid values of N: 1 to 100. Specify multiple values in a repeated list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <c>ResourceType=instance</c>, the resource ID is the ECS instance ID.</description></item>
-        /// <item><description>When <c>ResourceType=ddh</c>, the resource ID is the dedicated host ID.</description></item>
-        /// <item><description>When <c>ResourceType=managedhost</c>, the resource ID is the physical machine ID in an intelligent fully managed resource pool.</description></item>
+        /// <item><description>When <c>ResourceType</c> is set to <c>instance</c>, the resource ID is the ECS instance ID.</description></item>
+        /// <item><description>When <c>ResourceType</c> is set to <c>ddh</c>, the resource ID is the dedicated host ID.</description></item>
+        /// <item><description>When <c>ResourceType</c> is set to <c>managedhost</c>, the resource ID is the physical machine ID in an intelligent fully managed resource pool.</description></item>
         /// </list>
         /// <para>If you do not specify this parameter, the system events of all resources of the specified resource type (<c>ResourceType</c>) in the specified region (<c>RegionId</c>) are queried.</para>
         /// <remarks>
-        /// <para>Use <c>ResourceId.N</c> to specify one or more resource IDs. If you specify both <c>ResourceId.N</c> and <c>InstanceId</c>, <c>ResourceId.N</c> takes precedence by default.</para>
+        /// <para>Use the <c>ResourceId.N</c> parameter to specify one or more resource IDs. If you specify both the <c>ResourceId.N</c> and <c>InstanceId</c> parameters, the <c>ResourceId.N</c> parameter takes precedence by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -287,7 +291,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>instance: ECS instance.</description></item>
         /// <item><description>ddh: dedicated host.</description></item>
@@ -303,7 +307,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags supported by system events.</para>
+        /// <para>The list of tags supported by the system event.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

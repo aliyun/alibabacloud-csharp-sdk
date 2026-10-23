@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class CreateNetworkInterfaceRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -32,18 +32,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The network connectivity tracking configuration.</para>
-        /// <para>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</para>
+        /// <para>The network connectivity tracking configurations. Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</para>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceRequestConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class CreateNetworkInterfaceRequestConnectionTrackingConfiguration : TeaModel {
             /// <summary>
-            /// <para>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: integers from 3 to 15.</para>
+            /// <para>The timeout period for closed and TIME_WAIT TCP connections. Unit: seconds. Valid values: integers from 3 to 15.</para>
             /// <para>Default value: 3.</para>
             /// <remarks>
-            /// <para>If your ECS instance is used with NLB/CLB, the default timeout period for connections in the <c>TIME_WAIT</c> state is 15 seconds.</para>
+            /// <para>If your ECS instance is used together with an NLB or CLB instance, the default timeout period for connections in the TIME_WAIT state is 15 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -54,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for established TCP connections. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</para>
+            /// <para>The timeout period for established TCP connections. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</para>
             /// <para>Default value: 910.</para>
             /// 
             /// <b>Example:</b>
@@ -65,10 +64,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</para>
+            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</para>
             /// <para>Default value: 30.</para>
             /// <remarks>
-            /// <para>If your ECS instance is used with NLB/CLB, the default value is 100 seconds.</para>
+            /// <para>If your ECS instance is used together with an NLB or CLB instance, the default value is 100 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -81,11 +80,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to retain the ENI when the associated instance is released. Valid values:</para>
+        /// <para>Specifies whether to retain the ENI when the instance is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: does not retain the ENI.</para>
+        /// <item><description><para>true: The ENI is not retained.</para>
         /// </description></item>
-        /// <item><description><para>false: retains the ENI.</para>
+        /// <item><description><para>false: The ENI is retained.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -97,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeleteOnRelease { get; set; }
 
         /// <summary>
-        /// <para>The description of the network interface controller (NIC). The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the Elastic Network Interface (ENI). The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
         /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("EnhancedNetwork")]
@@ -126,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -138,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -161,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the Elastic Network Interface (ENI). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Secondary: secondary ENI.</description></item>
+        /// <item><description>Secondary: secondary Elastic Network Interface (ENI).</description></item>
         /// <item><description>Trunk: trunk network interface controller (NIC) (in invitational preview).</description></item>
         /// </list>
         /// <para>Default value: Secondary.</para>
@@ -174,9 +173,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv4 prefixes to assign to the network interface controller (NIC). Valid values of N: 1 to 10.</para>
+        /// <para>One or more IPv4 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</para>
         /// <remarks>
-        /// <para>If you want to set IPv4 prefixes for the network interface controller (NIC), you must set either the parameter Ipv4Prefix.N or the parameter Ipv4PrefixCount but not both.</para>
+        /// <para>If you want to allocate IPv4 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv4Prefix.N or Ipv4PrefixCount. You cannot configure Settings for both parameters.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Ipv4Prefix")]
@@ -184,9 +183,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// <para>The number of IPv4 prefixes to assign to the network interface controller (NIC). Valid values: 1 to 10.</para>
+        /// <para>The number of IPv4 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</para>
         /// <remarks>
-        /// <para>If you want to set IPv4 prefixes for the network interface controller (NIC), you must set either the parameter Ipv4Prefix.N or the parameter Ipv4PrefixCount but not both.</para>
+        /// <para>If you want to allocate IPv4 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv4Prefix.N or Ipv4PrefixCount. You cannot configure Settings for both parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -197,10 +196,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv4PrefixCount { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv6 addresses to assign to the network interface controller (NIC). You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.</para>
+        /// <para>One or more IPv6 addresses that are allocated to the Elastic Network Interface (ENI). It supports Settings for up to 10 IPv6 addresses. Valid values of N: 1 to 10.</para>
         /// <para>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></para>
         /// <remarks>
-        /// <para>If you want to set IPv6 addresses for the network interface controller (NIC), you must set either the parameter <c>Ipv6Addresses.N</c> or the parameter <c>Ipv6AddressCount</c> but not both.</para>
+        /// <para>If you want to allocate IPv6 addresses to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Addresses.N or Ipv6AddressCount. You cannot configure Settings for both parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -211,9 +210,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The number of IPv6 addresses to randomly generate for the network interface controller (NIC). Valid values: 1 to 10.</para>
+        /// <para>The number of IPv6 addresses that are randomly generated for the Elastic Network Interface (ENI). Valid values: 1 to 10.</para>
         /// <remarks>
-        /// <para>If you want to set IPv6 addresses for the network interface controller (NIC), you must set either the parameter <c>Ipv6Addresses.N</c> or the parameter <c>Ipv6AddressCount</c> but not both.</para>
+        /// <para>If you want to allocate IPv6 addresses to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Addresses.N or Ipv6AddressCount. You cannot configure Settings for both parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -224,9 +223,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv6 prefixes to assign to the network interface controller (NIC). Valid values of N: 1 to 10.</para>
+        /// <para>One or more IPv6 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</para>
         /// <remarks>
-        /// <para>If you want to set IPv6 prefixes for the network interface controller (NIC), you must set either the parameter Ipv6Prefix.N or the parameter Ipv6PrefixCount but not both.</para>
+        /// <para>If you want to allocate IPv6 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Prefix.N or Ipv6PrefixCount. You cannot configure Settings for both parameters.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Ipv6Prefix")]
@@ -234,9 +233,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// <para>The number of IPv6 prefixes to assign to the network interface controller (NIC). Valid values: 1 to 10.</para>
+        /// <para>The number of IPv6 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</para>
         /// <remarks>
-        /// <para>If you want to set IPv6 prefixes for the network interface controller (NIC), you must set either the parameter Ipv6Prefix.N or the parameter Ipv6PrefixCount but not both.</para>
+        /// <para>If you want to allocate IPv6 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Prefix.N or Ipv6PrefixCount. You cannot configure Settings for both parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -247,7 +246,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv6PrefixCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain characters from the Unicode letter categorization (including English and Chinese characters) and ASCII digits (0-9). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
+        /// <para>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length. It can contain letters in the Unicode letter categorization (including English and Chinese characters) and ASCII digits (0-9). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
@@ -258,14 +257,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The traffic configuration parameter set of the network interface controller (NIC).</para>
+        /// <para>The communication parameters of the Elastic Network Interface (ENI).</para>
         /// </summary>
         [NameInMap("NetworkInterfaceTrafficConfig")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig NetworkInterfaceTrafficConfig { get; set; }
         public class CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig : TeaModel {
             /// <summary>
-            /// <para>The communication pattern of the network interface controller (NIC).</para>
+            /// <para>The communication pattern of the Elastic Network Interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>HighPerformance</para>
@@ -275,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceTrafficMode { get; set; }
 
             /// <summary>
-            /// <para>The number of queues for the network interface controller (NIC).</para>
+            /// <para>The number of queues for the Elastic Network Interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -295,22 +294,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueuePairNumber { get; set; }
 
             /// <summary>
-            /// <para>The inbound queue depth of the network interface controller (NIC).</para>
+            /// <para>The inbound queue depth of the Elastic Network Interface (ENI).</para>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available. If you want to use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> to request access.</para>
+            /// <para>This parameter is in invitational preview and is not available. If you want to use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> to apply for whitelist access.</para>
             /// </remarks>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available. If you want to use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to request access.</para>
+            /// <para>This parameter is in invitational preview and is not available. If you want to use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to apply for whitelist access.</para>
             /// </remarks>
-            /// <para>Take note of the following items:</para>
+            /// <para>When you use this parameter, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description><para>This parameter applies only to seventh-generation and later ECS instance types.</para>
+            /// <item><description><para>This parameter applies only to seventh-generation and later ECS instance families.</para>
             /// </description></item>
-            /// <item><description><para>This parameter currently applies only to Linux images.</para>
+            /// <item><description><para>This parameter applies only to Linux images.</para>
             /// </description></item>
-            /// <item><description><para>A larger inbound queue depth of the network interface controller (NIC) increases inbound throughput and reduces packet loss probability but consumes more memory.</para>
+            /// <item><description><para>A larger inbound queue depth can improve inbound throughput and reduce the packet loss rate, but consumes more memory.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -322,22 +321,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? RxQueueSize { get; set; }
 
             /// <summary>
-            /// <para>The outbound queue depth of the network interface controller (NIC).</para>
+            /// <para>The outbound queue depth of the Elastic Network Interface (ENI).</para>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available. If you want to use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> to request access.</para>
+            /// <para>This parameter is in invitational preview and is not available. If you want to use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> to apply for whitelist access.</para>
             /// </remarks>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available. If you want to use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to request access.</para>
+            /// <para>This parameter is in invitational preview and is not available. If you want to use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a> to apply for whitelist access.</para>
             /// </remarks>
-            /// <para>Take note of the following items:</para>
+            /// <para>When you use this parameter, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description><para>This parameter applies only to seventh-generation and later ECS instance types.</para>
+            /// <item><description><para>This parameter applies only to seventh-generation and later ECS instance families.</para>
             /// </description></item>
-            /// <item><description><para>This parameter currently applies only to Linux images.</para>
+            /// <item><description><para>This parameter applies only to Linux images.</para>
             /// </description></item>
-            /// <item><description><para>A larger outbound queue depth of the network interface controller (NIC) increases outbound throughput and reduces packet loss probability but consumes more memory.</para>
+            /// <item><description><para>A larger outbound queue depth can improve outbound throughput and reduce the packet loss rate, but consumes more memory.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -351,13 +350,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The communication pattern of the network interface controller (NIC). Valid values:</para>
+        /// <para>The communication pattern of the Elastic Network Interface (ENI). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Standard: uses the TCP communication pattern.</description></item>
         /// <item><description>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>A network interface controller (NIC) in RDMA communication pattern can be attached only to an instance whose instance type supports ERI. The number of ENIs in RDMA pattern cannot exceed the limit of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/336853.html">Configure eRDMA on enterprise-level instances</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2248432.html">Configure eRDMA on GPU-accelerated instances</a>.</para>
+        /// <para>For an Elastic Network Interface (ENI) that uses the RDMA communication pattern, you can attach the Elastic Network Interface (ENI) only to an instance of an instance type that supports ERI. The number of Elastic Network Interfaces (ENIs) that use the RDMA pattern cannot exceed the limit for the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/336853.html">Configure eRDMA on enterprise-level instances</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2248432.html">Configure eRDMA on GPU-accelerated instances</a>.</para>
         /// </remarks>
         /// <para>Default value: Standard.</para>
         /// 
@@ -377,8 +376,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The primary private IP address of the network interface controller (NIC).</para>
-        /// <para>The specified IP address must be an idle address within the CIDR block of the vSwitch. If you do not specify this parameter, an idle private IP address in the vSwitch CIDR block is randomly allocated by default.</para>
+        /// <para>The primary private IP address of the Elastic Network Interface (ENI).</para>
+        /// <para>The specified IP address must be an idle IP address in the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs. If you do not specify this parameter, an idle IP address in the vSwitch is randomly allocated by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>172.17.**.**</c></para>
@@ -388,9 +387,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrimaryIpAddress { get; set; }
 
         /// <summary>
-        /// <para>One or more secondary private IP addresses selected from the idle addresses within the CIDR block of the vSwitch to which the network interface controller (NIC) belongs. Valid values of N: 0 to 10.</para>
+        /// <para>One or more secondary private IP addresses that are selected from the idle IP addresses in the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs. Valid values of N: 0 to 10.</para>
         /// <remarks>
-        /// <para>When you allocate secondary private IP addresses, you cannot specify both the parameter <c>PrivateIpAddress.N</c> and the parameter <c>SecondaryPrivateIpAddressCount</c> at the same time.</para>
+        /// <para>When you allocate secondary private IP addresses, you cannot specify both the PrivateIpAddress.N parameter and the SecondaryPrivateIpAddressCount parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -401,9 +400,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The number of queues for the network interface controller (NIC). Valid values: 1 to 2048.</para>
-        /// <para>When you attach the ENI to an instance, the value must be less than the maximum number of queues per network interface controller (NIC) supported by the instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the <c>MaximumQueueNumberPerEni</c> field.</para>
-        /// <para>Default value: empty. When the ENI is attached, the default queue number for the instance type is used. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the <c>SecondaryEniQueueNumber</c> field.</para>
+        /// <para>The number of queues for the Elastic Network Interface (ENI). Valid values: 1 to 2048.</para>
+        /// <para>When you attach the Elastic Network Interface (ENI) to an instance, the value of this parameter must be less than the maximum number of queues per single network interface controller (NIC) supported by the instance type. You can invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the MaximumQueueNumberPerEni value for the instance type.</para>
+        /// <para>Default value: empty. When you attach the Elastic Network Interface (ENI), the default number of queues per Elastic Network Interface (ENI) for the instance type is used. You can invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the SecondaryEniQueueNumber value for the instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -414,9 +413,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of queues for the RDMA ENI.</para>
-        /// <para>If you want to attach multiple RDMA ENIs to an instance, we recommend that you manually specify QueuePairNumber for each ENI based on the upper limit of <c>QueuePairNumber</c> supported by the instance type and the number of ENIs you plan to use. Make sure that the total QueuePairNumber of all ENIs does not exceed the maximum value allowed by the instance type. Call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the upper limit for the instance type.</para>
+        /// <para>If you want to attach multiple RDMA ENIs to an instance, we recommend that you manually specify the QueuePairNumber value for each ENI based on the maximum QueuePairNumber value supported by the instance type and the number of ENIs that you plan to use. Make sure that the total number of queue pairs for all ENIs does not exceed the maximum value allowed for the instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to query the maximum value for the instance type.</para>
         /// <remarks>
-        /// <para>Notice: If QueuePairNumber is not specified for an RDMA ENI, the upper limit of QueuePairNumber for all RDMA ENIs supported by the instance type is used by default. Therefore, after an RDMA ENI without a specified QueuePairNumber is attached, no more RDMA ENIs can be added (regular ENIs are not affected by this limit).</notice></para>
+        /// <para>Notice: If you do not specify the QueuePairNumber value for an RDMA ENI, the maximum QueuePairNumber value supported by the instance type for all RDMA ENIs is used by default. Therefore, after you attach an RDMA ENI for which QueuePairNumber is not specified, you cannot attach more RDMA ENIs. This limit does not apply to standard ENIs.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -427,7 +426,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? QueuePairNumber { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network interface controller (NIC) to create. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the Elastic Network Interface (ENI) to be created. You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -438,7 +437,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</para>
+        /// <para>The resource group ID. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>
@@ -456,16 +455,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The inbound queue depth of the network interface controller (NIC).</para>
+        /// <para>The inbound queue depth of the Elastic Network Interface (ENI).</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description><para>The inbound queue depth of the network interface controller (NIC) must be equal to the outbound queue depth. Valid values: 8192 to 16384. The value must be a power of 2.</para>
         /// </description></item>
-        /// <item><description><para>A larger inbound queue depth increases inbound throughput but consumes more memory.</para>
+        /// <item><description><para>A larger inbound queue depth can improve inbound throughput but consumes more memory.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -476,7 +475,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RxQueueSize { get; set; }
 
         /// <summary>
-        /// <para>The number of private IP addresses for automatic creation by ECS. Valid values: 1 to 49.</para>
+        /// <para>The number of private IP addresses that you want Elastic Compute Service (ECS) to allocate for automatic creation. Valid values: 1 to 49.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -486,9 +485,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SecondaryPrivateIpAddressCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group to which the network interface controller (NIC) belongs. The security group and the ENI must be in the same VPC.</para>
+        /// <para>The ID of the security group to which you want to add the Elastic Network Interface (ENI). The security group and the Elastic Network Interface (ENI) must belong to the same VPC.</para>
         /// <remarks>
-        /// <para>When you invoke this operation, you must set either <c>SecurityGroupId</c> or <c>SecurityGroupIds.N</c> but not both.</para>
+        /// <para>When you invoke this operation, you must configure Settings for either SecurityGroupId or SecurityGroupIds.N. You cannot configure Settings for both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -499,9 +498,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of one or more security groups to which the network interface controller (NIC) belongs. The security groups and the ENI must be in the same VPC. The valid values of N depend on the quota for the maximum number of security groups to which an ENI can belong. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
+        /// <para>The IDs of one or more security groups to which you want to add the Elastic Network Interface (ENI). The security groups and the Elastic Network Interface (ENI) must belong to the same VPC. The valid values of N depend on the quota of security groups to which an Elastic Network Interface (ENI) can be added. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
         /// <remarks>
-        /// <para>When you invoke this operation, you must set either <c>SecurityGroupId</c> or <c>SecurityGroupIds.N</c> but not both.</para>
+        /// <para>When you invoke this operation, you must configure Settings for either SecurityGroupId or SecurityGroupIds.N. You cannot configure Settings for both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -514,9 +513,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable source/destination checking. We recommend that you enable this feature to improve network security. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enabled.</para>
+        /// <item><description><para>true: enables source/destination checking.</para>
         /// </description></item>
-        /// <item><description><para>false: disabled.</para>
+        /// <item><description><para>false: disables source/destination checking.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -532,14 +531,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? SourceDestCheck { get; set; }
 
         /// <summary>
-        /// <para>The tags of the network interface controller (NIC).</para>
+        /// <para>The tags of the Elastic Network Interface (ENI).</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateNetworkInterfaceRequestTag> Tag { get; set; }
         public class CreateNetworkInterfaceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the network interface controller (NIC). Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -549,7 +548,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the network interface controller (NIC). Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -561,16 +560,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The outbound queue depth of the network interface controller (NIC).</para>
+        /// <para>The outbound queue depth of the Elastic Network Interface (ENI).</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description><para>The outbound queue depth of the network interface controller (NIC) must be equal to the inbound queue depth. Valid values: 8192 to 16384. The value must be a power of 2.</para>
         /// </description></item>
-        /// <item><description><para>A larger outbound queue depth increases outbound throughput but consumes more memory.</para>
+        /// <item><description><para>A larger outbound queue depth can improve outbound throughput but consumes more memory.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -581,9 +580,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? TxQueueSize { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the network interface controller (NIC). The private IP address of the ENI is allocated from the idle addresses within the CIDR block of the vSwitch.</para>
+        /// <para>The vSwitch ID of the Elastic Network Interface (ENI). The private IP address of the Elastic Network Interface (ENI) is selected from the idle IP addresses in the CIDR block of the vSwitch.</para>
         /// <remarks>
-        /// <para>Notice: The network interface controller (NIC) and the instance to which you want to attach the ENI must be in the same zone but can belong to different vSwitches.</notice></para>
+        /// <para>Notice: The Elastic Network Interface (ENI) and the instance to which you want to attach the Elastic Network Interface (ENI) must belong to the same zone, but they can belong to different vSwitches.</notice></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -596,7 +595,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

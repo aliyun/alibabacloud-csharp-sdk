@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskDeploymentRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the cloud disk to change to. This parameter takes effect only when you migrate data between dedicated block storage clusters. Currently, only cloud_essd (enterprise SSD) is supported.</para>
-        /// <para>Default value: empty, which indicates that the cloud disk type is not changed.</para>
+        /// <para>The new disk category. This parameter is valid only during migration between different dedicated block storage clusters. Currently, only cloud_essd (ESSD) is supported.</para>
+        /// <para>Default value: empty, which indicates that the disk category is not changed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_essd</para>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the required parameters, request syntax, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and sends the request. If the check succeeds, a 2XX HTTP status code is returned and the disk is migrated.</description></item>
+        /// <item><description>true: sends a precheck request. The check items include whether required parameters are specified, the request format, business limits, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false: sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the disk is directly migrated.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -55,12 +55,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the standard SSD. This parameter takes effect only when you migrate a disk between different dedicated block storage clusters. Valid values:</para>
+        /// <para>The new ESSD performance level. This parameter is valid only during migration between different dedicated block storage clusters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0: A maximum of 10,000 random read/write IOPS per disk.</description></item>
-        /// <item><description>PL1: A maximum of 50,000 random read/write IOPS per disk.</description></item>
+        /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+        /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
         /// </list>
-        /// <para>Default value: empty, which indicates that the performance level (PL) is not changed during migration.</para>
+        /// <para>Default value: empty, which indicates that the performance level is not changed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated block storage cluster.</para>
+        /// <para>The ID of the dedicated block storage cluster. Before migrating a disk into a dedicated block storage cluster, you must purchase and create the cluster, and ensure that the disk and the destination cluster are in the same zone.</para>
         /// <list type="bullet">
-        /// <item><description>To migrate a disk to a dedicated block storage cluster, you must specify StorageClusterId.</description></item>
-        /// <item><description>To migrate a disk to a public cloud block storage cluster, StorageClusterId must be empty.</description></item>
+        /// <item><description>When migrating a disk to a dedicated block storage cluster, you must specify <c>StorageClusterId</c>.</description></item>
+        /// <item><description>When migrating a disk to a public cloud block storage cluster, <c>StorageClusterId</c> must be empty.</description></item>
         /// </list>
         /// <para>Default value: empty, which indicates that the disk is migrated to a public cloud block storage cluster.</para>
         /// 

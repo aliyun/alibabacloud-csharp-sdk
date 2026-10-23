@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token for the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
+        /// <para>This parameter will soon be deprecated. Use NextToken and MaxResults for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
+        /// <para>This parameter will soon be deprecated. Use NextToken and MaxResults for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshots.</para>
         /// <remarks>
-        /// <para>When you use <c>MaxResults</c> and <c>NextToken</c> parameters for paging query, the returned <c>TotalCount</c> parameter value is invalid.</para>
+        /// <para>When you use the MaxResults and NextToken parameters for pagination, the returned value of the TotalCount parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

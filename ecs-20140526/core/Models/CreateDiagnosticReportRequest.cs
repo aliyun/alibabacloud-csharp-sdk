@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiagnosticReportRequest : TeaModel {
+        /// <summary>
+        /// <para>The extension in JSON format.</para>
+        /// </summary>
         [NameInMap("AdditionalOptions")]
         [Validation(Required=false)]
         public Dictionary<string, string> AdditionalOptions { get; set; }
 
         /// <summary>
-        /// <para>The end time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</para>
+        /// <para>The end time. The time follows the ISO 8601 standard and is displayed in UTC. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T14:00Z</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic metric set ID. If left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</para>
+        /// <para>The diagnostic metric set ID. If this parameter is left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dms-uf6i0tv2refv8wz*****</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</para>
+        /// <para>The start time. The time follows the ISO 8601 standard and is displayed in UTC. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T12:00Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPlanMaintenanceWindowShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable or disable the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
+        /// <para>Specifies whether to enable or disable the window. Leave this parameter empty if no modification is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <para>The minimum time interval between the publish time and the scheduled time to execute scheduled O&amp;M events for the same instance. Valid values: 1 to 48. Unit: hours.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24</para>
+        /// </summary>
         [NameInMap("MinMaintenanceInterval")]
         [Validation(Required=false)]
         public int? MinMaintenanceInterval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the O&amp;M window to modify. This parameter is required.</para>
+        /// <para>The ID of the O&amp;M window to be modified. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowId { get; set; }
 
         /// <summary>
-        /// <para>The name of the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The name of the O&amp;M window. Leave this parameter empty if no modification is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WIndowName</para>
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</para>
+        /// <para>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation makes no difference. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The supported O&amp;M actions. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The supported O&amp;M actions. Leave this parameter empty if no modification is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reboot</para>
@@ -66,14 +72,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SupportMaintenanceAction { get; set; }
 
         /// <summary>
-        /// <para>The resource to which the O&amp;M window applies. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The resources to which the O&amp;M window applies. Leave this parameter empty if no modification is required.</para>
         /// </summary>
         [NameInMap("TargetResource")]
         [Validation(Required=false)]
         public string TargetResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The recurring cycle of the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The recurrence cycle of the window. Leave this parameter empty if no modification is required.</para>
         /// </summary>
         [NameInMap("TimePeriod")]
         [Validation(Required=false)]

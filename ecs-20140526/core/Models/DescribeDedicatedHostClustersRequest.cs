@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of dedicated host clusters. The value is a JSON array of dedicated host cluster IDs in the format of <c>[&quot;dc-xxxxxxxxx&quot;, &quot;dc-yyyyyyyyy&quot;, … ,&quot;dc-zzzzzzzzz&quot;]</c>. A maximum of 100 IDs are supported. Separate multiple IDs with commas (,).</para>
+        /// <para>The list of dedicated host cluster IDs. The value can be a JSON array that consists of multiple dedicated host cluster IDs in the following format: [&quot;dc-xxxxxxxxx&quot;, &quot;dc-yyyyyyyyy&quot;, ..., &quot;dc-zzzzzzzzz&quot;]. You can specify up to 100 IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;dc-bp12wlf6am0vz9v2****&quot;, &quot;dc-bp12wlf6am0vz9v3****&quot;]</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available and is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The page number of the dedicated host cluster list.</para>
-        /// <para>Minimum value: 1.</para>
+        /// <para>Starting value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for the paged query. Settings for paging:</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available and is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,15 +118,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDedicatedHostClustersRequestTag> Tag { get; set; }
         public class DescribeDedicatedHostClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>The tag key of the dedicated host cluster. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</para>
+            /// <para>When you use a single tag to filter resources, the resource count returned cannot exceed 1,000. When you use multiple tags to filter resources, the resource count of resources attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the dedicated host cluster. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag value can be up to 64 characters in length, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the available zones.</para>
+        /// <para>The zone ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the zones in a region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-f</para>

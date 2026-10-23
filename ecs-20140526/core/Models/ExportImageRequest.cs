@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ExportImageRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is checked, but the image is not exported.</description></item>
+        /// <item><description>false: The image is exported.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The format in which to export the image. Valid values:</para>
+        /// <para>The export format of the image file. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>raw</description></item>
         /// <item><description>vhd</description></item>
@@ -43,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket in which to store the exported image.</para>
+        /// <para>The OSS bucket used to store the exported image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// <para>The prefix for the OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</para>
+        /// <para>The prefix of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EcsExport</para>
@@ -68,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

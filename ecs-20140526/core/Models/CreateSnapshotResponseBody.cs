@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot ID.</para>
+        /// <para>The ID of the snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp17441ohwka0yuh****</para>

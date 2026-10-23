@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CancelImagePipelineExecutionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the building task.</para>
+        /// <para>The ID of the build task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TemplateTag")]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class CancelImagePipelineExecutionRequestTemplateTag : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

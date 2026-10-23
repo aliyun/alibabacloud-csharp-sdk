@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

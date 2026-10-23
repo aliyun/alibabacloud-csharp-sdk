@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The description of the diagnostic metric set.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Remote connection diagnostics</para>
+            /// <para>Remote connection issue diagnosis</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The name of the diagnostic metric set.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Remote connection diagnostics</para>
+            /// <para>Remote connection issue diagnosis</para>
             /// </summary>
             [NameInMap("MetricSetName")]
             [Validation(Required=false)]
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The type of the diagnostic metric set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>User: user.</description></item>
-            /// <item><description>Common: common.</description></item>
+            /// <item><description>User: user-created.</description></item>
+            /// <item><description>Common: public.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

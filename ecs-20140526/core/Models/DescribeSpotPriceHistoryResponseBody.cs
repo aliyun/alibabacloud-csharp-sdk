@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// <para>The start row of the next page. Set the <c>Offset</c> parameter to this value to query the next page of data.</para>
+        /// <para>The starting row of the next page. You can use this value to query the next page of data by setting the <c>Offset</c> parameter to this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

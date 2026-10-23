@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud partner (certified ISV) account or individual user account.</para>
+        /// <para>The account ID of the Alibaba Cloud partner (certified ISV) or the individual user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? AccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network interface controller (NIC).</para>
+        /// <para>The ID of the Elastic network interface controller (NIC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The network interface controller (NIC) permission action. Only InstanceAttach is supported.</para>
-        /// <para>InstanceAttach: allows the authorized user to attach your NIC to their ECS instance. The ECS instance must be in the same zone as the NIC.</para>
+        /// <para>The Elastic network interface controller (NIC) permission action. Only InstanceAttach is supported.</para>
+        /// <para>InstanceAttach: allows the authorized user to attach your Elastic network interface controller (NIC) to their ECS instance. The ECS instance and the Elastic network interface controller (NIC) must reside in the same active zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The region of the network interface controller (NIC) permission. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region of the Elastic network interface controller (NIC) permission. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

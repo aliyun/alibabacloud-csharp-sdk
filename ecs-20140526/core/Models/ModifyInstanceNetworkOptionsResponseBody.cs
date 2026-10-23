@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The ID of the task for modifying the bandwidth weight.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/2679968.html">DescribeTaskAttribute</a> to query the result of the bandwidth weight modification.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2679968.html">DescribeTaskAttribute</a> operation to query the result of the bandwidth weight modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-bp198jigq7l0h5ac****</para>

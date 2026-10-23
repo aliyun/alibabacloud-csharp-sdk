@@ -198,9 +198,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The query token returned in this invocation.</para>
+        /// <para>The query token returned by this call.</para>
         /// <remarks>
-        /// <para>When you use MaxResults and NextToken parameters for paging queries and no NextToken is returned, no more data is available.</para>
+        /// <para>If the NextToken value is not returned when you use the MaxResults and NextToken parameters for paging, no more data is to be returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -214,8 +214,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The page number of the instance event list.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When you use MaxResults and NextToken for paging queries, the returned PageNumber parameter value is meaningless.</description></item>
-        /// <item><description>This parameter will be deprecated. Use NextToken and MaxResults for paging queries instead.</description></item>
+        /// <item><description>If you use the MaxResults and NextToken parameters for paging, the returned PageNumber value is meaningless.</description></item>
+        /// <item><description>This parameter will be deprecated soon. Use the NextToken and MaxResults parameters for paging.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -227,11 +227,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page as settings in the request.</para>
+        /// <para>The number of entries per page specified in the request.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When you use MaxResults and NextToken for paging queries, the returned PageSize parameter value is meaningless.</description></item>
-        /// <item><description>This parameter will be deprecated. Use NextToken and MaxResults for paging queries instead.</description></item>
+        /// <item><description>If you use the MaxResults and NextToken parameters for paging, the returned PageSize value is meaningless.</description></item>
+        /// <item><description>This parameter will be deprecated soon. Use the NextToken and MaxResults parameters for paging.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of instance events.</para>
         /// <remarks>
-        /// <para>When you use MaxResults and NextToken parameters for paging queries, the returned TotalCount parameter value is meaningless.</para>
+        /// <para>If you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

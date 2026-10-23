@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The description of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU诊断</para>
+            /// <para>CPU diagnostics</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a script needs to be executed in the guest OS.</para>
+            /// <para>Specifies whether a script needs to be executed in the guest OS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The name of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU诊断</para>
+            /// <para>CPU diagnostics</para>
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The resource type supported by the diagnostic metric.</para>
+            /// <para>The resource supported by the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -77,11 +77,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The supported operating system. Valid values:</para>
+            /// <para>The supported operating systems. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Windows: Windows operating systems are supported.</description></item>
             /// <item><description>Linux: Linux operating systems are supported.</description></item>
-            /// <item><description>All: both Windows and Linux operating systems are supported.</description></item>
+            /// <item><description>All: Both Windows and Linux operating systems are supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

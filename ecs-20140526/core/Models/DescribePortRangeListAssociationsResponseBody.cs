@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePortRangeListAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token returned in this call. If the return value is empty, no more data is available.</para>
+        /// <para>The pagination token returned by the current call. If this value is empty, no more data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resources associated with the port range list.</para>
+        /// <para>The array of resources associated with the port list.</para>
         /// </summary>
         [NameInMap("PortRangeListAssociations")]
         [Validation(Required=false)]
         public List<DescribePortRangeListAssociationsResponseBodyPortRangeListAssociations> PortRangeListAssociations { get; set; }
         public class DescribePortRangeListAssociationsResponseBodyPortRangeListAssociations : TeaModel {
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2zefu72****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. Valid value: SecurityGroup.</para>
+            /// <para>The type of the resource. Valid values: SecurityGroup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SecurityGroup</para>

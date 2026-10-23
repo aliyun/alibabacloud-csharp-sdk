@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPlanMaintenanceWindowRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable or disable the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
+        /// <para>Specifies whether to enable or disable the window. Leave this parameter empty if no modification is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <para>The minimum time interval between the publish time and the scheduled time to execute scheduled O&amp;M events for the same instance. Valid values: 1 to 48. Unit: hours.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24</para>
+        /// </summary>
         [NameInMap("MinMaintenanceInterval")]
         [Validation(Required=false)]
         public int? MinMaintenanceInterval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the O&amp;M window to modify. This parameter is required.</para>
+        /// <para>The ID of the O&amp;M window to be modified. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowId { get; set; }
 
         /// <summary>
-        /// <para>The name of the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The name of the O&amp;M window. Leave this parameter empty if no modification is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WIndowName</para>
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</para>
+        /// <para>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation makes no difference. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The supported O&amp;M actions. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The supported O&amp;M actions. Leave this parameter empty if no modification is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reboot</para>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SupportMaintenanceAction { get; set; }
 
         /// <summary>
-        /// <para>The resource to which the O&amp;M window applies. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The resources to which the O&amp;M window applies. Leave this parameter empty if no modification is required.</para>
         /// </summary>
         [NameInMap("TargetResource")]
         [Validation(Required=false)]
@@ -83,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of resource to which the O&amp;M window applies.</para>
+            /// <para>The type of resources to which the O&amp;M window is configured to apply.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tag</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<ModifyPlanMaintenanceWindowRequestTargetResourceTags> Tags { get; set; }
             public class ModifyPlanMaintenanceWindowRequestTargetResourceTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag to which the O&amp;M window applies.</para>
+                /// <para>The key of the tag to which the window applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tagKey</para>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag to which the O&amp;M window applies.</para>
+                /// <para>The value of the tag to which the window applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tagValue</para>
@@ -124,14 +130,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The recurring cycle of the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
+        /// <para>The recurrence cycle of the window. Leave this parameter empty if no modification is required.</para>
         /// </summary>
         [NameInMap("TimePeriod")]
         [Validation(Required=false)]
         public ModifyPlanMaintenanceWindowRequestTimePeriod TimePeriod { get; set; }
         public class ModifyPlanMaintenanceWindowRequestTimePeriod : TeaModel {
             /// <summary>
-            /// <para>The type of the cycle. Valid values: Daily and Weekly.</para>
+            /// <para>The type of the recurrence cycle. Valid values: Daily and Weekly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Year</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</para>
+            /// <para>The time ranges of the O&amp;M window recurrence cycle in the UTC time zone.</para>
             /// </summary>
             [NameInMap("RangeList")]
             [Validation(Required=false)]
@@ -150,9 +156,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The end time of the O&amp;M window.</para>
                 /// <list type="bullet">
-                /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
-                /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
-                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</description></item>
+                /// <item><description>If PeriodUnit is set to Weekly, the time range is in the format of Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
+                /// <item><description>If PeriodUnit is set to Daily, the time range is in the format of 22:00.</description></item>
+                /// <item><description>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -165,9 +171,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The start time of the O&amp;M window.</para>
                 /// <list type="bullet">
-                /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
-                /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
-                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</description></item>
+                /// <item><description>If PeriodUnit is set to Weekly, the time range is in the format of Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
+                /// <item><description>If PeriodUnit is set to Daily, the time range is in the format of 22:00.</description></item>
+                /// <item><description>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

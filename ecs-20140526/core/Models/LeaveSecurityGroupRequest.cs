@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If you specify this parameter, leave NetworkInterfaceId empty.</para>
+        /// <para>If you specify this parameter, you must leave NetworkInterfaceId empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Elastic Network Interface (ENI) ID.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// <remarks>
-        /// <para>If you specify this parameter, leave InstanceId empty.</para>
+        /// <para>If you specify this parameter, you must leave InstanceId empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify the region ID when removing an instance from a security group.</description></item>
-        /// <item><description>You must specify the region ID of the Elastic Network Interface (ENI) when removing an ENI from a security group.</description></item>
+        /// <item><description>You do not need to specify the region ID when you remove an instance from a security group.</description></item>
+        /// <item><description>You must specify the region ID of the network interface controller (NIC) when you remove a network interface controller (NIC) from a security group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group ID.</para>
+        /// <para>The ID of the security group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

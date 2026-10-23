@@ -9,32 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeResourceByTagsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The page number of the results.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>50</para>
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1C1E5359-71D7-44D8-8FAA-0327B549157X</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -63,12 +45,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The total number of returned resources.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>8</para>
-        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyInstanceNetworkOptionsRequest : TeaModel {
         /// <summary>
         /// <para>The bandwidth weight.</para>
-        /// <para>The supported values vary by instance type. You can call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the current instance type.</para>
+        /// <para>The supported values vary by instance type. You can call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Vpc-L1</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BandwidthWeighting { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the instance for which you want to modify the network bandwidth weight.</para>
+        /// <para>The instance ID for which to modify the network bandwidth weight.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxazb4p****</para>

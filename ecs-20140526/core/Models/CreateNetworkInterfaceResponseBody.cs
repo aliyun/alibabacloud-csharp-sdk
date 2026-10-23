@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that owns the network interface controller (NIC).</para>
+        /// <para>The ID of the account to which the network interface controller (NIC) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-2ze88m67qx5z****</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Virtual Network Operator (VNO) to which the network interface controller (NIC) corresponds.</para>
+        /// <para>The ID of the Virtual Network Operator (VNO) associated with the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678910</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ServiceID { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</para>
+        /// <para>Indicates whether the user of the network interface controller (NIC) is a cloud service or a VNO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not yet available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? SourceDestCheck { get; set; }
 
         /// <summary>
-        /// <para>The status of the network interface controller (NIC).</para>
+        /// <para>The status of the elastic network interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the ENI belongs.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the ENI belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1j7w3gc1cexjqd****</para>

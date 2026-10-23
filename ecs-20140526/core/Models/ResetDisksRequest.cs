@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The snapshot ID that corresponds to the specified cloud disk in the instance snapshot. Valid values of N: 1 to 10.</para>
+            /// <para>The ID of the snapshot that corresponds to the cloud disk in the instance snapshot. Valid values of N: 1 to 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-j6cdofbycydvg7ey****</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run without actually rolling back the cloud disks. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description>false: performs a dry run and sends the request. If the check succeeds, the cloud disk rollback operation is initiated.</description></item>
+        /// <item><description>true: performs a dry run. The system checks the required parameters, request format, and resource status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: performs a standard request. If the request passes the dry run, the cloud disks are rolled back.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

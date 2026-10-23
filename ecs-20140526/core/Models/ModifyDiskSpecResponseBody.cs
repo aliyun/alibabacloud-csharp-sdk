@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the generated order.</para>
         /// <remarks>
-        /// <para>An order ID is returned only when a subscription disk is changed or modified.</para>
+        /// <para>The order ID is returned only when you change the specifications of a subscription disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task for the disk specification change.</para>
+        /// <para>The task ID for changing the disk specifications.</para>
         /// <remarks>
-        /// <para>This parameter is not returned if you only modified the performance level (PL) of an enterprise SSD (ESSD).</para>
+        /// <para>This parameter is not returned if you only modify the performance level (PL) of an enterprise SSD.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticMetricSetsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100.</para>
+        /// <para>The maximum number of entries per page for a paging query. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, the default value is 10.</description></item>
-        /// <item><description>If the specified value is greater than 100, the default value is 100.</description></item>
+        /// <item><description>If no Settings are specified, the default value is 10.</description></item>
+        /// <item><description>If the Settings value is greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The list of diagnostic metric set IDs.</para>
+        /// <para>The IDs of the diagnostic metric sets.</para>
         /// </summary>
         [NameInMap("MetricSetIds")]
         [Validation(Required=false)]
         public List<string> MetricSetIds { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned in the previous call. You do not need to set this parameter for the first request.</para>
+        /// <para>The pagination token. Set the value to the <c>NextToken</c> value returned from the previous call. Leave this parameter empty for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the diagnostic metric set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User: user.</description></item>
-        /// <item><description>Common: common.</description></item>
+        /// <item><description>User: user-created.</description></item>
+        /// <item><description>Common: public.</description></item>
         /// </list>
         /// <para>Default value: User.</para>
         /// 

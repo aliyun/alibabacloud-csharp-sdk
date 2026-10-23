@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token for the next query.</para>
+        /// <para>The token for the next query.</para>
         /// <remarks>
-        /// <para>If this parameter is empty, no more results are available.</para>
+        /// <para>If this parameter is empty, no more data is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

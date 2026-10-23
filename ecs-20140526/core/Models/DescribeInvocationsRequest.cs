@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInvocationsRequest : TeaModel {
         /// <summary>
-        /// <para>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs.</para>
+        /// <para>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-hz0jdfwcsr****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The command name. This parameter does not take effect if the <c>InstanceId</c> parameter is also specified.</para>
+        /// <para>The command name. This parameter does not take effect if the InstanceId parameter is also specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CommandTestName</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The command type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RunBatScript: Bat script that runs on Windows instances.</description></item>
-        /// <item><description>RunPowerShellScript: PowerShell script that runs on Windows instances.</description></item>
-        /// <item><description>RunShellScript: Shell script that runs on Linux instances.</description></item>
+        /// <item><description>RunBatScript: The command is a batch script that runs on a Windows instance.</description></item>
+        /// <item><description>RunPowerShellScript: The command is a PowerShell script that runs on a Windows instance.</description></item>
+        /// <item><description>RunShellScript: The command is a shell script that runs on a Linux instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandType { get; set; }
 
         /// <summary>
-        /// <para>The encoding mode of the <c>CommandContent</c> and <c>Output</c> fields in the response. Valid values:</para>
+        /// <para>The encoding method of the CommandContent and Output fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: Returns the original command content and output.</description></item>
-        /// <item><description>Base64: Returns the Base64-encoded command content and output.</description></item>
+        /// <item><description>PlainText: returns the original command content and output.</description></item>
+        /// <item><description>Base64: returns the Base64-encoded command content and output.</description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// 
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the command output in the results.</para>
+        /// <para>Specifies whether to return the output of the command execution in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Returns the output. You must specify at least the <c>InvokeId</c> or <c>InstanceId</c> parameter.</description></item>
-        /// <item><description>false: Does not return the output.</description></item>
+        /// <item><description>true: The output is returned. In this case, you must specify at least the InvokeId or InstanceId parameter.</description></item>
+        /// <item><description>false: The output is not returned.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IncludeOutput { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. If you specify this parameter, all command execution records for the instance are queried.</para>
+        /// <para>The instance ID. If you specify this parameter, the system queries all command execution records of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1i7gg30r52z2em****</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The command execution ID.</para>
+        /// <para>The execution ID of the command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-hz0jdfwd9f****</para>
@@ -95,33 +95,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>The overall execution status of the command. The overall execution status depends on the common execution status of one or more instances in the execution. Valid values: </para>
+        /// <para>The overall execution status of the command. The overall execution status depends on the combined execution status of one or more instances involved in the execution. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>Running:<list type="bullet">
-        /// <item><description>Scheduled execution: The execution status remains Running until you manually stop the scheduled command.</description></item>
-        /// <item><description>One-time execution: The overall execution status is Running as long as any command process is running.</description></item>
+        /// <item><description>Scheduled execution: The execution status remains Running until the scheduled command is manually stopped.</description></item>
+        /// <item><description>One-time execution: The overall execution status is Running as long as a command process is running.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Finished:<list type="bullet">
-        /// <item><description>Scheduled execution: The command process never reaches the Finished state.</description></item>
-        /// <item><description>One-time execution: All instances have completed execution, or you manually stopped the command process on some instances while the remaining instances completed execution.</description></item>
+        /// <item><description>Scheduled execution: The command process cannot be finished.</description></item>
+        /// <item><description>One-time execution: All instances have completed the execution. Alternatively, the command processes on some instances are manually stopped, and the execution on the remaining instances is completed.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Success: The command execution status on each instance is Stopped or Success, and the command execution status on at least one instance is Success. The overall execution status is then Success.<list type="bullet">
-        /// <item><description>Immediate task: The command execution is complete and the exit code is 0.</description></item>
-        /// <item><description>Scheduled task: The most recent execution succeeded with an exit code of 0, and all specified execution times have elapsed.</description></item>
+        /// <item><description>Success: The command execution status on each instance is Stopped or Success, and the command execution status on at least one instance is Success.<list type="bullet">
+        /// <item><description>Immediately run tasks: The command execution is completed, and the exit code is 0.</description></item>
+        /// <item><description>Scheduled tasks: The most recent execution is successful, the exit code is 0, and the specified schedule has ended.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Failed:<list type="bullet">
-        /// <item><description>Scheduled execution: The command process never reaches the Failed state.</description></item>
-        /// <item><description>One-time execution: All instances failed to execute the command.</description></item>
+        /// <item><description>Scheduled execution: The command process cannot fail.</description></item>
+        /// <item><description>One-time execution: The execution fails on all instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Stopped: The command is stopped.</description></item>
         /// <item><description>Stopping: The command is being stopped.</description></item>
-        /// <item><description>PartialFailed: Partial failure. This value does not take effect if the <c>InstanceId</c> parameter is also specified.</description></item>
-        /// <item><description>Pending: The system is validating or sending the command. The overall execution status is Pending if the command execution status on at least one instance is Pending.</description></item>
-        /// <item><description>Scheduled: The scheduled command has been sent and is waiting to run. The overall execution status is Scheduled if the command execution status on at least one instance is Scheduled.</description></item>
+        /// <item><description>PartialFailed: The execution partially fails. This value does not take effect if the InstanceId parameter is also specified.</description></item>
+        /// <item><description>Pending: The system is verifying or sending the command. The overall execution status is Pending if the command execution status on at least one instance is Pending.</description></item>
+        /// <item><description>Scheduled: The scheduled command has been sent and is waiting to be run. The overall execution status is Scheduled if the command execution status on at least one instance is Scheduled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query.</para>
+        /// <para>The maximum number of entries per page for paging.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging query operations.</para>
+        /// <para>This parameter will soon be taken offline. We recommend that you use NextToken and MaxResults for paging and paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging query operations.</para>
+        /// <para>This parameter will soon be taken offline. We recommend that you use NextToken and MaxResults for paging and paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -197,14 +197,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The execution mode of the command. This parameter does not take effect if the <c>InstanceId</c> parameter is also specified. Valid values:</para>
+        /// <para>The execution mode of the command. This parameter does not take effect if the InstanceId parameter is also specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Once: Runs the command immediately.</description></item>
-        /// <item><description>Period: Runs the command on a schedule.</description></item>
-        /// <item><description>NextRebootOnly: Runs the command automatically the next time the instance starts.</description></item>
-        /// <item><description>EveryReboot: Runs the command automatically every time the instance starts.</description></item>
+        /// <item><description>Once: runs the command immediately.</description></item>
+        /// <item><description>Period: runs the command on a schedule.</description></item>
+        /// <item><description>NextRebootOnly: automatically runs the command the next time the instance starts.</description></item>
+        /// <item><description>EveryReboot: automatically runs the command every time the instance starts.</description></item>
         /// </list>
-        /// <para>Default value: empty, which indicates that all execution modes are queried.</para>
+        /// <para>Default value: empty. An empty value indicates that all execution modes are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Once</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RepeatMode { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID for command execution. After you specify this parameter, you must also specify ResourceGroupId when running the command. This parameter filters the corresponding command execution results.</para>
+        /// <para>The ID of the resource group to which the command execution belongs. If you specify this parameter, you must also specify ResourceGroupId when you run the command. This allows you to filter the corresponding command execution results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -239,9 +239,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeInvocationsRequestTag> Tag { get; set; }
         public class DescribeInvocationsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to execute the query.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the command to execute. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
+            /// <para>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
+            /// <para>The tag key can be up to 64 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The tag value of the command execution. Valid values of N: 1 to 20. The tag value can be an empty string.
-            /// The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -264,11 +264,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the queried command is scheduled to run automatically in the future. Valid values:</para>
+        /// <para>Specifies whether the queried command will be automatically run in the future. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Queries commands for which the <c>RepeatMode</c> parameter is set to <c>Period</c>, <c>NextRebootOnly</c>, or <c>EveryReboot</c> when <c>RunCommand</c> or <c>InvokeCommand</c> is called.</description></item>
-        /// <item><description>false: Queries commands in the following two states:<list type="bullet">
-        /// <item><description>Commands for which the <c>RepeatMode</c> parameter is set to <c>Once</c> when <c>RunCommand</c> or <c>InvokeCommand</c> is called.</description></item>
+        /// <item><description>true: Queries commands for which the RepeatMode parameter is set to Period, NextRebootOnly, or EveryReboot when you call RunCommand or InvokeCommand to run the commands.</description></item>
+        /// <item><description>false: Queries commands in the following states:<list type="bullet">
+        /// <item><description>Commands for which the RepeatMode parameter is set to Once when you call RunCommand or InvokeCommand to run the commands.</description></item>
         /// <item><description>Commands that have been canceled, stopped, or completed.</description></item>
         /// </list>
         /// </description></item>

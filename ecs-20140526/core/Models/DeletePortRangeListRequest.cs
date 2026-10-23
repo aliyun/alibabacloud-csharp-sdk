@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The port list ID.</para>
+        /// <para>The ID of the port list.</para>
         /// <remarks>
         /// <para>If the port list is associated with other resources, it cannot be deleted. Dissociate the port list from the resources before you delete it.</para>
         /// </remarks>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PortRangeListId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the port list. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
