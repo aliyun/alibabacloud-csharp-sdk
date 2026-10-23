@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UninstallAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of subtasks.</para>
+        /// <para>The child task information.</para>
         /// </summary>
         [NameInMap("ChildTaskInfo")]
         [Validation(Required=false)]
@@ -18,13 +18,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public class UninstallAppResponseBodyChildTaskInfo : TeaModel {
             /// <summary>
             /// <para>The application ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The subtask ID.</para>
+            /// <para>The child task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-ybde48cevxxxx</para>

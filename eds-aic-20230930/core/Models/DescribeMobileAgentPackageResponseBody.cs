@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the API operation.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ExpiredAt { get; set; }
 
             /// <summary>
-            /// <para>The list of node instance IDs.</para>
+            /// <para>The node instance IDs.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The credit quota of the package.</para>
+            /// <para>The package credit quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PackageId { get; set; }
 
             /// <summary>
-            /// <para>The package specifications.</para>
+            /// <para>The package specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>advanced</para>
@@ -83,6 +83,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PackageSpec { get; set; }
 
+            /// <summary>
+            /// <para>The name of the package specification.</para>
+            /// </summary>
             [NameInMap("PackageSpecName")]
             [Validation(Required=false)]
             public string PackageSpecName { get; set; }
@@ -97,10 +100,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PackageStatus { get; set; }
 
+            /// <summary>
+            /// <para>The end time of the package period.</para>
+            /// </summary>
             [NameInMap("PeriodEndTime")]
             [Validation(Required=false)]
             public string PeriodEndTime { get; set; }
 
+            /// <summary>
+            /// <para>The start time of the package period.</para>
+            /// </summary>
             [NameInMap("PeriodStartTime")]
             [Validation(Required=false)]
             public string PeriodStartTime { get; set; }
@@ -135,7 +144,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The number of used credits.</para>
+            /// <para>The number of credits used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>

@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>The display settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;dpi&quot;:320}</para>
+        /// </summary>
         [NameInMap("DisplayConfig")]
         [Validation(Required=false)]
         public string DisplayConfig { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The cloud phone matrix ID.</para>
+        /// <para>The ID of the cloud phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpn-0ugbptfu473fy****</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud phone instances. You can call <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> to query the maximum and minimum instance count limits.</para>
+        /// <para>The number of cloud phone instances. You can call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the maximum and minimum limits on the number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneCount { get; set; }
 
         /// <summary>
-        /// <para>The device storage size. Valid range: 10 GiB to 4000 GiB. If this parameter is left empty, the original size is retained.</para>
+        /// <para>The local storage size. Valid values: 10 to 4000. Unit: GiB. If this parameter is left empty, the original size is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneDataVolume { get; set; }
 
         /// <summary>
-        /// <para>The promotional activity ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>
@@ -84,12 +90,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The shared storage size. Unit: GiB.</para>
+        /// <para>The size of the shared storage. Unit: GiB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("ShareDataVolume")]
         [Validation(Required=false)]
         public int? ShareDataVolume { get; set; }
 
+        /// <summary>
+        /// <para>The size of the swap space.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("SwapSize")]
         [Validation(Required=false)]
         public int? SwapSize { get; set; }

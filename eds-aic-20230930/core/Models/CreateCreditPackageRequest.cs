@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enables automatic payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b> (default): Generates an order without deducting payment.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b> (default): generates an unpaid order without deducting fees.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the balance of your payment method is insufficient, set this parameter to false. An unpaid order is generated. You can log on to the WUYING Cloud Phone console to complete the payment.</para>
+        /// <para>If the balance of your payment method is insufficient, you can change the Settings of this parameter to false to generate an unpaid order. Then, you can log on to the WUYING Cloud Phone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>The channel cookie. This parameter is passed through to the sales system when you place an order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>channel-cookie-credit</para>
+        /// </summary>
         [NameInMap("ChannelCookie")]
         [Validation(Required=false)]
         public string ChannelCookie { get; set; }
@@ -40,12 +46,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string CreditAmount { get; set; }
 
+        /// <summary>
+        /// <para>The number of credit packages to purchase.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PackageAmount")]
         [Validation(Required=false)]
         public string PackageAmount { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the purchased resource. The unit is specified by PeriodUnit.</para>
+        /// <para>The subscription period of the resource. The unit is specified by PeriodUnit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -55,10 +67,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration for the purchased resource. Valid values:</para>
+        /// <para>The unit of the subscription period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: Month.</description></item>
-        /// <item><description><b>Year</b>: Year.</description></item>
+        /// <item><description><b>Month</b>: months.</description></item>
+        /// <item><description><b>Year</b>: years.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

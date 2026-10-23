@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeScheduledTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the operation.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</para>
+        /// <para>The token that specifies the starting position for the current read operation. An empty value indicates that the read operation starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-12T10:00:00</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public DescribeScheduledTasksResponseBodyTasksRunConfig RunConfig { get; set; }
             public class DescribeScheduledTasksResponseBodyTasksRunConfig : TeaModel {
                 /// <summary>
-                /// <para>The extra parameters.</para>
+                /// <para>The extended parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;batchSize&quot;:&quot;1000&quot;}</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>DailyDataSyncTask</para>
+            /// <para>Daily data synchronization task</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The user prompt or task description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Execute daily data sync task</para>
+            /// <para>Execute the daily data synchronization task</para>
             /// </summary>
             [NameInMap("UserPrompt")]
             [Validation(Required=false)]

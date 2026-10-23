@@ -143,12 +143,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CurrentStatus { get; set; }
 
             /// <summary>
-            /// <para>The source of the digest. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PROMPT_AUTO: Automatically generated.</description></item>
-            /// <item><description>RESULT_AUTO: Refined from the result.</description></item>
-            /// <item><description>USER: Edited by the user.</description></item>
-            /// </list>
+            /// <para>The source of the digest. Valid values: PROMPT_AUTO (automatically generated), RESULT_AUTO (refined from the result), and USER (edited by the user).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PROMPT_AUTO</para>
@@ -167,6 +162,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The reason for the task status.</para>
+            /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
@@ -192,14 +190,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Steps { get; set; }
 
             /// <summary>
-            /// <para>The task digest text, with a maximum of 25 characters.</para>
+            /// <para>The task digest text, up to 25 characters in length.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Download DingTalk</para>
             /// </summary>
             [NameInMap("TaskDigest")]
             [Validation(Required=false)]
             public string TaskDigest { get; set; }
 
             /// <summary>
-            /// <para>The time consumed by the task. This field is returned only when CurrentStatus is FAILED or COMPLETED.</para>
+            /// <para>The duration of the task. This field is returned only when CurrentStatus is FAILED or COMPLETED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -219,7 +220,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The node task result (desired state). This field is returned only when CurrentStatus is COMPLETED or FAILED.</para>
+            /// <para>The task result (desired state) of the node. This field is returned only when CurrentStatus is COMPLETED or FAILED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk downloaded successfully</para>
@@ -229,7 +230,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskResult { get; set; }
 
             /// <summary>
-            /// <para>The user instruction in natural language based on which the agent performs operations.</para>
+            /// <para>The user prompt in natural language that instructs the agent to perform operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Download DingTalk from the app store</para>

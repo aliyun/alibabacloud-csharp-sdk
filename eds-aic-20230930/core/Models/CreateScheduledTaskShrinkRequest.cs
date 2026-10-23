@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RunConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The name of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Auto-reply to DingTalk messages</para>
+        /// <para>Automatically reply to DingTalk messages</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

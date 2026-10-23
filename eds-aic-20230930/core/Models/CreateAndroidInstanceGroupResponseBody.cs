@@ -42,14 +42,29 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         }
 
+        /// <summary>
+        /// <para>The bandwidth plan order information.</para>
+        /// </summary>
         [NameInMap("NetworkPackageOrderModel")]
         [Validation(Required=false)]
         public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel NetworkPackageOrderModel { get; set; }
         public class CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel : TeaModel {
+            /// <summary>
+            /// <para>The ID of the Internet Shared Bandwidth.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cbwp-uf63gsv8j0ir53*****</para>
+            /// </summary>
             [NameInMap("BandwidthPackageId")]
             [Validation(Required=false)]
             public string BandwidthPackageId { get; set; }
 
+            /// <summary>
+            /// <para>The bandwidth plan order ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>25954415983*****</para>
+            /// </summary>
             [NameInMap("BandwidthPackageOrderId")]
             [Validation(Required=false)]
             public string BandwidthPackageOrderId { get; set; }

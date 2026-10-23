@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available for public use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return per page during paging in a paged query. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</para>
+        /// <para>The token that specifies the starting position for the query. If this parameter is empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -126,6 +126,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The operating system type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Android 12</para>
         /// </summary>
         [NameInMap("SystemType")]
         [Validation(Required=false)]

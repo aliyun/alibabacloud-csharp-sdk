@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of modification results.</para>
+        /// <para>The list of update results.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ModifyScheduledTaskResponseBodyTasks> Tasks { get; set; }
         public class ModifyScheduledTaskResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The list of batch delivery results for instance scheduled tasks.</para>
+            /// <para>The list of results for batch delivery of scheduled tasks to instances.</para>
             /// </summary>
             [NameInMap("InstanceResults")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? NewVersion { get; set; }
 
             /// <summary>
-            /// <para>The scheduled task ID.</para>
+            /// <para>The ID of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sch-260705-agbx*****</para>

@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b> (default): Only an order is generated and no payment is deducted.</description></item>
+        /// <item><description><b>true</b>: Automatic payment. You must ensure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b> (default): Generates an order without deducting fees.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the balance of your payment method is insufficient, you can set this parameter to false. In this case, an unpaid order is generated, and you can log on to the WUYING Cloud Phone console to complete the payment.</para>
+        /// <para>If your payment method has an insufficient balance, you can set this parameter to false. An unpaid order will be generated, and you can log on to the WUYING Cloud Phone console to pay the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,6 +49,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
+
+        /// <summary>
+        /// <para>The bandwidth package ID, which is used to associate an existing bandwidth package when creating an instance. The value must be prefixed with np- and followed by lowercase letters and digits. The bandwidth package must be an AI premium bandwidth package (CBWP_ECD) that belongs to the current account. If this parameter is left empty, the default bandwidth package allocation logic applies.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>np-791ncq8qcuoop9hta</para>
+        /// </summary>
+        [NameInMap("BandwidthPackageId")]
+        [Validation(Required=false)]
+        public string BandwidthPackageId { get; set; }
 
         /// <summary>
         /// <para>The region where the instance resides. Only cn-hangzhou is supported.</para>
@@ -86,6 +96,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The image ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>imgc-075cllfeuazh0****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -136,10 +149,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration of the resource. Valid values:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: Month.</description></item>
-        /// <item><description><b>Year</b>: Year.</description></item>
+        /// <item><description><b>Month</b>: Months.</description></item>
+        /// <item><description><b>Year</b>: Years.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

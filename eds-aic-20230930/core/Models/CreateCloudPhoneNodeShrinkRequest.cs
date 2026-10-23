@@ -60,12 +60,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The channel cookie that is passed through to the sales system when an order is placed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>channel-cookie-node</para>
+        /// </summary>
         [NameInMap("ChannelCookie")]
         [Validation(Required=false)]
         public string ChannelCookie { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Only subscription is supported.</para>
+        /// <para>The billing method. Only the subscription billing method is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -112,7 +118,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The instance type. &gt; To purchase more instance types, you can <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</para>
+        /// <para>The instance type.</para>
+        /// <remarks>
+        /// <para>To purchase additional specifications, <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ac.max</para>
@@ -121,12 +130,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use a single image disk. Default value: false. A value of false indicates that the system disk and the shared internal storage image disk are used.</para>
+        /// </summary>
         [NameInMap("IsSingleImgDisk")]
         [Validation(Required=false)]
         public bool? IsSingleImgDisk { get; set; }
 
         /// <summary>
-        /// <para>The office network ID.</para>
+        /// <para>The ID of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-5mwr9azebliva****</para>
@@ -136,7 +148,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The network mapping information of the instance.</para>
+        /// <para>The network mapping information for the instance.</para>
         /// </summary>
         [NameInMap("NetworkInfo")]
         [Validation(Required=false)]
@@ -163,17 +175,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The redirect URL for the payment success page.</para>
+        /// <para>The redirect URL of the payment success page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wya.wuying.aliyun.com/instanceGroup</para>
         /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The subscription period of the resource. The unit is specified by <c>PeriodUnit</c>.</para>
+        /// <para>The subscription period. The unit is specified by PeriodUnit.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>PeriodUnit</c> is set to <b>year</b>, the only valid value is 1.</description></item>
-        /// <item><description>If <c>PeriodUnit</c> is set to <b>month</b>, valid values are 1, 2, 3, and 6.</description></item>
+        /// <item><description>If PeriodUnit is set to <b>year</b>, the only valid value is 1.</description></item>
+        /// <item><description>If PeriodUnit is set to <b>month</b>, valid values are 1, 2, 3, and 6.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -204,7 +219,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneCount { get; set; }
 
         /// <summary>
-        /// <para>The size of the independent device storage. Unit: GiB.</para>
+        /// <para>The size of the independent internal storage. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -214,14 +229,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneDataVolume { get; set; }
 
         /// <summary>
-        /// <para>The ID of the promotion.</para>
+        /// <para>The promotion ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50003308011****</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The height of the resolution. Unit: pixels.</para>
+        /// <para>The resolution height. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -231,7 +249,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionHeight { get; set; }
 
         /// <summary>
-        /// <para>The width of the resolution. Unit: pixels.</para>
+        /// <para>The resolution width. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>720</para>
@@ -241,9 +259,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionWidth { get; set; }
 
         /// <summary>
-        /// <para>The size of the shared device storage. Unit: GiB.</para>
+        /// <para>The size of the shared internal storage. Unit: GiB.</para>
         /// <remarks>
-        /// <para>The minimum size of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</para>
+        /// <para>The minimum size of the shared internal storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -265,7 +283,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ServerType { get; set; }
 
         /// <summary>
-        /// <para>The streaming mode for instances in the cloud phone matrix. If this parameter is not specified, the default value is preemptive mode.</para>
+        /// <para>The streaming mode for instances in the cloud phone matrix. If this parameter is not specified, the preemptive mode is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -274,12 +292,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? StreamMode { get; set; }
 
+        /// <summary>
+        /// <para>The size of the swap space.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("SwapSize")]
         [Validation(Required=false)]
         public int? SwapSize { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -318,7 +342,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? UpBandwidthLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a template during creation. If you want to use a random template from the template list, set the value to <c>Random</c>. If you specify a template ID, the specified template is used.</para>
+        /// <para>Specifies whether to use a template during creation. To use a random template from the template list, set the value to Random. To use a specific template, specify the template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Random</para>
@@ -328,7 +352,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string UseTemplate { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zeekryyc1q3sm72l****</para>

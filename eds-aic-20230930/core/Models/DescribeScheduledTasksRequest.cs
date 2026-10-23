@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</para>
+        /// <para>The token that specifies the starting position for the current read operation. An empty value indicates that the read operation starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by scheduled task IDs.</para>
+        /// <para>The filter for scheduled task IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;scheduled-abcd1234&quot;]</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> ScheduledIds { get; set; }
 
         /// <summary>
-        /// <para>Filters by status: ACTIVE/DISABLED.</para>
+        /// <para>The status filter. Valid values: ACTIVE, DISABLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DataSync</para>
+        /// <para>Data synchronization</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

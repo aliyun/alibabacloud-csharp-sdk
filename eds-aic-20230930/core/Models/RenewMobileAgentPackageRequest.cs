@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b> (default): Only an order is generated. No payment is made.</description></item>
+        /// <item><description><b>false</b> (default): Only an order is generated and no payment is deducted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</para>
+        /// <para>If the balance of your payment method is insufficient, set this parameter to false to generate an unpaid order. You can log on to the Wuying Cloud Phone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The idempotence key.</para>
+        /// <para>The idempotency key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> MobileAgentPackageIds { get; set; }
 
         /// <summary>
-        /// <para>The redirect URL after a successful payment.</para>
+        /// <para>The redirect URL for the payment success page.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PaidCallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The duration for which you want to purchase the resource. The unit is specified by <c>PeriodUnit</c>.</para>
+        /// <para>The subscription duration of the resource. The unit is specified by PeriodUnit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -71,11 +74,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the duration for which you want to purchase the resource.</para>
-        /// <para>Valid values:</para>
+        /// <para>The unit of the subscription duration of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: month.</description></item>
-        /// <item><description><b>Year</b>: year.</description></item>
+        /// <item><description><b>Month</b>: Month.</description></item>
+        /// <item><description><b>Year</b>: Year.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the promotional campaign.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>

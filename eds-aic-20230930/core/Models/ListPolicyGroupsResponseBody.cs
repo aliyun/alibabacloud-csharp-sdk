@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ListPolicyGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</para>
+        /// <para>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>
@@ -26,26 +26,59 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<ListPolicyGroupsResponseBodyPolicyGroupModel> PolicyGroupModel { get; set; }
         public class ListPolicyGroupsResponseBodyPolicyGroupModel : TeaModel {
+            /// <summary>
+            /// <para>The list of access policy rules.</para>
+            /// </summary>
             [NameInMap("AccessPolicies")]
             [Validation(Required=false)]
             public List<ListPolicyGroupsResponseBodyPolicyGroupModelAccessPolicies> AccessPolicies { get; set; }
             public class ListPolicyGroupsResponseBodyPolicyGroupModelAccessPolicies : TeaModel {
+                /// <summary>
+                /// <para>The access policy rule ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7</para>
+                /// </summary>
                 [NameInMap("AccessPolicyRuleId")]
                 [Validation(Required=false)]
                 public long? AccessPolicyRuleId { get; set; }
 
+                /// <summary>
+                /// <para>The CIDR IP address block to which the rule applies.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.0.0.0/8</para>
+                /// </summary>
                 [NameInMap("CidrIp")]
                 [Validation(Required=false)]
                 public string CidrIp { get; set; }
 
+                /// <summary>
+                /// <para>The description of the access policy rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>desc</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The access policy action. ALLOW indicates that access is allowed, and DENY indicates that access is denied.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALLOW</para>
+                /// </summary>
                 [NameInMap("Policy")]
                 [Validation(Required=false)]
                 public string Policy { get; set; }
 
+                /// <summary>
+                /// <para>The priority of the access policy rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
@@ -63,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CameraRedirect { get; set; }
 
             /// <summary>
-            /// <para>The clipboard permission.</para>
+            /// <para>The clipboard permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>readwrite</para>
@@ -83,7 +116,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The file transfer policy for the HTML5 client.</para>
+            /// <para>The HTML5 client file transfer policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>download</para>
@@ -93,7 +126,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Html5FileTransfer { get; set; }
 
             /// <summary>
-            /// <para>The local disk mapping permission.</para>
+            /// <para>The local disk mapping permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -113,7 +146,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string LockResolution { get; set; }
 
             /// <summary>
-            /// <para>The network redirection settings.</para>
+            /// <para>The network redirection.</para>
             /// </summary>
             [NameInMap("NetRedirectPolicy")]
             [Validation(Required=false)]
@@ -130,7 +163,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string CustomProxy { get; set; }
 
                 /// <summary>
-                /// <para>The proxy IP address of the transparent proxy. The value must be in IPv4 format.</para>
+                /// <para>The transparent proxy IP address. The format is an IPv4 address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.100.XX.XX</para>
@@ -140,7 +173,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string HostAddr { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether network redirection is enabled. After this feature is enabled, traffic is redirected to the client-side network by default.</para>
+                /// <para>Indicates whether network redirection is enabled. If enabled, traffic is redirected to the client-side network by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>off</para>
@@ -150,7 +183,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string NetRedirect { get; set; }
 
                 /// <summary>
-                /// <para>The port of the transparent proxy. Valid values: 1 to 65535.</para>
+                /// <para>The transparent proxy port. Valid values: 1 to 65535.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1145</para>
@@ -160,7 +193,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>The proxy password. The value must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</para>
+                /// <para>The proxy password. The length ranges from 1 to 256 characters. Chinese characters and whitespace characters are not allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>password</para>
@@ -180,7 +213,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string ProxyType { get; set; }
 
                 /// <summary>
-                /// <para>The proxy username. The value must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</para>
+                /// <para>The proxy username. The length ranges from 1 to 256 characters. Chinese characters and whitespace characters are not allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>username</para>
@@ -190,7 +223,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string ProxyUserName { get; set; }
 
                 /// <summary>
-                /// <para>The list of proxy rules.</para>
+                /// <para>The proxy rule list.</para>
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
@@ -234,7 +267,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Default policy.</para>
+            /// <para>Default policy</para>
             /// </summary>
             [NameInMap("PolicyGroupName")]
             [Validation(Required=false)]
@@ -264,7 +297,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The height of the resolution.</para>
+            /// <para>The resolution height.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1080</para>
@@ -274,7 +307,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? SessionResolutionHeight { get; set; }
 
             /// <summary>
-            /// <para>The width of the resolution.</para>
+            /// <para>The resolution width.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1920</para>
@@ -284,7 +317,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? SessionResolutionWidth { get; set; }
 
             /// <summary>
-            /// <para>The screen watermark settings.</para>
+            /// <para>The screen watermark.</para>
             /// </summary>
             [NameInMap("Watermark")]
             [Validation(Required=false)]
@@ -301,7 +334,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public int? WatermarkColor { get; set; }
 
                 /// <summary>
-                /// <para>The custom watermark content. The value can be up to 10 characters in length and does not support emoji characters.</para>
+                /// <para>The custom watermark content. The length cannot exceed 10 characters, and emoji characters are not supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom text</para>

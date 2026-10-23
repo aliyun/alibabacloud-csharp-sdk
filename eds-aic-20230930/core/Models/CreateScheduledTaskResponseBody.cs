@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateScheduledTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status code.</para>
+        /// <para>The status code of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<CreateScheduledTaskResponseBodyTasks> Tasks { get; set; }
         public class CreateScheduledTaskResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The list of batch delivery results for instance scheduled tasks.</para>
+            /// <para>The list of batch delivery results for the scheduled tasks of instances.</para>
             /// </summary>
             [NameInMap("InstanceResults")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The scheduled task ID.</para>
+            /// <para>The ID of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sch-260705-agb*****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ScheduledId { get; set; }
 
             /// <summary>
-            /// <para>The task configuration ID.</para>
+            /// <para>The ID of the task configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tsk-260705-0jj*****</para>

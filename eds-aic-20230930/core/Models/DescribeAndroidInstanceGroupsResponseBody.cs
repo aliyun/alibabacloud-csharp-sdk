@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel> InstanceGroupModel { get; set; }
         public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel : TeaModel {
             /// <summary>
-            /// <para>The delivery group ID.</para>
+            /// <para>The ID of the delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-48xr63m4dybjk****</para>
@@ -63,12 +63,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The status of the bandwidth plan.
             /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: creating</description></item>
-            /// <item><description>Releasing: releasing</description></item>
-            /// <item><description>InUse: in use</description></item>
-            /// <item><description>Failed: failed</description></item>
-            /// <item><description>Expired: expired</description></item>
-            /// <item><description>Available: available and unbound, billing in progress</description></item>
+            /// <item><description>Creating: The bandwidth plan is being created.</description></item>
+            /// <item><description>Releasing: The bandwidth plan is being released.</description></item>
+            /// <item><description>InUse: The bandwidth plan is in use.</description></item>
+            /// <item><description>Failed: The operation failed.</description></item>
+            /// <item><description>Expired: The bandwidth plan has expired.</description></item>
+            /// <item><description>Available: The bandwidth plan is unbound and being billed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BandwidthPackageType { get; set; }
 
             /// <summary>
-            /// <para>The Internet bandwidth throttling rules for the instance group.</para>
+            /// <para>The information about the Internet bandwidth throttling rules bound to the instance group.</para>
             /// </summary>
             [NameInMap("BindQosRules")]
             [Validation(Required=false)]
             public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules BindQosRules { get; set; }
             public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules : TeaModel {
                 /// <summary>
-                /// <para>The Internet bandwidth throttling rules bound to the instances.</para>
+                /// <para>The information about the Internet bandwidth throttling rules bound to the instance.</para>
                 /// </summary>
                 [NameInMap("InstanceQosRule")]
                 [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the Internet bandwidth throttling rule (applies only to premium bandwidth).</para>
+                    /// <para>The ID of the Internet bandwidth throttling rule. This rule applies only to premium bandwidth.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>qos-3kh93uu0vdbka****</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 }
 
                 /// <summary>
-                /// <para>The total number of Internet bandwidth throttling rules for the instance group.</para>
+                /// <para>The total number of Internet bandwidth throttling rules bound to the instance group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The order source. CLOUDPHONE indicates AI Cloud Phone.</para>
+            /// <para>The order source. A value of CLOUDPHONE indicates AI Cloud Phone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOUDPHONE</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not available for public use.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The image ID.</para>
+            /// <para>The ID of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-06zyt9m93zwax****</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstalledAppList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance group.</para>
+            /// <para>The instance group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ag-h67a2cs0zprfdh****</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The instance group specifications.</para>
+            /// <para>The specifications of the instance group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp.basic.small</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not available for public use.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The network type of the instance.</para>
             /// <remarks>
-            /// <para>Currently, this field is returned only for instance groups in the standard network.</para>
+            /// <para>This field is returned only for instance groups in the standard network.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the plan package for the AI Cloud Phone.</para>
+            /// <para>The ID of the plan for the AI Cloud Phone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmag-bp1bpyt7sfeleukh****</para>
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PackageId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the policy.</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-c6n38xucps8kl****</para>
@@ -453,6 +453,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SaleMode { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the single-instance mode is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("SingleInstanceMode")]
+            [Validation(Required=false)]
+            public bool? SingleInstanceMode { get; set; }
+
+            /// <summary>
             /// <para>The system version.</para>
             /// 
             /// <b>Example:</b>
@@ -492,7 +502,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The vSwitch ID in the VPC.</para>
+            /// <para>The ID of the vSwitch in the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-t4n0yqs009ho024wt****</para>
@@ -514,7 +524,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</para>
+        /// <para>The token that indicates the position of the current read. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>

@@ -16,14 +16,26 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<DescribeJVSInstanceResponseBodyData> Data { get; set; }
         public class DescribeJVSInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The AI Engine version and upgrade status.</para>
+            /// </summary>
             [NameInMap("AgentVersion")]
             [Validation(Required=false)]
             public DescribeJVSInstanceResponseBodyDataAgentVersion AgentVersion { get; set; }
             public class DescribeJVSInstanceResponseBodyDataAgentVersion : TeaModel {
+                /// <summary>
+                /// <para>The AI Engine version upgrade status.</para>
+                /// </summary>
                 [NameInMap("UpgradeStatus")]
                 [Validation(Required=false)]
                 public string UpgradeStatus { get; set; }
 
+                /// <summary>
+                /// <para>The AI Engine version number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2607W1</para>
+                /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
@@ -41,14 +53,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</para>
+            /// <para>The credit limit configuration. If multiple configurations are delivered, the subsequent configurations overwrite the previous ones.</para>
             /// </summary>
             [NameInMap("CreditConfig")]
             [Validation(Required=false)]
             public List<DescribeJVSInstanceResponseBodyDataCreditConfig> CreditConfig { get; set; }
             public class DescribeJVSInstanceResponseBodyDataCreditConfig : TeaModel {
                 /// <summary>
-                /// <para>The limit value.</para>
+                /// <para>The credit limit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -79,30 +91,66 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
+            /// <summary>
+            /// <para>The list of skills installed on the instance.</para>
+            /// </summary>
             [NameInMap("InstalledSkills")]
             [Validation(Required=false)]
             public List<DescribeJVSInstanceResponseBodyDataInstalledSkills> InstalledSkills { get; set; }
             public class DescribeJVSInstanceResponseBodyDataInstalledSkills : TeaModel {
+                /// <summary>
+                /// <para>The skill description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Current weather and forecasts with wttr.in via curl for locations, rain, temperature, travel planning.</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The skill icon URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://www.example.com/icon.png">https://www.example.com/icon.png</a></para>
+                /// </summary>
                 [NameInMap("IconUrl")]
                 [Validation(Required=false)]
                 public string IconUrl { get; set; }
 
+                /// <summary>
+                /// <para>The skill installation time.</para>
+                /// </summary>
                 [NameInMap("InstalledAt")]
                 [Validation(Required=false)]
                 public string InstalledAt { get; set; }
 
+                /// <summary>
+                /// <para>The skill ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>s-04zzrgosj6xd1****</para>
+                /// </summary>
                 [NameInMap("SkillId")]
                 [Validation(Required=false)]
                 public string SkillId { get; set; }
 
+                /// <summary>
+                /// <para>The skill name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>weather</para>
+                /// </summary>
                 [NameInMap("SkillName")]
                 [Validation(Required=false)]
                 public string SkillName { get; set; }
 
+                /// <summary>
+                /// <para>The skill type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>System</para>
+                /// </summary>
                 [NameInMap("SkillType")]
                 [Validation(Required=false)]
                 public string SkillType { get; set; }
@@ -150,7 +198,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The used credit.</para>
+            /// <para>The used credits.</para>
             /// </summary>
             [NameInMap("UsedCredit")]
             [Validation(Required=false)]
@@ -191,7 +239,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</para>
+        /// <para>The token that indicates the starting position of the current query. If this parameter is empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -200,6 +248,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The number of pending upgrades.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("PendingUpgradeCount")]
         [Validation(Required=false)]
         public int? PendingUpgradeCount { get; set; }

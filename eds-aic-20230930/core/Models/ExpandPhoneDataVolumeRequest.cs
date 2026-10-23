@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ExpandPhoneDataVolumeRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable automatic payment. The default value is false.</para>
+        /// <para>Specifies whether to enable automatic payment. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,18 +30,24 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>A list of cloud phone matrix instance IDs. You can specify 1 to 100 IDs.</para>
+        /// <para>The IDs of the cloud phone matrix instances. You can specify 1 to 100 instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>The redirect URL to the payment success page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wya.wuying.aliyun.com/instanceGroup</para>
+        /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The target size of the phone storage, in GiB.&gt;Notice: The new value must be greater than the current size of the phone storage.</para>
+        /// <para>The expected size of the independent device storage after the expansion. Unit: GiB.&gt;Notice: The new value must be greater than the original independent device storage size of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMobileAgentPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The list of node instance IDs.</para>
+        /// <para>The node instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The list of packages.</para>
+        /// <para>The package IDs.</para>
         /// </summary>
         [NameInMap("PackageIds")]
         [Validation(Required=false)]
         public List<string> PackageIds { get; set; }
 
         /// <summary>
-        /// <para>The package specifications.</para>
+        /// <para>The package specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>advanced</para>

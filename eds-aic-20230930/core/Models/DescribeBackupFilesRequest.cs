@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the backup is a full-device backup.</para>
+        /// <para>Specifies whether the backup is a full device backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of entries to return per page in a paging query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position from which the query starts. If this parameter is left empty, the query starts from the beginning.</para>
+        /// <para>The token that specifies the starting position of the query. An empty value indicates that the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>
@@ -120,7 +120,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sales mode. Valid values: Instance (cloud phone instance mode) and Node (cloud phone matrix mode).</para>
+        /// <para>The sales mode. Instance indicates the cloud phone instance mode, and Node indicates the cloud phone matrix mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance</para>
         /// </summary>
         [NameInMap("SaleMode")]
         [Validation(Required=false)]

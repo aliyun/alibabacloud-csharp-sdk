@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeBackupFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of returned result objects.</para>
+        /// <para>The list of returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the backup is a full-device backup.</para>
+            /// <para>Specifies whether the backup is a full device backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFileName { get; set; }
 
             /// <summary>
-            /// <para>The directory where the backup file is saved.</para>
+            /// <para>The directory where the backup file is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFilePath { get; set; }
 
             /// <summary>
-            /// <para>The order source. A value of CLOUDPHONE indicates AI cloud phone.</para>
+            /// <para>The order source. CLOUDPHONE indicates AI cloud phone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOUDPHONE</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<string> SourceAppInfoList { get; set; }
 
             /// <summary>
-            /// <para>The list of directories of the source backup files.</para>
+            /// <para>The list of directories for the source backup files.</para>
             /// </summary>
             [NameInMap("SourceFilePathList")]
             [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in this query.</para>
+        /// <para>The maximum number of entries returned in the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position from which the next query starts. An empty value indicates that all data has been read.</para>
+        /// <para>The token that indicates the position to which the current call has read. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. If you encounter any issues, provide this request ID to the technical support team for troubleshooting.</para>
+        /// <para>The unique ID of the request. If you encounter any issues, provide this request ID for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>

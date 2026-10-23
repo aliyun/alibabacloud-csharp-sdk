@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the credit boost packages.</para>
+        /// <para>The credit package information.</para>
         /// </summary>
         [NameInMap("CreditsPackageInfos")]
         [Validation(Required=false)]
         public List<DescribeCreditPackageResponseBodyCreditsPackageInfos> CreditsPackageInfos { get; set; }
         public class DescribeCreditPackageResponseBodyCreditsPackageInfos : TeaModel {
             /// <summary>
-            /// <para>The number of available credits in the current credit boost package.</para>
+            /// <para>The number of available credits in the current credit package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70</para>
@@ -26,12 +26,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AvailableCredits { get; set; }
 
+            /// <summary>
+            /// <para>The creation time. The time is in UTC and follows the ISO 8601 format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-04-10T01:31:32Z</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the credit boost package.</para>
+            /// <para>The ID of the credit package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crp-xagydbhfkah****</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreditPackageId { get; set; }
 
             /// <summary>
-            /// <para>The status of the credit boost package.</para>
+            /// <para>The status of the credit package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreditPackageStatus { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The effective period of the credit package. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-30 00:00:00</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The number of consumed credits in the current credit boost package.</para>
+            /// <para>The number of consumed credits in the current credit package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ExhaustedCredits { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the credit boost package. The time format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The expiration time of the credit package. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-30 00:00:00</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of credits in the current credit boost package.</para>
+            /// <para>The total number of credits in the current credit package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? IsFirstPurchase { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC****</para>

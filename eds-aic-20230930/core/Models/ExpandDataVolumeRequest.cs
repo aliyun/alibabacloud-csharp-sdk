@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud phone matrix IDs.</para>
+        /// <para>The IDs of the cloud phone matrices.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The redirect URL for the payment success page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wya.wuying.aliyun.com/instanceGroup</para>
         /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneDataVolume { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RunConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The scheduled task ID.</para>
+        /// <para>The ID of the scheduled task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>Switches the status. Valid values: ACTIVE and DISABLED.</para>
+        /// <para>The status toggle. Valid values: ACTIVE and DISABLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>NewTaskName</para>
+        /// <para>New task name</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

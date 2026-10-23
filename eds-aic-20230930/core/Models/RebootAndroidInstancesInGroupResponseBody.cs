@@ -19,15 +19,23 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The task information.</para>
+        /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public RebootAndroidInstancesInGroupResponseBodyTasks Tasks { get; set; }
         public class RebootAndroidInstancesInGroupResponseBodyTasks : TeaModel {
+            /// <summary>
+            /// <para>The child tasks.</para>
+            /// </summary>
             [NameInMap("ChildTasks")]
             [Validation(Required=false)]
             public List<RebootAndroidInstancesInGroupResponseBodyTasksChildTasks> ChildTasks { get; set; }
             public class RebootAndroidInstancesInGroupResponseBodyTasksChildTasks : TeaModel {
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>acp-xxxx</para>
                 /// </summary>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The child task ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>t-xxxx</para>
                 /// </summary>
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
+            /// <para>The parent task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t-xxxx</para>
             /// </summary>

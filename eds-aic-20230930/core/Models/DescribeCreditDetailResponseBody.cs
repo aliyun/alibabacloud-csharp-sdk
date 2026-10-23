@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string AgentType { get; set; }
 
                 /// <summary>
-                /// <para>The API key name.</para>
+                /// <para>The name of the API key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string ChangeTime { get; set; }
 
                 /// <summary>
-                /// <para>The credit change amount.</para>
+                /// <para>The amount of credit change.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.7637</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of detail records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The total credit change.</para>
+            /// <para>The total amount of credit change.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

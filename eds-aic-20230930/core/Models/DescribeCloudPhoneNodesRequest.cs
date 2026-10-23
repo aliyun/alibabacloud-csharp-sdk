@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Only subscription is supported.</para>
+        /// <para>The billing method. Only the subscription billing method is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return per page in a paging query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can include the returned NextToken in the next request to continue the query.</para>
+        /// <para>The pagination token for the next query. If a query does not return all results, the returned NextToken is not empty. You can use the returned NextToken in a subsequent query to obtain more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud phone matrix IDs.</para>
+        /// <para>The IDs of the cloud phone matrices.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
+        /// <summary>
+        /// <para>The list of names used to filter cloud phone matrices.</para>
+        /// </summary>
         [NameInMap("NodeNameList")]
         [Validation(Required=false)]
         public List<string> NodeNameList { get; set; }
@@ -90,10 +93,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string ServerType { get; set; }
 
+        /// <summary>
+        /// <para>The field used for sorting. A value of CreationTime indicates the creation time, and a value of ExpiredTime indicates the expiration time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CreationTime</para>
+        /// </summary>
         [NameInMap("SortKey")]
         [Validation(Required=false)]
         public string SortKey { get; set; }
 
+        /// <summary>
+        /// <para>The sort order. A value of ASC indicates ascending order, and a value of DESC indicates descending order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASC</para>
+        /// </summary>
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }
@@ -108,14 +123,29 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the node.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeCloudPhoneNodesRequestTags> Tags { get; set; }
         public class DescribeCloudPhoneNodesRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>phone</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

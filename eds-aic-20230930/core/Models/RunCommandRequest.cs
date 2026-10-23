@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunCommandRequest : TeaModel {
         /// <summary>
-        /// <para>The channel type for running the command.</para>
+        /// <para>The channel type used to execute the command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EdsAgent</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AgentType { get; set; }
 
         /// <summary>
-        /// <para>The content of the command.</para>
+        /// <para>The command content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ls</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>The encoding method for the command content (<c>CommandContent</c>). This value is not case-sensitive.</para>
+        /// <para>The encoding method of the command content (<c>CommandContent</c>). This parameter is case-insensitive.</para>
         /// <remarks>
-        /// <para>An invalid value defaults to <c>PlainText</c>.</para>
+        /// <para>If the specified value is not within the valid values, it is processed as <c>PlainText</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>A list of instance IDs. You can specify up to 50 instances per request.</para>
+        /// <para>The list of instance IDs. A single request supports up to 50 instances.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The execution timeout in seconds. The command times out if it does not complete within this period. Defaults to 60 seconds.</para>
+        /// <para>The timeout period. Unit: seconds. If the command is not completed within this period, the command execution status is set to timeout. If this parameter is not specified, the default value is 60 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyInstanceChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance group IDs.</para>
+        /// <para>The list of instance group IDs.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]
         [Validation(Required=false)]
         public List<string> InstanceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22326560487****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The agent types. This parameter is used to filter credit change details by agent type.</para>
+        /// <para>The list of agent types. This parameter is used to filter credit change details by agent type.</para>
         /// </summary>
         [NameInMap("AgentTypes")]
         [Validation(Required=false)]
         public List<string> AgentTypes { get; set; }
 
         /// <summary>
-        /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time. The time is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782906240000</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for this query.</para>
+        /// <para>The maximum number of entries to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The package IDs.</para>
+        /// <para>The list of package IDs.</para>
         /// </summary>
         [NameInMap("PackageIds")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time. The time is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782819840000</para>
@@ -89,6 +89,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <para>The list of task IDs. This parameter is used to filter credit details by task.</para>
+        /// </summary>
+        [NameInMap("TaskIds")]
+        [Validation(Required=false)]
+        public List<string> TaskIds { get; set; }
 
     }
 

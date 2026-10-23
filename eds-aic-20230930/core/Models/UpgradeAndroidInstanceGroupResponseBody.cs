@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UpgradeAndroidInstanceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance IDs created by the scale-out.</para>
+        /// <para>The instance IDs created during the scale-out.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;acp-2iowaqjyw9nrd****\&quot;, \&quot;acp-2iowaqjyw9nrd****\&quot;]</para>

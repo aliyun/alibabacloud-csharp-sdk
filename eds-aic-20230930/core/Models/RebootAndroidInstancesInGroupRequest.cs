@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RebootAndroidInstancesInGroupRequest : TeaModel {
         /// <summary>
-        /// <para>A list of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully reboot the instances. If a Cloud Phone instance cannot be shut down because of system or network errors, you can force a reboot. This operation may cause data loss.</para>
+        /// <para>Specifies whether to force a restart. You can force a restart if a cloud phone cannot be shut down due to system or network exceptions. Unsaved data may be lost.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -26,12 +26,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public bool? ForceStop { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to skip parameter validation. A value of true indicates that validation is skipped. If the value is false or not specified, validation is performed.</para>
+        /// </summary>
         [NameInMap("IgnoreParamValidation")]
         [Validation(Required=false)]
         public bool? IgnoreParamValidation { get; set; }
 
         /// <summary>
-        /// <para>The sales mode. This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> The sales mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunAgentTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the Mobile node resides.</para>
+        /// <para>The region ID of the Mobile node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxSteps { get; set; }
 
         /// <summary>
-        /// <para>The runtime configuration that contains the runtime parameters such as skills for the current task.</para>
+        /// <para>The runtime configuration that carries the runtime parameters such as skills for the current task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Skills&quot;:[&quot;sk-abc&quot;,&quot;sk-def&quot;]}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public RunAgentTaskRequestRunConfig RunConfig { get; set; }
         public class RunAgentTaskRequestRunConfig : TeaModel {
             /// <summary>
-            /// <para>The list of skill IDs. You can specify up to 10 skill IDs. Only the first skill ID is passed through when the command is delivered. All skill IDs are stored in the task_skill_relation table for reverse lookup.</para>
+            /// <para>The list of skill IDs. A maximum of 10 skills are supported. Only the first skill ID is passed through when the command is delivered. All skill IDs are stored in the task_skill_relation table for reverse lookup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;sk-abc&quot;,&quot;sk-def&quot;]</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to save the task artifacts to your OSS.</para>
+        /// <para>Specifies whether to write the task artifacts to the user\&quot;s OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? SaveArtifacts { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduling plan. When specified, the execute record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling aggregation dimension.</para>
+        /// <para>The scheduling plan ID. If specified, the execute record is associated with the corresponding scheduled node to facilitate aggregate query by scheduling dimension aggregation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sch-260625-pbj2****</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
-        /// <para>The list of targets. Each element is an object that contains an InstanceId and a SessionId.</para>
+        /// <para>The Targets array. Each element is an object that contains InstanceId and SessionId.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<RunAgentTaskRequestTargets> Targets { get; set; }
         public class RunAgentTaskRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The ID of the Mobile node, such as acp-xxx.</para>
+            /// <para>The Mobile node ID, such as acp-xxx.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-5hh4a31emkt6u****</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the task configuration. This parameter is used to trigger a task with the specified configuration.</para>
+        /// <para>The task configuration ID used to trigger a task with the specified configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tsk-260625-49be****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string TaskConfigId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of the task in seconds. Valid values: 300 to 3600. Default value: 3600.</para>
+        /// <para>The timeout period for the task in seconds. Valid values: 300 to 3600. Default value: 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? TimeoutSeconds { get; set; }
 
         /// <summary>
-        /// <para>The user prompt in natural language. The agent performs operations based on this prompt.</para>
+        /// <para>The user prompt in natural language based on which the agent performs operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Download DingTalk from the app store</para>

@@ -37,14 +37,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The redirect URL for the payment success page.</para>
+        /// <para>The redirect URL after a successful payment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wya.wuying.aliyun.com/instanceGroup</para>
         /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The subscription period. The unit is specified by PeriodUnit.</para>
+        /// <para>The subscription period of the resource. The unit is specified by PeriodUnit.</para>
         /// <list type="bullet">
         /// <item><description>If PeriodUnit is set to <b>year</b>, the only valid value is 1.</description></item>
         /// <item><description>If PeriodUnit is set to <b>month</b>, valid values are 1, 2, 3, and 6.</description></item>
@@ -68,7 +71,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the promotion.</para>
+        /// <para>The promotion ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50003308011****</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]

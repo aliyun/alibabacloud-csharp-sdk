@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ResetAndroidInstancesInGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID for storage reduction. This parameter is returned only when you reduce storage while resetting instances in a cloud phone matrix. It is not returned in other scenarios.</para>
+        /// <para>For instances in a cloud phone matrix, if storage capacity reduction is performed during the reset, the order ID for the storage capacity reduction is returned. This parameter is not returned in other scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22365781890****</para>

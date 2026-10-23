@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class InstallAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The child task objects.</para>
+        /// <para>The child task information.</para>
         /// </summary>
         [NameInMap("ChildTaskInfo")]
         [Validation(Required=false)]
@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public class InstallAppResponseBodyChildTaskInfo : TeaModel {
             /// <summary>
             /// <para>The application ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]

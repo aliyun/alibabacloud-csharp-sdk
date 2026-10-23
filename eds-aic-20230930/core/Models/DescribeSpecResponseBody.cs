@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that indicates the position up to which the data is retrieved. An empty value indicates that all data has been retrieved.</para>
+        /// <para>The token that specifies the position to which the current call has read. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SpecType { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk size. Unit: GB.</para>
+            /// <para>The size of the system cloud disk. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>

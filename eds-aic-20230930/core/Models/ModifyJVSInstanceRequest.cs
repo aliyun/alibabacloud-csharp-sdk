@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? ApplyToAll { get; set; }
 
         /// <summary>
-        /// <para>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</para>
+        /// <para>The credit limit configuration. Subsequent configurations overwrite previous ones.</para>
         /// </summary>
         [NameInMap("CreditConfig")]
         [Validation(Required=false)]
         public List<ModifyJVSInstanceRequestCreditConfig> CreditConfig { get; set; }
         public class ModifyJVSInstanceRequestCreditConfig : TeaModel {
             /// <summary>
-            /// <para>The quota limit.</para>
+            /// <para>The credit limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public long? CreditLimit { get; set; }
 
             /// <summary>
-            /// <para>The period of the current credit.</para>
+            /// <para>The time dimension for the current credit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>day</para>
@@ -60,6 +60,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The image ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>imgc-075cllfeuazh0****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]

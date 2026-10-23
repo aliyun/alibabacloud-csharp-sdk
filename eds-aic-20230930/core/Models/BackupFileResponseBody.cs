@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances that are backed up.</para>
+        /// <para>The number of backed-up instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The result object.</para>
+        /// <para>The returned result object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<BackupFileResponseBodyData> Data { get; set; }
         public class BackupFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud phone instance.</para>
+            /// <para>The instance ID of the cloud phone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-34pqe4r0kd9kn****</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The batch task ID.</para>
+        /// <para>The ID of the batch task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-14xwibw7pyrjd****</para>

@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The redirect URL for the payment success page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wya.wuying.aliyun.com/instanceGroup</para>
         /// </summary>
         [NameInMap("PaidCallBackUrl")]
         [Validation(Required=false)]
@@ -48,6 +51,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The ID of the promotion.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50003308011****</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]

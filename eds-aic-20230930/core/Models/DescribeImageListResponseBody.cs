@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The image distribution region information. The key is the region and the value is the distribution information.</para>
+            /// <para>The image distribution information by region. The key is the region, and the value is the distribution information.</para>
             /// </summary>
             [NameInMap("ImageRegionDistributeMap")]
             [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The position from which the current call returns the read data. An empty value indicates that all data has been read.</para>
+        /// <para>The token that indicates the position to which the current call has read. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>

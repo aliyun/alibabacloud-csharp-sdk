@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunAgentTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the API operation.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;200&quot; indicates success</para>
+        /// <para>For example, &quot;200&quot; indicates success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <item><description>COMPLETED: The task is completed.</description></item>
             /// <item><description>FAILED: The task failed.</description></item>
             /// <item><description>TIMEOUT: The task execution timed out.</description></item>
-            /// <item><description>CALL_FOR_USER: The task is waiting for user operations.</description></item>
+            /// <item><description>CALL_FOR_USER: The task is waiting for user action.</description></item>
             /// <item><description>PAUSING: The task is being paused.</description></item>
             /// <item><description>PAUSED: The task is paused.</description></item>
             /// <item><description>CANCELLING: The task is being canceled.</description></item>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CurrentStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Mobile node.</para>
+            /// <para>The Mobile node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-ek65k51zoxia3x8xz</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created. The time is in the ISO 8601 format.</para>
+            /// <para>The time when the task was created, in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-13T17:42:19Z</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The globally unique ID of the task.</para>
+            /// <para>The globally unique task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-imr0fufqd7cle****</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The user prompt in natural language. The agent performs operations based on this prompt.</para>
+            /// <para>The user prompt in natural language based on which the agent performs operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Download DingTalk from the app store</para>
