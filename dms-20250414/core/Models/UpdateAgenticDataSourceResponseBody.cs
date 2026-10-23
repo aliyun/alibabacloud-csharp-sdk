@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The authentication method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>-1: No authentication required.</description></item>
-            /// <item><description>0: Username and password.</description></item>
-            /// <item><description>1: Password only.</description></item>
-            /// <item><description>2: Password-free.</description></item>
+            /// <item><description>-1: no authentication required</description></item>
+            /// <item><description>0: username and password</description></item>
+            /// <item><description>1: password only</description></item>
+            /// <item><description>2: password-free</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The registration method of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INSTANCE_ID: Select an existing cloud instance.</description></item>
-            /// <item><description>HOST_PORT: Register by endpoint and port.</description></item>
+            /// <item><description>INSTANCE_ID: select an existing cloud instance</description></item>
+            /// <item><description>HOST_PORT: register by endpoint and port</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,11 +159,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The source of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RDS: ApsaraDB instance.</description></item>
-            /// <item><description>PUBLIC_OWN: Self-managed database on the Internet.</description></item>
-            /// <item><description>ECS_OWN: Self-managed database on an ECS instance.</description></item>
-            /// <item><description>GATEWAY: Connected through Database Gateway.</description></item>
-            /// <item><description>VPC_IDC: Connected through a VPC or IDC.</description></item>
+            /// <item><description>RDS: ApsaraDB instance</description></item>
+            /// <item><description>PUBLIC_OWN: self-managed database on the Internet</description></item>
+            /// <item><description>ECS_OWN: self-managed database on an ECS instance</description></item>
+            /// <item><description>GATEWAY: connected through Database Gateway</description></item>
+            /// <item><description>VPC_IDC: connected through a VPC or IDC</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ResourceAccountId { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the RAM role used to access the data source. This parameter is empty if role-based authorization is not used.</para>
+            /// <para>The ARN of the RAM role used to access the data source. This parameter is empty if role authorization is not used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/DataSourceRole</para>
@@ -246,9 +246,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The status of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Normal.</description></item>
-            /// <item><description>-1: Deleted.</description></item>
-            /// <item><description>-2: Disabled.</description></item>
+            /// <item><description>0: normal</description></item>
+            /// <item><description>-1: deleted</description></item>
+            /// <item><description>-2: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -261,8 +261,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>Specifies whether to use the cloud instance name as the data source name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Yes.</description></item>
-            /// <item><description>0: No.</description></item>
+            /// <item><description>1: yes</description></item>
+            /// <item><description>0: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -275,9 +275,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The SSL settings. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Enabled.</description></item>
-            /// <item><description>0: Disabled.</description></item>
-            /// <item><description>-1: Use default settings.</description></item>
+            /// <item><description>1: enabled</description></item>
+            /// <item><description>0: disabled</description></item>
+            /// <item><description>-1: default settings</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to trace the call.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-1234567890</para>

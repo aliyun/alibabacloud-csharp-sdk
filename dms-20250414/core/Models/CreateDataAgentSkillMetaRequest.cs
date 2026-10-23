@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentSkillMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The skill description.</para>
-        /// <list type="bullet">
-        /// <item><description>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill description.</description></item>
-        /// </list>
+        /// <para>The skill description. This parameter is optional. If not specified, the backend parses the ZIP package specified by UploadLocation to obtain the skill description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a demo skill description.</para>
@@ -23,10 +20,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The skill name.</para>
-        /// <list type="bullet">
-        /// <item><description>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill name.</description></item>
-        /// </list>
+        /// <para>The skill ID. If you specify this parameter, the uploaded skill overwrites the existing skill and replaces the original skill content. Note: The name of the original skill and the newly uploaded skill must be identical.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ski-04pomiln*************j0</para>
+        /// </summary>
+        [NameInMap("SkillId")]
+        [Validation(Required=false)]
+        public string SkillId { get; set; }
+
+        /// <summary>
+        /// <para>The skill name. This parameter is optional. If not specified, the backend parses the ZIP package specified by UploadLocation to obtain the skill name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data-query-skill</para>
@@ -36,9 +40,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The full path to the uploaded skill ZIP file.</para>
+        /// <para>The full path for the skill ZIP file upload.</para>
         /// <list type="bullet">
-        /// <item><description>Format: Concatenate the file name to the UploadDir value returned by the DescribeSkillFileUploadSignature operation.</description></item>
+        /// <item><description>Format: The UploadDir field returned by the DescribeSkillFileUploadSignature operation concatenated with the file name.</description></item>
         /// <item><description>Example: ${UploadDir}/${Filename}</description></item>
         /// </list>
         /// </summary>

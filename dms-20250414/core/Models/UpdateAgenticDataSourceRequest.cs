@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateAgenticDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The new display name of the data source. If this parameter is not specified, the value is not updated.</para>
+        /// <para>The new display name of the data source. If you do not specify this parameter, the alias is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo_mysql</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>The new logon username. If this parameter is not specified, the value is not updated.</para>
+        /// <para>The new logon username. If you do not specify this parameter, the authentication account is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db_user</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AuthAccount { get; set; }
 
         /// <summary>
-        /// <para>The new logon password. If this parameter is not specified, the value is not updated. This is sensitive information. Do not record or disclose it.</para>
+        /// <para>The new logon password. If you do not specify this parameter, the authentication password is not updated. This is sensitive information. Do not record or disclose it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>P@ss****</para>
@@ -40,7 +40,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AuthPassword { get; set; }
 
         /// <summary>
-        /// <para>Optional. The authentication type. Valid values: -1: No authentication required. 0: Username and password. 1: Password only. 2: Password-free. If this parameter is not specified, the value is not updated.</para>
+        /// <para>Optional. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: No authentication required.</description></item>
+        /// <item><description>0: Username and password.</description></item>
+        /// <item><description>1: Password only.</description></item>
+        /// <item><description>2: Password-free.
+        /// If you do not specify this parameter, the authentication type is not updated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? AuthType { get; set; }
 
         /// <summary>
-        /// <para>The new metadata catalog name. If this parameter is not specified, the value is not updated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</para>
+        /// <para>The new name of the metadata catalog. If you do not specify this parameter, the catalog name is not updated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo_catalog</para>
@@ -60,7 +67,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
-        /// <para>The registration method. Valid values: INSTANCE_ID: Select an existing cloud instance. HOST_PORT: Register by endpoint and port. If this parameter is not specified, the value is not updated.</para>
+        /// <para>The registration method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INSTANCE_ID: Select an existing cloud instance.</description></item>
+        /// <item><description>HOST_PORT: Register by endpoint and port.
+        /// If you do not specify this parameter, the creation mode is not updated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>HOST_PORT</para>
@@ -91,7 +103,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// <para>The environment type. Valid values: product, pre, dev, test, sit, uat, pet, and stag. If this parameter is not specified, the value is not updated.</para>
+        /// <para>The environment type. Valid values: product, pre, dev, test, sit, uat, pet, and stag. If you do not specify this parameter, the environment type is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>product</para>
@@ -101,7 +113,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>Optional. The new database domain name or IP address. Do not include the protocol, path, or port. If this parameter is not specified, the value is not updated.</para>
+        /// <para>Optional. The new domain name or IP address of the database. Do not include the protocol, path, or port. If you do not specify this parameter, the host is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.example.com</para>
@@ -111,7 +123,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The new cloud resource instance ID. If this parameter is not specified, the value is not updated.</para>
+        /// <para>The new ID of the cloud resource instance. If you do not specify this parameter, the instance resource ID is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp1234567890</para>
@@ -121,7 +133,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string InstanceResourceId { get; set; }
 
         /// <summary>
-        /// <para>The new KMS managed credential name. If this parameter is not specified, the value is not updated.</para>
+        /// <para>The new name of the KMS-managed credential. If you do not specify this parameter, the KMS secret is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>datasource-secret</para>
@@ -131,7 +143,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string KmsSecret { get; set; }
 
         /// <summary>
-        /// <para>Optional. The new data access security policy ID. If this parameter is not specified, the value is not updated.</para>
+        /// <para>Optional. The new ID of the data access security policy. If you do not specify this parameter, the policy ID is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-usr-example</para>
@@ -141,7 +153,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>Optional. The new database service port. If this parameter is not specified, the value is not updated.</para>
+        /// <para>Optional. The new service port of the database. If you do not specify this parameter, the service port is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -151,7 +163,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The new Alibaba Cloud RAM role ARN. If this parameter is not specified, the value is not updated.</para>
+        /// <para>The new ARN of the Alibaba Cloud RAM role. If you do not specify this parameter, the role ARN is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789012****:role/DataSourceRole</para>
@@ -161,7 +173,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>Optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. For other types, leave this parameter empty. If this parameter is not specified, the value is not updated.</para>
+        /// <para>Optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. For other types, leave this parameter empty. If you do not specify this parameter, the schema is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>postgres</para>
@@ -191,7 +203,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SnowflakeWarehouse { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the cloud instance name as the data source name. Valid values: 1: Yes. 0: No. If this parameter is not specified, the value is not updated.</para>
+        /// <para>Specifies whether to use the cloud instance name as the data source name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: No.
+        /// If you do not specify this parameter, the sync alias setting is not updated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -201,7 +218,13 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? SyncAlias { get; set; }
 
         /// <summary>
-        /// <para>The new SSL setting. Valid values: 1: Enable. 0: Disable. -1: Use the default setting. If this parameter is not specified, the value is not updated. SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS.</para>
+        /// <para>The new SSL setting. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Enable.</description></item>
+        /// <item><description>0: Disable.</description></item>
+        /// <item><description>-1: Use default settings.
+        /// If you do not specify this parameter, the SSL setting is not updated. SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

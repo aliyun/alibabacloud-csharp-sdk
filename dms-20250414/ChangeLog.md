@@ -1,3 +1,7 @@
+2026-10-23 Version: 4.3.2
+- Update API CreateDataAgentSkillMeta: add request parameters SkillId.
+
+
 2026-10-22 Version: 4.3.1
 - Update API SendChatMessage: add request parameters DataSource.Uri.
 - Update API SendChatMessage: add request parameters DataSources.$.Uri.

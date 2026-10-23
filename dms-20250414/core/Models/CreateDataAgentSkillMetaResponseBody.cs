@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public CreateDataAgentSkillMetaResponseBodyData Data { get; set; }
         public class CreateDataAgentSkillMetaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID.</para>
+            /// <para>The ID of the parent Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AliyunParentUid { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud user ID.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20372822********</para>
@@ -57,11 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the skill is available. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: The skill is available.</description></item>
-            /// <item><description>false: The skill is not available.</description></item>
-            /// </list>
+            /// <para>Indicates whether the skill is available. Valid values: true and false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -91,10 +87,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The skill parsing error message.</para>
-            /// <list type="bullet">
-            /// <item><description>This message is returned when the skill status is INVALID.</description></item>
-            /// </list>
+            /// <para>The error message for skill parsing. This message is returned when the skill status is INVALID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SKILL.md file not exist.</para>

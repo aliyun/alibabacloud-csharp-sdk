@@ -2896,6 +2896,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
             {
                 query["SkillName"] = request.SkillName;
@@ -2949,6 +2953,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
             {
@@ -19304,7 +19312,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19427,7 +19435,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19550,7 +19558,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19573,7 +19581,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
