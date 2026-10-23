@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class BindPolarClawAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The agent ID.</para>
+        /// <para>Agent ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Details of the newly created binding.</para>
+        /// <para>The details of the newly created association.</para>
         /// </summary>
         [NameInMap("Binding")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>Agent ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>work</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>200</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>A message that indicates the request result.</para>
+        /// <para>successful</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of global bindings after the operation.</para>
+        /// <para>The total number of global associations after the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

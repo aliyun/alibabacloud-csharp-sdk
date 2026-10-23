@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteConsumerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the consumer group.</para>
+        /// <para>The ID of the consumer group to delete. You can obtain the ID from the ConsumerGroupId parameter returned by the CreateConsumerGroup operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The ID of the gateway instance. You can obtain the ID from the GwClusterId parameter returned by the CreateGateway operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

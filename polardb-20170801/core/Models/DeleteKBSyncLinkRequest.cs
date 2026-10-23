@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteKBSyncLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The unique identifier of the knowledge base. You can obtain the ID from the response of the CreateKnowledgeBase operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The synchronization link ID.</para>
+        /// <para>The ID of the synchronization link to delete. You can obtain the ID from the response of the CreateKBSyncLink operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

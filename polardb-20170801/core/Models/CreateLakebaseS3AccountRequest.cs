@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateLakebaseS3AccountRequest : TeaModel {
         /// <summary>
-        /// <para>The PolarFS instance ID.</para>
+        /// <para>The PolarFS instance ID. You can obtain the ID from the PolarFsInstanceId parameter returned by the CreatePolarFs operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Access Key of the S3 account.</para>
+        /// <para>The access key of the S3 account.</para>
         /// <remarks>
-        /// <para>The account name can contain only uppercase letters, lowercase letters, and digits, and cannot exceed 32 characters in length.</para>
+        /// <para>The account name supports only uppercase and lowercase letters and digits, and can be up to 32 characters in length.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UserAccAk { get; set; }
 
         /// <summary>
-        /// <para>A policy document in JSON format that defines the permissions of the S3 account. If this parameter is not specified, the default policy is used.</para>
+        /// <para>The policy document in JSON format that defines the permissions of the S3 account. If this parameter is not specified, the default policy is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Version&quot;:&quot;2012-10-17&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Allow&quot;,&quot;Action&quot;:[&quot;s3:<em>&quot;],&quot;Resource&quot;:[&quot;</em>&quot;]}]}</para>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UserAccPolicy { get; set; }
 
         /// <summary>
-        /// <para>The Secret Key of the S3 account (@sensitive, encryption in transit).</para>
+        /// <para>The secret key of the S3 account (@sensitive, encryption in transit).</para>
         /// <remarks>
-        /// <para>The key must contain uppercase letters, lowercase letters, and digits, and must be greater than 18 and no more than 32 characters in length.</para>
+        /// <para>The value must contain both uppercase and lowercase letters and digits, and must be 19 to 32 characters in length.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

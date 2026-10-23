@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteBudgetPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cost budget policy.</para>
+        /// <para>The ID of the budget policy to delete. You can obtain the ID from the BudgetPolicyId returned by CreateBudgetPolicy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The ID of the gateway instance. You can obtain the ID from the GwClusterId returned by CreateGateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

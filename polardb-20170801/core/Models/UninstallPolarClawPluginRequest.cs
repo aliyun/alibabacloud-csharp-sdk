@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The plugin ID.</para>
+        /// <para>The ID of the plugin to uninstall. You can call DescribePolarClawPlugins to query the plugins installed for the application and use the Id of the corresponding plugin in the returned Plugins list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to restart the gateway after the plugin is uninstalled. The default is true.</para>
+        /// <para>Specifies whether to restart the gateway after uninstallation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

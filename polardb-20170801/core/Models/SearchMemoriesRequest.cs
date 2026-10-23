@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class SearchMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Example: pa-**************.</para>
+        /// <para>The ID of the application. Example value: pa-**************.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The memory agent ID.</para>
+        /// <para>The ID of the memory agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MemoryAgentId { get; set; }
 
         /// <summary>
-        /// <para>The memory user ID.</para>
+        /// <para>The ID of the memory user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of records to display on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

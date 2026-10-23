@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AnswerKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the Q&amp;A task.</para>
+        /// <para>The unique identifier of the Q&amp;A task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>R3BGbnBqcXN******.2a5a23c9-******-179970533d30</para>

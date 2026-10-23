@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateActivationCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the activation code takes effect.</para>
+        /// <para>The effective period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ActivateAt { get; set; }
 
         /// <summary>
-        /// <para>The content of the activation code. Decode this Base64-encoded content and save it to the \<c>license.lic\\</c> file. PolarDB reads this file on startup.</para>
+        /// <para>The content of the activation code. Decode the Base64-encoded content and save it to the license.lic file for PolarDB to read during startup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAEAA******AAA=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The expiration time.</para>
+        /// <para>The time when the activation code expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2054-10-09 16:46:20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireAt { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the activation code was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The time when the activation code was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The unique system identifier of the database.</para>
+        /// <para>The unique identifier of the database, also known as the system identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>

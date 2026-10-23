@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The specification code for the gateway instance.</para>
+        /// <para>The instance type code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polar.app.g2.medium</para>
@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClassCode { get; set; }
 
         /// <summary>
-        /// <para>The time when the gateway instance was created.</para>
+        /// <para>The creation time.</para>
+        /// <para>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-24T11:57:54Z</para>
@@ -30,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The current version number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
         /// </summary>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// <para>A list of endpoints for the gateway instance.</para>
+        /// <para>The list of endpoints.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The ID of the endpoint.</para>
+            /// <para>The endpoint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EndpointId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway instance.</para>
+            /// <para>The gateway instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxxxx</para>
@@ -87,10 +90,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The network type of the endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Private</b>: VPC endpoint.</para>
-            /// </description></item>
-            /// <item><description><para><b>Public</b>: public endpoint.</para>
-            /// </description></item>
+            /// <item><description>Private: VPC</description></item>
+            /// <item><description>Public: Internet</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string NetType { get; set; }
 
             /// <summary>
-            /// <para>The port number.</para>
+            /// <para>The port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080</para>
@@ -121,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TunnelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC to which the endpoint belongs.</para>
+            /// <para>The ID of the VPC to which the vSwitch belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-*************</para>
@@ -133,8 +134,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The time when the subscription for the gateway instance expires.</para>
-        /// <para>This parameter is empty for pay-as-you-go instances.</para>
+        /// <para>The expiration time.</para>
+        /// <para>This parameter is empty when the billing method is Postpaid.</para>
+        /// <para>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-04-22T16:00:00Z</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the subscription for the gateway instance has expired. Valid values:</para>
+        /// <para>Indicates whether the cluster has expired. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true</para>
         /// </description></item>
@@ -160,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Expired { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway instance.</para>
+        /// <para>The gateway instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-xxxxxxx</para>
@@ -170,7 +172,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The description of the gateway instance.</para>
+        /// <para>The description of the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -180,6 +182,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwDescription { get; set; }
 
         /// <summary>
+        /// <para>The latest version number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0.1</para>
         /// </summary>
@@ -188,7 +192,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The time when the gateway instance was last modified.</para>
+        /// <para>The last modification time.</para>
+        /// <para>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-07T02:19:55Z</para>
@@ -198,12 +203,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the gateway instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
-        /// </description></item>
-        /// <item><description><para><b>Prepaid</b>: subscription.</para>
-        /// </description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +217,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -224,7 +227,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</para>
@@ -234,6 +237,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The running version number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
         /// </summary>
@@ -242,14 +247,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunningVersion { get; set; }
 
         /// <summary>
-        /// <para>A list of IP whitelists for the gateway instance.</para>
+        /// <para>The application-level IP whitelist.</para>
         /// </summary>
         [NameInMap("SecurityIPArrays")]
         [Validation(Required=false)]
         public List<DescribeGatewayAttributeResponseBodySecurityIPArrays> SecurityIPArrays { get; set; }
         public class DescribeGatewayAttributeResponseBodySecurityIPArrays : TeaModel {
             /// <summary>
-            /// <para>The name of the IP whitelist. The default value is <c>default</c>.</para>
+            /// <para>The name of the IP whitelist. Default value: <c>default</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -269,7 +274,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SecurityIPArrayTag { get; set; }
 
             /// <summary>
-            /// <para>A comma-separated list of IP addresses in the IP whitelist.</para>
+            /// <para>The IP addresses in the whitelist, separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1</para>
@@ -281,12 +286,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The status of the gateway instance. Valid values:</para>
+        /// <para>The application status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CREATE</b>: The gateway instance is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>ACTIVATION</b>: The gateway instance is running.</para>
-        /// </description></item>
+        /// <item><description>CREATE: creating</description></item>
+        /// <item><description>ACTIVATION: running</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -297,7 +300,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VSwitch where the gateway instance is deployed.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-*********************</para>
@@ -307,7 +310,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC where the gateway instance is deployed.</para>
+        /// <para>The ID of the VPC to which the vSwitch belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*************</para>

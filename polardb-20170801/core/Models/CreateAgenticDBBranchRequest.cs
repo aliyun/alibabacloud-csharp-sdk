@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The description of the branch.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Feature branch for analytics</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent branch. If this parameter is not specified, the branch is derived from the main branch by default.</para>
+        /// <para>The ID of the parent branch. By default, the branch is derived from the main branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-1a2b3c4d5e6f</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParentBranchId { get; set; }
 
         /// <summary>
-        /// <para>基于父分支在指定时间点的数据创建分支；不传则使用最新数据。采用带时区的 RFC3339 格式，最多支持 9 位小数秒；不支持空字符串或未来时间。</para>
+        /// <para>Creates the branch based on the data of the parent branch at the specified point in time. If you do not specify this parameter, the latest data is used. The value must be in RFC 3339 format with a time zone and support up to nine fractional digits for seconds. Empty strings and future times are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-15T07:32:00.123456Z</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParentTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project to which the branch belongs.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the branch belongs.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

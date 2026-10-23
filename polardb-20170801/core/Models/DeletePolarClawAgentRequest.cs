@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarClawAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the agent to delete. This parameter cannot be set to <c>main</c>.</para>
+        /// <para>The ID of the agent to delete. The value cannot be main. You can obtain this value from the response of CreatePolarClawAgent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the working directory and session files. Default value: <c>true</c>.</para>
+        /// <para>Specifies whether to delete the working directory and session files. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

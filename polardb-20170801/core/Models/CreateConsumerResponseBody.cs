@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateConsumerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The full APIKey, returned only in this response.</para>
+        /// <para>The complete API key. This parameter is returned only in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6c4b1f0317cd4fd7a5b446d3503d**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-mqveroemc***</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The key type. The value is always ApiKey.</para>
+        /// <para>The key type. Default value: ApiKey. Valid values: ApiKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiKey</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KeyType { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</para>

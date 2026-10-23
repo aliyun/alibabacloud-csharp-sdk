@@ -1,3 +1,8 @@
+2026-10-23 Version: 9.2.0
+- Support API ApplyLakebaseMountParameterGroup.
+- Support API DescribeBackupLogDownloadLinks.
+
+
 2026-10-22 Version: 9.1.0
 - Support API CreateAgenticDBTenant.
 - Support API DeleteAgenticDBTenant.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteKnowledgeBaseRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The ID of the knowledge base to delete. You can obtain the ID from the response of the CreateKnowledgeBase operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

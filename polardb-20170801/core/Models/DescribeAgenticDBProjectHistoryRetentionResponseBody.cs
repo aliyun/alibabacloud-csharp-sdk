@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBProjectHistoryRetentionResponseBody : TeaModel {
         /// <summary>
+        /// <para>DBClusterId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pagc-bp1abcdef1234567</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>项目当前生效的历史数据保留时长。实际可恢复范围请查询分支恢复窗口。</para>
+        /// <para>The effective history data retention period for the project. For the actual recoverable range, query the branch recovery window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>604800</para>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? HistoryRetentionSeconds { get; set; }
 
         /// <summary>
+        /// <para>ProjectId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>proj-a1b2c3d4e5f6</para>
         /// </summary>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>完成本次查询的时间，采用 UTC RFC3339 格式，不代表最晚可恢复时间。</para>
+        /// <para>The time when the query was completed, in UTC RFC3339 format. This does not represent the latest recoverable time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-16T07:32:00Z</para>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string QueriedAt { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>req-123</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>TenantId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>
         /// </summary>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The ID of the knowledge base to update. You can obtain the ID from the response of the CreateKnowledgeBase operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The search mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>balanced (default): balanced mode.</description></item>
-        /// <item><description>precise: precise mode.</description></item>
-        /// <item><description>semantic: semantic mode.</description></item>
+        /// <item><description>balanced: Balanced mode. This is the default value.</description></item>
+        /// <item><description>precise: Precise mode.</description></item>
+        /// <item><description>semantic: Semantic mode.</description></item>
         /// <item><description>knn: KNN mode.</description></item>
-        /// <item><description>rrf: reciprocal rank fusion (RRF) mode.</description></item>
+        /// <item><description>rrf: RRF fusion.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyRateLimitPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The ID of the gateway instance. You can obtain the ID from the GwClusterId parameter returned by CreateGateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The rate limit policy ID.</para>
+        /// <para>The ID of the throttling policy to be modified. You can obtain the ID from the PolicyId parameter returned by CreateRateLimitPolicy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of requests per minute.</para>
+        /// <para>The limit on the number of requests per minute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RateLimitRpm { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of tokens per minute.</para>
+        /// <para>The limit on the number of tokens per minute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

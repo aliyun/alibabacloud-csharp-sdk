@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<string> Captions { get; set; }
 
             /// <summary>
-            /// <para>The list of structured element references in the Docling source document associated with the shard, which can be used to precisely locate the original elements.</para>
+            /// <para>The list of structured element references of the source document associated with the shard, which can be used to precisely locate the original elements.</para>
             /// </summary>
             [NameInMap("DocItems")]
             [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The element reference of the image in the Docling source document structure.</para>
+                /// <para>The element reference of the image in the source document structure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>#/pictures/1</para>

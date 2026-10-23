@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
@@ -46,10 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
-        /// <remarks>
-        /// <para>Note: This operation applies only to PolarDB on ENS. The DBClusterId must be the ID of an edge cluster. Regular PolarDB cluster IDs are not accepted.</para>
-        /// </remarks>
+        /// <para>The cluster ID. This operation is applicable only to PolarDB on ENS. You must use the ID of an edge cluster. You can call the DescribeDBClustersZonal operation and obtain the DBClusterId from the Items list in the response. Regular PolarDB cluster IDs are not accepted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

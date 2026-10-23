@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateConsumerRequest : TeaModel {
         /// <summary>
-        /// <para>The consumer group name.</para>
+        /// <para>The consumer group ID. You can obtain the ID from the ConsumerGroupId parameter returned by the CreateConsumerGroup operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-p3gk2oh55c**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The gateway instance ID. You can obtain the ID from the GwClusterId parameter returned by the CreateGateway operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The key type. The only supported value is ApiKey.</para>
+        /// <para>The key type. Default value: ApiKey. Valid values: ApiKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiKey</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KeyType { get; set; }
 
         /// <summary>
-        /// <para>The user name.</para>
+        /// <para>The username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The user nickname.</para>
+        /// <para>The nickname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

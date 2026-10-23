@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The device ID.</para>
+        /// <para>The ID of the paired device to remove. You can call ListPolarClawDevicePairs and obtain the DeviceId from the returned Paired list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

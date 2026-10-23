@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The unique identifier of the knowledge base.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pkb-xxxxx</para>

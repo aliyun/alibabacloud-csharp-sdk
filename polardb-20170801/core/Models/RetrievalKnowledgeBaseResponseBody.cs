@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<RetrievalKnowledgeBaseResponseBodyResults> Results { get; set; }
         public class RetrievalKnowledgeBaseResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The list of captions for figures or tables associated with the chunk.</para>
+            /// <para>The list of captions for the figures or tables associated with the chunk.</para>
             /// </summary>
             [NameInMap("Captions")]
             [Validation(Required=false)]
             public List<string> Captions { get; set; }
 
             /// <summary>
-            /// <para>The list of references to structured elements in the Docling source document associated with the chunk. You can use these references to precisely locate the original elements.</para>
+            /// <para>The list of structured element references in the source document associated with the chunk. You can use these references to precisely locate the original elements.</para>
             /// </summary>
             [NameInMap("DocItems")]
             [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2024 Financial Report.pdf</para>
+            /// <para>2024_Financial_Report.pdf</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The heading hierarchy of the section to which the chunk belongs.</para>
+            /// <para>The chain of section headings to which the chunk belongs.</para>
             /// </summary>
             [NameInMap("Headings")]
             [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The reference to the image element in the structure of the Docling source document.</para>
+                /// <para>The element reference of the image in the source document structure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>#/pictures/1</para>

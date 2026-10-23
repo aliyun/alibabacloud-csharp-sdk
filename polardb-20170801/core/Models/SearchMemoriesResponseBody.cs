@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class SearchMemoriesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Page { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class SearchMemoriesResponseBodyResults : TeaModel {
             /// <summary>
             /// <para>The creation time.</para>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-26T08:25:44Z</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The metadata.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_现行有效\&quot;}</para>
+            /// <para>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Valid&quot;}</para>
             /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The update time.</para>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16T02:27:33Z</para>
@@ -127,6 +131,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The total number of matching records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -135,6 +141,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Total { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AnswerKnowledgeBaseRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The unique identifier of the knowledge base. To obtain the ID, first call CreateKnowledgeSpace to create a knowledge space, use the returned KnowledgeSpaceId to call CreateKnowledgeBase, and then use the KnowledgeBaseId returned by CreateKnowledgeBase. Separate multiple knowledge base IDs with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of context characters. Valid values: 1000 to 32000.</para>
+        /// <para>The maximum number of characters in the context. Valid values: 1000 to 32000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16000</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable reranking. Disabled by default.</para>
+        /// <para>Specifies whether to enable reranking. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? RerankEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return citation sources. Enabled by default.</para>
+        /// <para>Specifies whether to return reference sources. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The number of recall results to retrieve.</para>
+        /// <para>The number of results to recall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? TopK { get; set; }
 
         /// <summary>
-        /// <para>The user supplementary instructions.</para>
+        /// <para>The additional user instructions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Return a short summary and test result.</para>
