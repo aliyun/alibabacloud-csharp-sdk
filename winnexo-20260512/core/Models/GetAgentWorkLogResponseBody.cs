@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetAgentWorkLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>按时间倒序的 Agent 工作记录，未保存记录时为空列表</para>
+        /// <para>The agent operation records in reverse chronological order. If no records are saved, an empty list is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<GetAgentWorkLogResponseBodyLogs> Logs { get; set; }
         public class GetAgentWorkLogResponseBodyLogs : TeaModel {
             /// <summary>
-            /// <para>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</para>
+            /// <para>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, and ARTIFACT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REPLY</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</para>
+            /// <para>The saved raw record content. Tool invocations and artifact metadata are represented as JSON strings.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>已完成本轮数据查询</para>
+            /// <para>The data query for the current round is completed</para>
             /// </summary>
             [NameInMap("detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>该条工作记录耗时，单位毫秒；产物记录为0</para>
+            /// <para>The duration of this operation record, in milliseconds. The value is 0 for artifact records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>所属节点key（nodeKey），不是会话ID</para>
+            /// <para>The key of the node to which the record belongs. This is not the session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>query.amount</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</para>
+            /// <para>The time when the event was recorded, in ISO 8601 format. If the source record has no time, an empty string is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T08:00:00Z</para>
@@ -82,17 +82,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>当前页码，从1开始</para>
+        /// <para>The current page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数，取值1至100</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>筛选后的工作日志总条数</para>
+        /// <para>The total number of filtered operation log entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

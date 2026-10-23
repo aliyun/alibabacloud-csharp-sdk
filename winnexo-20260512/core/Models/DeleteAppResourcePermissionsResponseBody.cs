@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class DeleteAppResourcePermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为 200</para>
+        /// <para>The business status code. The value 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>删除的权限记录数</para>
+        /// <para>The number of deleted permission records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? DeletedCount { get; set; }
 
         /// <summary>
-        /// <para>错误描述；成功时为空</para>
+        /// <para>The error message. This field is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListTodosRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间 ID（可选过滤；不传 = 全部空间）</para>
+        /// <para>The collaboration workspace ID. This is an optional filter. If not specified, items from all workspaces are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>标题/摘要模糊搜索关键词</para>
+        /// <para>The keyword for fuzzy search in the title or summary.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>审批</para>
+        /// <para>Approval</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>单页最大返回数量（1~100）；传入时优先于 pageSize</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. This parameter takes precedence over pageSize if both are specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>翻页令牌，取上次响应返回的 nextToken；传入时优先于 page</para>
+        /// <para>The pagination token. Use the nextToken value returned in the previous response. This parameter takes precedence over page if both are specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>页码；传入 nextToken 时忽略</para>
+        /// <para>The page number. This parameter is ignored if nextToken is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数（1~100）</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>优先级筛选（HIGH/MEDIUM/LOW）</para>
+        /// <para>The priority filter. Valid values: HIGH, MEDIUM, and LOW.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HIGH</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> Priorities { get; set; }
 
         /// <summary>
-        /// <para>读取状态筛选（UNREAD/READ，按处理人 readAt 判定）</para>
+        /// <para>The read status filter. Valid values: UNREAD and READ. The status is determined by the readAt field of the assignee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNREAD</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> ReadStatus { get; set; }
 
         /// <summary>
-        /// <para>排序方式</para>
+        /// <para>The sorting method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>待办类型筛选（WORKFLOW/OPEN_API）</para>
+        /// <para>The to-do type filter. Valid values: WORKFLOW and OPEN_API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WORKFLOW</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> SourceTypes { get; set; }
 
         /// <summary>
-        /// <para>待办状态筛选（PENDING/COMPLETED/CANCELLED）</para>
+        /// <para>The to-do status filter. Valid values: PENDING, COMPLETED, and CANCELLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> Statuses { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

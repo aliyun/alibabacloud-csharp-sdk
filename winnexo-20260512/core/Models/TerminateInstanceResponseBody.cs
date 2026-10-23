@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class TerminateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>物理实例ID</para>
+        /// <para>The physical instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>plan_example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>终止后状态</para>
+        /// <para>The status after termination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Terminated</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>状态版本</para>
+        /// <para>The state version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? StateVersion { get; set; }
 
         /// <summary>
-        /// <para>终止成功为 true；失败通过 Code 和 Message 返回</para>
+        /// <para>Indicates whether the termination was successful. A value of true indicates success. If the termination fails, the error code and message are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

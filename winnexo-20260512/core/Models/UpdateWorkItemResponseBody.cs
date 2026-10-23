@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateWorkItemResponseBody : TeaModel {
         /// <summary>
-        /// <para>验收标准</para>
+        /// <para>The acceptance criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AcceptanceCriteria { get; set; }
 
         /// <summary>
-        /// <para>已应用的状态版本</para>
+        /// <para>The applied status version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? AppliedStatusVersion { get; set; }
 
         /// <summary>
-        /// <para>输入附件列表</para>
+        /// <para>The list of input attachments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<UpdateWorkItemResponseBodyAttachments> Attachments { get; set; }
         public class UpdateWorkItemResponseBodyAttachments : TeaModel {
             /// <summary>
-            /// <para>附件ID</para>
+            /// <para>The attachment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AttachmentId { get; set; }
 
             /// <summary>
-            /// <para>内容类型</para>
+            /// <para>The content type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>附件访问入口（OpenAPI 302 前置）</para>
+            /// <para>The access URL of the attachment (prefixed with an OpenAPI 302 redirect).</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string RefUrl { get; set; }
 
             /// <summary>
-            /// <para>附件资源ID</para>
+            /// <para>The resource ID of the attachment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>附件资源类型</para>
+            /// <para>The resource type of the attachment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKind { get; set; }
 
             /// <summary>
-            /// <para>附件大小(字节)</para>
+            /// <para>The size of the attachment in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SizeBytes { get; set; }
 
             /// <summary>
-            /// <para>附件标题</para>
+            /// <para>The title of the attachment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>业务状态（七态）</para>
+        /// <para>The business status (seven states).</para>
         /// 
         /// <b>Example:</b>
         /// <para>PROCESSING</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>调用者是否可删除</para>
+        /// <para>Indicates whether the caller can delete the item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? CanDelete { get; set; }
 
         /// <summary>
-        /// <para>调用者是否可管理</para>
+        /// <para>Indicates whether the caller can manage the item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? CanManage { get; set; }
 
         /// <summary>
-        /// <para>是否可独立调整可见范围</para>
+        /// <para>Indicates whether the visibility scope can be adjusted independently.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? CanManageVisibility { get; set; }
 
         /// <summary>
-        /// <para>调用者是否可重命名</para>
+        /// <para>Indicates whether the caller can rename the item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? CanRename { get; set; }
 
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>协作空间ID</para>
+        /// <para>The collaboration workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>协作人用户ID列表</para>
+        /// <para>The list of user IDs of the collaborators.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<long?> CollaboratorUserIds { get; set; }
 
         /// <summary>
-        /// <para>关联会话ID</para>
+        /// <para>The ID of the associated conversation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>创建时间(ISO8601)</para>
+        /// <para>The creation time (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>创建人用户ID</para>
+        /// <para>The user ID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? CreatedByUserId { get; set; }
 
         /// <summary>
-        /// <para>创建来源：DEFAULT/TASK</para>
+        /// <para>The creation source. Valid values: DEFAULT and TASK.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreationType { get; set; }
 
         /// <summary>
-        /// <para>当前物理计划ID</para>
+        /// <para>The current physical plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CurrentPlanId { get; set; }
 
         /// <summary>
-        /// <para>当前修订号</para>
+        /// <para>The current revision number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? CurrentRevision { get; set; }
 
         /// <summary>
-        /// <para>当前运行ID</para>
+        /// <para>The current run ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CurrentRunId { get; set; }
 
         /// <summary>
-        /// <para>当前运行序号</para>
+        /// <para>The current run sequence number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? CurrentRunSeq { get; set; }
 
         /// <summary>
-        /// <para>当前步骤名称</para>
+        /// <para>The current step name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CurrentStepName { get; set; }
 
         /// <summary>
-        /// <para>描述</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>输入快照版本</para>
+        /// <para>The input snapshot version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? InputVersion { get; set; }
 
         /// <summary>
-        /// <para>工作项类型</para>
+        /// <para>The work item type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WORKFLOW</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemType { get; set; }
 
         /// <summary>
-        /// <para>最近进入处理中的时间(ISO8601)</para>
+        /// <para>The time when the item last entered the processing state (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string LastProcessingAt { get; set; }
 
         /// <summary>
-        /// <para>是否为兼容期自由探索话题</para>
+        /// <para>Indicates whether it is a free exploration topic during the compatibility period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? LegacyTopic { get; set; }
 
         /// <summary>
-        /// <para>可见成员用户ID列表</para>
+        /// <para>The list of user IDs of visible members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -342,17 +342,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<long?> MemberUserIds { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>修改时间(ISO8601)</para>
+        /// <para>The modification time (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ModifiedAt { get; set; }
 
         /// <summary>
-        /// <para>负责人用户ID</para>
+        /// <para>The user ID of the owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>调用者个人置顶状态</para>
+        /// <para>The personal pin status of the caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Pinned { get; set; }
 
         /// <summary>
-        /// <para>优先级</para>
+        /// <para>The priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HIGH</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>已完成进度</para>
+        /// <para>The completed progress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ProgressCompleted { get; set; }
 
         /// <summary>
-        /// <para>总进度</para>
+        /// <para>The total progress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ProgressTotal { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>任务执行ID</para>
+        /// <para>The task execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceExecutionId { get; set; }
 
         /// <summary>
-        /// <para>任务来源ID</para>
+        /// <para>The task source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTaskId { get; set; }
 
         /// <summary>
-        /// <para>任务来源名称</para>
+        /// <para>The task source name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTaskName { get; set; }
 
         /// <summary>
-        /// <para>任务触发键</para>
+        /// <para>The task trigger key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTriggerKey { get; set; }
 
         /// <summary>
-        /// <para>任务来源类型</para>
+        /// <para>The task source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -472,7 +472,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>标题</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>任务触发时区</para>
+        /// <para>The task trigger time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -492,7 +492,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TriggerTimezone { get; set; }
 
         /// <summary>
-        /// <para>任务触发时间(ISO8601)</para>
+        /// <para>The task trigger time (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TriggeredAt { get; set; }
 
         /// <summary>
-        /// <para>乐观版本号</para>
+        /// <para>The optimistic version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -512,7 +512,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Version { get; set; }
 
         /// <summary>
-        /// <para>可见范围</para>
+        /// <para>The visibility scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>可见范围来源：SELF/TASK/TEMPLATE</para>
+        /// <para>The source of the visibility scope. Valid values: SELF, TASK, and TEMPLATE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELF</para>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string VisibilitySource { get; set; }
 
         /// <summary>
-        /// <para>工作项ID</para>
+        /// <para>The work item ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string WorkItemId { get; set; }
 
         /// <summary>
-        /// <para>Workflow四态投影</para>
+        /// <para>The workflow status projection (four states).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -552,7 +552,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string WorkflowStatus { get; set; }
 
         /// <summary>
-        /// <para>绑定的工作流模板ID列表</para>
+        /// <para>The list of IDs for the bound workflow templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

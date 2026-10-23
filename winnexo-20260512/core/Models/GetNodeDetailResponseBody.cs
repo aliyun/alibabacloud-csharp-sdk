@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetNodeDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>按思考、技能、工具、回复和产物分组的实际工作过程</para>
+        /// <para>The actual work process grouped by thoughts, skills, tools, replies, and artifacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;thoughts&quot;:[],&quot;skillCalls&quot;:[],&quot;toolCalls&quot;:[],&quot;replies&quot;:[],&quot;artifacts&quot;:[]}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public GetNodeDetailResponseBodyAgentWorkProcess AgentWorkProcess { get; set; }
         public class GetNodeDetailResponseBodyAgentWorkProcess : TeaModel {
             /// <summary>
-            /// <para>节点产物摘要与稳定引用，与顶层artifacts一致；无产物时为空列表</para>
+            /// <para>The artifacts: saved node work records and artifacts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<GetNodeDetailResponseBodyAgentWorkProcessArtifacts> Artifacts { get; set; }
             public class GetNodeDetailResponseBodyAgentWorkProcessArtifacts : TeaModel {
                 /// <summary>
-                /// <para>登记产物ID；仅来自结果摘要的产物可能为空</para>
+                /// <para>The registered artifact ID. This parameter may be empty for artifacts derived only from the result summary.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>artifact_example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ArtifactId { get; set; }
 
                 /// <summary>
-                /// <para>产物在节点结果中的唯一key</para>
+                /// <para>The unique key of the artifact in the node result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>amount_report</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ArtifactKey { get; set; }
 
                 /// <summary>
-                /// <para>产物稳定引用，包含kind、id、url；登记产物URL为重新鉴权入口，可为空</para>
+                /// <para>The stable reference of the artifact, including kind, id, and url. The URL of a registered artifact is a re-authentication entry point and can be empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;kind&quot;:&quot;INLINE&quot;,&quot;id&quot;:&quot;amount_report&quot;,&quot;url&quot;:&quot;inline://amount_report&quot;}</para>
@@ -60,27 +60,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public Dictionary<string, string> Ref { get; set; }
 
                 /// <summary>
-                /// <para>产物摘要，不含inline正文</para>
+                /// <para>The artifact summary, excluding inline content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>已完成签单金额统计</para>
+                /// <para>Signed amount statistics completed</para>
                 /// </summary>
                 [NameInMap("summary")]
                 [Validation(Required=false)]
                 public string Summary { get; set; }
 
                 /// <summary>
-                /// <para>产物展示标题</para>
+                /// <para>The display title of the artifact.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>签单金额统计报告</para>
+                /// <para>Signed amount statistics report</para>
                 /// </summary>
                 [NameInMap("title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>产物类型</para>
+                /// <para>The artifact type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TEXT</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>已保存的回复记录，action为REPLY；无记录时为空列表</para>
+            /// <para>The replies: saved node work records and artifacts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<GetNodeDetailResponseBodyAgentWorkProcessReplies> Replies { get; set; }
             public class GetNodeDetailResponseBodyAgentWorkProcessReplies : TeaModel {
                 /// <summary>
-                /// <para>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</para>
+                /// <para>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REPLY</para>
@@ -112,17 +112,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</para>
+                /// <para>The saved original record content. Tool invocation and artifact metadata are JSON strings.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>已完成本轮数据查询</para>
+                /// <para>Data query for this turn completed</para>
                 /// </summary>
                 [NameInMap("detail")]
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
                 /// <summary>
-                /// <para>该条工作记录耗时，单位毫秒；产物记录为0</para>
+                /// <para>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1200</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// <para>所属节点key（nodeKey），不是会话ID</para>
+                /// <para>The key of the parent node, not the conversation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>query.amount</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</para>
+                /// <para>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-10-14T08:00:00Z</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>已保存的技能调用记录，action为SKILL_CALL；无记录时为空列表</para>
+            /// <para>The skill calls: saved node work records and artifacts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<GetNodeDetailResponseBodyAgentWorkProcessSkillCalls> SkillCalls { get; set; }
             public class GetNodeDetailResponseBodyAgentWorkProcessSkillCalls : TeaModel {
                 /// <summary>
-                /// <para>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</para>
+                /// <para>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SKILL_CALL</para>
@@ -174,17 +174,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</para>
+                /// <para>The saved original record content. Tool invocation and artifact metadata are JSON strings.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>已完成本轮数据查询</para>
+                /// <para>Data query for this turn completed</para>
                 /// </summary>
                 [NameInMap("detail")]
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
                 /// <summary>
-                /// <para>该条工作记录耗时，单位毫秒；产物记录为0</para>
+                /// <para>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1200</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// <para>所属节点key（nodeKey），不是会话ID</para>
+                /// <para>The key of the parent node, not the conversation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>query.amount</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</para>
+                /// <para>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-10-14T08:00:00Z</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>已保存的思考记录，action为THINK；无记录时为空列表</para>
+            /// <para>The thoughts: saved node work records and artifacts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<GetNodeDetailResponseBodyAgentWorkProcessThoughts> Thoughts { get; set; }
             public class GetNodeDetailResponseBodyAgentWorkProcessThoughts : TeaModel {
                 /// <summary>
-                /// <para>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</para>
+                /// <para>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>THINK</para>
@@ -236,17 +236,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</para>
+                /// <para>The saved original record content. Tool invocation and artifact metadata are JSON strings.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>已完成本轮数据查询</para>
+                /// <para>Data query for this turn completed</para>
                 /// </summary>
                 [NameInMap("detail")]
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
                 /// <summary>
-                /// <para>该条工作记录耗时，单位毫秒；产物记录为0</para>
+                /// <para>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1200</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// <para>所属节点key（nodeKey），不是会话ID</para>
+                /// <para>The key of the parent node, not the conversation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>query.amount</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</para>
+                /// <para>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-10-14T08:00:00Z</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>已保存的工具调用记录，action为TOOL_CALL；无记录时为空列表</para>
+            /// <para>The tool calls: saved node work records and artifacts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<GetNodeDetailResponseBodyAgentWorkProcessToolCalls> ToolCalls { get; set; }
             public class GetNodeDetailResponseBodyAgentWorkProcessToolCalls : TeaModel {
                 /// <summary>
-                /// <para>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</para>
+                /// <para>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TOOL_CALL</para>
@@ -298,17 +298,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</para>
+                /// <para>The saved original record content. Tool invocation and artifact metadata are JSON strings.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>已完成本轮数据查询</para>
+                /// <para>Data query for this turn completed</para>
                 /// </summary>
                 [NameInMap("detail")]
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
                 /// <summary>
-                /// <para>该条工作记录耗时，单位毫秒；产物记录为0</para>
+                /// <para>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1200</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// <para>所属节点key（nodeKey），不是会话ID</para>
+                /// <para>The key of the parent node, not the conversation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>query.amount</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</para>
+                /// <para>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-10-14T08:00:00Z</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>已保存的节点产物摘要与稳定引用，不包含inline正文；无产物时为空列表</para>
+        /// <para>The artifacts: saved node work records and artifacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<GetNodeDetailResponseBodyArtifacts> Artifacts { get; set; }
         public class GetNodeDetailResponseBodyArtifacts : TeaModel {
             /// <summary>
-            /// <para>登记产物ID；仅来自结果摘要的产物可能为空</para>
+            /// <para>The registered artifact ID. This parameter may be empty for artifacts derived only from the result summary.</para>
             /// 
             /// <b>Example:</b>
             /// <para>artifact_example</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ArtifactId { get; set; }
 
             /// <summary>
-            /// <para>产物在节点结果中的唯一key</para>
+            /// <para>The unique key of the artifact in the node result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amount_report</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ArtifactKey { get; set; }
 
             /// <summary>
-            /// <para>产物稳定引用，包含kind、id、url；登记产物URL为重新鉴权入口，可为空</para>
+            /// <para>The stable reference of the artifact, including kind, id, and url. The URL of a registered artifact is a re-authentication entry point and can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;kind&quot;:&quot;INLINE&quot;,&quot;id&quot;:&quot;amount_report&quot;,&quot;url&quot;:&quot;inline://amount_report&quot;}</para>
@@ -382,27 +382,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public Dictionary<string, string> Ref { get; set; }
 
             /// <summary>
-            /// <para>产物摘要，不含inline正文</para>
+            /// <para>The artifact summary, excluding inline content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>已完成签单金额统计</para>
+            /// <para>Signed amount statistics completed</para>
             /// </summary>
             [NameInMap("summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
 
             /// <summary>
-            /// <para>产物展示标题</para>
+            /// <para>The display title of the artifact.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>签单金额统计报告</para>
+            /// <para>Signed amount statistics report</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>产物类型</para>
+            /// <para>The artifact type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TEXT</para>
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>节点执行尝试序号</para>
+        /// <para>The sequence number of the node execution attempt.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? AttemptSeq { get; set; }
 
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>节点会话ID，未创建时为空</para>
+        /// <para>The node conversation ID. This parameter is empty if no conversation is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conversation_example</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>当前节点会话是否可以继续输入</para>
+        /// <para>Indicates whether the current node conversation can continue to receive input.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -454,27 +454,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ConversationWritable { get; set; }
 
         /// <summary>
-        /// <para>节点负责人展示名称，未知时为空</para>
+        /// <para>The display name of the node owner. This parameter is empty if the owner is unknown.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>数字员工</para>
+        /// <para>Digital worker</para>
         /// </summary>
         [NameInMap("handler")]
         [Validation(Required=false)]
         public string Handler { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>节点 key（nodeKey）</para>
+        /// <para>The node key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>query.amount</para>
@@ -484,17 +484,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>节点展示名称，与节点列表同源</para>
+        /// <para>The display name of the node, which shares the same source as the node list.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查询签单金额</para>
+        /// <para>Query signed amount</para>
         /// </summary>
         [NameInMap("nodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>节点类型，返回实际枚举</para>
+        /// <para>The node type. The actual enum value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AGENT</para>
@@ -504,7 +504,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -514,7 +514,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>节点结果摘要，不含inline正文</para>
+        /// <para>The node result summary, excluding inline content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, object> Result { get; set; }
 
         /// <summary>
-        /// <para>是否有待派发续轮</para>
+        /// <para>Indicates whether there are pending follow-up turns to be dispatched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -534,7 +534,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ResumePending { get; set; }
 
         /// <summary>
-        /// <para>节点AI工作记录时间线，与GetAgentWorkLog同源，duration单位毫秒；无记录时为空列表</para>
+        /// <para>The run log: saved node work records and artifacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -544,7 +544,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<GetNodeDetailResponseBodyRunLog> RunLog { get; set; }
         public class GetNodeDetailResponseBodyRunLog : TeaModel {
             /// <summary>
-            /// <para>记录类型：THINK、REPLY、TOOL_CALL、SKILL_CALL或ARTIFACT</para>
+            /// <para>The record type. Valid values: THINK, REPLY, TOOL_CALL, SKILL_CALL, or ARTIFACT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REPLY</para>
@@ -554,17 +554,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>已保存的原始记录内容；工具调用与产物元数据为JSON字符串</para>
+            /// <para>The saved original record content. Tool invocation and artifact metadata are JSON strings.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>已完成本轮数据查询</para>
+            /// <para>Data query for this turn completed</para>
             /// </summary>
             [NameInMap("detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>该条工作记录耗时，单位毫秒；产物记录为0</para>
+            /// <para>The time taken for this work record, in milliseconds. The value is 0 for artifact records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -574,7 +574,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>所属节点key（nodeKey），不是会话ID</para>
+            /// <para>The key of the parent node, not the conversation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>query.amount</para>
@@ -584,7 +584,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>记录事件时间，ISO-8601格式；源记录无时间时为空字符串</para>
+            /// <para>The time when the event is recorded, in ISO-8601 format. This is an empty string if the source record has no time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T08:00:00Z</para>
@@ -606,7 +606,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? StateVersion { get; set; }
 
         /// <summary>
-        /// <para>节点运行状态，返回实际枚举</para>
+        /// <para>The node running status. The actual enum value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -616,7 +616,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>当前节点关联的待办ID列表，元素为待办ID字符串</para>
+        /// <para>The list of to-do IDs associated with the current node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -626,7 +626,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> TodoIds { get; set; }
 
         /// <summary>
-        /// <para>当前尝试的对话轮序号</para>
+        /// <para>The sequence number of the conversation turn in the current attempt.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -636,7 +636,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TurnSeq { get; set; }
 
         /// <summary>
-        /// <para>节点等待原因，未等待时为空</para>
+        /// <para>The reason why the node is waiting. This parameter is empty if the node is not waiting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HUMAN_INPUT</para>

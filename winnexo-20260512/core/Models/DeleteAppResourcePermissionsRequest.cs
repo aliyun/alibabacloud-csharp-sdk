@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class DeleteAppResourcePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>撤权范围</para>
+        /// <para>The scope of the permissions to be revoked.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<DeleteAppResourcePermissionsRequestItems> Items { get; set; }
         public class DeleteAppResourcePermissionsRequestItems : TeaModel {
             /// <summary>
-            /// <para>GRANTEE 主体 ID 列表</para>
+            /// <para>The list of grantee principal IDs.</para>
             /// </summary>
             [NameInMap("granteeIds")]
             [Validation(Required=false)]
             public List<string> GranteeIds { get; set; }
 
             /// <summary>
-            /// <para>GRANTEE USER 所属租户；同资源租户可省略，跨租户 USER 必填</para>
+            /// <para>The ID of the tenant to which the grantee user belongs. This parameter is optional if the user and the resource belong to the same tenant, and is required for cross-tenant users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeTenantId { get; set; }
 
             /// <summary>
-            /// <para>GRANTEE 主体类型</para>
+            /// <para>The grantee principal type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeType { get; set; }
 
             /// <summary>
-            /// <para>RESOURCE 是否包含点分后代资源；省略为 false</para>
+            /// <para>Specifies whether to include dot-separated descendant resources for the RESOURCE. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IncludeDescendants { get; set; }
 
             /// <summary>
-            /// <para>首段为 APP 应用键的点分资源键</para>
+            /// <para>The dot-separated resource key whose first segment is the application key of the APP.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>固定为 APP_RESOURCE</para>
+            /// <para>The resource type. Set the value to APP_RESOURCE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>删除范围：按资源或按主体</para>
+            /// <para>The deletion scope: by resource or by principal.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>资源所属租户 ID；省略为调用人当前租户</para>
+        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

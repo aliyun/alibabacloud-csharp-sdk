@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListTodosResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>是否还有更多数据</para>
+        /// <para>Indicates whether more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>当前页待办列表</para>
+        /// <para>The list of to-do items on the current page.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListTodosResponseBodyItems> Items { get; set; }
         public class ListTodosResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>处理人数量</para>
+            /// <para>The number of assignees.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? AssigneeCount { get; set; }
 
             /// <summary>
-            /// <para>完成时间（北京时间 YYYY-MM-DD HH:mm:ss）</para>
+            /// <para>The completion time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:00:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CompletedAt { get; set; }
 
             /// <summary>
-            /// <para>完成人用户ID；未完成为空</para>
+            /// <para>The user ID of the user who completed the item. This field is empty if the item is not completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CompletedByUserId { get; set; }
 
             /// <summary>
-            /// <para>完成人姓名；未完成为空</para>
+            /// <para>The name of the user who completed the item. This field is empty if the item is not completed.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John Doe</para>
             /// </summary>
             [NameInMap("completedByUserName")]
             [Validation(Required=false)]
             public string CompletedByUserName { get; set; }
 
             /// <summary>
-            /// <para>创建时间（北京时间 YYYY-MM-DD HH:mm:ss）</para>
+            /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:00:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>最后修改时间（北京时间 YYYY-MM-DD HH:mm:ss）</para>
+            /// <para>The last modification time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:00:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>调用者是否已读</para>
+            /// <para>Indicates whether the caller has read the item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsRead { get; set; }
 
             /// <summary>
-            /// <para>发出该待办的 assistant 消息ID；无会话来源为空</para>
+            /// <para>The message ID of the assistant that sent the to-do item. This field is empty if there is no conversation source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>msg-1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// <para>调用者的处理人行状态</para>
+            /// <para>The action status of the caller as an assignee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PENDING</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string MyAssigneeStatus { get; set; }
 
             /// <summary>
-            /// <para>调用者的列表展示状态</para>
+            /// <para>The list display status for the caller.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TODO</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string MyDisplayState { get; set; }
 
             /// <summary>
-            /// <para>优先级</para>
+            /// <para>The priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HIGH</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>问题数量</para>
+            /// <para>The number of questions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? QuestionCount { get; set; }
 
             /// <summary>
-            /// <para>问题摘要列表</para>
+            /// <para>The list of question summaries.</para>
             /// </summary>
             [NameInMap("questionSummaries")]
             [Validation(Required=false)]
             public List<string> QuestionSummaries { get; set; }
 
             /// <summary>
-            /// <para>来源上下文（创建时原样透传）</para>
+            /// <para>The source context. This context is passed through as-is during creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>source=openapi</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public Dictionary<string, object> SourceContext { get; set; }
 
             /// <summary>
-            /// <para>待办来源类型</para>
+            /// <para>The source type of the to-do item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WORKFLOW</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>待办主状态</para>
+            /// <para>The primary status of the to-do item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PENDING</para>
@@ -194,17 +194,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>待办标题</para>
+            /// <para>The to-do title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>治理审批</para>
+            /// <para>Governance approval</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>待办ID</para>
+            /// <para>The to-do ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>todo_abc123</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>本次生效的单页最大返回数量</para>
+        /// <para>The effective maximum number of entries to return per page for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -226,17 +226,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>下一页翻页令牌；无更多数据时为空字符串</para>
+        /// <para>The pagination token for the next page. This field is an empty string if no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>生效单页条数</para>
+        /// <para>The effective number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>筛选条件下可见总数</para>
+        /// <para>The total number of visible items under the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CloseWorkflowTodosRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间 ID（命中范围限定该空间内）</para>
+        /// <para>The ID of the collaborative workspace. The match scope is limited to this workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>工作流 ID（run 粒度）</para>
+        /// <para>The workflow ID at the run level.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceWorkflowId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

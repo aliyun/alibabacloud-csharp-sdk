@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAppResourceUserPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为 200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>当前页资源与权限</para>
+        /// <para>The resources and permissions on the current page.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListAppResourceUserPermissionsResponseBodyItems> Items { get; set; }
         public class ListAppResourceUserPermissionsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>实际存储且有效的权限点</para>
+            /// <para>The stored and valid permission points.</para>
             /// </summary>
             [NameInMap("permissions")]
             [Validation(Required=false)]
             public List<string> Permissions { get; set; }
 
             /// <summary>
-            /// <para>资源键</para>
+            /// <para>The resource key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app.demo.resource_1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>资源类型</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APP_RESOURCE</para>
@@ -56,17 +56,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述；成功时为空</para>
+        /// <para>The error description. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>总资源数</para>
+        /// <para>The total number of resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

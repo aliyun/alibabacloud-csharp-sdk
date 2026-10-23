@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class DeleteAppResourcePermissionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>撤权范围</para>
+        /// <para>The scope of the permissions to be revoked.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemsShrink { get; set; }
 
         /// <summary>
-        /// <para>资源所属租户 ID；省略为调用人当前租户</para>
+        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListWorkItemsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>业务状态筛选（七态）</para>
+        /// <para>The business statuses used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BusinessStatusesShrink { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>工作项类型筛选</para>
+        /// <para>The work item types used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>标题/描述模糊搜索关键词</para>
+        /// <para>The keyword for fuzzy search in the title or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>单页最大返回数量（1~100）；传入时优先于 pageSize</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. This parameter takes precedence over pageSize if both are specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>翻页令牌，取上次响应返回的 nextToken；传入时优先于 page</para>
+        /// <para>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>页码；传入 nextToken 时忽略</para>
+        /// <para>The page number. This parameter is ignored if nextToken is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数（1~100）</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>优先级筛选</para>
+        /// <para>The priorities used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PrioritiesShrink { get; set; }
 
         /// <summary>
-        /// <para>个人范围筛选</para>
+        /// <para>The personal scope used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASSIGNED_TO_ME</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

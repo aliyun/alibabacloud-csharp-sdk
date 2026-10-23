@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetTodoRequest : TeaModel {
         /// <summary>
-        /// <para>assistant 消息ID（按消息反查多条）</para>
+        /// <para>The ID of the assistant message. This parameter is used to query multiple to-do items by message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>msg-1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>待办ID（单条查询）</para>
+        /// <para>The ID of the to-do item (get).</para>
         /// 
         /// <b>Example:</b>
         /// <para>todo_abc123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TodoId { get; set; }
 
         /// <summary>
-        /// <para>工作项ID（按来源反查多条）</para>
+        /// <para>The ID of the work item. This parameter is used to query multiple to-do items by source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wi_1</para>

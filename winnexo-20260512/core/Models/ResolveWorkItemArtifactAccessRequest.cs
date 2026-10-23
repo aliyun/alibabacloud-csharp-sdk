@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ResolveWorkItemArtifactAccessRequest : TeaModel {
         /// <summary>
-        /// <para>产物 ID</para>
+        /// <para>The ID of the artifact.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>工作项 ID</para>
+        /// <para>The ID of the work item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

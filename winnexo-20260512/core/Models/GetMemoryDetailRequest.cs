@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetMemoryDetailRequest : TeaModel {
         /// <summary>
-        /// <para>写作协作空间 ID；ownerType 为 group 时必填，且当前鉴权用户须为该空间的活跃成员；ownerType 为 user 时不传</para>
+        /// <para>The workspace ID. This parameter is required when ownerType is set to group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_12345</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>记忆归属范围；user 为当前鉴权用户的个人记忆，group 为指定写作协作空间的记忆；不传时默认为 user</para>
+        /// <para>The owner type. A value of user indicates the personal memory of the authenticated user. A value of group indicates the memory of a specified workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OwnerType { get; set; }
 
         /// <summary>
-        /// <para>租户 ID，查询参数；不传时使用调用方的默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>

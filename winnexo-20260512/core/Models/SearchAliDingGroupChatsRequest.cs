@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SearchAliDingGroupChatsRequest : TeaModel {
         /// <summary>
-        /// <para>分页游标，首页传 0</para>
+        /// <para>The cursor for the paged query. Set this parameter to 0 for the first request. For subsequent paging requests, set this parameter to the value of <b>nextCursor</b> returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Cursor { get; set; }
 
         /// <summary>
-        /// <para>是否排除免打扰群聊</para>
+        /// <para>Specifies whether to exclude muted group chats.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,18 +30,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ExcludeMuted { get; set; }
 
         /// <summary>
-        /// <para>群聊搜索关键词</para>
+        /// <para>The keyword for search. The keyword always matches the name field. If the description field is defined in the schema, the keyword also matches the description field.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>客户项目</para>
+        /// <para>Customer project</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>每页条数，范围 1-100</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>租户 ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateTodoShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>处理人平台用户ID列表（1~100，去重后生效）</para>
+        /// <para>The list of platform user IDs of the assignees. You can specify 1 to 100 IDs. Duplicate IDs are automatically removed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AssigneeUserIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID（可选）</para>
+        /// <para>The ID of the collaboration workspace. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>优先级</para>
+        /// <para>The priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MEDIUM</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>问题清单（1~N）</para>
+        /// <para>The list of questions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string QuestionsShrink { get; set; }
 
         /// <summary>
-        /// <para>来源上下文（原样透传落库，不校验）</para>
+        /// <para>The source context. The value is passed through and stored in the database as-is without validation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceContextShrink { get; set; }
 
         /// <summary>
-        /// <para>待办来源（仅 OPEN_API）</para>
+        /// <para>The source of the to-do item. Only OPEN_API is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>待办标题（≤200 字）</para>
+        /// <para>The title of the to-do item. The maximum length is 200 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>治理审批</para>
+        /// <para>Governance approval</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

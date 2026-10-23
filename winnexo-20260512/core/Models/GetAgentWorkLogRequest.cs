@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetAgentWorkLogRequest : TeaModel {
         /// <summary>
-        /// <para>可选节点 key</para>
+        /// <para>The optional node key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>step_1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>页码，从 1 开始</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数，最大 100</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>租户ID，缺省使用调用方默认租户</para>
+        /// <para>The tenant ID. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>工作项ID</para>
+        /// <para>The work item ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

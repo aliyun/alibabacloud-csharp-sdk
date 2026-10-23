@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ExportWorkflowTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>可回流导入的精简模板定义</para>
+        /// <para>The simplified template definition that can be re-imported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public ExportWorkflowTemplateResponseBodyTemplate Template { get; set; }
         public class ExportWorkflowTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// <para>模板描述</para>
+            /// <para>The template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>模板名称</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>规范化步骤</para>
+            /// <para>The normalization steps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<ExportWorkflowTemplateResponseBodyTemplateSteps> Steps { get; set; }
             public class ExportWorkflowTemplateResponseBodyTemplateSteps : TeaModel {
                 /// <summary>
-                /// <para>模型档位</para>
+                /// <para>The model tier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>standard</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ModelMode { get; set; }
 
                 /// <summary>
-                /// <para>步骤名称</para>
+                /// <para>The step name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>智能体负责人名称</para>
+                /// <para>The name of the responsible agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -110,7 +110,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OwnerAgentName { get; set; }
 
                 /// <summary>
-                /// <para>负责人类型：MEMBER 人工 / AGENT 智能体</para>
+                /// <para>The owner type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>MEMBER: Human.</description></item>
+                /// <item><description>AGENT: Agent.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MEMBER</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OwnerType { get; set; }
 
                 /// <summary>
-                /// <para>人工负责人用户ID</para>
+                /// <para>The user ID of the human owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? OwnerUserId { get; set; }
 
                 /// <summary>
-                /// <para>审核人用户ID列表</para>
+                /// <para>The list of user IDs of the reviewers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -140,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public List<long?> ReviewerUserIds { get; set; }
 
                 /// <summary>
-                /// <para>步骤顺序</para>
+                /// <para>The step order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -150,7 +154,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? SortOrder { get; set; }
 
                 /// <summary>
-                /// <para>步骤处理说明</para>
+                /// <para>The step processing instructions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -160,7 +164,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Specification { get; set; }
 
                 /// <summary>
-                /// <para>步骤ID</para>
+                /// <para>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. All segment fields and nested attachments are preserved exactly as returned by the backend.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</para>
+                /// </summary>
+                [NameInMap("specificationJson")]
+                [Validation(Required=false)]
+                public List<Dictionary<string, object>> SpecificationJson { get; set; }
+
+                /// <summary>
+                /// <para>The step ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>collect</para>

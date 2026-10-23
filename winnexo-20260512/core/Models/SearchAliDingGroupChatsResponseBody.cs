@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SearchAliDingGroupChatsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>是否还有下一页</para>
+        /// <para>Indicates whether more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -29,12 +29,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public bool? HasMore { get; set; }
 
+        /// <summary>
+        /// <para>The user group tree node information.</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<SearchAliDingGroupChatsResponseBodyItems> Items { get; set; }
         public class SearchAliDingGroupChatsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>阿里钉群聊 ID</para>
+            /// <para>The conversation ID. This ID is typically used for JSSDK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cid-example</para>
@@ -44,7 +47,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ChatId { get; set; }
 
             /// <summary>
-            /// <para>会话类型</para>
+            /// <para>The conversation type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: one-on-one chat.</description></item>
+            /// <item><description><b>1</b>: group chat.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>For a one-on-one chat, you do not need to specify <b>openConversationId</b>. Specify the employee ID in <b>receiverUserIdList</b>. For a one-on-one chat between two users, specify the employee ID of either user. For a one-on-one chat between a user and a bot, specify the employee ID of the user.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>INTERNAL_GROUP</para>
@@ -54,7 +64,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ConversationType { get; set; }
 
             /// <summary>
-            /// <para>当前用户是否开启免打扰</para>
+            /// <para>Indicates whether the current user has enabled the Do Not Disturb mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -64,10 +74,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Muted { get; set; }
 
             /// <summary>
-            /// <para>群聊标题</para>
+            /// <para>The title of the scheduled meeting.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>客户项目群</para>
+            /// <para>Customer project group</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
@@ -76,7 +86,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -86,7 +96,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>下一页分页游标，末页为空</para>
+        /// <para>The starting cursor for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -96,7 +106,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NextCursor { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-id</para>

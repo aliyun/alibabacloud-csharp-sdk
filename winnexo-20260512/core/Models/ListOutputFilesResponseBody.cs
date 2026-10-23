@@ -27,30 +27,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListOutputFilesResponseBodyItems> Items { get; set; }
         public class ListOutputFilesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The session ID.</para>
+            /// <para>The conversation ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>exampleConversationId</para>
+            /// <para>session_123e4567-e89b-42d3-a456-426614174008</para>
             /// </summary>
             [NameInMap("conversationId")]
             [Validation(Required=false)]
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time in ISO 8601 format.</para>
+            /// <para>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>2026-10-12T03:10:00+00:00</para>
             /// </summary>
             [NameInMap("gmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The update time in ISO 8601 format.</para>
+            /// <para>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>2026-10-12T03:12:00+00:00</para>
             /// </summary>
             [NameInMap("gmtModified")]
             [Validation(Required=false)]
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The output name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SampleName.pdf</para>
+            /// <para>Quarterly business analysis report.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the digital employee (operating object).</para>
+            /// <para>The name of the digital worker (operating object).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>Business Analysis Assistant</para>
             /// </summary>
             [NameInMap("operatingObjectName")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The output ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>exampleOutputId</para>
+            /// <para>output_123e4567-e89b-42d3-a456-426614174009</para>
             /// </summary>
             [NameInMap("outputId")]
             [Validation(Required=false)]
@@ -94,27 +94,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<ListOutputFilesResponseBodyItemsOutputItems> OutputItems { get; set; }
             public class ListOutputFilesResponseBodyItemsOutputItems : TeaModel {
                 /// <summary>
-                /// <para>The creation time in ISO 8601 format.</para>
+                /// <para>The creation time of the output detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2023-10-01T12:00:00Z</para>
+                /// <para>2026-10-12T03:10:00+00:00</para>
                 /// </summary>
                 [NameInMap("createTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The email information. This field is present only when the output type is email.</para>
+                /// <para>The email information, present when the type is email.</para>
                 /// </summary>
                 [NameInMap("emailInfo")]
                 [Validation(Required=false)]
                 public ListOutputFilesResponseBodyItemsOutputItemsEmailInfo EmailInfo { get; set; }
                 public class ListOutputFilesResponseBodyItemsOutputItemsEmailInfo : TeaModel {
                     /// <summary>
-                    /// <para>The email body.</para>
+                    /// <para>The email content.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>string_value</para>
+                    /// <para>The quarterly business report has been generated. Please review</para>
                     /// </summary>
                     [NameInMap("body")]
                     [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The content type, such as MARKDOWN, JSONML, or HTML.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>string_value</para>
+                    /// <para>MARKDOWN</para>
                     /// </summary>
                     [NameInMap("contentType")]
                     [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The recipient list.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>string_value</para>
+                    /// <para>[&quot;<a href="mailto:reader@example.com">reader@example.com</a>&quot;]</para>
                     /// </summary>
                     [NameInMap("recipients")]
                     [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The email subject.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>string_value</para>
+                    /// <para>Quarterly business analysis report</para>
                     /// </summary>
                     [NameInMap("subject")]
                     [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>The file information. This field is present only when the output type is file.</para>
+                /// <para>The file information, present when the type is file.</para>
                 /// </summary>
                 [NameInMap("fileInfo")]
                 [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The file description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Sample description</para>
+                    /// <para>Quarterly revenue, cost, and trend analysis report</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -173,17 +173,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The file name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>SampleName.pdf</para>
+                    /// <para>Quarterly business analysis report.pdf</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The file path (OSS object key).</para>
+                    /// <para>The file location. It is compatible with file URLs and legacy OSS object keys. The specific value is derived from the output registration information.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
+                    /// <para>reports/2026/quarterly-report.pdf</para>
                     /// </summary>
                     [NameInMap("path")]
                     [Validation(Required=false)]
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The file type, such as .pdf or .md.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>text</para>
+                    /// <para>.pdf</para>
                     /// </summary>
                     [NameInMap("type")]
                     [Validation(Required=false)]
@@ -202,20 +202,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>The database creation time in ISO 8601 format.</para>
+                /// <para>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2023-10-01T12:00:00Z</para>
+                /// <para>2026-10-12T03:10:00+00:00</para>
                 /// </summary>
                 [NameInMap("gmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The database update time in ISO 8601 format.</para>
+                /// <para>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2023-10-01T12:00:00Z</para>
+                /// <para>2026-10-12T03:12:00+00:00</para>
                 /// </summary>
                 [NameInMap("gmtModified")]
                 [Validation(Required=false)]
@@ -225,17 +225,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The output name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>exampleItemName</para>
+                /// <para>Quarterly business analysis report.pdf</para>
                 /// </summary>
                 [NameInMap("itemName")]
                 [Validation(Required=false)]
                 public string ItemName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
+                /// <para>The output item type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ppt</para>
+                /// <para>document</para>
                 /// </summary>
                 [NameInMap("itemType")]
                 [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The internationalized display name of the output detail type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>string_value</para>
+                /// <para>Document</para>
                 /// </summary>
                 [NameInMap("itemTypeDisplayName")]
                 [Validation(Required=false)]
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The message ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>exampleMessageId</para>
+                /// <para>msg_123e4567-e89b-42d3-a456-426614174012</para>
                 /// </summary>
                 [NameInMap("messageId")]
                 [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The output detail ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>string_example_value</para>
+                /// <para>item_123e4567-e89b-42d3-a456-426614174010</para>
                 /// </summary>
                 [NameInMap("outputItemId")]
                 [Validation(Required=false)]
@@ -282,10 +282,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? ShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The share token. This field is present only when sharing is enabled. You can use this token to access the public share preview endpoint.</para>
+                /// <para>The share token, present when sharing is enabled. You can use this token to access the public share preview API.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>example_share_token</para>
+                /// <para>demo_public_preview_token</para>
                 /// </summary>
                 [NameInMap("shareToken")]
                 [Validation(Required=false)]
@@ -295,14 +295,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The skill output ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>exampleSkillOutputId</para>
+                /// <para>skillout_123e4567-e89b-42d3-a456-426614174011</para>
                 /// </summary>
                 [NameInMap("skillOutputId")]
                 [Validation(Required=false)]
                 public string SkillOutputId { get; set; }
 
                 /// <summary>
-                /// <para>The slides information. This field is present only when the output type is slides.</para>
+                /// <para>The slide deck information, present when the type is slide deck.</para>
                 /// </summary>
                 [NameInMap("slidesInfo")]
                 [Validation(Required=false)]
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The number of completed slides.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1</para>
+                    /// <para>8</para>
                     /// </summary>
                     [NameInMap("completedSlides")]
                     [Validation(Required=false)]
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The PPT file ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>examplePptId</para>
+                    /// <para>ppt_123e4567-e89b-42d3-a456-426614174015</para>
                     /// </summary>
                     [NameInMap("pptId")]
                     [Validation(Required=false)]
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The PPT name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>string_value</para>
+                    /// <para>Quarterly Business Analysis Report</para>
                     /// </summary>
                     [NameInMap("pptName")]
                     [Validation(Required=false)]
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     /// <para>The total number of slides.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1</para>
+                    /// <para>10</para>
                     /// </summary>
                     [NameInMap("totalSlides")]
                     [Validation(Required=false)]
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The task execution ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>exampleTaskExecutionId</para>
+                /// <para>execution_123e4567-e89b-42d3-a456-426614174013</para>
                 /// </summary>
                 [NameInMap("taskExecutionId")]
                 [Validation(Required=false)]
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>The output type. Valid values: <c>conversation/skill/task</c>.</para>
+            /// <para>The output type: <c>conversation/skill/task</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>conversation</para>
@@ -373,10 +373,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OutputType { get; set; }
 
             /// <summary>
-            /// <para>The internationalized display name of the output type.</para>
+            /// <para>The localized display name of the output type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>Conversation output</para>
             /// </summary>
             [NameInMap("outputTypeDisplayName")]
             [Validation(Required=false)]
@@ -386,17 +386,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The skill output ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>exampleSkillOutputId</para>
+            /// <para>skillout_123e4567-e89b-42d3-a456-426614174011</para>
             /// </summary>
             [NameInMap("skillOutputId")]
             [Validation(Required=false)]
             public string SkillOutputId { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_example_value</para>
+            /// <para>task_123e4567-e89b-42d3-a456-426614174014</para>
             /// </summary>
             [NameInMap("taskId")]
             [Validation(Required=false)]
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The prompt message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -435,17 +435,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>123e4567-e89b-42d3-a456-426614174007</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of outputs that meet the specified conditions.</para>
+        /// <para>The total number of matching outputs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class BatchOperateWorkItemsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>批量动作</para>
+        /// <para>The batch action.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>幂等键</para>
+        /// <para>The idempotency key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string IdempotencyKey { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>目标工作项 ID 列表（1~100 个）</para>
+        /// <para>The IDs of the target work items. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

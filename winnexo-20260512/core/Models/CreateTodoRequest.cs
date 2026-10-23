@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateTodoRequest : TeaModel {
         /// <summary>
-        /// <para>处理人平台用户ID列表（1~100，去重后生效）</para>
+        /// <para>The list of platform user IDs of the assignees. You can specify 1 to 100 IDs. Duplicate IDs are automatically removed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> AssigneeUserIds { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID（可选）</para>
+        /// <para>The ID of the collaboration workspace. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>优先级</para>
+        /// <para>The priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MEDIUM</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>问题清单（1~N）</para>
+        /// <para>The list of questions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<CreateTodoRequestQuestions> Questions { get; set; }
         public class CreateTodoRequestQuestions : TeaModel {
             /// <summary>
-            /// <para>是否允许自定义输入</para>
+            /// <para>Specifies whether custom input is allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -62,17 +62,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? AllowCustom { get; set; }
 
             /// <summary>
-            /// <para>自定义输入项文案</para>
+            /// <para>The text for the custom input item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>其他</para>
+            /// <para>Other</para>
             /// </summary>
             [NameInMap("customLabel")]
             [Validation(Required=false)]
             public string CustomLabel { get; set; }
 
             /// <summary>
-            /// <para>自定义输入长度上限</para>
+            /// <para>The maximum length of the custom input.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -82,17 +82,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? CustomMaxLength { get; set; }
 
             /// <summary>
-            /// <para>自定义输入占位符</para>
+            /// <para>The placeholder for the custom input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>请说明</para>
+            /// <para>Please specify</para>
             /// </summary>
             [NameInMap("customPlaceholder")]
             [Validation(Required=false)]
             public string CustomPlaceholder { get; set; }
 
             /// <summary>
-            /// <para>TEXT 题长度上限</para>
+            /// <para>The maximum length for text questions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? MaxLength { get; set; }
 
             /// <summary>
-            /// <para>作答形态：SINGLE_CHOICE/MULTI_CHOICE/TEXT</para>
+            /// <para>The response mode. Valid values: SINGLE_CHOICE, MULTI_CHOICE, and TEXT.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -113,35 +113,35 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>问题的选项列表；选择题必填，每项含选项文案（label）、补充说明（description）与是否推荐（recommended）</para>
+            /// <para>The list of options for the question. This parameter is required for choice questions. Each option includes the option text (label), supplementary description (description), and whether it is recommended (recommended).</para>
             /// </summary>
             [NameInMap("options")]
             [Validation(Required=false)]
             public List<CreateTodoRequestQuestionsOptions> Options { get; set; }
             public class CreateTodoRequestQuestionsOptions : TeaModel {
                 /// <summary>
-                /// <para>选项补充说明</para>
+                /// <para>The supplementary description of the option.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>选项补充说明</para>
+                /// <para>Supplementary description of the option</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>选项文案（引用键）</para>
+                /// <para>The option text. This is a reference key.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>通过</para>
+                /// <para>Approve</para>
                 /// </summary>
                 [NameInMap("label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>是否推荐</para>
+                /// <para>Specifies whether the option is recommended.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -153,28 +153,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>TEXT 题占位符</para>
+            /// <para>The placeholder for text questions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>请输入</para>
+            /// <para>Please enter</para>
             /// </summary>
             [NameInMap("placeholder")]
             [Validation(Required=false)]
             public string Placeholder { get; set; }
 
             /// <summary>
-            /// <para>问题正文（引用键，清单内唯一）</para>
+            /// <para>The question text. This is a reference key and must be unique within the list.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>是否通过审批</para>
+            /// <para>Whether to approve the request</para>
             /// </summary>
             [NameInMap("question")]
             [Validation(Required=false)]
             public string Question { get; set; }
 
             /// <summary>
-            /// <para>是否必答</para>
+            /// <para>Specifies whether the question is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>来源上下文（原样透传落库，不校验）</para>
+        /// <para>The source context. The value is passed through and stored in the database as-is without validation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, object> SourceContext { get; set; }
 
         /// <summary>
-        /// <para>待办来源（仅 OPEN_API）</para>
+        /// <para>The source of the to-do item. Only OPEN_API is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -218,11 +218,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>待办标题（≤200 字）</para>
+        /// <para>The title of the to-do item. The maximum length is 200 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>治理审批</para>
+        /// <para>Governance approval</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

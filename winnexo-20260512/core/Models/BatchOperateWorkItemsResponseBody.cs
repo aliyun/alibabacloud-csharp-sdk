@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class BatchOperateWorkItemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>逐项结果，顺序与请求一致</para>
+        /// <para>The results for each item. The order of the results matches the order of the items in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<BatchOperateWorkItemsResponseBodyItems> Items { get; set; }
         public class BatchOperateWorkItemsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>跳过或失败原因</para>
+            /// <para>The reason for skipping or failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>是否执行成功</para>
+            /// <para>Indicates whether the execution was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>工作项ID</para>
+            /// <para>The ID of the work item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -62,17 +62,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>跳过或失败数量</para>
+        /// <para>The number of skipped or failed operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Skipped { get; set; }
 
         /// <summary>
-        /// <para>成功数量</para>
+        /// <para>The number of successful operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

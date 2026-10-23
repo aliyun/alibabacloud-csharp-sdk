@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RerunNodeAIRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间ID</para>
+        /// <para>The collaboration workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>物理工作流实例ID（planId）</para>
+        /// <para>The physical workflow instance ID (planId).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>FAILED 节点 key（nodeKey）</para>
+        /// <para>The key of the failed node (nodeKey).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，缺省使用调用方默认租户</para>
+        /// <para>The tenant ID. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

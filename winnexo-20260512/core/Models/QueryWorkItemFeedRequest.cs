@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class QueryWorkItemFeedRequest : TeaModel {
         /// <summary>
-        /// <para>业务状态筛选（七态）</para>
+        /// <para>The business status filter (seven states).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> BusinessStatuses { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>翻页游标，取上次响应的 nextCursor</para>
+        /// <para>The pagination cursor. Use the nextCursor value from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Cursor { get; set; }
 
         /// <summary>
-        /// <para>工作项类型筛选</para>
+        /// <para>The work item type filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> ItemTypes { get; set; }
 
         /// <summary>
-        /// <para>标题/描述模糊搜索关键词</para>
+        /// <para>The keyword for fuzzy search in the title or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>单页条数（1~100）</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>优先级筛选</para>
+        /// <para>The priority filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> Priorities { get; set; }
 
         /// <summary>
-        /// <para>个人范围筛选</para>
+        /// <para>The personal scope filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASSIGNED_TO_ME</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>来源任务ID；指定时返回该任务平铺子项</para>
+        /// <para>The ID of the source task. If specified, the flat sub-items of the task are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTaskId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>视图：FLAT 平铺 / TREE 任务分组</para>
+        /// <para>The view type. Valid values: FLAT (flat view) and TREE (task grouping).</para>
         /// 
         /// <b>Example:</b>
         /// <para>FLAT</para>

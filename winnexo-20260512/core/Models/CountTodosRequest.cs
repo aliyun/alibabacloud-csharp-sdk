@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CountTodosRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间 ID（可选过滤；不传 = 全部空间）</para>
+        /// <para>The collaboration workspace ID. This parameter is optional and used for filtering. If this parameter is not specified, all workspaces are included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

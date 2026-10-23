@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListInstanceNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>物理实例ID</para>
+        /// <para>The physical instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>plan_example</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>按拓扑顺序排列的可见节点，数量由实际动态图决定</para>
+        /// <para>The visible nodes arranged in topological order. The number of nodes is determined by the actual dynamic graph.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListInstanceNodesResponseBodyNodes> Nodes { get; set; }
         public class ListInstanceNodesResponseBodyNodes : TeaModel {
             /// <summary>
-            /// <para>节点结果结论，无结论时为空</para>
+            /// <para>The conclusion of the node result. This field is empty if there is no conclusion.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>分析完成</para>
+            /// <para>Analysis completed</para>
             /// </summary>
             [NameInMap("conclusion")]
             [Validation(Required=false)]
             public string Conclusion { get; set; }
 
             /// <summary>
-            /// <para>从首次运行到终态的整秒数，缺时间时为空</para>
+            /// <para>The total number of seconds from the first run to the desired state. This field is empty if the time is missing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>节点首次运行时间，历史或未运行节点为空</para>
+            /// <para>The time when the node was first run. This field is empty for historical or unrun nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T08:00:00Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EnteredAt { get; set; }
 
             /// <summary>
-            /// <para>节点实际进入终态的时间，未结束时为空</para>
+            /// <para>The time when the node actually entered the desired state. This field is empty if the node has not finished.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T08:02:03Z</para>
@@ -90,17 +90,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FinishedAt { get; set; }
 
             /// <summary>
-            /// <para>节点负责人展示名称，未知时为空</para>
+            /// <para>The display name of the node assignee. This field is empty if the assignee is unknown.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>客户成功经理助理</para>
+            /// <para>Assistant Customer Success Manager (CSM)</para>
             /// </summary>
             [NameInMap("handler")]
             [Validation(Required=false)]
             public string Handler { get; set; }
 
             /// <summary>
-            /// <para>节点在工作流图中的泳道位置</para>
+            /// <para>The lane position of the node in the workflow graph.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Lane { get; set; }
 
             /// <summary>
-            /// <para>所属节点key（nodeKey），不是会话ID</para>
+            /// <para>The key of the node (nodeKey). This is not the session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>query.amount</para>
@@ -120,17 +120,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>节点展示名称</para>
+            /// <para>The display name of the node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>查询签单金额</para>
+            /// <para>Query signed contract amount</para>
             /// </summary>
             [NameInMap("nodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>节点在返回拓扑列表中的展示序号，从1开始</para>
+            /// <para>The display sequence number of the node in the returned topology list, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? NodeOrder { get; set; }
 
             /// <summary>
-            /// <para>实际节点类型，例如AGENT或HUMAN</para>
+            /// <para>The actual node type, such as AGENT or HUMAN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AGENT</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>节点在工作流图中的层级，从0开始</para>
+            /// <para>The level of the node in the workflow graph, starting from 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Rank { get; set; }
 
             /// <summary>
-            /// <para>原始节点运行状态，例如READY、RUNNING、WAITING、SUCCEEDED或FAILED</para>
+            /// <para>The original running status of the node, such as READY, RUNNING, WAITING, SUCCEEDED, or FAILED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>等待原因：HUMAN_INPUT、HUMAN_STEP、REVIEW、MANUAL_PAUSE或UNBLOCK；未等待时为空</para>
+            /// <para>The reason for waiting, such as HUMAN_INPUT, HUMAN_STEP, REVIEW, MANUAL_PAUSE, or UNBLOCK. This field is empty if the node is not waiting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REVIEW</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>状态版本</para>
+        /// <para>The state version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

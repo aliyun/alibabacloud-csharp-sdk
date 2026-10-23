@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetWorkflowInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>稳定逻辑实例 ID</para>
+        /// <para>The stable logical instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. If you use winnexo-cli, pass this parameter explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

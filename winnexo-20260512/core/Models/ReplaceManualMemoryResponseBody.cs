@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReplaceManualMemoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为 200，失败时为对应错误码</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,27 +20,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>保存后的手动记忆完整内容；清空成功时为空字符串</para>
+        /// <para>The complete content of the manual memory after it is saved. If the memory is successfully cleared, an empty string is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>喜欢简洁的回答。</para>
+        /// <para>Prefers concise answers</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>错误描述；成功时为空字符串，失败时返回具体原因</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>当前用户不是群组 cg_12345 的活跃成员</para>
+        /// <para>The current user is not an active member of the group cg_12345</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID，用于定位本次调用</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

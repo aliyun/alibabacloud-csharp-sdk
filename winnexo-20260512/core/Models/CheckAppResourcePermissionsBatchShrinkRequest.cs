@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CheckAppResourcePermissionsBatchShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>检查项</para>
+        /// <para>The check items.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("checks")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ChecksShrink { get; set; }
 
         /// <summary>
-        /// <para>资源所属租户 ID；省略为调用人当前租户</para>
+        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>目标平台用户 ID</para>
+        /// <para>The ID of the target platform user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10086</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TargetUserId { get; set; }
 
         /// <summary>
-        /// <para>目标用户所属租户；跨租户目标必填</para>
+        /// <para>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TargetUserTenantId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListWorkflowTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>是否还有更多数据</para>
+        /// <para>Indicates whether more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>当前页模板摘要列表</para>
+        /// <para>The list of template summaries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListWorkflowTemplatesResponseBodyItems> Items { get; set; }
         public class ListWorkflowTemplatesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>模板描述</para>
+            /// <para>The description of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -50,7 +50,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>最近修改时间(ISO8601)</para>
+            /// <para>The current effective version number. An empty value indicates that only a draft exists and the template cannot be used for work items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
+            [NameInMap("effectiveVersion")]
+            [Validation(Required=false)]
+            public string EffectiveVersion { get; set; }
+
+            /// <summary>
+            /// <para>The time when the template was last modified. The time is in the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -60,7 +70,31 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>模板名称</para>
+            /// <para>The latest version number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v2</para>
+            /// </summary>
+            [NameInMap("latestVersion")]
+            [Validation(Required=false)]
+            public string LatestVersion { get; set; }
+
+            /// <summary>
+            /// <para>The status of the latest version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DRAFT: Draft. The version contains uncommitted edits.</description></item>
+            /// <item><description>SUBMITTED: Submitted.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DRAFT</para>
+            /// </summary>
+            [NameInMap("latestVersionStatus")]
+            [Validation(Required=false)]
+            public string LatestVersionStatus { get; set; }
+
+            /// <summary>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -70,7 +104,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>去重后的负责人数量</para>
+            /// <para>The number of unique owners.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -80,7 +114,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? OwnerCount { get; set; }
 
             /// <summary>
-            /// <para>配置了审核人的步骤数</para>
+            /// <para>The number of steps configured with reviewers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -90,7 +124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? ReviewStepCount { get; set; }
 
             /// <summary>
-            /// <para>步骤数</para>
+            /// <para>The number of steps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -100,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? StepCount { get; set; }
 
             /// <summary>
-            /// <para>模板ID</para>
+            /// <para>The ID of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -112,7 +146,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>本次生效的单页最大返回数量</para>
+        /// <para>The maximum number of entries returned per page in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -122,17 +156,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>下一页翻页令牌；无更多数据时为空字符串</para>
+        /// <para>The pagination token for the next page. An empty string indicates that no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -142,7 +176,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -152,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>生效单页条数</para>
+        /// <para>The number of entries per page in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -162,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -172,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>筛选条件下可见总数</para>
+        /// <para>The total number of visible entries that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

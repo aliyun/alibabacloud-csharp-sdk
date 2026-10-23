@@ -452,12 +452,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchCancelTodos</para>
+        /// <para>Cancels to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按待办ID集合批量作废；已完结/不存在不报错（幂等）</para>
+        /// <para>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -515,12 +515,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchCancelTodos</para>
+        /// <para>Cancels to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按待办ID集合批量作废；已完结/不存在不报错（幂等）</para>
+        /// <para>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -578,12 +578,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchCancelTodos</para>
+        /// <para>Cancels to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按待办ID集合批量作废；已完结/不存在不报错（幂等）</para>
+        /// <para>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -602,12 +602,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchCancelTodos</para>
+        /// <para>Cancels to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按待办ID集合批量作废；已完结/不存在不报错（幂等）</para>
+        /// <para>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -626,12 +626,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchOperateWorkItems</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -701,12 +701,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchOperateWorkItems</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -776,12 +776,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchOperateWorkItems</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -800,12 +800,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BatchOperateWorkItems</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员批量排产、暂停、恢复或删除工作项；单项失败不回滚其他项</para>
+        /// <para>Performs batch operations to schedule, pause, resume, or delete work items for valid members. A failure in a single item does not roll back other items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1022,12 +1022,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CancelTodo</para>
+        /// <para>Cancels a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</para>
+        /// <para>Cancels a to-do item. If the to-do item specified by todoId is not found, a 404 error is returned. If workItemId is used, the system makes a best-effort attempt to cancel to-do items in batches.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1083,12 +1083,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CancelTodo</para>
+        /// <para>Cancels a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</para>
+        /// <para>Cancels a to-do item. If the to-do item specified by todoId is not found, a 404 error is returned. If workItemId is used, the system makes a best-effort attempt to cancel to-do items in batches.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1144,12 +1144,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CancelTodo</para>
+        /// <para>Cancels a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</para>
+        /// <para>Cancels a to-do item. If the to-do item specified by todoId is not found, a 404 error is returned. If workItemId is used, the system makes a best-effort attempt to cancel to-do items in batches.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1168,12 +1168,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CancelTodo</para>
+        /// <para>Cancels a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>作废待办；todoId 定位不存在返回 404，按 workItemId 批量尽力而为</para>
+        /// <para>Cancels a to-do item. If the to-do item specified by todoId is not found, a 404 error is returned. If workItemId is used, the system makes a best-effort attempt to cancel to-do items in batches.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1192,12 +1192,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用内资源权限</para>
+        /// <para>Checks resource permissions within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本人需 APP/VIEW，代查他人需 APP/MANAGE。</para>
+        /// <para>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1269,12 +1269,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用内资源权限</para>
+        /// <para>Checks resource permissions within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本人需 APP/VIEW，代查他人需 APP/MANAGE。</para>
+        /// <para>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1346,12 +1346,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用内资源权限</para>
+        /// <para>Checks resource permissions within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本人需 APP/VIEW，代查他人需 APP/MANAGE。</para>
+        /// <para>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1370,12 +1370,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用内资源权限</para>
+        /// <para>Checks resource permissions within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本人需 APP/VIEW，代查他人需 APP/MANAGE。</para>
+        /// <para>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1394,12 +1394,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查应用内资源权限</para>
+        /// <para>Checks resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>整批逐应用鉴权后，复用 service 的常数级查询。</para>
+        /// <para>After authenticating each application in the batch, reuses the constant-time query of the service.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1469,12 +1469,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查应用内资源权限</para>
+        /// <para>Checks resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>整批逐应用鉴权后，复用 service 的常数级查询。</para>
+        /// <para>After authenticating each application in the batch, reuses the constant-time query of the service.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1544,12 +1544,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查应用内资源权限</para>
+        /// <para>Checks resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>整批逐应用鉴权后，复用 service 的常数级查询。</para>
+        /// <para>After authenticating each application in the batch, reuses the constant-time query of the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1568,12 +1568,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查应用内资源权限</para>
+        /// <para>Checks resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>整批逐应用鉴权后，复用 service 的常数级查询。</para>
+        /// <para>After authenticating each application in the batch, reuses the constant-time query of the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1722,12 +1722,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按类型或全部清空自动记忆</para>
+        /// <para>Clears automatic memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1787,12 +1787,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按类型或全部清空自动记忆</para>
+        /// <para>Clears automatic memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1852,12 +1852,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按类型或全部清空自动记忆</para>
+        /// <para>Clears automatic memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1876,12 +1876,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按类型或全部清空自动记忆</para>
+        /// <para>Clears automatic memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2078,12 +2078,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CloseWorkflowTodos</para>
+        /// <para>Closes workflow to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</para>
+        /// <para>Closes to-do items in batches by workflow. This operation matches all PENDING to-do items for the specified workflow run in the workspace and is idempotent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2139,12 +2139,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CloseWorkflowTodos</para>
+        /// <para>Closes workflow to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</para>
+        /// <para>Closes to-do items in batches by workflow. This operation matches all PENDING to-do items for the specified workflow run in the workspace and is idempotent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2200,12 +2200,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CloseWorkflowTodos</para>
+        /// <para>Closes workflow to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</para>
+        /// <para>Closes to-do items in batches by workflow. This operation matches all PENDING to-do items for the specified workflow run in the workspace and is idempotent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2224,12 +2224,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CloseWorkflowTodos</para>
+        /// <para>Closes workflow to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按工作流批量关闭待办；命中该空间该工作流 run 的全部 PENDING 待办（幂等）</para>
+        /// <para>Closes to-do items in batches by workflow. This operation matches all PENDING to-do items for the specified workflow run in the workspace and is idempotent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2248,12 +2248,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CountTodos</para>
+        /// <para>Retrieves the to-do badge statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>统计当前用户的待办角标（待处理数与未读数）</para>
+        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2305,12 +2305,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CountTodos</para>
+        /// <para>Retrieves the to-do badge statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>统计当前用户的待办角标（待处理数与未读数）</para>
+        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2362,12 +2362,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CountTodos</para>
+        /// <para>Retrieves the to-do badge statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>统计当前用户的待办角标（待处理数与未读数）</para>
+        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2386,12 +2386,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CountTodos</para>
+        /// <para>Retrieves the to-do badge statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>统计当前用户的待办角标（待处理数与未读数）</para>
+        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3068,23 +3068,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语义图谱并绑定数据源</para>
+        /// <para>Creates a semantic graph and associates a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
-        ///     内容编辑走个人草稿接口，正式发布走产品控制台。
-        ///     业务编排：
-        ///     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
-        ///     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
-        ///        不写 history、不触发 runtime 重建
-        ///     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
-        ///     错误码：
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
-        ///     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</para>
+        /// <para>Creates a semantic graph through OpenAPI by synchronously creating a placeholder record with version 0.0.0 and associates a data source during creation.
+        /// You can edit content through the personal draft API and officially publish it through the product console.
+        /// Workflow:</para>
+        /// <ol>
+        /// <item><description>Verifies permissions. Personal tokens verify semantic management permissions. Deployment or system-level tokens are also allowed.</description></item>
+        /// <item><description>Synchronously writes an active placeholder record to the database with schemaVersion fixed to 0.0.0 and associates the data source. History is not recorded, and runtime reconstruction is not triggered.</description></item>
+        /// <item><description>You can subsequently edit the graph content through personal drafts and officially publish it in the console.
+        /// Error codes:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.</description></item>
+        /// <item><description>ERR.GraphSchema.GraphNameDuplicated: The graph name already exists.</description></item>
+        /// <item><description>ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicated.</description></item>
+        /// <item><description>ERR.GraphDataSource.*: The data source does not exist or is not an RDB type and cannot be associated.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3148,23 +3151,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语义图谱并绑定数据源</para>
+        /// <para>Creates a semantic graph and associates a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
-        ///     内容编辑走个人草稿接口，正式发布走产品控制台。
-        ///     业务编排：
-        ///     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
-        ///     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
-        ///        不写 history、不触发 runtime 重建
-        ///     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
-        ///     错误码：
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
-        ///     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</para>
+        /// <para>Creates a semantic graph through OpenAPI by synchronously creating a placeholder record with version 0.0.0 and associates a data source during creation.
+        /// You can edit content through the personal draft API and officially publish it through the product console.
+        /// Workflow:</para>
+        /// <ol>
+        /// <item><description>Verifies permissions. Personal tokens verify semantic management permissions. Deployment or system-level tokens are also allowed.</description></item>
+        /// <item><description>Synchronously writes an active placeholder record to the database with schemaVersion fixed to 0.0.0 and associates the data source. History is not recorded, and runtime reconstruction is not triggered.</description></item>
+        /// <item><description>You can subsequently edit the graph content through personal drafts and officially publish it in the console.
+        /// Error codes:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.</description></item>
+        /// <item><description>ERR.GraphSchema.GraphNameDuplicated: The graph name already exists.</description></item>
+        /// <item><description>ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicated.</description></item>
+        /// <item><description>ERR.GraphDataSource.*: The data source does not exist or is not an RDB type and cannot be associated.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3228,23 +3234,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语义图谱并绑定数据源</para>
+        /// <para>Creates a semantic graph and associates a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
-        ///     内容编辑走个人草稿接口，正式发布走产品控制台。
-        ///     业务编排：
-        ///     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
-        ///     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
-        ///        不写 history、不触发 runtime 重建
-        ///     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
-        ///     错误码：
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
-        ///     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</para>
+        /// <para>Creates a semantic graph through OpenAPI by synchronously creating a placeholder record with version 0.0.0 and associates a data source during creation.
+        /// You can edit content through the personal draft API and officially publish it through the product console.
+        /// Workflow:</para>
+        /// <ol>
+        /// <item><description>Verifies permissions. Personal tokens verify semantic management permissions. Deployment or system-level tokens are also allowed.</description></item>
+        /// <item><description>Synchronously writes an active placeholder record to the database with schemaVersion fixed to 0.0.0 and associates the data source. History is not recorded, and runtime reconstruction is not triggered.</description></item>
+        /// <item><description>You can subsequently edit the graph content through personal drafts and officially publish it in the console.
+        /// Error codes:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.</description></item>
+        /// <item><description>ERR.GraphSchema.GraphNameDuplicated: The graph name already exists.</description></item>
+        /// <item><description>ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicated.</description></item>
+        /// <item><description>ERR.GraphDataSource.*: The data source does not exist or is not an RDB type and cannot be associated.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3263,23 +3272,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语义图谱并绑定数据源</para>
+        /// <para>Creates a semantic graph and associates a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建语义图谱（同步快建占位记录 0.0.0）并在创建时绑定数据源。
-        ///     内容编辑走个人草稿接口，正式发布走产品控制台。
-        ///     业务编排：
-        ///     1. 权限校验（个人 Token 校验语义管理权限；部署/系统级 Token 放行）
-        ///     2. 同步落库 active 占位记录（schemaVersion 固定 0.0.0）并绑定数据源；
-        ///        不写 history、不触发 runtime 重建
-        ///     3. 图谱内容后续经个人草稿编辑，在控制台正式发布
-        ///     错误码：
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphNameDuplicated: 图谱名称已存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复
-        ///     - ERR.GraphDataSource.*: 数据源不存在 / 非 RDB 类不可绑定</para>
+        /// <para>Creates a semantic graph through OpenAPI by synchronously creating a placeholder record with version 0.0.0 and associates a data source during creation.
+        /// You can edit content through the personal draft API and officially publish it through the product console.
+        /// Workflow:</para>
+        /// <ol>
+        /// <item><description>Verifies permissions. Personal tokens verify semantic management permissions. Deployment or system-level tokens are also allowed.</description></item>
+        /// <item><description>Synchronously writes an active placeholder record to the database with schemaVersion fixed to 0.0.0 and associates the data source. History is not recorded, and runtime reconstruction is not triggered.</description></item>
+        /// <item><description>You can subsequently edit the graph content through personal drafts and officially publish it in the console.
+        /// Error codes:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.</description></item>
+        /// <item><description>ERR.GraphSchema.GraphNameDuplicated: The graph name already exists.</description></item>
+        /// <item><description>ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicated.</description></item>
+        /// <item><description>ERR.GraphDataSource.*: The data source does not exist or is not an RDB type and cannot be associated.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -11052,12 +11064,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTodo</para>
+        /// <para>Creates a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</para>
+        /// <para>Creates a to-do item. The sourceType parameter only accepts OPEN_API. The existence of assignees is not verified, and the caller must ensure the correct mapping.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11147,12 +11159,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTodo</para>
+        /// <para>Creates a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</para>
+        /// <para>Creates a to-do item. The sourceType parameter only accepts OPEN_API. The existence of assignees is not verified, and the caller must ensure the correct mapping.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11242,12 +11254,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTodo</para>
+        /// <para>Creates a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</para>
+        /// <para>Creates a to-do item. The sourceType parameter only accepts OPEN_API. The existence of assignees is not verified, and the caller must ensure the correct mapping.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11266,12 +11278,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTodo</para>
+        /// <para>Creates a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建待办（sourceType 仅接受 OPEN_API）；处理人不校验存在性，由调用方保证映射正确</para>
+        /// <para>Creates a to-do item. The sourceType parameter only accepts OPEN_API. The existence of assignees is not verified, and the caller must ensure the correct mapping.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11964,12 +11976,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkItem</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12075,12 +12087,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkItem</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12186,12 +12198,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkItem</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12210,12 +12222,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkItem</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员创建 Workflow 工作项并复制模板执行快照；仅接受 WORKFLOW 类型</para>
+        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12234,12 +12246,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>幂等创建工作流实例</para>
+        /// <para>Creates a work item idempotently by business ID in a specified collaboration workspace, starts an actual run based on a workflow template, and returns the logical instance and the current execution view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>组合既有创建与排产，不旁路工作项权限或运行准入。</para>
+        /// <para>Combines creation and scheduling without bypassing work item permissions or run admission.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12325,12 +12337,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>幂等创建工作流实例</para>
+        /// <para>Creates a work item idempotently by business ID in a specified collaboration workspace, starts an actual run based on a workflow template, and returns the logical instance and the current execution view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>组合既有创建与排产，不旁路工作项权限或运行准入。</para>
+        /// <para>Combines creation and scheduling without bypassing work item permissions or run admission.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12416,12 +12428,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>幂等创建工作流实例</para>
+        /// <para>Creates a work item idempotently by business ID in a specified collaboration workspace, starts an actual run based on a workflow template, and returns the logical instance and the current execution view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>组合既有创建与排产，不旁路工作项权限或运行准入。</para>
+        /// <para>Combines creation and scheduling without bypassing work item permissions or run admission.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12440,12 +12452,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>幂等创建工作流实例</para>
+        /// <para>Creates a work item idempotently by business ID in a specified collaboration workspace, starts an actual run based on a workflow template, and returns the logical instance and the current execution view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>组合既有创建与排产，不旁路工作项权限或运行准入。</para>
+        /// <para>Combines creation and scheduling without bypassing work item permissions or run admission.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12464,12 +12476,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkflowTemplate</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员保存全新工作流模板；同名模板不会覆盖</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12500,6 +12512,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                body["action"] = request.Action;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 body["collaborationGroupId"] = request.CollaborationGroupId;
@@ -12531,12 +12547,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkflowTemplate</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员保存全新工作流模板；同名模板不会覆盖</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12567,6 +12583,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                body["action"] = request.Action;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 body["collaborationGroupId"] = request.CollaborationGroupId;
@@ -12598,12 +12618,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkflowTemplate</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员保存全新工作流模板；同名模板不会覆盖</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12622,12 +12642,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateWorkflowTemplate</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员保存全新工作流模板；同名模板不会覆盖</para>
+        /// <para>Creates a new workflow template. Templates with the same name are not overwritten.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12646,12 +12666,190 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除应用内资源权限</para>
+        /// <para>Creates a draft of a workflow template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</para>
+        /// <para>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowTemplateDraftVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowTemplateDraftVersionResponse
+        /// </returns>
+        public CreateWorkflowTemplateDraftVersionResponse CreateWorkflowTemplateDraftVersionWithOptions(CreateWorkflowTemplateDraftVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkflowTemplateDraftVersion",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createWorkflowTemplateDraftVersion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkflowTemplateDraftVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a draft of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowTemplateDraftVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowTemplateDraftVersionResponse
+        /// </returns>
+        public async Task<CreateWorkflowTemplateDraftVersionResponse> CreateWorkflowTemplateDraftVersionWithOptionsAsync(CreateWorkflowTemplateDraftVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkflowTemplateDraftVersion",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createWorkflowTemplateDraftVersion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkflowTemplateDraftVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a draft of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowTemplateDraftVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowTemplateDraftVersionResponse
+        /// </returns>
+        public CreateWorkflowTemplateDraftVersionResponse CreateWorkflowTemplateDraftVersion(CreateWorkflowTemplateDraftVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateWorkflowTemplateDraftVersionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a draft of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowTemplateDraftVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowTemplateDraftVersionResponse
+        /// </returns>
+        public async Task<CreateWorkflowTemplateDraftVersionResponse> CreateWorkflowTemplateDraftVersionAsync(CreateWorkflowTemplateDraftVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateWorkflowTemplateDraftVersionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple resource permissions within an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12713,12 +12911,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除应用内资源权限</para>
+        /// <para>Deletes multiple resource permissions within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</para>
+        /// <para>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12780,12 +12978,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除应用内资源权限</para>
+        /// <para>Deletes multiple resource permissions within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</para>
+        /// <para>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12804,12 +13002,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除应用内资源权限</para>
+        /// <para>Deletes multiple resource permissions within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>逐应用通过 MANAGE 校验后，调用原有原子删除能力。</para>
+        /// <para>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13394,12 +13592,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkItem</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13455,12 +13653,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkItem</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13516,12 +13714,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkItem</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13540,12 +13738,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkItem</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员删除非处理中工作项；级联清理待办、节点话题与运行时</para>
+        /// <para>Deletes a non-processing work item by a valid member and cascades the cleanup of to-do items, node topics, and runtimes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13564,12 +13762,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkflowTemplate</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13625,12 +13823,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkflowTemplate</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13686,12 +13884,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkflowTemplate</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13710,12 +13908,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteWorkflowTemplate</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员物理删除工作流模板及其步骤；不执行工作项依赖校验</para>
+        /// <para>Physically deletes a workflow template and its steps for valid members without performing work item dependency checks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13730,6 +13928,184 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteWorkflowTemplateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified version of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified version of a workflow template as a workspace administrator. Only inactive versions can be deleted. The system denies requests to delete the active version or the last version of the template with a 409 error. After deletion, the list of remaining versions is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowTemplateVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowTemplateVersionResponse
+        /// </returns>
+        public DeleteWorkflowTemplateVersionResponse DeleteWorkflowTemplateVersionWithOptions(DeleteWorkflowTemplateVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkflowTemplateVersion",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/deleteWorkflowTemplateVersion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkflowTemplateVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified version of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified version of a workflow template as a workspace administrator. Only inactive versions can be deleted. The system denies requests to delete the active version or the last version of the template with a 409 error. After deletion, the list of remaining versions is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowTemplateVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowTemplateVersionResponse
+        /// </returns>
+        public async Task<DeleteWorkflowTemplateVersionResponse> DeleteWorkflowTemplateVersionWithOptionsAsync(DeleteWorkflowTemplateVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkflowTemplateVersion",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/deleteWorkflowTemplateVersion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkflowTemplateVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified version of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified version of a workflow template as a workspace administrator. Only inactive versions can be deleted. The system denies requests to delete the active version or the last version of the template with a 409 error. After deletion, the list of remaining versions is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowTemplateVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowTemplateVersionResponse
+        /// </returns>
+        public DeleteWorkflowTemplateVersionResponse DeleteWorkflowTemplateVersion(DeleteWorkflowTemplateVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteWorkflowTemplateVersionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified version of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified version of a workflow template as a workspace administrator. Only inactive versions can be deleted. The system denies requests to delete the active version or the last version of the template with a 409 error. After deletion, the list of remaining versions is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowTemplateVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowTemplateVersionResponse
+        /// </returns>
+        public async Task<DeleteWorkflowTemplateVersionResponse> DeleteWorkflowTemplateVersionAsync(DeleteWorkflowTemplateVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteWorkflowTemplateVersionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14114,12 +14490,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportWorkflowTemplate</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导出可回流导入的精简模板定义</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14152,6 +14528,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["templateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14175,12 +14555,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportWorkflowTemplate</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导出可回流导入的精简模板定义</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14213,6 +14593,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["templateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14236,12 +14620,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportWorkflowTemplate</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导出可回流导入的精简模板定义</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14260,12 +14644,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ExportWorkflowTemplate</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导出可回流导入的精简模板定义</para>
+        /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14284,12 +14668,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GenerateWorkflowTemplateDraft</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14355,12 +14739,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GenerateWorkflowTemplateDraft</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14426,12 +14810,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GenerateWorkflowTemplateDraft</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14450,12 +14834,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GenerateWorkflowTemplateDraft</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员调用 LLM 生成非持久化模板草稿；消耗租户 LLM 配额</para>
+        /// <para>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14474,12 +14858,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgentWorkLog</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工作流 Agent 工作日志</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14543,12 +14927,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgentWorkLog</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工作流 Agent 工作日志</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14612,12 +14996,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgentWorkLog</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工作流 Agent 工作日志</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14636,12 +15020,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgentWorkLog</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工作流 Agent 工作日志</para>
+        /// <para>Queries the operation logs of a workflow agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16124,12 +16508,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动记忆拾取开关</para>
+        /// <para>Queries the automatic memory collection switch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16185,12 +16569,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动记忆拾取开关</para>
+        /// <para>Queries the automatic memory collection switch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16246,12 +16630,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动记忆拾取开关</para>
+        /// <para>Queries the automatic memory collection switch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16270,12 +16654,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动记忆拾取开关</para>
+        /// <para>Queries the automatic memory collection switch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16294,12 +16678,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询个人或协作空间记忆详情</para>
+        /// <para>Queries the details of a memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified writing workspace based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16355,12 +16739,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询个人或协作空间记忆详情</para>
+        /// <para>Queries the details of a memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified writing workspace based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16416,12 +16800,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询个人或协作空间记忆详情</para>
+        /// <para>Queries the details of a memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified writing workspace based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16440,12 +16824,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询个人或协作空间记忆详情</para>
+        /// <para>Queries the details of a memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified writing workspace based on the authenticated user. The workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16464,12 +16848,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetNodeDetail</para>
+        /// <para>Queries the details of an instance node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点完整详情</para>
+        /// <para>Queries the complete details of an instance node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16529,12 +16913,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetNodeDetail</para>
+        /// <para>Queries the details of an instance node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点完整详情</para>
+        /// <para>Queries the complete details of an instance node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16594,12 +16978,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetNodeDetail</para>
+        /// <para>Queries the details of an instance node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点完整详情</para>
+        /// <para>Queries the complete details of an instance node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16618,12 +17002,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetNodeDetail</para>
+        /// <para>Queries the details of an instance node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点完整详情</para>
+        /// <para>Queries the complete details of an instance node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18338,12 +18722,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodo</para>
+        /// <para>Queries to-do items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</para>
+        /// <para>Queries to-do items without triggering the read status side effect. You must specify one of the following parameters: todoId, workItemId, or messageId. The priority order is todoId &gt; workItemId &gt; messageId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18403,12 +18787,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodo</para>
+        /// <para>Queries to-do items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</para>
+        /// <para>Queries to-do items without triggering the read status side effect. You must specify one of the following parameters: todoId, workItemId, or messageId. The priority order is todoId &gt; workItemId &gt; messageId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18468,12 +18852,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodo</para>
+        /// <para>Queries to-do items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</para>
+        /// <para>Queries to-do items without triggering the read status side effect. You must specify one of the following parameters: todoId, workItemId, or messageId. The priority order is todoId &gt; workItemId &gt; messageId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18492,12 +18876,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodo</para>
+        /// <para>Queries to-do items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办（无已读副作用）；todoId/workItemId/messageId 三选一，优先级 todoId &gt; workItemId &gt; messageId</para>
+        /// <para>Queries to-do items without triggering the read status side effect. You must specify one of the following parameters: todoId, workItemId, or messageId. The priority order is todoId &gt; workItemId &gt; messageId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18516,12 +18900,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodoDetail</para>
+        /// <para>Queries the processing details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18573,12 +18957,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodoDetail</para>
+        /// <para>Queries the processing details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18630,12 +19014,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodoDetail</para>
+        /// <para>Queries the processing details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18654,12 +19038,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTodoDetail</para>
+        /// <para>Queries the processing details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询待办详情；当前调用者为 PENDING 处理人时自动填充 readAt（已读副作用）</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19810,12 +20194,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItem</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取当前空间可见工作项详情</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19871,12 +20255,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItem</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取当前空间可见工作项详情</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19932,12 +20316,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItem</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取当前空间可见工作项详情</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19956,12 +20340,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItem</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取当前空间可见工作项详情</para>
+        /// <para>Retrieves the details of a work item visible to valid members in the current collaboration space.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19980,12 +20364,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemArtifactAccess</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20043,12 +20427,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemArtifactAccess</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20106,12 +20490,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemArtifactAccess</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20130,12 +20514,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemArtifactAccess</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到产物短期签名下载地址</para>
+        /// <para>Redirects to the short-term signed download URL of the artifact with an HTTP 302 status code after validating the caller\&quot;s permissions for the work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20154,12 +20538,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemAttachmentAccess</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20217,12 +20601,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemAttachmentAccess</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20280,12 +20664,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemAttachmentAccess</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20304,12 +20688,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkItemAttachmentAccess</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>校验调用者工作项权限后 302 跳转到输入附件短期预览地址</para>
+        /// <para>Redirects to the short-term preview URL of the specified attachment with a 302 status code after validating the caller\&quot;s work item permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20328,12 +20712,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作流实例详情</para>
+        /// <para>Queries the current running, review, and pause statuses of a work item, along with the actual active nodes and execution progress, by using a stable logical instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>以当前成员和工作项可见性读取实例。</para>
+        /// <para>Retrieves the instance based on the current member and work item visibility.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20385,12 +20769,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作流实例详情</para>
+        /// <para>Queries the current running, review, and pause statuses of a work item, along with the actual active nodes and execution progress, by using a stable logical instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>以当前成员和工作项可见性读取实例。</para>
+        /// <para>Retrieves the instance based on the current member and work item visibility.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20442,12 +20826,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作流实例详情</para>
+        /// <para>Queries the current running, review, and pause statuses of a work item, along with the actual active nodes and execution progress, by using a stable logical instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>以当前成员和工作项可见性读取实例。</para>
+        /// <para>Retrieves the instance based on the current member and work item visibility.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20466,12 +20850,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作流实例详情</para>
+        /// <para>Queries the current running, review, and pause statuses of a work item, along with the actual active nodes and execution progress, by using a stable logical instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>以当前成员和工作项可见性读取实例。</para>
+        /// <para>Retrieves the instance based on the current member and work item visibility.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20490,12 +20874,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkflowTemplate</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取协作空间工作流模板当前配置</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20528,6 +20912,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["templateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -20551,12 +20939,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkflowTemplate</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取协作空间工作流模板当前配置</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20589,6 +20977,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["templateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -20612,12 +21004,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkflowTemplate</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取协作空间工作流模板当前配置</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20636,12 +21028,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetWorkflowTemplate</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员读取协作空间工作流模板当前配置</para>
+        /// <para>Retrieves the current configuration of a workflow template in a collaboration workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20906,12 +21298,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ImportWorkflowTemplate</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20973,12 +21365,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ImportWorkflowTemplate</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -21040,12 +21432,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ImportWorkflowTemplate</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21064,12 +21456,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ImportWorkflowTemplate</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员导入可移植模板 JSON 并创建新模板；无论名称是否相同都新建</para>
+        /// <para>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22102,12 +22494,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用内全部原始资源授权</para>
+        /// <para>Queries the resource authorization records within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>APP/MANAGE 授权后按安全应用前缀分页。</para>
+        /// <para>Pages results by secure application prefix after APP/MANAGE authorization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22197,12 +22589,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用内全部原始资源授权</para>
+        /// <para>Queries the resource authorization records within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>APP/MANAGE 授权后按安全应用前缀分页。</para>
+        /// <para>Pages results by secure application prefix after APP/MANAGE authorization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22292,12 +22684,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用内全部原始资源授权</para>
+        /// <para>Queries the resource authorization records within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>APP/MANAGE 授权后按安全应用前缀分页。</para>
+        /// <para>Pages results by secure application prefix after APP/MANAGE authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22316,12 +22708,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用内全部原始资源授权</para>
+        /// <para>Queries the resource authorization records within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>APP/MANAGE 授权后按安全应用前缀分页。</para>
+        /// <para>Pages results by secure application prefix after APP/MANAGE authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22340,12 +22732,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户应用内有效资源权限</para>
+        /// <para>Queries the valid resource permissions of a user within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</para>
+        /// <para>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22431,12 +22823,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户应用内有效资源权限</para>
+        /// <para>Queries the valid resource permissions of a user within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</para>
+        /// <para>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22522,12 +22914,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户应用内有效资源权限</para>
+        /// <para>Queries the valid resource permissions of a user within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</para>
+        /// <para>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22546,12 +22938,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户应用内有效资源权限</para>
+        /// <para>Queries the valid resource permissions of a user within an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>强制应用前缀，本人需 VIEW，代查他人需 MANAGE。</para>
+        /// <para>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24578,12 +24970,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstanceNodes</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点列表</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24639,12 +25031,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstanceNodes</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点列表</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24700,12 +25092,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstanceNodes</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点列表</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24724,12 +25116,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListInstanceNodes</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询实例节点列表</para>
+        /// <para>Queries the node list of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25144,21 +25536,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
-        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
-        /// </list>
+        /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
+        /// sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
+        /// Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -25252,21 +25637,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
-        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
-        /// </list>
+        /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
+        /// sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
+        /// Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -25360,21 +25738,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
-        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
-        /// </list>
+        /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
+        /// sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
+        /// Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25393,21 +25764,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
+        /// <para>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
-        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
-        /// </list>
+        /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
+        /// sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
+        /// Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26624,12 +26988,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTodos</para>
+        /// <para>Performs a paging query on the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</para>
+        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26739,12 +27103,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTodos</para>
+        /// <para>Performs a paging query on the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</para>
+        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26854,12 +27218,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTodos</para>
+        /// <para>Performs a paging query on the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</para>
+        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26878,12 +27242,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTodos</para>
+        /// <para>Performs a paging query on the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询当前用户的待办列表；筛选组内并集、组间交集，全不传 = 全部</para>
+        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28180,12 +28544,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItemArtifacts</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员列出有权访问工作项的全部历史产物</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28241,12 +28605,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItemArtifacts</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员列出有权访问工作项的全部历史产物</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28302,12 +28666,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItemArtifacts</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员列出有权访问工作项的全部历史产物</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28326,12 +28690,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItemArtifacts</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员列出有权访问工作项的全部历史产物</para>
+        /// <para>Lists all historical artifacts of a work item accessible to authorized members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28350,12 +28714,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItems</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -28457,12 +28821,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItems</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -28564,12 +28928,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItems</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28588,12 +28952,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkItems</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页筛选当前空间可见工作项；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28612,12 +28976,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页筛选工作流实例</para>
+        /// <para>Queries workflow instances visible to the current invoker in a specified collaboration space through a paged query, and supports paging and filtering by status, external requirement ID, initiator, keyword, and sorting conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>复用详情投影，避免工作项列表与实例状态混用。</para>
+        /// <para>Reuses detail projections to avoid mixing work item lists with instance statuses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28701,12 +29065,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页筛选工作流实例</para>
+        /// <para>Queries workflow instances visible to the current invoker in a specified collaboration space through a paged query, and supports paging and filtering by status, external requirement ID, initiator, keyword, and sorting conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>复用详情投影，避免工作项列表与实例状态混用。</para>
+        /// <para>Reuses detail projections to avoid mixing work item lists with instance statuses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28790,12 +29154,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页筛选工作流实例</para>
+        /// <para>Queries workflow instances visible to the current invoker in a specified collaboration space through a paged query, and supports paging and filtering by status, external requirement ID, initiator, keyword, and sorting conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>复用详情投影，避免工作项列表与实例状态混用。</para>
+        /// <para>Reuses detail projections to avoid mixing work item lists with instance statuses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28814,12 +29178,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页筛选工作流实例</para>
+        /// <para>Queries workflow instances visible to the current invoker in a specified collaboration space through a paged query, and supports paging and filtering by status, external requirement ID, initiator, keyword, and sorting conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>复用详情投影，避免工作项列表与实例状态混用。</para>
+        /// <para>Reuses detail projections to avoid mixing work item lists with instance statuses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28838,12 +29202,182 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkflowTemplates</para>
+        /// <para>Queries the versions of a workflow template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Queries all versions of a workflow template for active members. Returns draft and submitted versions in descending order by version number, and marks the unique effective version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowTemplateVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowTemplateVersionsResponse
+        /// </returns>
+        public ListWorkflowTemplateVersionsResponse ListWorkflowTemplateVersionsWithOptions(ListWorkflowTemplateVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowTemplateVersions",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listWorkflowTemplateVersions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowTemplateVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries all versions of a workflow template for active members. Returns draft and submitted versions in descending order by version number, and marks the unique effective version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowTemplateVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowTemplateVersionsResponse
+        /// </returns>
+        public async Task<ListWorkflowTemplateVersionsResponse> ListWorkflowTemplateVersionsWithOptionsAsync(ListWorkflowTemplateVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowTemplateVersions",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listWorkflowTemplateVersions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowTemplateVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries all versions of a workflow template for active members. Returns draft and submitted versions in descending order by version number, and marks the unique effective version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowTemplateVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowTemplateVersionsResponse
+        /// </returns>
+        public ListWorkflowTemplateVersionsResponse ListWorkflowTemplateVersions(ListWorkflowTemplateVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWorkflowTemplateVersionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries all versions of a workflow template for active members. Returns draft and submitted versions in descending order by version number, and marks the unique effective version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowTemplateVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowTemplateVersionsResponse
+        /// </returns>
+        public async Task<ListWorkflowTemplateVersionsResponse> ListWorkflowTemplateVersionsAsync(ListWorkflowTemplateVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWorkflowTemplateVersionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28915,12 +29449,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkflowTemplates</para>
+        /// <para>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28992,12 +29526,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkflowTemplates</para>
+        /// <para>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29016,12 +29550,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListWorkflowTemplates</para>
+        /// <para>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员分页搜索当前协作空间的有效模板；page/pageSize 与 nextToken/maxResults 并存，令牌优先</para>
+        /// <para>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29040,12 +29574,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MarkTodosRead</para>
+        /// <para>Marks to-do items as read.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</para>
+        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -29107,12 +29641,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MarkTodosRead</para>
+        /// <para>Marks to-do items as read.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</para>
+        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -29174,12 +29708,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MarkTodosRead</para>
+        /// <para>Marks to-do items as read.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</para>
+        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29198,12 +29732,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MarkTodosRead</para>
+        /// <para>Marks to-do items as read.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>标记当前用户的待办已读；markAllRead 优先于 todoIds，两者皆空不报错</para>
+        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30054,12 +30588,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseWorkItem</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员暂停工作项绑定的整个 Workflow</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30115,12 +30649,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseWorkItem</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员暂停工作项绑定的整个 Workflow</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30176,12 +30710,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseWorkItem</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员暂停工作项绑定的整个 Workflow</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30200,12 +30734,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseWorkItem</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员暂停工作项绑定的整个 Workflow</para>
+        /// <para>Pauses the entire workflow bound to a work item for active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31378,12 +31912,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryWorkItemFeed</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31485,12 +32019,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryWorkItemFeed</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31592,12 +32126,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryWorkItemFeed</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31616,12 +32150,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryWorkItemFeed</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员查询工作项 feed 分组视图；服务端游标分页（cursor/pageSize）</para>
+        /// <para>Queries the grouped view of the work item feed for active members with server-side cursor pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31858,12 +32392,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量注册应用内资源权限</para>
+        /// <para>Registers in-app resource permissions in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</para>
+        /// <para>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31925,12 +32459,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量注册应用内资源权限</para>
+        /// <para>Registers in-app resource permissions in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</para>
+        /// <para>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31992,12 +32526,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量注册应用内资源权限</para>
+        /// <para>Registers in-app resource permissions in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</para>
+        /// <para>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32016,12 +32550,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量注册应用内资源权限</para>
+        /// <para>Registers in-app resource permissions in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>先检查全部应用的 MANAGE 权限，再执行一次原子批量注册。</para>
+        /// <para>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33652,12 +34186,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>覆盖或清空手动记忆</para>
+        /// <para>Overwrites or clears manual memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33717,12 +34251,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>覆盖或清空手动记忆</para>
+        /// <para>Overwrites or clears manual memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33782,12 +34316,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>覆盖或清空手动记忆</para>
+        /// <para>Overwrites or clears manual memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33806,12 +34340,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>覆盖或清空手动记忆</para>
+        /// <para>Overwrites or clears manual memory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34262,12 +34796,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RerunNodeAI</para>
+        /// <para>Reruns a workflow node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重跑失败的工作流节点</para>
+        /// <para>Reruns a failed workflow node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34327,12 +34861,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RerunNodeAI</para>
+        /// <para>Reruns a workflow node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重跑失败的工作流节点</para>
+        /// <para>Reruns a failed workflow node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34392,12 +34926,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RerunNodeAI</para>
+        /// <para>Reruns a workflow node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重跑失败的工作流节点</para>
+        /// <para>Reruns a failed workflow node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34416,12 +34950,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RerunNodeAI</para>
+        /// <para>Reruns a workflow node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重跑失败的工作流节点</para>
+        /// <para>Reruns a failed workflow node.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34836,12 +35370,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemArtifactAccess</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项产物短期签名下载地址</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34901,12 +35435,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemArtifactAccess</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项产物短期签名下载地址</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34966,12 +35500,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemArtifactAccess</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项产物短期签名下载地址</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34990,12 +35524,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemArtifactAccess</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项产物短期签名下载地址</para>
+        /// <para>Retrieves the short-term signed download URL for a work item artifact.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35014,12 +35548,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemAttachmentAccess</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项输入附件短期预览地址</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35079,12 +35613,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemAttachmentAccess</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项输入附件短期预览地址</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35144,12 +35678,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemAttachmentAccess</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项输入附件短期预览地址</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35168,12 +35702,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResolveWorkItemAttachmentAccess</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员解析工作项输入附件短期预览地址</para>
+        /// <para>Retrieves the short-term preview URL for an input attachment of a valid member parsing work item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35192,12 +35726,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeWorkItem</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员从当前 Plan 暂停点恢复工作项</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35253,12 +35787,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeWorkItem</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员从当前 Plan 暂停点恢复工作项</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35314,12 +35848,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeWorkItem</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员从当前 Plan 暂停点恢复工作项</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35338,12 +35872,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeWorkItem</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员从当前 Plan 暂停点恢复工作项</para>
+        /// <para>Resumes work items from the current plan pause point as an effective member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37622,12 +38156,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ScheduleWorkItem</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员幂等排产工作项并物化固定 Plan</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37687,12 +38221,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ScheduleWorkItem</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员幂等排产工作项并物化固定 Plan</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37752,12 +38286,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ScheduleWorkItem</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员幂等排产工作项并物化固定 Plan</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37776,12 +38310,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ScheduleWorkItem</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员幂等排产工作项并物化固定 Plan</para>
+        /// <para>Idempotently schedules work items for valid members and materializes a fixed plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37800,16 +38334,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Winnexo 轻量工作台搜索阿里钉群聊。</para>
+        /// <para>Searches for DingTalk group chats in the Winnexo lightweight workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>仅供 Winnexo 轻量工作台使用。</description></item>
-        /// <item><description>按关键词分页搜索当前平台用户可见的阿里钉群聊。</description></item>
-        /// <item><description>响应不包含 DWS 原始对象。</description></item>
+        /// <item><description>Available only for the Winnexo lightweight workspace.</description></item>
+        /// <item><description>Searches for DingTalk group chats visible to the current platform user by keyword in a paginated manner.</description></item>
+        /// <item><description>The response does not include DWS raw objects.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37874,16 +38408,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Winnexo 轻量工作台搜索阿里钉群聊。</para>
+        /// <para>Searches for DingTalk group chats in the Winnexo lightweight workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>仅供 Winnexo 轻量工作台使用。</description></item>
-        /// <item><description>按关键词分页搜索当前平台用户可见的阿里钉群聊。</description></item>
-        /// <item><description>响应不包含 DWS 原始对象。</description></item>
+        /// <item><description>Available only for the Winnexo lightweight workspace.</description></item>
+        /// <item><description>Searches for DingTalk group chats visible to the current platform user by keyword in a paginated manner.</description></item>
+        /// <item><description>The response does not include DWS raw objects.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37948,16 +38482,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Winnexo 轻量工作台搜索阿里钉群聊。</para>
+        /// <para>Searches for DingTalk group chats in the Winnexo lightweight workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>仅供 Winnexo 轻量工作台使用。</description></item>
-        /// <item><description>按关键词分页搜索当前平台用户可见的阿里钉群聊。</description></item>
-        /// <item><description>响应不包含 DWS 原始对象。</description></item>
+        /// <item><description>Available only for the Winnexo lightweight workspace.</description></item>
+        /// <item><description>Searches for DingTalk group chats visible to the current platform user by keyword in a paginated manner.</description></item>
+        /// <item><description>The response does not include DWS raw objects.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37977,16 +38511,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Winnexo 轻量工作台搜索阿里钉群聊。</para>
+        /// <para>Searches for DingTalk group chats in the Winnexo lightweight workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>仅供 Winnexo 轻量工作台使用。</description></item>
-        /// <item><description>按关键词分页搜索当前平台用户可见的阿里钉群聊。</description></item>
-        /// <item><description>响应不包含 DWS 原始对象。</description></item>
+        /// <item><description>Available only for the Winnexo lightweight workspace.</description></item>
+        /// <item><description>Searches for DingTalk group chats visible to the current platform user by keyword in a paginated manner.</description></item>
+        /// <item><description>The response does not include DWS raw objects.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38594,12 +39128,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetWorkItemPinned</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员设置工作项个人置顶</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38659,12 +39193,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetWorkItemPinned</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员设置工作项个人置顶</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38724,12 +39258,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetWorkItemPinned</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员设置工作项个人置顶</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38748,12 +39282,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetWorkItemPinned</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员设置工作项个人置顶</para>
+        /// <para>Sets the personal pin status of a work item for a valid member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38768,6 +39302,184 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SetWorkItemPinnedWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the effective version of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetWorkflowTemplateEffectiveVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkflowTemplateEffectiveVersionResponse
+        /// </returns>
+        public SetWorkflowTemplateEffectiveVersionResponse SetWorkflowTemplateEffectiveVersionWithOptions(SetWorkflowTemplateEffectiveVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWorkflowTemplateEffectiveVersion",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/setWorkflowTemplateEffectiveVersion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWorkflowTemplateEffectiveVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the effective version of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetWorkflowTemplateEffectiveVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkflowTemplateEffectiveVersionResponse
+        /// </returns>
+        public async Task<SetWorkflowTemplateEffectiveVersionResponse> SetWorkflowTemplateEffectiveVersionWithOptionsAsync(SetWorkflowTemplateEffectiveVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWorkflowTemplateEffectiveVersion",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/setWorkflowTemplateEffectiveVersion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWorkflowTemplateEffectiveVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the effective version of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetWorkflowTemplateEffectiveVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkflowTemplateEffectiveVersionResponse
+        /// </returns>
+        public SetWorkflowTemplateEffectiveVersionResponse SetWorkflowTemplateEffectiveVersion(SetWorkflowTemplateEffectiveVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SetWorkflowTemplateEffectiveVersionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the effective version of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetWorkflowTemplateEffectiveVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkflowTemplateEffectiveVersionResponse
+        /// </returns>
+        public async Task<SetWorkflowTemplateEffectiveVersionResponse> SetWorkflowTemplateEffectiveVersionAsync(SetWorkflowTemplateEffectiveVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SetWorkflowTemplateEffectiveVersionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -39068,12 +39780,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitTodo</para>
+        /// <para>Submits answers for a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</para>
+        /// <para>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -39135,12 +39847,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitTodo</para>
+        /// <para>Submits answers for a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</para>
+        /// <para>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -39202,12 +39914,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitTodo</para>
+        /// <para>Submits answers for a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</para>
+        /// <para>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39226,12 +39938,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitTodo</para>
+        /// <para>Submits answers for a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>提交待办作答结果；本人重复提交幂等返回首次结果，他人抢先返回 409 AlreadyCompleted</para>
+        /// <para>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39504,12 +40216,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TerminateInstance</para>
+        /// <para>Terminates a workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>终止当前工作流实例</para>
+        /// <para>Terminates the current workflow instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39569,12 +40281,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TerminateInstance</para>
+        /// <para>Terminates a workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>终止当前工作流实例</para>
+        /// <para>Terminates the current workflow instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39634,12 +40346,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TerminateInstance</para>
+        /// <para>Terminates a workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>终止当前工作流实例</para>
+        /// <para>Terminates the current workflow instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39658,12 +40370,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TerminateInstance</para>
+        /// <para>Terminates a workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>终止当前工作流实例</para>
+        /// <para>Terminates the current workflow instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40370,12 +41082,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TransferTodo</para>
+        /// <para>Reassigns a to-do task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>转办待办给指定用户；目标剔除操作人本人，整单原子校验</para>
+        /// <para>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -40441,12 +41153,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TransferTodo</para>
+        /// <para>Reassigns a to-do task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>转办待办给指定用户；目标剔除操作人本人，整单原子校验</para>
+        /// <para>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -40512,12 +41224,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TransferTodo</para>
+        /// <para>Reassigns a to-do task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>转办待办给指定用户；目标剔除操作人本人，整单原子校验</para>
+        /// <para>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40536,12 +41248,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TransferTodo</para>
+        /// <para>Reassigns a to-do task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>转办待办给指定用户；目标剔除操作人本人，整单原子校验</para>
+        /// <para>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42374,12 +43086,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自动记忆拾取开关</para>
+        /// <para>Updates the automatic memory collection toggle.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42443,12 +43155,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自动记忆拾取开关</para>
+        /// <para>Updates the automatic memory collection toggle.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42512,12 +43224,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自动记忆拾取开关</para>
+        /// <para>Updates the automatic memory collection toggle.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42536,12 +43248,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自动记忆拾取开关</para>
+        /// <para>Updates the automatic memory collection toggle.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>基于鉴权用户管理个人或指定写作协作空间记忆；空间模式沿用活跃成员权限。</para>
+        /// <para>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43932,12 +44644,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkItem</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -44047,12 +44759,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkItem</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -44162,12 +44874,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkItem</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44186,12 +44898,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkItem</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员按乐观版本编辑工作项；workflowTemplateIds 未传保持绑定</para>
+        /// <para>Updates a work item using optimistic locking. If workflowTemplateIds is not specified, the existing bindings are retained.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44210,12 +44922,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkflowTemplate</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员整体覆盖更新工作流模板；最后一次保存生效</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -44246,6 +44958,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                body["action"] = request.Action;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 body["collaborationGroupId"] = request.CollaborationGroupId;
@@ -44254,9 +44970,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["definition"] = request.DefinitionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceVersion))
+            {
+                body["sourceVersion"] = request.SourceVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["versionDescription"] = request.VersionDescription;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -44281,12 +45009,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkflowTemplate</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员整体覆盖更新工作流模板；最后一次保存生效</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -44317,6 +45045,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                body["action"] = request.Action;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 body["collaborationGroupId"] = request.CollaborationGroupId;
@@ -44325,9 +45057,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["definition"] = request.DefinitionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceVersion))
+            {
+                body["sourceVersion"] = request.SourceVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["versionDescription"] = request.VersionDescription;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -44352,12 +45096,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkflowTemplate</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员整体覆盖更新工作流模板；最后一次保存生效</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44376,12 +45120,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateWorkflowTemplate</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>有效成员整体覆盖更新工作流模板；最后一次保存生效</para>
+        /// <para>Overwrites and updates a workflow template. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="request">

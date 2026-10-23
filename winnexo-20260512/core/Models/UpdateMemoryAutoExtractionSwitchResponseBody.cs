@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateMemoryAutoExtractionSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>本次同步清空的自动记忆文件数量；未清空或无可清空记忆时为 0</para>
+        /// <para>The number of automatic memory files cleared in this synchronous operation. The value is 0 if no files are cleared or no memories are available to be cleared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ClearedCount { get; set; }
 
         /// <summary>
-        /// <para>业务状态码；成功为 200，失败时为对应错误码</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>更新后的自动记忆拾取开关状态；true 为开启，false 为关闭</para>
+        /// <para>The updated status of the automatic memory collection toggle. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>错误描述；成功时为空字符串，失败时返回具体原因</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>当前用户不是群组 cg_12345 的活跃成员</para>
+        /// <para>The current user is not an active member of the group cg_12345</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID，用于定位本次调用</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ResolveWorkItemAttachmentAccessResponseBody : TeaModel {
         /// <summary>
-        /// <para>附件短期预览地址，过期前可直接 GET</para>
+        /// <para>The short-term preview URL of the attachment. You can send a GET request to this URL before it expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AccessUrl { get; set; }
 
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>地址过期时间(ISO8601)</para>
+        /// <para>The expiration time of the URL in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ExpiresAt { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGraphResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>创建时绑定的数据源 ID</para>
+        /// <para>The data source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>198001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>图谱名称</para>
+        /// <para>The graph name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crm_graph</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Schema 版本；快建路径固定 0.0.0，正式版本经控制台发布产生</para>
+        /// <para>The version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0</para>
@@ -70,7 +70,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SchemaVersion { get; set; }
 
         /// <summary>
-        /// <para>同步状态，快建成功为 SUCCESS</para>
+        /// <para>The OSS synchronization and extraction status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: Not set (default).</description></item>
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>1: Enabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>

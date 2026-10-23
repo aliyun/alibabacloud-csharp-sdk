@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SubmitTodoRequest : TeaModel {
         /// <summary>
-        /// <para>作答数组（question 原文须与待办问题对齐）</para>
+        /// <para>The array of answers. The original text of the question must match the to-do question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<SubmitTodoRequestAnswers> Answers { get; set; }
         public class SubmitTodoRequestAnswers : TeaModel {
             /// <summary>
-            /// <para>作答值数组</para>
+            /// <para>The array of answer values.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Answer { get; set; }
 
             /// <summary>
-            /// <para>对应 questions[].question 原文</para>
+            /// <para>The original text that corresponds to questions[].question.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>是否通过审批</para>
+            /// <para>Whether to approve</para>
             /// </summary>
             [NameInMap("question")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>待办ID</para>
+        /// <para>The ID of the to-do item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

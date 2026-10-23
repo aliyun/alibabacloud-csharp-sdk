@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateWorkflowInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Workflow 必填验收标准</para>
+        /// <para>The required acceptance criteria for the workflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>完成全部审批节点并产出报告</para>
+        /// <para>Complete all approval nodes and generate the report</para>
         /// </summary>
         [NameInMap("acceptanceCriteria")]
         [Validation(Required=false)]
         public string AcceptanceCriteria { get; set; }
 
         /// <summary>
-        /// <para>空间内唯一需求编号，重复请求幂等</para>
+        /// <para>The unique requirement ID in the workspace. Repeated requests are idempotent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BusinessId { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The collaboration workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,17 +43,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>外部发起人展示标签</para>
+        /// <para>The display label of the external initiator.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>外部发起人张三</para>
+        /// <para>External Initiator Zhang San</para>
         /// </summary>
         [NameInMap("initiator")]
         [Validation(Required=false)]
         public string Initiator { get; set; }
 
         /// <summary>
-        /// <para>工作项优先级</para>
+        /// <para>The work item priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HIGH</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>工作流模板 ID，最多 64 字符</para>
+        /// <para>The workflow template ID. Maximum length: 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter explicitly passed by using --tenant-id in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -84,21 +84,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>需求标题</para>
+        /// <para>The requirement title.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>季度经营分析报告</para>
+        /// <para>Quarterly Business Analysis Report</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>业务变量对象，tags 可为字符串标签列表</para>
+        /// <para>The business variable object. The tags field can be a list of string tags.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tags=季度报告</para>
+        /// <para>tags=Quarterly Report</para>
         /// </summary>
         [NameInMap("variables")]
         [Validation(Required=false)]

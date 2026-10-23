@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class BatchCancelTodosRequest : TeaModel {
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>待办ID列表（1~100）</para>
+        /// <para>The list of to-do IDs. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

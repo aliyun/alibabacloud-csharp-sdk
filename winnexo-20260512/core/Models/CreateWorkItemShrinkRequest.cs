@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateWorkItemShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>验收标准</para>
+        /// <para>The acceptance criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AcceptanceCriteria { get; set; }
 
         /// <summary>
-        /// <para>输入附件稳定引用</para>
+        /// <para>The stable references of the input attachments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AttachmentsShrink { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>协作人用户ID列表</para>
+        /// <para>The list of user IDs of the collaborators.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaboratorUserIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>关联会话ID</para>
+        /// <para>The ID of the associated conversation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>工作项描述</para>
+        /// <para>The description of the work item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>工作项类型；仅接受 WORKFLOW</para>
+        /// <para>The type of the work item. Only WORKFLOW is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemType { get; set; }
 
         /// <summary>
-        /// <para>负责人用户ID；缺省为调用者本人</para>
+        /// <para>The user ID of the owner. If this parameter is not specified, the ID of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>排产优先级</para>
+        /// <para>The scheduling priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HIGH</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>工作项标题</para>
+        /// <para>The title of the work item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>绑定的工作流模板ID列表</para>
+        /// <para>The list of IDs of the bound workflow templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

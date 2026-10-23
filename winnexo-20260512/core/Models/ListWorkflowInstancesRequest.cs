@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListWorkflowInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>精确需求编号</para>
+        /// <para>The exact requirement ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REQ-1001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BusinessId { get; set; }
 
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The collaboration space ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,27 +31,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>精确外部发起人标签</para>
+        /// <para>The exact external initiator tag.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>外部发起人张三</para>
+        /// <para>External initiator Zhang San</para>
         /// </summary>
         [NameInMap("initiator")]
         [Validation(Required=false)]
         public string Initiator { get; set; }
 
         /// <summary>
-        /// <para>标题或需求编号关键词</para>
+        /// <para>The keyword for the title or requirement ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>季度报告</para>
+        /// <para>Quarterly report</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>页码，从 1 开始</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量 1-100</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>排序字段</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GMT_CREATE</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>排序方向</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>Running/Completed/Failed/Terminated 筛选</para>
+        /// <para>Filters the instances by status. Valid values: Running, Completed, Failed, and Terminated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. If you use winnexo-cli, pass this parameter explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

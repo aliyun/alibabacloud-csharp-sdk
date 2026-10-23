@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class MarkTodosReadRequest : TeaModel {
         /// <summary>
-        /// <para>全部标记已读（优先于 todoIds）</para>
+        /// <para>Specifies whether to mark all to-do items as read. This parameter takes precedence over the todoIds parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? MarkAllRead { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>待办ID列表（≤100；markAllRead=true 时忽略）</para>
+        /// <para>The list of to-do item IDs. You can specify up to 100 IDs. This parameter is ignored if markAllRead is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>todo_abc123</para>

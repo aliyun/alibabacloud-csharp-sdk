@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateWorkflowTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>协作空间 ID</para>
+        /// <para>The write action. Valid values: SAVE: Saves the template as a draft without taking effect. SUBMIT: Saves and submits the template and sets it as the only effective version. Default value: SUBMIT.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUBMIT</para>
+        /// </summary>
+        [NameInMap("action")]
+        [Validation(Required=false)]
+        public string Action { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>完整模板定义 JSON（name/description/steps）</para>
+        /// <para>The complete JSON definition of the template, including name, description, and steps.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, object> Definition { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

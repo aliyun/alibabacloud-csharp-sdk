@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetTodoDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>处理人数量</para>
+        /// <para>The number of assignees.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? AssigneeCount { get; set; }
 
         /// <summary>
-        /// <para>全部处理人</para>
+        /// <para>All assignees.</para>
         /// </summary>
         [NameInMap("assignees")]
         [Validation(Required=false)]
         public List<GetTodoDetailResponseBodyAssignees> Assignees { get; set; }
         public class GetTodoDetailResponseBodyAssignees : TeaModel {
             /// <summary>
-            /// <para>处理时间（北京时间）；未处理为空</para>
+            /// <para>The action time in UTC+8. This field is empty if the item is not processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-16T10:30:00+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ActedAt { get; set; }
 
             /// <summary>
-            /// <para>处理人来源：ORIGINAL/TRANSFERRED</para>
+            /// <para>The source of the assignee. Valid values: ORIGINAL and TRANSFERRED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ORIGINAL</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AssigneeSource { get; set; }
 
             /// <summary>
-            /// <para>处理人用户ID</para>
+            /// <para>The user ID of the assignee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AssigneeUserId { get; set; }
 
             /// <summary>
-            /// <para>已读时间（北京时间）；未读为空</para>
+            /// <para>The read time in UTC+8. This field is empty if the item is unread.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:01:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ReadAt { get; set; }
 
             /// <summary>
-            /// <para>处理人行状态</para>
+            /// <para>The action status of the assignee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PENDING</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>转出人用户ID；仅转办产生</para>
+            /// <para>The user ID of the user who transferred the task. This field is populated only when the task is transferred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>43</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>附件策略（当前版本附件不落库）</para>
+        /// <para>The attachment policy. Attachments are not stored in the database in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>allowUpload=true</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, object> AttachmentPolicy { get; set; }
 
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>完成时间（北京时间 YYYY-MM-DD HH:mm:ss）</para>
+        /// <para>The completion time in UTC+8 (YYYY-MM-DD HH:mm:ss).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-12 10:00:00</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CompletedAt { get; set; }
 
         /// <summary>
-        /// <para>完成人用户ID；未完成为空</para>
+        /// <para>The user ID of the user who completed the item. This field is empty if the item is not completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>
@@ -129,17 +129,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CompletedByUserId { get; set; }
 
         /// <summary>
-        /// <para>完成人姓名；未完成为空</para>
+        /// <para>The name of the user who completed the item. This field is empty if the item is not completed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("completedByUserName")]
         [Validation(Required=false)]
         public string CompletedByUserName { get; set; }
 
         /// <summary>
-        /// <para>创建时间（北京时间 YYYY-MM-DD HH:mm:ss）</para>
+        /// <para>The creation time in UTC+8 (YYYY-MM-DD HH:mm:ss).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-12 10:00:00</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>最后修改时间（北京时间 YYYY-MM-DD HH:mm:ss）</para>
+        /// <para>The last modification time in UTC+8 (YYYY-MM-DD HH:mm:ss).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-12 10:00:00</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>调用者是否已读</para>
+        /// <para>Indicates whether the caller has read the item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -169,17 +169,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsRead { get; set; }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>发出该待办的 assistant 消息ID；无会话来源为空</para>
+        /// <para>The ID of the assistant message that generated the to-do item. This field is empty if there is no conversation source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>msg-1</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>调用者的处理人行状态</para>
+        /// <para>The action status of the caller as the assignee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string MyAssigneeStatus { get; set; }
 
         /// <summary>
-        /// <para>调用者的列表展示状态</para>
+        /// <para>The list display status for the caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TODO</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string MyDisplayState { get; set; }
 
         /// <summary>
-        /// <para>调用者权限（canSubmit/canTransfer）</para>
+        /// <para>The permissions of the caller, such as canSubmit and canTransfer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>APP/VIEW=true</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, object> MyPermissions { get; set; }
 
         /// <summary>
-        /// <para>优先级</para>
+        /// <para>The priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HIGH</para>
@@ -229,14 +229,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>问题清单（结构化投影）</para>
+        /// <para>The list of questions (structured projection).</para>
         /// </summary>
         [NameInMap("questions")]
         [Validation(Required=false)]
         public List<GetTodoDetailResponseBodyQuestions> Questions { get; set; }
         public class GetTodoDetailResponseBodyQuestions : TeaModel {
             /// <summary>
-            /// <para>是否允许自定义输入</para>
+            /// <para>Indicates whether custom input is allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -246,17 +246,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? AllowCustom { get; set; }
 
             /// <summary>
-            /// <para>自定义输入项文案</para>
+            /// <para>The text for the custom input field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>其他</para>
+            /// <para>Other</para>
             /// </summary>
             [NameInMap("customLabel")]
             [Validation(Required=false)]
             public string CustomLabel { get; set; }
 
             /// <summary>
-            /// <para>自定义输入长度上限</para>
+            /// <para>The maximum length for custom input.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -266,17 +266,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? CustomMaxLength { get; set; }
 
             /// <summary>
-            /// <para>自定义输入占位符</para>
+            /// <para>The placeholder for custom input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>请说明</para>
+            /// <para>Please specify</para>
             /// </summary>
             [NameInMap("customPlaceholder")]
             [Validation(Required=false)]
             public string CustomPlaceholder { get; set; }
 
             /// <summary>
-            /// <para>TEXT 题长度上限</para>
+            /// <para>The maximum length for text questions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? MaxLength { get; set; }
 
             /// <summary>
-            /// <para>作答形态：SINGLE_CHOICE/MULTI_CHOICE/TEXT</para>
+            /// <para>The response mode. Valid values: SINGLE_CHOICE, MULTI_CHOICE, and TEXT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SINGLE_CHOICE</para>
@@ -296,34 +296,34 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>选项（选择类必有）</para>
+            /// <para>The options. This field is required for choice questions.</para>
             /// </summary>
             [NameInMap("options")]
             [Validation(Required=false)]
             public List<GetTodoDetailResponseBodyQuestionsOptions> Options { get; set; }
             public class GetTodoDetailResponseBodyQuestionsOptions : TeaModel {
                 /// <summary>
-                /// <para>选项补充说明</para>
+                /// <para>The supplementary description of the option.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>选项补充说明</para>
+                /// <para>Supplementary description of the option</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>选项文案（引用键）</para>
+                /// <para>The option text (reference key).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>通过</para>
+                /// <para>Approve</para>
                 /// </summary>
                 [NameInMap("label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>是否推荐</para>
+                /// <para>Indicates whether the option is recommended.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -335,27 +335,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>TEXT 题占位符</para>
+            /// <para>The placeholder for text questions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>请输入</para>
+            /// <para>Please enter</para>
             /// </summary>
             [NameInMap("placeholder")]
             [Validation(Required=false)]
             public string Placeholder { get; set; }
 
             /// <summary>
-            /// <para>问题正文（引用键）</para>
+            /// <para>The question text (reference key).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>是否通过审批</para>
+            /// <para>Whether to approve</para>
             /// </summary>
             [NameInMap("question")]
             [Validation(Required=false)]
             public string Question { get; set; }
 
             /// <summary>
-            /// <para>是否必答</para>
+            /// <para>Indicates whether the question is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -377,17 +377,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>作答内容（JSONB 原样；未提交为空对象缺省）</para>
+        /// <para>The response content in JSONB format as-is. Defaults to an empty object if not submitted.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>result=同意</para>
+        /// <para>result=Approved</para>
         /// </summary>
         [NameInMap("resultPayload")]
         [Validation(Required=false)]
         public Dictionary<string, object> ResultPayload { get; set; }
 
         /// <summary>
-        /// <para>来源上下文（创建时原样透传）</para>
+        /// <para>The source context. This context is passed through as-is during creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source=openapi</para>
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, object> SourceContext { get; set; }
 
         /// <summary>
-        /// <para>待办来源类型</para>
+        /// <para>The source type of the to-do item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WORKFLOW</para>
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>工作流ID（sourceType=WORKFLOW 时必有）</para>
+        /// <para>The workflow ID. This field is required when sourceType is set to WORKFLOW.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wf-1</para>
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceWorkflowId { get; set; }
 
         /// <summary>
-        /// <para>待办主状态</para>
+        /// <para>The primary status of the to-do item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>
@@ -427,27 +427,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>待办摘要</para>
+        /// <para>The summary of the to-do item.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请审批以下事项</para>
+        /// <para>Please approve the following items</para>
         /// </summary>
         [NameInMap("summary")]
         [Validation(Required=false)]
         public string Summary { get; set; }
 
         /// <summary>
-        /// <para>待办标题</para>
+        /// <para>The title of the to-do item.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>治理审批</para>
+        /// <para>Governance approval</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>待办ID</para>
+        /// <para>The ID of the to-do item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>todo_abc123</para>

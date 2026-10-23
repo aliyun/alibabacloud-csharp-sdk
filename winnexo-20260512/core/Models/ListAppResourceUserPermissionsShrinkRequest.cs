@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAppResourceUserPermissionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>权限点筛选</para>
+        /// <para>The permission points to filter.</para>
         /// </summary>
         [NameInMap("permissions")]
         [Validation(Required=false)]
         public string PermissionsShrink { get; set; }
 
         /// <summary>
-        /// <para>应用键或其子路径</para>
+        /// <para>The application key or its subpath.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceKeyPrefix { get; set; }
 
         /// <summary>
-        /// <para>资源所属租户 ID；省略为调用人当前租户</para>
+        /// <para>The ID of the tenant to which the resource belongs. If you do not specify this parameter, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>固定为 APP_RESOURCE</para>
+        /// <para>The resource type. Set the value to APP_RESOURCE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>目标平台用户 ID</para>
+        /// <para>The ID of the target platform user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10086</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TargetUserId { get; set; }
 
         /// <summary>
-        /// <para>目标用户所属租户；跨租户目标必填</para>
+        /// <para>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TargetUserTenantId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If you do not specify this parameter, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

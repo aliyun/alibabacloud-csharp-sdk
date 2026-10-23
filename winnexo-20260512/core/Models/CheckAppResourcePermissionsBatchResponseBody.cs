@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CheckAppResourcePermissionsBatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为 200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述；成功时为空</para>
+        /// <para>The error message. This field is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>与请求顺序一致的结果</para>
+        /// <para>The results, returned in the same order as the requested items.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<CheckAppResourcePermissionsBatchResponseBodyResults> Results { get; set; }
         public class CheckAppResourcePermissionsBatchResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>是否有权限</para>
+            /// <para>Indicates whether the user has the permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Allowed { get; set; }
 
             /// <summary>
-            /// <para>目标权限点</para>
+            /// <para>The target permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APP/VIEW</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>首段为 APP 应用键的点分资源键</para>
+            /// <para>The dot-separated resource key whose first segment is the APP application key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app.demo.resource_1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>固定为 APP_RESOURCE</para>
+            /// <para>The resource type. Set the value to APP_RESOURCE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APP_RESOURCE</para>

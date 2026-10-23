@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RegisterAppResourcePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>批量授权项</para>
+        /// <para>The batch authorization items.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<RegisterAppResourcePermissionsRequestItems> Items { get; set; }
         public class RegisterAppResourcePermissionsRequestItems : TeaModel {
             /// <summary>
-            /// <para>带时区的到期时间；省略表示永久</para>
+            /// <para>The expiration time with the time zone. If not specified, the permissions never expire.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-12-31T23:59:59+08:00</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ExpireAt { get; set; }
 
             /// <summary>
-            /// <para>被授权主体</para>
+            /// <para>The authorized principals.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("grantees")]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<RegisterAppResourcePermissionsRequestItemsGrantees> Grantees { get; set; }
             public class RegisterAppResourcePermissionsRequestItemsGrantees : TeaModel {
                 /// <summary>
-                /// <para>主体 ID；ALL_USERS 省略</para>
+                /// <para>The principal ID. Omit this parameter for ALL_USERS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10086</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string GranteeId { get; set; }
 
                 /// <summary>
-                /// <para>跨租户 USER 所属租户</para>
+                /// <para>The tenant to which the cross-tenant USER belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string GranteeTenantId { get; set; }
 
                 /// <summary>
-                /// <para>主体类型</para>
+                /// <para>The principal type.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>授权权限点</para>
+            /// <para>The granted permissions.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("permissions")]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Permissions { get; set; }
 
             /// <summary>
-            /// <para>首段为 APP 应用键的点分资源键</para>
+            /// <para>The dot-separated resource key, where the first segment is the APP application key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>固定为 APP_RESOURCE</para>
+            /// <para>The resource type. Set the value to APP_RESOURCE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>资源所属租户 ID；省略为调用人当前租户</para>
+        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

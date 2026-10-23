@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListOutputFilesRequest : TeaModel {
         /// <summary>
-        /// <para>精确业务编号，来自文件登记或工作流实例关联</para>
+        /// <para>The business ID used for exact filtering. The length is 1 to 128 characters. This value is derived from the businessId of the file registration or associated workflow instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REQ-20261012-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>可选协作空间 ID；未传保持当前用户个人产出范围</para>
+        /// <para>The ID of the collaboration workspace. The length is 1 to 64 characters. This parameter is optional. If not specified, the personal outputs of the current user are queried. If specified, the real-time permissions of the workspace members and source resources are verified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123e4567-e89b-42d3-a456-426614174001</para>
@@ -30,37 +30,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
+        /// <para>The output item type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ppt</para>
+        /// <para>document</para>
         /// </summary>
         [NameInMap("itemType")]
         [Validation(Required=false)]
         public string ItemType { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searching. Matches the output title or item name.</para>
+        /// <para>The keyword used to match the output title or detail name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>Quarterly operations</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object). Used to filter results by name.</para>
+        /// <para>The name of the digital employee (operating object). Filters outputs by name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>Business Analysis Assistant</para>
         /// </summary>
         [NameInMap("operatingObjectName")]
         [Validation(Required=false)]
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page. Valid values: 1 to 100.</para>
+        /// <para>The number of items per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>精确会话 ID，覆盖普通会话、技能会话与任务 executionId</para>
+        /// <para>The session ID used for exact filtering. The length is 1 to 128 characters. This parameter applies to regular sessions, skill sessions, and the executionId of task executions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>session_123e4567-e89b-42d3-a456-426614174008</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display only outputs and output items with sharing enabled.</para>
+        /// <para>Specifies whether to display only shared outputs and output details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? SharedOnly { get; set; }
 
         /// <summary>
-        /// <para>全部匹配的标签列表，来自文件登记或实例 variables.tags</para>
+        /// <para>The tags used for exact filtering. All specified tags must be matched simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly by using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used. The identity and tenant permissions are determined by the gateway and backend authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

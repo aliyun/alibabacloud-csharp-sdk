@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListWorkItemArtifactsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码；成功为200</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>历史产物列表</para>
+        /// <para>The list of historical artifacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListWorkItemArtifactsResponseBodyItems> Items { get; set; }
         public class ListWorkItemArtifactsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>产物ID</para>
+            /// <para>The artifact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ArtifactId { get; set; }
 
             /// <summary>
-            /// <para>产物键</para>
+            /// <para>The artifact key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ArtifactKey { get; set; }
 
             /// <summary>
-            /// <para>节点尝试序号</para>
+            /// <para>The node attempt sequence number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? AttemptSeq { get; set; }
 
             /// <summary>
-            /// <para>内容类型</para>
+            /// <para>The content type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>创建时间(ISO8601)</para>
+            /// <para>The creation time in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>节点键</para>
+            /// <para>The node key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string NodeKey { get; set; }
 
             /// <summary>
-            /// <para>计划ID</para>
+            /// <para>The plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string PlanId { get; set; }
 
             /// <summary>
-            /// <para>引用信息</para>
+            /// <para>The reference information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public ListWorkItemArtifactsResponseBodyItemsRef Ref { get; set; }
             public class ListWorkItemArtifactsResponseBodyItemsRef : TeaModel {
                 /// <summary>
-                /// <para>产物ID</para>
+                /// <para>The artifact ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>引用类型</para>
+                /// <para>The reference data type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORK_ITEM_ARTIFACT</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Kind { get; set; }
 
                 /// <summary>
-                /// <para>OpenAPI 产物访问入口</para>
+                /// <para>The OpenAPI artifact access endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>运行ID</para>
+            /// <para>The run ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string RunId { get; set; }
 
             /// <summary>
-            /// <para>内容SHA-256</para>
+            /// <para>The SHA-256 hash of the content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Sha256 { get; set; }
 
             /// <summary>
-            /// <para>产物大小(字节)</para>
+            /// <para>The artifact size in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SizeBytes { get; set; }
 
             /// <summary>
-            /// <para>产物摘要</para>
+            /// <para>The artifact summary.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Summary { get; set; }
 
             /// <summary>
-            /// <para>产物标题</para>
+            /// <para>The artifact title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>会话轮次序号</para>
+            /// <para>The session turn sequence number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? TurnSeq { get; set; }
 
             /// <summary>
-            /// <para>产物类型</para>
+            /// <para>The artifact type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>工作项ID</para>
+            /// <para>The work item ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -224,17 +224,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请求的资源不存在</para>
+        /// <para>The requested resource does not exist</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>返回产物数量</para>
+        /// <para>The total number of returned artifacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
