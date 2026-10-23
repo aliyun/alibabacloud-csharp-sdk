@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The source of the extension file. Only ORIGIN (retained original extension file) is supported.</para>
+            /// <para>The source of the extension file. Only ORIGIN is supported, which indicates the original extension file to be retained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ORIGIN</para>

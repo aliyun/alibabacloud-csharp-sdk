@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<ListInstanceHistoryEventsShrinkRequestBody> Body { get; set; }
         public class ListInstanceHistoryEventsShrinkRequestBody : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to sort in descending order. Valid values:</para>
+            /// <para>Specifies whether to sort the results in descending order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true (default): yes</description></item>
-            /// <item><description>false: no</description></item>
+            /// <item><description>true: Sorts the results in descending order. This is the default value.</description></item>
+            /// <item><description>false: Sorts the results in ascending order.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? Desc { get; set; }
 
             /// <summary>
-            /// <para>The field by which the results are sorted. Valid values:</para>
+            /// <para>The field by which to sort the returned results. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>event_time: event creation time</description></item>
-            /// <item><description>event_execute_start_time: event execution time</description></item>
-            /// <item><description>event_execute_finish_time: event completion time</description></item>
+            /// <item><description>event_time: the creation time of the event</description></item>
+            /// <item><description>event_execute_start_time: the execution time of the event</description></item>
+            /// <item><description>event_execute_finish_time: the completion time of the event</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The end time for querying by event creation time. Specify a timestamp in milliseconds.</para>
+        /// <para>The end time for querying events by creation time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1645596516000</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventCreateEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying by event creation time. Specify a timestamp in milliseconds.</para>
+        /// <para>The start time for querying events by creation time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1645596516000</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventCycleStatusShrink { get; set; }
 
         /// <summary>
-        /// <para>The end time for querying by event execution time. Specify a timestamp in milliseconds.</para>
+        /// <para>The end time for querying events by execution time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1645596516000</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventExecuteEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying by event execution time. Specify a timestamp in milliseconds.</para>
+        /// <para>The start time for querying events by execution time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1645596516000</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventExecuteStartTime { get; set; }
 
         /// <summary>
-        /// <para>The end time for querying by event completion time. Specify a timestamp in milliseconds.</para>
+        /// <para>The end time for querying events by completion time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1645596516000</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventFinashEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying by event completion time. Specify a timestamp in milliseconds.</para>
+        /// <para>The start time for querying events by completion time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1645596516000</para>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class EstimatedLogstashRestartTimeRequest : TeaModel {
+        /// <summary>
+        /// <para>The restart parameters, including the restart type, target nodes, blue-green deployment options, and concurrency settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;restartType&quot;:&quot;nodeIp&quot;,&quot;nodes&quot;:[&quot;172.16.xx.xx&quot;],&quot;blueGreenDep&quot;:true}</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }

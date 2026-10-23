@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public UpdateInstanceResponseBodyResult Result { get; set; }
         public class UpdateInstanceResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The time when the instance was created. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-07-13T03:58:07.253Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The internal-facing access domain name of the instance for private network access.</para>
+            /// <para>The internal-facing access domain name of the instance on the private network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-abc.elasticsearch.aliyuncs.com</para>
@@ -85,6 +85,65 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("esVersion")]
             [Validation(Required=false)]
             public string EsVersion { get; set; }
+
+            /// <summary>
+            /// <para>The index node configuration. This parameter is supported only by AI engine instances.</para>
+            /// </summary>
+            [NameInMap("indexNodeConfiguration")]
+            [Validation(Required=false)]
+            public UpdateInstanceResponseBodyResultIndexNodeConfiguration IndexNodeConfiguration { get; set; }
+            public class UpdateInstanceResponseBodyResultIndexNodeConfiguration : TeaModel {
+                /// <summary>
+                /// <para>The number of nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("amount")]
+                [Validation(Required=false)]
+                public int? Amount { get; set; }
+
+                /// <summary>
+                /// <para>The disk size.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>500</para>
+                /// </summary>
+                [NameInMap("disk")]
+                [Validation(Required=false)]
+                public int? Disk { get; set; }
+
+                /// <summary>
+                /// <para>The disk type, such as cloud_essd.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloud_essd</para>
+                /// </summary>
+                [NameInMap("diskType")]
+                [Validation(Required=false)]
+                public string DiskType { get; set; }
+
+                /// <summary>
+                /// <para>The disk performance level (PL), such as PL0.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PL0</para>
+                /// </summary>
+                [NameInMap("performanceLevel")]
+                [Validation(Required=false)]
+                public string PerformanceLevel { get; set; }
+
+                /// <summary>
+                /// <para>The node specifications.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>elasticsearch.turbo1.ci.xlarge</para>
+                /// </summary>
+                [NameInMap("spec")]
+                [Validation(Required=false)]
+                public string Spec { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The instance ID.</para>
@@ -114,7 +173,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of the node.</para>
+                /// <para>The storage space size of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -163,7 +222,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of the node. Unit: GB.</para>
+                /// <para>The storage space size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -212,7 +271,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public UpdateInstanceResponseBodyResultNodeSpec NodeSpec { get; set; }
             public class UpdateInstanceResponseBodyResultNodeSpec : TeaModel {
                 /// <summary>
-                /// <para>The storage size of the node. Unit: GB.</para>
+                /// <para>The storage space size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>40</para>
@@ -250,8 +309,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>prepaid: Subscription.</description></item>
-            /// <item><description>postpaid: Pay-as-you-go.</description></item>
+            /// <item><description>prepaid: subscription.</description></item>
+            /// <item><description>postpaid: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -262,11 +321,70 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PaymentType { get; set; }
 
             /// <summary>
+            /// <para>The search node configuration. This parameter is supported only by AI engine instances.</para>
+            /// </summary>
+            [NameInMap("searchNodeConfiguration")]
+            [Validation(Required=false)]
+            public UpdateInstanceResponseBodyResultSearchNodeConfiguration SearchNodeConfiguration { get; set; }
+            public class UpdateInstanceResponseBodyResultSearchNodeConfiguration : TeaModel {
+                /// <summary>
+                /// <para>The number of nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("amount")]
+                [Validation(Required=false)]
+                public int? Amount { get; set; }
+
+                /// <summary>
+                /// <para>The disk size.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>500</para>
+                /// </summary>
+                [NameInMap("disk")]
+                [Validation(Required=false)]
+                public int? Disk { get; set; }
+
+                /// <summary>
+                /// <para>The disk type, such as cloud_essd.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloud_essd</para>
+                /// </summary>
+                [NameInMap("diskType")]
+                [Validation(Required=false)]
+                public string DiskType { get; set; }
+
+                /// <summary>
+                /// <para>The disk performance level (PL), such as PL0.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PL0</para>
+                /// </summary>
+                [NameInMap("performanceLevel")]
+                [Validation(Required=false)]
+                public string PerformanceLevel { get; set; }
+
+                /// <summary>
+                /// <para>The node specifications.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>elasticsearch.turbo1.ci.xlarge</para>
+                /// </summary>
+                [NameInMap("spec")]
+                [Validation(Required=false)]
+                public string Spec { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>active: Normal.</description></item>
-            /// <item><description>activating: Taking effect.</description></item>
-            /// <item><description>inactive: Frozen.</description></item>
+            /// <item><description>activating: Activating.</description></item>
+            /// <item><description>inactive: Inactive.</description></item>
             /// <item><description>invalid: Invalid.</description></item>
             /// </list>
             /// 

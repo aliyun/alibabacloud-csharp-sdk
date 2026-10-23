@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Grafana alert list is retrieved. Valid values:</para>
+        /// <para>Indicates whether the list of Grafana alerts is successfully retrieved. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Succeeded.</description></item>
         /// <item><description>false: Failed.</description></item>

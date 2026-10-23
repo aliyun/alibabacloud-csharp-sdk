@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint details.</para>
+        /// <para>The endpoint information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListVpcEndpointsResponseBodyResult> Result { get; set; }
         public class ListVpcEndpointsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The endpoint connection status. Valid values:</para>
+            /// <para>The connection status of the endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: Being modified.</para>
+            /// <item><description><para>Pending: Modifying.</para>
             /// </description></item>
             /// <item><description><para>Connecting: Connecting.</para>
             /// </description></item>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// </description></item>
             /// <item><description><para>Disconnecting: Disconnecting.</para>
             /// </description></item>
-            /// <item><description><para>Disconnected: Not connected.</para>
+            /// <item><description><para>Disconnected: Disconnected.</para>
             /// </description></item>
-            /// <item><description><para>Deleting: Being deleted.</para>
+            /// <item><description><para>Deleting: Deleting.</para>
             /// </description></item>
-            /// <item><description><para>ServiceDeleted: The service associated with the endpoint has been deleted.</para>
+            /// <item><description><para>ServiceDeleted: The service corresponding to the endpoint is deleted.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the endpoint was created.</para>
+            /// <para>The time when the endpoint was created. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-22T01:19:24Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description><para>Normal: Normal.</para>
             /// </description></item>
-            /// <item><description><para>FinancialLocked: Financial lock.</para>
+            /// <item><description><para>FinancialLocked: Locked due to overdue payment.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EndpointBusinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The endpoint domain name, which is used for connection configuration.</para>
+            /// <para>The domain name of the endpoint, which is used for connection configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-bp18s6wy9420wdi4****.epsrv-bp1bz3efowa4kc0****.cn-hangzhou.privatelink.aliyuncs.com</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EndpointDomain { get; set; }
 
             /// <summary>
-            /// <para>The endpoint ID.</para>
+            /// <para>The ID of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-bp1tah7zbrwmkjef****</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EndpointId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint name.</para>
+            /// <para>The name of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -109,15 +109,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EndpointName { get; set; }
 
             /// <summary>
-            /// <para>The endpoint status. Valid values:</para>
+            /// <para>The status of the endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Creating: Being created.</para>
+            /// <item><description><para>Creating: The endpoint is being created.</para>
             /// </description></item>
-            /// <item><description><para>Active: Active.</para>
+            /// <item><description><para>Active: The endpoint is available.</para>
             /// </description></item>
-            /// <item><description><para>Pending: Being modified.</para>
+            /// <item><description><para>Pending: The endpoint is being modified.</para>
             /// </description></item>
-            /// <item><description><para>Deleting: Being deleted.</para>
+            /// <item><description><para>Deleting: The endpoint is being deleted.</para>
             /// </description></item>
             /// </list>
             /// 

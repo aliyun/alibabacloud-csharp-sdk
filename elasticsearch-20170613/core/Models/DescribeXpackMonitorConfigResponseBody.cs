@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeXpackMonitorConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>Indicates whether X-Pack monitoring is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Not enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,12 +40,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
+            /// <summary>
+            /// <para>The list of access endpoints for the Elasticsearch instance associated with X-Pack monitoring.</para>
+            /// </summary>
             [NameInMap("endpoints")]
             [Validation(Required=false)]
             public List<string> Endpoints { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the Elasticsearch instance associated with X-Pack monitoring.</para>
+            /// <para>The Elasticsearch instance ID associated with X-Pack monitoring.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-n6w1o1x0w001c****</para>
@@ -54,6 +57,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string EsInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The list of Kibana-managed pipelines associated with X-Pack monitoring.</para>
+            /// </summary>
             [NameInMap("pipelineIds")]
             [Validation(Required=false)]
             public List<string> PipelineIds { get; set; }

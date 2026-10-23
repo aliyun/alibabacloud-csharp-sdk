@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class NodeSpec : TeaModel {
         /// <summary>
-        /// <para>Storage space size of data nodes, in GB.</para>
+        /// <para>The disk size of the data node, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Disk { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable cloud disk encryption for data nodes:</para>
+        /// <para>Specifies whether to enable cloud disk encryption for the data node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled</description></item>
-        /// <item><description>false: Disabled</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,18 +34,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? DiskEncryption { get; set; }
 
         /// <summary>
-        /// <para>Storage preference.</para>
+        /// <para>The storage preference.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>high_availability</para>
         /// </summary>
         [NameInMap("diskPreference")]
         [Validation(Required=false)]
         public string DiskPreference { get; set; }
 
         /// <summary>
-        /// <para>Storage type of data nodes. Supported values:</para>
+        /// <para>The storage type of the data node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_ssd: SSD cloud disk</description></item>
-        /// <item><description>cloud_essd: ESSD cloud disk</description></item>
-        /// <item><description>cloud_efficiency: Ultra cloud disk</description></item>
+        /// <item><description>cloud_ssd: standard SSD</description></item>
+        /// <item><description>cloud_essd: ESSD</description></item>
+        /// <item><description>cloud_efficiency: ultra disk</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>Performance level of ESSD cloud disks. Required when the disk type of data nodes is ESSD cloud disk. Supported values: PL1, PL2, PL3.</para>
+        /// <para>The performance level (PL) of the ESSD. This parameter is required when the disk type of the data node is ESSD. Valid values: PL1, PL2, and PL3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>Data node specification. Specification details can be viewed in <a href="https://help.aliyun.com/document_detail/271718.html">Product Specifications</a>.</para>
+        /// <para>The specifications of the data node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<ListKibanaPvlNetworkResponseBodyResult> Result { get; set; }
         public class ListKibanaPvlNetworkResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the Kibana private network connection was created.</para>
+            /// <para>The time when the Kibana private network connection was created. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-07T06:26:28Z</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The endpoint status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Disconnected: disconnected</description></item>
-            /// <item><description>Connected: connected</description></item>
+            /// <item><description>Disconnected: Not connected.</description></item>
+            /// <item><description>Connected: Connected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,12 +70,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string EndpointStatus { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the security group is a managed security group.</para>
+            /// </summary>
             [NameInMap("managedSecurityGroup")]
             [Validation(Required=false)]
             public bool? ManagedSecurityGroup { get; set; }
 
             /// <summary>
-            /// <para>The Kibana private network connection ID.</para>
+            /// <para>The ID of the Kibana private network connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-27a3mul6l***-kibana-internal</para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PvlId { get; set; }
 
             /// <summary>
-            /// <para>The list of security groups.</para>
+            /// <para>The security groups.</para>
             /// </summary>
             [NameInMap("securityGroups")]
             [Validation(Required=false)]

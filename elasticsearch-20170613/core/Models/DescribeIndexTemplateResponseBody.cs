@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The index template details.</para>
+        /// <para>The details of the index template.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? DataStream { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle policy name.</para>
+            /// <para>The life epoch Policy Name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cube_default_ilm_policy</para>
@@ -53,12 +53,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string IlmPolicy { get; set; }
 
+            /// <summary>
+            /// <para>The list of index name patterns that match this index template.</para>
+            /// </summary>
             [NameInMap("indexPatterns")]
             [Validation(Required=false)]
             public List<string> IndexPatterns { get; set; }
 
             /// <summary>
-            /// <para>The index template name.</para>
+            /// <para>The name of the index template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data-stream-default</para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public DescribeIndexTemplateResponseBodyResultTemplate Template { get; set; }
             public class DescribeIndexTemplateResponseBodyResultTemplate : TeaModel {
                 /// <summary>
-                /// <para>The aliases configuration.</para>
+                /// <para>The aliases.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;mydata\&quot;:{}}</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Aliases { get; set; }
 
                 /// <summary>
-                /// <para>The mappings configuration.</para>
+                /// <para>The mappings.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Mappings { get; set; }
 
                 /// <summary>
-                /// <para>The settings configuration.</para>
+                /// <para>The settings.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;index.refresh_interval\&quot;:\&quot;1s\&quot;}</para>

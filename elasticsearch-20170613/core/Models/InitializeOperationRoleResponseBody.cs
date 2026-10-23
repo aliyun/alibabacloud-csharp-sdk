@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result. Valid values:</para>
+        /// <para>The result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Created.</description></item>
-        /// <item><description>false: Failed to create.</description></item>
+        /// <item><description>true: The creation succeeded.</description></item>
+        /// <item><description>false: The creation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

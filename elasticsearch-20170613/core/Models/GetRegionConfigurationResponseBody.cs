@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The region configuration information returned.</para>
+        /// <para>The region configuration information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetRegionConfigurationResponseBodyResult Result { get; set; }
         public class GetRegionConfigurationResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The range of client node counts.</para>
+            /// <para>The range for the number of client nodes.</para>
             /// </summary>
             [NameInMap("clientNodeAmountRange")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The maximum allowed disk size.</para>
+                /// <para>The maximum value allowed for the disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? MaxSize { get; set; }
 
                 /// <summary>
-                /// <para>The minimum allowed disk size.</para>
+                /// <para>The minimum value allowed for the disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? MinSize { get; set; }
 
                 /// <summary>
-                /// <para>The maximum value that can be set as a continuous value for the disk.</para>
+                /// <para>The maximum value allowed for continuous disk sizing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
@@ -104,12 +104,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of client node specifications supported in the current region.</para>
+            /// </summary>
             [NameInMap("clientNodeSpec")]
             [Validation(Required=false)]
             public List<string> ClientNodeSpec { get; set; }
 
             /// <summary>
-            /// <para>The URL of the purchase page.</para>
+            /// <para>The URL of the buy page.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://common-buy.aliyun.com/?commodityCode=elasticsearch&orderType=BUY#/buy">https://common-buy.aliyun.com/?commodityCode=elasticsearch&amp;orderType=BUY#/buy</a></para>
@@ -136,7 +139,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The maximum allowed disk size.</para>
+                /// <para>The maximum value allowed for the disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5120</para>
@@ -146,7 +149,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? MaxSize { get; set; }
 
                 /// <summary>
-                /// <para>The minimum allowed disk size.</para>
+                /// <para>The minimum value allowed for the disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -156,7 +159,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? MinSize { get; set; }
 
                 /// <summary>
-                /// <para>The maximum value that can be set as a continuous value for the disk.</para>
+                /// <para>The maximum value allowed for continuous disk sizing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
@@ -165,6 +168,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public int? ScaleLimit { get; set; }
 
+                /// <summary>
+                /// <para>The list of allowed discrete values for the data node disk capacity.</para>
+                /// </summary>
                 [NameInMap("valueLimitSet")]
                 [Validation(Required=false)]
                 public List<string> ValueLimitSet { get; set; }
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public GetRegionConfigurationResponseBodyResultElasticNodeProperties ElasticNodeProperties { get; set; }
             public class GetRegionConfigurationResponseBodyResultElasticNodeProperties : TeaModel {
                 /// <summary>
-                /// <para>The range of warm node counts.</para>
+                /// <para>The range for the number of warm nodes.</para>
                 /// </summary>
                 [NameInMap("amountRange")]
                 [Validation(Required=false)]
@@ -208,19 +214,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 }
 
                 /// <summary>
-                /// <para>The disk configuration list.</para>
+                /// <para>The list of disk configurations.</para>
                 /// </summary>
                 [NameInMap("diskList")]
                 [Validation(Required=false)]
                 public List<GetRegionConfigurationResponseBodyResultElasticNodePropertiesDiskList> DiskList { get; set; }
                 public class GetRegionConfigurationResponseBodyResultElasticNodePropertiesDiskList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether disk encryption is supported. Valid values:</para>
+                    /// <para>Specifies whether disk encryption can be enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>true: Supported.</para>
-                    /// </description></item>
-                    /// <item><description><para>false: Not supported.</para>
-                    /// </description></item>
+                    /// <item><description>true: Supported.</description></item>
+                    /// <item><description>false: Not supported.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -241,7 +245,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string DiskType { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum allowed disk size.</para>
+                    /// <para>The maximum value allowed for the disk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5120</para>
@@ -251,7 +255,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public int? MaxSize { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum allowed disk size.</para>
+                    /// <para>The minimum value allowed for the disk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
@@ -261,7 +265,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public int? MinSize { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum value that can be set as a continuous value for the disk.</para>
+                    /// <para>The maximum value allowed for continuous disk sizing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2048</para>
@@ -270,12 +274,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     [Validation(Required=false)]
                     public int? ScaleLimit { get; set; }
 
+                    /// <summary>
+                    /// <para>The list of discrete values allowed for the disk capacity of elastic data nodes.</para>
+                    /// </summary>
                     [NameInMap("valueLimitSet")]
                     [Validation(Required=false)]
                     public List<string> ValueLimitSet { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The list of elastic data node specifications supported in the current region.</para>
+                /// </summary>
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public List<string> Spec { get; set; }
@@ -292,6 +302,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Env { get; set; }
 
+            /// <summary>
+            /// <para>The list of Elasticsearch versions that can be created in the current region.</para>
+            /// </summary>
             [NameInMap("esVersions")]
             [Validation(Required=false)]
             public List<string> EsVersions { get; set; }
@@ -325,6 +338,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of instance node types available in the current region.</para>
+            /// </summary>
             [NameInMap("instanceSupportNodes")]
             [Validation(Required=false)]
             public List<string> InstanceSupportNodes { get; set; }
@@ -337,7 +353,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public GetRegionConfigurationResponseBodyResultJvmConfine JvmConfine { get; set; }
             public class GetRegionConfigurationResponseBodyResultJvmConfine : TeaModel {
                 /// <summary>
-                /// <para>The minimum memory size required to enable JVM garbage collection.</para>
+                /// <para>The minimum memory size of the specification required to enable JVM garbage collection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -346,10 +362,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public int? Memory { get; set; }
 
+                /// <summary>
+                /// <para>The list of Elasticsearch versions that support configuring the JVM garbage collector.</para>
+                /// </summary>
                 [NameInMap("supportEsVersions")]
                 [Validation(Required=false)]
                 public List<string> SupportEsVersions { get; set; }
 
+                /// <summary>
+                /// <para>The list of allowed JVM garbage collectors.</para>
+                /// </summary>
                 [NameInMap("supportGcs")]
                 [Validation(Required=false)]
                 public List<string> SupportGcs { get; set; }
@@ -364,7 +386,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public GetRegionConfigurationResponseBodyResultKibanaNodeProperties KibanaNodeProperties { get; set; }
             public class GetRegionConfigurationResponseBodyResultKibanaNodeProperties : TeaModel {
                 /// <summary>
-                /// <para>The allowed range of node counts.</para>
+                /// <para>The allowed range for the number of nodes.</para>
                 /// </summary>
                 [NameInMap("amountRange")]
                 [Validation(Required=false)]
@@ -392,12 +414,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
                 }
 
+                /// <summary>
+                /// <para>The list of Kibana node specifications supported in the current region.</para>
+                /// </summary>
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public List<string> Spec { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The list of zones that support Logstash deployment in the current region.</para>
+            /// </summary>
             [NameInMap("logstashZones")]
             [Validation(Required=false)]
             public List<string> LogstashZones { get; set; }
@@ -420,7 +448,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The maximum allowed disk size.</para>
+                /// <para>The maximum value allowed for the disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -430,7 +458,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? MaxSize { get; set; }
 
                 /// <summary>
-                /// <para>The minimum allowed disk size.</para>
+                /// <para>The minimum value allowed for the disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -440,7 +468,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? MinSize { get; set; }
 
                 /// <summary>
-                /// <para>The maximum value that can be set as a continuous value for the disk.</para>
+                /// <para>The maximum value allowed for continuous disk sizing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -451,6 +479,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of dedicated master node specifications supported in the current region.</para>
+            /// </summary>
             [NameInMap("masterSpec")]
             [Validation(Required=false)]
             public List<string> MasterSpec { get; set; }
@@ -522,10 +553,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the specification is available for purchase. Valid values:</para>
+                /// <para>Specifies whether the specification is available for purchase. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Available.</description></item>
-                /// <item><description>false: Not available.</description></item>
+                /// <item><description>false: Unavailable.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -558,12 +589,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The storage type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>common: cloud disk</para>
-                /// </description></item>
-                /// <item><description><para>local_efficiency: local SATA disk</para>
-                /// </description></item>
-                /// <item><description><para>local_ssd: local SSD</para>
-                /// </description></item>
+                /// <item><description>common: Cloud disk.</description></item>
+                /// <item><description>local_efficiency: Local SATA disk.</description></item>
+                /// <item><description>local_ssd: Local SSD.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -595,10 +623,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The instance category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>advanced: Advanced Edition.</para>
-                /// </description></item>
-                /// <item><description><para>x-pack: Commercial Edition.</para>
-                /// </description></item>
+                /// <item><description>advanced: Advanced Edition.</description></item>
+                /// <item><description>x-pack: Commercial Edition.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -616,7 +642,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public List<GetRegionConfigurationResponseBodyResultSupportVersionsSupportVersionList> SupportVersionList { get; set; }
                 public class GetRegionConfigurationResponseBodyResultSupportVersionsSupportVersionList : TeaModel {
                     /// <summary>
-                    /// <para>The version available for selection on the purchase page.</para>
+                    /// <para>The version available for selection on the buy page.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5.5</para>
@@ -647,7 +673,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public GetRegionConfigurationResponseBodyResultWarmNodeProperties WarmNodeProperties { get; set; }
             public class GetRegionConfigurationResponseBodyResultWarmNodeProperties : TeaModel {
                 /// <summary>
-                /// <para>The range of node counts.</para>
+                /// <para>The range for the number of nodes.</para>
                 /// </summary>
                 [NameInMap("amountRange")]
                 [Validation(Required=false)]
@@ -676,19 +702,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 }
 
                 /// <summary>
-                /// <para>The disk configuration list.</para>
+                /// <para>The list of disk configurations.</para>
                 /// </summary>
                 [NameInMap("diskList")]
                 [Validation(Required=false)]
                 public List<GetRegionConfigurationResponseBodyResultWarmNodePropertiesDiskList> DiskList { get; set; }
                 public class GetRegionConfigurationResponseBodyResultWarmNodePropertiesDiskList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether disk encryption is supported. Valid values:</para>
+                    /// <para>Specifies whether disk encryption can be enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>true: Supported.</para>
-                    /// </description></item>
-                    /// <item><description><para>false: Not supported.</para>
-                    /// </description></item>
+                    /// <item><description>true: Supported.</description></item>
+                    /// <item><description>false: Not supported.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -709,7 +733,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string DiskType { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum allowed disk size.</para>
+                    /// <para>The maximum value allowed for the disk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5120</para>
@@ -719,7 +743,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public int? MaxSize { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum allowed disk size.</para>
+                    /// <para>The minimum value allowed for the disk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
@@ -729,7 +753,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public int? MinSize { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum value that can be set as a continuous value for the disk.</para>
+                    /// <para>The maximum value allowed for continuous disk sizing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2048</para>
@@ -738,18 +762,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     [Validation(Required=false)]
                     public int? ScaleLimit { get; set; }
 
+                    /// <summary>
+                    /// <para>The list of allowed discrete values for the warm data node disk capacity.</para>
+                    /// </summary>
                     [NameInMap("valueLimitSet")]
                     [Validation(Required=false)]
                     public List<string> ValueLimitSet { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The list of warm data node specifications supported in the current region.</para>
+                /// </summary>
                 [NameInMap("spec")]
                 [Validation(Required=false)]
                 public List<string> Spec { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The list of zones supported in the current region.</para>
+            /// </summary>
             [NameInMap("zones")]
             [Validation(Required=false)]
             public List<string> Zones { get; set; }

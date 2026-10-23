@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListEventRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The start time of the event query.</para>
+        /// <para>The start time for the event query. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1746516590000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the event query.</para>
+        /// <para>The end time for the event query. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1746775790000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paged query.</para>
+        /// <para>The page number in the paging Settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page in the paging Settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The filter object content. If this parameter is left empty, event records of all instances are returned. The value varies based on the filter type.</para>
+        /// <para>The content of the object to filter. If this parameter is empty, event records for all instances are returned. Note: Specify the corresponding value based on the filter type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>**</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string TermContent { get; set; }
 
         /// <summary>
-        /// <para>The filter object type. If this parameter is left empty, event records of all types are returned.</para>
+        /// <para>The object type to filter. If this parameter is empty, event records of all types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>

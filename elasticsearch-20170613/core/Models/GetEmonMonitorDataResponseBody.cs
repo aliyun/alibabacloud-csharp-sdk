@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetEmonMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<GetEmonMonitorDataResponseBodyResult> Result { get; set; }
         public class GetEmonMonitorDataResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The real-time metric monitoring data. Format: <c>{timestamp:data}</c>.</para>
+            /// <para>The real-time metric monitoring data. The format is <c>{timestamp:data}</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;1586249280&quot;: 465.1980465119913, &quot;1586249300&quot;: 213.45243650423305 }</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public Dictionary<string, object> Dps { get; set; }
 
             /// <summary>
-            /// <para>The completeness of time series data points in the metric query result. A value of 1.0 indicates 100% completeness.</para>
+            /// <para>The completeness of the time series curve data points in the result returned by the metric query. A value of 1.0 indicates 100% completeness.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public float? Integrity { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the request reaches the server. This is used for troubleshooting.</para>
+            /// <para>The timestamp when the request reaches the server. This parameter is used for troubleshooting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1522127381471</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Metric { get; set; }
 
             /// <summary>
-            /// <para>If the queries contain wildcards, the result includes multiple matching time series data sequences. The summary is the aggregation of the values across these time series at each time point, based on the aggregator type specified in the query. Currently, only avg is supported as the aggregation method.</para>
+            /// <para>If the queries contain wildcards, the result includes multiple matched time series data records. The summary is the aggregation of the value sets of these time series at each time point based on the aggregator type provided in the query. Currently, only the avg aggregation method is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Unsuccessful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

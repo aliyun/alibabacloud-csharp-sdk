@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The scenario-based configuration template was modified successfully.</description></item>
-        /// <item><description>false: The scenario-based configuration template failed to be modified.</description></item>
+        /// <item><description>true: The scenario-based configuration template was updated.</description></item>
+        /// <item><description>false: The scenario-based configuration template failed to be updated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ModifyElastictaskRequest : TeaModel {
         /// <summary>
-        /// <para>The scaling information.</para>
+        /// <para>Specifies the scaling information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;elasticExpansionTask&quot;:     {         &quot;triggerType&quot;:&quot;crontab&quot;,         &quot;cronExpression&quot;:&quot;0 0 0 ? * MON&quot;,         &quot;elasticNodeCount&quot;:&quot;2&quot;,         &quot;targetIndices&quot;:[&quot;*&quot;],         &quot;replicaCount&quot;:&quot;2&quot;     } }</para>

@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListPipelineResponseBodyResult> Result { get; set; }
         public class ListPipelineResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the pipeline was created.</para>
+            /// <para>The time when the pipeline was created. The format is YYYY-MM-DDTHH:mm:ss.SSSZ, where the trailing Z indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-05T03:10:38.188Z</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtCreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the pipeline was last updated.</para>
+            /// <para>The time when the pipeline was updated. The format is YYYY-MM-DDTHH:mm:ss.SSSZ, where the trailing Z indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-05T08:43:31.757Z</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The pipeline ID.</para>
+            /// <para>The ID of the pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pipeline_test</para>
@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The pipeline status. Valid values:</para>
+            /// <para>The status of the pipeline. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NOT_DEPLOYED: not deployed.</description></item>
-            /// <item><description>RUNNING: running.</description></item>
-            /// <item><description>DELETED: deleted. This status is not displayed in the console.</description></item>
+            /// <item><description>NOT_DEPLOYED: not deployed</description></item>
+            /// <item><description>RUNNING: running</description></item>
+            /// <item><description>DELETED: deleted (this status is not displayed in the console)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

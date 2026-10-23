@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public UpdatePublicNetworkResponseBodyResult Result { get; set; }
         public class UpdatePublicNetworkResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The status of the public network address switch.</para>
+            /// <para>The status of the public endpoint switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

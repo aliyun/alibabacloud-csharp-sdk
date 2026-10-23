@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The renewal was successful.</description></item>
+        /// <item><description>true: The renewal succeeded.</description></item>
         /// <item><description>false: The renewal failed.</description></item>
         /// </list>
         /// 

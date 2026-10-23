@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetEmonGrafanaDashboardsRequest : TeaModel {
+        /// <summary>
+        /// <para>This GET operation does not require a request body.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }

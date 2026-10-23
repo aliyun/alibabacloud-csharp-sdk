@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public UpgradeInfoResponseBodyResultUpgradeInfo UpgradeInfo { get; set; }
             public class UpgradeInfoResponseBodyResultUpgradeInfo : TeaModel {
                 /// <summary>
-                /// <para>The current repo version.</para>
+                /// <para>The current repository version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.7.3</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CurRepoVersion { get; set; }
 
                 /// <summary>
-                /// <para>The repo version available for upgrade.</para>
+                /// <para>The upgradable repository version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.7.3</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string UpdateRepoVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether an upgradeable version is available.</para>
+                /// <para>Indicates whether an upgradable version is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CurEsVersion { get; set; }
 
                 /// <summary>
-                /// <para>The kernel version available for upgrade.</para>
+                /// <para>The upgradable kernel version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.2.4</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string UpgradeApackVersion { get; set; }
 
                 /// <summary>
-                /// <para>The Elasticsearch version available for upgrade.</para>
+                /// <para>The upgradable Elasticsearch version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8.17.0</para>

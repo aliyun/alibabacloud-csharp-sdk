@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public ListEcsInstancesResponseBodyHeaders Headers { get; set; }
         public class ListEcsInstancesResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The total number of returned records.</para>
+            /// <para>The number of returned records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</para>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<ListEcsInstancesResponseBodyResult> Result { get; set; }
         public class ListEcsInstancesResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The Cloud Assistant installation status. Valid values:</para>
+            /// <para>The installation status of Cloud Assistant. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Installed.</description></item>
-            /// <item><description>false: Not installed.</description></item>
+            /// <item><description>true: installed</description></item>
+            /// <item><description>false: not installed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,12 +60,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string CloudAssistantStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of collectors deployed on the ECS instance.</para>
+            /// <para>The list of collectors on the ECS instance.</para>
             /// </summary>
             [NameInMap("collectors")]
             [Validation(Required=false)]
             public List<ListEcsInstancesResponseBodyResultCollectors> Collectors { get; set; }
             public class ListEcsInstancesResponseBodyResultCollectors : TeaModel {
+                /// <summary>
+                /// <para>The list of Filebeat collection paths.</para>
+                /// </summary>
                 [NameInMap("collectorPaths")]
                 [Validation(Required=false)]
                 public List<string> CollectorPaths { get; set; }
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public List<ListEcsInstancesResponseBodyResultCollectorsConfigs> Configs { get; set; }
                 public class ListEcsInstancesResponseBodyResultCollectorsConfigs : TeaModel {
                     /// <summary>
-                    /// <para>The file content.</para>
+                    /// <para>The content of the file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>The file name.</para>
+                    /// <para>The name of the file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>fields.yml</para>
@@ -102,10 +105,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether to only validate without creating the collector. Valid values:</para>
+                /// <para>Specifies whether to verify and create the collector. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Only validates without creating.</description></item>
-                /// <item><description>false: Validates and creates.</description></item>
+                /// <item><description>true: Verifies the collector but does not create it.</description></item>
+                /// <item><description>false: Verifies and creates the collector.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -116,7 +119,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public bool? DryRun { get; set; }
 
                 /// <summary>
-                /// <para>The extended configuration information.</para>
+                /// <para>The extended parameter information.</para>
                 /// </summary>
                 [NameInMap("extendConfigs")]
                 [Validation(Required=false)]
@@ -125,9 +128,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     /// <summary>
                     /// <para>The configuration type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>collectorTargetInstance: the collector Output.</description></item>
-                    /// <item><description>collectorDeployMachine: the deployment machine of the collector.</description></item>
-                    /// <item><description>collectorElasticsearchForKibana: the Elasticsearch instance information that supports Kibana dashboards.</description></item>
+                    /// <item><description>collectorTargetInstance: the collector output</description></item>
+                    /// <item><description>collectorDeployMachine: the machine on which the collector is deployed</description></item>
+                    /// <item><description>collectorElasticsearchForKibana: the information about the Elasticsearch instance that supports Kibana dashboards</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -138,10 +141,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string ConfigType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether Monitoring is enabled. This parameter is displayed when configType is set to collectorTargetInstance and instanceType is set to elasticsearch. Valid values:</para>
+                    /// <para>Specifies whether to enable monitoring. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b> and <b>instanceType</b> is set to <b>elasticsearch</b>. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true: Enabled.</description></item>
-                    /// <item><description>false: Not enabled.</description></item>
+                    /// <item><description>true: Enables monitoring.</description></item>
+                    /// <item><description>false: Disables monitoring.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -152,7 +155,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public bool? EnableMonitoring { get; set; }
 
                     /// <summary>
-                    /// <para>The machine group ID. This parameter is displayed when configType is set to collectorDeployMachine.</para>
+                    /// <para>The ID of the machine group. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachine</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default_ct-cn-5i2l75bz4776****</para>
@@ -161,12 +164,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     [Validation(Required=false)]
                     public string GroupId { get; set; }
 
+                    /// <summary>
+                    /// <para>The list of host addresses of the collector target instance.</para>
+                    /// </summary>
                     [NameInMap("hosts")]
                     [Validation(Required=false)]
                     public List<string> Hosts { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the instance associated with the collector. When configType is set to collectorTargetInstance, this is the instance ID of the collector Output. When configType is set to collectorDeployMachines and type is set to ACKCluster, this is the ACK (Container Kubernetes) cluster ID.</para>
+                    /// <para>Instance ID of the instance associated with the collector. When <b>configType</b> is set to <b>collectorTargetInstance</b>, this parameter indicates instance ID of the collector output instance. When <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ACKCluster</b>, this parameter indicates instance ID of the ACK cluster.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>es-cn-nif1z89fz003i****</para>
@@ -176,7 +182,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The instance type specified in the collector Output. Valid values: elasticsearch and logstash. This parameter is displayed when configType is set to collectorTargetInstance.</para>
+                    /// <para>The type of the instance specified by the collector output. Valid values: elasticsearch and logstash. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>elasticsearch</para>
@@ -186,7 +192,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string InstanceType { get; set; }
 
                     /// <summary>
-                    /// <para>The list of ECS machines on which the collector is deployed. This parameter is displayed when configType is set to collectorDeployMachines and type is set to ECSInstanceId.</para>
+                    /// <para>The list of ECS instances on which the collector is deployed. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ECSInstanceId</b>.</para>
                     /// </summary>
                     [NameInMap("machines")]
                     [Validation(Required=false)]
@@ -195,10 +201,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                         /// <summary>
                         /// <para>The status of each collector on the ECS instance. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>heartOk: normal heartbeat.</description></item>
-                        /// <item><description>heartLost: abnormal heartbeat.</description></item>
-                        /// <item><description>uninstalled: not installed.</description></item>
-                        /// <item><description>failed: installation failed.</description></item>
+                        /// <item><description>heartOk: normal heartbeat</description></item>
+                        /// <item><description>heartLost: abnormal heartbeat</description></item>
+                        /// <item><description>uninstalled: not installed</description></item>
+                        /// <item><description>failed: installation failed</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -209,7 +215,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                         public string AgentStatus { get; set; }
 
                         /// <summary>
-                        /// <para>The list of ECS machine IDs.</para>
+                        /// <para>The list of ECS instance IDs.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>i-bp13y63575oypr9d****</para>
@@ -221,7 +227,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     }
 
                     /// <summary>
-                    /// <para>The transport protocol, which must be consistent with the access protocol of the instance specified in the collector Output. Valid values: HTTP and HTTPS. This parameter is displayed when configType is set to collectorTargetInstance.</para>
+                    /// <para>The transmission protocol, which must be consistent with the access protocol of the instance specified by the collector output. Valid values: HTTP and HTTPS. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTTP</para>
@@ -231,10 +237,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string Protocol { get; set; }
 
                     /// <summary>
-                    /// <para>The type of machine on which the collector is deployed. This parameter is displayed when configType is set to collectorDeployMachine. Valid values:</para>
+                    /// <para>The type of the machine on which the collector is deployed. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachine</b>. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ECSInstanceId: ECS.</description></item>
-                    /// <item><description>ACKCluster: Container Kubernetes.</description></item>
+                    /// <item><description>ECSInstanceId: ECS instance</description></item>
+                    /// <item><description>ACKCluster: ACK cluster</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -245,7 +251,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The username used to access the instance specified in the collector Output. Default value: elastic. This parameter is displayed when configType is set to collectorTargetInstance or collectorElasticsearchForKibana.</para>
+                    /// <para>The username used to access the instance specified by the collector output. Default value: elastic. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b> or <b>collectorElasticsearchForKibana</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>elastic</para>
@@ -267,7 +273,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string GmtCreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the collector was last updated.</para>
+                /// <para>The time when the collector was updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-20T07:26:47.000+0000</para>
@@ -277,7 +283,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string GmtUpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The collector name.</para>
+                /// <para>The name of the collector.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ct-testAbc</para>
@@ -287,7 +293,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The account ID.</para>
+                /// <para>The ID of the account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16852<em><b>488</b></em>**</para>
@@ -307,7 +313,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ResId { get; set; }
 
                 /// <summary>
-                /// <para>The collector type. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</para>
+                /// <para>The type of the collector. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fileBeat</para>
@@ -317,7 +323,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ResType { get; set; }
 
                 /// <summary>
-                /// <para>The collector version. When the deployment machine type is ECS, only <b>6.8.5_with_community</b> is supported.</para>
+                /// <para>The version of the collector. When the machine type is ECS, only <b>6.8.5_with_community</b> is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6.8.5_with_community</para>
@@ -327,10 +333,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ResVersion { get; set; }
 
                 /// <summary>
-                /// <para>The collector status. Valid values:</para>
+                /// <para>The status of the collector. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>activing: taking effect.</description></item>
-                /// <item><description>active: active.</description></item>
+                /// <item><description>activing: taking effect</description></item>
+                /// <item><description>active: effective</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -341,7 +347,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID of the collector.</para>
+                /// <para>The ID of the VPC where the collector resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp16k1dvzxtm******</para>
@@ -363,7 +369,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EcsInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ECS instance name.</para>
+            /// <para>The name of the ECS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecsTestName</para>
@@ -390,10 +396,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Host { get; set; }
 
                 /// <summary>
-                /// <para>The IP address type. Valid values:</para>
+                /// <para>The type of the IP address. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>public: public IP address.</description></item>
-                /// <item><description>private: private network address.</description></item>
+                /// <item><description>public: public IP address</description></item>
+                /// <item><description>private: private network IP address</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -408,8 +414,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The operating system type of the ECS instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>windows: Windows operating system.</description></item>
-            /// <item><description>linux: Linux operating system.</description></item>
+            /// <item><description>windows: Windows operating system</description></item>
+            /// <item><description>linux: Linux operating system</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -422,10 +428,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The status of the ECS instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>running: running.</description></item>
-            /// <item><description>starting: starting.</description></item>
-            /// <item><description>stopping: stopping.</description></item>
-            /// <item><description>stopped: stopped.</description></item>
+            /// <item><description>running: running</description></item>
+            /// <item><description>starting: starting</description></item>
+            /// <item><description>stopping: stopping</description></item>
+            /// <item><description>stopped: stopped</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

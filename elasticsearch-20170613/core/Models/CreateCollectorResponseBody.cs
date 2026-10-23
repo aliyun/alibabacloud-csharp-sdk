@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateCollectorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8466BDFB-C513-4B8D-B4E3-5AB256AB****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public CreateCollectorResponseBodyResult Result { get; set; }
         public class CreateCollectorResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the collector that is created.</para>
+            /// <para>The ID of the created collector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ct-cn-4135is2tj194p****</para>

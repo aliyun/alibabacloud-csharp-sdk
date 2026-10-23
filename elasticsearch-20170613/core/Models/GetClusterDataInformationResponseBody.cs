@@ -43,10 +43,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public GetClusterDataInformationResponseBodyResultMetaInfo MetaInfo { get; set; }
             public class GetClusterDataInformationResponseBodyResultMetaInfo : TeaModel {
+                /// <summary>
+                /// <para>The fields corresponding to the index mapping.</para>
+                /// </summary>
                 [NameInMap("fields")]
                 [Validation(Required=false)]
                 public List<string> Fields { get; set; }
 
+                /// <summary>
+                /// <para>The list of indexes in the cluster.</para>
+                /// </summary>
                 [NameInMap("indices")]
                 [Validation(Required=false)]
                 public List<string> Indices { get; set; }
@@ -71,6 +77,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public string Settings { get; set; }
 
+                /// <summary>
+                /// <para>The type of the specified index.</para>
+                /// </summary>
                 [NameInMap("typeName")]
                 [Validation(Required=false)]
                 public List<string> TypeName { get; set; }

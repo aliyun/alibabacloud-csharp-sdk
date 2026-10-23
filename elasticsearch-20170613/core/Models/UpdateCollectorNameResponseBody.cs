@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateCollectorNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public UpdateCollectorNameResponseBodyResult Result { get; set; }
         public class UpdateCollectorNameResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>The collection path of Filebeat. This parameter is displayed when the collector is deployed on an ECS instance.</para>
+            /// </summary>
             [NameInMap("collectorPaths")]
             [Validation(Required=false)]
             public List<string> CollectorPaths { get; set; }
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<UpdateCollectorNameResponseBodyResultConfigs> Configs { get; set; }
             public class UpdateCollectorNameResponseBodyResultConfigs : TeaModel {
                 /// <summary>
-                /// <para>The file content.</para>
+                /// <para>The content of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The file name.</para>
+                /// <para>The name of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fields.yml</para>
@@ -62,10 +65,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the collector is validated and created. Valid values:</para>
+            /// <para>Specifies whether to verify and update the collector. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Only validated, not updated.</description></item>
-            /// <item><description>false: Validated and updated.</description></item>
+            /// <item><description>true: only verifies the request without updating the collector.</description></item>
+            /// <item><description>false: verifies and updates the collector.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,9 +88,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The configuration type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>collectorTargetInstance: the collector Output.</description></item>
-                /// <item><description>collectorDeployMachine: the machine on which the collector is deployed.</description></item>
-                /// <item><description>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana Dashboard.</description></item>
+                /// <item><description>collectorTargetInstance: the output of the collector</description></item>
+                /// <item><description>collectorDeployMachine: the machine where the collector is deployed</description></item>
+                /// <item><description>collectorElasticsearchForKibana: the information about the Elasticsearch instance that supports Kibana Dashboard</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,10 +101,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ConfigType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether Monitoring is enabled. Displayed when <b>configType</b> is <b>collectorTargetInstance</b> and <b>instanceType</b> is <b>elasticsearch</b>. Valid values:</para>
+                /// <para>Specifies whether to enable monitoring. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b> and <b>instanceType</b> is set to <b>elasticsearch</b>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Enabled.</description></item>
-                /// <item><description>false: Not enabled.</description></item>
+                /// <item><description>true: enables monitoring.</description></item>
+                /// <item><description>false: disables monitoring.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public bool? EnableMonitoring { get; set; }
 
                 /// <summary>
-                /// <para>The machine group ID. Displayed when <b>configType</b> is <b>collectorDeployMachine</b>.</para>
+                /// <para>The ID of the machine group. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachine</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default_ct-cn-5i2l75bz4776****</para>
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The internal-facing access address of Kibana on the private network after Kibana Dashboard is enabled. Displayed when <b>configType</b> is <b>collectorElasticsearchForKibana</b>.</para>
+                /// <para>The internal-facing access address of Kibana on the private network after Kibana Dashboard is enabled. This parameter is displayed when <b>configType</b> is set to <b>collectorElasticsearchForKibana</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>es-cn-4591jumei000u****-kibana.internal.elasticsearch.aliyuncs.com:5601</para>
@@ -131,12 +134,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
+                /// <summary>
+                /// <para>The access endpoints of the instance specified by the collector output. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b>.</para>
+                /// </summary>
                 [NameInMap("hosts")]
                 [Validation(Required=false)]
                 public List<string> Hosts { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID associated with the collector. When <b>configType</b> is <b>collectorTargetInstance</b>, this is the instance ID of the collector Output. When <b>configType</b> is <b>collectorDeployMachines</b> and <b>type</b> is <b>ACKCluster</b>, this is the ACK cluster ID.</para>
+                /// <para>Instance ID of the instance associated with the collector. If <b>configType</b> is set to <b>collectorTargetInstance</b>, this parameter indicates instance ID of the instance specified by the collector output. If <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ACKCluster</b>, this parameter indicates instance ID of the ACK cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>es-cn-n6w1o1****</para>
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of instance specified in the collector Output. Valid values: elasticsearch and logstash. Displayed when <b>configType</b> is <b>collectorTargetInstance</b>.</para>
+                /// <para>The type of the instance specified by the collector output. Valid values: elasticsearch and logstash. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch</para>
@@ -156,7 +162,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The public network access address of Kibana after Kibana Dashboard is enabled. Displayed when <b>configType</b> is <b>collectorElasticsearchForKibana</b>.</para>
+                /// <para>The public network access address of Kibana after Kibana Dashboard is enabled. This parameter is displayed when <b>configType</b> is set to <b>collectorElasticsearchForKibana</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://es-cn-4591jumei000u****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-4591jumei000u****.kibana.elasticsearch.aliyuncs.com:5601</a></para>
@@ -166,14 +172,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string KibanaHost { get; set; }
 
                 /// <summary>
-                /// <para>The list of ECS machines on which the collector is deployed. Displayed when <b>configType</b> is <b>collectorDeployMachines</b> and <b>type</b> is <b>ECSInstanceId</b>.</para>
+                /// <para>The information about the ECS instances where the collector is deployed. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ECSInstanceId</b>.</para>
                 /// </summary>
                 [NameInMap("machines")]
                 [Validation(Required=false)]
                 public List<UpdateCollectorNameResponseBodyResultExtendConfigsMachines> Machines { get; set; }
                 public class UpdateCollectorNameResponseBodyResultExtendConfigsMachines : TeaModel {
                     /// <summary>
-                    /// <para>The status of the collector on the ECS instance. Valid values: <b>heartOk</b> (normal heartbeat), <b>heartLost</b> (abnormal heartbeat), <b>uninstalled</b> (not installed), and <b>failed</b> (installation failed).</para>
+                    /// <para>The status of each collector on the ECS instance. Valid values: <b>heartOk</b> (heartbeat normal), <b>heartLost</b> (heartbeat abnormal), <b>uninstalled</b> (not installed), and <b>failed</b> (installation failed).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>heartOk</para>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string AgentStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The list of ECS machine IDs.</para>
+                    /// <para>The IDs of the ECS instances.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>c1b9fde5172b84f82b9928e825a7b8988</para>
@@ -205,7 +211,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The number of pods that are successfully collected in the ACK cluster. Displayed when <b>configType</b> is <b>collectorDeployMachines</b> and <b>type</b> is <b>ACKCluster</b>.</para>
+                /// <para>The number of pods from which data is successfully collected in the ACK cluster. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ACKCluster</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -215,7 +221,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string SuccessPodsCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of pods collected in the ACK cluster. Displayed when <b>configType</b> is <b>collectorDeployMachines</b> and <b>type</b> is <b>ACKCluster</b>.</para>
+                /// <para>The total number of pods from which data is collected in the ACK cluster. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ACKCluster</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -225,10 +231,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string TotalPodsCount { get; set; }
 
                 /// <summary>
-                /// <para>The type of machine on which the collector is deployed. Displayed when <b>configType</b> is <b>collectorDeployMachine</b>. Valid values:</para>
+                /// <para>The type of the machine where the collector is deployed. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachine</b>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ECSInstanceId: ECS instance.</description></item>
-                /// <item><description>ACKCluster: Container Kubernetes cluster.</description></item>
+                /// <item><description>ECSInstanceId: ECS instance</description></item>
+                /// <item><description>ACKCluster: Container Service for Kubernetes (ACK) cluster</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -239,7 +245,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The username used to access the instance specified in the collector Output. Default value: elastic. Displayed when <b>configType</b> is <b>collectorTargetInstance</b> or <b>collectorElasticsearchForKibana</b>.</para>
+                /// <para>The username used to access the instance specified by the collector output. Default value: elastic. This parameter is displayed when <b>configType</b> is set to <b>collectorTargetInstance</b> or <b>collectorElasticsearchForKibana</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elastic</para>
@@ -251,7 +257,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The time when the collector was created.</para>
+            /// <para>The time when the collector was created. The time is in the YYYY-MM-DDTHH:mm:ss.SSS+HHMM format, where the suffix indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-20T07:26:47.000+0000</para>
@@ -261,7 +267,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtCreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the collector was last updated.</para>
+            /// <para>The time when the collector was updated. The time is in the YYYY-MM-DDTHH:mm:ss.SSS+HHMM format, where the suffix indicates the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-20T07:26:47.000+0000</para>
@@ -271,7 +277,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The collector name.</para>
+            /// <para>The name of the collector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ct-test</para>
@@ -281,7 +287,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The account ID.</para>
+            /// <para>The ID of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16852099488*****</para>
@@ -291,7 +297,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The collector instance ID.</para>
+            /// <para>The instance ID of the collector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ct-cn-77uqof2s7rg5c****</para>
@@ -301,7 +307,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResId { get; set; }
 
             /// <summary>
-            /// <para>The collector type. Valid values: fileBeat, metricBeat, heartBeat, and audiBeat.</para>
+            /// <para>The type of the collector. Valid values: fileBeat, metricBeat, heartBeat, and audiBeat.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fileBeat</para>
@@ -311,7 +317,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResType { get; set; }
 
             /// <summary>
-            /// <para>The collector version. The supported versions depend on the type of machine on which the collector is deployed:</para>
+            /// <para>The version of the collector. The supported versions vary based on the type of the machine where the collector is deployed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ECS: 6.8.5_with_community</description></item>
             /// <item><description>ACK: 6.8.13_with_community</description></item>
@@ -325,7 +331,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResVersion { get; set; }
 
             /// <summary>
-            /// <para>The collector status. Valid values: activing (taking effect) and active (active).</para>
+            /// <para>The status of the collector. Valid values: activing (activating) and active (activated).</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -335,7 +341,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC where the collector resides.</para>
+            /// <para>The ID of the virtual private cloud (VPC) where the collector resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp16k1dvzxtma*****</para>

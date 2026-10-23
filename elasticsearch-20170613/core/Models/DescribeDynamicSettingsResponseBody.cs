@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeDynamicSettingsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

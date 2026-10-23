@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public UpdatePrivateNetworkWhiteIpsResponseBodyResult Result { get; set; }
         public class UpdatePrivateNetworkWhiteIpsResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>The VPC private network access whitelist.</para>
+            /// </summary>
             [NameInMap("privateNetworkIpWhiteList")]
             [Validation(Required=false)]
             public List<string> PrivateNetworkIpWhiteList { get; set; }

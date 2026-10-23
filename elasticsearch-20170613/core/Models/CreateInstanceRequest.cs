@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public ElasticDataNodeConfiguration ElasticDataNodeConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The access password of the instance. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$%^&amp;*()_+-=). The password must be 8 to 32 characters in length.</para>
+        /// <para>The access password of the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include !@#$%^&amp;*()_+-=.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <item><description>5.5.3_with_X-Pack</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The versions listed above may not include all versions supported by Elasticsearch instances. Call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actual supported versions.</para>
+        /// <para>The preceding versions may not include all versions supported by Elasticsearch instances. To view the actual supported versions, call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,10 +69,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EsVersion { get; set; }
 
         /// <summary>
+        /// <para>The index node configuration. Only instances with the AI engine type support index node configuration.</para>
+        /// </summary>
+        [NameInMap("indexNodeConfiguration")]
+        [Validation(Required=false)]
+        public IndexNodeConfiguration IndexNodeConfiguration { get; set; }
+
+        /// <summary>
         /// <para>The edition type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>x-pack: Creates a commercial edition instance, or a kernel-enhanced edition instance without Indexing Service or OpenStore enabled.</description></item>
-        /// <item><description>IS: Creates a kernel-enhanced edition instance with Indexing Service or OpenStore enabled.</description></item>
+        /// <item><description>x-pack: Creates a Commercial Edition instance, or an Advanced Edition instance with Indexing Service and OpenStore disabled.</description></item>
+        /// <item><description>IS: Creates an Advanced Edition instance with Indexing Service or OpenStore enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +92,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The Kibana node configuration.</para>
         /// <remarks>
-        /// <para>We strongly recommend that you enable Kibana nodes.</para>
+        /// <para>Enable the Kibana node.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("kibanaConfiguration")]
@@ -95,7 +102,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The dedicated master node configuration.</para>
         /// <remarks>
-        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based dedicated master nodes, specify the instance family followed by the <c>.new</c> suffix. For example, elasticsearch.sn1ne.large.new.</para>
+        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call the createInstance operation to create an instance with a new-generation cloud disk-based dedicated master node, you must specify the instance family with the <c>.new</c> suffix, such as elasticsearch.sn1ne.large.new.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("masterConfiguration")]
@@ -105,7 +112,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The network configuration.</para>
         /// <remarks>
-        /// <para>You cannot specify an IP whitelist when creating an instance.</para>
+        /// <para>You cannot specify an IP address whitelist when you create an instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -127,7 +134,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The data node configuration.</para>
         /// <remarks>
-        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based data nodes, specify the instance family followed by the <c>.new</c> suffix. For example, elasticsearch.sn1ne.large.new.</para>
+        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call the createInstance operation to create an instance with a new-generation cloud disk-based data node, you must specify the instance family with the <c>.new</c> suffix, such as elasticsearch.sn1ne.large.new.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("nodeSpec")]
@@ -135,7 +142,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public NodeSpec NodeSpec { get; set; }
 
         /// <summary>
-        /// <para>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</para>
+        /// <para>The payment details of the subscription instance. This parameter is required when you create a subscription instance.</para>
         /// </summary>
         [NameInMap("paymentInfo")]
         [Validation(Required=false)]
@@ -166,14 +173,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance tags.</para>
+        /// <para>The query node configuration. Only instances with the AI engine type support query node configuration.</para>
+        /// </summary>
+        [NameInMap("searchNodeConfiguration")]
+        [Validation(Required=false)]
+        public SearchNodeConfiguration SearchNodeConfiguration { get; set; }
+
+        /// <summary>
+        /// <para>The instance label group.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestTags> Tags { get; set; }
         public class CreateInstanceRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the instance.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -183,7 +197,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the instance.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyValue</para>
@@ -195,7 +209,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The cold data node configuration.</para>
+        /// <para>The warm data node configuration.</para>
         /// </summary>
         [NameInMap("warmNodeConfiguration")]
         [Validation(Required=false)]
@@ -212,7 +226,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? ZoneCount { get; set; }
 
         /// <summary>
-        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>

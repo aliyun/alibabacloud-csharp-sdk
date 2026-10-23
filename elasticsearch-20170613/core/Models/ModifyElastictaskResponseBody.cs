@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public ModifyElastictaskResponseBodyResult Result { get; set; }
         public class ModifyElastictaskResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The elastic node scale-out rule.</para>
+            /// <para>The scale-out rules for elastic nodes.</para>
             /// </summary>
             [NameInMap("elasticExpansionTask")]
             [Validation(Required=false)]
             public ModifyElastictaskResponseBodyResultElasticExpansionTask ElasticExpansionTask { get; set; }
             public class ModifyElastictaskResponseBodyResultElasticExpansionTask : TeaModel {
                 /// <summary>
-                /// <para>The trigger cycle, specified as a Quartz Cron expression.</para>
+                /// <para>The trigger cycle, specified by a Quartz cron expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 0 ? * MON</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The number of elastic data nodes during peak hours.</para>
+                /// <para>The target number of elastic data nodes during peak hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -63,12 +63,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
 
+                /// <summary>
+                /// <para>The list of target index names for the elastic scaling task. Wildcards are supported.</para>
+                /// </summary>
                 [NameInMap("targetIndices")]
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
 
                 /// <summary>
-                /// <para>The cause. The value is fixed as crontab, which indicates scheduled triggering.</para>
+                /// <para>The Cause. The value is fixed to crontab, which indicates scheduled triggering.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>crontab</para>
@@ -80,14 +83,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The elastic node scale-in rule.</para>
+            /// <para>The scale-in rules for elastic nodes.</para>
             /// </summary>
             [NameInMap("elasticShrinkTask")]
             [Validation(Required=false)]
             public ModifyElastictaskResponseBodyResultElasticShrinkTask ElasticShrinkTask { get; set; }
             public class ModifyElastictaskResponseBodyResultElasticShrinkTask : TeaModel {
                 /// <summary>
-                /// <para>The trigger cycle, specified as a Quartz Cron expression.</para>
+                /// <para>The trigger cycle, specified by a Quartz cron expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4 4 4 ? * WED</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The number of elastic data nodes during off-peak hours.</para>
+                /// <para>The target number of elastic data nodes during off-peak hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -116,12 +119,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
 
+                /// <summary>
+                /// <para>The list of target index names for the elastic scaling task. Wildcards are supported.</para>
+                /// </summary>
                 [NameInMap("targetIndices")]
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
 
                 /// <summary>
-                /// <para>The cause. Valid values: crontab, which indicates scheduled triggering.</para>
+                /// <para>The Cause. Valid value: crontab, which indicates scheduled triggering.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>crontab</para>

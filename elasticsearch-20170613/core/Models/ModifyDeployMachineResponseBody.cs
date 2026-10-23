@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the update is successful. Valid values:</para>
+        /// <para>Indicates whether the update was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The update was successful.</description></item>
+        /// <item><description>false: The update failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

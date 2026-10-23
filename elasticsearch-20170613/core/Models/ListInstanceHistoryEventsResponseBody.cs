@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D1A6830A-F59B-4E05-BFAC-9496C21DBBA7</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EcsId { get; set; }
 
             /// <summary>
-            /// <para>The event creation time.</para>
+            /// <para>The creation time of the event. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-07T00:00:00Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EventCycleStatus { get; set; }
 
             /// <summary>
-            /// <para>The event execution time.</para>
+            /// <para>The execution time of the event. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-07T00:00:00Z</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EventExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>The event completion time.</para>
+            /// <para>The completion time of the event. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-07T00:00:00Z</para>
@@ -138,12 +138,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ECS:AUTO_RESTART: ECS node automatic restart.</description></item>
-            /// <item><description>Instance:InstanceFailure.Reboot:Executed: ECS instance restart completed (ECS instance error).</description></item>
-            /// <item><description>Instance:InstanceFailure.Reboot:Executing: ECS instance restart started (instance error).</description></item>
-            /// <item><description>Instance:SystemFailure.Reboot:Executed: ECS instance restart completed (system error).</description></item>
-            /// <item><description>Instance:SystemFailure.Reboot:Executing: ECS instance restart started (system error).</description></item>
-            /// <item><description>Instance:SystemFailure.Reboot:Failed: ECS instance restart failed (system error).</description></item>
+            /// <item><description>ECS:AUTO_RESTART: The ECS node is automatically restarted.</description></item>
+            /// <item><description>Instance:InstanceFailure.Reboot:Executed: The restart of the ECS instance is complete due to an instance error.</description></item>
+            /// <item><description>Instance:InstanceFailure.Reboot:Executing: The restart of the ECS instance starts due to an instance error.</description></item>
+            /// <item><description>Instance:SystemFailure.Reboot:Executed: The restart of the ECS instance is complete due to a system error.</description></item>
+            /// <item><description>Instance:SystemFailure.Reboot:Executing: The restart of the ECS instance starts due to a system error.</description></item>
+            /// <item><description>Instance:SystemFailure.Reboot:Failed: The restart of the ECS instance fails due to a system error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string NodeIP { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the event occurred.</para>
+            /// <para>The ID of the region where the event occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

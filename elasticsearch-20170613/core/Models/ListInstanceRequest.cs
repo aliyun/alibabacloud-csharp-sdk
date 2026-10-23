@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name. Fuzzy match is supported. For example, if you search for <b>abc</b>, all instances whose names contain <b>abc</b> may be returned, such as <b>abc</b>, <b>abcde</b>, <b>xyabc</b>, and <b>xabcy</b>.</para>
+        /// <para>The instance name. Fuzzy search is supported. For example, if you search for <b>abc</b>, instances such as <b>abc</b>, <b>abcde</b>, <b>xyabc</b>, and <b>xabcy</b> may be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyunes_test1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance version.</para>
+        /// <para>The Elasticsearch version of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6.7_with_X-Pack</para>
@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         /// <summary>
         /// <para>The edition of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>x-pack: Commercial Edition</para>
+        /// </description></item>
+        /// <item><description><para>advanced/IS: Advanced Edition</para>
+        /// </description></item>
+        /// <item><description><para>community: Basic Edition</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
@@ -50,7 +58,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the instance list.</para>
+        /// <para>The page number of the instance list. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,6 +69,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>postpaid: pay-as-you-go</para>
+        /// </description></item>
+        /// <item><description><para>prepaid: subscription</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>postpaid</para>
@@ -80,7 +94,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Settings the number of entries per page for paging. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -89,6 +103,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        /// <summary>
+        /// <para>The instance status used for filtering. Valid values: active, activating, inactive, invalid, and unknown.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>active</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -104,7 +124,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) in which the instance resides.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp16k1dvzxtmagcva****</para>
@@ -114,7 +134,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance.</para>
+        /// <para>The ID of the zone to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

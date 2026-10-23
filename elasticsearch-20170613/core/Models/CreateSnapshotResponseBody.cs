@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The manual snapshot backup is successful.</description></item>
+        /// <item><description>true: The manual snapshot backup succeeded.</description></item>
         /// <item><description>false: The manual snapshot backup failed.</description></item>
         /// </list>
         /// 

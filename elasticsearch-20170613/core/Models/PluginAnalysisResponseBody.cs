@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<PluginAnalysisResponseBodyResult> Result { get; set; }
         public class PluginAnalysisResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The plug-in description.</para>
+            /// <para>The plugin description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>plugin description</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The plug-in version.</para>
+            /// <para>The plugin version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.17.0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ElasticsearchVersion { get; set; }
 
             /// <summary>
-            /// <para>The plug-in name.</para>
+            /// <para>The plugin name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>plugin_name</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The security policy of the plug-in.</para>
+            /// <para>The security policy of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SecurityPolicy { get; set; }
 
             /// <summary>
-            /// <para>The plug-in version.</para>
+            /// <para>The plugin version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.17.0</para>

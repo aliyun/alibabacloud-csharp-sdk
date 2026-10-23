@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The type of machine on which the collector is deployed. If this parameter is not specified, all types are returned. Valid values:</para>
+        /// <para>Specifies the type of machine on which the collector is deployed. If you do not specify this parameter, all types are returned. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>ECS: ECS instance</para>
         /// </description></item>
-        /// <item><description><para>ACK: Container Kubernetes cluster</para>
+        /// <item><description><para>ACK: ACK cluster</para>
         /// </description></item>
         /// </list>
         /// 

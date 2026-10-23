@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListEventRecordsResponseBodyResult Result { get; set; }
         public class ListEventRecordsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The returned content.</para>
+            /// <para>The response content.</para>
             /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public List<ListEventRecordsResponseBodyResultResult> Result { get; set; }
             public class ListEventRecordsResponseBodyResultResult : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether automatic alerting is enabled.</para>
+                /// <para>Indicates whether automatic alerting is triggered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Product { get; set; }
 
                 /// <summary>
-                /// <para>The scheduled execution time.</para>
+                /// <para>The scheduled execution time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-05-08 18:41:01</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ScheduleExecuteTime { get; set; }
 
                 /// <summary>
-                /// <para>The scheduled end time.</para>
+                /// <para>The scheduled end time of the execution. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-05-08 18:41:01</para>
@@ -121,21 +121,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public ListEventRecordsResponseBodyResultResultShowContent ShowContent { get; set; }
                 public class ListEventRecordsResponseBodyResultResultShowContent : TeaModel {
                     /// <summary>
-                    /// <para>The suggested action.</para>
+                    /// <para>The recommended actions.</para>
                     /// </summary>
                     [NameInMap("actionSuggest")]
                     [Validation(Required=false)]
                     public ListEventRecordsResponseBodyResultResultShowContentActionSuggest ActionSuggest { get; set; }
                     public class ListEventRecordsResponseBodyResultResultShowContentActionSuggest : TeaModel {
                         /// <summary>
-                        /// <para>The suggested action.</para>
+                        /// <para>The recommended actions.</para>
                         /// </summary>
                         [NameInMap("suggestActions")]
                         [Validation(Required=false)]
                         public List<string> SuggestActions { get; set; }
 
                         /// <summary>
-                        /// <para>The text of the suggested action.</para>
+                        /// <para>The text of the recommended action.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>“”</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                         public string SuggestText { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the suggested action.</para>
+                        /// <para>The type of the recommended action.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>promptText</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string EventStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the event occurred.</para>
+                    /// <para>The time when the event occurred. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-05-08 18:31:01</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string EventTime { get; set; }
 
                     /// <summary>
-                    /// <para>The end time of the O&amp;M execution for the event.</para>
+                    /// <para>The end time of the O&amp;M execution for the event. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-05-08 18:41:01</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string ExecuteFinishTime { get; set; }
 
                     /// <summary>
-                    /// <para>The start time of the O&amp;M execution for the event.</para>
+                    /// <para>The start time of the O&amp;M execution for the event. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-05-08 18:31:00</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string ExecuteStartTime { get; set; }
 
                     /// <summary>
-                    /// <para>The instance ID of the instance on which the event occurred.</para>
+                    /// <para>The instance ID where the event occurred.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>es-cn-a5cb2dece****</para>

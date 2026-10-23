@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceIndicesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to retrieve all indexes. Valid values:</para>
+        /// <para>Specifies whether to retrieve all indices. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Returns the index list including system indexes.</para>
+        /// <item><description><para>true: returns a list of indices including system indices.</para>
         /// </description></item>
-        /// <item><description><para>false (default): Returns the index list excluding system indexes.</para>
+        /// <item><description><para>false: returns a list of indices excluding system indices. Default value: false.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display only managed indexes. Valid values:</para>
+        /// <para>Specifies whether to view only managed indices. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Displays only managed indexes.</para>
+        /// <item><description><para>true: views only managed indices.</para>
         /// </description></item>
-        /// <item><description><para>false (default): Displays all indexes.</para>
+        /// <item><description><para>false: views all indices. Default value: false.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? IsManaged { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display only OpenStore cold-phase indexes. Valid values:</para>
+        /// <para>Specifies whether to view only OpenStore cold-phase indices. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Displays only OpenStore cold-phase indexes.</para>
+        /// <item><description><para>true: views only OpenStore cold-phase indices.</para>
         /// </description></item>
-        /// <item><description><para>false (default): Displays all indexes.</para>
+        /// <item><description><para>false: views all indices. Default value: false.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number of the instance list. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Maximum value: 100. Default value: 20.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

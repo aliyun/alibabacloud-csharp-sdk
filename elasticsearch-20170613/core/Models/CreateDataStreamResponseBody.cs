@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public CreateDataStreamResponseBodyResult Result { get; set; }
         public class CreateDataStreamResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The data stream name.</para>
+            /// <para>The name of the data stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-</para>

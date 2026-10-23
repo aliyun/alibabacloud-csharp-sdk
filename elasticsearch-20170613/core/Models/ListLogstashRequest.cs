@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name. Fuzzy match is supported. For example, if you search for an instance named abc, instances named abc, abcde, xyabc, and xabcy may all be returned.</para>
+        /// <para>The name of the instance. Fuzzy match is supported. For example, if you search for instances named abc, the system may return all instances whose names are abc, abcde, xyabc, or xabcy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ls-cn-abc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2h5vbzd****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in Settings for paging. Default value: 20.</para>
+        /// <para>The number of entries per page in a paging query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The instance version.</para>
+        /// <para>The version of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.5.3_with_X-Pack</para>

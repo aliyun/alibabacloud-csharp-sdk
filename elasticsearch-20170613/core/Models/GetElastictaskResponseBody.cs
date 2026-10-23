@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public GetElastictaskResponseBodyResultElasticExpansionTask ElasticExpansionTask { get; set; }
             public class GetElastictaskResponseBodyResultElasticExpansionTask : TeaModel {
                 /// <summary>
-                /// <para>The trigger cycle, specified as a Quartz Cron expression.</para>
+                /// <para>The trigger cycle, which uses a Quartz Cron expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 0 ? * MON</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The number of elastic data nodes during peak hours.</para>
+                /// <para>The target number of elastic data nodes during peak hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -63,12 +63,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
 
+                /// <summary>
+                /// <para>The list of target index names for the elastic scaling task. Wildcards are supported.</para>
+                /// </summary>
                 [NameInMap("targetIndices")]
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
 
                 /// <summary>
-                /// <para>The cause. Currently, only <b>crontab</b> is supported, which indicates scheduled triggering.</para>
+                /// <para>The Cause. Currently, only <b>crontab</b> is supported, which indicates scheduled triggering.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>crontab</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public GetElastictaskResponseBodyResultElasticShrinkTask ElasticShrinkTask { get; set; }
             public class GetElastictaskResponseBodyResultElasticShrinkTask : TeaModel {
                 /// <summary>
-                /// <para>The trigger cycle, specified as a Quartz Cron expression.</para>
+                /// <para>The trigger cycle, which uses a Quartz Cron expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4 4 4 ? * WED</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The number of elastic data nodes during off-peak hours.</para>
+                /// <para>The target number of elastic data nodes during off-peak hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -116,12 +119,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
 
+                /// <summary>
+                /// <para>The list of target index names for the elastic scaling task. Wildcards are supported.</para>
+                /// </summary>
                 [NameInMap("targetIndices")]
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
 
                 /// <summary>
-                /// <para>The cause. Currently, only crontab is supported, which indicates scheduled triggering.</para>
+                /// <para>The Cause. Currently, only crontab is supported, which indicates scheduled triggering.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>crontab</para>

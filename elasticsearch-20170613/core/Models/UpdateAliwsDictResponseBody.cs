@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The source type of the dictionary file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS: uses OSS open storage.</description></item>
+            /// <item><description>OSS: uses OSS public storage.</description></item>
             /// <item><description>ORIGIN: retains the previously uploaded dictionary.</description></item>
             /// </list>
             /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The dictionary type. Valid values: ALI_WS (AliNLP tokenizer).</para>
+            /// <para>The dictionary type. Valid value: ALI_WS (AliNLP word segmentation).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALI_WS</para>

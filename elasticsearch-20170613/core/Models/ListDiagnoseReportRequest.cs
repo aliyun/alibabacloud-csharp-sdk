@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? Detail { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the query. Unit: milliseconds.</para>
+        /// <para>The end timestamp for the query. Unit: milliseconds.</para>
         /// <list type="bullet">
         /// <item><description>Minimum value: 1000000000000</description></item>
         /// <item><description>Maximum value: 2000000000000</description></item>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the query. Unit: milliseconds.</para>
+        /// <para>The start timestamp for the query. Unit: milliseconds.</para>
         /// <list type="bullet">
         /// <item><description>Minimum value: 1000000000000</description></item>
         /// <item><description>Maximum value: 2000000000000</description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The trigger method of the health diagnostics. Valid values:</para>
+        /// <para>The trigger method for health diagnostics. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SYSTEM (default): automatically triggered by the system</description></item>
         /// <item><description>INNER: internally triggered</description></item>

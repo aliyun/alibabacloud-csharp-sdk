@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InitModelRequest : TeaModel {
         /// <summary>
-        /// <para>The API key for the AISearch open platform.</para>
+        /// <para>The API key for the AI Search Open Platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The service registration address of the AISearch open platform.</para>
+        /// <para>The service registration address for the AI Search Open Platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string HttpSchema { get; set; }
 
         /// <summary>
-        /// <para>The models to initialize. If this parameter is left empty, all built-in models are initialized.</para>
+        /// <para>Specifies the models to initialize. If this parameter is left empty, all built-in models are initialized.</para>
         /// </summary>
         [NameInMap("models")]
         [Validation(Required=false)]
@@ -52,13 +52,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The model type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>text_embedding: text embedding</description></item>
-            /// <item><description>rerank: reranking</description></item>
-            /// <item><description>doc_split: document splitting</description></item>
-            /// <item><description>completion: large language model service</description></item>
-            /// <item><description>query_analyze: query analysis</description></item>
-            /// <item><description>doc_analyze: document content parsing</description></item>
-            /// <item><description>img_analyze: image content parsing</description></item>
+            /// <item><description>text_embedding: Text embedding.</description></item>
+            /// <item><description>rerank: Reranking.</description></item>
+            /// <item><description>doc_split: Document splitting.</description></item>
+            /// <item><description>completion: Large language model service.</description></item>
+            /// <item><description>query_analyze: Query analysis. </description></item>
+            /// <item><description>doc_analyze: Document content parsing.</description></item>
+            /// <item><description>img_analyze: Image content parsing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ModelType { get; set; }
 
             /// <summary>
-            /// <para>The service ID of the AISearch open platform.</para>
+            /// <para>The service ID for the Search Open Platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ops-text-embedding-**</para>

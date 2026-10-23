@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListStatsEventRecordsRequest : TeaModel {
+        /// <summary>
+        /// <para>The end time of the statistical window. The value is a UNIX timestamp in seconds. This parameter must be specified together with startTime and must be later than the start time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4600</para>
+        /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -33,6 +39,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string Level { get; set; }
 
+        /// <summary>
+        /// <para>The start time of the statistical window. The value is a UNIX timestamp in seconds. This parameter must be specified together with endTime.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }

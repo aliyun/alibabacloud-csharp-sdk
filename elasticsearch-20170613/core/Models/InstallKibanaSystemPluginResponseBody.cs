@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The names of the Kibana plugins installed by this request.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<string> Result { get; set; }

@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public DescribeLogstashResponseBodyResult Result { get; set; }
         public class DescribeLogstashResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>The extended configurations of the Logstash instance.</para>
+            /// </summary>
             [NameInMap("ExtendConfigs")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> ExtendConfigs { get; set; }
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The instance tags.</para>
+            /// <para>The instance labels.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -77,9 +80,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<DescribeLogstashResponseBodyResultZoneInfos> ZoneInfos { get; set; }
             public class DescribeLogstashResponseBodyResultZoneInfos : TeaModel {
                 /// <summary>
-                /// <para>The zone status. Valid values:</para>
+                /// <para>The status of the zone. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ISOLATION: offline.</description></item>
+                /// <item><description>ISOLATION: Offline.</description></item>
                 /// <item><description>NORMAL: Normal.</description></item>
                 /// </list>
                 /// 
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The instance configuration information.</para>
+            /// <para>The configuration information of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</para>
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ls-cn-abc</para>
@@ -132,6 +135,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The time when the instance expires. The value is a UNIX timestamp in milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1715826092044</para>
+            /// </summary>
             [NameInMap("endTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
@@ -186,14 +195,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The network configuration.</para>
+            /// <para>The network configurations.</para>
             /// </summary>
             [NameInMap("networkConfig")]
             [Validation(Required=false)]
             public DescribeLogstashResponseBodyResultNetworkConfig NetworkConfig { get; set; }
             public class DescribeLogstashResponseBodyResultNetworkConfig : TeaModel {
                 /// <summary>
-                /// <para>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</para>
+                /// <para>The network type. Only VPC is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc</para>
@@ -213,7 +222,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The zone in which the instance resides.</para>
+                /// <para>The zone where the instance is deployed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-*</para>
@@ -262,10 +271,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Disk { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether cloud disk encryption is enabled. Valid values:</para>
+                /// <para>Specifies whether cloud disk encryption is used. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Enabled.</description></item>
-                /// <item><description>false: Disabled.</description></item>
+                /// <item><description>true: Yes.</description></item>
+                /// <item><description>false: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -286,7 +295,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The node specification.</para>
+                /// <para>The specifications of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn1ne.large</para>
@@ -300,8 +309,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>prepaid: subscription</description></item>
-            /// <item><description>postpaid: pay-as-you-go</description></item>
+            /// <item><description>prepaid: Subscription.</description></item>
+            /// <item><description>postpaid: Pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -315,9 +324,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>active: Normal.</description></item>
-            /// <item><description>activating: Taking effect.</description></item>
+            /// <item><description>activating: Activating.</description></item>
             /// <item><description>inactive: Frozen.</description></item>
-            /// <item><description>invalid: Expired.</description></item>
+            /// <item><description>invalid: Invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -338,7 +347,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The instance version.</para>
+            /// <para>The version of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.4.0_with_X-Pack</para>

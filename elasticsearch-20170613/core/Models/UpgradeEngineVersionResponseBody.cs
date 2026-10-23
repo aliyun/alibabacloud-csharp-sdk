@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<UpgradeEngineVersionResponseBodyResult> Result { get; set; }
         public class UpgradeEngineVersionResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the check is passed. Valid values:</para>
+            /// <para>Specifies whether the check is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>success: passed.</description></item>
-            /// <item><description>failed: not passed.</description></item>
+            /// <item><description>success: Passed.</description></item>
+            /// <item><description>failed: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,11 +70,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The error type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>clusterStatus: cluster health status.</description></item>
-                /// <item><description>clusterConfigYml: cluster YML file.</description></item>
-                /// <item><description>clusterConfigPlugins: cluster configuration file.</description></item>
-                /// <item><description>clusterResource: cluster resources.</description></item>
-                /// <item><description>clusterSnapshot: cluster snapshot.</description></item>
+                /// <item><description>clusterStatus: Cluster health status.</description></item>
+                /// <item><description>clusterConfigYml: Cluster YML file.</description></item>
+                /// <item><description>clusterConfigPlugins: Cluster configuration file.</description></item>
+                /// <item><description>clusterResource: Cluster resources.</description></item>
+                /// <item><description>clusterSnapshot: Cluster snapshot.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The check type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>checkClusterHealth: cluster health status.</description></item>
-            /// <item><description>checkConfigCompatible: configuration compatibility status.</description></item>
-            /// <item><description>checkClusterResource: resource space status.</description></item>
-            /// <item><description>checkClusterSnapshot: whether a snapshot exists.</description></item>
+            /// <item><description>checkClusterHealth: Cluster health status.</description></item>
+            /// <item><description>checkConfigCompatible: Configuration compatibility status.</description></item>
+            /// <item><description>checkClusterResource: Resource space status.</description></item>
+            /// <item><description>checkClusterSnapshot: Snapshot existence.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The diagnostic mode. Valid values: RULE and AGENT.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RULE</para>
+            /// </summary>
             [NameInMap("diagnosisMode")]
             [Validation(Required=false)]
             public string DiagnosisMode { get; set; }
@@ -50,30 +56,66 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The list of diagnostic item details. This parameter may be empty if details are not required.</para>
+            /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<DiagnoseInstanceResponseBodyResultItems> Items { get; set; }
             public class DiagnoseInstanceResponseBodyResultItems : TeaModel {
+                /// <summary>
+                /// <para>The description of the diagnostic conclusion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Everything is normal</para>
+                /// </summary>
                 [NameInMap("desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
+                /// <summary>
+                /// <para>The diagnostic details. This parameter is empty if details are not required.</para>
+                /// </summary>
                 [NameInMap("detail")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Detail { get; set; }
 
+                /// <summary>
+                /// <para>The code of the diagnostic item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cluster.health</para>
+                /// </summary>
                 [NameInMap("item")]
                 [Validation(Required=false)]
                 public string Item { get; set; }
 
+                /// <summary>
+                /// <para>The name of the diagnostic item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Cluster health</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The health status of the diagnostic item. Valid values: GREEN, YELLOW, and RED.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>GREEN</para>
+                /// </summary>
                 [NameInMap("state")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
+                /// <summary>
+                /// <para>The handling suggestion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Monitor GC</para>
+                /// </summary>
                 [NameInMap("suggest")]
                 [Validation(Required=false)]
                 public string Suggest { get; set; }

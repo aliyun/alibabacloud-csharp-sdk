@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public ListInstanceIndicesResponseBodyHeaders Headers { get; set; }
         public class ListInstanceIndicesResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The total number of managed indexes in the cloud.</para>
+            /// <para>The total number of indices in cloud-managed storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? XManagedCount { get; set; }
 
             /// <summary>
-            /// <para>The total size of managed indexes in the cloud. Unit: bytes.</para>
+            /// <para>The total size of indices in cloud-managed storage. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18093942932</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? XManagedStorageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of OpenStore cold-phase indexes.</para>
+            /// <para>The total number of OpenStore cold-phase indices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? XOSSCount { get; set; }
 
             /// <summary>
-            /// <para>The total size of OpenStore cold-phase indexes for the instance. Unit: bytes.</para>
+            /// <para>The total size of OpenStore cold-phase indices for the instance. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9093942932</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The index list details.</para>
+        /// <para>The details of the index list.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListInstanceIndicesResponseBodyResult> Result { get; set; }
         public class ListInstanceIndicesResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the index list was queried.</para>
+            /// <para>The creation time of the index, in ISO 8601 format and UTC time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-11T05:49:41.114Z</para>
@@ -88,11 +88,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The health status of the index. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>green: Healthy.</para>
+            /// <item><description><para>green: healthy.</para>
             /// </description></item>
-            /// <item><description><para>yellow: Warning.</para>
+            /// <item><description><para>yellow: warning.</para>
             /// </description></item>
-            /// <item><description><para>red: Abnormal.</para>
+            /// <item><description><para>red: unhealthy.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string IlmExplain { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated and can be ignored.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -124,13 +124,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string IsManaged { get; set; }
 
             /// <summary>
-            /// <para>The index management status. Valid values:</para>
+            /// <para>The management status of the index. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>following: Managed.</para>
+            /// <item><description><para>following: managed.</para>
             /// </description></item>
-            /// <item><description><para>closing: Being unmanaged.</para>
+            /// <item><description><para>closing: unmanaging.</para>
             /// </description></item>
-            /// <item><description><para>closed: Not managed.</para>
+            /// <item><description><para>closed: unmanaged.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -154,18 +154,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The current storage lifecycle phase. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>warm: Warm phase.</para>
+            /// <item><description><para>warm: the warm phase.</para>
             /// </description></item>
-            /// <item><description><para>cold: Cold phase.</para>
+            /// <item><description><para>cold: the cold phase.</para>
             /// </description></item>
-            /// <item><description><para>hot: Hot phase.</para>
+            /// <item><description><para>hot: the hot phase.</para>
             /// </description></item>
-            /// <item><description><para>delete: Delete phase.</para>
+            /// <item><description><para>delete: the delete phase.</para>
             /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para>If this value is empty, the index is not managed by a lifecycle policy.</para>
-            /// </remarks>
+            /// <para>An empty value indicates that the index is not managed by a lifecycle policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>warm</para>

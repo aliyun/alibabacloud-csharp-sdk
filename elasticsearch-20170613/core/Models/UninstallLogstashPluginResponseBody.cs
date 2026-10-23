@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UninstallLogstashPluginResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response headers of this call.</para>
+        /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public Dictionary<string, object> Headers { get; set; }
@@ -23,6 +26,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The names of the Logstash plugins uninstalled by this request.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<string> Result { get; set; }

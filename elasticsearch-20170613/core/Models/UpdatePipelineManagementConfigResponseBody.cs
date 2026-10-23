@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdatePipelineManagementConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result. Valid values:</para>
+        /// <para>The return result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The update was successful.</description></item>
+        /// <item><description>true: The update succeeded.</description></item>
         /// <item><description>false: The update failed.</description></item>
         /// </list>
         /// 

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public DescribeDiagnoseReportResponseBodyResult Result { get; set; }
         public class DescribeDiagnoseReportResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the report was created. Unit: ms.</para>
+            /// <para>The timestamp when the report was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1535745731000</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string Suggest { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the diagnostic result. Valid values: TEXT (text description), CONSOLE_API (console-triggered), and ES_API (API-triggered).</para>
+                    /// <para>The type of the diagnostic result. Valid values: TEXT (text description), CONSOLE_API (triggered by the console), and ES_API (triggered by the API).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ES_API</para>
@@ -124,12 +124,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            /// <summary>
+            /// <para>The diagnosis mode. Valid values: RULE and AGENT.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RULE</para>
+            /// </summary>
             [NameInMap("diagnosisMode")]
             [Validation(Required=false)]
             public string DiagnosisMode { get; set; }
 
             /// <summary>
-            /// <para>The overall health of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</para>
+            /// <para>The overall health status of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YELLOW</para>
@@ -139,7 +145,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Health { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the diagnosed instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-abc</para>
@@ -148,30 +154,66 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The list of diagnostic item details. This parameter may be empty if details are not required.</para>
+            /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<DescribeDiagnoseReportResponseBodyResultItems> Items { get; set; }
             public class DescribeDiagnoseReportResponseBodyResultItems : TeaModel {
+                /// <summary>
+                /// <para>The description of the diagnostic conclusion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Everything is normal</para>
+                /// </summary>
                 [NameInMap("desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
+                /// <summary>
+                /// <para>The diagnostic details. This parameter is empty if details are not required.</para>
+                /// </summary>
                 [NameInMap("detail")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Detail { get; set; }
 
+                /// <summary>
+                /// <para>The code of the diagnostic item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cluster.health</para>
+                /// </summary>
                 [NameInMap("item")]
                 [Validation(Required=false)]
                 public string Item { get; set; }
 
+                /// <summary>
+                /// <para>The name of the diagnostic item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Cluster health</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The health status of the diagnostic item. Valid values: GREEN, YELLOW, and RED.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>GREEN</para>
+                /// </summary>
                 [NameInMap("state")]
                 [Validation(Required=false)]
                 public string State { get; set; }
 
+                /// <summary>
+                /// <para>The handling suggestion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Pay attention to GC</para>
+                /// </summary>
                 [NameInMap("suggest")]
                 [Validation(Required=false)]
                 public string Suggest { get; set; }
@@ -189,7 +231,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ReportId { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic status. Valid values: SUCCESS, FAILED, and RUNNING.</para>
+            /// <para>The diagnosis status. Valid values: SUCCESS, FAILED, and RUNNING.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -199,7 +241,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The method used to trigger the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</para>
+            /// <para>The trigger method of the health diagnosis. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>

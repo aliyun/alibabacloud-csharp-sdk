@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result. Valid values:</para>
+        /// <para>The result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The zones are taken offline.</description></item>
-        /// <item><description>false: The zones failed to be taken offline.</description></item>
+        /// <item><description>true: The zones are taken offline successfully.</description></item>
+        /// <item><description>false: The zones fail to be taken offline.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

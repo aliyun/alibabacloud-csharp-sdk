@@ -1735,7 +1735,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</para>
+        /// <para>The name of the data stream that you create must exactly match the index pattern in the index template, and the data stream feature must be enabled for the index template. For example, if the index pattern in the index template is ds-*, the corresponding data stream name must be ds-.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1789,7 +1789,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</para>
+        /// <para>The name of the data stream that you create must exactly match the index pattern in the index template, and the data stream feature must be enabled for the index template. For example, if the index pattern in the index template is ds-*, the corresponding data stream name must be ds-.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1843,7 +1843,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</para>
+        /// <para>The name of the data stream that you create must exactly match the index pattern in the index template, and the data stream feature must be enabled for the index template. For example, if the index pattern in the index template is ds-*, the corresponding data stream name must be ds-.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1869,7 +1869,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</para>
+        /// <para>The name of the data stream that you create must exactly match the index pattern in the index template, and the data stream feature must be enabled for the index template. For example, if the index pattern in the index template is ds-*, the corresponding data stream name must be ds-.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1889,7 +1889,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an index lifecycle policy. If a policy with the specified name already exists, replaces it and increments the version.</para>
+        /// <para>Creates an index lifecycle policy. If the specified policy name already exists, the existing policy is replaced and its version is incremented.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1936,7 +1936,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an index lifecycle policy. If a policy with the specified name already exists, replaces it and increments the version.</para>
+        /// <para>Creates an index lifecycle policy. If the specified policy name already exists, the existing policy is replaced and its version is incremented.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1983,7 +1983,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an index lifecycle policy. If a policy with the specified name already exists, replaces it and increments the version.</para>
+        /// <para>Creates an index lifecycle policy. If the specified policy name already exists, the existing policy is replaced and its version is incremented.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2002,7 +2002,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an index lifecycle policy. If a policy with the specified name already exists, replaces it and increments the version.</para>
+        /// <para>Creates an index lifecycle policy. If the specified policy name already exists, the existing policy is replaced and its version is incremented.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2577,7 +2577,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateSnapshot to manually create a snapshot backup of a cluster.</para>
+        /// <para>Creates a manual snapshot backup for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2624,7 +2624,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateSnapshot to manually create a snapshot backup of a cluster.</para>
+        /// <para>Creates a manual snapshot backup for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2671,7 +2671,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateSnapshot to manually create a snapshot backup of a cluster.</para>
+        /// <para>Creates a manual snapshot backup for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2690,7 +2690,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CreateSnapshot to manually create a snapshot backup of a cluster.</para>
+        /// <para>Creates a manual snapshot backup for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +2887,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes specified zones offline when multiple zones are available, and migrates nodes from the offline zones to other zones.</para>
+        /// <para>Takes some zones offline when multiple zones are available, and migrates the nodes in the offlined zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2934,7 +2934,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes specified zones offline when multiple zones are available, and migrates nodes from the offline zones to other zones.</para>
+        /// <para>Takes some zones offline when multiple zones are available, and migrates the nodes in the offlined zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2981,7 +2981,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes specified zones offline when multiple zones are available, and migrates nodes from the offline zones to other zones.</para>
+        /// <para>Takes some zones offline when multiple zones are available, and migrates the nodes in the offlined zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3000,7 +3000,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes specified zones offline when multiple zones are available, and migrates nodes from the offline zones to other zones.</para>
+        /// <para>Takes some zones offline when multiple zones are available, and migrates the nodes in the offlined zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4955,7 +4955,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a collector instance.</para>
+        /// <para>Queries the details of a collector instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4991,7 +4991,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a collector instance.</para>
+        /// <para>Queries the details of a collector instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5027,7 +5027,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a collector instance.</para>
+        /// <para>Queries the details of a collector instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5042,7 +5042,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a collector instance.</para>
+        /// <para>Queries the details of a collector instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5411,7 +5411,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Queries the historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5457,7 +5457,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Queries the historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5503,7 +5503,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Queries the historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5522,7 +5522,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Queries the historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5541,7 +5541,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeDiagnosisSettings to retrieve the scenario settings of intelligent diagnosis and optimization.</para>
+        /// <para>Queries the scenario settings for intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5587,7 +5587,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeDiagnosisSettings to retrieve the scenario settings of intelligent diagnosis and optimization.</para>
+        /// <para>Queries the scenario settings for intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5633,7 +5633,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeDiagnosisSettings to retrieve the scenario settings of intelligent diagnosis and optimization.</para>
+        /// <para>Queries the scenario settings for intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5652,7 +5652,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeDiagnosisSettings to retrieve the scenario settings of intelligent diagnosis and optimization.</para>
+        /// <para>Queries the scenario settings for intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5671,7 +5671,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves dynamic metrics of a cluster.</para>
+        /// <para>Retrieves the dynamic metrics of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5707,7 +5707,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves dynamic metrics of a cluster.</para>
+        /// <para>Retrieves the dynamic metrics of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5743,7 +5743,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves dynamic metrics of a cluster.</para>
+        /// <para>Retrieves the dynamic metrics of a cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5758,7 +5758,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves dynamic metrics of a cluster.</para>
+        /// <para>Retrieves the dynamic metrics of a cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6017,7 +6017,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns information about an index template.</para>
+        /// <para>Retrieves information about an index template.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6053,7 +6053,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns information about an index template.</para>
+        /// <para>Retrieves information about an index template.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6089,7 +6089,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns information about an index template.</para>
+        /// <para>Retrieves information about an index template.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6104,7 +6104,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns information about an index template.</para>
+        /// <para>Retrieves information about an index template.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7691,7 +7691,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the estimated time for an instance restart.</para>
+        /// <para>Retrieves the estimated restart time of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7738,7 +7738,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the estimated time for an instance restart.</para>
+        /// <para>Retrieves the estimated restart time of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7785,7 +7785,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the estimated time for an instance restart.</para>
+        /// <para>Retrieves the estimated restart time of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7804,7 +7804,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the estimated time for an instance restart.</para>
+        /// <para>Retrieves the estimated restart time of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7823,7 +7823,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves index migration data information.</para>
+        /// <para>Retrieves the index migration data information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7864,7 +7864,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves index migration data information.</para>
+        /// <para>Retrieves the index migration data information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7905,7 +7905,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves index migration data information.</para>
+        /// <para>Retrieves the index migration data information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7924,7 +7924,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves index migration data information.</para>
+        /// <para>Retrieves the index migration data information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7943,7 +7943,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the elastic scaling rules of a cluster. Elastic nodes must be purchased when the instance is created.</para>
+        /// <para>Retrieves the elastic scaling rules for a cluster. Elastic nodes must be purchased when the instance is created.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7979,7 +7979,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the elastic scaling rules of a cluster. Elastic nodes must be purchased when the instance is created.</para>
+        /// <para>Retrieves the elastic scaling rules for a cluster. Elastic nodes must be purchased when the instance is created.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8015,7 +8015,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the elastic scaling rules of a cluster. Elastic nodes must be purchased when the instance is created.</para>
+        /// <para>Retrieves the elastic scaling rules for a cluster. Elastic nodes must be purchased when the instance is created.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8030,7 +8030,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the elastic scaling rules of a cluster. Elastic nodes must be purchased when the instance is created.</para>
+        /// <para>Retrieves the elastic scaling rules for a cluster. Elastic nodes must be purchased when the instance is created.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8199,7 +8199,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls GetEmonGrafanaAlerts to retrieve the Grafana alert list.</para>
+        /// <para>Retrieves the list of Grafana alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8245,7 +8245,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls GetEmonGrafanaAlerts to retrieve the Grafana alert list.</para>
+        /// <para>Retrieves the list of Grafana alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8291,7 +8291,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls GetEmonGrafanaAlerts to retrieve the Grafana alert list.</para>
+        /// <para>Retrieves the list of Grafana alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8310,7 +8310,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls GetEmonGrafanaAlerts to retrieve the Grafana alert list.</para>
+        /// <para>Retrieves the list of Grafana alerts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8589,7 +8589,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keystore information.</para>
+        /// <para>Queries the keystore configurations of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8625,7 +8625,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keystore information.</para>
+        /// <para>Queries the keystore configurations of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8661,7 +8661,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keystore information.</para>
+        /// <para>Queries the keystore configurations of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8676,7 +8676,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keystore information.</para>
+        /// <para>Queries the keystore configurations of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9607,7 +9607,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</para>
+        /// <para>To collect logs from different data sources by using a collector, or to perform cluster elastic scaling tasks (applicable to the China site), you must first authorize the creation of a service-linked role.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9661,7 +9661,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</para>
+        /// <para>To collect logs from different data sources by using a collector, or to perform cluster elastic scaling tasks (applicable to the China site), you must first authorize the creation of a service-linked role.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9715,7 +9715,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</para>
+        /// <para>To collect logs from different data sources by using a collector, or to perform cluster elastic scaling tasks (applicable to the China site), you must first authorize the creation of a service-linked role.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9741,7 +9741,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</para>
+        /// <para>To collect logs from different data sources by using a collector, or to perform cluster elastic scaling tasks (applicable to the China site), you must first authorize the creation of a service-linked role.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9761,13 +9761,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Ack Operator on a specified Container Service cluster.</para>
+        /// <para>Installs the ACK Operator on a specified container service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</para>
+        /// <para>Before installing a collector on an ACK cluster, you must call this operation to install the Elasticsearch Operator on the destination cluster.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9815,13 +9815,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Ack Operator on a specified Container Service cluster.</para>
+        /// <para>Installs the ACK Operator on a specified container service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</para>
+        /// <para>Before installing a collector on an ACK cluster, you must call this operation to install the Elasticsearch Operator on the destination cluster.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9869,13 +9869,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Ack Operator on a specified Container Service cluster.</para>
+        /// <para>Installs the ACK Operator on a specified container service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</para>
+        /// <para>Before installing a collector on an ACK cluster, you must call this operation to install the Elasticsearch Operator on the destination cluster.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9895,13 +9895,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs Ack Operator on a specified Container Service cluster.</para>
+        /// <para>Installs the ACK Operator on a specified container service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</para>
+        /// <para>Before installing a collector on an ACK cluster, you must call this operation to install the Elasticsearch Operator on the destination cluster.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9921,7 +9921,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs preset Kibana plug-ins. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</para>
+        /// <para>Installs preset Kibana plugins. The Kibana specifications must be at least 2 vCPUs and 4 GiB of memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9968,7 +9968,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs preset Kibana plug-ins. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</para>
+        /// <para>Installs preset Kibana plugins. The Kibana specifications must be at least 2 vCPUs and 4 GiB of memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10015,7 +10015,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs preset Kibana plug-ins. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</para>
+        /// <para>Installs preset Kibana plugins. The Kibana specifications must be at least 2 vCPUs and 4 GiB of memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10034,7 +10034,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs preset Kibana plug-ins. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</para>
+        /// <para>Installs preset Kibana plugins. The Kibana specifications must be at least 2 vCPUs and 4 GiB of memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10059,7 +10059,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, note the following:
-        /// The plugins to be installed must be included in the Alibaba Cloud Logstash <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a>. External open source plugins are not supported.</para>
+        /// The plugins to be installed must be included in the <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a> of Alibaba Cloud Logstash. External open-source plugins are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10112,7 +10112,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, note the following:
-        /// The plugins to be installed must be included in the Alibaba Cloud Logstash <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a>. External open source plugins are not supported.</para>
+        /// The plugins to be installed must be included in the <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a> of Alibaba Cloud Logstash. External open-source plugins are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10165,7 +10165,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, note the following:
-        /// The plugins to be installed must be included in the Alibaba Cloud Logstash <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a>. External open source plugins are not supported.</para>
+        /// The plugins to be installed must be included in the <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a> of Alibaba Cloud Logstash. External open-source plugins are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10190,7 +10190,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before calling this operation, note the following:
-        /// The plugins to be installed must be included in the Alibaba Cloud Logstash <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a>. External open source plugins are not supported.</para>
+        /// The plugins to be installed must be included in the <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a> of Alibaba Cloud Logstash. External open-source plugins are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10209,7 +10209,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs system plug-ins on an Elasticsearch instance.</para>
+        /// <para>Installs system plugins for an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10256,7 +10256,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs system plug-ins on an Elasticsearch instance.</para>
+        /// <para>Installs system plugins for an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10303,7 +10303,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs system plug-ins on an Elasticsearch instance.</para>
+        /// <para>Installs system plugins for an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10322,7 +10322,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs system plug-ins on an Elasticsearch instance.</para>
+        /// <para>Installs system plugins for an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10341,14 +10341,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs custom plugins that have been uploaded to the Elasticsearch console.</para>
+        /// <para>Installs custom user plugins that have been uploaded to the Elasticsearch console.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</para>
+        /// <para>For instances with the basic management and control (v2) architecture, the custom plugin installation feature is suspended. Instances with the V3 architecture are not affected. If you urgently need to use this feature, submit a ticket.
+        /// To install custom plugins, follow these steps:</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Step 1: Call the PluginAnalysis operation to upload the plugin stored in OSS to the custom plugin repository. The plugin is then in the pending installation state.</description></item>
+        /// <item><description>Step 2: Call the ListUserPlugin operation to view the information about the plugins pending installation.</description></item>
+        /// <item><description>Step 3: Call the InstallUserPlugins operation to install the custom plugins. For the required input parameters of this operation, refer to the response of the ListUserPlugin operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10395,14 +10401,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs custom plugins that have been uploaded to the Elasticsearch console.</para>
+        /// <para>Installs custom user plugins that have been uploaded to the Elasticsearch console.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</para>
+        /// <para>For instances with the basic management and control (v2) architecture, the custom plugin installation feature is suspended. Instances with the V3 architecture are not affected. If you urgently need to use this feature, submit a ticket.
+        /// To install custom plugins, follow these steps:</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Step 1: Call the PluginAnalysis operation to upload the plugin stored in OSS to the custom plugin repository. The plugin is then in the pending installation state.</description></item>
+        /// <item><description>Step 2: Call the ListUserPlugin operation to view the information about the plugins pending installation.</description></item>
+        /// <item><description>Step 3: Call the InstallUserPlugins operation to install the custom plugins. For the required input parameters of this operation, refer to the response of the ListUserPlugin operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10449,14 +10461,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs custom plugins that have been uploaded to the Elasticsearch console.</para>
+        /// <para>Installs custom user plugins that have been uploaded to the Elasticsearch console.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</para>
+        /// <para>For instances with the basic management and control (v2) architecture, the custom plugin installation feature is suspended. Instances with the V3 architecture are not affected. If you urgently need to use this feature, submit a ticket.
+        /// To install custom plugins, follow these steps:</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Step 1: Call the PluginAnalysis operation to upload the plugin stored in OSS to the custom plugin repository. The plugin is then in the pending installation state.</description></item>
+        /// <item><description>Step 2: Call the ListUserPlugin operation to view the information about the plugins pending installation.</description></item>
+        /// <item><description>Step 3: Call the InstallUserPlugins operation to install the custom plugins. For the required input parameters of this operation, refer to the response of the ListUserPlugin operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10475,14 +10493,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs custom plugins that have been uploaded to the Elasticsearch console.</para>
+        /// <para>Installs custom user plugins that have been uploaded to the Elasticsearch console.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</para>
+        /// <para>For instances with the basic management and control (v2) architecture, the custom plugin installation feature is suspended. Instances with the V3 architecture are not affected. If you urgently need to use this feature, submit a ticket.
+        /// To install custom plugins, follow these steps:</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Step 1: Call the PluginAnalysis operation to upload the plugin stored in OSS to the custom plugin repository. The plugin is then in the pending installation state.</description></item>
+        /// <item><description>Step 2: Call the ListUserPlugin operation to view the information about the plugins pending installation.</description></item>
+        /// <item><description>Step 3: Call the InstallUserPlugins operation to install the custom plugins. For the required input parameters of this operation, refer to the response of the ListUserPlugin operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -11435,7 +11459,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release notes Change details.</para>
+        /// <para>Queries change records and change details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11509,7 +11533,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release notes Change details.</para>
+        /// <para>Queries change records and change details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11583,7 +11607,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release notes Change details.</para>
+        /// <para>Queries change records and change details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11602,7 +11626,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release notes Change details.</para>
+        /// <para>Queries change records and change details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13103,7 +13127,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Retrieves historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13173,7 +13197,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Retrieves historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13243,7 +13267,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Retrieves historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13262,7 +13286,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical reports of intelligent O&amp;M diagnostics.</para>
+        /// <para>Retrieves historical reports of intelligent O&amp;M.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13881,13 +13905,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of ECS instances under the current user\&quot;s VPC and vSwitch.</para>
+        /// <para>Queries a list of ECS instances in the VPC and vSwitch of the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// <para>Notice:  Before you call this API operation, you must create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole system service roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13954,13 +13978,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of ECS instances under the current user\&quot;s VPC and vSwitch.</para>
+        /// <para>Queries a list of ECS instances in the VPC and vSwitch of the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// <para>Notice:  Before you call this API operation, you must create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole system service roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14027,13 +14051,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of ECS instances under the current user\&quot;s VPC and vSwitch.</para>
+        /// <para>Queries a list of ECS instances in the VPC and vSwitch of the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// <para>Notice:  Before you call this API operation, you must create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole system service roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14053,13 +14077,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of ECS instances under the current user\&quot;s VPC and vSwitch.</para>
+        /// <para>Queries a list of ECS instances in the VPC and vSwitch of the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// <para>Notice:  Before you call this API operation, you must create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole system service roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14627,7 +14651,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Elasticsearch instances.</para>
+        /// <para>Queries a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14717,7 +14741,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Elasticsearch instances.</para>
+        /// <para>Queries a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14807,7 +14831,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Elasticsearch instances.</para>
+        /// <para>Queries a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14826,7 +14850,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Elasticsearch instances.</para>
+        /// <para>Queries a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14845,7 +14869,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of hardware O&amp;M events triggered by an Elasticsearch cluster.</para>
+        /// <para>Queries the list of hardware O&amp;M events triggered for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14954,7 +14978,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of hardware O&amp;M events triggered by an Elasticsearch cluster.</para>
+        /// <para>Queries the list of hardware O&amp;M events triggered for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15063,7 +15087,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of hardware O&amp;M events triggered by an Elasticsearch cluster.</para>
+        /// <para>Queries the list of hardware O&amp;M events triggered for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15082,7 +15106,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of hardware O&amp;M events triggered by an Elasticsearch cluster.</para>
+        /// <para>Queries the list of hardware O&amp;M events triggered for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15101,12 +15125,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters system indexes from the index list of a cluster.</para>
+        /// <para>Queries the list of indices in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
+        /// <para>The ListInstanceIndices operation applies only to Elasticsearch instances with the indexing service enabled. Query index information by using the Elasticsearch API. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15172,12 +15196,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters system indexes from the index list of a cluster.</para>
+        /// <para>Queries the list of indices in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
+        /// <para>The ListInstanceIndices operation applies only to Elasticsearch instances with the indexing service enabled. Query index information by using the Elasticsearch API. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15243,12 +15267,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters system indexes from the index list of a cluster.</para>
+        /// <para>Queries the list of indices in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
+        /// <para>The ListInstanceIndices operation applies only to Elasticsearch instances with the indexing service enabled. Query index information by using the Elasticsearch API. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15267,12 +15291,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters system indexes from the index list of a cluster.</para>
+        /// <para>Queries the list of indices in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
+        /// <para>The ListInstanceIndices operation applies only to Elasticsearch instances with the indexing service enabled. Query index information by using the Elasticsearch API. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15429,7 +15453,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the Kibana private network connection.</para>
+        /// <para>Invokes ListKibanaPvlNetwork to query the details of Kibana private network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15470,7 +15494,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the Kibana private network connection.</para>
+        /// <para>Invokes ListKibanaPvlNetwork to query the details of Kibana private network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15511,7 +15535,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the Kibana private network connection.</para>
+        /// <para>Invokes ListKibanaPvlNetwork to query the details of Kibana private network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15531,7 +15555,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the Kibana private network connection.</para>
+        /// <para>Invokes ListKibanaPvlNetwork to query the details of Kibana private network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15551,7 +15575,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the details of all or specified Logstash instances in a list.</para>
+        /// <para>Queries the details of all or specified Logstash instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15621,7 +15645,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the details of all or specified Logstash instances in a list.</para>
+        /// <para>Queries the details of all or specified Logstash instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15691,7 +15715,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the details of all or specified Logstash instances in a list.</para>
+        /// <para>Queries the details of all or specified Logstash instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15710,7 +15734,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the details of all or specified Logstash instances in a list.</para>
+        /// <para>Queries the details of all or specified Logstash instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16215,7 +16239,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pipeline list of a Logstash instance.</para>
+        /// <para>Retrieves the list of Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16269,7 +16293,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pipeline list of a Logstash instance.</para>
+        /// <para>Retrieves the list of Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16323,7 +16347,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pipeline list of a Logstash instance.</para>
+        /// <para>Retrieves the list of Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16342,7 +16366,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pipeline list of a Logstash instance.</para>
+        /// <para>Retrieves the list of Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17093,7 +17117,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on event records.</para>
+        /// <para>Aggregates event records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17155,7 +17179,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on event records.</para>
+        /// <para>Aggregates event records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17217,7 +17241,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on event records.</para>
+        /// <para>Aggregates event records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17236,7 +17260,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on event records.</para>
+        /// <para>Aggregates event records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17709,7 +17733,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint status in the VPC of the service account.</para>
+        /// <para>Queries the status of endpoints in the VPC of the service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17759,7 +17783,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint status in the VPC of the service account.</para>
+        /// <para>Queries the status of endpoints in the VPC of the service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17809,7 +17833,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint status in the VPC of the service account.</para>
+        /// <para>Queries the status of endpoints in the VPC of the service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17828,7 +17852,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint status in the VPC of the service account.</para>
+        /// <para>Queries the status of endpoints in the VPC of the service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17847,15 +17871,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates nodes in a specified zone to a target zone.</para>
+        /// <para>Migrates nodes in a zone to a destination zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</para>
+        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can migrate nodes to another zone to resolve the issue. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your account has a zone with sufficient resources.
-        ///  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</description></item>
+        /// <item><description>Your account has zones with sufficient resources.
+        ///  After you migrate nodes of the current instance type to another zone, you must manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to prevent cluster upgrade failures. Select a new zone whose letter suffix is later in alphabetical order. For example, if you choose between the cn-hangzhou-e and cn-hangzhou-h zones, select cn-hangzhou-h.</description></item>
         /// <item><description>The cluster is in a healthy state.
         ///  You can run the <c>GET _cat/health?v</c> command to check the cluster health status.</description></item>
         /// </list>
@@ -17905,15 +17929,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates nodes in a specified zone to a target zone.</para>
+        /// <para>Migrates nodes in a zone to a destination zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</para>
+        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can migrate nodes to another zone to resolve the issue. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your account has a zone with sufficient resources.
-        ///  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</description></item>
+        /// <item><description>Your account has zones with sufficient resources.
+        ///  After you migrate nodes of the current instance type to another zone, you must manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to prevent cluster upgrade failures. Select a new zone whose letter suffix is later in alphabetical order. For example, if you choose between the cn-hangzhou-e and cn-hangzhou-h zones, select cn-hangzhou-h.</description></item>
         /// <item><description>The cluster is in a healthy state.
         ///  You can run the <c>GET _cat/health?v</c> command to check the cluster health status.</description></item>
         /// </list>
@@ -17963,15 +17987,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates nodes in a specified zone to a target zone.</para>
+        /// <para>Migrates nodes in a zone to a destination zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</para>
+        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can migrate nodes to another zone to resolve the issue. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your account has a zone with sufficient resources.
-        ///  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</description></item>
+        /// <item><description>Your account has zones with sufficient resources.
+        ///  After you migrate nodes of the current instance type to another zone, you must manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to prevent cluster upgrade failures. Select a new zone whose letter suffix is later in alphabetical order. For example, if you choose between the cn-hangzhou-e and cn-hangzhou-h zones, select cn-hangzhou-h.</description></item>
         /// <item><description>The cluster is in a healthy state.
         ///  You can run the <c>GET _cat/health?v</c> command to check the cluster health status.</description></item>
         /// </list>
@@ -17993,15 +18017,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates nodes in a specified zone to a target zone.</para>
+        /// <para>Migrates nodes in a zone to a destination zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</para>
+        /// <para>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can migrate nodes to another zone to resolve the issue. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your account has a zone with sufficient resources.
-        ///  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</description></item>
+        /// <item><description>Your account has zones with sufficient resources.
+        ///  After you migrate nodes of the current instance type to another zone, you must manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to prevent cluster upgrade failures. Select a new zone whose letter suffix is later in alphabetical order. For example, if you choose between the cn-hangzhou-e and cn-hangzhou-h zones, select cn-hangzhou-h.</description></item>
         /// <item><description>The cluster is in a healthy state.
         ///  You can run the <c>GET _cat/health?v</c> command to check the cluster health status.</description></item>
         /// </list>
@@ -18023,7 +18047,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the ECS instances on which a collector is installed.</para>
+        /// <para>Updates an ECS instance on which a collector is installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18070,7 +18094,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the ECS instances on which a collector is installed.</para>
+        /// <para>Updates an ECS instance on which a collector is installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18117,7 +18141,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the ECS instances on which a collector is installed.</para>
+        /// <para>Updates an ECS instance on which a collector is installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18136,7 +18160,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the ECS instances on which a collector is installed.</para>
+        /// <para>Updates an ECS instance on which a collector is installed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18155,7 +18179,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling rules for a cluster.</para>
+        /// <para>Updates the elastic scaling rules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18196,7 +18220,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling rules for a cluster.</para>
+        /// <para>Updates the elastic scaling rules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18237,7 +18261,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling rules for a cluster.</para>
+        /// <para>Updates the elastic scaling rules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18256,7 +18280,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling rules for a cluster.</para>
+        /// <para>Updates the elastic scaling rules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18815,7 +18839,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18862,7 +18886,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18909,7 +18933,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18928,7 +18952,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which an instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19263,7 +19287,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a custom plug-in to the plug-in library. After the upload, the plug-in is in the pending installation state.</para>
+        /// <para>Uploads a custom plugin to the plugin repository. After the upload, the plugin is in the pending installation state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19310,7 +19334,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a custom plug-in to the plug-in library. After the upload, the plug-in is in the pending installation state.</para>
+        /// <para>Uploads a custom plugin to the plugin repository. After the upload, the plugin is in the pending installation state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19357,7 +19381,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a custom plug-in to the plug-in library. After the upload, the plug-in is in the pending installation state.</para>
+        /// <para>Uploads a custom plugin to the plugin repository. After the upload, the plugin is in the pending installation state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19376,7 +19400,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a custom plug-in to the plug-in library. After the upload, the plug-in is in the pending installation state.</para>
+        /// <para>Uploads a custom plugin to the plugin repository. After the upload, the plugin is in the pending installation state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19395,7 +19419,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a test alert message by calling PostEmonTryAlarmRule.</para>
+        /// <para>Sends a test alert message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19448,7 +19472,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a test alert message by calling PostEmonTryAlarmRule.</para>
+        /// <para>Sends a test alert message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19501,7 +19525,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a test alert message by calling PostEmonTryAlarmRule.</para>
+        /// <para>Sends a test alert message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19527,7 +19551,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a test alert message by calling PostEmonTryAlarmRule.</para>
+        /// <para>Sends a test alert message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20335,7 +20359,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</para>
+        /// <para>After a restart, the instance enters the activating state. After the restart succeeds, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restarts. Node restarts are classified into normal restarts and blue-green restarts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20393,7 +20417,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</para>
+        /// <para>After a restart, the instance enters the activating state. After the restart succeeds, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restarts. Node restarts are classified into normal restarts and blue-green restarts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20451,7 +20475,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</para>
+        /// <para>After a restart, the instance enters the activating state. After the restart succeeds, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restarts. Node restarts are classified into normal restarts and blue-green restarts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20477,7 +20501,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</para>
+        /// <para>After a restart, the instance enters the activating state. After the restart succeeds, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restarts. Node restarts are classified into normal restarts and blue-green restarts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21641,7 +21665,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops Logstash pipelines from running.</para>
+        /// <para>Stops Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21688,7 +21712,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops Logstash pipelines from running.</para>
+        /// <para>Stops Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21735,7 +21759,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops Logstash pipelines from running.</para>
+        /// <para>Stops Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21754,7 +21778,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops Logstash pipelines from running.</para>
+        /// <para>Stops Logstash pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22533,7 +22557,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls plug-ins from the Kibana node of an Elasticsearch instance.</para>
+        /// <para>Uninstalls Kibana node plug-ins from an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22580,7 +22604,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls plug-ins from the Kibana node of an Elasticsearch instance.</para>
+        /// <para>Uninstalls Kibana node plug-ins from an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22627,7 +22651,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls plug-ins from the Kibana node of an Elasticsearch instance.</para>
+        /// <para>Uninstalls Kibana node plug-ins from an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22646,7 +22670,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls plug-ins from the Kibana node of an Elasticsearch instance.</para>
+        /// <para>Uninstalls Kibana node plug-ins from an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22665,7 +22689,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls installed plug-ins from a Logstash instance.</para>
+        /// <para>Uninstalls installed plugins from a Logstash instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22712,7 +22736,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls installed plug-ins from a Logstash instance.</para>
+        /// <para>Uninstalls installed plugins from a Logstash instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22759,7 +22783,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls installed plug-ins from a Logstash instance.</para>
+        /// <para>Uninstalls installed plugins from a Logstash instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22778,7 +22802,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls installed plug-ins from a Logstash instance.</para>
+        /// <para>Uninstalls installed plugins from a Logstash instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23321,7 +23345,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the garbage collector configuration of a specified Elasticsearch instance.</para>
+        /// <para>Updates the garbage collector configuration for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23368,7 +23392,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the garbage collector configuration of a specified Elasticsearch instance.</para>
+        /// <para>Updates the garbage collector configuration for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23415,7 +23439,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the garbage collector configuration of a specified Elasticsearch instance.</para>
+        /// <para>Updates the garbage collector configuration for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23434,7 +23458,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the garbage collector configuration of a specified Elasticsearch instance.</para>
+        /// <para>Updates the garbage collector configuration for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23453,16 +23477,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the dictionary of the AliNLP tokenizer plugin (analysis-aliws).</para>
+        /// <para>Updates the dictionary of the AliNLP word segmentation plug-in (analysis-aliws).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Instances of version 5.x do not support the AliNLP tokenizer plugin.</description></item>
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</description></item>
+        /// <item><description>Instances of version 5.x do not support the AliNLP word segmentation plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in OSS, make sure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify ORIGIN for an uploaded dictionary, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23510,16 +23534,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the dictionary of the AliNLP tokenizer plugin (analysis-aliws).</para>
+        /// <para>Updates the dictionary of the AliNLP word segmentation plug-in (analysis-aliws).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Instances of version 5.x do not support the AliNLP tokenizer plugin.</description></item>
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</description></item>
+        /// <item><description>Instances of version 5.x do not support the AliNLP word segmentation plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in OSS, make sure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify ORIGIN for an uploaded dictionary, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23567,16 +23591,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the dictionary of the AliNLP tokenizer plugin (analysis-aliws).</para>
+        /// <para>Updates the dictionary of the AliNLP word segmentation plug-in (analysis-aliws).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Instances of version 5.x do not support the AliNLP tokenizer plugin.</description></item>
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</description></item>
+        /// <item><description>Instances of version 5.x do not support the AliNLP word segmentation plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in OSS, make sure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify ORIGIN for an uploaded dictionary, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23596,16 +23620,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the dictionary of the AliNLP tokenizer plugin (analysis-aliws).</para>
+        /// <para>Updates the dictionary of the AliNLP word segmentation plug-in (analysis-aliws).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Instances of version 5.x do not support the AliNLP tokenizer plugin.</description></item>
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</description></item>
+        /// <item><description>Instances of version 5.x do not support the AliNLP word segmentation plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in OSS, make sure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify ORIGIN for an uploaded dictionary, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23629,7 +23653,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the access blacklist of an Elasticsearch instance. This operation is deprecated.</para>
+        /// <para>Updates the access blacklist of an Elasticsearch instance. <b>[Deprecated]</b></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23681,7 +23705,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the access blacklist of an Elasticsearch instance. This operation is deprecated.</para>
+        /// <para>Updates the access blacklist of an Elasticsearch instance. <b>[Deprecated]</b></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23733,7 +23757,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the access blacklist of an Elasticsearch instance. This operation is deprecated.</para>
+        /// <para>Updates the access blacklist of an Elasticsearch instance. <b>[Deprecated]</b></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23758,7 +23782,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the access blacklist of an Elasticsearch instance. This operation is deprecated.</para>
+        /// <para>Updates the access blacklist of an Elasticsearch instance. <b>[Deprecated]</b></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23911,7 +23935,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdateCollectorName to modify the name of a collector.</para>
+        /// <para>Updates the name of a collector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23958,7 +23982,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdateCollectorName to modify the name of a collector.</para>
+        /// <para>Updates the name of a collector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24005,7 +24029,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdateCollectorName to modify the name of a collector.</para>
+        /// <para>Updates the name of a collector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24024,7 +24048,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdateCollectorName to modify the name of a collector.</para>
+        /// <para>Updates the name of a collector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24343,7 +24367,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the intelligent O&amp;M scenario settings of a specified Elasticsearch instance.</para>
+        /// <para>Modifies the intelligent O&amp;M scenario settings for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24394,7 +24418,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the intelligent O&amp;M scenario settings of a specified Elasticsearch instance.</para>
+        /// <para>Modifies the intelligent O&amp;M scenario settings for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24445,7 +24469,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the intelligent O&amp;M scenario settings of a specified Elasticsearch instance.</para>
+        /// <para>Modifies the intelligent O&amp;M scenario settings for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24464,7 +24488,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the intelligent O&amp;M scenario settings of a specified Elasticsearch instance.</para>
+        /// <para>Modifies the intelligent O&amp;M scenario settings for a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24488,10 +24512,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify the ORIGIN configuration for an already uploaded dictionary, the dictionary file is deleted after this operation is called.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24544,10 +24568,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify the ORIGIN configuration for an already uploaded dictionary, the dictionary file is deleted after this operation is called.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24600,10 +24624,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify the ORIGIN configuration for an already uploaded dictionary, the dictionary file is deleted after this operation is called.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24628,10 +24652,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If you do not specify the ORIGIN configuration for an already uploaded dictionary, the dictionary file is deleted after this operation is called.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24651,7 +24675,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the dynamic configurations of a cluster.</para>
+        /// <para>Updates the dynamic configurations of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24706,7 +24730,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the dynamic configurations of a cluster.</para>
+        /// <para>Updates the dynamic configurations of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24761,7 +24785,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the dynamic configurations of a cluster.</para>
+        /// <para>Updates the dynamic configurations of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24780,7 +24804,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the dynamic configurations of a cluster.</para>
+        /// <para>Updates the dynamic configurations of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24799,7 +24823,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scenario-based configuration template of an Elasticsearch instance.</para>
+        /// <para>Updates the scenario-based configuration template for Elasticsearch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24846,7 +24870,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scenario-based configuration template of an Elasticsearch instance.</para>
+        /// <para>Updates the scenario-based configuration template for Elasticsearch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24893,7 +24917,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scenario-based configuration template of an Elasticsearch instance.</para>
+        /// <para>Updates the scenario-based configuration template for Elasticsearch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24912,7 +24936,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scenario-based configuration template of an Elasticsearch instance.</para>
+        /// <para>Updates the scenario-based configuration template for Elasticsearch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24936,7 +24960,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following: Currently, this operation only supports deleting extension files that have been uploaded through the console. To add or modify extension files, perform the operations in the console.</para>
+        /// <para>When you call this operation, note the following:
+        /// Currently, this operation only supports deleting Logstash extension files uploaded in the console. To add or modify extension files, use the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24988,7 +25013,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following: Currently, this operation only supports deleting extension files that have been uploaded through the console. To add or modify extension files, perform the operations in the console.</para>
+        /// <para>When you call this operation, note the following:
+        /// Currently, this operation only supports deleting Logstash extension files uploaded in the console. To add or modify extension files, use the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25040,7 +25066,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following: Currently, this operation only supports deleting extension files that have been uploaded through the console. To add or modify extension files, perform the operations in the console.</para>
+        /// <para>When you call this operation, note the following:
+        /// Currently, this operation only supports deleting Logstash extension files uploaded in the console. To add or modify extension files, use the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25064,7 +25091,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following: Currently, this operation only supports deleting extension files that have been uploaded through the console. To add or modify extension files, perform the operations in the console.</para>
+        /// <para>When you call this operation, note the following:
+        /// Currently, this operation only supports deleting Logstash extension files uploaded in the console. To add or modify extension files, use the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25513,7 +25541,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the template configuration of an Elasticsearch instance.</para>
+        /// <para>Updates the template configuration of an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25560,7 +25588,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the template configuration of an Elasticsearch instance.</para>
+        /// <para>Updates the template configuration of an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25607,7 +25635,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the template configuration of an Elasticsearch instance.</para>
+        /// <para>Updates the template configuration of an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25626,7 +25654,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the template configuration of an Elasticsearch instance.</para>
+        /// <para>Updates the template configuration of an Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25645,20 +25673,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the configuration of an Elasticsearch cluster, including the number of nodes, roles, specifications, and disk configurations.</para>
+        /// <para>Upgrades an Elasticsearch cluster by increasing the number of nodes and modifying roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>If the cluster has a high load and indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeout may occur. Configure a retry mechanism on the client before you change the cluster configuration to reduce the impact on your business.</description></item>
-        /// <item><description>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</description></item>
-        /// <item><description>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-vCPU 2 GiB instances, 2-vCPU 2 GiB dedicated master nodes, or version 7.4 instances. If you have confirmed that the purchased specifications are no longer available for sale, perform the following operations first:<list type="bullet">
-        /// <item><description>For 1-vCPU 2 GiB and 2-vCPU 2 GiB specifications, upgrade to a stable specification available on the buy page in advance. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Buy page parameters (commercial edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Buy page parameters (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Buy page parameters</a>.</description></item>
-        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
-        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</description></item>
+        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or freeze (inactive).</description></item>
+        /// <item><description>If the cluster load is excessively high, indexes do not have replicas, and a large number of write or query operations are performed during the procedure of an upgrade or when you decrease the quota, intermittent access timeouts may occur. Configure a retry mechanism in the client access logic before you change the cluster configuration to minimize the impact on your business.</description></item>
+        /// <item><description>You can change the configuration of only one type of node at a time. The node types include data nodes, dedicated master nodes, warm nodes, client nodes, Kibana nodes, and elastic nodes.</description></item>
+        /// <item><description>To ensure the health and stability of your cluster, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-core 2 GB specifications, 2-core 2 GB specifications for dedicated master nodes, and version 7.4 instances since May 2021. If you confirm that your purchased specifications are no longer available for sale, you must complete the following operations first:<list type="bullet">
+        /// <item><description>For 1-core 2 GB and 2-core 2 GB specifications, upgrade to the stable specifications available on the buy page in advance. For the specifications available on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Parameters on the buy page (Commercial Edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Parameters on the buy page (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Parameters on the buy page</a>.</description></item>
+        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For more information about data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade a cluster</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade a cluster</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25702,6 +25730,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 body["elasticDataNodeConfiguration"] = request.ElasticDataNodeConfiguration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexNodeConfiguration))
+            {
+                body["indexNodeConfiguration"] = request.IndexNodeConfiguration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
             {
                 body["instanceCategory"] = request.InstanceCategory;
@@ -25721,6 +25753,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec))
             {
                 body["nodeSpec"] = request.NodeSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchNodeConfiguration))
+            {
+                body["searchNodeConfiguration"] = request.SearchNodeConfiguration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
             {
@@ -25753,20 +25789,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the configuration of an Elasticsearch cluster, including the number of nodes, roles, specifications, and disk configurations.</para>
+        /// <para>Upgrades an Elasticsearch cluster by increasing the number of nodes and modifying roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>If the cluster has a high load and indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeout may occur. Configure a retry mechanism on the client before you change the cluster configuration to reduce the impact on your business.</description></item>
-        /// <item><description>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</description></item>
-        /// <item><description>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-vCPU 2 GiB instances, 2-vCPU 2 GiB dedicated master nodes, or version 7.4 instances. If you have confirmed that the purchased specifications are no longer available for sale, perform the following operations first:<list type="bullet">
-        /// <item><description>For 1-vCPU 2 GiB and 2-vCPU 2 GiB specifications, upgrade to a stable specification available on the buy page in advance. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Buy page parameters (commercial edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Buy page parameters (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Buy page parameters</a>.</description></item>
-        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
-        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</description></item>
+        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or freeze (inactive).</description></item>
+        /// <item><description>If the cluster load is excessively high, indexes do not have replicas, and a large number of write or query operations are performed during the procedure of an upgrade or when you decrease the quota, intermittent access timeouts may occur. Configure a retry mechanism in the client access logic before you change the cluster configuration to minimize the impact on your business.</description></item>
+        /// <item><description>You can change the configuration of only one type of node at a time. The node types include data nodes, dedicated master nodes, warm nodes, client nodes, Kibana nodes, and elastic nodes.</description></item>
+        /// <item><description>To ensure the health and stability of your cluster, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-core 2 GB specifications, 2-core 2 GB specifications for dedicated master nodes, and version 7.4 instances since May 2021. If you confirm that your purchased specifications are no longer available for sale, you must complete the following operations first:<list type="bullet">
+        /// <item><description>For 1-core 2 GB and 2-core 2 GB specifications, upgrade to the stable specifications available on the buy page in advance. For the specifications available on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Parameters on the buy page (Commercial Edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Parameters on the buy page (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Parameters on the buy page</a>.</description></item>
+        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For more information about data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade a cluster</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade a cluster</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25810,6 +25846,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 body["elasticDataNodeConfiguration"] = request.ElasticDataNodeConfiguration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexNodeConfiguration))
+            {
+                body["indexNodeConfiguration"] = request.IndexNodeConfiguration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
             {
                 body["instanceCategory"] = request.InstanceCategory;
@@ -25829,6 +25869,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeSpec))
             {
                 body["nodeSpec"] = request.NodeSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchNodeConfiguration))
+            {
+                body["searchNodeConfiguration"] = request.SearchNodeConfiguration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
             {
@@ -25861,20 +25905,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the configuration of an Elasticsearch cluster, including the number of nodes, roles, specifications, and disk configurations.</para>
+        /// <para>Upgrades an Elasticsearch cluster by increasing the number of nodes and modifying roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>If the cluster has a high load and indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeout may occur. Configure a retry mechanism on the client before you change the cluster configuration to reduce the impact on your business.</description></item>
-        /// <item><description>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</description></item>
-        /// <item><description>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-vCPU 2 GiB instances, 2-vCPU 2 GiB dedicated master nodes, or version 7.4 instances. If you have confirmed that the purchased specifications are no longer available for sale, perform the following operations first:<list type="bullet">
-        /// <item><description>For 1-vCPU 2 GiB and 2-vCPU 2 GiB specifications, upgrade to a stable specification available on the buy page in advance. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Buy page parameters (commercial edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Buy page parameters (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Buy page parameters</a>.</description></item>
-        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
-        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</description></item>
+        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or freeze (inactive).</description></item>
+        /// <item><description>If the cluster load is excessively high, indexes do not have replicas, and a large number of write or query operations are performed during the procedure of an upgrade or when you decrease the quota, intermittent access timeouts may occur. Configure a retry mechanism in the client access logic before you change the cluster configuration to minimize the impact on your business.</description></item>
+        /// <item><description>You can change the configuration of only one type of node at a time. The node types include data nodes, dedicated master nodes, warm nodes, client nodes, Kibana nodes, and elastic nodes.</description></item>
+        /// <item><description>To ensure the health and stability of your cluster, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-core 2 GB specifications, 2-core 2 GB specifications for dedicated master nodes, and version 7.4 instances since May 2021. If you confirm that your purchased specifications are no longer available for sale, you must complete the following operations first:<list type="bullet">
+        /// <item><description>For 1-core 2 GB and 2-core 2 GB specifications, upgrade to the stable specifications available on the buy page in advance. For the specifications available on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Parameters on the buy page (Commercial Edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Parameters on the buy page (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Parameters on the buy page</a>.</description></item>
+        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For more information about data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade a cluster</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade a cluster</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25896,20 +25940,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the configuration of an Elasticsearch cluster, including the number of nodes, roles, specifications, and disk configurations.</para>
+        /// <para>Upgrades an Elasticsearch cluster by increasing the number of nodes and modifying roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>If the cluster has a high load and indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeout may occur. Configure a retry mechanism on the client before you change the cluster configuration to reduce the impact on your business.</description></item>
-        /// <item><description>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</description></item>
-        /// <item><description>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-vCPU 2 GiB instances, 2-vCPU 2 GiB dedicated master nodes, or version 7.4 instances. If you have confirmed that the purchased specifications are no longer available for sale, perform the following operations first:<list type="bullet">
-        /// <item><description>For 1-vCPU 2 GiB and 2-vCPU 2 GiB specifications, upgrade to a stable specification available on the buy page in advance. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Buy page parameters (commercial edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Buy page parameters (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Buy page parameters</a>.</description></item>
-        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
-        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</description></item>
+        /// <item><description>You cannot change the configuration when the instance status is activating, invalid, or freeze (inactive).</description></item>
+        /// <item><description>If the cluster load is excessively high, indexes do not have replicas, and a large number of write or query operations are performed during the procedure of an upgrade or when you decrease the quota, intermittent access timeouts may occur. Configure a retry mechanism in the client access logic before you change the cluster configuration to minimize the impact on your business.</description></item>
+        /// <item><description>You can change the configuration of only one type of node at a time. The node types include data nodes, dedicated master nodes, warm nodes, client nodes, Kibana nodes, and elastic nodes.</description></item>
+        /// <item><description>To ensure the health and stability of your cluster, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-core 2 GB specifications, 2-core 2 GB specifications for dedicated master nodes, and version 7.4 instances since May 2021. If you confirm that your purchased specifications are no longer available for sale, you must complete the following operations first:<list type="bullet">
+        /// <item><description>For 1-core 2 GB and 2-core 2 GB specifications, upgrade to the stable specifications available on the buy page in advance. For the specifications available on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Parameters on the buy page (Commercial Edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Parameters on the buy page (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Parameters on the buy page</a>.</description></item>
+        /// <item><description>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For more information about data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+        /// For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade a cluster</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade a cluster</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -26263,7 +26307,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the keystore.</para>
+        /// <para>Adds, updates, or deletes the keystore configuration of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26319,7 +26363,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the keystore.</para>
+        /// <para>Adds, updates, or deletes the keystore configuration of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26375,7 +26419,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the keystore.</para>
+        /// <para>Adds, updates, or deletes the keystore configuration of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26394,7 +26438,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the keystore.</para>
+        /// <para>Adds, updates, or deletes the keystore configuration of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27398,7 +27442,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot modify the instance name when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27455,7 +27500,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot modify the instance name when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27512,7 +27558,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot modify the instance name when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27536,7 +27583,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot modify the instance name when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27560,7 +27608,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance configuration cannot be updated when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27612,7 +27661,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance configuration cannot be updated when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27664,7 +27714,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance configuration cannot be updated when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27688,7 +27739,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following: The instance configuration cannot be updated when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>When you invoke this operation, note the following:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27707,13 +27759,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the pipeline management method of a specified Logstash instance.</para>
+        /// <para>Modifies the pipeline management mode of a specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Pipeline management methods include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. You can use this feature only through the API.</para>
+        /// <para>Pipeline management modes include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. This feature is available only through the API.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27786,13 +27838,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the pipeline management method of a specified Logstash instance.</para>
+        /// <para>Modifies the pipeline management mode of a specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Pipeline management methods include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. You can use this feature only through the API.</para>
+        /// <para>Pipeline management modes include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. This feature is available only through the API.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27865,13 +27917,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the pipeline management method of a specified Logstash instance.</para>
+        /// <para>Modifies the pipeline management mode of a specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Pipeline management methods include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. You can use this feature only through the API.</para>
+        /// <para>Pipeline management modes include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. This feature is available only through the API.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27891,13 +27943,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the pipeline management method of a specified Logstash instance.</para>
+        /// <para>Modifies the pipeline management mode of a specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Pipeline management methods include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. You can use this feature only through the API.</para>
+        /// <para>Pipeline management modes include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. This feature is available only through the API.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27917,7 +27969,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdatePipelines to update Logstash pipeline information.</para>
+        /// <para>Updates Logstash pipeline information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27968,7 +28020,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdatePipelines to update Logstash pipeline information.</para>
+        /// <para>Updates Logstash pipeline information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28019,7 +28071,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdatePipelines to update Logstash pipeline information.</para>
+        /// <para>Updates Logstash pipeline information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28038,7 +28090,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls UpdatePipelines to update Logstash pipeline information.</para>
+        /// <para>Updates Logstash pipeline information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28062,15 +28114,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<list type="bullet">
-        /// <item><description>IP whitelist list: privateNetworkIpWhiteList</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>When the instance status is activating, invalid, or inactive, you cannot update the VPC private network access whitelist of the instance.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. Details:<list type="bullet">
+        /// <item><description>IP address whitelist: privateNetworkIpWhiteList</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public network access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28127,15 +28179,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<list type="bullet">
-        /// <item><description>IP whitelist list: privateNetworkIpWhiteList</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>When the instance status is activating, invalid, or inactive, you cannot update the VPC private network access whitelist of the instance.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. Details:<list type="bullet">
+        /// <item><description>IP address whitelist: privateNetworkIpWhiteList</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public network access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28192,15 +28244,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<list type="bullet">
-        /// <item><description>IP whitelist list: privateNetworkIpWhiteList</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>When the instance status is activating, invalid, or inactive, you cannot update the VPC private network access whitelist of the instance.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. Details:<list type="bullet">
+        /// <item><description>IP address whitelist: privateNetworkIpWhiteList</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public network access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28225,15 +28277,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<list type="bullet">
-        /// <item><description>IP whitelist list: privateNetworkIpWhiteList</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>When the instance status is activating, invalid, or inactive, you cannot update the VPC private network access whitelist of the instance.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. Details:<list type="bullet">
+        /// <item><description>IP address whitelist: privateNetworkIpWhiteList</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public network access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28253,13 +28305,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the public network address for a specified Elasticsearch instance.</para>
+        /// <para>Enables or disables the public endpoint of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following:
-        /// You cannot update information when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>Note the following when you invoke this operation:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28306,13 +28358,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the public network address for a specified Elasticsearch instance.</para>
+        /// <para>Enables or disables the public endpoint of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following:
-        /// You cannot update information when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>Note the following when you invoke this operation:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28359,13 +28411,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the public network address for a specified Elasticsearch instance.</para>
+        /// <para>Enables or disables the public endpoint of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following:
-        /// You cannot update information when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>Note the following when you invoke this operation:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28384,13 +28436,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the public network address for a specified Elasticsearch instance.</para>
+        /// <para>Enables or disables the public endpoint of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you invoke this operation, note the following:
-        /// You cannot update information when the instance status is activating, invalid, or freeze (inactive).</para>
+        /// <para>Note the following when you invoke this operation:
+        /// You cannot update the information when the instance status is activating, invalid, or freeze (inactive).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28409,20 +28461,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the public network access whitelist of a specified Elasticsearch instance.</para>
+        /// <para>Updates the public IP address whitelist of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <list type="bullet">
-        /// <item><description>IP whitelist list: publicIpWhitelist</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>You cannot update the public IP address access whitelist of an instance when the instance status is activating, invalid, or inactive.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. The details are as follows:   <list type="bullet">
+        /// <item><description>IP address whitelist: publicIpWhitelist</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public network access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28474,20 +28526,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the public network access whitelist of a specified Elasticsearch instance.</para>
+        /// <para>Updates the public IP address whitelist of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <list type="bullet">
-        /// <item><description>IP whitelist list: publicIpWhitelist</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>You cannot update the public IP address access whitelist of an instance when the instance status is activating, invalid, or inactive.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. The details are as follows:   <list type="bullet">
+        /// <item><description>IP address whitelist: publicIpWhitelist</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public network access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28539,20 +28591,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the public network access whitelist of a specified Elasticsearch instance.</para>
+        /// <para>Updates the public IP address whitelist of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <list type="bullet">
-        /// <item><description>IP whitelist list: publicIpWhitelist</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>You cannot update the public IP address access whitelist of an instance when the instance status is activating, invalid, or inactive.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. The details are as follows:   <list type="bullet">
+        /// <item><description>IP address whitelist: publicIpWhitelist</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public network access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28572,20 +28624,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the public network access whitelist of a specified Elasticsearch instance.</para>
+        /// <para>Updates the public IP address whitelist of a specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</description></item>
-        /// <item><description>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <list type="bullet">
-        /// <item><description>IP whitelist list: publicIpWhitelist</description></item>
-        /// <item><description>IP whitelist group: modifyMode, whiteIpGroup</description></item>
+        /// <item><description>You cannot update the public IP address access whitelist of an instance when the instance status is activating, invalid, or inactive.</description></item>
+        /// <item><description>You can update the whitelist by using an IP address whitelist or an IP address whitelist group. You cannot use both methods at the same time. Except for InstanceId and clientToken, the parameters supported by the two methods are different. The details are as follows:   <list type="bullet">
+        /// <item><description>IP address whitelist: publicIpWhitelist</description></item>
+        /// <item><description>IP address whitelist group: modifyMode and whiteIpGroup</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</description></item>
+        /// <item><description>You cannot configure private IP addresses in a public network access whitelist, and you cannot configure public IP addresses in a private network access whitelist.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28605,7 +28657,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the write high availability feature for a cluster. Currently, only instances in the China (Beijing) region are supported.</para>
+        /// <para>Enables or disables the write high-availability feature for a cluster. This feature is currently supported only for instances in the China (Beijing) region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28652,7 +28704,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the write high availability feature for a cluster. Currently, only instances in the China (Beijing) region are supported.</para>
+        /// <para>Enables or disables the write high-availability feature for a cluster. This feature is currently supported only for instances in the China (Beijing) region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28699,7 +28751,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the write high availability feature for a cluster. Currently, only instances in the China (Beijing) region are supported.</para>
+        /// <para>Enables or disables the write high-availability feature for a cluster. This feature is currently supported only for instances in the China (Beijing) region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28718,7 +28770,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the write high availability feature for a cluster. Currently, only instances in the China (Beijing) region are supported.</para>
+        /// <para>Enables or disables the write high-availability feature for a cluster. This feature is currently supported only for instances in the China (Beijing) region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28862,10 +28914,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If an uploaded dictionary is not configured with ORIGIN, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28918,10 +28970,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If an uploaded dictionary is not configured with ORIGIN, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28974,10 +29026,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If an uploaded dictionary is not configured with ORIGIN, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29002,10 +29054,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</description></item>
-        /// <item><description>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</description></item>
+        /// <item><description>If the dictionary file is sourced from OSS, ensure that the OSS bucket is publicly readable.</description></item>
+        /// <item><description>If an uploaded dictionary is not configured with ORIGIN, the dictionary file is deleted after you call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29537,13 +29589,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the version of an Elasticsearch instance. This operation supports major version upgrades and kernel version upgrades.</para>
+        /// <para>Upgrades the version of an Elasticsearch instance, supporting version upgrades and kernel version upgrades.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</para>
+        /// <para>The instance version upgrade feature currently only supports upgrades from version 5.5.3 to 5.6.16, from 5.6.16 to 6.3.2, and from 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade versions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -29612,13 +29664,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the version of an Elasticsearch instance. This operation supports major version upgrades and kernel version upgrades.</para>
+        /// <para>Upgrades the version of an Elasticsearch instance, supporting version upgrades and kernel version upgrades.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</para>
+        /// <para>The instance version upgrade feature currently only supports upgrades from version 5.5.3 to 5.6.16, from 5.6.16 to 6.3.2, and from 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade versions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -29687,13 +29739,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the version of an Elasticsearch instance. This operation supports major version upgrades and kernel version upgrades.</para>
+        /// <para>Upgrades the version of an Elasticsearch instance, supporting version upgrades and kernel version upgrades.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</para>
+        /// <para>The instance version upgrade feature currently only supports upgrades from version 5.5.3 to 5.6.16, from 5.6.16 to 6.3.2, and from 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade versions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -29713,13 +29765,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the version of an Elasticsearch instance. This operation supports major version upgrades and kernel version upgrades.</para>
+        /// <para>Upgrades the version of an Elasticsearch instance, supporting version upgrades and kernel version upgrades.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</para>
+        /// <para>The instance version upgrade feature currently only supports upgrades from version 5.5.3 to 5.6.16, from 5.6.16 to 6.3.2, and from 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade versions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -29739,7 +29791,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a minor engine version upgrade is available.</para>
+        /// <para>Queries whether an upgradable engine version is available for a specified Elasticsearch instance and retrieves the version information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -29775,7 +29827,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a minor engine version upgrade is available.</para>
+        /// <para>Queries whether an upgradable engine version is available for a specified Elasticsearch instance and retrieves the version information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -29811,7 +29863,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a minor engine version upgrade is available.</para>
+        /// <para>Queries whether an upgradable engine version is available for a specified Elasticsearch instance and retrieves the version information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -29826,7 +29878,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a minor engine version upgrade is available.</para>
+        /// <para>Queries whether an upgradable engine version is available for a specified Elasticsearch instance and retrieves the version information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -30454,9 +30506,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Alibaba Cloud Elasticsearch billing rules</a>.</description></item>
-        /// <item><description>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
-        /// <item><description>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</description></item>
+        /// <item><description>Before you call this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Billing rules of Alibaba Cloud Elasticsearch</a>.</description></item>
+        /// <item><description>You must pass real-name verification before you create an instance. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
+        /// <item><description>You do not need to specify a zone when you create an instance. By default, the instance is deployed in the same zone as the selected VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30502,6 +30554,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 body["esVersion"] = request.EsVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexNodeConfiguration))
+            {
+                body["indexNodeConfiguration"] = request.IndexNodeConfiguration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
             {
                 body["instanceCategory"] = request.InstanceCategory;
@@ -30537,6 +30593,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchNodeConfiguration))
+            {
+                body["searchNodeConfiguration"] = request.SearchNodeConfiguration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
@@ -30580,9 +30640,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Alibaba Cloud Elasticsearch billing rules</a>.</description></item>
-        /// <item><description>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
-        /// <item><description>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</description></item>
+        /// <item><description>Before you call this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Billing rules of Alibaba Cloud Elasticsearch</a>.</description></item>
+        /// <item><description>You must pass real-name verification before you create an instance. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
+        /// <item><description>You do not need to specify a zone when you create an instance. By default, the instance is deployed in the same zone as the selected VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30628,6 +30688,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 body["esVersion"] = request.EsVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexNodeConfiguration))
+            {
+                body["indexNodeConfiguration"] = request.IndexNodeConfiguration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceCategory))
             {
                 body["instanceCategory"] = request.InstanceCategory;
@@ -30663,6 +30727,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchNodeConfiguration))
+            {
+                body["searchNodeConfiguration"] = request.SearchNodeConfiguration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
@@ -30706,9 +30774,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Alibaba Cloud Elasticsearch billing rules</a>.</description></item>
-        /// <item><description>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
-        /// <item><description>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</description></item>
+        /// <item><description>Before you call this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Billing rules of Alibaba Cloud Elasticsearch</a>.</description></item>
+        /// <item><description>You must pass real-name verification before you create an instance. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
+        /// <item><description>You do not need to specify a zone when you create an instance. By default, the instance is deployed in the same zone as the selected VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30735,9 +30803,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Alibaba Cloud Elasticsearch billing rules</a>.</description></item>
-        /// <item><description>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
-        /// <item><description>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</description></item>
+        /// <item><description>Before you call this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Billing rules of Alibaba Cloud Elasticsearch</a>.</description></item>
+        /// <item><description>You must pass real-name verification before you create an instance. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></description></item>
+        /// <item><description>You do not need to specify a zone when you create an instance. By default, the instance is deployed in the same zone as the selected VPC.</description></item>
         /// </list>
         /// </description>
         /// 

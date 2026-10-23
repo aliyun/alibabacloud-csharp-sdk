@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class StopPipelinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The pipelines are stopped successfully.</description></item>
-        /// <item><description>false: The pipelines failed to be stopped.</description></item>
+        /// <item><description>false: The pipelines fail to stop.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
