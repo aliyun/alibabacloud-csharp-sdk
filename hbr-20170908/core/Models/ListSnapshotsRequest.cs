@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class ListSnapshotsRequest : TeaModel {
         /// <summary>
-        /// <para>The end completion time. A UNIX timestamp, in seconds. Only backup points with a completion time earlier than this value are returned.</para>
+        /// <para>The end completion time. The value is a UNIX timestamp in seconds. Only backup points whose completion time is less than this value are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1776059382</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CompleteTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start completion time. A UNIX timestamp, in seconds. Only backup points with a completion time greater than or equal to this value are returned.</para>
+        /// <para>The start completion time. The value is a UNIX timestamp in seconds. Only backup points whose completion time is greater than or equal to this value are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1776059082</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CompleteTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return in a paged query. Default value: 10. The value must be greater than 1.</para>
+        /// <para>The maximum number of results to return for a paged query. Default value: 10. The value must be greater than 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. You do not need to specify this parameter for the first request. For subsequent pages, pass in the <b>NextToken</b> value returned from the previous request. An empty <b>NextToken</b> indicates that no more pages are available. This parameter cannot be used together with <b>Skip</b>.</para>
+        /// <para>The pagination token. You do not need to specify this parameter for the first query. When you query the next page, set this parameter to the <b>NextToken</b> value returned from the previous page. If <b>NextToken</b> is empty, no more pages exist. This parameter cannot be used together with <b>Skip</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJJbmRleCI6NjUwMX0=</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The backup plan ID. This is an optional filter condition. If specified, only backup points under the specified backup plan are returned.</para>
+        /// <para>The ID of the backup plan. This is an optional filter. If you specify this parameter, only the backup points under the specified backup plan are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>po-0000****123</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string PlanId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protected resource. The protected resource must exist, and its data source type must match the <b>SourceType</b> parameter.</para>
+        /// <para>The ID of the protected resource. The protected resource must exist, and its data source type must be the same as the value of the <b>SourceType</b> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? Skip { get; set; }
 
         /// <summary>
-        /// <para>The data source type. The value must match the data source type of the protected resource (ProtectedResourceId). The supported data source types are listed in the valid values.</para>
+        /// <para>The data source type. It must be the same as the data source type of the protected resource specified by ProtectedResourceId. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The vault ID. This is an optional filter condition. If specified, only backup points in the specified vault are returned.</para>
+        /// <para>The ID of the vault. This is an optional filter. If you specify this parameter, only the backup points in the specified vault are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-00030j3c******sn</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number of results per query.</para>
+        /// <para>The maximum number of results to return per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</para>
+        /// <para>The return message. A value of successful indicates success. If an error occurs, the corresponding error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If this parameter is empty, no more pages are available.</para>
+        /// <para>The pagination token for the next page. If NextToken is empty, no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJJ************MX0=</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The product capability to which the resource belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HBR</b>: Cloud Backup standard capability.</description></item>
+            /// <item><description><b>HBR</b>: Cloud Backup standard capabilities.</description></item>
             /// <item><description><b>BASIC</b>: ECS File Backup Essential Edition.</description></item>
             /// </list>
             /// 
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string CreatedByProduct { get; set; }
 
             /// <summary>
-            /// <para>The amount of protected data, in bytes. Currently, only ECS File Backup Essential Edition is supported.</para>
+            /// <para>The protected data volume, in bytes. This parameter is supported only for ECS File Backup Essential Edition.</para>
             /// <list type="bullet">
-            /// <item><description><b>SourceType=ECS_FILE</b>: the backed-up block storage capacity.</description></item>
+            /// <item><description><b>SourceType=ECS_FILE</b>: the storage capacity of the backed-up block storage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,12 +105,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ProtectedResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The resource ID. The meaning of this parameter varies based on the value of SourceType:</para>
             /// <list type="bullet">
             /// <item><description><b>SourceType=ECS_FILE</b>: the ECS instance ID.</description></item>
             /// <item><description><b>SourceType=COMMON_FILE_SYSTEM</b>: the CPFS data source ID.</description></item>
             /// <item><description><b>SourceType=COMMON_NAS</b>: the on-premises NAS data source ID.</description></item>
-            /// <item><description><b>SourceType=File</b>: the local service client ID.</description></item>
+            /// <item><description><b>SourceType=File</b>: the on-premises server client ID.</description></item>
             /// <item><description><b>SourceType=NAS</b>: the Alibaba Cloud NAS file system ID.</description></item>
             /// <item><description><b>SourceType=OSS</b>: the OSS bucket.</description></item>
             /// </list>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The UID of the user who owns the resource.</para>
+            /// <para>The UID of the user to whom the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024********0703</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ResourceOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the resource.</para>
+            /// <para>The ID of the region to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ResourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of backups.</para>
+            /// <para>The number of backup snapshots.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -153,12 +153,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? SnapshotCount { get; set; }
 
             /// <summary>
-            /// <para>The backup feature type. Valid values:</para>
+            /// <para>The type of backup feature. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ECS_FILE</b>: ECS file backup.</description></item>
-            /// <item><description><b>COMMON_FILE_SYSTEM</b>: Cloud Parallel File Storage (CPFS) backup.</description></item>
-            /// <item><description><b>COMMON_NAS</b>: on-premises NAS backup.</description></item>
-            /// <item><description><b>File</b>: on-premises file backup.</description></item>
+            /// <item><description><b>COMMON_FILE_SYSTEM</b>: CPFS backup.</description></item>
+            /// <item><description><b>COMMON_NAS</b>: On-premises NAS backup.</description></item>
+            /// <item><description><b>File</b>: On-premises file backup.</description></item>
             /// <item><description><b>NAS</b>: Alibaba Cloud NAS backup.</description></item>
             /// <item><description><b>OSS</b>: OSS backup.</description></item>
             /// </list>
@@ -183,9 +183,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
         /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 

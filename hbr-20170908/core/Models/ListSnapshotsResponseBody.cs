@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results returned.</para>
+        /// <para>The maximum number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The return message. The value &quot;successful&quot; is returned for successful requests. An error message is returned for failed requests.</para>
+        /// <para>The returned message. A value of successful indicates success. If an error occurs, the corresponding error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty NextToken indicates that no more pages are available.</para>
+        /// <para>The token for the next page. If NextToken is empty, no more pages exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aWQj********MCMy</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ActualBytes { get; set; }
 
             /// <summary>
-            /// <para>The actual number of nodes.</para>
+            /// <para>The actual number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ActualItems { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup was archived.</para>
+            /// <para>The archive time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640334062</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ArchiveTime { get; set; }
 
             /// <summary>
-            /// <para>The backup type. The value is <b>COMPLETE</b>, which indicates a full backup.</para>
+            /// <para>The backup type. A value of <b>COMPLETE</b> indicates a full backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETE</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string BackupType { get; set; }
 
             /// <summary>
-            /// <para>The amount of data that has been backed up, in bytes.</para>
+            /// <para>The amount of backed up data, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? BytesTotal { get; set; }
 
             /// <summary>
-            /// <para>When <b>SourceType</b> is set to <b>ECS_FILE</b> or <b>File</b>, this parameter indicates the backup client ID. In other cases, it indicates the ID of the backup data source.</para>
+            /// <para>The ID of the backup client when the value of <b>SourceType</b> is <b>ECS_FILE</b> or <b>File</b>. In other cases, this parameter indicates the ID of the backup data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-*********************</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The backup completion time. A UNIX timestamp, in seconds.</para>
+            /// <para>The backup completion time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642496679</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup point was created, in seconds.</para>
+            /// <para>The creation time of the backup point, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1607436917</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup was created.</para>
+            /// <para>The backup creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642496679</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Exclude { get; set; }
 
             /// <summary>
-            /// <para>The backup expiration time.</para>
+            /// <para>The expiration time of the backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1771901707</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The Tablestore instance name.</para>
+            /// <para>The name of the Tablestore instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instancename</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes that have been backed up.</para>
+            /// <para>The number of backed up items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ItemsDone { get; set; }
 
             /// <summary>
-            /// <para>The total number of nodes to back up.</para>
+            /// <para>The total number of items to back up.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ItemsTotal { get; set; }
 
             /// <summary>
-            /// <para>The backup job ID.</para>
+            /// <para>The ID of the backup job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-00030j3chkt******2</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The source path.</para>
+            /// <para>The backup path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home</para>
@@ -267,14 +267,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The list of source paths.</para>
+            /// <para>The list of backup paths.</para>
             /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>The backup plan ID.</para>
+            /// <para>The ID of the backup plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>po-123***7890</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string PlanId { get; set; }
 
             /// <summary>
-            /// <para>The protected source data size, in bytes. When SourceType is set to ECS_FILE, this indicates the protected cloud disk capacity.</para>
+            /// <para>The size of the protected source data, in bytes. When the value of SourceType is ECS_FILE, this parameter indicates the capacity of the protected cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42949672960</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ProtectedDataSize { get; set; }
 
             /// <summary>
-            /// <para>The end time of the Tablestore backup job execution. A UNIX timestamp, in milliseconds.</para>
+            /// <para>The end time of the Tablestore backup job. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642521709966</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? RangeEnd { get; set; }
 
             /// <summary>
-            /// <para>The start time of the Tablestore backup job execution. A UNIX timestamp, in milliseconds.</para>
+            /// <para>The start time of the Tablestore backup job. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642492553038</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string SnapshotHash { get; set; }
 
             /// <summary>
-            /// <para>The backup point ID.</para>
+            /// <para>The ID of the backup point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-00047mxg17p26*****b</para>
@@ -347,11 +347,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <para>The data source type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ECS_FILE</b>: ECS file backup</description></item>
-            /// <item><description><b>File</b>: On-premises file backup</description></item>
+            /// <item><description><b>File</b>: on-premises file backup</description></item>
             /// <item><description><b>OSS</b>: OSS backup</description></item>
             /// <item><description><b>NAS</b>: Alibaba Cloud NAS backup</description></item>
-            /// <item><description><b>COMMON_NAS</b>: On-premises NAS backup</description></item>
-            /// <item><description><b>CONTAINER</b>: Container backup</description></item>
+            /// <item><description><b>COMMON_NAS</b>: on-premises NAS backup</description></item>
+            /// <item><description><b>CONTAINER</b>: container backup</description></item>
             /// <item><description><b>OTS_TABLE</b>: Tablestore backup</description></item>
             /// <item><description><b>COMMON_FILE_SYSTEM</b>: CPFS backup</description></item>
             /// </list>
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The backup point status.</para>
+            /// <para>The status of the backup point. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETE</para>
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage class.</para>
+            /// <para>The storage class. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>STANDARD</para>
@@ -406,10 +406,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

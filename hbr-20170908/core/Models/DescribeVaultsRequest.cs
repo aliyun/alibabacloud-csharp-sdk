@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeVaultsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Replication { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-*********************</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The backup vault ID.</para>
+        /// <para>The ID of the backup vault.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-*********************</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? VaultOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the backup vault.</para>
+        /// <para>The ID of the region to which the backup vault belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -138,7 +138,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the backup vault. Valid values.</para>
+        /// <para>The type of the backup vault. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>STANDARD</b>: A standard vault. It can be used for ECS File Backup Standard Edition, OSS backup, and NAS backup.</description></item>
+        /// <item><description><b>OTS_BACKUP</b>: A Tablestore vault. It can only be used for Tablestore backup. Tablestore requires this type of vault.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>

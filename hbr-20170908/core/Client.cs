@@ -11133,7 +11133,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Queries the information of one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11217,7 +11217,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Queries the information of one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11301,7 +11301,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Queries the information of one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11319,7 +11319,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Queries the information of one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13365,7 +13365,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup points.</para>
+        /// <para>Queries backup points.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13439,7 +13439,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup points.</para>
+        /// <para>Queries backup points.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13513,7 +13513,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup points.</para>
+        /// <para>Queries backup points.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13531,7 +13531,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup points.</para>
+        /// <para>Queries backup points.</para>
         /// </summary>
         /// 
         /// <param name="request">
