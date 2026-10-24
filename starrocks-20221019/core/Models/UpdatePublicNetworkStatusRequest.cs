@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class UpdatePublicNetworkStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Data returned by the operation.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <para>Data returned by the operation.</para>
+        /// <para>The returned data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The compute group ID.</para>
+        /// <para>The ID of the compute group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-3d5ce6454354****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>Enable or disable the public network.</para>
+        /// <para>Specifies whether to enable or disable Internet access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

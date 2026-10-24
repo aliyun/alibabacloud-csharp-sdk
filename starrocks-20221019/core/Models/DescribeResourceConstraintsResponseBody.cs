@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeResourceConstraintsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>AccessDeniedDetail</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeResourceConstraintsResponseBodyData Data { get; set; }
         public class DescribeResourceConstraintsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The CU sizes for agents.</para>
+            /// <para>The Agent Cu size.</para>
             /// </summary>
             [NameInMap("AgentCu")]
             [Validation(Required=false)]
             public List<int?> AgentCu { get; set; }
 
             /// <summary>
-            /// <para>The available CU (Compute Unit) sizes for BE nodes.</para>
+            /// <para>The compute unit (CU) size of the BE node.</para>
             /// </summary>
             [NameInMap("BeCu")]
             [Validation(Required=false)]
             public List<int?> BeCu { get; set; }
 
             /// <summary>
-            /// <para>The CU sizes for BE nodes on ECS.</para>
+            /// <para>The BeCu size on ECS.</para>
             /// </summary>
             [NameInMap("BeCuOnEcs")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Min { get; set; }
 
                 /// <summary>
-                /// <para>The step.</para>
+                /// <para>The step size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The storage constraints for BE nodes.</para>
+            /// <para>The BE storage constraints.</para>
             /// </summary>
             [NameInMap("BeStorageConstraints")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>BE 存储约束描述</para>
+                /// <para>BE storage constraint description</para>
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public int? Default { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of disks.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public int? Min { get; set; }
 
                     /// <summary>
-                    /// <para>The step.</para>
+                    /// <para>The step size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether this is the default option.</para>
+                /// <para>Indicates whether it is the default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The disk performance level.</para>
+                /// <para>The disk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL1</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public int? Min { get; set; }
 
                     /// <summary>
-                    /// <para>The step.</para>
+                    /// <para>The step size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The specification constraints for big data instance types.</para>
+            /// <para>The big data instance type specification constraints.</para>
             /// </summary>
             [NameInMap("BigDataInstanceTypeConstraints")]
             [Validation(Required=false)]
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The disk count.</para>
+                /// <para>The number of disks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>20核 88GiB 8*7300GiB 本地HDD盘</para>
+                /// <para>20 vCPUs, 88 GiB, 8 × 7300 GiB local HDDs</para>
                 /// </summary>
                 [NameInMap("Display")]
                 [Validation(Required=false)]
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether this is the default option.</para>
+                /// <para>Indicates whether the resource is the default. Currently, this parameter only supports true and does not support false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The memory size, in GiB.</para>
+                /// <para>The memory size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>88</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Memory { get; set; }
 
                 /// <summary>
-                /// <para>The storage size, in GiB.</para>
+                /// <para>The storage size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7300</para>
@@ -323,14 +323,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The available CU sizes for FE nodes.</para>
+            /// <para>The CU size of the FE node.</para>
             /// </summary>
             [NameInMap("FeCu")]
             [Validation(Required=false)]
             public List<int?> FeCu { get; set; }
 
             /// <summary>
-            /// <para>The CU sizes for FE nodes on ECS.</para>
+            /// <para>The FeCu size on ECS.</para>
             /// </summary>
             [NameInMap("FeCuOnEcs")]
             [Validation(Required=false)]
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Min { get; set; }
 
                 /// <summary>
-                /// <para>The step.</para>
+                /// <para>The step size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The instance types for FE nodes.</para>
+            /// <para>The FE specification type.</para>
             /// </summary>
             [NameInMap("FeSpecType")]
             [Validation(Required=false)]
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>标准版</para>
+                /// <para>Standard edition</para>
                 /// </summary>
                 [NameInMap("Display")]
                 [Validation(Required=false)]
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The storage size for the FE node.</para>
+            /// <para>The storage size of the FE node.</para>
             /// </summary>
             [NameInMap("FeStorage")]
             [Validation(Required=false)]
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Min { get; set; }
 
                 /// <summary>
-                /// <para>The step.</para>
+                /// <para>The step size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -464,14 +464,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The high availability (HA) FE node configuration.</para>
+            /// <para>The high-availability FE node configuration.</para>
             /// </summary>
             [NameInMap("HaFeResourceSpec")]
             [Validation(Required=false)]
             public DescribeResourceConstraintsResponseBodyDataHaFeResourceSpec HaFeResourceSpec { get; set; }
             public class DescribeResourceConstraintsResponseBodyDataHaFeResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The CU (Compute Unit) size.</para>
+                /// <para>The CU size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -491,7 +491,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? NodeNumber { get; set; }
 
                 /// <summary>
-                /// <para>The storage size, in GiB.</para>
+                /// <para>The storage size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -503,14 +503,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The specification constraints for local SSD instance types.</para>
+            /// <para>The local SSD instance type constraints.</para>
             /// </summary>
             [NameInMap("LocalSSDInstanceTypeConstraints")]
             [Validation(Required=false)]
             public List<DescribeResourceConstraintsResponseBodyDataLocalSSDInstanceTypeConstraints> LocalSSDInstanceTypeConstraints { get; set; }
             public class DescribeResourceConstraintsResponseBodyDataLocalSSDInstanceTypeConstraints : TeaModel {
                 /// <summary>
-                /// <para>The number of vCPUs.</para>
+                /// <para>The number of CPU cores.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The disk count.</para>
+                /// <para>The number of disks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -533,7 +533,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[i2g]16核 64GiB 1*1788GiB 本地SSD盘</para>
+                /// <para>[i2g] 16 vCPUs, 64 GiB, 1 × 1788 GiB local SSD</para>
                 /// </summary>
                 [NameInMap("Display")]
                 [Validation(Required=false)]
@@ -560,7 +560,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether this is the default option.</para>
+                /// <para>Indicates whether it is the default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Memory { get; set; }
 
                 /// <summary>
-                /// <para>The storage size, in GiB.</para>
+                /// <para>The storage size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1788</para>
@@ -599,7 +599,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public DescribeResourceConstraintsResponseBodyDataNormalFeResourceSpec NormalFeResourceSpec { get; set; }
             public class DescribeResourceConstraintsResponseBodyDataNormalFeResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The CU (Compute Unit) size.</para>
+                /// <para>The CU size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64</para>
@@ -619,7 +619,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? NodeNumber { get; set; }
 
                 /// <summary>
-                /// <para>The storage size, in GiB.</para>
+                /// <para>The storage size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -631,18 +631,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The instance type for compute nodes. Valid values:</para>
+            /// <para>The compute group specification type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>standard</c>: Standard.</para>
-            /// </description></item>
-            /// <item><description><para><c>localSSD</c>: Local SSD.</para>
-            /// </description></item>
-            /// <item><description><para><c>bigData</c>: Large-capacity storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>ramEnhanced</c>: Memory-enhanced.</para>
-            /// </description></item>
-            /// <item><description><para><c>networkEnhanced</c>: Network-enhanced.</para>
-            /// </description></item>
+            /// <item><description>standard: standard edition</description></item>
+            /// <item><description>localSSD: local SSD</description></item>
+            /// <item><description>bigData: large-capacity storage</description></item>
+            /// <item><description>ramEnhanced: memory-enhanced instance family</description></item>
+            /// <item><description>networkEnhanced: network-enhanced</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -656,7 +651,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>标准版</para>
+                /// <para>Standard edition</para>
                 /// </summary>
                 [NameInMap("Display")]
                 [Validation(Required=false)]
@@ -675,10 +670,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>Deprecated.</para>
+            /// <para><b>[Deprecated]</b></para>
             /// </summary>
             [NameInMap("SplitDiskThresholdMap")]
             [Validation(Required=false)]
@@ -709,7 +704,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string DefaultVersion { get; set; }
 
                 /// <summary>
-                /// <para>The available versions.</para>
+                /// <para>The version definition.</para>
                 /// </summary>
                 [NameInMap("Versions")]
                 [Validation(Required=false)]
@@ -718,14 +713,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The EED types supported in each availability zone.</para>
+            /// <para>The EED types supported by the zone.</para>
             /// </summary>
             [NameInMap("ZoneSupportedEedTypes")]
             [Validation(Required=false)]
             public Dictionary<string, List<string>> ZoneSupportedEedTypes { get; set; }
 
             /// <summary>
-            /// <para>The instance types supported in each availability zone.</para>
+            /// <para>The types supported by the zone.</para>
             /// </summary>
             [NameInMap("ZoneSupportedSpecTypes")]
             [Validation(Required=false)]
@@ -769,7 +764,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Min { get; set; }
 
                 /// <summary>
-                /// <para>The step.</para>
+                /// <para>The step size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -781,7 +776,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The compaction services supported in each availability zone.</para>
+            /// <para>The compaction service configurations supported by each zone.</para>
             /// </summary>
             [NameInMap("zoneSupportCompactionService")]
             [Validation(Required=false)]
@@ -800,7 +795,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code. A value of <c>Success</c> indicates that the request was successful.</para>
+        /// <para>The error code. A value of 200 indicates that the query task is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -830,7 +825,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

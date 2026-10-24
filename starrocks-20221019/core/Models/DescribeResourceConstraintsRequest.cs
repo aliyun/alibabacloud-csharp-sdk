@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeResourceConstraintsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the instance architecture. Valid values:</para>
+        /// <para>The instance architecture. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>onEci: The instance is deployed on ECI.</para>
-        /// </description></item>
-        /// <item><description><para>onEcs: The instance is deployed on ECS.</para>
-        /// </description></item>
-        /// <item><description><para>onBareMetal: The instance is deployed on a bare metal resource pool.</para>
-        /// </description></item>
+        /// <item><description>onEci: Deployed on ECI.</description></item>
+        /// <item><description>onEcs: Deployed on ECS.</description></item>
+        /// <item><description>onBareMetal: Deployed on a bare metal resource pool.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,12 +25,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>Specifies the instance edition. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>trial: The entry-level edition.</para>
-        /// </description></item>
-        /// <item><description><para>official: The Standard Edition.</para>
-        /// </description></item>
+        /// <item><description>trial: Trial edition.</description></item>
+        /// <item><description>official: Standard edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,14 +39,11 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the run mode of the cluster. Valid values:</para>
+        /// <para>The running mode of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>shared_nothing: The shared-nothing mode.</para>
-        /// </description></item>
-        /// <item><description><para>shared_data: The shared-data mode.</para>
-        /// </description></item>
-        /// <item><description><para>lakehouse: The data lake analytics mode.</para>
-        /// </description></item>
+        /// <item><description>shared_nothing: Integrated storage and compute.</description></item>
+        /// <item><description>shared_data: Separated storage and compute.</description></item>
+        /// <item><description>lakehouse: Data lakehouse analysis.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

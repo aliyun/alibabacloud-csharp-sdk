@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a backup policy.</para>
+        /// <para>Creates a backup policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a backup policy.</para>
+        /// <para>Creates a backup policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a backup policy.</para>
+        /// <para>Creates a backup policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a backup policy.</para>
+        /// <para>Creates a backup policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -675,7 +675,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent compute group.</para>
+        /// <para>Creates an agent compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -749,7 +749,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent compute group.</para>
+        /// <para>Creates an agent compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -823,7 +823,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent compute group.</para>
+        /// <para>Creates an agent compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -842,7 +842,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent compute group.</para>
+        /// <para>Creates an agent compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -866,7 +866,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1224,7 +1224,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1248,7 +1248,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1267,8 +1267,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scaling rule.</para>
+        /// <para>Creates an elastic rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of compute units (CUs) in a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is standard support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScalingRuleRequest
@@ -1287,6 +1301,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
             {
                 query["NodeGroupId"] = request.NodeGroupId;
@@ -1321,8 +1339,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scaling rule.</para>
+        /// <para>Creates an elastic rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of compute units (CUs) in a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is standard support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScalingRuleRequest
@@ -1341,6 +1373,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
             {
                 query["NodeGroupId"] = request.NodeGroupId;
@@ -1375,8 +1411,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scaling rule.</para>
+        /// <para>Creates an elastic rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of compute units (CUs) in a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is standard support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScalingRuleRequest
@@ -1394,8 +1444,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scaling rule.</para>
+        /// <para>Creates an elastic rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of compute units (CUs) in a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is standard support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScalingRuleRequest
@@ -2135,8 +2199,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scaling rule.</para>
+        /// <para>Deletes an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks before you call this operation.
+        /// Note the following when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for a node group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances whose node group specification type is Standard Edition (standard) support adding disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScalingRuleRequest
@@ -2155,6 +2233,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
             {
                 query["NodeGroupId"] = request.NodeGroupId;
@@ -2189,8 +2271,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scaling rule.</para>
+        /// <para>Deletes an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks before you call this operation.
+        /// Note the following when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for a node group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances whose node group specification type is Standard Edition (standard) support adding disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScalingRuleRequest
@@ -2209,6 +2305,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
             {
                 query["NodeGroupId"] = request.NodeGroupId;
@@ -2243,8 +2343,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scaling rule.</para>
+        /// <para>Deletes an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks before you call this operation.
+        /// Note the following when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for a node group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances whose node group specification type is Standard Edition (standard) support adding disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScalingRuleRequest
@@ -2262,8 +2376,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a scaling rule.</para>
+        /// <para>Deletes an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks before you call this operation.
+        /// Note the following when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for a node group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances whose node group specification type is Standard Edition (standard) support adding disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScalingRuleRequest
@@ -2411,12 +2539,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2470,12 +2598,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2529,12 +2657,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2553,12 +2681,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of backup policies.</para>
+        /// <para>Retrieves the details of a backup policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2577,12 +2705,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain backup details</para>
+        /// <para>Retrieves the details of a backup.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous interface. Instance restarts are not immediate. After a successful call, the instance first enters the restarting state. The instance is successfully restarted when its status returns to running.</para>
+        /// <para>This API operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2656,12 +2784,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain backup details</para>
+        /// <para>Retrieves the details of a backup.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous interface. Instance restarts are not immediate. After a successful call, the instance first enters the restarting state. The instance is successfully restarted when its status returns to running.</para>
+        /// <para>This API operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2735,12 +2863,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain backup details</para>
+        /// <para>Retrieves the details of a backup.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous interface. Instance restarts are not immediate. After a successful call, the instance first enters the restarting state. The instance is successfully restarted when its status returns to running.</para>
+        /// <para>This API operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2759,12 +2887,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain backup details</para>
+        /// <para>Retrieves the details of a backup.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous interface. Instance restarts are not immediate. After a successful call, the instance first enters the restarting state. The instance is successfully restarted when its status returns to running.</para>
+        /// <para>This API operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2783,12 +2911,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying instance configuration history</para>
+        /// <para>Queries the configuration history of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous API, meaning the instance restart is not immediate. After a successful call, the instance enters the <c>restarting</c> state, and the process completes when its state changes to <c>running</c>.</para>
+        /// <para>This operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2858,12 +2986,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying instance configuration history</para>
+        /// <para>Queries the configuration history of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous API, meaning the instance restart is not immediate. After a successful call, the instance enters the <c>restarting</c> state, and the process completes when its state changes to <c>running</c>.</para>
+        /// <para>This operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2933,12 +3061,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying instance configuration history</para>
+        /// <para>Queries the configuration history of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous API, meaning the instance restart is not immediate. After a successful call, the instance enters the <c>restarting</c> state, and the process completes when its state changes to <c>running</c>.</para>
+        /// <para>This operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2957,12 +3085,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying instance configuration history</para>
+        /// <para>Queries the configuration history of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous API, meaning the instance restart is not immediate. After a successful call, the instance enters the <c>restarting</c> state, and the process completes when its state changes to <c>running</c>.</para>
+        /// <para>This operation is asynchronous. The instance restart is not completed immediately. After a successful call, the instance first enters the restarting state. When the returned state is running, the restart is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3435,7 +3563,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve instance health diagnosis results.</para>
+        /// <para>Retrieves the health diagnosis results of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3501,7 +3629,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve instance health diagnosis results.</para>
+        /// <para>Retrieves the health diagnosis results of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3567,7 +3695,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve instance health diagnosis results.</para>
+        /// <para>Retrieves the health diagnosis results of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3586,7 +3714,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve instance health diagnosis results.</para>
+        /// <para>Retrieves the health diagnosis results of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3735,8 +3863,15 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter instances by instance name, tags, and other criteria.</para>
+        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeInstancesRequest
@@ -3815,8 +3950,15 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter instances by instance name, tags, and other criteria.</para>
+        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeInstancesRequest
@@ -3895,8 +4037,15 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter instances by instance name, tags, and other criteria.</para>
+        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstancesRequest
@@ -3914,8 +4063,15 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter instances by instance name, tags, and other criteria.</para>
+        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstancesRequest
@@ -4253,7 +4409,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get resource constraint configurations.</para>
+        /// <para>Retrieves the resource constraint configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4307,7 +4463,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get resource constraint configurations.</para>
+        /// <para>Retrieves the resource constraint configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4361,7 +4517,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get resource constraint configurations.</para>
+        /// <para>Retrieves the resource constraint configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4380,7 +4536,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get resource constraint configurations.</para>
+        /// <para>Retrieves the resource constraint configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5275,12 +5431,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the feature gates for a StarRocks cluster instance.</para>
+        /// <para>Retrieves the feature switches of a StarRocks cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5326,12 +5482,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the feature gates for a StarRocks cluster instance.</para>
+        /// <para>Retrieves the feature switches of a StarRocks cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5377,12 +5533,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the feature gates for a StarRocks cluster instance.</para>
+        /// <para>Retrieves the feature switches of a StarRocks cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5401,12 +5557,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the feature gates for a StarRocks cluster instance.</para>
+        /// <para>Retrieves the feature switches of a StarRocks cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c4g.11186623.help-menu-28066.d_0_1_1.4db82b05p3Gg0G">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6009,7 +6165,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the operation history of a cluster.</para>
+        /// <para>Queries the operation history of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6083,7 +6239,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the operation history of a cluster.</para>
+        /// <para>Queries the operation history of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6157,7 +6313,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the operation history of a cluster.</para>
+        /// <para>Queries the operation history of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6176,7 +6332,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the operation history of a cluster.</para>
+        /// <para>Queries the operation history of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6571,20 +6727,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the number of CUs for nodes in a compute group of a Serverless StarRocks instance.</para>
+        /// <para>Modifies the number of compute units (CUs) for compute group nodes in a Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the number of CUs for a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of cloud disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for compute groups. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the number of CUs, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: You are charged based on the new number of CUs.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6651,20 +6807,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the number of CUs for nodes in a compute group of a Serverless StarRocks instance.</para>
+        /// <para>Modifies the number of compute units (CUs) for compute group nodes in a Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the number of CUs for a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of cloud disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for compute groups. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the number of CUs, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: You are charged based on the new number of CUs.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6731,20 +6887,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the number of CUs for nodes in a compute group of a Serverless StarRocks instance.</para>
+        /// <para>Modifies the number of compute units (CUs) for compute group nodes in a Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the number of CUs for a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of cloud disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for compute groups. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the number of CUs, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: You are charged based on the new number of CUs.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6764,20 +6920,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the number of CUs for nodes in a compute group of a Serverless StarRocks instance.</para>
+        /// <para>Modifies the number of compute units (CUs) for compute group nodes in a Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the number of CUs for a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of cloud disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs for compute groups. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the number of CUs, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: You are charged based on the new number of CUs.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6797,7 +6953,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a dry run to check whether the number of CUs can be scaled up or down for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance.</para>
+        /// <para>Checks whether the number of compute units (CUs) for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance can be scaled up or down.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6851,7 +7007,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a dry run to check whether the number of CUs can be scaled up or down for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance.</para>
+        /// <para>Checks whether the number of compute units (CUs) for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance can be scaled up or down.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6905,7 +7061,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a dry run to check whether the number of CUs can be scaled up or down for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance.</para>
+        /// <para>Checks whether the number of compute units (CUs) for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance can be scaled up or down.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6924,7 +7080,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a dry run to check whether the number of CUs can be scaled up or down for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance.</para>
+        /// <para>Checks whether the number of compute units (CUs) for nodes in the FE, BE, or CN compute group of a Serverless StarRocks instance can be scaled up or down.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7174,17 +7330,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support disk specification changes. Entry-level instances are not supported.</description></item>
+        /// <item><description>Only Standard Standard instances support disk specification changes. Starter Standard instances do not support this feature.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk specification changes.</description></item>
         /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>Downgrading the disk to PL0 is not supported.</description></item>
-        /// <item><description>Because the performance level (PL) of an ESSD is limited by its capacity, if you cannot upgrade the performance level (PL), expand the cloud disk capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
-        /// After the disk specification is changed, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: Billed based on the new disk type.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Downgrading a disk to PL0 is not supported.</description></item>
+        /// <item><description>The performance level (PL) of a standard SSD is limited by its capacity. If you cannot upgrade the performance level (PL), expand the capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>.
+        /// After the disk specification is changed, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: The disk is billed based on the new disk type.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old specifications and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7252,17 +7407,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support disk specification changes. Entry-level instances are not supported.</description></item>
+        /// <item><description>Only Standard Standard instances support disk specification changes. Starter Standard instances do not support this feature.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk specification changes.</description></item>
         /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>Downgrading the disk to PL0 is not supported.</description></item>
-        /// <item><description>Because the performance level (PL) of an ESSD is limited by its capacity, if you cannot upgrade the performance level (PL), expand the cloud disk capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
-        /// After the disk specification is changed, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: Billed based on the new disk type.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Downgrading a disk to PL0 is not supported.</description></item>
+        /// <item><description>The performance level (PL) of a standard SSD is limited by its capacity. If you cannot upgrade the performance level (PL), expand the capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>.
+        /// After the disk specification is changed, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: The disk is billed based on the new disk type.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old specifications and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7330,17 +7484,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support disk specification changes. Entry-level instances are not supported.</description></item>
+        /// <item><description>Only Standard Standard instances support disk specification changes. Starter Standard instances do not support this feature.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk specification changes.</description></item>
         /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>Downgrading the disk to PL0 is not supported.</description></item>
-        /// <item><description>Because the performance level (PL) of an ESSD is limited by its capacity, if you cannot upgrade the performance level (PL), expand the cloud disk capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
-        /// After the disk specification is changed, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: Billed based on the new disk type.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Downgrading a disk to PL0 is not supported.</description></item>
+        /// <item><description>The performance level (PL) of a standard SSD is limited by its capacity. If you cannot upgrade the performance level (PL), expand the capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>.
+        /// After the disk specification is changed, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: The disk is billed based on the new disk type.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old specifications and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7365,17 +7518,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.1837281f3hbi2d#/ecs/detail/vm">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/ecs?_p_lc=1#pricing">pricing</a> of Serverless StarRocks. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support disk specification changes. Entry-level instances are not supported.</description></item>
+        /// <item><description>Only Standard Standard instances support disk specification changes. Starter Standard instances do not support this feature.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk specification changes.</description></item>
         /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>Downgrading the disk to PL0 is not supported.</description></item>
-        /// <item><description>Because the performance level (PL) of an ESSD is limited by its capacity, if you cannot upgrade the performance level (PL), expand the cloud disk capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSDs</a>.
-        /// After the disk specification is changed, billing changes are as follows:</description></item>
-        /// <item><description>Pay-as-you-go: Billed based on the new disk type.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the additional fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Downgrading a disk to PL0 is not supported.</description></item>
+        /// <item><description>The performance level (PL) of a standard SSD is limited by its capacity. If you cannot upgrade the performance level (PL), expand the capacity and try again. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essds">ESSD cloud disks</a>.
+        /// After the disk specification is changed, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: The disk is billed based on the new disk type.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old specifications and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7621,20 +7773,19 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk type of nodes in a compute group.</para>
+        /// <para>Modifies the node disk type of a compute group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks before you call this operation. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>Only Standard Standard instances support disk expansion. Starter Standard instances do not support disk expansion.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk expansion.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After disk expansion, billing changes are as follows:</description></item>
+        /// After the disk is expanded, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new disk size.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7701,20 +7852,19 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk type of nodes in a compute group.</para>
+        /// <para>Modifies the node disk type of a compute group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks before you call this operation. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>Only Standard Standard instances support disk expansion. Starter Standard instances do not support disk expansion.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk expansion.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After disk expansion, billing changes are as follows:</description></item>
+        /// After the disk is expanded, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new disk size.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7781,20 +7931,19 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk type of nodes in a compute group.</para>
+        /// <para>Modifies the node disk type of a compute group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks before you call this operation. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>Only Standard Standard instances support disk expansion. Starter Standard instances do not support disk expansion.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk expansion.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After disk expansion, billing changes are as follows:</description></item>
+        /// After the disk is expanded, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new disk size.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7814,20 +7963,19 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the disk type of nodes in a compute group.</para>
+        /// <para>Modifies the node disk type of a compute group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks before you call this operation. Take note of the following items when you call this operation:</para>
         /// <list type="bullet">
         /// <item><description>Only Standard Standard instances support disk expansion. Starter Standard instances do not support disk expansion.</description></item>
         /// <item><description>Only instances whose compute group specification type is Standard (standard) support disk expansion.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After disk expansion, billing changes are as follows:</description></item>
+        /// After the disk is expanded, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new disk size.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8871,8 +9019,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an Auto Scaling rule.</para>
+        /// <para>Modifies an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs in a compute group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances with a compute group specification type of Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyScalingRuleRequest
@@ -8891,6 +9053,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewTriggerType))
             {
                 query["NewTriggerType"] = request.NewTriggerType;
@@ -8933,8 +9099,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an Auto Scaling rule.</para>
+        /// <para>Modifies an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs in a compute group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances with a compute group specification type of Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyScalingRuleRequest
@@ -8953,6 +9133,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewTriggerType))
             {
                 query["NewTriggerType"] = request.NewTriggerType;
@@ -8995,8 +9179,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an Auto Scaling rule.</para>
+        /// <para>Modifies an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs in a compute group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances with a compute group specification type of Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyScalingRuleRequest
@@ -9014,8 +9212,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an Auto Scaling rule.</para>
+        /// <para>Modifies an elastic scaling rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
+        /// When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Only Standard Standard instances support modifying the number of CUs in a compute group. Starter Standard instances do not support this feature.</description></item>
+        /// <item><description>Only instances with a compute group specification type of Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>The instance must be in the Running state.
+        /// After you modify the number of CUs, the billing changes are as follows:</description></item>
+        /// <item><description>Pay-as-you-go: You are billed based on the new number of CUs.</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyScalingRuleRequest
@@ -9033,7 +9245,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications type of a compute group.</para>
+        /// <para>Modifies the node specification type of a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9099,7 +9311,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications type of a compute group.</para>
+        /// <para>Modifies the node specification type of a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9165,7 +9377,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications type of a compute group.</para>
+        /// <para>Modifies the node specification type of a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9184,7 +9396,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node specifications type of a compute group.</para>
+        /// <para>Modifies the node specification type of a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9203,7 +9415,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck to modify the node specification type for a compute group.</para>
+        /// <para>Performs a dry run for modifying the node specifications type in a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9257,7 +9469,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck to modify the node specification type for a compute group.</para>
+        /// <para>Performs a dry run for modifying the node specifications type in a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9311,7 +9523,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck to modify the node specification type for a compute group.</para>
+        /// <para>Performs a dry run for modifying the node specifications type in a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9330,7 +9542,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck to modify the node specification type for a compute group.</para>
+        /// <para>Performs a dry run for modifying the node specifications type in a compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9997,20 +10209,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for modifying the CU count of a compute group node.</para>
+        /// <para>Queries the price for modifying the compute units (CUs) of a compute group node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the CU count of a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the CU count of a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances with the standard compute group specification type support adding disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the CU count, billing changes are as follows:</description></item>
+        /// After you modify the CU count, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new CU count.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10069,20 +10281,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for modifying the CU count of a compute group node.</para>
+        /// <para>Queries the price for modifying the compute units (CUs) of a compute group node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the CU count of a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the CU count of a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances with the standard compute group specification type support adding disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the CU count, billing changes are as follows:</description></item>
+        /// After you modify the CU count, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new CU count.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10141,20 +10353,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for modifying the CU count of a compute group node.</para>
+        /// <para>Queries the price for modifying the compute units (CUs) of a compute group node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the CU count of a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the CU count of a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances with the standard compute group specification type support adding disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the CU count, billing changes are as follows:</description></item>
+        /// After you modify the CU count, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new CU count.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10174,20 +10386,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for modifying the CU count of a compute group node.</para>
+        /// <para>Queries the price for modifying the compute units (CUs) of a compute group node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of Serverless StarRocks.
-        /// When you call this operation, take note of the following items:</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items">billable items</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>Only standard instances support modifying the CU count of a compute group. Starter instances do not support this operation.</description></item>
-        /// <item><description>Only instances whose compute group specification type is Standard (standard) support increasing the number of disks.</description></item>
+        /// <item><description>Only Standard Standard instances support modifying the CU count of a compute group. Starter Standard instances do not support this operation.</description></item>
+        /// <item><description>Only instances with the standard compute group specification type support adding disks.</description></item>
         /// <item><description>The instance must be in the Running state.
-        /// After you modify the CU count, billing changes are as follows:</description></item>
+        /// After you modify the CU count, the billing changes are as follows:</description></item>
         /// <item><description>Pay-as-you-go: You are billed based on the new CU count.</description></item>
-        /// <item><description>Subscription: Within the billing cycle, the supplemental fee is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).</description></item>
+        /// <item><description>Subscription: Within the billing cycle, the supplementary fee is calculated based on the price difference between the new and old configurations and the remaining days (from 00:00 the next day to the end of the validity period).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15617,7 +15829,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable the Internet-facing SLB for the FE or BE component.</para>
+        /// <para>Enables or performs shutdown of the Internet-facing SLB for FE and BE nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15675,7 +15887,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable the Internet-facing SLB for the FE or BE component.</para>
+        /// <para>Enables or performs shutdown of the Internet-facing SLB for FE and BE nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15733,7 +15945,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable the Internet-facing SLB for the FE or BE component.</para>
+        /// <para>Enables or performs shutdown of the Internet-facing SLB for FE and BE nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15752,7 +15964,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable the Internet-facing SLB for the FE or BE component.</para>
+        /// <para>Enables or performs shutdown of the Internet-facing SLB for FE and BE nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">

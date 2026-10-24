@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <para>The gateway name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Gateway 1</para>
+            /// <para>网关1</para>
             /// </summary>
             [NameInMap("GatewayName")]
             [Validation(Required=false)]

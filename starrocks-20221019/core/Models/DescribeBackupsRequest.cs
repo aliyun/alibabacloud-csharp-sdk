@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The query page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paged query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Statuses { get; set; }
 
         /// <summary>
-        /// <para>The end time for querying backup jobs.</para>
+        /// <para>The end time of the backup task query. The time is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1747728000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public long? TimePeriodEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying backup jobs.</para>
+        /// <para>The start time of the backup task query. The time is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1747708000</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class CreateAgentResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAgentResourceResponseBodyData Data { get; set; }
         public class CreateAgentResourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Compute group ID.</para>
+            /// <para>The compute group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ng-5e2ba600fee3****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string NodeGroupId { get; set; }
 
             /// <summary>
-            /// <para>Order ID.</para>
+            /// <para>The order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>241526000650XXX</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [instance not exists].</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP request status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B67D142D-D54E-184F-A306-22BDC01B2XXX</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

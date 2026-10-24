@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         /// <para>The RAM authorization information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Optional</para>
+        /// <para>可以不填</para>
         /// </summary>
         [NameInMap("X-Acs-Ram-Auth-Context")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public List<DescribeBackupsResponseBodyData> Data { get; set; }
         public class DescribeBackupsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The end time of this backup.</para>
+            /// <para>The end time of the current backup. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742179028000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public long? BackupFinishedTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of this backup.</para>
+            /// <para>The start time of the current backup. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742179018000</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string BackupTaskId { get; set; }
 
             /// <summary>
-            /// <para>The backup type:</para>
+            /// <para>The backup type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Fast backup.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Consistent backup.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: quick backup</description></item>
+            /// <item><description><b>1</b>: consistent backup</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,14 +64,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <para>The task description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>任务描述</para>
+            /// <para>Task description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the backup data.</para>
+            /// <para>The expiration time of the backup data. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742189008000</para>
@@ -127,18 +125,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public List<DescribeBackupsResponseBodyDataInstanceSnapshotNodeGroups> NodeGroups { get; set; }
                 public class DescribeBackupsResponseBodyDataInstanceSnapshotNodeGroups : TeaModel {
                     /// <summary>
-                    /// <para>The compute group type. Includes the following values:</para>
+                    /// <para>The compute group type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>FE</para>
-                    /// </description></item>
-                    /// <item><description><para>BE</para>
-                    /// </description></item>
-                    /// <item><description><para>CN</para>
-                    /// </description></item>
-                    /// <item><description><para>OBSERVER</para>
-                    /// </description></item>
-                    /// <item><description><para>AGENT</para>
-                    /// </description></item>
+                    /// <item><description>FE</description></item>
+                    /// <item><description>BE</description></item>
+                    /// <item><description>CN</description></item>
+                    /// <item><description>OBSERVER</description></item>
+                    /// <item><description>AGENT</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -149,7 +142,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public string ComponentType { get; set; }
 
                     /// <summary>
-                    /// <para>The number of CUs. A CU (Compute Unit) is the basic unit of measurement for the service. 1 CU equals 1 CPU core + 4 GiB memory. If SpecType is memory-enhanced instance family, 1 CU equals 1 CPU core + 8 GiB memory.</para>
+                    /// <para>The number of CUs. A CU (compute unit) is the basic billing unit of the service. 1 CU = 1 vCPU + 4 GiB of memory. Only when SpecType is set to the memory-enhanced instance family, 1 CU = 1 vCPU + 8 GiB of memory.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4</para>
@@ -169,7 +162,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public string DiskNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The node group\&quot;s local SSD instance type. This value is only meaningful for ECS instances where SpecType is local SSD or large-capacity storage.</para>
+                    /// <para>The local SSD instance specification of the node group. This value is valid only when the instance is based on ECS and SpecType is set to local SSD or large-capacity storage.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -189,18 +182,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public string ResidentNodeNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The compute group specification type. Includes the following types:</para>
+                    /// <para>The specification type of the compute group. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>standard: Standard Edition.</para>
-                    /// </description></item>
-                    /// <item><description><para>localSSD: Local SSD.</para>
-                    /// </description></item>
-                    /// <item><description><para>bigData: Large-capacity storage.</para>
-                    /// </description></item>
-                    /// <item><description><para>ramEnhanced: Memory-enhanced instance family.</para>
-                    /// </description></item>
-                    /// <item><description><para>networkEnhanced: Network-enhanced.</para>
-                    /// </description></item>
+                    /// <item><description>standard: standard edition</description></item>
+                    /// <item><description>localSSD: local SSD</description></item>
+                    /// <item><description>bigData: large-capacity storage</description></item>
+                    /// <item><description>ramEnhanced: memory-enhanced instance family</description></item>
+                    /// <item><description>networkEnhanced: network-enhanced</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -211,16 +199,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public string SpecType { get; set; }
 
                     /// <summary>
-                    /// <para>The performance level (PL) of the cloud disk. Includes the following values:</para>
+                    /// <para>The performance level (PL) of the cloud disk. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>pl0: Maximum random read/write IOPS of 10,000 per disk.</para>
-                    /// </description></item>
-                    /// <item><description><para>pl1: Maximum random read/write IOPS of 50,000 per disk.</para>
-                    /// </description></item>
-                    /// <item><description><para>pl2: Maximum random read/write IOPS of 100,000 per disk.</para>
-                    /// </description></item>
-                    /// <item><description><para>pl3: Maximum random read/write IOPS of 1,000,000 per disk.</para>
-                    /// </description></item>
+                    /// <item><description>pl0: A single disk delivers up to 10,000 random read/write IOPS.</description></item>
+                    /// <item><description>pl1: A single disk delivers up to 50,000 random read/write IOPS.</description></item>
+                    /// <item><description>pl2: A single disk delivers up to 100,000 random read/write IOPS.</description></item>
+                    /// <item><description>pl3: A single disk delivers up to 1,000,000 random read/write IOPS.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -231,7 +215,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                     public string StoragePerformanceLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The storage size in GiB.</para>
+                    /// <para>The storage size. Unit: GiB.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -263,12 +247,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The cluster\&quot;s running mode:</para>
+                /// <para>The running mode of the cluster. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Shared-nothing.</para>
-                /// </description></item>
-                /// <item><description><para>Shared-data.</para>
-                /// </description></item>
+                /// <item><description>shared_nothing: integrated storage and computing</description></item>
+                /// <item><description>shared_data: disaggregated storage and computing</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -279,18 +261,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string RunMode { get; set; }
 
                 /// <summary>
-                /// <para>The compute group specification type. Includes the following types:</para>
+                /// <para>The specification type of the compute group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>standard: Standard Edition.</para>
-                /// </description></item>
-                /// <item><description><para>localSSD: Local SSD.</para>
-                /// </description></item>
-                /// <item><description><para>bigData: Large-capacity storage.</para>
-                /// </description></item>
-                /// <item><description><para>ramEnhanced: Memory-enhanced instance family.</para>
-                /// </description></item>
-                /// <item><description><para>networkEnhanced: Network-enhanced.</para>
-                /// </description></item>
+                /// <item><description>standard: standard edition</description></item>
+                /// <item><description>localSSD: local SSD</description></item>
+                /// <item><description>bigData: large-capacity storage</description></item>
+                /// <item><description>ramEnhanced: memory-enhanced instance family</description></item>
+                /// <item><description>networkEnhanced: network-enhanced</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -362,7 +339,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The cloud disk size in GiB.</para>
+            /// <para>The cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -372,7 +349,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The backup job status.</para>
+            /// <para>The backup task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -409,7 +386,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string Detail { get; set; }
 
                 /// <summary>
-                /// <para>The task end time.</para>
+                /// <para>The task end time. The time is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1747718190</para>
@@ -419,7 +396,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public long? FinishedTime { get; set; }
 
                 /// <summary>
-                /// <para>The data size in GiB.</para>
+                /// <para>The data size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -439,7 +416,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string SnapshotName { get; set; }
 
                 /// <summary>
-                /// <para>The task start date.</para>
+                /// <para>The task start time. The time is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1747708190</para>
@@ -449,7 +426,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The backup job status.</para>
+                /// <para>The backup task status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
@@ -459,7 +436,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The data table name.</para>
+                /// <para>The table name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cdc_ods_t2030_lcpf_api_topic_msg</para>
@@ -493,7 +470,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP request status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -513,7 +490,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

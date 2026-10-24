@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeInstanceDiagnosisResultRequest : TeaModel {
         /// <summary>
-        /// <para>Evaluation dimension.</para>
+        /// <para>The evaluation dimension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table_analysis</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Dimension { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-b25e21e24388****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number for paged queries. The default value is 1.</para>
+        /// <para>The page number for paging. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of authorized entries displayed per page for paged queries. The default value is 10, and the maximum value is 50.</para>
+        /// <para>The number of authorization entries returned per page when paging. Default value: 10. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Report time.</para>
+        /// <para>The report date in the YYYY-MM-DD format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-03-08</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ReportDate { get; set; }
 
         /// <summary>
-        /// <para>Status collection.</para>
+        /// <para>The status collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>healthy</para>

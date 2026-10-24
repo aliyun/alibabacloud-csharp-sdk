@@ -30,30 +30,30 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Retrieves instances by instance status. Separate multiple instance statuses with commas. Valid values:</para>
+        /// <para>The instance status. You can specify multiple statuses separated by commas. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>unpaid: Pending payment.</description></item>
         /// <item><description>paid: Paid.</description></item>
-        /// <item><description>creating: Being created.</description></item>
+        /// <item><description>creating: Starting.</description></item>
         /// <item><description>running: Running.</description></item>
-        /// <item><description>updating: Being upgraded.</description></item>
+        /// <item><description>updating: Updating.</description></item>
         /// <item><description>disable: Unavailable.</description></item>
-        /// <item><description>deleting: Being deleted.</description></item>
+        /// <item><description>deleting: Releasing.</description></item>
         /// <item><description>scaling_out: Scaling out.</description></item>
         /// <item><description>scaling_in: Scaling in.</description></item>
-        /// <item><description>scaling_up: Specifications are being upgraded.</description></item>
-        /// <item><description>scaling_down: Specifications are being used to decrease the quota.</description></item>
-        /// <item><description>upgrading: Version is being upgraded.</description></item>
-        /// <item><description>modifying_config: Configuration is being updated.</description></item>
-        /// <item><description>enable_public_network: Public network access is being enabled.</description></item>
-        /// <item><description>disable_public_network: Public network access is being shutdown.</description></item>
-        /// <item><description>convert_from_trial_to_official: The instance edition is being upgraded.</description></item>
-        /// <item><description>restarting: The cluster is restarting.</description></item>
-        /// <item><description>migration_cluster_to_serverless: The cluster is being migrated.</description></item>
-        /// <item><description>actively_disabled: The instance is stopped.</description></item>
-        /// <item><description>enabling: The instance is being recovered.</description></item>
-        /// <item><description>agent_creating: The agent is being created.</description></item>
-        /// <item><description>agent_scaling_up: The agent specifications are being upgraded.</description></item>
+        /// <item><description>scaling_up: Scaling up.</description></item>
+        /// <item><description>scaling_down: Scaling down.</description></item>
+        /// <item><description>upgrading: Upgrading.</description></item>
+        /// <item><description>modifying_config: Updating configurations.</description></item>
+        /// <item><description>enable_public_network: Enabling public network access.</description></item>
+        /// <item><description>disable_public_network: Disabling public network access.</description></item>
+        /// <item><description>convert_from_trial_to_official: Upgrading the instance edition.</description></item>
+        /// <item><description>restarting: Restarting the cluster.</description></item>
+        /// <item><description>migration_cluster_to_serverless: Migrating the cluster.</description></item>
+        /// <item><description>actively_disabled: Stopped.</description></item>
+        /// <item><description>enabling: Resuming.</description></item>
+        /// <item><description>agent_creating: Creating the agent.</description></item>
+        /// <item><description>agent_scaling_up: Scaling up the agent.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

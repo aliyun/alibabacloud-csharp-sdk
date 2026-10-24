@@ -20,34 +20,34 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeInstanceDiagnosisResultResponseBodyData> Data { get; set; }
         public class DescribeInstanceDiagnosisResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Best Practices.</para>
+            /// <para>The best practices.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("BestPractice")]
             [Validation(Required=false)]
             public string BestPractice { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis item description.</para>
+            /// <para>The diagnosis item description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Evaluate unreasonable partition and bucket configuration</para>
+            /// <para>Unreasonable partitioning and bucketing</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Evaluation dimension.</para>
+            /// <para>The evaluation dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>table_analysis</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Dimension { get; set; }
 
             /// <summary>
-            /// <para>Evaluation time.</para>
+            /// <para>The evaluation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-08T02:12:32Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public long? EvaluationTime { get; set; }
 
             /// <summary>
-            /// <para>Full score for the evaluation item.</para>
+            /// <para>The full score of the evaluation item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public double? FullScore { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-b25e21e243889XXX</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Evaluation item introduction.</para>
+            /// <para>The evaluation item introduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>for autotest</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Introduction { get; set; }
 
             /// <summary>
-            /// <para>Evaluation item ID.</para>
+            /// <para>The evaluation item ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>02cf887a</para>
@@ -107,17 +107,17 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>Evaluation item name.</para>
+            /// <para>The evaluation item name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Evaluate unreasonable partition and bucket configuration</para>
+            /// <para>Unreasonable partitioning and bucketing</para>
             /// </summary>
             [NameInMap("ItemName")]
             [Validation(Required=false)]
             public string ItemName { get; set; }
 
             /// <summary>
-            /// <para>Report date.</para>
+            /// <para>The report date in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-08</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ReportDate { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis score.</para>
+            /// <para>The diagnosis score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public double? Score { get; set; }
 
             /// <summary>
-            /// <para>Status list.</para>
+            /// <para>The status list. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>healthy</para>
             /// </description></item>
@@ -157,10 +157,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Diagnosis suggestion.</para>
+            /// <para>The diagnosis suggestion.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>未出现分桶大小超过5GB的情况，评估结果为健康。</para>
+            /// <para>No bucket exceeds 5 GB in size. The evaluation result is healthy</para>
             /// </summary>
             [NameInMap("Suggestion")]
             [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [instance not exists].</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP request status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE74XXX</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of query results.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

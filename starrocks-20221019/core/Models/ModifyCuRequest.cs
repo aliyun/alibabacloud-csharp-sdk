@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyCuRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</para>
+        /// <para>Specifies whether to automatically pay for all products specified in the Products parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatic payment.</description></item>
-        /// <item><description>false: No automatic payment.</description></item>
+        /// <item><description>true: Enables automatic payment.</description></item>
+        /// <item><description>false: Disables automatic payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,10 +27,11 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the fast restart mode. Default value: false.</para>
+        /// <para>Specifies whether to restart in fast restart mode. Default value: false.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Restarts compute nodes in the fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</description></item>
-        /// <item><description>false: Restarts compute nodes in the rolling restart mode.</description></item>
+        /// <item><description>true: Restarts the compute nodes in fast restart mode. The compute nodes are restarted in multiple batches. Nodes within the same batch are restarted in parallel, and batches execute sequentially.</description></item>
+        /// <item><description>false: Restarts the compute nodes in rolling restart mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

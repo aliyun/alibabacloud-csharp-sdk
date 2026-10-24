@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeBackupPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>AccessDeniedDetail</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Information about the instance.</para>
+        /// <para>The instance information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Minute { get; set; }
 
             /// <summary>
-            /// <para>The backup policy ID.</para>
+            /// <para>The tag policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The numeric values for the policy execution cycle.</para>
+            /// <para>The values for the policy execution cycle.</para>
             /// </summary>
             [NameInMap("RecurrenceValues")]
             [Validation(Required=false)]
             public List<int?> RecurrenceValues { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for the backup job.</para>
+            /// <para>The timeout period of the backup task, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

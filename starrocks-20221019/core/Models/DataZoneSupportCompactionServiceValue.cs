@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DataZoneSupportCompactionServiceValue : TeaModel {
         /// <summary>
-        /// <para>The availability zone ID.</para>
+        /// <para>The zone ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-*******n-f</para>
         /// </summary>
         [NameInMap("zoneId")]
         [Validation(Required=false)]
@@ -18,13 +21,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
         /// <summary>
         /// <para>The resource level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MEDIUM</para>
         /// </summary>
         [NameInMap("resourceLevel")]
         [Validation(Required=false)]
         public string ResourceLevel { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether this is the recommended option.</para>
+        /// <para>Indicates whether the configuration is recommended.</para>
         /// </summary>
         [NameInMap("recommended")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class AddBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days to retain the backup data.</para>
+        /// <para>The number of days that the backup data remains valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -50,14 +50,11 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Minute { get; set; }
 
         /// <summary>
-        /// <para>The recurrence type for the policy. Valid values:</para>
+        /// <para>Specifies the execution type of the time rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DAILY: Daily.</para>
-        /// </description></item>
-        /// <item><description><para>WEEKLY: Weekly.</para>
-        /// </description></item>
-        /// <item><description><para>MONTHLY: Monthly.</para>
-        /// </description></item>
+        /// <item><description>DAILY: Repeats daily.</description></item>
+        /// <item><description>WEEKLY: Repeats weekly.</description></item>
+        /// <item><description>MONTHLY: Repeats monthly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,14 +65,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RecurrenceType { get; set; }
 
         /// <summary>
-        /// <para>The values for the recurrence.</para>
+        /// <para>The values for the policy execution cycle.</para>
         /// </summary>
         [NameInMap("RecurrenceValues")]
         [Validation(Required=false)]
         public List<int?> RecurrenceValues { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the backup job in seconds.</para>
+        /// <para>The timeout period for the backup task, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>

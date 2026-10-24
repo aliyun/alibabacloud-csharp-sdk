@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number for paging. Default value: 1.</para>
+        /// <para>The page number for a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> The instance ID. This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -89,23 +89,23 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         /// <item><description>UNPAID: Unpaid.</description></item>
         /// <item><description>PAID: Paid.</description></item>
         /// <item><description>CREATING_FAILED: Creation failed.</description></item>
-        /// <item><description>CREATING: Being created.</description></item>
+        /// <item><description>CREATING: Creating.</description></item>
         /// <item><description>RUNNING: Running.</description></item>
-        /// <item><description>MODIFYING_CONFIG: Configuration being modified.</description></item>
-        /// <item><description>MODIFYING_TIMEZONE: Time zone being modified.</description></item>
-        /// <item><description>ELASTIC_SCALING_OUT: Elastic scale-out in progress.</description></item>
-        /// <item><description>ELASTIC_SCALING_IN: Elastic scale-in in progress.</description></item>
-        /// <item><description>SCALING_OUT: Scale-out in progress.</description></item>
+        /// <item><description>MODIFYING_CONFIG: Modifying configurations.</description></item>
+        /// <item><description>MODIFYING_TIMEZONE: Modifying the time zone.</description></item>
+        /// <item><description>ELASTIC_SCALING_OUT: Elastically scaling out.</description></item>
+        /// <item><description>ELASTIC_SCALING_IN: Elastically scaling in.</description></item>
+        /// <item><description>SCALING_OUT: Scaling out.</description></item>
         /// <item><description>RESTARTING: Restarting.</description></item>
-        /// <item><description>SCALING_IN: Scale-in in progress.</description></item>
+        /// <item><description>SCALING_IN: Scaling in.</description></item>
         /// <item><description>SCALING_UP: Scaling up.</description></item>
         /// <item><description>SCALING_DOWN: Scaling down.</description></item>
         /// <item><description>UPGRADING: Upgrading.</description></item>
         /// <item><description>ENABLE_PUBLIC_NETWORK: Enabling public network access.</description></item>
         /// <item><description>DISABLE_PUBLIC_NETWORK: Disabling public network access.</description></item>
-        /// <item><description>SWITCH_AZ: Switching zone.</description></item>
+        /// <item><description>SWITCH_AZ: Switching the zone.</description></item>
         /// <item><description>DISABLE: Disabled.</description></item>
-        /// <item><description>DELETING: Being deleted.</description></item>
+        /// <item><description>DELETING: Deleting.</description></item>
         /// <item><description>DELETED: Deleted.</description></item>
         /// </list>
         /// 

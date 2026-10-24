@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>New trigger type.</para>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-b25e21e24388****</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The new trigger type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NewTriggerType { get; set; }
 
         /// <summary>
-        /// <para>Compute group ID.</para>
+        /// <para>The ID of the compute group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +42,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>Old trigger type.</para>
+        /// <para>The original trigger type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +53,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string OldTriggerType { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>The content of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +89,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>ID of the scaling rule to modify.</para>
+        /// <para>The ID of the scaling rule to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class CreateAgentResourceRequest : TeaModel {
         /// <summary>
-        /// <para>Enable auto-renewal. This parameter is valid only when payType is set to PrePaid. Auto-renewal is disabled by default.</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter is valid only when PayType is set to prePaid. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Number of CUs. A CU (Compute Unit) is the basic unit of service measurement. 1 CU = 1 CPU core + 4 GiB memory. For memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</para>
+        /// <para>The number of compute units (CUs). A CU is the basic metering unit of the service. One CU equals one vCPU and 4 GiB of memory. If SpecType is set to the memory-enhanced instance family, one CU equals one vCPU and 8 GiB of memory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Cu { get; set; }
 
         /// <summary>
-        /// <para>Duration. This parameter is valid only when payType is set to PrePaid.</para>
+        /// <para>The subscription duration. This parameter is valid only when PayType is set to prePaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,13 +52,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Payment type:</para>
-        /// <ol>
-        /// <item><description><para>Subscription (prePaid).</para>
-        /// </description></item>
-        /// <item><description><para>Pay-as-you-go (postPaid).</para>
-        /// </description></item>
-        /// </ol>
+        /// <para>The billing method. Valid values:<ol><item><description>prePaid: subscription.</description></item><item><description>postPaid: pay-as-you-go.</description></item></ol></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,14 +63,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Unit of subscription duration:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Month</para>
-        /// </description></item>
-        /// <item><description><para>Year</para>
-        /// </description></item>
-        /// </list>
-        /// <para>This parameter is valid only when payType is set to PrePaid.</para>
+        /// <para>The unit of the subscription duration. Valid values:<list type="bullet"><item><description>Month</description></item><item><description>Year</description></item></list>This parameter is valid only when PayType is set to prePaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -86,7 +73,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>Coupon ID.</para>
+        /// <para>The coupon ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2345</para>
@@ -96,7 +83,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>Compute group specification type.</para>
+        /// <para>The specification type of the compute group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeConfigHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The details of the permission check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public List<DescribeConfigHistoryResponseBodyData> Data { get; set; }
         public class DescribeConfigHistoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Details about the effect of the configuration change.</para>
+            /// <para>The details of the configuration history.</para>
             /// </summary>
             [NameInMap("ConfigHistoryEffectDetails")]
             [Validation(Required=false)]
             public List<DescribeConfigHistoryResponseBodyDataConfigHistoryEffectDetails> ConfigHistoryEffectDetails { get; set; }
             public class DescribeConfigHistoryResponseBodyDataConfigHistoryEffectDetails : TeaModel {
                 /// <summary>
-                /// <para>The effective status on the node.</para>
+                /// <para>The effective status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>effective</para>
@@ -76,20 +76,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ConfigHistoryId { get; set; }
 
             /// <summary>
-            /// <para>A list of configuration mementos.</para>
+            /// <para>The records of configuration values before and after the modification.</para>
             /// </summary>
             [NameInMap("ConfigMementos")]
             [Validation(Required=false)]
             public List<DescribeConfigHistoryResponseBodyDataConfigMementos> ConfigMementos { get; set; }
             public class DescribeConfigHistoryResponseBodyDataConfigMementos : TeaModel {
                 /// <summary>
-                /// <para>The action performed. Valid values:</para>
+                /// <para>The modification type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>MODIFY</c></para>
+                /// <item><description><para>MODIFY</para>
                 /// </description></item>
-                /// <item><description><para><c>ADD</c></para>
+                /// <item><description><para>ADD</para>
                 /// </description></item>
-                /// <item><description><para><c>DELETE</c></para>
+                /// <item><description><para>DELETE</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The new value.</para>
+                /// <para>The value after the modification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string After { get; set; }
 
                 /// <summary>
-                /// <para>The previous value.</para>
+                /// <para>The value before the modification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -133,23 +133,23 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 /// <summary>
                 /// <para>The configuration type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>FE</c></para>
+                /// <item><description><para>FE</para>
                 /// </description></item>
-                /// <item><description><para><c>BE</c></para>
+                /// <item><description><para>BE</para>
                 /// </description></item>
-                /// <item><description><para><c>core-site.xml</c></para>
+                /// <item><description><para>core-site.xml</para>
                 /// </description></item>
-                /// <item><description><para><c>hdfs-site.xml</c></para>
+                /// <item><description><para>hdfs-site.xml</para>
                 /// </description></item>
-                /// <item><description><para><c>kerberos.keytab</c></para>
+                /// <item><description><para>kerberos.keytab</para>
                 /// </description></item>
-                /// <item><description><para><c>krb5.conf</c></para>
+                /// <item><description><para>krb5.conf</para>
                 /// </description></item>
-                /// <item><description><para><c>jindosdk.cfg</c></para>
+                /// <item><description><para>jindosdk.cfg</para>
                 /// </description></item>
-                /// <item><description><para><c>hadoop-env.sh</c></para>
+                /// <item><description><para>hadoop-env.sh</para>
                 /// </description></item>
-                /// <item><description><para><c>hive-site.xml</c></para>
+                /// <item><description><para>hive-site.xml</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? Effected { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The time when the configuration was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742178604000</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string OperatorId { get; set; }
 
             /// <summary>
-            /// <para>The reason for the configuration modification.</para>
+            /// <para>The reason for modifying the configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test.</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the change was a rollback.</para>
+            /// <para>Indicates whether the operation is a configuration rollback.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

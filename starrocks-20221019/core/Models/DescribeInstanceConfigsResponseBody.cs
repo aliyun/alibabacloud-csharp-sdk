@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <para>The description of the configuration item\&quot;s feature.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Whether to enable UDF.</para>
+            /// <para>是否开启 UDF。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

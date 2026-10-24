@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeNodeGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The details of the permission check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Architecture { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the compute group.</para>
+            /// <para>The creation time of the compute group. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742179008000</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The instance ID associated with the bill. For default compute groups (FE compute group and the default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</para>
+            /// <para>The instance ID corresponding to the bill. For the default compute groups (the FE compute group and the default BE compute group), the value of this field is the instance ID. Otherwise, the value is the compute group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-96f3bc7f04b2****</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ComponentType { get; set; }
 
             /// <summary>
-            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory. When SpecType is memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</para>
+            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory. If SpecType is set to the memory-enhanced instance family, 1 CU equals 1 vCPU and 8 GiB of memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? Cu { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default compute group.</para>
+            /// <para>Indicates whether the compute group is the default compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the compute group.</para>
+            /// <para>The expiration time of the compute group. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742179008000</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The local SSD instance type of the node group. This value is meaningful only when the deployment is based on ECS instances and SpecType is local SSD or large-scale storage.</para>
+            /// <para>The local SSD instance specification of the node group. This value is valid only when the instance is based on ECS and SpecType is localSSD or bigData.</para>
             /// 
             /// <b>Example:</b>
             /// <para>local_ssd_4_4xlarge</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string LocalStorageInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The ratio of memory size to the number of CUs. The value is 8 when SpecType is memory-enhanced instance family, and 4 for other specification types.</para>
+            /// <para>The ratio of memory size to the number of CUs. The value is 8 when SpecType is the memory-enhanced instance family, and 4 for other specification types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string NodeGroupName { get; set; }
 
             /// <summary>
-            /// <para>The information about nodes in the compute group.</para>
+            /// <para>The information about the nodes contained in the compute group.</para>
             /// </summary>
             [NameInMap("NodeInfo")]
             [Validation(Required=false)]
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The billing type:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <ol>
             /// <item><description>Subscription (prePaid).</description></item>
             /// <item><description>Pay-as-you-go (postPaid).</description></item>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The public network address. This field has a value only when EnablePublicNetwork is set to true.</para>
+            /// <para>The public IP address. This parameter has a value only when EnablePublicNetwork is set to true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fe-c-79b0bb9f58ef****.starrocks.aliyuncs.com</para>
@@ -318,9 +318,9 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The compute group specification type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>standard: Standard.</description></item>
+            /// <item><description>standard: Standard Edition.</description></item>
             /// <item><description>localSSD: Local SSD.</description></item>
-            /// <item><description>bigData: Large-scale storage.</description></item>
+            /// <item><description>bigData: Large-capacity storage.</description></item>
             /// <item><description>ramEnhanced: Memory-enhanced instance family.</description></item>
             /// <item><description>networkEnhanced: Network-enhanced.</description></item>
             /// </list>
@@ -338,23 +338,23 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <item><description>UNPAID: Unpaid.</description></item>
             /// <item><description>PAID: Paid.</description></item>
             /// <item><description>CREATING_FAILED: Creation failed.</description></item>
-            /// <item><description>CREATING: Being created.</description></item>
+            /// <item><description>CREATING: Creating.</description></item>
             /// <item><description>RUNNING: Running.</description></item>
-            /// <item><description>MODIFYING_CONFIG: Configuration being modified.</description></item>
-            /// <item><description>MODIFYING_TIMEZONE: Time zone being modified.</description></item>
-            /// <item><description>ELASTIC_SCALING_OUT: Elastic scale-out in progress.</description></item>
-            /// <item><description>ELASTIC_SCALING_IN: Elastic scale-in in progress.</description></item>
-            /// <item><description>SCALING_OUT: Scale-out in progress.</description></item>
+            /// <item><description>MODIFYING_CONFIG: Modifying configurations.</description></item>
+            /// <item><description>MODIFYING_TIMEZONE: Modifying the time zone.</description></item>
+            /// <item><description>ELASTIC_SCALING_OUT: Elastically scaling out.</description></item>
+            /// <item><description>ELASTIC_SCALING_IN: Elastically scaling in.</description></item>
+            /// <item><description>SCALING_OUT: Scaling out.</description></item>
             /// <item><description>RESTARTING: Restarting.</description></item>
-            /// <item><description>SCALING_IN: Scale-in in progress.</description></item>
+            /// <item><description>SCALING_IN: Scaling in.</description></item>
             /// <item><description>SCALING_UP: Scaling up.</description></item>
             /// <item><description>SCALING_DOWN: Scaling down.</description></item>
             /// <item><description>UPGRADING: Upgrading.</description></item>
             /// <item><description>ENABLE_PUBLIC_NETWORK: Enabling public network access.</description></item>
             /// <item><description>DISABLE_PUBLIC_NETWORK: Disabling public network access.</description></item>
-            /// <item><description>SWITCH_AZ: Switching zone.</description></item>
+            /// <item><description>SWITCH_AZ: Switching the zone.</description></item>
             /// <item><description>DISABLE: Disabled.</description></item>
-            /// <item><description>DELETING: Being deleted.</description></item>
+            /// <item><description>DELETING: Deleting.</description></item>
             /// <item><description>DELETED: Deleted.</description></item>
             /// </list>
             /// 
@@ -368,10 +368,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The performance level (PL) of the cloud disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pl0: Maximum random read/write IOPS of 10,000 per disk.</description></item>
-            /// <item><description>pl1: Maximum random read/write IOPS of 50,000 per disk.</description></item>
-            /// <item><description>pl2: Maximum random read/write IOPS of 100,000 per disk.</description></item>
-            /// <item><description>pl3: Maximum random read/write IOPS of 1,000,000 per disk.</description></item>
+            /// <item><description>pl0: Up to 10,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>pl1: Up to 50,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>pl2: Up to 100,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>pl3: Up to 1,000,000 random read/write IOPS per disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of query results.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

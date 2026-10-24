@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyDiskPerformanceLevelRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</para>
+        /// <para>Specifies whether automatic payment is enabled for all products specified in the Products parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatic payment.</description></item>
-        /// <item><description>false: No automatic payment.</description></item>
+        /// <item><description>true: automatic payment.</description></item>
+        /// <item><description>false: no automatic payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

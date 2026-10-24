@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DeleteScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Compute group ID.</para>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-b25e21e24388****</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The node group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>ID of the scaling rule to delete.</para>
+        /// <para>The ID of the scaling rule to be deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +42,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ScalingRuleId { get; set; }
 
         /// <summary>
-        /// <para>Trigger type.</para>
+        /// <para>The trigger type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

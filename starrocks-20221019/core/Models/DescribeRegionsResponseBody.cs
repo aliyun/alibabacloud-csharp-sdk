@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <para>The description of the region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Hangzhou</para>
+            /// <para>杭州</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

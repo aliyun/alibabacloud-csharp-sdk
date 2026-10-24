@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifySpecTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</para>
+        /// <para>Specifies whether to automatically pay for all products specified in the Products parameter.</para>
         /// <list type="bullet">
         /// <item><description>true: Automatic payment.</description></item>
         /// <item><description>false: No automatic payment.</description></item>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the fast restart mode. Default value: false.</para>
+        /// <para>Specifies whether to restart in fast restart mode. Default value: false.</para>
         /// <list type="bullet">
-        /// <item><description>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</description></item>
+        /// <item><description>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute serially.</description></item>
         /// <item><description>false: Restarts compute nodes in rolling restart mode.</description></item>
         /// </list>
         /// 

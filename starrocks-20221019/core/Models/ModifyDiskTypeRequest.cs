@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyDiskTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</para>
+        /// <para>Specifies whether to automatically pay for all products specified in the Products parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatic payment is enabled.</description></item>
-        /// <item><description>false: Automatic payment is disabled.</description></item>
+        /// <item><description>true: Automatic payment.</description></item>
+        /// <item><description>false: Manual payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string TargetDiskType { get; set; }
 
         /// <summary>
-        /// <para>The target disk performance level.</para>
+        /// <para>The target disk performance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

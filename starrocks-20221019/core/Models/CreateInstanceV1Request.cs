@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class CreateInstanceV1Request : TeaModel {
         /// <summary>
-        /// <para>The administrator password of the instance.</para>
+        /// <para>The password of the instance administrator.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public CreateInstanceV1RequestAgentNodeGroup AgentNodeGroup { get; set; }
         public class CreateInstanceV1RequestAgentNodeGroup : TeaModel {
             /// <summary>
-            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</para>
+            /// <para>The number of compute units (CUs). A CU is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -40,11 +40,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</para>
-        /// <para>Valid values:</para>
+        /// <para>Specifies whether automatic payment is enabled for all products specified in the Products parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatic payment.</description></item>
-        /// <item><description>false: No automatic payment.</description></item>
+        /// <item><description>true: Enables automatic payment.</description></item>
+        /// <item><description>false: Disables automatic payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when payType is set to PrePaid. Auto-renewal is disabled by default.</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when PayType is set to PrePaid. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -65,14 +64,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The BE or CN node group information.</para>
+        /// <para>The information about the BE or CN compute groups.</para>
         /// </summary>
         [NameInMap("BackendNodeGroups")]
         [Validation(Required=false)]
         public List<CreateInstanceV1RequestBackendNodeGroups> BackendNodeGroups { get; set; }
         public class CreateInstanceV1RequestBackendNodeGroups : TeaModel {
             /// <summary>
-            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory. When SpecType is set to memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</para>
+            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory. If SpecType is set to the memory-enhanced instance family, 1 CU equals 1 vCPU and 8 GiB of memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -95,7 +94,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? DiskNumber { get; set; }
 
             /// <summary>
-            /// <para>The local SSD instance type of the node group. This parameter takes effect only when the instance is ECS-based and SpecType is set to local SSD or large-scale storage.</para>
+            /// <para>The local SSD instance type of the node group. This parameter is valid only when the instance is based on ECS and SpecType is set to localSSD or bigData.</para>
             /// 
             /// <b>Example:</b>
             /// <para>local_ssd_4_4xlarge</para>
@@ -115,7 +114,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? ResidentNodeNumber { get; set; }
 
             /// <summary>
-            /// <para>The specification type of the node group. Valid values:</para>
+            /// <para>The instance family category of the compute group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>standard: Standard.</description></item>
+            /// <item><description>localSSD: Local SSD.</description></item>
+            /// <item><description>bigData: Large storage.</description></item>
+            /// <item><description>ramEnhanced: Memory-enhanced instance family.</description></item>
+            /// <item><description>networkEnhanced: Network-enhanced.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -126,6 +132,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
             /// <summary>
             /// <para>The performance level (PL) of the cloud disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>pl0: A single disk delivers up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>pl1: A single disk delivers up to 50,000 random read/write IOPS.</description></item>
+            /// <item><description>pl2: A single disk delivers up to 100,000 random read/write IOPS.</description></item>
+            /// <item><description>pl3: A single disk delivers up to 1,000,000 random read/write IOPS.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>pl1</para>
@@ -157,7 +169,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request. Generate a unique parameter value from your client. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -167,7 +179,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the DLF Catalog.</para>
+        /// <para>The name of the DLF catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>paimon_test</para>
@@ -177,7 +189,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string DlfCatalogName { get; set; }
 
         /// <summary>
-        /// <para>The type of the DLF Catalog. Valid values: paimon and iceberg.</para>
+        /// <para>The type of the DLF catalog, such as paimon or iceberg.</para>
         /// 
         /// <b>Example:</b>
         /// <para>paimon</para>
@@ -187,7 +199,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string DlfCatalogType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter takes effect only when payType is set to PrePaid.</para>
+        /// <para>The subscription duration. This parameter takes effect only when PayType is set to PrePaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -197,7 +209,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the AI Center. Default value: false.</para>
+        /// <para>Specifies whether to enable the AI center. Default value: false.</para>
         /// </summary>
         [NameInMap("EnableAiFunction")]
         [Validation(Required=false)]
@@ -221,14 +233,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The FE node group information.</para>
+        /// <para>The information about the FE node groups.</para>
         /// </summary>
         [NameInMap("FrontendNodeGroups")]
         [Validation(Required=false)]
         public List<CreateInstanceV1RequestFrontendNodeGroups> FrontendNodeGroups { get; set; }
         public class CreateInstanceV1RequestFrontendNodeGroups : TeaModel {
             /// <summary>
-            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</para>
+            /// <para>The number of compute units (CUs). A CU is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -248,7 +260,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? DiskNumber { get; set; }
 
             /// <summary>
-            /// <para>The local SSD instance type. This parameter does not need to be set for the FE node group.</para>
+            /// <para>The local SSD instance type. You do not need to set this parameter for FE compute groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -268,7 +280,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? ResidentNodeNumber { get; set; }
 
             /// <summary>
-            /// <para>The specification type of the node group. Only standard is supported.</para>
+            /// <para>The specification type of the compute group. Only standard is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -278,7 +290,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string SpecType { get; set; }
 
             /// <summary>
-            /// <para>The performance level (PL) of the cloud disk. Only pl1 is supported, which provides up to 50,000 random read/write IOPS per disk.</para>
+            /// <para>The performance level (PL) of the cloud disk. Only pl1 is supported, where a single disk delivers up to 50,000 random read/write IOPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pl1</para>
@@ -310,7 +322,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
-        /// <para>The gateway type. Valid values: Slb and Privatezone.</para>
+        /// <para>The gateway type. Generally, the value is Slb or Privatezone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Traditional\&quot;\&quot;</para>
@@ -341,7 +353,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The username of the associated Resource Access Management (RAM) user or the name of the associated RAM role.</para>
+        /// <para>The username of the associated Resource Access Management (RAM) user or the name of the RAM role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun.test1</para>
@@ -351,14 +363,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string LinkedRamUserName { get; set; }
 
         /// <summary>
-        /// <para>The Observer node group information. Specify this parameter only when you need to enable multi-zone disaster recovery. The Observer node group specifications must be the same as those of the FE node group.</para>
+        /// <para>The information about the Observer compute group. Specify this parameter only when you need to enable multi-zone disaster recovery. The configuration of the Observer compute group must be consistent with the specifications of the FE node group.</para>
         /// </summary>
         [NameInMap("ObserverNodeGroups")]
         [Validation(Required=false)]
         public List<CreateInstanceV1RequestObserverNodeGroups> ObserverNodeGroups { get; set; }
         public class CreateInstanceV1RequestObserverNodeGroups : TeaModel {
             /// <summary>
-            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</para>
+            /// <para>The number of compute units (CUs). A CU is the basic metering unit of the service. 1 CU equals 1 vCPU and 4 GiB of memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -378,7 +390,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? DiskNumber { get; set; }
 
             /// <summary>
-            /// <para>The local SSD instance type. This parameter does not need to be set for the Observer node group.</para>
+            /// <para>The instance specification for local SSDs. You do not need to specify this parameter for the Observer compute group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -398,7 +410,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? ResidentNodeNumber { get; set; }
 
             /// <summary>
-            /// <para>The specification type of the node group. Only standard is supported.</para>
+            /// <para>The specification type of the compute group. Only standard is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -408,7 +420,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string SpecType { get; set; }
 
             /// <summary>
-            /// <para>The performance level (PL) of the cloud disk. Only pl1 is supported, which provides up to 50,000 random read/write IOPS per disk.</para>
+            /// <para>The performance level (PL) of the cloud disk. Only PL1 is supported, which delivers up to 50,000 random read/write IOPS per disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pl1</para>
@@ -450,10 +462,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string OssAccessingRoleName { get; set; }
 
         /// <summary>
-        /// <para>The instance edition:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>  Entry edition (trial).</description></item>
-        /// <item><description> Standard edition (official).</description></item>
+        /// <item><description>trial: Trial Edition.</description></item>
+        /// <item><description>official: Standard Edition.</description></item>
         /// </list>
         /// 
         /// <para>This parameter is required.</para>
@@ -466,7 +478,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <ol>
         /// <item><description>prePaid: subscription.</description></item>
         /// <item><description>postPaid: pay-as-you-go.</description></item>
@@ -482,12 +494,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>The unit of the billing cycle. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Month</description></item>
         /// <item><description>Year</description></item>
         /// </list>
-        /// This parameter takes effect only when payType is set to PrePaid.
+        /// This parameter takes effect only when PayType is set to PrePaid.
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -497,11 +509,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The RAM authentication type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RS: Resource Access Management (RAM) user.</description></item>
-        /// <item><description>RR: RAM role.</description></item>
-        /// </list>
+        /// <para>The RAM authentication type. A value of RS indicates a Resource Access Management (RAM) user, and a value of RR indicates a RAM role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RR</para>
@@ -552,11 +560,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The running mode of the cluster. Valid values:</para>
+        /// <para>The run mode of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>shared_nothing: compute-storage coupled.</description></item>
-        /// <item><description>shared_data: compute-storage decoupled.</description></item>
+        /// <item><description>shared_nothing: shared-nothing architecture.</description></item>
+        /// <item><description>shared_data: shared-data architecture.</description></item>
         /// </list>
+        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -567,7 +576,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RunMode { get; set; }
 
         /// <summary>
-        /// <para>The instance tags.</para>
+        /// <para>The tags of the instance.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -637,7 +646,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

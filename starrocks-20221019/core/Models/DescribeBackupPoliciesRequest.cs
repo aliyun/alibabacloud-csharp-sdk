@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
