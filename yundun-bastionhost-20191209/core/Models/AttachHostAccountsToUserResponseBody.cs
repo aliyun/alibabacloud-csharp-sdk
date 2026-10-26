@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AttachHostAccountsToUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -20,33 +20,31 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the call.</para>
+        /// <para>The results of the API call.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<AttachHostAccountsToUserResponseBodyResults> Results { get; set; }
         public class AttachHostAccountsToUserResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The return code that indicates whether the call was successful. Valid values:</para>
+            /// <para>The result of the API call. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>OK</b>: The call was successful.</para>
+            /// <item><description><para><b>OK</b>: The operation is successful.</para>
             /// </description></item>
             /// <item><description><para><b>UNEXPECTED</b>: An unknown error occurred.</para>
             /// </description></item>
             /// <item><description><para><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</para>
+            /// <remarks>
+            /// <para>Check the request parameters, ensure that they are correct, and then call the operation again.</para>
+            /// </remarks>
             /// </description></item>
-            /// </list>
+            /// <item><description><para><b>OBJECT_NOT_FOUND</b>: The object on which the operation is performed does not exist.</para>
             /// <remarks>
-            /// <para>Make sure that the request parameters are valid and call the operation again.</para>
+            /// <para>Check whether the ID of the Bastionhost instance exists, whether the host exists, and whether the host ID is correct, and then call the operation again.</para>
             /// </remarks>
-            /// <list type="bullet">
-            /// <item><description><b>OBJECT_NOT_FOUND</b>: The specified object on which you want to perform the operation does not exist.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</para>
-            /// </remarks>
-            /// <list type="bullet">
-            /// <item><description><b>OBJECT_AlREADY_EXISTS</b>: The specified object on which you want to perform the operation already exists.</description></item>
+            /// </description></item>
+            /// <item><description><para><b>OBJECT_AlREADY_EXISTS</b>: The object on which the operation is performed already exists.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,25 +55,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The result of authorizing the user to manage the host accounts.</para>
+            /// <para>The results returned for the operation of authorizing host accounts for the user.</para>
             /// </summary>
             [NameInMap("HostAccounts")]
             [Validation(Required=false)]
             public List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> HostAccounts { get; set; }
             public class AttachHostAccountsToUserResponseBodyResultsHostAccounts : TeaModel {
                 /// <summary>
-                /// <para>The return code that indicates whether the user was authorized to manage the host accounts. Valid values:</para>
+                /// <para>The result returned for the operation of authorizing host accounts for the user. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>OK</b>: The call was successful.</para>
-                /// </description></item>
-                /// <item><description><para><b>UNEXPECTED</b>: An unknown error occurred.</para>
-                /// </description></item>
-                /// <item><description><para><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</para>
-                /// </description></item>
-                /// <item><description><para><b>OBJECT_NOT_FOUND</b>: The specified object on which you want to perform the operation does not exist.</para>
-                /// </description></item>
-                /// <item><description><para><b>OBJECT_AlREADY_EXISTS</b>: The specified object on which you want to perform the operation already exists.</para>
-                /// </description></item>
+                /// <item><description><b>OK</b>: The operation is successful.</description></item>
+                /// <item><description><b>UNEXPECTED</b>: An unknown error occurred.</description></item>
+                /// <item><description><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</description></item>
+                /// <item><description><b>OBJECT_NOT_FOUND</b>: The object on which the operation is performed does not exist.</description></item>
+                /// <item><description><b>OBJECT_AlREADY_EXISTS</b>: The object on which the operation is performed already exists.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -96,7 +89,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string HostAccountId { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para><b>[Deprecated]</b> This parameter is deprecated. You can ignore it.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -118,7 +111,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated. You can ignore it.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>

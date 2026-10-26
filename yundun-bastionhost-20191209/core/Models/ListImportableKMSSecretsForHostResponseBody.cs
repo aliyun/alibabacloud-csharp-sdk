@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListImportableKMSSecretsForHostResponseBody : TeaModel {
         /// <summary>
-        /// <para>The value of the <c>MaxResults</c> parameter in the request. If the parameter was not specified, the default value of 20 is returned.</para>
+        /// <para>If a valid MaxResults value is passed in the request parameter, the specified parameter value is returned. Otherwise, the default value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If this field is empty, all results have been returned.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of importable secrets.</para>
+        /// <para>The credential information.</para>
         /// </summary>
         [NameInMap("Secrets")]
         [Validation(Required=false)]
         public List<ListImportableKMSSecretsForHostResponseBodySecrets> Secrets { get; set; }
         public class ListImportableKMSSecretsForHostResponseBodySecrets : TeaModel {
             /// <summary>
-            /// <para>The name of the secret.</para>
+            /// <para>The name of the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SecretName { get; set; }
 
             /// <summary>
-            /// <para>The type of the secret. Valid value:</para>
+            /// <para>The type of the credential. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ECS</c>: an ECS secret.</description></item>
+            /// <item><description>ECS: ECS credential.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SecretType { get; set; }
 
             /// <summary>
-            /// <para>The tags associated with the secret.</para>
+            /// <para>The tags of the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

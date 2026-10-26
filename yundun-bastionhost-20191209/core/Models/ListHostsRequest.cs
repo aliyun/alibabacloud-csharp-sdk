@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsRequest : TeaModel {
         /// <summary>
-        /// <para>The address of the host. A domain name or an IP address is supported. Only exact match is supported.</para>
+        /// <para>The address of the host. You can use a domain name or an IP address. Fuzzy match is not supported. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.XX.XX</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the host group to which the host belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the host group ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to obtain the host group ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the host. Only exact match is supported.</para>
+        /// <para>The name of the host. Fuzzy match is not supported. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>host</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Bastionhost instance.</para>
+        /// <para>The instance ID of the Bastionhost instance whose hosts you want to query.</para>
         /// <remarks>
         /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Settings for paging. Specifies the number of host information entries to return per page in a paged query. Default value: <b>10</b>, which indicates that 10 host information entries are displayed per page.</para>
+        /// <para>Specifies the number of hosts to return per page in a paged query. Default value: <b>10</b>, which indicates that 10 hosts are returned per page.</para>
         /// <remarks>
         /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <list type="bullet">
         /// <item><description><b>Local</b>: local host</description></item>
         /// <item><description><b>Ecs</b>: ECS instance</description></item>
-        /// <item><description><b>Rds</b>: ApsaraDB RDS dedicated cluster host</description></item>
+        /// <item><description><b>Rds</b>: RDS dedicated cluster host</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The ECS instance ID or the dedicated cluster host ID that corresponds to the host. Only exact match is supported.</para>
+        /// <para>The ECS instance ID or the dedicated cluster host ID to which the host corresponds. Fuzzy match is not supported. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp19ienyt0yax748****</para>

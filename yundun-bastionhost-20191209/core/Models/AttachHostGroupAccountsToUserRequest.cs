@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AttachHostGroupAccountsToUserRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the host group and the name of the host account that you want to authorize the user to manage. You can specify up to 10 host group IDs and up to 10 host account names for each host group. You can specify only host group IDs. In this case, the user is authorized to manage only the specified host groups. For more information about this parameter, see the &quot;Description of the HostGroups parameter&quot; section of this topic.</para>
+        /// <para>The IDs of the host groups and the names of the host accounts to which you want to grant the user access. You can specify up to 10 host group IDs and up to 10 host account names for each host group. If you do not specify host account names, the user is granted access only to the host groups. For more information about the structure of this parameter, see the HostGroups parameter structure description in the request parameter list.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group and the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the name of the host account.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to obtain host group IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain host account names.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostGroups { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host for which you want to authorize the user to manage the host groups and host accounts.</para>
+        /// <para>The instance ID of the Bastionhost instance to which the user to be granted authorization on host groups and host accounts belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host for which you want to authorize the user to manage the host groups and host accounts.</para>
+        /// <para>Specifies the region ID of the Bastionhost instance where the user to be granted permissions on host groups and host accounts is located.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user that you want to authorize to manage the host groups and host accounts.</para>
+        /// <para>The ID of the user to be granted permissions on host groups and host accounts.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

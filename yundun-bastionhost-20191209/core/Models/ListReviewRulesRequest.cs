@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListReviewRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bastion host instance.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the bastion host instance ID.</para>
-        /// </remarks>
+        /// <para>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +31,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of audit policies to return per request. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of audit policy entries to return in a single request. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +41,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the paging query. Leave this parameter empty or do not specify it for the first request.</para>
+        /// <para>The token that is used to start a paged query. Do not specify this parameter or specify an empty character string for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</para>
@@ -54,10 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host. </para>
-        /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
-        /// </remarks>
+        /// <para>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -67,10 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to skip.</para>
-        /// <remarks>
-        /// <para>This parameter takes effect only when NextToken is empty.</para>
-        /// </remarks>
+        /// <para>The number of entries to skip. This parameter takes effect only when NextToken is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

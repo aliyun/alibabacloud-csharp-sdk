@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class RenewAssetOperationTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
+        /// <remarks>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -32,13 +38,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The O&amp;M token to be renewed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NmYyMmEzNmMwYzljNGY******</para>
         /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>The ID of the O&amp;M token to be renewed. You can call the <a href="https://help.aliyun.com/document_detail/2758861.html">GenerateAssetOperationToken</a> operation to obtain the token ID.</para>
+        /// <para>The ID of the O&amp;M token to be renewed.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758861.html">GenerateAssetOperationToken</a> operation to obtain this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>NmYyMmEzNmMwYzljNGYxMjh******</para>

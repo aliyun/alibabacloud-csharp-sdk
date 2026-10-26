@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyDatabasesProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the database instances that you want to move. This parameter is a JSON-formatted string. You can specify up to 100 database instance IDs. Separate multiple database instance IDs with commas (,).</para>
+        /// <para>The IDs of the database instances that you want to move. The value is a JSON string. You can specify up to 100 database instance IDs. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseIds { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target project to which you want to move the database instances.</para>
+        /// <para>The ID of the destination project to which you want to move the database instances.</para>
         /// <remarks>
-        /// <para>You can call the ListProjectsForProjectAuthorizationPrincipal operation to query this parameter.</para>
+        /// <para>You can call the ListProjectsForProjectAuthorizationPrincipal operation to query the project ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

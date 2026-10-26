@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListProjectsForProjectAuthorizationPrincipalRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the parameter value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the paging query. Leave this parameter empty or do not specify this character for the first request.</para>
+        /// <para>The paging token used to start a paged query. For the first request, do not pass this parameter or pass an empty string of characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to skip.</para>
+        /// <para>The number of items to skip.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when NextToken is empty.</para>
+        /// <para>This parameter takes effect only when NextToken is left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

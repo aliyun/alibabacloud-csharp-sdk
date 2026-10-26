@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host for which you want to query host accounts.</para>
+        /// <para>The ID of the host for which you want to query the host accounts.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the parameter value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Bastionhost instance to which the user group belongs. Specify this parameter to query the host account authorization list.</para>
+        /// <para>The instance ID of the Bastionhost instance to which the user group belongs. You can query the list of host accounts with authorization for this user group.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the parameter value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,8 +58,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page for paging in a paged query.
-        /// The maximum value of the PageSize parameter is 100. The default number of entries returned per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
+        /// <para>The maximum number of entries to return on each page for paging in a paged query.<br>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned.</para>
         /// <remarks>
         /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
@@ -82,9 +81,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the region ID of the Bastionhost instance where the user group resides. You can query the list of authorized host accounts for the user group.</para>
+        /// <para>The region ID of the Bastionhost instance that contains the user group for which you want to query the list of authorized host accounts.</para>
         /// <remarks>
-        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,7 +96,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the user group whose authorized host accounts you want to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain the parameter value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

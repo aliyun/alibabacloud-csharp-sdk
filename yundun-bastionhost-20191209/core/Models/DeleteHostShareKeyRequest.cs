@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DeleteHostShareKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The shared key ID.</para>
+        /// <para>The ID of the host shared key.</para>
         /// <remarks>
-        /// <para>You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</para>
+        /// <para>This parameter is required. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to retrieve this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostShareKeyId { get; set; }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

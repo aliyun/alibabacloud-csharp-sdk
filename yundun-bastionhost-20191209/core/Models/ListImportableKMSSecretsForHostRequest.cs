@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListImportableKMSSecretsForHostRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the host.</para>
+        /// <para>The ID of the host to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to get this ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? HostId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host instance.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to get this ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the secret to search for. Fuzzy matching is supported.</para>
+        /// <para>The name of the credential to query. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// <para>The number of entries to return. If you do not specify this parameter, the default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token required for the next cursor-based query.</para>
         /// <remarks>
-        /// <para>You do not need to specify this parameter for the first request. For subsequent requests, use the <c>NextToken</c> value from the previous response.</para>
+        /// <para>Leave this parameter empty for the initial query. For subsequent requests, specify the value of the NextToken field returned in the previous response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For details about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and availability zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

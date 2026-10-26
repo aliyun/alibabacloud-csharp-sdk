@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListInstanceRdMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The value of MaxResults in the request. If you did not specify MaxResults, the default value is returned.</para>
+        /// <para>The maximum number of entries returned per request. If a valid MaxResults value is specified in the request parameter, the specified value is returned. Otherwise, the default value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A list of member accounts.</para>
+        /// <para>The list of member accounts.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<ListInstanceRdMembersResponseBodyMembers> Members { get; set; }
         public class ListInstanceRdMembersResponseBodyMembers : TeaModel {
             /// <summary>
-            /// <para>The UID of the member account.</para>
+            /// <para>The UID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1197234496852779</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The token for the next page of results. If the response is truncated, this parameter is returned. Use this token in your next request to retrieve the next page. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token for the next request, which is used for paging. Specify this value in the NextToken request parameter for the next paged query. If this field is empty in the response, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</para>

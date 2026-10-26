@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of RD member accounts to return. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of member accounts in a resource directory to return per request. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for a paged query. If this is your first query, leave this parameter empty.</para>
+        /// <para>The request token. Leave this parameter empty or do not specify it for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

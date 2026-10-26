@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyDatabasesProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The call results.</para>
+        /// <para>The results of the operation.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<ModifyDatabasesProjectResponseBodyResults> Results { get; set; }
         public class ModifyDatabasesProjectResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the database.</para>
+            /// <para>The database instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>53</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetId { get; set; }
 
             /// <summary>
-            /// <para>The error code. A value of <b>200</b> indicates that the operation is successful. Other values indicate that the operation failed.</para>
+            /// <para>The error code. An error code of <b>200</b> indicates that the operation is successful. Other error codes indicate that the operation failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The number of database instances that are moved.</para>
+        /// <para>The number of successful operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

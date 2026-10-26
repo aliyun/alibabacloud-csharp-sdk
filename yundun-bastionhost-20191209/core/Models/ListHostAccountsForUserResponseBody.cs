@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of host accounts returned.</para>
+        /// <para>The host accounts returned.</para>
         /// </summary>
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostAccountName { get; set; }
 
             /// <summary>
+            /// <para>The type of the host account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;Normal&quot;</para>
+            /// </summary>
+            [NameInMap("HostAccountType")]
+            [Validation(Required=false)]
+            public string HostAccountType { get; set; }
+
+            /// <summary>
             /// <para>The ID of the host to which the host account belongs.</para>
             /// 
             /// <b>Example:</b>
@@ -47,10 +57,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the host account is authorized to the current user. Valid values:</para>
+            /// <para>Indicates whether the host account is authorized for the current user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Authorized.</description></item>
-            /// <item><description><b>false</b>: Unauthorized.</description></item>
+            /// <item><description><b>true</b>: authorized</description></item>
+            /// <item><description><b>false</b>: unauthorized</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? IsAuthorized { get; set; }
 
             /// <summary>
-            /// <para>The protocol name of the host account. Valid values:</para>
+            /// <para>The protocol of the host account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>SSH</b></description></item>
             /// <item><description><b>RDP</b></description></item>

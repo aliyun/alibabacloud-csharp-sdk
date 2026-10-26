@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The email address of the recipient.</para>
         /// <remarks>
-        /// <para>You must specify at least one of Phone or Email.</para>
+        /// <para>You must specify at least one of the mobile phone number and the email address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to retrieve this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the recipient. The name must be 1 to 128 characters in length, cannot start with a special character, and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</para>
+        /// <para>The name of the recipient. The name must be 1 to 128 characters in length. It cannot start with a special character and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The phone number of the recipient.</para>
+        /// <para>The mobile phone number of the recipient.</para>
         /// <remarks>
-        /// <para>You must specify at least one of Phone or Email.</para>
+        /// <para>You must specify at least one of the mobile phone number and the email address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The project ID.</para>
         /// <remarks>
-        /// <para>You can call the ListProjects operation to query this parameter.</para>
+        /// <para>You can call the ListProjects operation to retrieve this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

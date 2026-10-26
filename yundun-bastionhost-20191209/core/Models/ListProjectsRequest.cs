@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListProjectsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bastion host instance.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The project name to query. Fuzzy match is supported.</para>
+        /// <para>The name of the project to query. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to query. If you do not specify this parameter, 20 entries are queried by default. A maximum of 100 entries can be queried in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token required for the next query in cursor-based pagination.</para>
+        /// <para>The token required for the next cursor-based query.</para>
         /// <remarks>
-        /// <para>Leave this parameter empty for the first query. For subsequent requests, set this parameter to the value of NextToken returned in the previous response.</para>
+        /// <para>Leave this parameter empty for the first query. For subsequent requests, specify the value of the NextToken field returned in the previous response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The number of entries to skip.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when NextToken is empty.</para>
+        /// <para>This parameter takes effect only when the NextToken parameter is left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

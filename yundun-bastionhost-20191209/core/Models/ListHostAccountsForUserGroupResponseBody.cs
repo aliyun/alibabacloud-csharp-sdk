@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsForUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The host accounts returned.</para>
+        /// <para>The host accounts.</para>
         /// </summary>
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostAccountName { get; set; }
 
             /// <summary>
+            /// <para>The type of the host account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;Normal&quot;</para>
+            /// </summary>
+            [NameInMap("HostAccountType")]
+            [Validation(Required=false)]
+            public string HostAccountType { get; set; }
+
+            /// <summary>
             /// <para>The ID of the host to which the host account belongs.</para>
             /// 
             /// <b>Example:</b>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>Indicates whether the host account is authorized for the current user group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Authorized.</description></item>
-            /// <item><description><b>false</b>: Not authorized.</description></item>
+            /// <item><description><b>false</b>: Unauthorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

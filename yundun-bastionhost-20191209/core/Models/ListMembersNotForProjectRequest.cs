@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListMembersNotForProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member accounts to query. Fuzzy match is supported.</para>
+        /// <para>The UIDs of the member accounts to query. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>162****5213</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to query. Default value: 20. Maximum value: 100.</para>
+        /// <para>The maximum number of entries to return. If you do not specify this parameter, the default value 20 is used. You can query up to 100 entries at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The request token. Leave this parameter empty or set it to an empty string for the first request.</para>
+        /// <para>The pagination token. For the first request, leave this parameter empty or pass an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</para>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

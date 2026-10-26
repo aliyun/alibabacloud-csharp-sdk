@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationHostAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the host account to query. Only exact match is supported.</para>
+        /// <para>The name of the host account that you want to query. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host whose accounts you want to query.</para>
+        /// <para>The ID of the host for which you want to query host accounts.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operation to query the host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page when paging in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.<br> Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries to return on each page when paging in a paged query.<br>The maximum value of the PageSize parameter is 100. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Specify a value for the PageSize parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

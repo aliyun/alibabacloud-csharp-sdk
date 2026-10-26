@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AttachReviewersToReviewRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bastion host instance.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the DescribeInstances operation to obtain the bastion host instance ID.</para>
+        /// <para>You can call the DescribeInstances operation to obtain the Bastionhost instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The information about the auditors associated with the audit policy.</para>
+        /// <para>The information about the auditors to be associated with the audit policy.</para>
         /// </summary>
         [NameInMap("Principals")]
         [Validation(Required=false)]
         public List<AttachReviewersToReviewRuleRequestPrincipals> Principals { get; set; }
         public class AttachReviewersToReviewRuleRequestPrincipals : TeaModel {
             /// <summary>
-            /// <para>When PrincipalType is set to RamUser, specify the RAM user ID of the auditor to associate. When PrincipalType is set to RamRole, specify the RAM role ARN of the auditor to associate.</para>
+            /// <para>The ID of the RAM user or the ARN of the RAM role of the auditor to be associated. If PrincipalType is set to RamUser, specify the RAM user ID. If PrincipalType is set to RamRole, specify the ARN of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>160****9214</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PrincipalId { get; set; }
 
             /// <summary>
-            /// <para>The display name of the associated auditor\&quot;s RAM user or RAM role.</para>
+            /// <para>The display name of the RAM user or RAM role of the associated auditor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PrincipalName { get; set; }
 
             /// <summary>
-            /// <para>The type of the auditor to associate. Valid values:</para>
+            /// <para>The type of the auditor to be associated. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>RamUser</b>: Resource Access Management (RAM) user.</para>
             /// </description></item>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the audit policy.</para>
         /// <remarks>
-        /// <para>You can call the ListReviewRules operation to obtain this parameter.</para>
+        /// <para>You can invoke the ListReviewRules operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

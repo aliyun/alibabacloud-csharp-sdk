@@ -149,6 +149,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
             /// <summary>
             /// <para>The status of the HSM hardware encryption module. Indicates whether the Bastionhost instance is integrated with an HSM.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Disable</para>
             /// </summary>
             [NameInMap("HSMModule")]
             [Validation(Required=false)]

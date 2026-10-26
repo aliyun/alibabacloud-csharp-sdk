@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// <para>Adds multiple database instances to a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// <para>Adds multiple database instances to a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -582,7 +582,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// <para>Adds multiple database instances to a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -600,7 +600,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple databases to a specified asset group.</para>
+        /// <para>Adds multiple database instances to a specified asset group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -798,7 +798,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
+        /// <para>Adds member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -848,7 +848,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
+        /// <para>Adds member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -898,7 +898,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
+        /// <para>Adds member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -916,7 +916,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
+        /// <para>Adds member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1710,7 +1710,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
+        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1764,7 +1764,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
+        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1818,7 +1818,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
+        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1836,7 +1836,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
+        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2026,7 +2026,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2080,7 +2080,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2134,7 +2134,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2152,7 +2152,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2170,7 +2170,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2224,7 +2224,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2278,7 +2278,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2296,7 +2296,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user to manage one or more host groups and host accounts.</para>
+        /// <para>Grants permissions on host groups and host accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2602,7 +2602,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</para>
+        /// <para>Specifies the projects that can be managed in a project authorization. You can call this operation only when the ScopeType parameter returned by the GetProjectAuthorization operation for the corresponding project authorization is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2656,7 +2656,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</para>
+        /// <para>Specifies the projects that can be managed in a project authorization. You can call this operation only when the ScopeType parameter returned by the GetProjectAuthorization operation for the corresponding project authorization is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2710,7 +2710,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</para>
+        /// <para>Specifies the projects that can be managed in a project authorization. You can call this operation only when the ScopeType parameter returned by the GetProjectAuthorization operation for the corresponding project authorization is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2728,7 +2728,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</para>
+        /// <para>Specifies the projects that can be managed in a project authorization. You can call this operation only when the ScopeType parameter returned by the GetProjectAuthorization operation for the corresponding project authorization is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2746,7 +2746,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</para>
+        /// <para>Associates projects with the scope of an audit policy. You can invoke this operation only when the ScopeType parameter returned by the GetReviewRule operation for the corresponding audit policy is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2800,7 +2800,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</para>
+        /// <para>Associates projects with the scope of an audit policy. You can invoke this operation only when the ScopeType parameter returned by the GetReviewRule operation for the corresponding audit policy is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2854,7 +2854,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</para>
+        /// <para>Associates projects with the scope of an audit policy. You can invoke this operation only when the ScopeType parameter returned by the GetReviewRule operation for the corresponding audit policy is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2872,7 +2872,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</para>
+        /// <para>Associates projects with the scope of an audit policy. You can invoke this operation only when the ScopeType parameter returned by the GetReviewRule operation for the corresponding audit policy is 2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2890,7 +2890,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates auditors with an audit policy.</para>
+        /// <para>Attaches auditors to an audit policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2944,7 +2944,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates auditors with an audit policy.</para>
+        /// <para>Attaches auditors to an audit policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2998,7 +2998,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates auditors with an audit policy.</para>
+        /// <para>Attaches auditors to an audit policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3016,7 +3016,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates auditors with an audit policy.</para>
+        /// <para>Attaches auditors to an audit policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5458,7 +5458,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a notification recipient for a project.</para>
+        /// <para>Creates a project notification recipient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5520,7 +5520,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a notification recipient for a project.</para>
+        /// <para>Creates a project notification recipient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5582,7 +5582,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a notification recipient for a project.</para>
+        /// <para>Creates a project notification recipient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5600,7 +5600,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a notification recipient for a project.</para>
+        /// <para>Creates a project notification recipient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7406,7 +7406,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared key.</para>
+        /// <para>Deletes a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7456,7 +7456,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared key.</para>
+        /// <para>Deletes a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7506,7 +7506,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared key.</para>
+        /// <para>Deletes a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7524,7 +7524,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared key.</para>
+        /// <para>Deletes a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16994,7 +16994,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
+        /// <para>Queries the authorized and unauthorized host accounts of a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17064,7 +17064,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
+        /// <para>Queries the authorized and unauthorized host accounts of a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17134,7 +17134,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
+        /// <para>Queries the authorized and unauthorized host accounts of a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17152,7 +17152,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</para>
+        /// <para>Queries the authorized and unauthorized host accounts of a specified user group on a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18138,7 +18138,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
+        /// <para>Queries the hosts in a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18224,7 +18224,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
+        /// <para>Queries the hosts in a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18310,7 +18310,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
+        /// <para>Queries the hosts in a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18328,7 +18328,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts of a specified Bastionhost instance.</para>
+        /// <para>Queries the hosts in a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18730,7 +18730,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all importable KMS secrets for a specified host.</para>
+        /// <para>Lists all importable KMS credentials for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18792,7 +18792,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all importable KMS secrets for a specified host.</para>
+        /// <para>Lists all importable KMS credentials for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18854,7 +18854,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all importable KMS secrets for a specified host.</para>
+        /// <para>Lists all importable KMS credentials for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18872,7 +18872,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all importable KMS secrets for a specified host.</para>
+        /// <para>Lists all importable KMS credentials for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18890,7 +18890,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
+        /// <para>Retrieves a list of member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18944,7 +18944,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
+        /// <para>Retrieves a list of member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18998,7 +18998,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
+        /// <para>Retrieves a list of member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19016,7 +19016,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
+        /// <para>Retrieves a list of member accounts in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19034,7 +19034,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members that are not occupied by other projects.</para>
+        /// <para>Queries the list of member accounts that are not assigned to other projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19100,7 +19100,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members that are not occupied by other projects.</para>
+        /// <para>Queries the list of member accounts that are not assigned to other projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19166,7 +19166,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members that are not occupied by other projects.</para>
+        /// <para>Queries the list of member accounts that are not assigned to other projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19184,7 +19184,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of members that are not occupied by other projects.</para>
+        /// <para>Queries the list of member accounts that are not assigned to other projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19738,7 +19738,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the host accounts for which the current Resource Access Management (RAM) user has authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19800,7 +19800,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the host accounts for which the current Resource Access Management (RAM) user has authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19862,7 +19862,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the host accounts for which the current Resource Access Management (RAM) user has authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19880,7 +19880,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the host accounts for which the current Resource Access Management (RAM) user has authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20930,7 +20930,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user can manage.</para>
+        /// <para>Queries the projects that the current user can manage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20992,7 +20992,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user can manage.</para>
+        /// <para>Queries the projects that the current user can manage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21054,7 +21054,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user can manage.</para>
+        /// <para>Queries the projects that the current user can manage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21072,7 +21072,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user can manage.</para>
+        /// <para>Queries the projects that the current user can manage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21426,7 +21426,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit policies.</para>
+        /// <para>Queries the audit policy list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21488,7 +21488,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit policies.</para>
+        /// <para>Queries the audit policy list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21550,7 +21550,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit policies.</para>
+        /// <para>Queries the audit policy list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21568,7 +21568,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of audit policies.</para>
+        /// <para>Queries the audit policy list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23466,7 +23466,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves database instances to a different project in batches.</para>
+        /// <para>Moves multiple database instances to a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23524,7 +23524,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves database instances to a different project in batches.</para>
+        /// <para>Moves multiple database instances to a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23582,7 +23582,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves database instances to a different project in batches.</para>
+        /// <para>Moves multiple database instances to a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23600,7 +23600,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves database instances to a different project in batches.</para>
+        /// <para>Moves multiple database instances to a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25330,7 +25330,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the LDAP authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25424,7 +25424,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the LDAP authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25518,7 +25518,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the LDAP authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25536,7 +25536,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Modifies the configuration of the LDAP authentication server for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29066,7 +29066,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the O&amp;M token by 1 hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29120,7 +29120,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the O&amp;M token by 1 hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29174,7 +29174,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the O&amp;M token by 1 hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29192,7 +29192,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</para>
+        /// <para>Renews an O&amp;M token. Each call extends the validity of the O&amp;M token by 1 hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30694,7 +30694,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
+        /// <para>Creates and binds tags for specified Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30748,7 +30748,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
+        /// <para>Creates and binds tags for specified Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30802,7 +30802,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
+        /// <para>Creates and binds tags for specified Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30820,7 +30820,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
+        /// <para>Creates and binds tags for specified Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">

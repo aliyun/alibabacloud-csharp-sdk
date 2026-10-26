@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DeleteProjectNotifyReceiversRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The IDs of the notification recipients to delete.</para>
         /// <remarks>
-        /// <para>You can call the GetProject operation to query this parameter.</para>
+        /// <para>You can call the GetProject operation to retrieve this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ReceiverIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

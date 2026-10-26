@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AddDatabasesToGroupRequest : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the database IDs.</para>
+        /// <para>The array of database IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DatabaseIds")]
@@ -18,10 +18,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<string> DatabaseIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset group to which you want to add the databases.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the asset group.</para>
-        /// </remarks>
+        /// <para>The ID of the asset group to which you want to add the databases. You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the asset group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +29,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
-        /// </remarks>
+        /// <para>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +40,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
-        /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
-        /// </remarks>
+        /// <para>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
