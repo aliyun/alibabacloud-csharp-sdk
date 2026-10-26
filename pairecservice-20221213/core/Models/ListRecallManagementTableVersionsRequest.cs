@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementTableVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>ASC</c> (ascending order) and <c>DESC</c> (descending order).</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ASC</c>: ascending order</description></item>
+        /// <item><description><c>DESC</c>: descending order</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>
@@ -51,7 +55,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by. Valid values: <c>GmtCreateTime</c> (creation time) and <c>GmtModifiedTime</c> (update time).</para>
+        /// <para>The sort criterion. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>GmtCreateTime</c>: creation time</description></item>
+        /// <item><description><c>GmtModifiedTime</c>: update time</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>

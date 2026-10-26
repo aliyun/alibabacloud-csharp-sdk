@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListTrafficControlTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return all results without pagination.</para>
+        /// <para>Specifies whether to return all data without pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The filter for traffic control targets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>All</c>: Returns all traffic control targets.</para>
+        /// <item><description><para>All: all targets.</para>
         /// </description></item>
-        /// <item><description><para><c>Valid</c>: Returns only active traffic control targets. A traffic control target is active if the current time is within the specified start and end time.</para>
+        /// <item><description><para>Valid: valid targets (in the enabling status within the start and end time period).</para>
         /// </description></item>
-        /// <item><description><para><c>None</c>: Does not return any traffic control targets.</para>
+        /// <item><description><para>None: no targets.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -38,13 +38,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ControlTargetFilter { get; set; }
 
         /// <summary>
-        /// <para>The environment. Valid values:</para>
+        /// <para>The runtime environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Daily</c>: the daily environment</para>
+        /// <item><description><para>Daily: daily environment.</para>
         /// </description></item>
-        /// <item><description><para><c>Pre</c>: the pre-production environment</para>
+        /// <item><description><para>Pre: pre-release environment.</para>
         /// </description></item>
-        /// <item><description><para><c>Prod</c>: the production environment</para>
+        /// <item><description><para>Prod: production environment.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can obtain this ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1%5C&m=16768%5C&n=4300782">ListInstances</a> operation.</para>
+        /// <para>The instance ID. You can obtain the ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1&m=16768&n=4300782">ListInstances</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-********</para>
@@ -76,12 +76,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ASC</c>: ascending order</para>
-        /// </description></item>
-        /// <item><description><para><c>DESC</c>: descending order</para>
-        /// </description></item>
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scene. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</para>
+        /// <para>The ID of the scene. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -122,12 +120,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Valid values:</para>
+        /// <para>The sorting criterion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>GmtCreateTime</c>: Sorts the results by creation time.</para>
-        /// </description></item>
-        /// <item><description><para><c>GmtModifiedTime</c>: Sorts the results by modification time.</para>
-        /// </description></item>
+        /// <item><description>GmtCreateTime: creation time.</description></item>
+        /// <item><description>GmtModifiedTime: update time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,15 +134,15 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>NotRunning</c>: The task is not running.</para>
+        /// <item><description><para>NotRunning: not running.</para>
         /// </description></item>
-        /// <item><description><para><c>Ready</c>: The task is ready to run.</para>
+        /// <item><description><para>Ready: pending.</para>
         /// </description></item>
-        /// <item><description><para><c>Running</c>: The task is running.</para>
+        /// <item><description><para>Running: running.</para>
         /// </description></item>
-        /// <item><description><para><c>Finished</c>: The task is finished.</para>
+        /// <item><description><para>Finished: finished.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -170,9 +166,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Latest</c>: The latest version. This is the default value.</para>
+        /// <item><description><para>Latest: latest version. Default value.</para>
         /// </description></item>
-        /// <item><description><para><c>Released</c>: the released version</para>
+        /// <item><description><para>Released: released version.</para>
         /// </description></item>
         /// </list>
         /// 

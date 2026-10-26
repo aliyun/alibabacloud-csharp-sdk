@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics for the data diagnosis task.</para>
+        /// <para>The list of data diagnostic nodes.</para>
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
         public QueryDataDiagnosisStatisticsResponseBodyStatistics Statistics { get; set; }
         public class QueryDataDiagnosisStatisticsResponseBodyStatistics : TeaModel {
             /// <summary>
-            /// <para>The dates of task failures.</para>
+            /// <para>The list of dates when tasks failed.</para>
             /// </summary>
             [NameInMap("FailedDates")]
             [Validation(Required=false)]
             public List<string> FailedDates { get; set; }
 
             /// <summary>
-            /// <para>The dates with missing task data.</para>
+            /// <para>The list of dates with missing tasks.</para>
             /// </summary>
             [NameInMap("NoDataDates")]
             [Validation(Required=false)]

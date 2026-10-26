@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListCrowdsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. Call the <c>ListInstances</c> operation to obtain this ID.</para>
+        /// <para>The ID of the instance. You can call the ListInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

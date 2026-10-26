@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of resources.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -29,10 +29,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The access status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Success</para>
-            /// </description></item>
-            /// <item><description><para>Failure</para>
-            /// </description></item>
+            /// <item><description>Success</description></item>
+            /// <item><description>Failure</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,38 +43,22 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Hologres</para>
-            /// </description></item>
-            /// <item><description><para>EAS</para>
-            /// </description></item>
-            /// <item><description><para>BE</para>
-            /// </description></item>
-            /// <item><description><para>Rec</para>
-            /// </description></item>
-            /// <item><description><para>Platform</para>
-            /// </description></item>
-            /// <item><description><para>SLS</para>
-            /// </description></item>
-            /// <item><description><para>DataHub</para>
-            /// </description></item>
-            /// <item><description><para>Kafka</para>
-            /// </description></item>
-            /// <item><description><para>Flinkvvp</para>
-            /// </description></item>
-            /// <item><description><para>ACR</para>
-            /// </description></item>
-            /// <item><description><para>OSS</para>
-            /// </description></item>
-            /// <item><description><para>DataWorks</para>
-            /// </description></item>
-            /// <item><description><para>PAI</para>
-            /// </description></item>
-            /// <item><description><para>MaxCompute</para>
-            /// </description></item>
-            /// <item><description><para>GraphCompute</para>
-            /// </description></item>
-            /// <item><description><para>Redis</para>
-            /// </description></item>
+            /// <item><description>Hologres</description></item>
+            /// <item><description>EAS</description></item>
+            /// <item><description>BE</description></item>
+            /// <item><description>Rec</description></item>
+            /// <item><description>Platform</description></item>
+            /// <item><description>SLS</description></item>
+            /// <item><description>DataHub</description></item>
+            /// <item><description>Kafka</description></item>
+            /// <item><description>Flinkvvp</description></item>
+            /// <item><description>ACR</description></item>
+            /// <item><description>OSS</description></item>
+            /// <item><description>DataWorks</description></item>
+            /// <item><description>PAI</description></item>
+            /// <item><description>MaxCompute</description></item>
+            /// <item><description>GraphCompute</description></item>
+            /// <item><description>Redis</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

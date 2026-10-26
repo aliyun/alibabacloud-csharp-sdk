@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListCalculationJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of calculation jobs.</para>
+        /// <para>The calculation tasks.</para>
         /// </summary>
         [NameInMap("CalculationJobs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ABMetricName { get; set; }
 
             /// <summary>
-            /// <para>The business date.</para>
+            /// <para>The business date. The date is in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>The calculation job ID.</para>
+            /// <para>The ID of the calculation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CalculationJobId { get; set; }
 
             /// <summary>
-            /// <para>The job configuration.</para>
+            /// <para>The task configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was run.</para>
+            /// <para>The execution time. The time is in the ISO 8601 format and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -67,19 +67,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtRanTime { get; set; }
 
             /// <summary>
-            /// <para>The job messages.</para>
+            /// <para>The task message.</para>
             /// </summary>
             [NameInMap("JobMessage")]
             [Validation(Required=false)]
             public List<string> JobMessage { get; set; }
 
             /// <summary>
-            /// <para>The source of the job. Valid values:</para>
+            /// <para>The task source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>CronOffline: The job is an offline scheduled task.</para>
-            /// </description></item>
-            /// <item><description><para>DataRerun: The job is a data rerun task.</para>
-            /// </description></item>
+            /// <item><description>CronOffline: Offline scheduled task.</description></item>
+            /// <item><description>DataRerun: Data rerun task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,16 +88,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string JobSource { get; set; }
 
             /// <summary>
-            /// <para>The status of the job. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Success</para>
-            /// </description></item>
-            /// <item><description><para>Failure</para>
-            /// </description></item>
-            /// <item><description><para>Initializing</para>
-            /// </description></item>
-            /// <item><description><para>Running</para>
-            /// </description></item>
+            /// <item><description>Success: Succeeded.</description></item>
+            /// <item><description>Failure: Failed.</description></item>
+            /// <item><description>Initializing: Initializing.</description></item>
+            /// <item><description>Running: Running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +116,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

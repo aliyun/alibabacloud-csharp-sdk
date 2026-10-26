@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListDataDiagnosisJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data diagnosis jobs.</para>
+        /// <para>The list of data diagnostic tasks.</para>
         /// </summary>
         [NameInMap("DataDiagnosisJobs")]
         [Validation(Required=false)]
         public List<ListDataDiagnosisJobsResponseBodyDataDiagnosisJobs> DataDiagnosisJobs { get; set; }
         public class ListDataDiagnosisJobsResponseBodyDataDiagnosisJobs : TeaModel {
             /// <summary>
-            /// <para>The business date.</para>
+            /// <para>The business date. The format is YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-28</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>The job configuration.</para>
+            /// <para>The task configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The data diagnosis configuration ID.</para>
+            /// <para>The ID of the data diagnostic configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataDiagnosisConfigId { get; set; }
 
             /// <summary>
-            /// <para>The data diagnosis configuration name.</para>
+            /// <para>The name of the data diagnostic configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>异常行为分析-xxx</para>
+            /// <para>Abnormal behavior analysis-xxx</para>
             /// </summary>
             [NameInMap("DataDiagnosisConfigName")]
             [Validation(Required=false)]
             public string DataDiagnosisConfigName { get; set; }
 
             /// <summary>
-            /// <para>The data diagnosis job ID.</para>
+            /// <para>The ID of the data diagnostic task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataDiagnosisJobId { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The creation time. The format is ISO 8601 and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the job started.</para>
+            /// <para>The execution time. The format is ISO 8601 and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -87,13 +87,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtStartTime { get; set; }
 
             /// <summary>
-            /// <para>The job source. Valid values:</para>
+            /// <para>The task source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Rerun: A manual rerun.</para>
+            /// <item><description><para>Rerun: Manual rerun.</para>
             /// </description></item>
-            /// <item><description><para>Cycle: A periodic run.</para>
+            /// <item><description><para>Cycle: Periodic generation.</para>
             /// </description></item>
-            /// <item><description><para>ByInitializing: Generated during initialization.</para>
+            /// <item><description><para>ByInitializing: Initialization generation.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string JobSource { get; set; }
 
             /// <summary>
-            /// <para>The log messages.</para>
+            /// <para>The list of log information.</para>
             /// </summary>
             [NameInMap("Logs")]
             [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The data diagnosis type.</para>
+            /// <para>The data diagnostic type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ChangeRate</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

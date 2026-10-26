@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the experiment layer was created.</para>
+        /// <para>The time when the experiment layer was created. The time follows the ISO 8601 standard and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2022-10-13 17:34:52.0</para>
+        /// <para>2022-10-13T17:34:52.232+08:00</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE97D06A-2AA0-5AD9-B6CF-8A267924D691</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The residual traffic in the experiment layer.</para>
+        /// <para>The remaining traffic on the experiment layer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetRecallManagementServiceVersionConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration type. Valid values: Recall (recall configuration) and Merge (merge configuration).</para>
+        /// <para>The recall management version configuration type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Recall: recall configuration.</description></item>
+        /// <item><description>Merge: merge configuration.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Recall</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The creation time, in ISO 8601 format.</para>
+        /// <para>The creation time in ISO 8601 format, including the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The last modification time, in ISO 8601 format.</para>
+        /// <para>The update time in ISO 8601 format, including the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public GetRecallManagementServiceVersionConfigResponseBodyMergeConfig MergeConfig { get; set; }
         public class GetRecallManagementServiceVersionConfigResponseBodyMergeConfig : TeaModel {
             /// <summary>
-            /// <para>Additional configuration for the merge operation, reserved for future enhancements.</para>
+            /// <para>The additional merge configuration for future feature extensions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;&quot;:&quot;&quot;}</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FilterExpression { get; set; }
 
             /// <summary>
-            /// <para>A list of filter table IDs.</para>
+            /// <para>The filter table IDs.</para>
             /// </summary>
             [NameInMap("FilterRecallManagementTableIds")]
             [Validation(Required=false)]
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemRecallManagementTableId { get; set; }
 
             /// <summary>
-            /// <para>A list of output fields from the item table.</para>
+            /// <para>The item table output fields.</para>
             /// </summary>
             [NameInMap("ItemTableFields")]
             [Validation(Required=false)]
@@ -93,10 +97,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The merge type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Weight: Merges items based on assigned weights.</para>
-            /// </description></item>
-            /// <item><description><para>Alternate: Merges items in an alternating sequence.</para>
-            /// </description></item>
+            /// <item><description>Weight: weight.</description></item>
+            /// <item><description>Alternate: alternate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Extended configuration, reserved for future use.</para>
+            /// <para>The additional configuration for future feature extensions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;&quot;:&quot;&quot;}</para>
@@ -146,7 +148,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ExtendedConfig { get; set; }
 
             /// <summary>
-            /// <para>The item conditions, as a JSON array string.</para>
+            /// <para>The item conditions in array format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;option&quot;:&quot;&lt;&quot;,&quot;field&quot;:&quot;category&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;value&quot;:&quot;10&quot;}]</para>
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionArray { get; set; }
 
             /// <summary>
-            /// <para>The item condition expression.</para>
+            /// <para>The item conditional expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age&gt;20</para>
@@ -196,14 +198,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>A list of operators.</para>
+            /// <para>The list of operators.</para>
             /// </summary>
             [NameInMap("Operators")]
             [Validation(Required=false)]
             public List<GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperators> Operators { get; set; }
             public class GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperators : TeaModel {
                 /// <summary>
-                /// <para>The configuration for the feature operator.</para>
+                /// <para>The configuration of the Feature operator.</para>
                 /// </summary>
                 [NameInMap("FeatureConfig")]
                 [Validation(Required=false)]
@@ -242,7 +244,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration for the filter operator.</para>
+                /// <para>The configuration of the Filter operator.</para>
                 /// </summary>
                 [NameInMap("FilterConfig")]
                 [Validation(Required=false)]
@@ -261,7 +263,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration for the Join operator.</para>
+                /// <para>The configuration of the Join operator.</para>
                 /// </summary>
                 [NameInMap("JoinConfig")]
                 [Validation(Required=false)]
@@ -278,7 +280,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                     public string Field { get; set; }
 
                     /// <summary>
-                    /// <para>The output fields.</para>
+                    /// <para>The list of returned fields.</para>
                     /// </summary>
                     [NameInMap("OutputFields")]
                     [Validation(Required=false)]
@@ -307,7 +309,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string OperatorType { get; set; }
 
                 /// <summary>
-                /// <para>The configuration for the Trigger operator.</para>
+                /// <para>The configuration of the Trigger operator.</para>
                 /// </summary>
                 [NameInMap("TriggerConfig")]
                 [Validation(Required=false)]
@@ -334,7 +336,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                     public int? FieldQuantityLimit { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to randomly sort the items.</para>
+                    /// <para>Specifies whether random sorting is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -344,7 +346,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                     public bool? IsRandSort { get; set; }
 
                     /// <summary>
-                    /// <para>The sort field.</para>
+                    /// <para>The sort fields.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>create_time</para>
@@ -358,7 +360,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
-            /// <para>The priority. A lower value indicates a higher priority.</para>
+            /// <para>The priority. A smaller number indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -460,7 +462,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RecallManagementServiceVersionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>

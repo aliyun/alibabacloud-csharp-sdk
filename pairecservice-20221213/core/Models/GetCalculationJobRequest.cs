@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetCalculationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

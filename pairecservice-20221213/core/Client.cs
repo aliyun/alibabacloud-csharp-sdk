@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs data backflow for the latest job of a specified feature consistency check job configuration.</para>
+        /// <para>Performs data backflow for the most recently created task under the specified feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs data backflow for the latest job of a specified feature consistency check job configuration.</para>
+        /// <para>Performs data backflow for the most recently created task under the specified feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs data backflow for the latest job of a specified feature consistency check job configuration.</para>
+        /// <para>Performs data backflow for the most recently created task under the specified feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs data backflow for the latest job of a specified feature consistency check job configuration.</para>
+        /// <para>Performs data backflow for the most recently created task under the specified feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -565,17 +565,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</para>
+        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues an existing session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</description></item>
-        /// <item><description>If the <c>ConversationId</c> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</description></item>
-        /// <item><description>The <c>Config</c> field allows you to pass additional information input. The value must be in JSON format.</description></item>
-        /// <item><description>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
+        /// <item><description>This API sends a conversation message to an agent and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the ConversationId parameter is provided, the conversation continues in the context of the specified existing session. If this parameter is not provided, automatic creation of a new session is triggered.</description></item>
+        /// <item><description>The Config field allows you to pass additional information input, which must be in JSON format.</description></item>
+        /// <item><description>If the request is successful, the response includes the message ID and reply content of the current conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -634,17 +634,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</para>
+        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues an existing session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</description></item>
-        /// <item><description>If the <c>ConversationId</c> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</description></item>
-        /// <item><description>The <c>Config</c> field allows you to pass additional information input. The value must be in JSON format.</description></item>
-        /// <item><description>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
+        /// <item><description>This API sends a conversation message to an agent and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the ConversationId parameter is provided, the conversation continues in the context of the specified existing session. If this parameter is not provided, automatic creation of a new session is triggered.</description></item>
+        /// <item><description>The Config field allows you to pass additional information input, which must be in JSON format.</description></item>
+        /// <item><description>If the request is successful, the response includes the message ID and reply content of the current conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -703,17 +703,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</para>
+        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues an existing session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</description></item>
-        /// <item><description>If the <c>ConversationId</c> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</description></item>
-        /// <item><description>The <c>Config</c> field allows you to pass additional information input. The value must be in JSON format.</description></item>
-        /// <item><description>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
+        /// <item><description>This API sends a conversation message to an agent and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the ConversationId parameter is provided, the conversation continues in the context of the specified existing session. If this parameter is not provided, automatic creation of a new session is triggered.</description></item>
+        /// <item><description>The Config field allows you to pass additional information input, which must be in JSON format.</description></item>
+        /// <item><description>If the request is successful, the response includes the message ID and reply content of the current conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -733,17 +733,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</para>
+        /// <para>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues an existing session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</description></item>
-        /// <item><description>If the <c>ConversationId</c> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</description></item>
-        /// <item><description>The <c>Config</c> field allows you to pass additional information input. The value must be in JSON format.</description></item>
-        /// <item><description>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
+        /// <item><description>This API sends a conversation message to an agent and supports Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the ConversationId parameter is provided, the conversation continues in the context of the specified existing session. If this parameter is not provided, automatic creation of a new session is triggered.</description></item>
+        /// <item><description>The Config field allows you to pass additional information input, which must be in JSON format.</description></item>
+        /// <item><description>If the request is successful, the response includes the message ID and reply content of the current conversation. If a fault occurs, the corresponding error code and error message are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -763,7 +763,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies access to resources configured for an instance.</para>
+        /// <para>Checks the connection status of the resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -817,7 +817,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies access to resources configured for an instance.</para>
+        /// <para>Checks the connection status of the resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -871,7 +871,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies access to resources configured for an instance.</para>
+        /// <para>Checks the connection status of the resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -890,7 +890,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies access to resources configured for an instance.</para>
+        /// <para>Checks the connection status of the resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2517,7 +2517,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple calculation jobs.</para>
+        /// <para>Creates compute tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2575,7 +2575,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple calculation jobs.</para>
+        /// <para>Creates compute tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2633,7 +2633,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple calculation jobs.</para>
+        /// <para>Creates compute tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2652,7 +2652,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple calculation jobs.</para>
+        /// <para>Creates compute tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2841,17 +2841,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis task. This API supports various analysis types.</para>
+        /// <para>Creates data modeling diagnostic tasks of different types and supports multiple analysis types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</description></item>
-        /// <item><description>The content of the <c>Config</c> parameter depends on the value of the <c>Type</c> parameter. For more information, see the example configurations in this topic.</description></item>
-        /// <item><description>To run the task on a schedule, specify the <c>CycleTime</c> parameter. If this parameter is omitted, the task runs only once.</description></item>
-        /// <item><description>The optional <c>TopNQuantity</c> parameter specifies the number of top results to return.</description></item>
+        /// <item><description>This API creates data diagnostic tasks and supports multiple analysis types, including item/user change rate analysis, user preference statistical period analysis, join table analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>The content of the Config field varies depending on the Type value. Set this field correctly by referring to the sample configurations in the References.</description></item>
+        /// <item><description>To execute the diagnostic task periodically, set the CycleTime field. If this field is not set, the diagnostic task does not execute periodically.</description></item>
+        /// <item><description>The TopNQuantity field specifies the number of top N results to display. This field is default optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2942,17 +2942,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis task. This API supports various analysis types.</para>
+        /// <para>Creates data modeling diagnostic tasks of different types and supports multiple analysis types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</description></item>
-        /// <item><description>The content of the <c>Config</c> parameter depends on the value of the <c>Type</c> parameter. For more information, see the example configurations in this topic.</description></item>
-        /// <item><description>To run the task on a schedule, specify the <c>CycleTime</c> parameter. If this parameter is omitted, the task runs only once.</description></item>
-        /// <item><description>The optional <c>TopNQuantity</c> parameter specifies the number of top results to return.</description></item>
+        /// <item><description>This API creates data diagnostic tasks and supports multiple analysis types, including item/user change rate analysis, user preference statistical period analysis, join table analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>The content of the Config field varies depending on the Type value. Set this field correctly by referring to the sample configurations in the References.</description></item>
+        /// <item><description>To execute the diagnostic task periodically, set the CycleTime field. If this field is not set, the diagnostic task does not execute periodically.</description></item>
+        /// <item><description>The TopNQuantity field specifies the number of top N results to display. This field is default optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3043,17 +3043,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis task. This API supports various analysis types.</para>
+        /// <para>Creates data modeling diagnostic tasks of different types and supports multiple analysis types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</description></item>
-        /// <item><description>The content of the <c>Config</c> parameter depends on the value of the <c>Type</c> parameter. For more information, see the example configurations in this topic.</description></item>
-        /// <item><description>To run the task on a schedule, specify the <c>CycleTime</c> parameter. If this parameter is omitted, the task runs only once.</description></item>
-        /// <item><description>The optional <c>TopNQuantity</c> parameter specifies the number of top results to return.</description></item>
+        /// <item><description>This API creates data diagnostic tasks and supports multiple analysis types, including item/user change rate analysis, user preference statistical period analysis, join table analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>The content of the Config field varies depending on the Type value. Set this field correctly by referring to the sample configurations in the References.</description></item>
+        /// <item><description>To execute the diagnostic task periodically, set the CycleTime field. If this field is not set, the diagnostic task does not execute periodically.</description></item>
+        /// <item><description>The TopNQuantity field specifies the number of top N results to display. This field is default optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3073,17 +3073,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis task. This API supports various analysis types.</para>
+        /// <para>Creates data modeling diagnostic tasks of different types and supports multiple analysis types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</description></item>
-        /// <item><description>The content of the <c>Config</c> parameter depends on the value of the <c>Type</c> parameter. For more information, see the example configurations in this topic.</description></item>
-        /// <item><description>To run the task on a schedule, specify the <c>CycleTime</c> parameter. If this parameter is omitted, the task runs only once.</description></item>
-        /// <item><description>The optional <c>TopNQuantity</c> parameter specifies the number of top results to return.</description></item>
+        /// <item><description>This API creates data diagnostic tasks and supports multiple analysis types, including item/user change rate analysis, user preference statistical period analysis, join table analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>The content of the Config field varies depending on the Type value. Set this field correctly by referring to the sample configurations in the References.</description></item>
+        /// <item><description>To execute the diagnostic task periodically, set the CycleTime field. If this field is not set, the diagnostic task does not execute periodically.</description></item>
+        /// <item><description>The TopNQuantity field specifies the number of top N results to display. This field is default optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3103,13 +3103,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis (rerun) job for a specified time period.</para>
+        /// <para>Creates a data modeling diagnostics (rerun) task for a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>By invoking this API, you can start a new data modeling diagnostics node for a specific instance within a given time range. Make sure the values of the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are accurate to ensure the node executes correctly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3167,13 +3167,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis (rerun) job for a specified time period.</para>
+        /// <para>Creates a data modeling diagnostics (rerun) task for a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>By invoking this API, you can start a new data modeling diagnostics node for a specific instance within a given time range. Make sure the values of the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are accurate to ensure the node executes correctly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3231,13 +3231,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis (rerun) job for a specified time period.</para>
+        /// <para>Creates a data modeling diagnostics (rerun) task for a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>By invoking this API, you can start a new data modeling diagnostics node for a specific instance within a given time range. Make sure the values of the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are accurate to ensure the node executes correctly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3256,13 +3256,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data diagnosis (rerun) job for a specified time period.</para>
+        /// <para>Creates a data modeling diagnostics (rerun) task for a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>By invoking this API, you can start a new data modeling diagnostics node for a specific instance within a given time range. Make sure the values of the <c>DataDiagnosisId</c>, <c>InstanceId</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are accurate to ensure the node executes correctly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7381,17 +7381,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</para>
+        /// <para>Creates a traffic control target and configures parameters such as control conditions, events, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request notes</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ItemConditionType</c> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</description></item>
-        /// <item><description>The <c>ToleranceValue</c> and <c>NewProductRegulation</c> parameters are optional.</description></item>
-        /// <item><description>The <c>Status</c> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</description></item>
+        /// <item><description><c>ItemConditionType</c> supports two formats: array format (Array) and expression format (Expression). Depending on your selection, you must provide the corresponding <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
+        /// <item><description>The default value of <c>StatisPeriod</c> is daily. If you require hourly statistics, explicitly specify this parameter.</description></item>
+        /// <item><description><c>ToleranceValue</c> and <c>NewProductRegulation</c> are optional parameters. Specify them only when you have specific requirements.</description></item>
+        /// <item><description>The <c>Status</c> field allows you to control whether the newly created traffic control target takes effect immediately. By default, it may be in the disabled state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7490,17 +7490,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</para>
+        /// <para>Creates a traffic control target and configures parameters such as control conditions, events, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request notes</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ItemConditionType</c> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</description></item>
-        /// <item><description>The <c>ToleranceValue</c> and <c>NewProductRegulation</c> parameters are optional.</description></item>
-        /// <item><description>The <c>Status</c> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</description></item>
+        /// <item><description><c>ItemConditionType</c> supports two formats: array format (Array) and expression format (Expression). Depending on your selection, you must provide the corresponding <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
+        /// <item><description>The default value of <c>StatisPeriod</c> is daily. If you require hourly statistics, explicitly specify this parameter.</description></item>
+        /// <item><description><c>ToleranceValue</c> and <c>NewProductRegulation</c> are optional parameters. Specify them only when you have specific requirements.</description></item>
+        /// <item><description>The <c>Status</c> field allows you to control whether the newly created traffic control target takes effect immediately. By default, it may be in the disabled state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7599,17 +7599,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</para>
+        /// <para>Creates a traffic control target and configures parameters such as control conditions, events, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request notes</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ItemConditionType</c> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</description></item>
-        /// <item><description>The <c>ToleranceValue</c> and <c>NewProductRegulation</c> parameters are optional.</description></item>
-        /// <item><description>The <c>Status</c> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</description></item>
+        /// <item><description><c>ItemConditionType</c> supports two formats: array format (Array) and expression format (Expression). Depending on your selection, you must provide the corresponding <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
+        /// <item><description>The default value of <c>StatisPeriod</c> is daily. If you require hourly statistics, explicitly specify this parameter.</description></item>
+        /// <item><description><c>ToleranceValue</c> and <c>NewProductRegulation</c> are optional parameters. Specify them only when you have specific requirements.</description></item>
+        /// <item><description>The <c>Status</c> field allows you to control whether the newly created traffic control target takes effect immediately. By default, it may be in the disabled state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7629,17 +7629,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</para>
+        /// <para>Creates a traffic control target and configures parameters such as control conditions, events, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request notes</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ItemConditionType</c> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</description></item>
-        /// <item><description>The <c>ToleranceValue</c> and <c>NewProductRegulation</c> parameters are optional.</description></item>
-        /// <item><description>The <c>Status</c> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</description></item>
+        /// <item><description><c>ItemConditionType</c> supports two formats: array format (Array) and expression format (Expression). Depending on your selection, you must provide the corresponding <c>ItemConditionArray</c> or <c>ItemConditionExpress</c>.</description></item>
+        /// <item><description>The default value of <c>StatisPeriod</c> is daily. If you require hourly statistics, explicitly specify this parameter.</description></item>
+        /// <item><description><c>ToleranceValue</c> and <c>NewProductRegulation</c> are optional parameters. Specify them only when you have specific requirements.</description></item>
+        /// <item><description>The <c>Status</c> field allows you to control whether the newly created traffic control target takes effect immediately. By default, it may be in the disabled state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7659,19 +7659,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control task with multiple conditions and target configurations.</para>
+        /// <para>Creates a traffic control task with various condition settings and target configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</description></item>
-        /// <item><description>The <c>ExecutionTime</c> parameter specifies the execution time mode for the task. If you select the <c>TimeRange</c> mode, you must provide both the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
-        /// <item><description>The <c>TrafficControlTargets</c> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</description></item>
-        /// <item><description>You can use the <c>UserConditionType</c> and <c>ItemConditionType</c> parameters to define conditions for the target user group and items.</description></item>
-        /// <item><description>Set the <c>ControlLogic</c> parameter to <c>Guaranteed</c> for guaranteed control or to <c>Approach</c> for approach control.</description></item>
-        /// <item><description>To configure new product regulation, use the <c>NewProductRegulation</c> field.</description></item>
+        /// <item><description>This API operation creates a traffic control task. You can define traffic control policies based on different scenarios, time ranges, and specific user or item conditions.</description></item>
+        /// <item><description>The <c>ExecutionTime</c> parameter specifies the time mode for task execution. If you select the <c>TimeRange</c> mode, you must specify both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>The traffic control target list (<c>TrafficControlTargets</c>) is required. For each target, you must specify its name, time range, event type, and expected value.</description></item>
+        /// <item><description>You can use <c>UserConditionType</c> and <c>ItemConditionType</c> to flexibly set specific conditions for the target users and items. Both array and expression formats are supported.</description></item>
+        /// <item><description>The <c>ControlLogic</c> parameter can be set to <c>Guaranteed</c> or <c>Approach</c>, which indicates guaranteed traffic control or approximate traffic control, respectively.</description></item>
+        /// <item><description>When you configure new product regulation, make sure that the <c>NewProductRegulation</c> field is correctly specified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7830,19 +7830,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control task with multiple conditions and target configurations.</para>
+        /// <para>Creates a traffic control task with various condition settings and target configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</description></item>
-        /// <item><description>The <c>ExecutionTime</c> parameter specifies the execution time mode for the task. If you select the <c>TimeRange</c> mode, you must provide both the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
-        /// <item><description>The <c>TrafficControlTargets</c> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</description></item>
-        /// <item><description>You can use the <c>UserConditionType</c> and <c>ItemConditionType</c> parameters to define conditions for the target user group and items.</description></item>
-        /// <item><description>Set the <c>ControlLogic</c> parameter to <c>Guaranteed</c> for guaranteed control or to <c>Approach</c> for approach control.</description></item>
-        /// <item><description>To configure new product regulation, use the <c>NewProductRegulation</c> field.</description></item>
+        /// <item><description>This API operation creates a traffic control task. You can define traffic control policies based on different scenarios, time ranges, and specific user or item conditions.</description></item>
+        /// <item><description>The <c>ExecutionTime</c> parameter specifies the time mode for task execution. If you select the <c>TimeRange</c> mode, you must specify both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>The traffic control target list (<c>TrafficControlTargets</c>) is required. For each target, you must specify its name, time range, event type, and expected value.</description></item>
+        /// <item><description>You can use <c>UserConditionType</c> and <c>ItemConditionType</c> to flexibly set specific conditions for the target users and items. Both array and expression formats are supported.</description></item>
+        /// <item><description>The <c>ControlLogic</c> parameter can be set to <c>Guaranteed</c> or <c>Approach</c>, which indicates guaranteed traffic control or approximate traffic control, respectively.</description></item>
+        /// <item><description>When you configure new product regulation, make sure that the <c>NewProductRegulation</c> field is correctly specified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8001,19 +8001,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control task with multiple conditions and target configurations.</para>
+        /// <para>Creates a traffic control task with various condition settings and target configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</description></item>
-        /// <item><description>The <c>ExecutionTime</c> parameter specifies the execution time mode for the task. If you select the <c>TimeRange</c> mode, you must provide both the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
-        /// <item><description>The <c>TrafficControlTargets</c> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</description></item>
-        /// <item><description>You can use the <c>UserConditionType</c> and <c>ItemConditionType</c> parameters to define conditions for the target user group and items.</description></item>
-        /// <item><description>Set the <c>ControlLogic</c> parameter to <c>Guaranteed</c> for guaranteed control or to <c>Approach</c> for approach control.</description></item>
-        /// <item><description>To configure new product regulation, use the <c>NewProductRegulation</c> field.</description></item>
+        /// <item><description>This API operation creates a traffic control task. You can define traffic control policies based on different scenarios, time ranges, and specific user or item conditions.</description></item>
+        /// <item><description>The <c>ExecutionTime</c> parameter specifies the time mode for task execution. If you select the <c>TimeRange</c> mode, you must specify both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>The traffic control target list (<c>TrafficControlTargets</c>) is required. For each target, you must specify its name, time range, event type, and expected value.</description></item>
+        /// <item><description>You can use <c>UserConditionType</c> and <c>ItemConditionType</c> to flexibly set specific conditions for the target users and items. Both array and expression formats are supported.</description></item>
+        /// <item><description>The <c>ControlLogic</c> parameter can be set to <c>Guaranteed</c> or <c>Approach</c>, which indicates guaranteed traffic control or approximate traffic control, respectively.</description></item>
+        /// <item><description>When you configure new product regulation, make sure that the <c>NewProductRegulation</c> field is correctly specified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8033,19 +8033,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new traffic control task with multiple conditions and target configurations.</para>
+        /// <para>Creates a traffic control task with various condition settings and target configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</description></item>
-        /// <item><description>The <c>ExecutionTime</c> parameter specifies the execution time mode for the task. If you select the <c>TimeRange</c> mode, you must provide both the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
-        /// <item><description>The <c>TrafficControlTargets</c> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</description></item>
-        /// <item><description>You can use the <c>UserConditionType</c> and <c>ItemConditionType</c> parameters to define conditions for the target user group and items.</description></item>
-        /// <item><description>Set the <c>ControlLogic</c> parameter to <c>Guaranteed</c> for guaranteed control or to <c>Approach</c> for approach control.</description></item>
-        /// <item><description>To configure new product regulation, use the <c>NewProductRegulation</c> field.</description></item>
+        /// <item><description>This API operation creates a traffic control task. You can define traffic control policies based on different scenarios, time ranges, and specific user or item conditions.</description></item>
+        /// <item><description>The <c>ExecutionTime</c> parameter specifies the time mode for task execution. If you select the <c>TimeRange</c> mode, you must specify both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>The traffic control target list (<c>TrafficControlTargets</c>) is required. For each target, you must specify its name, time range, event type, and expected value.</description></item>
+        /// <item><description>You can use <c>UserConditionType</c> and <c>ItemConditionType</c> to flexibly set specific conditions for the target users and items. Both array and expression formats are supported.</description></item>
+        /// <item><description>The <c>ControlLogic</c> parameter can be set to <c>Guaranteed</c> or <c>Approach</c>, which indicates guaranteed traffic control or approximate traffic control, respectively.</description></item>
+        /// <item><description>When you configure new product regulation, make sure that the <c>NewProductRegulation</c> field is correctly specified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12327,7 +12327,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an A/B metric.</para>
+        /// <para>Retrieves the details of an ABTest metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12373,7 +12373,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an A/B metric.</para>
+        /// <para>Retrieves the details of an ABTest metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12419,7 +12419,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an A/B metric.</para>
+        /// <para>Retrieves the details of an ABTest metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12438,7 +12438,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an A/B metric.</para>
+        /// <para>Retrieves the details of an ABTest metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12587,7 +12587,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified calculation job.</para>
+        /// <para>Retrieves the details of a specified compute task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12633,7 +12633,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified calculation job.</para>
+        /// <para>Retrieves the details of a specified compute task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12679,7 +12679,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified calculation job.</para>
+        /// <para>Retrieves the details of a specified compute task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12698,7 +12698,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified calculation job.</para>
+        /// <para>Retrieves the details of a specified compute task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12717,17 +12717,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</para>
+        /// <para>Retrieves detailed data modeling diagnostics information by diagnostic node ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific data diagnosis task using the provided <c>DataDiagnosisId</c> (data diagnosis task configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
-        /// <item><description>The <c>CycleTime</c> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</description></item>
-        /// <item><description>The value of <c>Type</c> determines the content of the <c>Config</c> field. For details about the required configuration for each type, see the relevant documentation.</description></item>
-        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> are timestamps for the record\&quot;s creation and modification times, respectively.</description></item>
+        /// <item><description>This API retrieves detailed information about a specific diagnostic node based on the provided <c>DataDiagnosisId</c> (diagnostic node configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
+        /// <item><description>The <c>CycleTime</c> field indicates the epoch runtime. If this field is empty, no scheduled runs are performed.</description></item>
+        /// <item><description>The content of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the References for the specific configuration items required for each type.</description></item>
+        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> represent the UNIX timestamps for when the record was created and last modified, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12774,17 +12774,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</para>
+        /// <para>Retrieves detailed data modeling diagnostics information by diagnostic node ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific data diagnosis task using the provided <c>DataDiagnosisId</c> (data diagnosis task configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
-        /// <item><description>The <c>CycleTime</c> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</description></item>
-        /// <item><description>The value of <c>Type</c> determines the content of the <c>Config</c> field. For details about the required configuration for each type, see the relevant documentation.</description></item>
-        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> are timestamps for the record\&quot;s creation and modification times, respectively.</description></item>
+        /// <item><description>This API retrieves detailed information about a specific diagnostic node based on the provided <c>DataDiagnosisId</c> (diagnostic node configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
+        /// <item><description>The <c>CycleTime</c> field indicates the epoch runtime. If this field is empty, no scheduled runs are performed.</description></item>
+        /// <item><description>The content of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the References for the specific configuration items required for each type.</description></item>
+        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> represent the UNIX timestamps for when the record was created and last modified, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12831,17 +12831,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</para>
+        /// <para>Retrieves detailed data modeling diagnostics information by diagnostic node ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific data diagnosis task using the provided <c>DataDiagnosisId</c> (data diagnosis task configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
-        /// <item><description>The <c>CycleTime</c> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</description></item>
-        /// <item><description>The value of <c>Type</c> determines the content of the <c>Config</c> field. For details about the required configuration for each type, see the relevant documentation.</description></item>
-        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> are timestamps for the record\&quot;s creation and modification times, respectively.</description></item>
+        /// <item><description>This API retrieves detailed information about a specific diagnostic node based on the provided <c>DataDiagnosisId</c> (diagnostic node configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
+        /// <item><description>The <c>CycleTime</c> field indicates the epoch runtime. If this field is empty, no scheduled runs are performed.</description></item>
+        /// <item><description>The content of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the References for the specific configuration items required for each type.</description></item>
+        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> represent the UNIX timestamps for when the record was created and last modified, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12861,17 +12861,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</para>
+        /// <para>Retrieves detailed data modeling diagnostics information by diagnostic node ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific data diagnosis task using the provided <c>DataDiagnosisId</c> (data diagnosis task configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
-        /// <item><description>The <c>CycleTime</c> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</description></item>
-        /// <item><description>The value of <c>Type</c> determines the content of the <c>Config</c> field. For details about the required configuration for each type, see the relevant documentation.</description></item>
-        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> are timestamps for the record\&quot;s creation and modification times, respectively.</description></item>
+        /// <item><description>This API retrieves detailed information about a specific diagnostic node based on the provided <c>DataDiagnosisId</c> (diagnostic node configuration ID) and <c>InstanceId</c> (instance ID).</description></item>
+        /// <item><description>The <c>CycleTime</c> field indicates the epoch runtime. If this field is empty, no scheduled runs are performed.</description></item>
+        /// <item><description>The content of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the References for the specific configuration items required for each type.</description></item>
+        /// <item><description><c>GmtCreateTime</c> and <c>GmtModifiedTime</c> represent the UNIX timestamps for when the record was created and last modified, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13281,7 +13281,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a feature consistency check job.</para>
+        /// <para>Retrieves the details of a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13327,7 +13327,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a feature consistency check job.</para>
+        /// <para>Retrieves the details of a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13373,7 +13373,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a feature consistency check job.</para>
+        /// <para>Retrieves the details of a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13392,7 +13392,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a feature consistency check job.</para>
+        /// <para>Retrieves the details of a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13411,7 +13411,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration details of a feature consistency check task.</para>
+        /// <para>Retrieves the configuration details of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13457,7 +13457,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration details of a feature consistency check task.</para>
+        /// <para>Retrieves the configuration details of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13503,7 +13503,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration details of a feature consistency check task.</para>
+        /// <para>Retrieves the configuration details of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13522,7 +13522,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration details of a feature consistency check task.</para>
+        /// <para>Retrieves the configuration details of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13541,7 +13541,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PAIRec instance.</para>
+        /// <para>Queries the details of a specified PAIRec instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13581,7 +13581,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PAIRec instance.</para>
+        /// <para>Queries the details of a specified PAIRec instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13621,7 +13621,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PAIRec instance.</para>
+        /// <para>Queries the details of a specified PAIRec instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13640,7 +13640,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PAIRec instance.</para>
+        /// <para>Queries the details of a specified PAIRec instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13659,7 +13659,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific resource in a specified instance.</para>
+        /// <para>Retrieves the details of a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13699,7 +13699,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific resource in a specified instance.</para>
+        /// <para>Retrieves the details of a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13739,7 +13739,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific resource in a specified instance.</para>
+        /// <para>Retrieves the details of a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13758,7 +13758,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific resource in a specified instance.</para>
+        /// <para>Retrieves the details of a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14285,13 +14285,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific recall management job, including its status and log.</para>
+        /// <para>Queries the details of a specific recall management task, including the status and logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Retrieves the details of a specific recall management job using its <c>RecallManagementJobId</c> and <c>InstanceId</c>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <c>RecallManagementJobId</c> as a path parameter and the <c>InstanceId</c> as a query parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provides the details of a specified recall management task by using RecallManagementJobId and InstanceId. This API returns the task status (such as init, running, success, or failed), start and end times, related table information, and operation logs. Make sure to specify the path parameter RecallManagementJobId and the query parameter InstanceId in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14337,13 +14337,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific recall management job, including its status and log.</para>
+        /// <para>Queries the details of a specific recall management task, including the status and logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Retrieves the details of a specific recall management job using its <c>RecallManagementJobId</c> and <c>InstanceId</c>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <c>RecallManagementJobId</c> as a path parameter and the <c>InstanceId</c> as a query parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provides the details of a specified recall management task by using RecallManagementJobId and InstanceId. This API returns the task status (such as init, running, success, or failed), start and end times, related table information, and operation logs. Make sure to specify the path parameter RecallManagementJobId and the query parameter InstanceId in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14389,13 +14389,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific recall management job, including its status and log.</para>
+        /// <para>Queries the details of a specific recall management task, including the status and logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Retrieves the details of a specific recall management job using its <c>RecallManagementJobId</c> and <c>InstanceId</c>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <c>RecallManagementJobId</c> as a path parameter and the <c>InstanceId</c> as a query parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provides the details of a specified recall management task by using RecallManagementJobId and InstanceId. This API returns the task status (such as init, running, success, or failed), start and end times, related table information, and operation logs. Make sure to specify the path parameter RecallManagementJobId and the query parameter InstanceId in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14414,13 +14414,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific recall management job, including its status and log.</para>
+        /// <para>Queries the details of a specific recall management task, including the status and logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Retrieves the details of a specific recall management job using its <c>RecallManagementJobId</c> and <c>InstanceId</c>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <c>RecallManagementJobId</c> as a path parameter and the <c>InstanceId</c> as a query parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provides the details of a specified recall management task by using RecallManagementJobId and InstanceId. This API returns the task status (such as init, running, success, or failed), start and end times, related table information, and operation logs. Make sure to specify the path parameter RecallManagementJobId and the query parameter InstanceId in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14439,12 +14439,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management service, including its status and version.</para>
+        /// <para>Queries the details of a specified recall management service, including the status and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -14490,12 +14490,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management service, including its status and version.</para>
+        /// <para>Queries the details of a specified recall management service, including the status and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -14541,12 +14541,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management service, including its status and version.</para>
+        /// <para>Queries the details of a specified recall management service, including the status and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -14565,12 +14565,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management service, including its status and version.</para>
+        /// <para>Queries the details of a specified recall management service, including the status and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -14589,7 +14589,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version details of the recall management service.</para>
+        /// <para>Retrieves the details of a recall management service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14635,7 +14635,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version details of the recall management service.</para>
+        /// <para>Retrieves the details of a recall management service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14681,7 +14681,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version details of the recall management service.</para>
+        /// <para>Retrieves the details of a recall management service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14700,7 +14700,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version details of the recall management service.</para>
+        /// <para>Retrieves the details of a recall management service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14719,16 +14719,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the configuration details of a specific recall management service version.</para>
+        /// <para>Queries the configuration details of a specific recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <c>InstanceId</c> is crucial for locating the correct instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Specify the recall management service ID, version ID, and configuration ID to retrieve the configuration details of the recall service version. Ensure that the parameter values are accurate, especially <c>InstanceId</c>, which is crucial for locating the correct instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must reference an existing resource.</description></item>
-        /// <item><description><b>Extended configuration</b>: The response includes the <c>ExtendedConfig</c> field, which is used for future extensions and custom settings. Parse this field as needed.</description></item>
+        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must match existing resources.</description></item>
+        /// <item><description><b>Extended configuration</b>: The returned data includes the <c>ExtendedConfig</c> field for future feature extensions or custom settings. Parse and use it as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14775,16 +14775,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the configuration details of a specific recall management service version.</para>
+        /// <para>Queries the configuration details of a specific recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <c>InstanceId</c> is crucial for locating the correct instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Specify the recall management service ID, version ID, and configuration ID to retrieve the configuration details of the recall service version. Ensure that the parameter values are accurate, especially <c>InstanceId</c>, which is crucial for locating the correct instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must reference an existing resource.</description></item>
-        /// <item><description><b>Extended configuration</b>: The response includes the <c>ExtendedConfig</c> field, which is used for future extensions and custom settings. Parse this field as needed.</description></item>
+        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must match existing resources.</description></item>
+        /// <item><description><b>Extended configuration</b>: The returned data includes the <c>ExtendedConfig</c> field for future feature extensions or custom settings. Parse and use it as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14831,16 +14831,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the configuration details of a specific recall management service version.</para>
+        /// <para>Queries the configuration details of a specific recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <c>InstanceId</c> is crucial for locating the correct instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Specify the recall management service ID, version ID, and configuration ID to retrieve the configuration details of the recall service version. Ensure that the parameter values are accurate, especially <c>InstanceId</c>, which is crucial for locating the correct instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must reference an existing resource.</description></item>
-        /// <item><description><b>Extended configuration</b>: The response includes the <c>ExtendedConfig</c> field, which is used for future extensions and custom settings. Parse this field as needed.</description></item>
+        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must match existing resources.</description></item>
+        /// <item><description><b>Extended configuration</b>: The returned data includes the <c>ExtendedConfig</c> field for future feature extensions or custom settings. Parse and use it as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14860,16 +14860,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the configuration details of a specific recall management service version.</para>
+        /// <para>Queries the configuration details of a specific recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <c>InstanceId</c> is crucial for locating the correct instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Specify the recall management service ID, version ID, and configuration ID to retrieve the configuration details of the recall service version. Ensure that the parameter values are accurate, especially <c>InstanceId</c>, which is crucial for locating the correct instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must reference an existing resource.</description></item>
-        /// <item><description><b>Extended configuration</b>: The response includes the <c>ExtendedConfig</c> field, which is used for future extensions and custom settings. Parse this field as needed.</description></item>
+        /// <item><description><b>Note</b>: All path parameters (<c>RecallManagementServiceId</c>, <c>RecallManagementServiceVersionId</c>, and <c>RecallManagementServiceVersionConfigId</c>) are required and must match existing resources.</description></item>
+        /// <item><description><b>Extended configuration</b>: The returned data includes the <c>ExtendedConfig</c> field for future feature extensions or custom settings. Parse and use it as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14889,17 +14889,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management table, including its table structure and configuration.</para>
+        /// <para>Queries the details of a specified recall management table, including the table schema and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves details of a specific recall management table using the provided <c>RecallManagementTableId</c> and <c>InstanceId</c>. Ensure you provide the correct values for these parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a recall management table based on the specified table ID (<c>RecallManagementTableId</c>) and instance ID (<c>InstanceId</c>). Make sure to provide valid values for these two parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</description></item>
-        /// <item><description>The <c>Fields</c> list contains the definitions for each field in the data table, including their name, type, and properties.</description></item>
-        /// <item><description>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</description></item>
+        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the table supports deletion. Handle the related logic with caution.</description></item>
+        /// <item><description>The <c>Fields</c> list contains the specific definitions of the fields in the table, such as the name, type, and attributes.</description></item>
+        /// <item><description>The fluctuation threshold settings for the table (row count and size) can be configured or queried through the corresponding fields to monitor data changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14946,17 +14946,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management table, including its table structure and configuration.</para>
+        /// <para>Queries the details of a specified recall management table, including the table schema and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves details of a specific recall management table using the provided <c>RecallManagementTableId</c> and <c>InstanceId</c>. Ensure you provide the correct values for these parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a recall management table based on the specified table ID (<c>RecallManagementTableId</c>) and instance ID (<c>InstanceId</c>). Make sure to provide valid values for these two parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</description></item>
-        /// <item><description>The <c>Fields</c> list contains the definitions for each field in the data table, including their name, type, and properties.</description></item>
-        /// <item><description>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</description></item>
+        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the table supports deletion. Handle the related logic with caution.</description></item>
+        /// <item><description>The <c>Fields</c> list contains the specific definitions of the fields in the table, such as the name, type, and attributes.</description></item>
+        /// <item><description>The fluctuation threshold settings for the table (row count and size) can be configured or queried through the corresponding fields to monitor data changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15003,17 +15003,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management table, including its table structure and configuration.</para>
+        /// <para>Queries the details of a specified recall management table, including the table schema and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves details of a specific recall management table using the provided <c>RecallManagementTableId</c> and <c>InstanceId</c>. Ensure you provide the correct values for these parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a recall management table based on the specified table ID (<c>RecallManagementTableId</c>) and instance ID (<c>InstanceId</c>). Make sure to provide valid values for these two parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</description></item>
-        /// <item><description>The <c>Fields</c> list contains the definitions for each field in the data table, including their name, type, and properties.</description></item>
-        /// <item><description>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</description></item>
+        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the table supports deletion. Handle the related logic with caution.</description></item>
+        /// <item><description>The <c>Fields</c> list contains the specific definitions of the fields in the table, such as the name, type, and attributes.</description></item>
+        /// <item><description>The fluctuation threshold settings for the table (row count and size) can be configured or queried through the corresponding fields to monitor data changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15033,17 +15033,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified recall management table, including its table structure and configuration.</para>
+        /// <para>Queries the details of a specified recall management table, including the table schema and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves details of a specific recall management table using the provided <c>RecallManagementTableId</c> and <c>InstanceId</c>. Ensure you provide the correct values for these parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a recall management table based on the specified table ID (<c>RecallManagementTableId</c>) and instance ID (<c>InstanceId</c>). Make sure to provide valid values for these two parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</description></item>
-        /// <item><description>The <c>Fields</c> list contains the definitions for each field in the data table, including their name, type, and properties.</description></item>
-        /// <item><description>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</description></item>
+        /// <item><description><b>Note</b>: The <c>CanDelete</c> field indicates whether the table supports deletion. Handle the related logic with caution.</description></item>
+        /// <item><description>The <c>Fields</c> list contains the specific definitions of the fields in the table, such as the name, type, and attributes.</description></item>
+        /// <item><description>The fluctuation threshold settings for the table (row count and size) can be configured or queried through the corresponding fields to monitor data changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15583,7 +15583,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a sub-crowd.</para>
+        /// <para>Retrieves the details of a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15629,7 +15629,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a sub-crowd.</para>
+        /// <para>Retrieves the details of a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15675,7 +15675,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a sub-crowd.</para>
+        /// <para>Retrieves the details of a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15694,7 +15694,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a sub-crowd.</para>
+        /// <para>Retrieves the details of a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15713,7 +15713,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a table.</para>
+        /// <para>Retrieves the details of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15759,7 +15759,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a table.</para>
+        /// <para>Retrieves the details of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15805,7 +15805,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a table.</para>
+        /// <para>Retrieves the details of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15824,7 +15824,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a table.</para>
+        /// <para>Retrieves the details of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15843,13 +15843,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a traffic throttling objective by its ID.</para>
+        /// <para>Queries the details of a traffic control target with a specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the traffic control target ID and instance ID to retrieve the detailed configuration of the traffic control target, including the target name, time range, and condition settings. Note that TrafficControlTargetId and InstanceId are required parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15895,13 +15895,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a traffic throttling objective by its ID.</para>
+        /// <para>Queries the details of a traffic control target with a specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the traffic control target ID and instance ID to retrieve the detailed configuration of the traffic control target, including the target name, time range, and condition settings. Note that TrafficControlTargetId and InstanceId are required parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15947,13 +15947,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a traffic throttling objective by its ID.</para>
+        /// <para>Queries the details of a traffic control target with a specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the traffic control target ID and instance ID to retrieve the detailed configuration of the traffic control target, including the target name, time range, and condition settings. Note that TrafficControlTargetId and InstanceId are required parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15972,13 +15972,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a traffic throttling objective by its ID.</para>
+        /// <para>Queries the details of a traffic control target with a specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the traffic control target ID and instance ID to retrieve the detailed configuration of the traffic control target, including the target name, time range, and condition settings. Note that TrafficControlTargetId and InstanceId are required parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16567,7 +16567,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists A/B testing metrics.</para>
+        /// <para>Retrieves a list of AB test metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16641,7 +16641,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists A/B testing metrics.</para>
+        /// <para>Retrieves a list of AB test metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16715,7 +16715,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists A/B testing metrics.</para>
+        /// <para>Retrieves a list of AB test metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16734,7 +16734,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists A/B testing metrics.</para>
+        /// <para>Retrieves a list of AB test metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16753,7 +16753,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists calculation jobs.</para>
+        /// <para>Queries a list of calculation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16815,7 +16815,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists calculation jobs.</para>
+        /// <para>Queries a list of calculation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16877,7 +16877,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists calculation jobs.</para>
+        /// <para>Queries a list of calculation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16896,7 +16896,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists calculation jobs.</para>
+        /// <para>Queries a list of calculation tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17045,7 +17045,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Crowds in a specified instance.</para>
+        /// <para>Retrieves a list of crowds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17091,7 +17091,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Crowds in a specified instance.</para>
+        /// <para>Retrieves a list of crowds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17137,7 +17137,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Crowds in a specified instance.</para>
+        /// <para>Retrieves a list of crowds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17156,7 +17156,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Crowds in a specified instance.</para>
+        /// <para>Retrieves a list of crowds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17381,17 +17381,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data diagnosis jobs for a specified instance.</para>
+        /// <para>Queries the data diagnostic tasks and their statuses for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <c>InstanceId</c> and <c>Status</c>, and use the <c>PageNumber</c> and <c>PageSize</c> parameters to control pagination.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve a list of data diagnostic tasks for a specific instance based on provided parameters such as InstanceId and Status. You can filter tasks by status and type, and control the amount of returned data by using pagination parameters such as PageNumber and PageSize.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>InstanceId</b> parameter is required and specifies the instance to query.</description></item>
-        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>.</description></item>
-        /// <item><description>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the tasks to be queried belong.</description></item>
+        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>, which allow you to filter the required information more precisely.</description></item>
+        /// <item><description>Note: If no filter conditions are provided, all eligible data diagnostic tasks are returned by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17460,17 +17460,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data diagnosis jobs for a specified instance.</para>
+        /// <para>Queries the data diagnostic tasks and their statuses for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <c>InstanceId</c> and <c>Status</c>, and use the <c>PageNumber</c> and <c>PageSize</c> parameters to control pagination.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve a list of data diagnostic tasks for a specific instance based on provided parameters such as InstanceId and Status. You can filter tasks by status and type, and control the amount of returned data by using pagination parameters such as PageNumber and PageSize.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>InstanceId</b> parameter is required and specifies the instance to query.</description></item>
-        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>.</description></item>
-        /// <item><description>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the tasks to be queried belong.</description></item>
+        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>, which allow you to filter the required information more precisely.</description></item>
+        /// <item><description>Note: If no filter conditions are provided, all eligible data diagnostic tasks are returned by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17539,17 +17539,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data diagnosis jobs for a specified instance.</para>
+        /// <para>Queries the data diagnostic tasks and their statuses for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <c>InstanceId</c> and <c>Status</c>, and use the <c>PageNumber</c> and <c>PageSize</c> parameters to control pagination.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve a list of data diagnostic tasks for a specific instance based on provided parameters such as InstanceId and Status. You can filter tasks by status and type, and control the amount of returned data by using pagination parameters such as PageNumber and PageSize.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>InstanceId</b> parameter is required and specifies the instance to query.</description></item>
-        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>.</description></item>
-        /// <item><description>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the tasks to be queried belong.</description></item>
+        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>, which allow you to filter the required information more precisely.</description></item>
+        /// <item><description>Note: If no filter conditions are provided, all eligible data diagnostic tasks are returned by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17569,17 +17569,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data diagnosis jobs for a specified instance.</para>
+        /// <para>Queries the data diagnostic tasks and their statuses for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <c>InstanceId</c> and <c>Status</c>, and use the <c>PageNumber</c> and <c>PageSize</c> parameters to control pagination.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve a list of data diagnostic tasks for a specific instance based on provided parameters such as InstanceId and Status. You can filter tasks by status and type, and control the amount of returned data by using pagination parameters such as PageNumber and PageSize.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>InstanceId</b> parameter is required and specifies the instance to query.</description></item>
-        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>.</description></item>
-        /// <item><description>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the tasks to be queried belong.</description></item>
+        /// <item><description>Optional parameters include <b>Status</b>, <b>Types</b>, <b>PageNumber</b>, and <b>PageSize</b>, which allow you to filter the required information more precisely.</description></item>
+        /// <item><description>Note: If no filter conditions are provided, all eligible data diagnostic tasks are returned by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17599,18 +17599,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify parameters to retrieve data diagnosis reports for a specific time range.</para>
+        /// <para>Retrieves a diagnostic report for a specified time period based on the given parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</description></item>
-        /// <item><description>The <c>FeatureName</c> parameter filters reports by a specific feature, and the <c>TopN</c> parameter limits the number of results.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter specifies the type of retention rate report, such as a periodic report.</description></item>
-        /// <item><description>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</description></item>
-        /// <item><description>Important: All date values must use the <c>YYYY-MM-DD</c> format.</description></item>
+        /// <item><description>This API retrieves a diagnostic report based on the provided data diagnosis ID, instance ID, and date range.</description></item>
+        /// <item><description>Use Settings for FeatureName to filter reports for a specific feature. Use the TopN parameter to limit the number of returned results.</description></item>
+        /// <item><description>RemainRateType allows you to select the type of retention rate report, such as a periodic report.</description></item>
+        /// <item><description>Report content includes, but is not limited to, item/user change rate analysis, user preference statistical period analysis, join table associate analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>Note: All dates must follow the YYYY-MM-DD format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17677,18 +17677,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify parameters to retrieve data diagnosis reports for a specific time range.</para>
+        /// <para>Retrieves a diagnostic report for a specified time period based on the given parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</description></item>
-        /// <item><description>The <c>FeatureName</c> parameter filters reports by a specific feature, and the <c>TopN</c> parameter limits the number of results.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter specifies the type of retention rate report, such as a periodic report.</description></item>
-        /// <item><description>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</description></item>
-        /// <item><description>Important: All date values must use the <c>YYYY-MM-DD</c> format.</description></item>
+        /// <item><description>This API retrieves a diagnostic report based on the provided data diagnosis ID, instance ID, and date range.</description></item>
+        /// <item><description>Use Settings for FeatureName to filter reports for a specific feature. Use the TopN parameter to limit the number of returned results.</description></item>
+        /// <item><description>RemainRateType allows you to select the type of retention rate report, such as a periodic report.</description></item>
+        /// <item><description>Report content includes, but is not limited to, item/user change rate analysis, user preference statistical period analysis, join table associate analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>Note: All dates must follow the YYYY-MM-DD format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17755,18 +17755,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify parameters to retrieve data diagnosis reports for a specific time range.</para>
+        /// <para>Retrieves a diagnostic report for a specified time period based on the given parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</description></item>
-        /// <item><description>The <c>FeatureName</c> parameter filters reports by a specific feature, and the <c>TopN</c> parameter limits the number of results.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter specifies the type of retention rate report, such as a periodic report.</description></item>
-        /// <item><description>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</description></item>
-        /// <item><description>Important: All date values must use the <c>YYYY-MM-DD</c> format.</description></item>
+        /// <item><description>This API retrieves a diagnostic report based on the provided data diagnosis ID, instance ID, and date range.</description></item>
+        /// <item><description>Use Settings for FeatureName to filter reports for a specific feature. Use the TopN parameter to limit the number of returned results.</description></item>
+        /// <item><description>RemainRateType allows you to select the type of retention rate report, such as a periodic report.</description></item>
+        /// <item><description>Report content includes, but is not limited to, item/user change rate analysis, user preference statistical period analysis, join table associate analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>Note: All dates must follow the YYYY-MM-DD format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17786,18 +17786,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify parameters to retrieve data diagnosis reports for a specific time range.</para>
+        /// <para>Retrieves a diagnostic report for a specified time period based on the given parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</description></item>
-        /// <item><description>The <c>FeatureName</c> parameter filters reports by a specific feature, and the <c>TopN</c> parameter limits the number of results.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter specifies the type of retention rate report, such as a periodic report.</description></item>
-        /// <item><description>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</description></item>
-        /// <item><description>Important: All date values must use the <c>YYYY-MM-DD</c> format.</description></item>
+        /// <item><description>This API retrieves a diagnostic report based on the provided data diagnosis ID, instance ID, and date range.</description></item>
+        /// <item><description>Use Settings for FeatureName to filter reports for a specific feature. Use the TopN parameter to limit the number of returned results.</description></item>
+        /// <item><description>RemainRateType allows you to select the type of retention rate report, such as a periodic report.</description></item>
+        /// <item><description>Report content includes, but is not limited to, item/user change rate analysis, user preference statistical period analysis, join table associate analysis, basic statistics analysis, and abnormal behavior analysis.</description></item>
+        /// <item><description>Note: All dates must follow the YYYY-MM-DD format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18003,7 +18003,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of experiment groups.</para>
+        /// <para>Retrieves a list of experiment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18065,7 +18065,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of experiment groups.</para>
+        /// <para>Retrieves a list of experiment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18127,7 +18127,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of experiment groups.</para>
+        /// <para>Retrieves a list of experiment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18146,7 +18146,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of experiment groups.</para>
+        /// <para>Retrieves a list of experiment groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18165,7 +18165,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the experiments in the specified experiment group.</para>
+        /// <para>Retrieves the list of experiments in a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18223,7 +18223,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the experiments in the specified experiment group.</para>
+        /// <para>Retrieves the list of experiments in a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18281,7 +18281,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the experiments in the specified experiment group.</para>
+        /// <para>Retrieves the list of experiments in a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18300,7 +18300,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the experiments in the specified experiment group.</para>
+        /// <para>Retrieves the list of experiments in a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18319,7 +18319,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of feature consistency check task configurations.</para>
+        /// <para>Retrieves a list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18385,7 +18385,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of feature consistency check task configurations.</para>
+        /// <para>Retrieves a list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18451,7 +18451,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of feature consistency check task configurations.</para>
+        /// <para>Retrieves a list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18470,7 +18470,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of feature consistency check task configurations.</para>
+        /// <para>Retrieves a list of feature consistency check task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19117,13 +19117,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data tables for a specified instance and data source.</para>
+        /// <para>Queries all tables in a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <c>MaxcomputeSchema</c> parameter to filter the results by a MaxCompute schema.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19169,13 +19169,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data tables for a specified instance and data source.</para>
+        /// <para>Queries all tables in a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <c>MaxcomputeSchema</c> parameter to filter the results by a MaxCompute schema.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19221,13 +19221,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data tables for a specified instance and data source.</para>
+        /// <para>Queries all tables in a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <c>MaxcomputeSchema</c> parameter to filter the results by a MaxCompute schema.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19246,13 +19246,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data tables for a specified instance and data source.</para>
+        /// <para>Queries all tables in a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <c>MaxcomputeSchema</c> parameter to filter the results by a MaxCompute schema.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19417,7 +19417,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of PAIRec instances.</para>
+        /// <para>Retrieves a list of PAIRec instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19483,7 +19483,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of PAIRec instances.</para>
+        /// <para>Retrieves a list of PAIRec instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19549,7 +19549,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of PAIRec instances.</para>
+        /// <para>Retrieves a list of PAIRec instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19568,7 +19568,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of PAIRec instances.</para>
+        /// <para>Retrieves a list of PAIRec instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19741,7 +19741,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of layers in a specified laboratory.</para>
+        /// <para>Retrieves the list of layers in a laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19791,7 +19791,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of layers in a specified laboratory.</para>
+        /// <para>Retrieves the list of layers in a laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19841,7 +19841,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of layers in a specified laboratory.</para>
+        /// <para>Retrieves the list of layers in a laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19860,7 +19860,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of layers in a specified laboratory.</para>
+        /// <para>Retrieves the list of layers in a laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19879,7 +19879,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists parameters.</para>
+        /// <para>Retrieves a list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19949,7 +19949,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists parameters.</para>
+        /// <para>Retrieves a list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20019,7 +20019,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists parameters.</para>
+        /// <para>Retrieves a list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20038,7 +20038,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists parameters.</para>
+        /// <para>Retrieves a list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20057,19 +20057,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of recall management tasks that match specified conditions.</para>
+        /// <para>Queries a list of recall management tasks based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API operation to retrieve a list of recall management tasks.</description></item>
-        /// <item><description>The <c>InstanceId</c> and <c>Type</c> parameters are required. All other parameters are optional.</description></item>
-        /// <item><description>Use the <c>Condition</c> parameter to set filter conditions on specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> and <c>Order</c> parameters to control the sort order of the results. The default sort order is ascending by creation time.</description></item>
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. The <c>PageNumber</c> parameter defaults to 1, and the <c>PageSize</c> parameter defaults to 10.</description></item>
-        /// <item><description>The response includes details about each recall management task, such as its basic information and status.</description></item>
+        /// <item><description>This operation retrieves a list of recall management tasks.</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Type</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>The <c>Condition</c> parameter supports filtering by specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
+        /// <item><description>You can use the <c>SortBy</c> and <c>Order</c> parameters to control the sorting of the returned results. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>Pagination is implemented through the <c>PageNumber</c> and <c>PageSize</c> parameters. The default value of <c>PageNumber</c> is 1, and the default value of <c>PageSize</c> is 10.</description></item>
+        /// <item><description>The returned data includes the basic information and status details of each recall management task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20148,19 +20148,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of recall management tasks that match specified conditions.</para>
+        /// <para>Queries a list of recall management tasks based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API operation to retrieve a list of recall management tasks.</description></item>
-        /// <item><description>The <c>InstanceId</c> and <c>Type</c> parameters are required. All other parameters are optional.</description></item>
-        /// <item><description>Use the <c>Condition</c> parameter to set filter conditions on specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> and <c>Order</c> parameters to control the sort order of the results. The default sort order is ascending by creation time.</description></item>
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. The <c>PageNumber</c> parameter defaults to 1, and the <c>PageSize</c> parameter defaults to 10.</description></item>
-        /// <item><description>The response includes details about each recall management task, such as its basic information and status.</description></item>
+        /// <item><description>This operation retrieves a list of recall management tasks.</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Type</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>The <c>Condition</c> parameter supports filtering by specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
+        /// <item><description>You can use the <c>SortBy</c> and <c>Order</c> parameters to control the sorting of the returned results. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>Pagination is implemented through the <c>PageNumber</c> and <c>PageSize</c> parameters. The default value of <c>PageNumber</c> is 1, and the default value of <c>PageSize</c> is 10.</description></item>
+        /// <item><description>The returned data includes the basic information and status details of each recall management task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20239,19 +20239,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of recall management tasks that match specified conditions.</para>
+        /// <para>Queries a list of recall management tasks based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API operation to retrieve a list of recall management tasks.</description></item>
-        /// <item><description>The <c>InstanceId</c> and <c>Type</c> parameters are required. All other parameters are optional.</description></item>
-        /// <item><description>Use the <c>Condition</c> parameter to set filter conditions on specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> and <c>Order</c> parameters to control the sort order of the results. The default sort order is ascending by creation time.</description></item>
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. The <c>PageNumber</c> parameter defaults to 1, and the <c>PageSize</c> parameter defaults to 10.</description></item>
-        /// <item><description>The response includes details about each recall management task, such as its basic information and status.</description></item>
+        /// <item><description>This operation retrieves a list of recall management tasks.</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Type</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>The <c>Condition</c> parameter supports filtering by specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
+        /// <item><description>You can use the <c>SortBy</c> and <c>Order</c> parameters to control the sorting of the returned results. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>Pagination is implemented through the <c>PageNumber</c> and <c>PageSize</c> parameters. The default value of <c>PageNumber</c> is 1, and the default value of <c>PageSize</c> is 10.</description></item>
+        /// <item><description>The returned data includes the basic information and status details of each recall management task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20271,19 +20271,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of recall management tasks that match specified conditions.</para>
+        /// <para>Queries a list of recall management tasks based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API operation to retrieve a list of recall management tasks.</description></item>
-        /// <item><description>The <c>InstanceId</c> and <c>Type</c> parameters are required. All other parameters are optional.</description></item>
-        /// <item><description>Use the <c>Condition</c> parameter to set filter conditions on specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> and <c>Order</c> parameters to control the sort order of the results. The default sort order is ascending by creation time.</description></item>
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. The <c>PageNumber</c> parameter defaults to 1, and the <c>PageSize</c> parameter defaults to 10.</description></item>
-        /// <item><description>The response includes details about each recall management task, such as its basic information and status.</description></item>
+        /// <item><description>This operation retrieves a list of recall management tasks.</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Type</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>The <c>Condition</c> parameter supports filtering by specific table types, such as filtering by <c>RecallManagementTableId</c>.</description></item>
+        /// <item><description>You can use the <c>SortBy</c> and <c>Order</c> parameters to control the sorting of the returned results. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>Pagination is implemented through the <c>PageNumber</c> and <c>PageSize</c> parameters. The default value of <c>PageNumber</c> is 1, and the default value of <c>PageSize</c> is 10.</description></item>
+        /// <item><description>The returned data includes the basic information and status details of each recall management task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20303,17 +20303,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all versions for a specified Recall Management Service.</para>
+        /// <para>Retrieves all version information for a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <c>RecallManagementServiceId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to query the details of all versions for a specific recall management service, including the version ID, name, effective status, and creation and update times. Make sure to provide the correct RecallManagementServiceId and InstanceId to obtain accurate data.</para>
         /// <list type="bullet">
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>Order</c> parameter specifies the sort order. Valid values are <c>ASC</c> for ascending order and <c>DESC</c> for descending order.</description></item>
+        /// <item><description>The PageNumber and PageSize parameters are used for pagination. By default, the first page is returned, and each page contains 50 entries.</description></item>
+        /// <item><description>You can use the SortBy parameter to sort the results by creation time or update time. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>The Order parameter specifies the sort order. Valid values: ASC (ascending order) and DESC (descending order).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20376,17 +20376,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all versions for a specified Recall Management Service.</para>
+        /// <para>Retrieves all version information for a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <c>RecallManagementServiceId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to query the details of all versions for a specific recall management service, including the version ID, name, effective status, and creation and update times. Make sure to provide the correct RecallManagementServiceId and InstanceId to obtain accurate data.</para>
         /// <list type="bullet">
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>Order</c> parameter specifies the sort order. Valid values are <c>ASC</c> for ascending order and <c>DESC</c> for descending order.</description></item>
+        /// <item><description>The PageNumber and PageSize parameters are used for pagination. By default, the first page is returned, and each page contains 50 entries.</description></item>
+        /// <item><description>You can use the SortBy parameter to sort the results by creation time or update time. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>The Order parameter specifies the sort order. Valid values: ASC (ascending order) and DESC (descending order).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20449,17 +20449,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all versions for a specified Recall Management Service.</para>
+        /// <para>Retrieves all version information for a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <c>RecallManagementServiceId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to query the details of all versions for a specific recall management service, including the version ID, name, effective status, and creation and update times. Make sure to provide the correct RecallManagementServiceId and InstanceId to obtain accurate data.</para>
         /// <list type="bullet">
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>Order</c> parameter specifies the sort order. Valid values are <c>ASC</c> for ascending order and <c>DESC</c> for descending order.</description></item>
+        /// <item><description>The PageNumber and PageSize parameters are used for pagination. By default, the first page is returned, and each page contains 50 entries.</description></item>
+        /// <item><description>You can use the SortBy parameter to sort the results by creation time or update time. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>The Order parameter specifies the sort order. Valid values: ASC (ascending order) and DESC (descending order).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20479,17 +20479,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all versions for a specified Recall Management Service.</para>
+        /// <para>Retrieves all version information for a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <c>RecallManagementServiceId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to query the details of all versions for a specific recall management service, including the version ID, name, effective status, and creation and update times. Make sure to provide the correct RecallManagementServiceId and InstanceId to obtain accurate data.</para>
         /// <list type="bullet">
-        /// <item><description>Use the <c>PageNumber</c> and <c>PageSize</c> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>Order</c> parameter specifies the sort order. Valid values are <c>ASC</c> for ascending order and <c>DESC</c> for descending order.</description></item>
+        /// <item><description>The PageNumber and PageSize parameters are used for pagination. By default, the first page is returned, and each page contains 50 entries.</description></item>
+        /// <item><description>You can use the SortBy parameter to sort the results by creation time or update time. By default, the results are sorted in ascending order of creation time.</description></item>
+        /// <item><description>The Order parameter specifies the sort order. Valid values: ASC (ascending order) and DESC (descending order).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20509,17 +20509,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of recall management services under a specified instance.</para>
+        /// <para>Queries the recall management services of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
+        /// <h2>Request description</h2>
+        /// <para>By calling the ListRecallManagementServices operation, you can retrieve a list of recall management services for a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort the results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
         /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the number of returned entries and the starting page. By default, the first page is returned.</description></item>
+        /// <item><description>You can use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting method of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20594,17 +20594,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of recall management services under a specified instance.</para>
+        /// <para>Queries the recall management services of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
+        /// <h2>Request description</h2>
+        /// <para>By calling the ListRecallManagementServices operation, you can retrieve a list of recall management services for a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort the results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
         /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the number of returned entries and the starting page. By default, the first page is returned.</description></item>
+        /// <item><description>You can use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting method of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20679,17 +20679,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of recall management services under a specified instance.</para>
+        /// <para>Queries the recall management services of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
+        /// <h2>Request description</h2>
+        /// <para>By calling the ListRecallManagementServices operation, you can retrieve a list of recall management services for a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort the results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
         /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the number of returned entries and the starting page. By default, the first page is returned.</description></item>
+        /// <item><description>You can use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting method of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20709,17 +20709,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of recall management services under a specified instance.</para>
+        /// <para>Queries the recall management services of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
+        /// <h2>Request description</h2>
+        /// <para>By calling the ListRecallManagementServices operation, you can retrieve a list of recall management services for a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort the results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
         /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the number of returned entries and the starting page. By default, the first page is returned.</description></item>
+        /// <item><description>You can use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting method of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20739,17 +20739,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all versions of a specified RecallManagementTable.</para>
+        /// <para>Queries all versions of a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>To retrieve the version history of a specific RecallManagementTable, provide the <c>RecallManagementTableId</c> and <c>InstanceId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters enable pagination, which allows you to control the number of items to return and the page to display.</description></item>
-        /// <item><description>If the <c>Order</c> parameter is not specified, the results are sorted in ascending order by default.</description></item>
+        /// <item><description>Provide <c>RecallManagementTableId</c> and <c>InstanceId</c> to retrieve the version history of a specific recall management table.</description></item>
+        /// <item><description>Use the <c>SortBy</c> parameter for sorting the results by creation time or update time. By default, the results are sorted in ascending order by creation time.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters support the paged query feature, allowing you to control the number of returned entries and the specific page to view during paging.</description></item>
+        /// <item><description>If you do not specify the <c>Order</c> parameter, the results are sorted in ascending order by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20812,17 +20812,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all versions of a specified RecallManagementTable.</para>
+        /// <para>Queries all versions of a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>To retrieve the version history of a specific RecallManagementTable, provide the <c>RecallManagementTableId</c> and <c>InstanceId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters enable pagination, which allows you to control the number of items to return and the page to display.</description></item>
-        /// <item><description>If the <c>Order</c> parameter is not specified, the results are sorted in ascending order by default.</description></item>
+        /// <item><description>Provide <c>RecallManagementTableId</c> and <c>InstanceId</c> to retrieve the version history of a specific recall management table.</description></item>
+        /// <item><description>Use the <c>SortBy</c> parameter for sorting the results by creation time or update time. By default, the results are sorted in ascending order by creation time.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters support the paged query feature, allowing you to control the number of returned entries and the specific page to view during paging.</description></item>
+        /// <item><description>If you do not specify the <c>Order</c> parameter, the results are sorted in ascending order by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20885,17 +20885,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all versions of a specified RecallManagementTable.</para>
+        /// <para>Queries all versions of a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>To retrieve the version history of a specific RecallManagementTable, provide the <c>RecallManagementTableId</c> and <c>InstanceId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters enable pagination, which allows you to control the number of items to return and the page to display.</description></item>
-        /// <item><description>If the <c>Order</c> parameter is not specified, the results are sorted in ascending order by default.</description></item>
+        /// <item><description>Provide <c>RecallManagementTableId</c> and <c>InstanceId</c> to retrieve the version history of a specific recall management table.</description></item>
+        /// <item><description>Use the <c>SortBy</c> parameter for sorting the results by creation time or update time. By default, the results are sorted in ascending order by creation time.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters support the paged query feature, allowing you to control the number of returned entries and the specific page to view during paging.</description></item>
+        /// <item><description>If you do not specify the <c>Order</c> parameter, the results are sorted in ascending order by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20915,17 +20915,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all versions of a specified RecallManagementTable.</para>
+        /// <para>Queries all versions of a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>To retrieve the version history of a specific RecallManagementTable, provide the <c>RecallManagementTableId</c> and <c>InstanceId</c>.</description></item>
-        /// <item><description>Use the <c>SortBy</c> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</description></item>
-        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters enable pagination, which allows you to control the number of items to return and the page to display.</description></item>
-        /// <item><description>If the <c>Order</c> parameter is not specified, the results are sorted in ascending order by default.</description></item>
+        /// <item><description>Provide <c>RecallManagementTableId</c> and <c>InstanceId</c> to retrieve the version history of a specific recall management table.</description></item>
+        /// <item><description>Use the <c>SortBy</c> parameter for sorting the results by creation time or update time. By default, the results are sorted in ascending order by creation time.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> parameters support the paged query feature, allowing you to control the number of returned entries and the specific page to view during paging.</description></item>
+        /// <item><description>If you do not specify the <c>Order</c> parameter, the results are sorted in ascending order by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20945,17 +20945,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</para>
+        /// <para>Queries the recall management table information for a specified instance, with support for pagination and sorting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is a required parameter specifying the instance to query.</description></item>
-        /// <item><description>The <b>Name</b> and <b>Type</b> parameters filter recall management tables by name or type.</description></item>
-        /// <item><description>The <b>PageNumber</b> and <b>PageSize</b> parameters control pagination. By default, the query returns the first 50 records.</description></item>
-        /// <item><description>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
+        /// <item><description><b>InstanceId</b> is a required parameter that specifies the instance to query.</description></item>
+        /// <item><description>Use the <b>Name</b> and <b>Type</b> parameters to filter recall management tables by name or type.</description></item>
+        /// <item><description>Pagination is controlled by <b>PageNumber</b> and <b>PageSize</b>. By default, the query starts from page 1 and returns 50 records per page.</description></item>
+        /// <item><description>Supports sorting by creation time (GmtCreateTime) or update time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21034,17 +21034,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</para>
+        /// <para>Queries the recall management table information for a specified instance, with support for pagination and sorting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is a required parameter specifying the instance to query.</description></item>
-        /// <item><description>The <b>Name</b> and <b>Type</b> parameters filter recall management tables by name or type.</description></item>
-        /// <item><description>The <b>PageNumber</b> and <b>PageSize</b> parameters control pagination. By default, the query returns the first 50 records.</description></item>
-        /// <item><description>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
+        /// <item><description><b>InstanceId</b> is a required parameter that specifies the instance to query.</description></item>
+        /// <item><description>Use the <b>Name</b> and <b>Type</b> parameters to filter recall management tables by name or type.</description></item>
+        /// <item><description>Pagination is controlled by <b>PageNumber</b> and <b>PageSize</b>. By default, the query starts from page 1 and returns 50 records per page.</description></item>
+        /// <item><description>Supports sorting by creation time (GmtCreateTime) or update time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21123,17 +21123,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</para>
+        /// <para>Queries the recall management table information for a specified instance, with support for pagination and sorting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is a required parameter specifying the instance to query.</description></item>
-        /// <item><description>The <b>Name</b> and <b>Type</b> parameters filter recall management tables by name or type.</description></item>
-        /// <item><description>The <b>PageNumber</b> and <b>PageSize</b> parameters control pagination. By default, the query returns the first 50 records.</description></item>
-        /// <item><description>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
+        /// <item><description><b>InstanceId</b> is a required parameter that specifies the instance to query.</description></item>
+        /// <item><description>Use the <b>Name</b> and <b>Type</b> parameters to filter recall management tables by name or type.</description></item>
+        /// <item><description>Pagination is controlled by <b>PageNumber</b> and <b>PageSize</b>. By default, the query starts from page 1 and returns 50 records per page.</description></item>
+        /// <item><description>Supports sorting by creation time (GmtCreateTime) or update time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21153,17 +21153,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</para>
+        /// <para>Queries the recall management table information for a specified instance, with support for pagination and sorting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is a required parameter specifying the instance to query.</description></item>
-        /// <item><description>The <b>Name</b> and <b>Type</b> parameters filter recall management tables by name or type.</description></item>
-        /// <item><description>The <b>PageNumber</b> and <b>PageSize</b> parameters control pagination. By default, the query returns the first 50 records.</description></item>
-        /// <item><description>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
+        /// <item><description><b>InstanceId</b> is a required parameter that specifies the instance to query.</description></item>
+        /// <item><description>Use the <b>Name</b> and <b>Type</b> parameters to filter recall management tables by name or type.</description></item>
+        /// <item><description>Pagination is controlled by <b>PageNumber</b> and <b>PageSize</b>. By default, the query starts from page 1 and returns 50 records per page.</description></item>
+        /// <item><description>Supports sorting by creation time (GmtCreateTime) or update time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21677,7 +21677,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subcrowds for a specified crowd.</para>
+        /// <para>Retrieves the list of sub-crowds under a specified crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21723,7 +21723,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subcrowds for a specified crowd.</para>
+        /// <para>Retrieves the list of sub-crowds under a specified crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21769,7 +21769,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subcrowds for a specified crowd.</para>
+        /// <para>Retrieves the list of sub-crowds under a specified crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21788,7 +21788,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the subcrowds for a specified crowd.</para>
+        /// <para>Retrieves the list of sub-crowds under a specified crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21977,19 +21977,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical traffic records for a specific traffic control target.</para>
+        /// <para>Queries the historical traffic change records of a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are required.</description></item>
-        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range.</description></item>
-        /// <item><description>The <c>Threshold</c> parameter is optional.</description></item>
-        /// <item><description>Use <c>ExperimentId</c> and <c>ExperimentGroupId</c> to filter data for a specific experiment or experiment group.</description></item>
-        /// <item><description>Use <c>ItemId</c> to filter traffic data for a specific item.</description></item>
-        /// <item><description>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</description></item>
+        /// <item><description><c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> are required parameters.</description></item>
+        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range for the query. The format is <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description>The <c>Threshold</c> parameter is optional and used to set the threshold.</description></item>
+        /// <item><description><c>ExperimentId</c> and <c>ExperimentGroupId</c> are used to filter data for specific experiments or experiment groups.</description></item>
+        /// <item><description><c>ItemId</c> is used to filter traffic data for specific items.</description></item>
+        /// <item><description>Supported environments include Daily (daily environment), Pre (staging environment), and Prod (production environment).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22064,19 +22064,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical traffic records for a specific traffic control target.</para>
+        /// <para>Queries the historical traffic change records of a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are required.</description></item>
-        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range.</description></item>
-        /// <item><description>The <c>Threshold</c> parameter is optional.</description></item>
-        /// <item><description>Use <c>ExperimentId</c> and <c>ExperimentGroupId</c> to filter data for a specific experiment or experiment group.</description></item>
-        /// <item><description>Use <c>ItemId</c> to filter traffic data for a specific item.</description></item>
-        /// <item><description>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</description></item>
+        /// <item><description><c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> are required parameters.</description></item>
+        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range for the query. The format is <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description>The <c>Threshold</c> parameter is optional and used to set the threshold.</description></item>
+        /// <item><description><c>ExperimentId</c> and <c>ExperimentGroupId</c> are used to filter data for specific experiments or experiment groups.</description></item>
+        /// <item><description><c>ItemId</c> is used to filter traffic data for specific items.</description></item>
+        /// <item><description>Supported environments include Daily (daily environment), Pre (staging environment), and Prod (production environment).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22151,19 +22151,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical traffic records for a specific traffic control target.</para>
+        /// <para>Queries the historical traffic change records of a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are required.</description></item>
-        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range.</description></item>
-        /// <item><description>The <c>Threshold</c> parameter is optional.</description></item>
-        /// <item><description>Use <c>ExperimentId</c> and <c>ExperimentGroupId</c> to filter data for a specific experiment or experiment group.</description></item>
-        /// <item><description>Use <c>ItemId</c> to filter traffic data for a specific item.</description></item>
-        /// <item><description>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</description></item>
+        /// <item><description><c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> are required parameters.</description></item>
+        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range for the query. The format is <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description>The <c>Threshold</c> parameter is optional and used to set the threshold.</description></item>
+        /// <item><description><c>ExperimentId</c> and <c>ExperimentGroupId</c> are used to filter data for specific experiments or experiment groups.</description></item>
+        /// <item><description><c>ItemId</c> is used to filter traffic data for specific items.</description></item>
+        /// <item><description>Supported environments include Daily (daily environment), Pre (staging environment), and Prod (production environment).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22183,19 +22183,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the historical traffic records for a specific traffic control target.</para>
+        /// <para>Queries the historical traffic change records of a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are required.</description></item>
-        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range.</description></item>
-        /// <item><description>The <c>Threshold</c> parameter is optional.</description></item>
-        /// <item><description>Use <c>ExperimentId</c> and <c>ExperimentGroupId</c> to filter data for a specific experiment or experiment group.</description></item>
-        /// <item><description>Use <c>ItemId</c> to filter traffic data for a specific item.</description></item>
-        /// <item><description>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</description></item>
+        /// <item><description><c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> are required parameters.</description></item>
+        /// <item><description>You can use <c>StartTime</c> and <c>EndTime</c> to specify the time range for the query. The format is <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description>The <c>Threshold</c> parameter is optional and used to set the threshold.</description></item>
+        /// <item><description><c>ExperimentId</c> and <c>ExperimentGroupId</c> are used to filter data for specific experiments or experiment groups.</description></item>
+        /// <item><description><c>ItemId</c> is used to filter traffic data for specific items.</description></item>
+        /// <item><description>Supported environments include Daily (daily environment), Pre (staging environment), and Prod (production environment).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22215,17 +22215,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries traffic control tasks that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a list of traffic control tasks.</description></item>
-        /// <item><description>Use query parameters to filter and sort the results.</description></item>
-        /// <item><description>This operation supports pagination. You can also retrieve all results in a single response.</description></item>
-        /// <item><description>Note: The <c>InstanceId</c> is a required parameter. All other parameters are optional.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
+        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
+        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
+        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22320,17 +22320,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries traffic control tasks that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a list of traffic control tasks.</description></item>
-        /// <item><description>Use query parameters to filter and sort the results.</description></item>
-        /// <item><description>This operation supports pagination. You can also retrieve all results in a single response.</description></item>
-        /// <item><description>Note: The <c>InstanceId</c> is a required parameter. All other parameters are optional.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
+        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
+        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
+        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22425,17 +22425,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries traffic control tasks that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a list of traffic control tasks.</description></item>
-        /// <item><description>Use query parameters to filter and sort the results.</description></item>
-        /// <item><description>This operation supports pagination. You can also retrieve all results in a single response.</description></item>
-        /// <item><description>Note: The <c>InstanceId</c> is a required parameter. All other parameters are optional.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
+        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
+        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
+        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22455,17 +22455,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries traffic control tasks that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a list of traffic control tasks.</description></item>
-        /// <item><description>Use query parameters to filter and sort the results.</description></item>
-        /// <item><description>This operation supports pagination. You can also retrieve all results in a single response.</description></item>
-        /// <item><description>Note: The <c>InstanceId</c> is a required parameter. All other parameters are optional.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
+        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
+        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
+        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23589,13 +23589,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</para>
+        /// <para>Synchronizes a MaxCompute table to the recall engine, supporting partition publishing and mode selection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
-        /// <para>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <c>RecallManagementTableId</c> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <c>Partitions</c> field.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation synchronizes a specified MaxCompute table to the recall engine. It allows you to specify the table partition to publish, whether to skip the threshold check, and the synchronous mode (merge or overwrite). Ensure that you correctly specify the instance ID and table ID in the request body, and provide the correct <c>RecallManagementTableId</c> in the path parameters. To specify a particular table partition for publishing, provide it as key-value pairs in the <c>Partitions</c> field. You can also choose whether to skip the data volume threshold check and configure the synchronous mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23635,6 +23635,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["SkipThresholdCheck"] = request.SkipThresholdCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestampMs))
+            {
+                body["StartTimestampMs"] = request.StartTimestampMs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -23657,13 +23661,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</para>
+        /// <para>Synchronizes a MaxCompute table to the recall engine, supporting partition publishing and mode selection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
-        /// <para>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <c>RecallManagementTableId</c> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <c>Partitions</c> field.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation synchronizes a specified MaxCompute table to the recall engine. It allows you to specify the table partition to publish, whether to skip the threshold check, and the synchronous mode (merge or overwrite). Ensure that you correctly specify the instance ID and table ID in the request body, and provide the correct <c>RecallManagementTableId</c> in the path parameters. To specify a particular table partition for publishing, provide it as key-value pairs in the <c>Partitions</c> field. You can also choose whether to skip the data volume threshold check and configure the synchronous mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23703,6 +23707,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["SkipThresholdCheck"] = request.SkipThresholdCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestampMs))
+            {
+                body["StartTimestampMs"] = request.StartTimestampMs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -23725,13 +23733,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</para>
+        /// <para>Synchronizes a MaxCompute table to the recall engine, supporting partition publishing and mode selection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
-        /// <para>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <c>RecallManagementTableId</c> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <c>Partitions</c> field.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation synchronizes a specified MaxCompute table to the recall engine. It allows you to specify the table partition to publish, whether to skip the threshold check, and the synchronous mode (merge or overwrite). Ensure that you correctly specify the instance ID and table ID in the request body, and provide the correct <c>RecallManagementTableId</c> in the path parameters. To specify a particular table partition for publishing, provide it as key-value pairs in the <c>Partitions</c> field. You can also choose whether to skip the data volume threshold check and configure the synchronous mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23750,13 +23758,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</para>
+        /// <para>Synchronizes a MaxCompute table to the recall engine, supporting partition publishing and mode selection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
-        /// <para>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <c>RecallManagementTableId</c> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <c>Partitions</c> field.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation synchronizes a specified MaxCompute table to the recall engine. It allows you to specify the table partition to publish, whether to skip the threshold check, and the synchronous mode (merge or overwrite). Ensure that you correctly specify the instance ID and table ID in the request body, and provide the correct <c>RecallManagementTableId</c> in the path parameters. To specify a particular table partition for publishing, provide it as key-value pairs in the <c>Partitions</c> field. You can also choose whether to skip the data volume threshold check and configure the synchronous mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24055,18 +24063,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for a specified data diagnosis task within a time range.</para>
+        /// <para>Retrieves the statistics of a specified data diagnostics within a specific time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>DataDiagnosisId</c> parameter is required and specifies the data diagnosis task.</description></item>
-        /// <item><description>The <c>InstanceId</c> parameter is also required and specifies the instance.</description></item>
-        /// <item><description>The <c>StartDate</c> and <c>EndDate</c> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</description></item>
-        /// <item><description>The response includes the request ID (<c>RequestId</c>) and a <c>Statistics</c> object. This object contains the dates of task failures (<c>FailedDates</c>) and dates with missing task data (<c>NoDataDates</c>).</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is required and specifies the data diagnostic node to query.</description></item>
+        /// <item><description><c>InstanceId</c> is also required and identifies the specific instance.</description></item>
+        /// <item><description><c>StartDate</c> and <c>EndDate</c> specify the start and end dates for the statistics, respectively. The format is YYYY-MM-DD.</description></item>
+        /// <item><description>The <c>RemainRateType</c> parameter is optional. If provided, it specifies the retention rate report type. The default value is Period, which indicates a periodic report.</description></item>
+        /// <item><description>The response includes the request ID (<c>RequestId</c>) and the statistics object (<c>Statistics</c>), which lists the dates when nodes failed (<c>FailedDates</c>) and the dates with missing nodes (<c>NoDataDates</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24125,18 +24133,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for a specified data diagnosis task within a time range.</para>
+        /// <para>Retrieves the statistics of a specified data diagnostics within a specific time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>DataDiagnosisId</c> parameter is required and specifies the data diagnosis task.</description></item>
-        /// <item><description>The <c>InstanceId</c> parameter is also required and specifies the instance.</description></item>
-        /// <item><description>The <c>StartDate</c> and <c>EndDate</c> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</description></item>
-        /// <item><description>The response includes the request ID (<c>RequestId</c>) and a <c>Statistics</c> object. This object contains the dates of task failures (<c>FailedDates</c>) and dates with missing task data (<c>NoDataDates</c>).</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is required and specifies the data diagnostic node to query.</description></item>
+        /// <item><description><c>InstanceId</c> is also required and identifies the specific instance.</description></item>
+        /// <item><description><c>StartDate</c> and <c>EndDate</c> specify the start and end dates for the statistics, respectively. The format is YYYY-MM-DD.</description></item>
+        /// <item><description>The <c>RemainRateType</c> parameter is optional. If provided, it specifies the retention rate report type. The default value is Period, which indicates a periodic report.</description></item>
+        /// <item><description>The response includes the request ID (<c>RequestId</c>) and the statistics object (<c>Statistics</c>), which lists the dates when nodes failed (<c>FailedDates</c>) and the dates with missing nodes (<c>NoDataDates</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24195,18 +24203,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for a specified data diagnosis task within a time range.</para>
+        /// <para>Retrieves the statistics of a specified data diagnostics within a specific time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>DataDiagnosisId</c> parameter is required and specifies the data diagnosis task.</description></item>
-        /// <item><description>The <c>InstanceId</c> parameter is also required and specifies the instance.</description></item>
-        /// <item><description>The <c>StartDate</c> and <c>EndDate</c> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</description></item>
-        /// <item><description>The response includes the request ID (<c>RequestId</c>) and a <c>Statistics</c> object. This object contains the dates of task failures (<c>FailedDates</c>) and dates with missing task data (<c>NoDataDates</c>).</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is required and specifies the data diagnostic node to query.</description></item>
+        /// <item><description><c>InstanceId</c> is also required and identifies the specific instance.</description></item>
+        /// <item><description><c>StartDate</c> and <c>EndDate</c> specify the start and end dates for the statistics, respectively. The format is YYYY-MM-DD.</description></item>
+        /// <item><description>The <c>RemainRateType</c> parameter is optional. If provided, it specifies the retention rate report type. The default value is Period, which indicates a periodic report.</description></item>
+        /// <item><description>The response includes the request ID (<c>RequestId</c>) and the statistics object (<c>Statistics</c>), which lists the dates when nodes failed (<c>FailedDates</c>) and the dates with missing nodes (<c>NoDataDates</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24226,18 +24234,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves statistics for a specified data diagnosis task within a time range.</para>
+        /// <para>Retrieves the statistics of a specified data diagnostics within a specific time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>DataDiagnosisId</c> parameter is required and specifies the data diagnosis task.</description></item>
-        /// <item><description>The <c>InstanceId</c> parameter is also required and specifies the instance.</description></item>
-        /// <item><description>The <c>StartDate</c> and <c>EndDate</c> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</description></item>
-        /// <item><description>The <c>RemainRateType</c> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</description></item>
-        /// <item><description>The response includes the request ID (<c>RequestId</c>) and a <c>Statistics</c> object. This object contains the dates of task failures (<c>FailedDates</c>) and dates with missing task data (<c>NoDataDates</c>).</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is required and specifies the data diagnostic node to query.</description></item>
+        /// <item><description><c>InstanceId</c> is also required and identifies the specific instance.</description></item>
+        /// <item><description><c>StartDate</c> and <c>EndDate</c> specify the start and end dates for the statistics, respectively. The format is YYYY-MM-DD.</description></item>
+        /// <item><description>The <c>RemainRateType</c> parameter is optional. If provided, it specifies the retention rate report type. The default value is Period, which indicates a periodic report.</description></item>
+        /// <item><description>The response includes the request ID (<c>RequestId</c>) and the statistics object (<c>Statistics</c>), which lists the dates when nodes failed (<c>FailedDates</c>) and the dates with missing nodes (<c>NoDataDates</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24573,13 +24581,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the traffic control details of a target item for a given environment and date range.</para>
+        /// <para>Retrieves the traffic control details for individual items of a specific traffic control target in a specified environment on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and that the <c>Date</c> is in YYYY-MM-DD format. Although the <c>Date</c> parameter is optional, we recommend specifying a date for meaningful results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries the traffic control details for individual items of a specified traffic control target on a specified date, for a specified instance ID, and in a specified environment. The details include the traffic conditions and feature information of the top 100 items before traffic control and the bottom 100 items after traffic control. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and the <c>Date</c> format is correct (YYYY-MM-DD). Note: Although the <c>Date</c> parameter is optional, always specify a date to obtain meaningful results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24633,13 +24641,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the traffic control details of a target item for a given environment and date range.</para>
+        /// <para>Retrieves the traffic control details for individual items of a specific traffic control target in a specified environment on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and that the <c>Date</c> is in YYYY-MM-DD format. Although the <c>Date</c> parameter is optional, we recommend specifying a date for meaningful results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries the traffic control details for individual items of a specified traffic control target on a specified date, for a specified instance ID, and in a specified environment. The details include the traffic conditions and feature information of the top 100 items before traffic control and the bottom 100 items after traffic control. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and the <c>Date</c> format is correct (YYYY-MM-DD). Note: Although the <c>Date</c> parameter is optional, always specify a date to obtain meaningful results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24693,13 +24701,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the traffic control details of a target item for a given environment and date range.</para>
+        /// <para>Retrieves the traffic control details for individual items of a specific traffic control target in a specified environment on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and that the <c>Date</c> is in YYYY-MM-DD format. Although the <c>Date</c> parameter is optional, we recommend specifying a date for meaningful results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries the traffic control details for individual items of a specified traffic control target on a specified date, for a specified instance ID, and in a specified environment. The details include the traffic conditions and feature information of the top 100 items before traffic control and the bottom 100 items after traffic control. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and the <c>Date</c> format is correct (YYYY-MM-DD). Note: Although the <c>Date</c> parameter is optional, always specify a date to obtain meaningful results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24718,13 +24726,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the traffic control details of a target item for a given environment and date range.</para>
+        /// <para>Retrieves the traffic control details for individual items of a specific traffic control target in a specified environment on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and that the <c>Date</c> is in YYYY-MM-DD format. Although the <c>Date</c> parameter is optional, we recommend specifying a date for meaningful results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries the traffic control details for individual items of a specified traffic control target on a specified date, for a specified instance ID, and in a specified environment. The details include the traffic conditions and feature information of the top 100 items before traffic control and the bottom 100 items after traffic control. Ensure that the <c>TrafficControlTargetId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters are accurate, and the <c>Date</c> format is correct (YYYY-MM-DD). Note: Although the <c>Date</c> parameter is optional, always specify a date to obtain meaningful results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24905,19 +24913,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a detailed report on item control for a specified traffic control task.</para>
+        /// <para>Retrieves the item-level traffic control details report for a specified traffic control task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the item control results for a specific traffic control task within a given time range.</description></item>
-        /// <item><description><c>TrafficControlTaskId</c> is the unique identifier for a traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c> specifies the instance that runs the task.</description></item>
-        /// <item><description>The <c>Environment</c> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</description></item>
-        /// <item><description>The specified start and end times must be valid and span no more than two consecutive calendar days.</description></item>
+        /// <item><description>This API queries the item-level traffic control effect of a specific traffic control task within a given time range.</description></item>
+        /// <item><description>TrafficControlTaskId is the ID that uniquely identifies a traffic control task.</description></item>
+        /// <item><description>InstanceId specifies the instance that runs the task.</description></item>
+        /// <item><description>The Environment parameter defines the environment in which the task runs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</description></item>
+        /// <item><description>StartTime and EndTime represent the start and end points of the query time range, respectively. The format is YYYY-MM-DD HH:MM:SS.</description></item>
+        /// <item><description>Make sure that the start time and end time are valid and fall within the same calendar day or consecutive calendar days.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24976,19 +24984,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a detailed report on item control for a specified traffic control task.</para>
+        /// <para>Retrieves the item-level traffic control details report for a specified traffic control task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the item control results for a specific traffic control task within a given time range.</description></item>
-        /// <item><description><c>TrafficControlTaskId</c> is the unique identifier for a traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c> specifies the instance that runs the task.</description></item>
-        /// <item><description>The <c>Environment</c> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</description></item>
-        /// <item><description>The specified start and end times must be valid and span no more than two consecutive calendar days.</description></item>
+        /// <item><description>This API queries the item-level traffic control effect of a specific traffic control task within a given time range.</description></item>
+        /// <item><description>TrafficControlTaskId is the ID that uniquely identifies a traffic control task.</description></item>
+        /// <item><description>InstanceId specifies the instance that runs the task.</description></item>
+        /// <item><description>The Environment parameter defines the environment in which the task runs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</description></item>
+        /// <item><description>StartTime and EndTime represent the start and end points of the query time range, respectively. The format is YYYY-MM-DD HH:MM:SS.</description></item>
+        /// <item><description>Make sure that the start time and end time are valid and fall within the same calendar day or consecutive calendar days.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25047,19 +25055,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a detailed report on item control for a specified traffic control task.</para>
+        /// <para>Retrieves the item-level traffic control details report for a specified traffic control task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the item control results for a specific traffic control task within a given time range.</description></item>
-        /// <item><description><c>TrafficControlTaskId</c> is the unique identifier for a traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c> specifies the instance that runs the task.</description></item>
-        /// <item><description>The <c>Environment</c> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</description></item>
-        /// <item><description>The specified start and end times must be valid and span no more than two consecutive calendar days.</description></item>
+        /// <item><description>This API queries the item-level traffic control effect of a specific traffic control task within a given time range.</description></item>
+        /// <item><description>TrafficControlTaskId is the ID that uniquely identifies a traffic control task.</description></item>
+        /// <item><description>InstanceId specifies the instance that runs the task.</description></item>
+        /// <item><description>The Environment parameter defines the environment in which the task runs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</description></item>
+        /// <item><description>StartTime and EndTime represent the start and end points of the query time range, respectively. The format is YYYY-MM-DD HH:MM:SS.</description></item>
+        /// <item><description>Make sure that the start time and end time are valid and fall within the same calendar day or consecutive calendar days.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25079,19 +25087,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a detailed report on item control for a specified traffic control task.</para>
+        /// <para>Retrieves the item-level traffic control details report for a specified traffic control task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the item control results for a specific traffic control task within a given time range.</description></item>
-        /// <item><description><c>TrafficControlTaskId</c> is the unique identifier for a traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c> specifies the instance that runs the task.</description></item>
-        /// <item><description>The <c>Environment</c> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</description></item>
-        /// <item><description><c>StartTime</c> and <c>EndTime</c> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</description></item>
-        /// <item><description>The specified start and end times must be valid and span no more than two consecutive calendar days.</description></item>
+        /// <item><description>This API queries the item-level traffic control effect of a specific traffic control task within a given time range.</description></item>
+        /// <item><description>TrafficControlTaskId is the ID that uniquely identifies a traffic control task.</description></item>
+        /// <item><description>InstanceId specifies the instance that runs the task.</description></item>
+        /// <item><description>The Environment parameter defines the environment in which the task runs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</description></item>
+        /// <item><description>StartTime and EndTime represent the start and end points of the query time range, respectively. The format is YYYY-MM-DD HH:MM:SS.</description></item>
+        /// <item><description>Make sure that the start time and end time are valid and fall within the same calendar day or consecutive calendar days.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25297,7 +25305,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a metric group\&quot;s report.</para>
+        /// <para>Queries the reports of a metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25379,7 +25387,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a metric group\&quot;s report.</para>
+        /// <para>Queries the reports of a metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25461,7 +25469,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a metric group\&quot;s report.</para>
+        /// <para>Queries the reports of a metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25480,7 +25488,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a metric group\&quot;s report.</para>
+        /// <para>Queries the reports of a metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28007,20 +28015,20 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data diagnosis task.</para>
+        /// <para>Updates the configuration of a specified data diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <c>DataDiagnosisId</c> in the request path to identify the task to update. You must also specify the <c>Config</c> parameter based on the task <c>Type</c>. For periodic runs, set the execution time in the <c>CycleTime</c> field. If a periodic run is not required, omit this field.</para>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the configuration of an existing data diagnostic task, including the instance ID, task name, task type, and specific configuration details. Ensure that you provide the correct <c>DataDiagnosisId</c> in the request body to locate the specific task to be updated, and specify the corresponding configuration parameters (<c>Config</c>) based on the selected task type (<c>Type</c>). For periodic tasks, set the desired execution time by using the <c>CycleTime</c> field. If periodic execution is not required, omit this field.</para>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><c>DataDiagnosisId</c> is a required path parameter that uniquely identifies a data diagnosis task.</description></item>
-        /// <item><description>The structure of the <c>Config</c> field varies depending on the value of <c>Type</c>. Refer to the examples in this document for configuration details.</description></item>
-        /// <item><description>To disable periodic runs, omit the <c>CycleTime</c> field.</description></item>
-        /// <item><description>When updating a task for two-table join analysis (<c>JoinTables</c>), provide the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
-        /// <item><description>The <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> parameters are required for all types of data diagnosis tasks.</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is a path parameter and must be provided to uniquely identify a data diagnostic task.</description></item>
+        /// <item><description>The content structure of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the documentation examples for configuration details.</description></item>
+        /// <item><description>If periodic execution is not required, you can omit the <c>CycleTime</c> field.</description></item>
+        /// <item><description>When the update involves join table analysis (<c>JoinTables</c>), ensure that you correctly specify the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
+        /// <item><description>For all types of data diagnostic tasks, <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> are required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28111,20 +28119,20 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data diagnosis task.</para>
+        /// <para>Updates the configuration of a specified data diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <c>DataDiagnosisId</c> in the request path to identify the task to update. You must also specify the <c>Config</c> parameter based on the task <c>Type</c>. For periodic runs, set the execution time in the <c>CycleTime</c> field. If a periodic run is not required, omit this field.</para>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the configuration of an existing data diagnostic task, including the instance ID, task name, task type, and specific configuration details. Ensure that you provide the correct <c>DataDiagnosisId</c> in the request body to locate the specific task to be updated, and specify the corresponding configuration parameters (<c>Config</c>) based on the selected task type (<c>Type</c>). For periodic tasks, set the desired execution time by using the <c>CycleTime</c> field. If periodic execution is not required, omit this field.</para>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><c>DataDiagnosisId</c> is a required path parameter that uniquely identifies a data diagnosis task.</description></item>
-        /// <item><description>The structure of the <c>Config</c> field varies depending on the value of <c>Type</c>. Refer to the examples in this document for configuration details.</description></item>
-        /// <item><description>To disable periodic runs, omit the <c>CycleTime</c> field.</description></item>
-        /// <item><description>When updating a task for two-table join analysis (<c>JoinTables</c>), provide the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
-        /// <item><description>The <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> parameters are required for all types of data diagnosis tasks.</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is a path parameter and must be provided to uniquely identify a data diagnostic task.</description></item>
+        /// <item><description>The content structure of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the documentation examples for configuration details.</description></item>
+        /// <item><description>If periodic execution is not required, you can omit the <c>CycleTime</c> field.</description></item>
+        /// <item><description>When the update involves join table analysis (<c>JoinTables</c>), ensure that you correctly specify the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
+        /// <item><description>For all types of data diagnostic tasks, <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> are required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28215,20 +28223,20 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data diagnosis task.</para>
+        /// <para>Updates the configuration of a specified data diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <c>DataDiagnosisId</c> in the request path to identify the task to update. You must also specify the <c>Config</c> parameter based on the task <c>Type</c>. For periodic runs, set the execution time in the <c>CycleTime</c> field. If a periodic run is not required, omit this field.</para>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the configuration of an existing data diagnostic task, including the instance ID, task name, task type, and specific configuration details. Ensure that you provide the correct <c>DataDiagnosisId</c> in the request body to locate the specific task to be updated, and specify the corresponding configuration parameters (<c>Config</c>) based on the selected task type (<c>Type</c>). For periodic tasks, set the desired execution time by using the <c>CycleTime</c> field. If periodic execution is not required, omit this field.</para>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><c>DataDiagnosisId</c> is a required path parameter that uniquely identifies a data diagnosis task.</description></item>
-        /// <item><description>The structure of the <c>Config</c> field varies depending on the value of <c>Type</c>. Refer to the examples in this document for configuration details.</description></item>
-        /// <item><description>To disable periodic runs, omit the <c>CycleTime</c> field.</description></item>
-        /// <item><description>When updating a task for two-table join analysis (<c>JoinTables</c>), provide the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
-        /// <item><description>The <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> parameters are required for all types of data diagnosis tasks.</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is a path parameter and must be provided to uniquely identify a data diagnostic task.</description></item>
+        /// <item><description>The content structure of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the documentation examples for configuration details.</description></item>
+        /// <item><description>If periodic execution is not required, you can omit the <c>CycleTime</c> field.</description></item>
+        /// <item><description>When the update involves join table analysis (<c>JoinTables</c>), ensure that you correctly specify the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
+        /// <item><description>For all types of data diagnostic tasks, <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> are required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28248,20 +28256,20 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data diagnosis task.</para>
+        /// <para>Updates the configuration of a specified data diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <c>DataDiagnosisId</c> in the request path to identify the task to update. You must also specify the <c>Config</c> parameter based on the task <c>Type</c>. For periodic runs, set the execution time in the <c>CycleTime</c> field. If a periodic run is not required, omit this field.</para>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the configuration of an existing data diagnostic task, including the instance ID, task name, task type, and specific configuration details. Ensure that you provide the correct <c>DataDiagnosisId</c> in the request body to locate the specific task to be updated, and specify the corresponding configuration parameters (<c>Config</c>) based on the selected task type (<c>Type</c>). For periodic tasks, set the desired execution time by using the <c>CycleTime</c> field. If periodic execution is not required, omit this field.</para>
+        /// <h2>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><c>DataDiagnosisId</c> is a required path parameter that uniquely identifies a data diagnosis task.</description></item>
-        /// <item><description>The structure of the <c>Config</c> field varies depending on the value of <c>Type</c>. Refer to the examples in this document for configuration details.</description></item>
-        /// <item><description>To disable periodic runs, omit the <c>CycleTime</c> field.</description></item>
-        /// <item><description>When updating a task for two-table join analysis (<c>JoinTables</c>), provide the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
-        /// <item><description>The <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> parameters are required for all types of data diagnosis tasks.</description></item>
+        /// <item><description><c>DataDiagnosisId</c> is a path parameter and must be provided to uniquely identify a data diagnostic task.</description></item>
+        /// <item><description>The content structure of the <c>Config</c> field varies depending on the <c>Type</c> value. Refer to the documentation examples for configuration details.</description></item>
+        /// <item><description>If periodic execution is not required, you can omit the <c>CycleTime</c> field.</description></item>
+        /// <item><description>When the update involves join table analysis (<c>JoinTables</c>), ensure that you correctly specify the information for the left and right tables, including <c>LeftTableMetaId</c> and <c>RightTableMetaId</c>.</description></item>
+        /// <item><description>For all types of data diagnostic tasks, <c>InstanceId</c>, <c>Name</c>, and <c>Type</c> are required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28887,19 +28895,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration details of a feature consistency check task, such as the name.</para>
+        /// <para>Updates the detailed configuration of a feature consistency check job, such as the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the configuration of an existing feature consistency check job. By providing new configuration parameters, you can modify multiple properties, including the instance ID, name, and scene ID. Make sure that all required parameters are included in the request, and provide optional parameters as needed.</para>
         /// <list type="bullet">
-        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter that specifies the feature consistency check task to update.</description></item>
-        /// <item><description>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</description></item>
-        /// <item><description>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</description></item>
-        /// <item><description>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</description></item>
-        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</description></item>
+        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter used to specify the feature consistency check job to be updated.</description></item>
+        /// <item><description>All other parameters are located in the request body. Some of them are required (such as InstanceId and Name), while others are optional.</description></item>
+        /// <item><description>Note that <c>SampleRate</c> must be a floating-point number between 0 and 1, which represents the sampling ratio.</description></item>
+        /// <item><description>If you use <c>FeatureStore</c>-related features, make sure to correctly set the <c>IsUseFeatureStore</c> flag and the related <c>FeatureStore*</c> fields.</description></item>
+        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the provided values match your Alibaba Cloud environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29130,19 +29138,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration details of a feature consistency check task, such as the name.</para>
+        /// <para>Updates the detailed configuration of a feature consistency check job, such as the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the configuration of an existing feature consistency check job. By providing new configuration parameters, you can modify multiple properties, including the instance ID, name, and scene ID. Make sure that all required parameters are included in the request, and provide optional parameters as needed.</para>
         /// <list type="bullet">
-        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter that specifies the feature consistency check task to update.</description></item>
-        /// <item><description>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</description></item>
-        /// <item><description>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</description></item>
-        /// <item><description>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</description></item>
-        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</description></item>
+        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter used to specify the feature consistency check job to be updated.</description></item>
+        /// <item><description>All other parameters are located in the request body. Some of them are required (such as InstanceId and Name), while others are optional.</description></item>
+        /// <item><description>Note that <c>SampleRate</c> must be a floating-point number between 0 and 1, which represents the sampling ratio.</description></item>
+        /// <item><description>If you use <c>FeatureStore</c>-related features, make sure to correctly set the <c>IsUseFeatureStore</c> flag and the related <c>FeatureStore*</c> fields.</description></item>
+        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the provided values match your Alibaba Cloud environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29373,19 +29381,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration details of a feature consistency check task, such as the name.</para>
+        /// <para>Updates the detailed configuration of a feature consistency check job, such as the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the configuration of an existing feature consistency check job. By providing new configuration parameters, you can modify multiple properties, including the instance ID, name, and scene ID. Make sure that all required parameters are included in the request, and provide optional parameters as needed.</para>
         /// <list type="bullet">
-        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter that specifies the feature consistency check task to update.</description></item>
-        /// <item><description>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</description></item>
-        /// <item><description>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</description></item>
-        /// <item><description>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</description></item>
-        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</description></item>
+        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter used to specify the feature consistency check job to be updated.</description></item>
+        /// <item><description>All other parameters are located in the request body. Some of them are required (such as InstanceId and Name), while others are optional.</description></item>
+        /// <item><description>Note that <c>SampleRate</c> must be a floating-point number between 0 and 1, which represents the sampling ratio.</description></item>
+        /// <item><description>If you use <c>FeatureStore</c>-related features, make sure to correctly set the <c>IsUseFeatureStore</c> flag and the related <c>FeatureStore*</c> fields.</description></item>
+        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the provided values match your Alibaba Cloud environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29405,19 +29413,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration details of a feature consistency check task, such as the name.</para>
+        /// <para>Updates the detailed configuration of a feature consistency check job, such as the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the configuration of an existing feature consistency check job. By providing new configuration parameters, you can modify multiple properties, including the instance ID, name, and scene ID. Make sure that all required parameters are included in the request, and provide optional parameters as needed.</para>
         /// <list type="bullet">
-        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter that specifies the feature consistency check task to update.</description></item>
-        /// <item><description>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</description></item>
-        /// <item><description>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</description></item>
-        /// <item><description>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</description></item>
-        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</description></item>
+        /// <item><description><b>FeatureConsistencyCheckJobConfigId</b> is a path parameter used to specify the feature consistency check job to be updated.</description></item>
+        /// <item><description>All other parameters are located in the request body. Some of them are required (such as InstanceId and Name), while others are optional.</description></item>
+        /// <item><description>Note that <c>SampleRate</c> must be a floating-point number between 0 and 1, which represents the sampling ratio.</description></item>
+        /// <item><description>If you use <c>FeatureStore</c>-related features, make sure to correctly set the <c>IsUseFeatureStore</c> flag and the related <c>FeatureStore*</c> fields.</description></item>
+        /// <item><description>For network configuration parameters (such as VpcId and SwitchId), make sure that the provided values match your Alibaba Cloud environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31549,19 +31557,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a traffic control target, including its control period, conditions, and value.</para>
+        /// <para>Updates the configuration of an existing traffic control target, including the control time, conditions, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Updates a traffic control target specified by its ID.</description></item>
-        /// <item><description><c>TrafficControlTargetId</c> is a path parameter that specifies the ID of the traffic control target to update.</description></item>
-        /// <item><description>The <c>ItemConditionType</c> parameter specifies the format of the item condition, which can be either <c>Array</c> or <c>Expression</c>. Based on your selection, you must provide a value for either the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> parameter.</description></item>
-        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies to a new product.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter specifies the statistics period. Valid values are <c>Daily</c> and <c>hourly</c>.</description></item>
-        /// <item><description>Ensure that the time interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
+        /// <item><description>This operation allows you to update a traffic control target by its ID.</description></item>
+        /// <item><description><c>TrafficControlTargetId</c> is a path parameter. You must provide a specific traffic control target ID.</description></item>
+        /// <item><description><c>ItemConditionType</c> defines the format of the item control condition. Valid values: <c>Array</c> and <c>Expression</c>. Based on the selected type, fill in the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> field accordingly.</description></item>
+        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies specifically to new products.</description></item>
+        /// <item><description><c>StatisPeriod</c> supports <c>Daily</c> and <c>Hour</c> options. The default value is determined by the system.</description></item>
+        /// <item><description>Ensure that the interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31662,19 +31670,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a traffic control target, including its control period, conditions, and value.</para>
+        /// <para>Updates the configuration of an existing traffic control target, including the control time, conditions, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Updates a traffic control target specified by its ID.</description></item>
-        /// <item><description><c>TrafficControlTargetId</c> is a path parameter that specifies the ID of the traffic control target to update.</description></item>
-        /// <item><description>The <c>ItemConditionType</c> parameter specifies the format of the item condition, which can be either <c>Array</c> or <c>Expression</c>. Based on your selection, you must provide a value for either the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> parameter.</description></item>
-        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies to a new product.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter specifies the statistics period. Valid values are <c>Daily</c> and <c>hourly</c>.</description></item>
-        /// <item><description>Ensure that the time interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
+        /// <item><description>This operation allows you to update a traffic control target by its ID.</description></item>
+        /// <item><description><c>TrafficControlTargetId</c> is a path parameter. You must provide a specific traffic control target ID.</description></item>
+        /// <item><description><c>ItemConditionType</c> defines the format of the item control condition. Valid values: <c>Array</c> and <c>Expression</c>. Based on the selected type, fill in the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> field accordingly.</description></item>
+        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies specifically to new products.</description></item>
+        /// <item><description><c>StatisPeriod</c> supports <c>Daily</c> and <c>Hour</c> options. The default value is determined by the system.</description></item>
+        /// <item><description>Ensure that the interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31775,19 +31783,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a traffic control target, including its control period, conditions, and value.</para>
+        /// <para>Updates the configuration of an existing traffic control target, including the control time, conditions, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Updates a traffic control target specified by its ID.</description></item>
-        /// <item><description><c>TrafficControlTargetId</c> is a path parameter that specifies the ID of the traffic control target to update.</description></item>
-        /// <item><description>The <c>ItemConditionType</c> parameter specifies the format of the item condition, which can be either <c>Array</c> or <c>Expression</c>. Based on your selection, you must provide a value for either the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> parameter.</description></item>
-        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies to a new product.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter specifies the statistics period. Valid values are <c>Daily</c> and <c>hourly</c>.</description></item>
-        /// <item><description>Ensure that the time interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
+        /// <item><description>This operation allows you to update a traffic control target by its ID.</description></item>
+        /// <item><description><c>TrafficControlTargetId</c> is a path parameter. You must provide a specific traffic control target ID.</description></item>
+        /// <item><description><c>ItemConditionType</c> defines the format of the item control condition. Valid values: <c>Array</c> and <c>Expression</c>. Based on the selected type, fill in the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> field accordingly.</description></item>
+        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies specifically to new products.</description></item>
+        /// <item><description><c>StatisPeriod</c> supports <c>Daily</c> and <c>Hour</c> options. The default value is determined by the system.</description></item>
+        /// <item><description>Ensure that the interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31807,19 +31815,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a traffic control target, including its control period, conditions, and value.</para>
+        /// <para>Updates the configuration of an existing traffic control target, including the control time, conditions, and target values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Updates a traffic control target specified by its ID.</description></item>
-        /// <item><description><c>TrafficControlTargetId</c> is a path parameter that specifies the ID of the traffic control target to update.</description></item>
-        /// <item><description>The <c>ItemConditionType</c> parameter specifies the format of the item condition, which can be either <c>Array</c> or <c>Expression</c>. Based on your selection, you must provide a value for either the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> parameter.</description></item>
-        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies to a new product.</description></item>
-        /// <item><description>The <c>StatisPeriod</c> parameter specifies the statistics period. Valid values are <c>Daily</c> and <c>hourly</c>.</description></item>
-        /// <item><description>Ensure that the time interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
+        /// <item><description>This operation allows you to update a traffic control target by its ID.</description></item>
+        /// <item><description><c>TrafficControlTargetId</c> is a path parameter. You must provide a specific traffic control target ID.</description></item>
+        /// <item><description><c>ItemConditionType</c> defines the format of the item control condition. Valid values: <c>Array</c> and <c>Expression</c>. Based on the selected type, fill in the <c>ItemConditionArray</c> or <c>ItemConditionExpress</c> field accordingly.</description></item>
+        /// <item><description>If <c>NewProductRegulation</c> is set to <c>true</c>, the control rule applies specifically to new products.</description></item>
+        /// <item><description><c>StatisPeriod</c> supports <c>Daily</c> and <c>Hour</c> options. The default value is determined by the system.</description></item>
+        /// <item><description>Ensure that the interval between <c>StartTime</c> and <c>EndTime</c> is reasonable and meets your business requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31839,19 +31847,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration and target of a specified traffic control task.</para>
+        /// <para>Updates a specified traffic control task, including its configuration and targets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to update an existing traffic control task.</description></item>
-        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must also provide <c>StartTime</c> and <c>EndTime</c>.</description></item>
-        /// <item><description>Each element in the <c>TrafficControlTargets</c> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</description></item>
-        /// <item><description>If you set <c>UserConditionType</c> or <c>ItemConditionType</c> to <c>Expression</c>, you must specify the corresponding expression field (for example, <c>UserConditionExpress</c>).</description></item>
-        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</description></item>
-        /// <item><description>Ensure you complete all required fields to avoid a failed request.</description></item>
+        /// <item><description>This API updates an existing traffic control task.</description></item>
+        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must provide both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>Each element in the <c>TrafficControlTargets</c> array represents a specific traffic control target. Make sure that the time range, condition type, and other information for each target are complete and valid.</description></item>
+        /// <item><description>If <c>UserConditionType</c> or <c>ItemConditionType</c> is set to <c>Expression</c>, the corresponding expression field (such as <c>UserConditionExpress</c>) cannot be empty.</description></item>
+        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you use them, make sure that the provided ID lists are in the correct format.</description></item>
+        /// <item><description>During the update, make sure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32014,19 +32022,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration and target of a specified traffic control task.</para>
+        /// <para>Updates a specified traffic control task, including its configuration and targets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to update an existing traffic control task.</description></item>
-        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must also provide <c>StartTime</c> and <c>EndTime</c>.</description></item>
-        /// <item><description>Each element in the <c>TrafficControlTargets</c> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</description></item>
-        /// <item><description>If you set <c>UserConditionType</c> or <c>ItemConditionType</c> to <c>Expression</c>, you must specify the corresponding expression field (for example, <c>UserConditionExpress</c>).</description></item>
-        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</description></item>
-        /// <item><description>Ensure you complete all required fields to avoid a failed request.</description></item>
+        /// <item><description>This API updates an existing traffic control task.</description></item>
+        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must provide both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>Each element in the <c>TrafficControlTargets</c> array represents a specific traffic control target. Make sure that the time range, condition type, and other information for each target are complete and valid.</description></item>
+        /// <item><description>If <c>UserConditionType</c> or <c>ItemConditionType</c> is set to <c>Expression</c>, the corresponding expression field (such as <c>UserConditionExpress</c>) cannot be empty.</description></item>
+        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you use them, make sure that the provided ID lists are in the correct format.</description></item>
+        /// <item><description>During the update, make sure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32189,19 +32197,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration and target of a specified traffic control task.</para>
+        /// <para>Updates a specified traffic control task, including its configuration and targets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to update an existing traffic control task.</description></item>
-        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must also provide <c>StartTime</c> and <c>EndTime</c>.</description></item>
-        /// <item><description>Each element in the <c>TrafficControlTargets</c> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</description></item>
-        /// <item><description>If you set <c>UserConditionType</c> or <c>ItemConditionType</c> to <c>Expression</c>, you must specify the corresponding expression field (for example, <c>UserConditionExpress</c>).</description></item>
-        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</description></item>
-        /// <item><description>Ensure you complete all required fields to avoid a failed request.</description></item>
+        /// <item><description>This API updates an existing traffic control task.</description></item>
+        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must provide both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>Each element in the <c>TrafficControlTargets</c> array represents a specific traffic control target. Make sure that the time range, condition type, and other information for each target are complete and valid.</description></item>
+        /// <item><description>If <c>UserConditionType</c> or <c>ItemConditionType</c> is set to <c>Expression</c>, the corresponding expression field (such as <c>UserConditionExpress</c>) cannot be empty.</description></item>
+        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you use them, make sure that the provided ID lists are in the correct format.</description></item>
+        /// <item><description>During the update, make sure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32221,19 +32229,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration and target of a specified traffic control task.</para>
+        /// <para>Updates a specified traffic control task, including its configuration and targets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to update an existing traffic control task.</description></item>
-        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must also provide <c>StartTime</c> and <c>EndTime</c>.</description></item>
-        /// <item><description>Each element in the <c>TrafficControlTargets</c> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</description></item>
-        /// <item><description>If you set <c>UserConditionType</c> or <c>ItemConditionType</c> to <c>Expression</c>, you must specify the corresponding expression field (for example, <c>UserConditionExpress</c>).</description></item>
-        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</description></item>
-        /// <item><description>Ensure you complete all required fields to avoid a failed request.</description></item>
+        /// <item><description>This API updates an existing traffic control task.</description></item>
+        /// <item><description>When <c>ExecutionTime</c> is set to <c>TimeRange</c>, you must provide both <c>StartTime</c> and <c>EndTime</c>.</description></item>
+        /// <item><description>Each element in the <c>TrafficControlTargets</c> array represents a specific traffic control target. Make sure that the time range, condition type, and other information for each target are complete and valid.</description></item>
+        /// <item><description>If <c>UserConditionType</c> or <c>ItemConditionType</c> is set to <c>Expression</c>, the corresponding expression field (such as <c>UserConditionExpress</c>) cannot be empty.</description></item>
+        /// <item><description><c>ServiceIds</c> and <c>EffectiveSceneIds</c> are optional parameters. If you use them, make sure that the provided ID lists are in the correct format.</description></item>
+        /// <item><description>During the update, make sure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32253,13 +32261,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</para>
+        /// <para>Updates the traffic parameters of a specified traffic control task, including the target traffic and actual traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<c>TrafficControlTaskId</c> is valid and within your permission scope. Additionally, each object in the<c>Traffics</c> array must contain the required fields.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update the traffic configuration of a specific traffic control task, including but not limited to the traffic control target ID, record time, target traffic, and overall traffic. Make sure that the provided <c>TrafficControlTaskId</c> is valid and within the permission scope of the current user. In addition, each object in the <c>Traffics</c> array must contain the required fields to ensure successful request processing.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32319,13 +32327,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</para>
+        /// <para>Updates the traffic parameters of a specified traffic control task, including the target traffic and actual traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<c>TrafficControlTaskId</c> is valid and within your permission scope. Additionally, each object in the<c>Traffics</c> array must contain the required fields.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update the traffic configuration of a specific traffic control task, including but not limited to the traffic control target ID, record time, target traffic, and overall traffic. Make sure that the provided <c>TrafficControlTaskId</c> is valid and within the permission scope of the current user. In addition, each object in the <c>Traffics</c> array must contain the required fields to ensure successful request processing.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32385,13 +32393,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</para>
+        /// <para>Updates the traffic parameters of a specified traffic control task, including the target traffic and actual traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<c>TrafficControlTaskId</c> is valid and within your permission scope. Additionally, each object in the<c>Traffics</c> array must contain the required fields.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update the traffic configuration of a specific traffic control task, including but not limited to the traffic control target ID, record time, target traffic, and overall traffic. Make sure that the provided <c>TrafficControlTaskId</c> is valid and within the permission scope of the current user. In addition, each object in the <c>Traffics</c> array must contain the required fields to ensure successful request processing.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32410,13 +32418,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</para>
+        /// <para>Updates the traffic parameters of a specified traffic control task, including the target traffic and actual traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<c>TrafficControlTaskId</c> is valid and within your permission scope. Additionally, each object in the<c>Traffics</c> array must contain the required fields.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update the traffic configuration of a specific traffic control task, including but not limited to the traffic control target ID, record time, target traffic, and overall traffic. Make sure that the provided <c>TrafficControlTaskId</c> is valid and within the permission scope of the current user. In addition, each object in the <c>Traffics</c> array must contain the required fields to ensure successful request processing.</para>
         /// </description>
         /// 
         /// <param name="request">

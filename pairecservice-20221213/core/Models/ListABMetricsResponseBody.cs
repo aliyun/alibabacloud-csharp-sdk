@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListABMetricsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of AB metrics.</para>
+        /// <para>The list of AB test metrics.</para>
         /// </summary>
         [NameInMap("ABMetrics")]
         [Validation(Required=false)]
         public List<ListABMetricsResponseBodyABMetrics> ABMetrics { get; set; }
         public class ListABMetricsResponseBodyABMetrics : TeaModel {
             /// <summary>
-            /// <para>The AB metric ID.</para>
+            /// <para>The ID of the AB test metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ABMetricId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to aggregate data by user.</para>
+            /// <para>Specifies whether to calculate significance based on the user dimension. The calculation can be based on users or samples.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("AggregationByUser")]
             [Validation(Required=false)]
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Definition { get; set; }
 
             /// <summary>
-            /// <para>The denominator of the derived metric.</para>
+            /// <para>The denominator used for significance calculation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pv</para>
@@ -57,21 +60,24 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The metric description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pv指标</para>
+            /// <para>PV metric</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the metric follows a binomial distribution.</para>
+            /// <para>Specifies whether the current metric conforms to a binomial distribution when the metric type is a derived metric. If yes, the mean and variance of the metric are calculated based on the binomial distribution.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsBinomialDistribution")]
             [Validation(Required=false)]
             public bool? IsBinomialDistribution { get; set; }
 
             /// <summary>
-            /// <para>The ID of the left-hand metric in the formula for the derived metric.</para>
+            /// <para>The ID of the left metric for the derived metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -91,14 +97,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether significance calculation is required.</para>
+            /// <para>Specifies whether to calculate significance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("NeedSignificance")]
             [Validation(Required=false)]
             public bool? NeedSignificance { get; set; }
 
             /// <summary>
-            /// <para>The numerator of the derived metric.</para>
+            /// <para>The numerator used for significance calculation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>click</para>
@@ -110,13 +119,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The operator used to calculate the derived metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Plus</c>: addition</para>
+            /// <item><description><para>Plus: Addition.</para>
             /// </description></item>
-            /// <item><description><para><c>Minus</c>: subtraction</para>
+            /// <item><description><para>Minus: Subtraction.</para>
             /// </description></item>
-            /// <item><description><para><c>Multiplication</c>: multiplication</para>
+            /// <item><description><para>Multiplication: Multiplication.</para>
             /// </description></item>
-            /// <item><description><para><c>Division</c>: division</para>
+            /// <item><description><para>Division: Division.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -128,11 +137,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the metric is a real-time metric.</para>
+            /// <para>Specifies whether the metric is a real-time metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: The metric is calculated in real time.</para>
+            /// <item><description><para>true: Yes.</para>
             /// </description></item>
-            /// <item><description><para><c>false</c>: The metric is not calculated in real time.</para>
+            /// <item><description><para>false: No.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -144,7 +153,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Realtime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source for the data table to which the results are written.</para>
+            /// <para>The ID of the data source for the write-back data table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -154,7 +163,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ResultResourceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data table to which the results are written.</para>
+            /// <para>The ID of the data table to which data is written back.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -164,7 +173,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ResultTableMetaId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the right-hand metric in the formula for the derived metric.</para>
+            /// <para>The ID of the right metric for the derived metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -204,7 +213,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public int? StatisticsCycle { get; set; }
 
             /// <summary>
-            /// <para>The data table ID.</para>
+            /// <para>The ID of the data table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -216,9 +225,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The metric type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Single</c>: a single metric.</para>
+            /// <item><description><para>Single: Single metric.</para>
             /// </description></item>
-            /// <item><description><para><c>Derived</c>: a derived metric.</para>
+            /// <item><description><para>Derived: Derived metric.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -242,7 +251,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of AB metrics returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

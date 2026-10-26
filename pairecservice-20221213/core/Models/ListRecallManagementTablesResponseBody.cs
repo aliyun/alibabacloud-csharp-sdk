@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementTablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is reserved for future use.</para>
+        /// <para>This parameter is not in effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved for future use.</para>
+        /// <para>This parameter is not in effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of recall management tables.</para>
+        /// <para>The list of recall management tables.</para>
         /// </summary>
         [NameInMap("RecallManagementTables")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataSource { get; set; }
 
             /// <summary>
-            /// <para>The description of the recall management table.</para>
+            /// <para>The table description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is a test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was created. The time is in the ISO 8601 format.</para>
+            /// <para>The creation time. The value is in ISO 8601 format and includes a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was last modified. The time is in the ISO 8601 format.</para>
+            /// <para>The update time. The value is in ISO 8601 format and includes a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the index takes effect. The time is in the ISO 8601 format.</para>
+            /// <para>The effective period of the index. The value is in ISO 8601 format and includes a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string IndexEffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the index version.</para>
+            /// <para>The index version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20250701</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string IndexVersionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the MaxCompute project.</para>
+            /// <para>The MaxCompute project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string MaxcomputeProjectName { get; set; }
 
             /// <summary>
-            /// <para>The schema of the MaxCompute table.</para>
+            /// <para>maxcompute schema。</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string MaxcomputeSchema { get; set; }
 
             /// <summary>
-            /// <para>The name of the table in MaxCompute.</para>
+            /// <para>The table name in MaxCompute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>table-1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string MaxcomputeTableName { get; set; }
 
             /// <summary>
-            /// <para>The name of the recall management table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>table-123</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PartitionFields { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recall management table.</para>
+            /// <para>The table ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string RecallType { get; set; }
 
             /// <summary>
-            /// <para>The type of the table.</para>
+            /// <para>The table type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Recall</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of recall management tables.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

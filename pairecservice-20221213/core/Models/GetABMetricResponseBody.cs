@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetABMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to aggregate metrics by user.</para>
+        /// <para>Indicates whether to calculate significance by user dimension. Two aggregation logics are available: by user and by sample.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AggregationByUser")]
         [Validation(Required=false)]
         public bool? AggregationByUser { get; set; }
 
         /// <summary>
-        /// <para>The metric definition.</para>
+        /// <para>The definition of the metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sum(click_cnt)</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>The denominator of the derived metric formula.</para>
+        /// <para>The denominator used for significance calculation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pv</para>
@@ -37,24 +40,27 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Denominator { get; set; }
 
         /// <summary>
-        /// <para>The metric description.</para>
+        /// <para>The description of the metric.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>页面访问次数</para>
+        /// <para>Page views</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the metric follows a binomial distribution. This affects how significance is calculated.</para>
+        /// <para>Indicates whether the metric follows a binomial distribution when the metric type is derived. If yes, the mean and variance of the metric are calculated based on the binomial distribution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsBinomialDistribution")]
         [Validation(Required=false)]
         public bool? IsBinomialDistribution { get; set; }
 
         /// <summary>
-        /// <para>The ID of the left operand metric for a derived metric.</para>
+        /// <para>The ID of the left metric for the derived metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LeftMetricId { get; set; }
 
         /// <summary>
-        /// <para>The metric name.</para>
+        /// <para>The name of the metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pv</para>
@@ -74,14 +80,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether significance testing is required for this metric.</para>
+        /// <para>Indicates whether to calculate significance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("NeedSignificance")]
         [Validation(Required=false)]
         public bool? NeedSignificance { get; set; }
 
         /// <summary>
-        /// <para>The numerator of the derived metric formula.</para>
+        /// <para>The numerator used for significance calculation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>click</para>
@@ -91,16 +100,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Numerator { get; set; }
 
         /// <summary>
-        /// <para>The operator for the derived metric. Valid values:</para>
+        /// <para>The operator used to calculate the derived metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Plus</c>: addition</para>
-        /// </description></item>
-        /// <item><description><para><c>Minus</c>: subtraction</para>
-        /// </description></item>
-        /// <item><description><para><c>Multiplication</c>: multiplication</para>
-        /// </description></item>
-        /// <item><description><para><c>Division</c>: division</para>
-        /// </description></item>
+        /// <item><description>Plus: addition</description></item>
+        /// <item><description>Minus: subtraction</description></item>
+        /// <item><description>Multiplication: multiplication</description></item>
+        /// <item><description>Division: division</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,12 +116,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the metric is real-time. Valid values:</para>
+        /// <para>Indicates whether the metric is a real-time metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The metric is real-time.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The metric is not real-time.</para>
-        /// </description></item>
+        /// <item><description>true: yes</description></item>
+        /// <item><description>false: no</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source for the results table.</para>
+        /// <para>The ID of the data source for the write-back data table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -147,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ResultResourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the results table.</para>
+        /// <para>The ID of the data table to which data is written back.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ResultTableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the right operand metric for a derived metric.</para>
+        /// <para>The ID of the right metric for the derived metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -167,7 +170,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RightMetricId { get; set; }
 
         /// <summary>
-        /// <para>The scene ID.</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -177,7 +180,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The name of the scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>home_feed</para>
@@ -187,7 +190,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneName { get; set; }
 
         /// <summary>
-        /// <para>The statistics cycle.</para>
+        /// <para>The statistical period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -197,7 +200,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? StatisticsCycle { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source table.</para>
+        /// <para>The ID of the source data table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -207,12 +210,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The type of the metric. Valid values:</para>
+        /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Single</c>: a single metric.</para>
-        /// </description></item>
-        /// <item><description><para><c>Derived</c>: a derived metric.</para>
-        /// </description></item>
+        /// <item><description>Single: single metric</description></item>
+        /// <item><description>Derived: derived metric</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

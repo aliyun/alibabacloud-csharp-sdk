@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<ListExperimentGroupsResponseBodyExperimentGroups> ExperimentGroups { get; set; }
         public class ListExperimentGroupsResponseBodyExperimentGroups : TeaModel {
             /// <summary>
-            /// <para>The configuration for the experiment group, in JSON format.</para>
+            /// <para>The experiment group configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -37,16 +37,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CrowdId { get; set; }
 
             /// <summary>
-            /// <para>The traffic targeting method for the experiment group. Valid values:</para>
+            /// <para>The traffic targeting type of the experiment group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>All</c>: All traffic.</para>
-            /// </description></item>
-            /// <item><description><para><c>Filter</c>: Traffic that matches the filter.</para>
-            /// </description></item>
-            /// <item><description><para><c>CrowdId</c>: Traffic from a specified crowd.</para>
-            /// </description></item>
-            /// <item><description><para><c>Random</c>: A random percentage of traffic.</para>
-            /// </description></item>
+            /// <item><description>All: All traffic.</description></item>
+            /// <item><description>Filter: Traffic that matches the filter condition.</description></item>
+            /// <item><description>CrowdId: Traffic targeted by a specified crowd ID.</description></item>
+            /// <item><description>Random: Traffic randomly selected by percentage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +63,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DebugCrowdId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of debug users, separated by commas.</para>
+            /// <para>The debug users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1124512470******,1124512471******,1124512472******</para>
@@ -87,7 +83,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The distribution duration. This parameter is required only when <c>DistributionType</c> is <c>TimeDuration</c>.</para>
+            /// <para>The distribution time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -97,7 +93,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public int? DistributionTimeDuration { get; set; }
 
             /// <summary>
-            /// <para>The traffic distribution method.<br>● <c>UserId</c>: by user ID<br>● <c>TimeDuration</c>: by time duration<br><br></para>
+            /// <para>The traffic distribution method. Valid values:
+            /// ● UserId: User ID.
+            /// ● TimeDuration: Time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UserId</para>
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Filter { get; set; }
 
             /// <summary>
-            /// <para>If <c>CrowdTargetType</c> is set to <c>Random</c>, this parameter returns the comma-separated IDs of buckets allocated based on the <c>RandomFlow</c> value.</para>
+            /// <para>When the traffic targeting type of the experiment group is Random, this field returns the specific bucket numbers assigned based on the RandomFlow value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2,3,4</para>
@@ -167,7 +165,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable A/B testing for the experiment group.</para>
+            /// <para>Specifies whether an AB experiment group is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -187,7 +185,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>If <c>CrowdTargetType</c> is set to <c>Random</c>, this parameter specifies the percentage of traffic (an integer from 0 to 100) randomly allocated to the experiment group.</para>
+            /// <para>When the traffic targeting type of the experiment group is Random, this field specifies the percentage of random traffic matched to the experiment group. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -197,7 +195,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? RandomFlow { get; set; }
 
             /// <summary>
-            /// <para>The IDs of reserved buckets, separated by commas.</para>
+            /// <para>The reserved bucket numbers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2,3,4</para>
@@ -217,7 +215,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string SceneId { get; set; }
 
             /// <summary>
-            /// <para>The status of the experiment group. Valid values:<br>● <c>Offline</c>: The experiment group is inactive.<br>● <c>Online</c>: The experiment group is active.<br>● <c>Pushed</c>: The experiment group is fully rolled out.<br><br><br></para>
+            /// <para>The experiment group status. Valid values:
+            /// ● Offline: Not online.
+            /// ● Online: Online.
+            /// ● Pushed: Fully pushed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Offline</para>
@@ -229,7 +230,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>59CE7EC6-F268-5D71-9215-32922CC50D72</para>
@@ -239,7 +240,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of elements in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListParamsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of parameters.</para>
+        /// <para>The list of parameters.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
@@ -19,12 +19,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The environment to which the parameter belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Daily: A test environment for daily use.</para>
-            /// </description></item>
-            /// <item><description><para>Prepub: A staging environment that mirrors the production environment.</para>
-            /// </description></item>
-            /// <item><description><para>Product: The production environment.</para>
-            /// </description></item>
+            /// <item><description>Daily: daily environment</description></item>
+            /// <item><description>Prepub: pre-release environment</description></item>
+            /// <item><description>Product: production environment</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -35,7 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Environment { get; set; }
 
             /// <summary>
-            /// <para>The time when the parameter was last modified.</para>
+            /// <para>The update time. The time is formatted in ISO 8601 and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>A2D07551-38DA-531E-9B22-877D1D86A579</para>
@@ -87,7 +84,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of parameters.</para>
+        /// <para>The total number of elements in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

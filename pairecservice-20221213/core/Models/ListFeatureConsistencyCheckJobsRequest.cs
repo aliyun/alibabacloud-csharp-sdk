@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListFeatureConsistencyCheckJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
+        /// <para>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ASC</c>: Ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><c>DESC</c>: Descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: ascending order</description></item>
+        /// <item><description>DESC: descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,12 +55,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. Valid values:</para>
+        /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>GmtCreateTime</c>: Sorts by creation time.</para>
-        /// </description></item>
-        /// <item><description><para><c>GmtModifiedTime</c>: Sorts by modification time.</para>
-        /// </description></item>
+        /// <item><description>GmtCreateTime: sort by creation time</description></item>
+        /// <item><description>GmtModifiedTime: sort by update time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,18 +69,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The status of the job. Valid values:</para>
+        /// <para>The job status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ToRun</c>: Waiting to run.</para>
-        /// </description></item>
-        /// <item><description><para><c>Running</c>: In progress.</para>
-        /// </description></item>
-        /// <item><description><para><c>Success</c>: Successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>Failure</c>: Failed.</para>
-        /// </description></item>
-        /// <item><description><para><c>Stopped</c>: Stopped or canceled.</para>
-        /// </description></item>
+        /// <item><description>ToRun: pending</description></item>
+        /// <item><description>Running: running</description></item>
+        /// <item><description>Success: successful</description></item>
+        /// <item><description>Failure: failed</description></item>
+        /// <item><description>Stopped: stopped or canceled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

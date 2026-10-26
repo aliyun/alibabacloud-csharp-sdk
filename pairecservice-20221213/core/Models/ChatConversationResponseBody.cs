@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>The reply content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FeatureDB近7天读写量为xxx</para>
+        /// <para>The read and write volume of FeatureDB in the last 7 days is xxx</para>
         /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Func { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The format is ISO 8601, including the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>

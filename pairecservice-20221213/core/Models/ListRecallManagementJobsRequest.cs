@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition. Filtering is supported only for the <c>Table</c> type. For example: <c>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</c></para>
+        /// <para><b>The filter conditions.</b> Currently, only filter conditions for the Table type are supported, such as <c>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public Dictionary<string, object> Condition { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para><b>The instance ID.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-test1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not used.</para>
+        /// <para>This parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not used.</para>
+        /// <para>This parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>ASC</c> (ascending) and <c>DESC</c> (descending).</para>
+        /// <para><b>The sorting order.</b> <c>ASC</c>: ascending order. <c>DESC</c>: descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para><b>The page number.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 10.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sorting basis. Valid values: <c>GmtCreateTime</c> (creation time) and <c>GmtModifiedTime</c> (update time).</para>
+        /// <para><b>The sorting criterion.</b> <c>GmtCreateTime</c>: creation time. <c>GmtModifiedTime</c>: update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The task type.</para>
+        /// <para><b>The task type.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>Table</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateDataDiagnosisJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of data diagnosis job IDs.</para>
+        /// <para>The list of data modeling diagnostics node IDs.</para>
         /// </summary>
         [NameInMap("DataDiagnosisJobIds")]
         [Validation(Required=false)]

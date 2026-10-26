@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CheckInstanceResourcesRequest : TeaModel {
+        /// <summary>
+        /// <para>The data source ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>reso-*********</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
@@ -16,38 +22,22 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Hologres</para>
-        /// </description></item>
-        /// <item><description><para>EAS</para>
-        /// </description></item>
-        /// <item><description><para>BE</para>
-        /// </description></item>
-        /// <item><description><para>Rec</para>
-        /// </description></item>
-        /// <item><description><para>Platform</para>
-        /// </description></item>
-        /// <item><description><para>SLS</para>
-        /// </description></item>
-        /// <item><description><para>DataHub</para>
-        /// </description></item>
-        /// <item><description><para>Kafka</para>
-        /// </description></item>
-        /// <item><description><para>Flinkvvp</para>
-        /// </description></item>
-        /// <item><description><para>ACR</para>
-        /// </description></item>
-        /// <item><description><para>OSS</para>
-        /// </description></item>
-        /// <item><description><para>DataWorks</para>
-        /// </description></item>
-        /// <item><description><para>PAI</para>
-        /// </description></item>
-        /// <item><description><para>MaxCompute</para>
-        /// </description></item>
-        /// <item><description><para>GraphCompute</para>
-        /// </description></item>
-        /// <item><description><para>Redis</para>
-        /// </description></item>
+        /// <item><description>Hologres</description></item>
+        /// <item><description>EAS</description></item>
+        /// <item><description>BE</description></item>
+        /// <item><description>Rec</description></item>
+        /// <item><description>Platform</description></item>
+        /// <item><description>SLS</description></item>
+        /// <item><description>DataHub</description></item>
+        /// <item><description>Kafka</description></item>
+        /// <item><description>Flinkvvp</description></item>
+        /// <item><description>ACR</description></item>
+        /// <item><description>OSS</description></item>
+        /// <item><description>DataWorks</description></item>
+        /// <item><description>PAI</description></item>
+        /// <item><description>MaxCompute</description></item>
+        /// <item><description>GraphCompute</description></item>
+        /// <item><description>Redis</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

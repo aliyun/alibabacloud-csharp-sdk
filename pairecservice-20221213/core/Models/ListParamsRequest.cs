@@ -16,12 +16,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The environment to which the parameter belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily: A test environment for daily use.</para>
-        /// </description></item>
-        /// <item><description><para>Prepub: A staging environment that mirrors the production environment.</para>
-        /// </description></item>
-        /// <item><description><para>Product: The production environment.</para>
-        /// </description></item>
+        /// <item><description>Daily: daily environment</description></item>
+        /// <item><description>Pre: pre-release environment</description></item>
+        /// <item><description>Prod: production environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +29,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the ListInstances operation to obtain it.</para>
+        /// <para>The instance ID. You can call the ListInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -73,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scene ID. You can call the ListScenes operation to obtain it.</para>
+        /// <para>The scene ID. You can call the ListScenes operation to obtain the scene ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

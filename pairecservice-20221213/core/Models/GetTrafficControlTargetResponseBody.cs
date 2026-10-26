@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetTrafficControlTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. Format: YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-04-25</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The event of the control target.</para>
+        /// <para>The traffic control target event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>click</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>The time when the traffic control target was created.</para>
+        /// <para>The creation time. Format: ISO 8601, where Z indicates the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-03T02:28:00.000Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The item condition, specified in an array format.</para>
+        /// <para>The item conditions in array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionArray { get; set; }
 
         /// <summary>
-        /// <para>The item condition, specified in an expression format.</para>
+        /// <para>The item conditions in expression format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>status=1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionType { get; set; }
 
         /// <summary>
-        /// <para>The name of the traffic control target.</para>
+        /// <para>The traffic control target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>target-1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether new product regulation is enabled.</para>
+        /// <para>Indicates whether the regulation applies to new products.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? NewProductRegulation { get; set; }
 
         /// <summary>
-        /// <para>The name of the recall strategy.</para>
+        /// <para>The recall policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>recall-1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RecallName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
@@ -110,28 +110,28 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The piecewise control settings.</para>
+        /// <para>The target setting values.</para>
         /// </summary>
         [NameInMap("SplitParts")]
         [Validation(Required=false)]
         public GetTrafficControlTargetResponseBodySplitParts SplitParts { get; set; }
         public class GetTrafficControlTargetResponseBodySplitParts : TeaModel {
             /// <summary>
-            /// <para>The set points.</para>
+            /// <para>The target value split points.</para>
             /// </summary>
             [NameInMap("SetPoints")]
             [Validation(Required=false)]
             public List<long?> SetPoints { get; set; }
 
             /// <summary>
-            /// <para>The set values.</para>
+            /// <para>The target setting values.</para>
             /// </summary>
             [NameInMap("SetValues")]
             [Validation(Required=false)]
             public List<long?> SetValues { get; set; }
 
             /// <summary>
-            /// <para>The time points.</para>
+            /// <para>The time split points.</para>
             /// </summary>
             [NameInMap("TimePoints")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Format: YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-25</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The statistics period.</para>
+        /// <para>The statistical period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
@@ -160,17 +160,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StatisPeriod { get; set; }
 
         /// <summary>
-        /// <para>The status of the traffic control target.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>枚举值：开启：Opened关闭：Closed</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Opened: Enabled.</description></item>
+        /// <item><description>Closed: Disabled</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tolerance value.</para>
+        /// <para>The tolerance range of the traffic control target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -200,7 +204,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TrafficControlTaskId { get; set; }
 
         /// <summary>
-        /// <para>The value of the control target.</para>
+        /// <para>The traffic control target value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

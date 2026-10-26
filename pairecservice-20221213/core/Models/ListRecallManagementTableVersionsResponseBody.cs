@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementTableVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of RecallManagementTable versions.</para>
+        /// <para>The list of recall management table versions.</para>
         /// </summary>
         [NameInMap("RecallManagementTableVersions")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataVersion { get; set; }
 
             /// <summary>
-            /// <para>The effective time.</para>
+            /// <para>The effective period. Format: YYYY-MM-DDTHH:mm:ss.SSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The sync end time.</para>
+            /// <para>The synchronization end time. Format: YYYY-MM-DDTHH:mm:ss.SSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PublishEndTime { get; set; }
 
             /// <summary>
-            /// <para>The sync start time.</para>
+            /// <para>The synchronization start time. Format: YYYY-MM-DDTHH:mm:ss.SSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T22:24:33.132</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PublishStartTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RecallManagementTable version.</para>
+            /// <para>The version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202507010000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string RecallManagementTableVersionId { get; set; }
 
             /// <summary>
-            /// <para>The source table data size.</para>
+            /// <para>The data size of the source data table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? SourceTableDataSize { get; set; }
 
             /// <summary>
-            /// <para>The source table row count.</para>
+            /// <para>The number of rows in the source data table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -87,12 +87,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? SourceTableRowCount { get; set; }
 
             /// <summary>
-            /// <para>The status of the version. Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Online: The version is online.</para>
-            /// </description></item>
-            /// <item><description><para>Offline: The version is offline.</para>
-            /// </description></item>
+            /// <item><description>Online: online</description></item>
+            /// <item><description>Offline: offline</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

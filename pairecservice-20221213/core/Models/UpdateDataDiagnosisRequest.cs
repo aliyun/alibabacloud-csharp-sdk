@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateDataDiagnosisRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the data diagnosis task, provided as a JSON string. The required fields vary based on the <c>Type</c> parameter. For <c>ChangeRate</c>, specify <c>AnalysisField</c> and <c>PartitionFieldFormat</c>. For <c>PreferenceStatisticsCycle</c>, specify <c>UserIdField</c>, <c>RemainDays</c>, <c>EverAppearedDays</c>, <c>RemainRatePeriods</c>, and <c>PartitionFieldFormat</c>. For <c>JoinTables</c>, specify <c>LeftTableAnalysisField</c>, <c>RightTableAnalysisField</c>, <c>LeftJoinField</c>, <c>RightJoinField</c>, <c>SampleQuantity</c>, <c>LeftTablePartitionFieldFormat</c>, and <c>RightTablePartitionFieldFormat</c>. For <c>BaseStatistics</c>, specify <c>TagField</c>, <c>TagFieldSeparator</c>, <c>KVField</c>, <c>KVFieldSeparator</c>, <c>KVPairSeparator</c>, <c>TextField</c>, <c>Quantiles</c>, <c>DefaultValueOfString</c>, <c>NullStringField</c>, and <c>PartitionFieldFormat</c>. For <c>AbnormalBehavior</c>, specify <c>UserId</c>, <c>ItemId</c>, <c>EventField</c>, <c>UpStreamBehavior</c>, <c>DownstreamBehavior</c>, <c>NumericHistogramBins</c>, and <c>PartitionFieldFormat</c>.</para>
+        /// <para>The configuration details of the data diagnostic task. If <c>Type</c> is set to <c>ChangeRate</c>, include the analysis field (<c>AnalysisField</c>) and partition field format (<c>PartitionFieldFormat</c>). If <c>Type</c> is set to <c>PreferenceStatisticsCycle</c>, include the user ID field (<c>UserIdField</c>), single-day retention rate statistical period (<c>RemainDays</c>), appearance rate statistical period (<c>EverAppearedDays</c>), periodic retention rate statistical period (<c>RemainRatePeriods</c>), and partition field format (<c>PartitionFieldFormat</c>). If <c>Type</c> is set to <c>JoinTables</c>, include the left table analysis field (<c>LeftTableAnalysisField</c>), right table analysis field (<c>RightTableAnalysisField</c>), left table JOIN field (<c>LeftJoinField</c>), right table JOIN field (<c>RightJoinField</c>), sample quantity for display (<c>SampleQuantity</c>), left table partition field format (<c>LeftTablePartitionFieldFormat</c>), and right table partition field format (<c>RightTablePartitionFieldFormat</c>). If <c>Type</c> is set to <c>BaseStatistics</c>, include the Tag field (<c>TagField</c>), Tag field separator (<c>TagFieldSeparator</c>), KV field (<c>KVField</c>), KV field separator (<c>KVFieldSeparator</c>), KV pair separator (<c>KVPairSeparator</c>), Text field (<c>TextField</c>), data percentile distribution (<c>Quantiles</c>), default value for the string type (<c>DefaultValueOfString</c>), null value field for the string type (<c>NullStringField</c>), and partition field format (<c>PartitionFieldFormat</c>). If <c>Type</c> is set to <c>AbnormalBehavior</c>, include the user ID field (<c>UserId</c>), item ID field (<c>ItemId</c>), behavior field (<c>EventField</c>), upstream behavior value (<c>UpStreamBehavior</c>), downstream behavior value (<c>DownstreamBehavior</c>), number of buckets (<c>NumericHistogramBins</c>), and partition field format (<c>PartitionFieldFormat</c>).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The execution time for periodic runs. If this field is omitted, the task does not run periodically.</para>
+        /// <para>The periodic execution time. If this field is left empty, the task does not run periodically. Format: HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08:00</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the left data table.</para>
+        /// <para>The ID of the left table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LeftTablePartitionField { get; set; }
 
         /// <summary>
-        /// <para>The name of the data diagnosis task.</para>
+        /// <para>The name of the data diagnostic task configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PartitionField { get; set; }
 
         /// <summary>
-        /// <para>The ID of the right data table.</para>
+        /// <para>The ID of the right table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The number of top-ranked results to return.</para>
+        /// <para>The Top N quantity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -123,18 +123,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? TopNQuantity { get; set; }
 
         /// <summary>
-        /// <para>The type of the data diagnosis task. Valid values:</para>
+        /// <para>The type of the data diagnostic task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ChangeRate</c>: item/user change rate analysis.</para>
-        /// </description></item>
-        /// <item><description><para><c>PreferenceStatisticsCycle</c>: user preference statistics cycle analysis.</para>
-        /// </description></item>
-        /// <item><description><para><c>JoinTables</c>: two-table join analysis.</para>
-        /// </description></item>
-        /// <item><description><para><c>BaseStatistics</c>: basic statistical analysis.</para>
-        /// </description></item>
-        /// <item><description><para><c>AbnormalBehavior</c>: abnormal behavior analysis.</para>
-        /// </description></item>
+        /// <item><description>ChangeRate: item or user change rate analysis</description></item>
+        /// <item><description>PreferenceStatisticsCycle: user preference statistical period analysis</description></item>
+        /// <item><description>JoinTables: two-table association analysis</description></item>
+        /// <item><description>BaseStatistics: basic statistical analysis</description></item>
+        /// <item><description>AbnormalBehavior: abnormal behavior analysis</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

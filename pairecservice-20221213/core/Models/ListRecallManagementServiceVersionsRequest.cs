@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>ASC</c> for ascending order and <c>DESC</c> for descending order.</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: ascending order</description></item>
+        /// <item><description>DESC: descending order</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -50,7 +54,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. Valid values: <c>GmtCreateTime</c> for creation time and <c>GmtModifiedTime</c> for modification time.</para>
+        /// <para>The sort criterion. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>GmtCreateTime: creation time</description></item>
+        /// <item><description>GmtModifiedTime: update time</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>

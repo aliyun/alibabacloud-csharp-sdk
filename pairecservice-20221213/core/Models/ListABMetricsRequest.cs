@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListABMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the ID.</para>
+        /// <para>The instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name to use for filtering metrics.</para>
+        /// <para>The name filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>home</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter for real-time metrics.</para>
+        /// <para>Specifies whether to filter metrics by real-time type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? Realtime { get; set; }
 
         /// <summary>
-        /// <para>The scene ID. Call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</para>
+        /// <para>The scene ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The data table ID. Call the ListTableMetas operation to obtain the ID.</para>
+        /// <para>The ID of the data table. You can obtain the ID by calling ListTableMetas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,11 +81,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The metric type. You can use this parameter to filter the results. Valid values:</para>
+        /// <para>The metric type filter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Single</c>: A single metric.</para>
+        /// <item><description><para>Single: Single metric.</para>
         /// </description></item>
-        /// <item><description><para><c>Derived</c>: A derived metric.</para>
+        /// <item><description><para>Derived: Derived metric.</para>
         /// </description></item>
         /// </list>
         /// 

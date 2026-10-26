@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Reserved.</para>
+        /// <para>This parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Reserved.</para>
+        /// <para>This parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of synchronization jobs.</para>
+        /// <para>The list of synchronization tasks.</para>
         /// </summary>
         [NameInMap("RecallManagementJobs")]
         [Validation(Required=false)]
         public List<ListRecallManagementJobsResponseBodyRecallManagementJobs> RecallManagementJobs { get; set; }
         public class ListRecallManagementJobsResponseBodyRecallManagementJobs : TeaModel {
             /// <summary>
-            /// <para>The end time of the synchronization job.</para>
+            /// <para>The end time of the task. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-28T10:24Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The synchronization job ID.</para>
+            /// <para>The ID of the synchronization task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string RecallManagementJobId { get; set; }
 
             /// <summary>
-            /// <para>Information about the recall management table.</para>
+            /// <para>The task information of the recall management table.</para>
             /// </summary>
             [NameInMap("RecallManagementTableInfo")]
             [Validation(Required=false)]
             public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo RecallManagementTableInfo { get; set; }
             public class ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo : TeaModel {
                 /// <summary>
-                /// <para>The data version.</para>
+                /// <para>The data version number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds=20250701</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string DataVersion { get; set; }
 
                 /// <summary>
-                /// <para>The table version ID.</para>
+                /// <para>The ID of the table version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string RecallManagementTableVersionId { get; set; }
 
                 /// <summary>
-                /// <para>The source table data size.</para>
+                /// <para>The data size of the source table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string SourceTableDataSize { get; set; }
 
                 /// <summary>
-                /// <para>The source table row count.</para>
+                /// <para>The number of data rows in the source table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -106,14 +106,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b></para>
             /// </summary>
             [NameInMap("RecallManagerTableInfo")]
             [Validation(Required=false)]
             public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo RecallManagerTableInfo { get; set; }
             public class ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo : TeaModel {
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para><b>[Deprecated]</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds=20250701</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string DataVersion { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para><b>[Deprecated]</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string RecallManagementTableVersionId { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para><b>[Deprecated]</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string SourceTableDataSize { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para><b>[Deprecated]</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
-            /// <para>The start time of the synchronization job.</para>
+            /// <para>The start time of the task. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-28T10:00:00Z</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the synchronization job. Valid values: <c>Init</c> (initializing), <c>Running</c> (running), <c>Success</c> (succeeded), and <c>Failed</c> (failed).</para>
+            /// <para>The status. Valid values: <c>Init</c> (initializing), <c>Running</c> (running), <c>Success</c> (successful), and <c>Failed</c> (failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of synchronization jobs.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

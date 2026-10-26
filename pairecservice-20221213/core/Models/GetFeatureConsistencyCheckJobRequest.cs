@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetFeatureConsistencyCheckJobRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
+        /// <para>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-********</para>

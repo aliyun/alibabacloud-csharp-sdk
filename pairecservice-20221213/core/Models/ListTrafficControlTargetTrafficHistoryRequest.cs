@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListTrafficControlTargetTrafficHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range.</para>
+        /// <para>The end time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-10 13:13:20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The target environment. Valid values: Daily, Pre, and Prod.</para>
+        /// <para>The environment to which the parameter belongs. Valid values: Daily: daily environment. Pre: staging environment. Prod: production environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Pre</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-1324***</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range.</para>
+        /// <para>The start time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01 13:13:20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The threshold value.</para>
+        /// <para>The threshold.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

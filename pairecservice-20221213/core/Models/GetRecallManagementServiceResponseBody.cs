@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetRecallManagementServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the active version of the recall management service.</para>
+        /// <para>The ID of the active recall management service version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CurrentRecallManagementServiceVersionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the active version of the recall management service.</para>
+        /// <para>The name of the active recall management service version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>version-1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is in ISO 8601 format and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The modification time.</para>
+        /// <para>The update time. The time is in ISO 8601 format and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -90,12 +90,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the recall management service. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Online: The service is running and available.</para>
-        /// </description></item>
-        /// <item><description><para>Offline: The service is stopped or unavailable.</para>
-        /// </description></item>
+        /// <item><description>Online: Online.</description></item>
+        /// <item><description>Offline: Offline.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListSubCrowdsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5AEB79E-FAA4-5DCE-8CD7-1CAF549ECC3E</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of subcrowds.</para>
+        /// <para>The list of sub-crowds.</para>
         /// </summary>
         [NameInMap("SubCrowds")]
         [Validation(Required=false)]
         public List<ListSubCrowdsResponseBodySubCrowds> SubCrowds { get; set; }
         public class ListSubCrowdsResponseBodySubCrowds : TeaModel {
             /// <summary>
-            /// <para>The time when the subcrowd was created.</para>
+            /// <para>The creation time. The value is in ISO 8601 format and includes a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The number of users in the subcrowd.</para>
+            /// <para>The number of users in the crowd group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public int? Quantity { get; set; }
 
             /// <summary>
-            /// <para>The source of the subcrowd.<br>● ManualInput: Users were added manually.<br>● UploadFile: Users were added by uploading a file.<br><br></para>
+            /// <para>The crowd source. Valid values:
+            /// ● ManualInput: Manual data entry.
+            /// ● UploadFile: File upload.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ManualInput</para>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The subcrowd ID.</para>
+            /// <para>The sub-crowd ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string SubCrowdId { get; set; }
 
             /// <summary>
-            /// <para>The users in the subcrowd.</para>
+            /// <para>The users in the crowd group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user1,user2</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The total number of subcrowds.</para>
+        /// <para>The total number of elements in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

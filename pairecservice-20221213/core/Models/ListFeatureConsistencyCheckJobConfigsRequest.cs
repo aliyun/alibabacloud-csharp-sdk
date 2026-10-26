@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListFeatureConsistencyCheckJobConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. For information about how to obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
+        /// <para>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort the results. Valid values:</para>
+        /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>GmtCreateTime: sorts by creation time.</description></item>
         /// <item><description>GmtModifiedTime: sorts by update time.</description></item>

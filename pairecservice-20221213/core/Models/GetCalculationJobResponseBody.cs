@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetCalculationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AB metric.</para>
+        /// <para>The AB metric ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ABMetricId { get; set; }
 
         /// <summary>
-        /// <para>The name of the AB metric.</para>
+        /// <para>The AB metric name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pv</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ABMetricName { get; set; }
 
         /// <summary>
-        /// <para>The business date.</para>
+        /// <para>The business date. The value is in YYYY-MM-DD format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string BizDate { get; set; }
 
         /// <summary>
-        /// <para>The job configuration.</para>
+        /// <para>The task configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The runtime of the job.</para>
+        /// <para>The time when the task ran. The value is in ISO 8601 format and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -60,19 +60,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtRanTime { get; set; }
 
         /// <summary>
-        /// <para>The job messages.</para>
+        /// <para>The task information.</para>
         /// </summary>
         [NameInMap("JobMessage")]
         [Validation(Required=false)]
         public List<string> JobMessage { get; set; }
 
         /// <summary>
-        /// <para>The job source. Valid values:</para>
+        /// <para>The task source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CronOffline: An offline cron job.</para>
-        /// </description></item>
-        /// <item><description><para>DataRerun: A data rerun task.</para>
-        /// </description></item>
+        /// <item><description>CronOffline: a scheduled offline task.</description></item>
+        /// <item><description>DataRerun: a data rerun task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,16 +91,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the calculation job. Valid values:</para>
+        /// <para>The status of the compute task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Success: The job completed successfully.</para>
-        /// </description></item>
-        /// <item><description><para>Failure: The job failed.</para>
-        /// </description></item>
-        /// <item><description><para>Initializing: The job is initializing.</para>
-        /// </description></item>
-        /// <item><description><para>Running: The job is running.</para>
-        /// </description></item>
+        /// <item><description>Success: The task succeeded.</description></item>
+        /// <item><description>Failure: The task failed.</description></item>
+        /// <item><description>Initializing: The task is being initialized.</description></item>
+        /// <item><description>Running: The task is running.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

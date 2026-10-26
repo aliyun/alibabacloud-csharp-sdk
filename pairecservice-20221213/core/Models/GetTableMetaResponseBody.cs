@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetTableMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the table can be deleted. The value is <c>false</c> if other resources reference the table.</para>
+        /// <para>Indicates whether the data table can be deleted. If the table is referenced elsewhere, false is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? CanDelete { get; set; }
 
         /// <summary>
-        /// <para>Additional configurations for the table, provided as a JSON string.</para>
+        /// <para>The additional configurations of the data table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;table_type&quot;:&quot;item&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The table description.</para>
+        /// <para>The description of the data table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test table</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The fields in the table.</para>
+        /// <para>The list of fields in the table.</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<GetTableMetaResponseBodyFields> Fields { get; set; }
         public class GetTableMetaResponseBodyFields : TeaModel {
             /// <summary>
-            /// <para>Whether the field is a dimension field.</para>
+            /// <para>Indicates whether the field is a dimension field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public bool? IsDimensionField { get; set; }
 
             /// <summary>
-            /// <para>The field meaning.</para>
+            /// <para>The meaning of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>the gender of people</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Meaning { get; set; }
 
             /// <summary>
-            /// <para>The field name.</para>
+            /// <para>The name of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gender</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The field type.</para>
+            /// <para>The type of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BIGINT</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The import time.</para>
+        /// <para>The time when the field was imported. The time is in ISO 8601 format and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtImportedTime { get; set; }
 
         /// <summary>
-        /// <para>The modification time.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15:24:33</para>
@@ -119,13 +119,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The table module. Valid values:</para>
+        /// <para>The module of the data table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ABTest</c>: An A/B testing data table.</para>
+        /// <item><description><para>ABTest: experiment data table.</para>
         /// </description></item>
-        /// <item><description><para><c>ExperimentTool</c>: An experiment tool table.</para>
+        /// <item><description><para>ExperimentTool: experiment tool table.</para>
         /// </description></item>
-        /// <item><description><para><c>DataDiagnosis</c>: A table for data diagnosis.</para>
+        /// <item><description><para>DataDiagnosis: data diagnostics.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Module { get; set; }
 
         /// <summary>
-        /// <para>The table name.</para>
+        /// <para>The name of the data table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_table</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>reso-wkgo***</para>
@@ -167,6 +167,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Maxcompute</para>
         /// </summary>
@@ -175,6 +177,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The URI of the resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -183,7 +187,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ResourceUri { get; set; }
 
         /// <summary>
-        /// <para>The table ID.</para>
+        /// <para>The ID of the data table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -203,11 +207,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The table type. Valid values:</para>
+        /// <para>The type of the data table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>MaxCompute</c></para>
+        /// <item><description><para>MaxCompute</para>
         /// </description></item>
-        /// <item><description><para><c>Hologres</c></para>
+        /// <item><description><para>Hologres</para>
         /// </description></item>
         /// </list>
         /// 
@@ -219,7 +223,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The URL of the table in Data Map. This parameter is returned only for MaxCompute tables.</para>
+        /// <para>The URL of the table in Data Map if the table is a MaxCompute table. Otherwise, this field is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://dmc-xxx.com/dm/table/xxx">https://dmc-xxx.com/dm/table/xxx</a></para>

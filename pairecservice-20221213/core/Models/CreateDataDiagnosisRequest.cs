@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateDataDiagnosisRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration for the data diagnosis task, specified as a JSON string. The required fields in this object depend on the value of the <c>Type</c> parameter.</para>
+        /// <para>The configuration content of the data modeling diagnostic task.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>Type</c> is set to <c>ChangeRate</c>, specify the following fields: <c>AnalysisField</c> and <c>PartitionFieldFormat</c>.</para>
+        /// <item><description><para>If Type is set to ChangeRate, the configuration must include: analysis field (AnalysisField) and partition field format (PartitionFieldFormat).</para>
         /// </description></item>
-        /// <item><description><para>If <c>Type</c> is set to <c>PreferenceStatisticsCycle</c>, specify the following fields: <c>UserIdField</c>, <c>RemainDays</c>, <c>EverAppearedDays</c>, <c>RemainRatePeriods</c>, and <c>PartitionFieldFormat</c>.</para>
+        /// <item><description><para>If Type is set to PreferenceStatisticsCycle, the configuration must include: user ID field (UserIdField), single-day retention rate statistical period (RemainDays), ever-appeared rate statistical period (EverAppearedDays), periodic retention rate statistical period (RemainRatePeriods), and partition field format (PartitionFieldFormat).</para>
         /// </description></item>
-        /// <item><description><para>If <c>Type</c> is set to <c>JoinTables</c>, specify the following fields: <c>LeftTableAnalysisField</c>, <c>RightTableAnalysisField</c>, <c>LeftJoinField</c>, <c>RightJoinField</c>, <c>SampleQuantity</c>, <c>LeftTablePartitionFieldFormat</c>, and <c>RightTablePartitionFieldFormat</c>.</para>
+        /// <item><description><para>If Type is set to JoinTables, the configuration must include: left table analysis field (LeftTableAnalysisField), right table analysis field (RightTableAnalysisField), left table JOIN field (LeftJoinField), right table JOIN field (RightJoinField), display sample quantity (SampleQuantity), left table partition field format (LeftTablePartitionFieldFormat), and right table partition field format (RightTablePartitionFieldFormat).</para>
         /// </description></item>
-        /// <item><description><para>If <c>Type</c> is set to <c>BaseStatistics</c>, specify the following fields: <c>TagField</c>, <c>TagFieldSeparator</c>, <c>KVField</c>, <c>KVFieldSeparator</c>, <c>KVPairSeparator</c>, <c>TextField</c>, <c>Quantiles</c>, <c>DefaultValueOfString</c>, <c>NullStringField</c>, and <c>PartitionFieldFormat</c>.</para>
+        /// <item><description><para>If Type is set to BaseStatistics, the configuration must include: tag field (TagField), tag field separator (TagFieldSeparator), KV field (KVField), KV field separator (KVFieldSeparator), KV pair separator (KVPairSeparator), text field (TextField), data percentile distribution (Quantiles), default value for string type (DefaultValueOfString), null string field for string type (NullStringField), and partition field format (PartitionFieldFormat).</para>
         /// </description></item>
-        /// <item><description><para>If <c>Type</c> is set to <c>AbnormalBehavior</c>, specify the following fields: <c>UserId</c>, <c>ItemId</c>, <c>EventField</c>, <c>UpStreamBehavior</c>, <c>DownstreamBehavior</c>, <c>NumericHistogramBins</c>, and <c>PartitionFieldFormat</c>.</para>
+        /// <item><description><para>If Type is set to AbnormalBehavior, the configuration must include: user ID field (UserId), item ID field (ItemId), behavior field (EventField), upstream behavior value (UpStreamBehavior), downstream behavior value (DownstreamBehavior), number of histogram bins (NumericHistogramBins), and partition field format (PartitionFieldFormat).</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The scheduled time to run the task. If this parameter is omitted, the task runs only once.</para>
+        /// <para>The periodic run time. If this field is empty, the task does not run periodically. The format is HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08:00</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LeftTableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The partition field for the left data table.</para>
+        /// <para>The partition field of the left table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LeftTablePartitionField { get; set; }
 
         /// <summary>
-        /// <para>The name of the data diagnosis task.</para>
+        /// <para>The name of the data modeling diagnostic task configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RightTableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The partition field for the right data table.</para>
+        /// <para>The partition field of the right table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The number of top results to return.</para>
+        /// <para>The number of top N results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -135,17 +135,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? TopNQuantity { get; set; }
 
         /// <summary>
-        /// <para>The type of the data diagnosis task. Valid values:</para>
+        /// <para>The type of the data diagnostic task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ChangeRate: Item or user change rate analysis.</para>
+        /// <item><description><para>ChangeRate: item/user change rate analysis.</para>
         /// </description></item>
-        /// <item><description><para>PreferenceStatisticsCycle: User preference statistics cycle analysis.</para>
+        /// <item><description><para>PreferenceStatisticsCycle: user preference statistical period analysis.</para>
         /// </description></item>
-        /// <item><description><para>JoinTables: Two-table join analysis.</para>
+        /// <item><description><para>JoinTables: join table analysis.</para>
         /// </description></item>
-        /// <item><description><para>BaseStatistics: Basic statistical analysis.</para>
+        /// <item><description><para>BaseStatistics: basic statistics analysis.</para>
         /// </description></item>
-        /// <item><description><para>AbnormalBehavior: Abnormal behavior analysis.</para>
+        /// <item><description><para>AbnormalBehavior: abnormal behavior analysis.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

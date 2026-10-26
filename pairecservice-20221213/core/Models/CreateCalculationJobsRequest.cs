@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateCalculationJobsRequest : TeaModel {
         /// <summary>
-        /// <para>A comma-separated list of A/B metric IDs.</para>
+        /// <para>The list of ABTest metric IDs, separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ABMetricIds { get; set; }
 
         /// <summary>
-        /// <para>The end date.</para>
+        /// <para>The end date. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to get this ID.</para>
+        /// <para>The instance ID. You can obtain the instance ID by calling <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start date.</para>
+        /// <para>The start date. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

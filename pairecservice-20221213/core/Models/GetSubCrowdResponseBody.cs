@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetSubCrowdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the sub-crowd was created.</para>
+        /// <para>The time when the crowd was created. The time is in ISO 8601 format and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The number of users in the sub-crowd.</para>
+        /// <para>The number of users in the crowd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Quantity { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>01D22D08-BA20-5F35-8302-99115F288220</para>
@@ -40,7 +40,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The source of the sub-crowd. Valid values:</para>
+        /// <para>The source of the crowd. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ManualInput: manual input</description></item>
+        /// <item><description>UploadFile: file upload</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ManualInput</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The users in the sub-crowd.</para>
+        /// <para>The users in the crowd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1,user2</para>

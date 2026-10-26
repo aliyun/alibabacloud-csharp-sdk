@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListExperimentsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the experiment group.</para>
+        /// <para>The experiment group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the ListInstances operation to obtain the ID.</para>
+        /// <para>The instance ID. You can call ListInstances to retrieve the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The filter parameter for quick search. All experiments that match the names or tags are returned.</para>
+        /// <para>The filter parameter for quick search. Returns all experiments whose name or label matches the specified value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>experiment_test1</para>
@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The status of the experiment. Valid values:</para>
+        /// <para>The status filter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Offline</para>
-        /// </description></item>
-        /// <item><description><para>Online</para>
-        /// </description></item>
+        /// <item><description>Offline: Not online.</description></item>
+        /// <item><description>Online: Online.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

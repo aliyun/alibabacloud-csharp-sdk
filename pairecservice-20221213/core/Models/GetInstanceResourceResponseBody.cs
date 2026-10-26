@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The resource category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DataManagement</para>
-        /// </description></item>
-        /// <item><description><para>Engine</para>
-        /// </description></item>
-        /// <item><description><para>Monitor</para>
-        /// </description></item>
+        /// <item><description>DataManagement</description></item>
+        /// <item><description>Engine</description></item>
+        /// <item><description>Monitor</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The resource configuration.</para>
+        /// <para>The configuration information of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -38,7 +35,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-13 17:34:52</para>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The last modification time.</para>
+        /// <para>The update time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-13 17:34:52</para>
@@ -59,38 +56,26 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         /// <summary>
         /// <para>The resource group.</para>
-        /// <para>If <c>Category</c> is <c>DataManagement</c>, the valid values are:</para>
+        /// <para>If the resource category is DataManagement, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><para>storage</para>
-        /// </description></item>
-        /// <item><description><para>modelpipeline</para>
-        /// </description></item>
-        /// <item><description><para>datastorage</para>
-        /// </description></item>
-        /// <item><description><para>modeltrain</para>
-        /// </description></item>
+        /// <item><description>storage</description></item>
+        /// <item><description>modelpipeline</description></item>
+        /// <item><description>datastorage</description></item>
+        /// <item><description>modeltrain</description></item>
         /// </list>
-        /// <para>If <c>Category</c> is <c>Engine</c>, the valid values are:</para>
+        /// <para>If the resource category is Engine, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><para>feature</para>
-        /// </description></item>
-        /// <item><description><para>predict</para>
-        /// </description></item>
-        /// <item><description><para>recall</para>
-        /// </description></item>
-        /// <item><description><para>recengine</para>
-        /// </description></item>
+        /// <item><description>feature</description></item>
+        /// <item><description>predict</description></item>
+        /// <item><description>recall</description></item>
+        /// <item><description>recengine</description></item>
         /// </list>
-        /// <para>If <c>Category</c> is <c>Monitor</c>, the valid values are:</para>
+        /// <para>If the resource category is Monitor, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><para>logs</para>
-        /// </description></item>
-        /// <item><description><para>logsback</para>
-        /// </description></item>
-        /// <item><description><para>coldstart</para>
-        /// </description></item>
-        /// <item><description><para>deploy</para>
-        /// </description></item>
+        /// <item><description>logs</description></item>
+        /// <item><description>logsback</description></item>
+        /// <item><description>coldstart</description></item>
+        /// <item><description>deploy</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,7 +86,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</para>
@@ -111,7 +96,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>reso-2s416t***</para>
@@ -123,38 +108,22 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Hologres</para>
-        /// </description></item>
-        /// <item><description><para>EAS</para>
-        /// </description></item>
-        /// <item><description><para>BE</para>
-        /// </description></item>
-        /// <item><description><para>Rec</para>
-        /// </description></item>
-        /// <item><description><para>Platform</para>
-        /// </description></item>
-        /// <item><description><para>SLS</para>
-        /// </description></item>
-        /// <item><description><para>DataHub</para>
-        /// </description></item>
-        /// <item><description><para>ApsaraMQ for Kafka</para>
-        /// </description></item>
-        /// <item><description><para>Realtime Compute for Apache Flink</para>
-        /// </description></item>
-        /// <item><description><para>ACR</para>
-        /// </description></item>
-        /// <item><description><para>OSS</para>
-        /// </description></item>
-        /// <item><description><para>DataWorks</para>
-        /// </description></item>
-        /// <item><description><para>PAI</para>
-        /// </description></item>
-        /// <item><description><para>MaxCompute</para>
-        /// </description></item>
-        /// <item><description><para>Graph Compute Service</para>
-        /// </description></item>
-        /// <item><description><para>ApsaraDB for Redis</para>
-        /// </description></item>
+        /// <item><description>Hologres</description></item>
+        /// <item><description>EAS</description></item>
+        /// <item><description>BE</description></item>
+        /// <item><description>Rec</description></item>
+        /// <item><description>Platform</description></item>
+        /// <item><description>SLS</description></item>
+        /// <item><description>DataHub</description></item>
+        /// <item><description>Kafka</description></item>
+        /// <item><description>Flinkvvp</description></item>
+        /// <item><description>ACR</description></item>
+        /// <item><description>OSS</description></item>
+        /// <item><description>DataWorks</description></item>
+        /// <item><description>PAI</description></item>
+        /// <item><description>MaxCompute</description></item>
+        /// <item><description>GraphCompute</description></item>
+        /// <item><description>Redis</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListCrowdsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Crowds.</para>
+        /// <para>The list of crowds.</para>
         /// </summary>
         [NameInMap("Crowds")]
         [Validation(Required=false)]
         public List<ListCrowdsResponseBodyCrowds> Crowds { get; set; }
         public class ListCrowdsResponseBodyCrowds : TeaModel {
             /// <summary>
-            /// <para>The Crowd ID.</para>
+            /// <para>The ID of the crowd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CrowdId { get; set; }
 
             /// <summary>
-            /// <para>The Crowd description.</para>
+            /// <para>The description of the crowd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a test.</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the Crowd was created.</para>
+            /// <para>The time when the crowd was created. The time is in ISO 8601 format and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The label of the Crowd.</para>
+            /// <para>The label of the crowd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os=android</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The Crowd name.</para>
+            /// <para>The name of the crowd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crowd1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of users in the Crowd.</para>
+            /// <para>The quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -77,12 +77,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Quantity { get; set; }
 
             /// <summary>
-            /// <para>The source of the Crowd. Valid values:</para>
+            /// <para>The source of the crowd.</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ManualInput</c>: The Crowd is created from a manual entry of users.</para>
-            /// </description></item>
-            /// <item><description><para><c>UploadFile</c>: The Crowd is created from an uploaded file.</para>
-            /// </description></item>
+            /// <item><description>ManualInput: Manual input</description></item>
+            /// <item><description>UploadFile: File upload</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The user IDs in the Crowd, separated by commas.</para>
+            /// <para>The users included in the crowd. Multiple users are separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user1,user2</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</para>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of Crowds.</para>
+        /// <para>The total number of elements in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

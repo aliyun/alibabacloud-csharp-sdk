@@ -41,15 +41,15 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
+        /// <para>The task status. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Initializing: The job is being initialized.</para>
+        /// <item><description><para>Initializing: The task is being initialized.</para>
         /// </description></item>
-        /// <item><description><para>Running: The job is in progress.</para>
+        /// <item><description><para>Running: The task is running.</para>
         /// </description></item>
-        /// <item><description><para>Success: The job succeeded.</para>
+        /// <item><description><para>Success: The task succeeded.</para>
         /// </description></item>
-        /// <item><description><para>Failure: The job failed to complete.</para>
+        /// <item><description><para>Failure: The task failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>A list of data diagnosis types.</para>
+        /// <para>The list of data diagnostic types.</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]

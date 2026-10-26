@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class BackflowFeatureConsistencyCheckJobDataRequest : TeaModel {
         /// <summary>
-        /// <para>The feature consistency check job configuration ID. To obtain the configuration ID, call the <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a> operation.</para>
+        /// <para>The ID of the feature consistency check job configuration. For more information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureConsistencyCheckJobConfigId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</para>
+        /// <para>The instance ID. For more information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogRequestId { get; set; }
 
         /// <summary>
-        /// <para>The log request time (UNIX epoch timestamp).</para>
+        /// <para>The log request time (UNIX timestamp).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,6 +108,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Scores { get; set; }
 
+        /// <summary>
+        /// <para>The service name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>se_demorec</para>
+        /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetDataDiagnosisResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration of the data diagnosis task.</para>
+        /// <para>The configuration content of the diagnostic node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AnalysisField&quot;:&quot;userid&quot;,&quot;PartitionFieldFormat&quot;:&quot;yyyymmdd&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The time for periodic execution. If this field is empty, the task does not execute periodically.</para>
+        /// <para>The scheduled run time. If this field is empty, no scheduled runs are performed. The format is HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08:00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CycleTime { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The format follows ISO 8601 and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The modification time.</para>
+        /// <para>The last modified time. The format follows ISO 8601 and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LeftTableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The partition field of the left data table.</para>
+        /// <para>The partition field of the left table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LeftTablePartitionField { get; set; }
 
         /// <summary>
-        /// <para>The name of the data diagnosis task.</para>
+        /// <para>The name of the data modeling diagnostics task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data_diagnosis_job1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RightTableMetaId { get; set; }
 
         /// <summary>
-        /// <para>The partition field of the right data table.</para>
+        /// <para>The partition field of the right table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TableMetaName { get; set; }
 
         /// <summary>
-        /// <para>The Top-N quantity.</para>
+        /// <para>The top-N quantity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? TopNQuantity { get; set; }
 
         /// <summary>
-        /// <para>The type of the data diagnosis task.</para>
+        /// <para>The type of the data modeling diagnostics task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ChangeRate</para>

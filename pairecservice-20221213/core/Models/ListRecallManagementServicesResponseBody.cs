@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is not currently in effect.</para>
+        /// <para>This parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not currently in effect.</para>
+        /// <para>This parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of recall management services.</para>
+        /// <para>The recall management services.</para>
         /// </summary>
         [NameInMap("RecallManagementServices")]
         [Validation(Required=false)]
         public List<ListRecallManagementServicesResponseBodyRecallManagementServices> RecallManagementServices { get; set; }
         public class ListRecallManagementServicesResponseBodyRecallManagementServices : TeaModel {
             /// <summary>
-            /// <para>The ID of the currently active recall management service version.</para>
+            /// <para>The ID of the active recall management service version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CurrentRecallManagementServiceVersionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the currently active recall management service version.</para>
+            /// <para>The name of the active recall management service version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>version-1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in ISO 8601 format, including the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time in ISO 8601 format, including the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The service name of the recall management service.</para>
+            /// <para>The name of the recall management service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hot_group_recall</para>

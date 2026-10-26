@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateDataDiagnosisJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The data diagnosis ID.</para>
+        /// <para>The data modeling diagnostics ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DataDiagnosisId { get; set; }
 
         /// <summary>
-        /// <para>The end date for the job.</para>
+        /// <para>The end date. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start date for the job.</para>
+        /// <para>The start date. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

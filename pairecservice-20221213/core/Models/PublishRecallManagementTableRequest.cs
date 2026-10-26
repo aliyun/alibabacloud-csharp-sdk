@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para><b>The synchronization mode.</b> Valid values:</para>
+        /// <para><b>The enumeration value for the table synchronization mode</b>:</para>
         /// <list type="bullet">
-        /// <item><description><c>Merge</c>: Adds new data and updates existing data.</description></item>
+        /// <item><description><c>Merge</c>: Merge.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,21 +34,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The table partitions to publish.</para>
+        /// <para>The partition of the table to be published.</para>
         /// </summary>
         [NameInMap("Partition")]
         [Validation(Required=false)]
         public Dictionary<string, string> Partition { get; set; }
 
         /// <summary>
-        /// <para>The table partitions to publish.</para>
+        /// <para>The partition of the table to be published.</para>
         /// </summary>
         [NameInMap("Partitions")]
         [Validation(Required=false)]
         public Dictionary<string, string> Partitions { get; set; }
 
         /// <summary>
-        /// <para><b>Specifies whether to skip the threshold check during table synchronization.</b></para>
+        /// <para><b>Specifies whether to skip the threshold check when synchronizing the table.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("SkipThresholdCheck")]
         [Validation(Required=false)]
         public bool? SkipThresholdCheck { get; set; }
+
+        /// <summary>
+        /// <para>The start time of incremental data playback (UNIX milliseconds).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1792512000000</para>
+        /// </summary>
+        [NameInMap("StartTimestampMs")]
+        [Validation(Required=false)]
+        public long? StartTimestampMs { get; set; }
 
     }
 

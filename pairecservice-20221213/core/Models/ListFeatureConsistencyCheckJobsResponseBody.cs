@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<ListFeatureConsistencyCheckJobsResponseBodyFeatureConsistencyCheckJobs> FeatureConsistencyCheckJobs { get; set; }
         public class ListFeatureConsistencyCheckJobsResponseBodyFeatureConsistencyCheckJobs : TeaModel {
             /// <summary>
-            /// <para>The configuration of the job.</para>
+            /// <para>The configuration information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureConsistencyCheckJobId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the job.</para>
+            /// <para>The end time. The time follows the ISO 8601 standard and includes a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the job.</para>
+            /// <para>The start time. The time follows the ISO 8601 standard and includes a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -77,25 +77,20 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtStartTime { get; set; }
 
             /// <summary>
-            /// <para>A list of log entries.</para>
+            /// <para>The log information.</para>
             /// </summary>
             [NameInMap("Logs")]
             [Validation(Required=false)]
             public List<string> Logs { get; set; }
 
             /// <summary>
-            /// <para>The status of the job. Valid values:</para>
+            /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ToRun</c>: Waiting to run.</para>
-            /// </description></item>
-            /// <item><description><para><c>Running</c>: In progress.</para>
-            /// </description></item>
-            /// <item><description><para><c>Success</c>: Successful.</para>
-            /// </description></item>
-            /// <item><description><para><c>Failure</c>: Failed.</para>
-            /// </description></item>
-            /// <item><description><para><c>Stopped</c>: Stopped or canceled.</para>
-            /// </description></item>
+            /// <item><description>ToRun: pending</description></item>
+            /// <item><description>Running: running</description></item>
+            /// <item><description>Success: successful</description></item>
+            /// <item><description>Failure: failed</description></item>
+            /// <item><description>Stopped: stopped or canceled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +113,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of jobs.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

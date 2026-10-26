@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListExperimentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of experiments.</para>
+        /// <para>The experiment list.</para>
         /// </summary>
         [NameInMap("Experiments")]
         [Validation(Required=false)]
         public List<ListExperimentsResponseBodyExperiments> Experiments { get; set; }
         public class ListExperimentsResponseBodyExperiments : TeaModel {
             /// <summary>
-            /// <para>The alias for the experiment ID.</para>
+            /// <para>The alias of the experiment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>L1#EG1#E1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string AliasExperimentId { get; set; }
 
             /// <summary>
-            /// <para>The allocated bucket numbers.</para>
+            /// <para>The allocated bucket number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2,3</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Buckets { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the experiment.</para>
+            /// <para>The experiment configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The ID of the debug crowd.</para>
+            /// <para>The debug crowd ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DebugCrowdId { get; set; }
 
             /// <summary>
-            /// <para>A comma-separated list of user IDs for debugging.</para>
+            /// <para>The debug users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uid1,uid2,uid3</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DebugUsers { get; set; }
 
             /// <summary>
-            /// <para>The description of the experiment.</para>
+            /// <para>The experiment description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a test.</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the experiment group.</para>
+            /// <para>The experiment group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ExperimentGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the experiment.</para>
+            /// <para>The experiment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ExperimentId { get; set; }
 
             /// <summary>
-            /// <para>The percentage of flow allocated to the experiment.</para>
+            /// <para>The traffic allocation percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public int? FlowPercent { get; set; }
 
             /// <summary>
-            /// <para>The timestamp indicating when the experiment was created.</para>
+            /// <para>The creation time. The value is in ISO 8601 format and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp indicating when the experiment was last modified.</para>
+            /// <para>The update time. The value is in ISO 8601 format and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the laboratory.</para>
+            /// <para>The laboratory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LaboratoryId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the layer.</para>
+            /// <para>The layer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LayerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the experiment.</para>
+            /// <para>The experiment name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>experiment_test1</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scene.</para>
+            /// <para>The scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -167,12 +167,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string SceneId { get; set; }
 
             /// <summary>
-            /// <para>The status of the experiment. Valid values:</para>
+            /// <para>The status filter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Offline</c>: The experiment is inactive and does not receive flow.</para>
-            /// </description></item>
-            /// <item><description><para><c>Online</c>: The experiment is active and can receive flow.</para>
-            /// </description></item>
+            /// <item><description>Offline: Not online.</description></item>
+            /// <item><description>Online: Online.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,12 +181,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the experiment. Valid values:</para>
+            /// <para>The experiment type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Baseline</c>: The control experiment.</para>
-            /// </description></item>
-            /// <item><description><para><c>Normal</c>: A variant experiment.</para>
-            /// </description></item>
+            /// <item><description>Baseline: Baseline experiment.</description></item>
+            /// <item><description>Normal: Common experiment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -201,7 +197,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>68075085-1A7D-55C2-B51D-7AD9B02A6DD6</para>
@@ -211,7 +207,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of experiments returned.</para>
+        /// <para>The total number of elements in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

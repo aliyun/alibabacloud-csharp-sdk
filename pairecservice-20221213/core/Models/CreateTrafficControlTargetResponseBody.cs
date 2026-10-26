@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The traffic control target ID.</para>
+        /// <para>The ID of the traffic control target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetSubCrowdRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <c>ListInstances</c> operation to obtain this ID.</para>
+        /// <para>The instance ID. You can call the ListInstances operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetRecallManagementTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the table can be deleted.</para>
+        /// <para>Indicates whether the table can be deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? CanDelete { get; set; }
 
         /// <summary>
-        /// <para>Additional configurations for the table.</para>
+        /// <para>The additional configurations of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;item_id&quot;:&quot;&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DataSource { get; set; }
 
         /// <summary>
-        /// <para>The data table description.</para>
+        /// <para>The table description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the fluctuation threshold for the data size.</para>
+        /// <para>Indicates whether the fluctuation threshold for the size of the table is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? EnableDataSizeFluctuationThreshold { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the fluctuation threshold for the row count.</para>
+        /// <para>Indicates whether the fluctuation threshold for the row count of the table is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? EnableRowCountFluctuationThreshold { get; set; }
 
         /// <summary>
-        /// <para>A list of fields.</para>
+        /// <para>The list of fields.</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<GetRecallManagementTableResponseBodyFields> Fields { get; set; }
         public class GetRecallManagementTableResponseBodyFields : TeaModel {
             /// <summary>
-            /// <para>A list of field attributes.</para>
+            /// <para>The list of attributes for the field.</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The vector dimension.</para>
+            /// <para>The vector dimensions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is displayed in ISO 8601 format and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The modification time.</para>
+        /// <para>The update time. The time is displayed in ISO 8601 format and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The index effective time.</para>
+        /// <para>The effective period of the index. The time is displayed in ISO 8601 format and includes the time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string IndexVersionId { get; set; }
 
         /// <summary>
-        /// <para>The maximum data size fluctuation threshold.</para>
+        /// <para>The maximum fluctuation threshold for the size of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxDataSizeFluctuationThreshold { get; set; }
 
         /// <summary>
-        /// <para>The maximum row count fluctuation threshold.</para>
+        /// <para>The maximum fluctuation threshold for the row count of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxRowCountFluctuationThreshold { get; set; }
 
         /// <summary>
-        /// <para>The MaxCompute project name.</para>
+        /// <para>The name of the MaxCompute project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string MaxcomputeSchema { get; set; }
 
         /// <summary>
-        /// <para>The MaxCompute table name.</para>
+        /// <para>The name of the table in MaxCompute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table-1</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string MaxcomputeTableName { get; set; }
 
         /// <summary>
-        /// <para>The minimum data size fluctuation threshold.</para>
+        /// <para>The minimum fluctuation threshold for the size of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MinDataSizeFluctuationThreshold { get; set; }
 
         /// <summary>
-        /// <para>The minimum row count fluctuation threshold.</para>
+        /// <para>The minimum fluctuation threshold for the row count of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MinRowCountFluctuationThreshold { get; set; }
 
         /// <summary>
-        /// <para>The data table name.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table-123</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The partition fields.</para>
+        /// <para>The partition fields of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PartitionFields { get; set; }
 
         /// <summary>
-        /// <para>The data table ID.</para>
+        /// <para>The table ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RecallManagementTableId { get; set; }
 
         /// <summary>
-        /// <para>The recall type.</para>
+        /// <para>The recall type of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>X2I</para>

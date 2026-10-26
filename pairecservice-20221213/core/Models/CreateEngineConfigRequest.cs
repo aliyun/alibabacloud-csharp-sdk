@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can obtain the ID from the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</para>
+        /// <para>The instance ID. You can obtain the instance ID from the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-***test</para>
@@ -68,6 +68,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The scene ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The type of the engine configuration.</para>
+        /// <para>The engine configuration type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

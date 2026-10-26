@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can use this parameter to perform a fuzzy search for instances.</para>
+        /// <para>The instance ID for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-test1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>Asc</c> (ascending) and <c>Desc</c> (descending).</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Desc</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort criterion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Type</para>
@@ -62,14 +62,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>basic</c>: Basic edition</para>
-        /// </description></item>
-        /// <item><description><para><c>high-level</c>: High-level edition</para>
-        /// </description></item>
-        /// <item><description><para><c>advanced</c>: Advanced edition</para>
-        /// </description></item>
-        /// <item><description><para><c>standard</c>: Standard edition</para>
-        /// </description></item>
+        /// <item><description>basic: Basic Edition.</description></item>
+        /// <item><description>highleve: Upgraded Edition.</description></item>
+        /// <item><description>advance: Advanced Edition.</description></item>
+        /// <item><description>standard: Standard Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

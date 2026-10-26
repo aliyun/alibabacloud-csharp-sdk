@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateCalculationJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of calculation job IDs.</para>
+        /// <para>The list of compute task IDs.</para>
         /// </summary>
         [NameInMap("CalculationJobIds")]
         [Validation(Required=false)]

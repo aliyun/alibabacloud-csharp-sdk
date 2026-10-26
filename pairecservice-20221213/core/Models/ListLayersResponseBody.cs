@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListLayersResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of layers.</para>
+        /// <para>The list of layers.</para>
         /// </summary>
         [NameInMap("Layers")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the layer was created.</para>
+            /// <para>The creation time in ISO 8601 format, using Z to indicate the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-30T02:02:28.000Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The remaining traffic for the layer.</para>
+            /// <para>The remaining traffic for the current experimental layer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>518C64F6-DFF7-11ED-85B0-00163E14B3D1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of layers.</para>
+        /// <para>The total number of elements in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

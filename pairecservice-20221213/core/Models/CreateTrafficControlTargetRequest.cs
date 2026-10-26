@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateTrafficControlTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the traffic control target.</para>
+        /// <para>The end time of the control target. The format is YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-04-25</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The event for the traffic control target.</para>
+        /// <para>The control target event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>click</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>The item condition in array format.</para>
+        /// <para>The item conditions in array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionArray { get; set; }
 
         /// <summary>
-        /// <para>The item condition in expression format.</para>
+        /// <para>The item conditions in expression format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>status=1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionExpress { get; set; }
 
         /// <summary>
-        /// <para>The item condition type.</para>
+        /// <para>The condition type for item control.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Array</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable new product regulation.</para>
+        /// <para>Specifies whether the control applies to new products.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? NewProductRegulation { get; set; }
 
         /// <summary>
-        /// <para>The recall strategy name.</para>
+        /// <para>The recall policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>recall-1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RecallName { get; set; }
 
         /// <summary>
-        /// <para>The start time of the traffic control target.</para>
+        /// <para>The start time of the control target. The format is YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-25</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StatisPeriod { get; set; }
 
         /// <summary>
-        /// <para>The status of the traffic control target.</para>
+        /// <para>The status of the control target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Opened</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tolerance value for the traffic control target.</para>
+        /// <para>The tolerance range of the control target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? ToleranceValue { get; set; }
 
         /// <summary>
-        /// <para>The traffic control task ID.</para>
+        /// <para>The ID of the traffic control task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TrafficControlTaskId { get; set; }
 
         /// <summary>
-        /// <para>The value of the traffic control target.</para>
+        /// <para>The target value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

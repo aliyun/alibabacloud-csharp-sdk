@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of item control reports.</para>
+        /// <para>The list of item-level traffic control reports.</para>
         /// </summary>
         [NameInMap("TrafficControlTaskItemReports")]
         [Validation(Required=false)]
         public List<QueryTrafficControlTaskItemReportResponseBodyTrafficControlTaskItemReports> TrafficControlTaskItemReports { get; set; }
         public class QueryTrafficControlTaskItemReportResponseBodyTrafficControlTaskItemReports : TeaModel {
             /// <summary>
-            /// <para>The actual number of controlled items.</para>
+            /// <para>The actual number of items that were traffic-controlled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? ActualItemControlNum { get; set; }
 
             /// <summary>
-            /// <para>The actual traffic of controlled items.</para>
+            /// <para>The actual traffic volume for items that were traffic-controlled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? ActualItemControlTraffic { get; set; }
 
             /// <summary>
-            /// <para>The number of items that reached the control target.</para>
+            /// <para>The number of items that have reached the traffic control target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? DoneItemControlNum { get; set; }
 
             /// <summary>
-            /// <para>The number of items that reached the control target, as a percentage of the expected number of controlled items.</para>
+            /// <para>The percentage of items that have reached the traffic control target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20%</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DoneItemControlPercentage { get; set; }
 
             /// <summary>
-            /// <para>The actual number of controlled items as a percentage of the expected number.</para>
+            /// <para>The percentage of traffic-controlled items by count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10%</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemControlNumPercentage { get; set; }
 
             /// <summary>
-            /// <para>The actual traffic from controlled items as a percentage of the expected traffic.</para>
+            /// <para>The percentage of traffic-controlled items by traffic volume.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20%</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemControlTrafficPercentage { get; set; }
 
             /// <summary>
-            /// <para>The expected number of controlled items.</para>
+            /// <para>The expected number of items to be traffic-controlled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? OughtItemControlNum { get; set; }
 
             /// <summary>
-            /// <para>The expected traffic of controlled items.</para>
+            /// <para>The expected traffic volume for items to be traffic-controlled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>

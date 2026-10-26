@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListDataDiagnosisReportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The exception report list.</para>
+        /// <para>The list of exception reports.</para>
         /// </summary>
         [NameInMap("ExceptionRate")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The exception message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>change_rate 大于 0.2，请确认是否正常</para>
+            /// <para>change_rate is greater than 0.2. Verify that this is expected</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The type or level of the exception.</para>
+            /// <para>The exception type or severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WARN</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>Reports for the abnormal behavior analysis task.</para>
+        /// <para>The list of diagnostic reports for abnormal behavior analysis diagnosis nodes.</para>
         /// </summary>
         [NameInMap("ReportsOfAbnormalBehavior")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Ds { get; set; }
 
             /// <summary>
-            /// <para>The rank.</para>
+            /// <para>The rank of the statistical metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ConversionRate { get; set; }
 
             /// <summary>
-            /// <para>The ID corresponding to the statistical granularity.</para>
+            /// <para>The ID corresponding to the statistical granularity of the conversion rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100010050+259203779</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ConversionRateIds { get; set; }
 
             /// <summary>
-            /// <para>The count of downstream behaviors.</para>
+            /// <para>The downstream behavior count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DownStreamCount { get; set; }
 
             /// <summary>
-            /// <para>The ID corresponding to the granularity of the downstream behavior.</para>
+            /// <para>The ID corresponding to the statistical granularity of the downstream behavior.</para>
             /// 
             /// <b>Example:</b>
             /// <para>189814043+272292277</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Granularity { get; set; }
 
             /// <summary>
-            /// <para>The count of upstream behaviors.</para>
+            /// <para>The upstream behavior count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string UpStreamCount { get; set; }
 
             /// <summary>
-            /// <para>The ID corresponding to the granularity of the upstream behavior.</para>
+            /// <para>The ID corresponding to the statistical granularity of the upstream behavior.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104684044+249445882</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Distribution { get; set; }
 
             /// <summary>
-            /// <para>The indicator name.</para>
+            /// <para>The name of the statistical metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>conversion_rate</para>
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>Reports for the basic statistical analysis task.</para>
+        /// <para>The list of diagnostic reports for basic statistics analysis diagnosis nodes.</para>
         /// </summary>
         [NameInMap("ReportsOfBaseStatistics")]
         [Validation(Required=false)]
         public List<List<ListDataDiagnosisReportsResponseBodyReportsOfBaseStatistics>> ReportsOfBaseStatistics { get; set; }
         public class ListDataDiagnosisReportsResponseBodyReportsOfBaseStatistics : TeaModel {
             /// <summary>
-            /// <para>The equivalent null count. This refers to the count of specific characters, such as <c>\\N</c>, that are treated as null values.</para>
+            /// <para>The equivalent null value count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>\\N</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DefaultNullCount { get; set; }
 
             /// <summary>
-            /// <para>The equivalent null rate.</para>
+            /// <para>The equivalent null value rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>\\N</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureType { get; set; }
 
             /// <summary>
-            /// <para>The null count.</para>
+            /// <para>The null value count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>55095</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string NullCount { get; set; }
 
             /// <summary>
-            /// <para>The null rate.</para>
+            /// <para>The null value rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5580879448141732</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string NullRate { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of data records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98721</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string UniqueCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum value.</para>
+            /// <para>The maximum value of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>52.0</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueMax { get; set; }
 
             /// <summary>
-            /// <para>The median value.</para>
+            /// <para>The median value of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35.0</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueMedian { get; set; }
 
             /// <summary>
-            /// <para>The minimum value.</para>
+            /// <para>The minimum value of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.0</para>
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueMin { get; set; }
 
             /// <summary>
-            /// <para>The 1st percentile value.</para>
+            /// <para>The 1st percentile of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.0</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueQuantile1 { get; set; }
 
             /// <summary>
-            /// <para>The 5th percentile value.</para>
+            /// <para>The 5th percentile of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.0</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueQuantile5 { get; set; }
 
             /// <summary>
-            /// <para>The 25th percentile value.</para>
+            /// <para>The 25th percentile of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.0</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueQuantile25 { get; set; }
 
             /// <summary>
-            /// <para>The 75th percentile value.</para>
+            /// <para>The 75th percentile of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.0</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueQuantile75 { get; set; }
 
             /// <summary>
-            /// <para>The 95th percentile value.</para>
+            /// <para>The 95th percentile of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.0</para>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueQuantile95 { get; set; }
 
             /// <summary>
-            /// <para>The 99th percentile value.</para>
+            /// <para>The 99th percentile of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.0</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueQuantile99 { get; set; }
 
             /// <summary>
-            /// <para>The rank.</para>
+            /// <para>The rank position.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Rn { get; set; }
 
             /// <summary>
-            /// <para>The maximum frequency.</para>
+            /// <para>The maximum frequency of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>91149.0</para>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyMax { get; set; }
 
             /// <summary>
-            /// <para>The median frequency.</para>
+            /// <para>The median frequency of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1349.0</para>
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyMedian { get; set; }
 
             /// <summary>
-            /// <para>The minimum frequency.</para>
+            /// <para>The minimum frequency of the field values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>289.0</para>
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyMin { get; set; }
 
             /// <summary>
-            /// <para>The 1st frequency percentile.</para>
+            /// <para>The 1st percentile of the field value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>289.0</para>
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyQuantile1 { get; set; }
 
             /// <summary>
-            /// <para>The 5th frequency percentile.</para>
+            /// <para>The 5th percentile of the field value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>289.0</para>
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyQuantile5 { get; set; }
 
             /// <summary>
-            /// <para>The 25th frequency percentile.</para>
+            /// <para>The 25th percentile of the field value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>289.0</para>
@@ -435,7 +435,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyQuantile25 { get; set; }
 
             /// <summary>
-            /// <para>The 75th frequency percentile.</para>
+            /// <para>The 75th percentile of the field value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>289.0</para>
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyQuantile75 { get; set; }
 
             /// <summary>
-            /// <para>The 95th frequency percentile.</para>
+            /// <para>The 95th percentile of the field value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>289.0</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyQuantile95 { get; set; }
 
             /// <summary>
-            /// <para>The 99th frequency percentile.</para>
+            /// <para>The 99th percentile of the field value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>289.0</para>
@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Distribution { get; set; }
 
             /// <summary>
-            /// <para>The rank of the statistical indicator.</para>
+            /// <para>The rank of the statistical metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ValueQuantile { get; set; }
 
             /// <summary>
-            /// <para>The frequency of the feature value.</para>
+            /// <para>The frequency of feature values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>427</para>
@@ -535,7 +535,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureFrequency { get; set; }
 
             /// <summary>
-            /// <para>The number of feature values with this frequency.</para>
+            /// <para>The count of feature value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -545,7 +545,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyCount { get; set; }
 
             /// <summary>
-            /// <para>The percentage of feature values with this frequency.</para>
+            /// <para>The percentage of feature value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -555,7 +555,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FrequencyPercent { get; set; }
 
             /// <summary>
-            /// <para>The percentile of the frequency of field values.</para>
+            /// <para>The quantile of the field value frequencies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>Reports for the item/user change rate analysis task.</para>
+        /// <para>The list of diagnostic reports for item/user change rate analysis diagnosis nodes.</para>
         /// </summary>
         [NameInMap("ReportsOfChangeRateData")]
         [Validation(Required=false)]
@@ -584,7 +584,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Ds { get; set; }
 
             /// <summary>
-            /// <para>A flag that indicates the type of change.</para>
+            /// <para>The report flag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>add</para>
@@ -594,7 +594,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Flag { get; set; }
 
             /// <summary>
-            /// <para>The item/user change count.</para>
+            /// <para>The number of changed items or users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1231</para>
@@ -604,7 +604,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ChangeCount { get; set; }
 
             /// <summary>
-            /// <para>The item/user change rate.</para>
+            /// <para>The change rate of items or users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1231</para>
@@ -616,7 +616,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>Reports for the table join analysis task.</para>
+        /// <para>The list of diagnostic reports for join table associate analysis diagnosis nodes.</para>
         /// </summary>
         [NameInMap("ReportsOfJoinTables")]
         [Validation(Required=false)]
@@ -643,7 +643,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string JoinField { get; set; }
 
             /// <summary>
-            /// <para>The left table join exception rate.</para>
+            /// <para>The join exception rate of the left table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.53</para>
@@ -653,7 +653,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LeftExceptRate { get; set; }
 
             /// <summary>
-            /// <para>The right table join exception rate.</para>
+            /// <para>The join exception rate of the right table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0</para>
@@ -663,7 +663,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string RightExceptRate { get; set; }
 
             /// <summary>
-            /// <para>A flag that indicates the type of change.</para>
+            /// <para>The report flag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>add</para>
@@ -693,7 +693,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureValue { get; set; }
 
             /// <summary>
-            /// <para>The feature percentage.</para>
+            /// <para>The percentage of the feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -745,14 +745,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>Reports for the user preference statistics cycle analysis task.</para>
+        /// <para>The list of diagnostic reports for user preference statistical period analysis diagnosis nodes.</para>
         /// </summary>
         [NameInMap("ReportsOfPreferenceStatisticsCycle")]
         [Validation(Required=false)]
         public List<List<ListDataDiagnosisReportsResponseBodyReportsOfPreferenceStatisticsCycle>> ReportsOfPreferenceStatisticsCycle { get; set; }
         public class ListDataDiagnosisReportsResponseBodyReportsOfPreferenceStatisticsCycle : TeaModel {
             /// <summary>
-            /// <para>The periodic user retention rate.</para>
+            /// <para>The cycle retention rate of users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.73</para>
@@ -762,7 +762,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CycleRemainRate { get; set; }
 
             /// <summary>
-            /// <para>The daily user retention rate.</para>
+            /// <para>The single-day retention rate of users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.52</para>
@@ -802,7 +802,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string EverAppearedRate { get; set; }
 
             /// <summary>
-            /// <para>The statistical period.</para>
+            /// <para>The statistical period for the cycle retention rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>week</para>
@@ -812,7 +812,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Period { get; set; }
 
             /// <summary>
-            /// <para>The periodic retention rate.</para>
+            /// <para>The cycle retention rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.33</para>
@@ -822,7 +822,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PeriodRemainRate { get; set; }
 
             /// <summary>
-            /// <para>The periodic retention count.</para>
+            /// <para>The number of users retained within the cycle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -832,7 +832,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? PeriodRemainCount { get; set; }
 
             /// <summary>
-            /// <para>The number of period intervals.</para>
+            /// <para>The number of cycle intervals.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -854,17 +854,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data diagnosis task type. Valid values:</para>
+        /// <para>The data diagnosis node type.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ChangeRate</c>: item/user change rate analysis.</para>
+        /// <item><description><para>ChangeRate: item/user change rate analysis.</para>
         /// </description></item>
-        /// <item><description><para><c>PreferenceStatisticsCycle</c>: user preference statistics cycle analysis.</para>
+        /// <item><description><para>PreferenceStatisticsCycle: user preference statistical period analysis.</para>
         /// </description></item>
-        /// <item><description><para><c>JoinTables</c>: table join analysis.</para>
+        /// <item><description><para>JoinTables: join table associate analysis.</para>
         /// </description></item>
-        /// <item><description><para><c>BaseStatistics</c>: basic statistical analysis.</para>
+        /// <item><description><para>BaseStatistics: basic statistics analysis.</para>
         /// </description></item>
-        /// <item><description><para><c>AbnormalBehavior</c>: abnormal behavior analysis.</para>
+        /// <item><description><para>AbnormalBehavior: abnormal behavior analysis.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateDataDiagnosisResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the data diagnosis task.</para>
+        /// <para>The ID of the data modeling diagnostic configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

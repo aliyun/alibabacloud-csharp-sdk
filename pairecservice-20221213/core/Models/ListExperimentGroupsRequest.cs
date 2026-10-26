@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListExperimentGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can get this ID by calling the ListInstances operation.</para>
+        /// <para>The instance ID. You can retrieve this value by calling ListInstances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The layer ID. You can get this ID by calling the ListLayers operation.</para>
+        /// <para>The layer ID. You can retrieve this value by calling ListLayers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -31,7 +31,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LayerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the experiment group. Valid values: Offline, Online, and Pushed.</para>
+        /// <para>The status filter. Valid values:
+        /// ● Offline: Not online.
+        /// ● Online: Online.
+        /// ● Pushed: Fully pushed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Online</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The end time for filtering experiment groups.</para>
+        /// <para>Filters experiment groups by end time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-31 12:00:00</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TimeRangeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time for filtering experiment groups.</para>
+        /// <para>Filters experiment groups by start time. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-30 12:00:00</para>

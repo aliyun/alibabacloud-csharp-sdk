@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetFeatureConsistencyCheckJobConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Whether to enable feature comparison.</para>
+        /// <para>Indicates whether feature comparison is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -19,26 +19,62 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public bool? CompareFeature { get; set; }
 
+        /// <summary>
+        /// <para>The dataset ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-xxx</para>
+        /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]
         public string DatasetId { get; set; }
 
+        /// <summary>
+        /// <para>The mount path of the dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mnt/xxx</para>
+        /// </summary>
         [NameInMap("DatasetMountPath")]
         [Validation(Required=false)]
         public string DatasetMountPath { get; set; }
 
+        /// <summary>
+        /// <para>The name of the dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
+        /// <summary>
+        /// <para>The dataset type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OSS</para>
+        /// </summary>
         [NameInMap("DatasetType")]
         [Validation(Required=false)]
         public string DatasetType { get; set; }
 
+        /// <summary>
+        /// <para>The URI of the dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss-xxx</para>
+        /// </summary>
         [NameInMap("DatasetUri")]
         [Validation(Required=false)]
         public string DatasetUri { get; set; }
 
+        /// <summary>
+        /// <para>The default gateway. Eth0 indicates the public gateway. Eth1 indicates the dedicated gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Eth0</para>
+        /// </summary>
         [NameInMap("DefaultRoute")]
         [Validation(Required=false)]
         public string DefaultRoute { get; set; }
@@ -74,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EasyRecVersion { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of features to exclude from the display.</para>
+        /// <para>The feature display filter. Separate multiple features with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>feature1,feature2</para>
@@ -84,7 +120,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureDisplayExclude { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source for feature fallback.</para>
+        /// <para>The ID of the data source for data backflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>reso-********</para>
@@ -94,7 +130,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureLandingResourceId { get; set; }
 
         /// <summary>
-        /// <para>The URI of the data source for feature fallback.</para>
+        /// <para>The URI of the data source for data backflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mc_project_1</para>
@@ -104,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureLandingResourceUri { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of features, ordered by priority.</para>
+        /// <para>The feature priority. Separate multiple features with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>feature1,feature2,feature3</para>
@@ -114,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeaturePriority { get; set; }
 
         /// <summary>
-        /// <para>The primary key for items in the Feature Store.</para>
+        /// <para>The primary key on the item side in Feature Store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>item</para>
@@ -124,7 +160,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureStoreItemId { get; set; }
 
         /// <summary>
-        /// <para>The Feature Store model ID.</para>
+        /// <para>The feature store model ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -134,7 +170,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureStoreModelId { get; set; }
 
         /// <summary>
-        /// <para>The Feature Store project ID.</para>
+        /// <para>The ID of the Feature Store project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prj-01</para>
@@ -144,7 +180,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureStoreProjectId { get; set; }
 
         /// <summary>
-        /// <para>The Feature Store project name.</para>
+        /// <para>The name of the Feature Store project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project-1</para>
@@ -154,7 +190,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureStoreProjectName { get; set; }
 
         /// <summary>
-        /// <para>The name of the feature view that contains item features within sequence features.</para>
+        /// <para>The name of the feature view to which the item feature belongs in the sequence feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>item-1</para>
@@ -164,7 +200,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureStoreSeqFeatureView { get; set; }
 
         /// <summary>
-        /// <para>The primary key for users in the Feature Store.</para>
+        /// <para>The primary key on the user side in Feature Store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -174,7 +210,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureStoreUserId { get; set; }
 
         /// <summary>
-        /// <para>The version of the <c>fg_jar</c> file.</para>
+        /// <para>The fg_jar version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
@@ -184,7 +220,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FgJarVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the <c>fg_json</c> file.</para>
+        /// <para>The name of the fg_json file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>file.json</para>
@@ -194,7 +230,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FgJsonFileName { get; set; }
 
         /// <summary>
-        /// <para>Whether to generate a ZIP package.</para>
+        /// <para>Indicates whether a ZIP package needs to be generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -204,7 +240,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? GenerateZip { get; set; }
 
         /// <summary>
-        /// <para>The time the configuration was created.</para>
+        /// <para>The creation time. The time is in ISO 8601 format and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -214,7 +250,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time the configuration was last updated.</para>
+        /// <para>The update time. The time is in ISO 8601 format and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -224,7 +260,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the <c>item_id</c> field.</para>
+        /// <para>The name of the item_id field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>item_id</para>
@@ -234,7 +270,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemIdField { get; set; }
 
         /// <summary>
-        /// <para>The item table name.</para>
+        /// <para>The name of the item table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>item_table</para>
@@ -256,10 +292,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The format of the partition field in the item table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>yyyymmdd</c></para>
-        /// </description></item>
-        /// <item><description><para><c>yyyy-mm-dd</c></para>
-        /// </description></item>
+        /// <item><description>yyyymmdd</description></item>
+        /// <item><description>yyyy-mm-dd</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -270,7 +304,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemTablePartitionFieldFormat { get; set; }
 
         /// <summary>
-        /// <para>The end time of the most recent job.</para>
+        /// <para>The end time of the latest job. The time is in ISO 8601 format and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -280,7 +314,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LatestJobGmtSamplingEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the most recent job.</para>
+        /// <para>The start time of the latest job. The time is in ISO 8601 format and includes a time zone offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -290,7 +324,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LatestJobGmtSamplingStartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the most recent job created from this configuration.</para>
+        /// <para>The ID of the latest job created based on this configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -310,7 +344,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket name.</para>
+        /// <para>The name of the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss_bucket_1</para>
@@ -329,14 +363,32 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string OssResourceId { get; set; }
 
+        /// <summary>
+        /// <para>The number of workers used to execute the prediction script.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PredictWorkerCount")]
         [Validation(Required=false)]
         public int? PredictWorkerCount { get; set; }
 
+        /// <summary>
+        /// <para>The CPU resources allocated to workers when executing the prediction script.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
         [NameInMap("PredictWorkerCpu")]
         [Validation(Required=false)]
         public int? PredictWorkerCpu { get; set; }
 
+        /// <summary>
+        /// <para>The memory resources allocated to workers when executing the prediction script.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32000</para>
+        /// </summary>
         [NameInMap("PredictWorkerMemory")]
         [Validation(Required=false)]
         public int? PredictWorkerMemory { get; set; }
@@ -351,12 +403,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The resource configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("ResourceConfig")]
         [Validation(Required=false)]
         public string ResourceConfig { get; set; }
 
         /// <summary>
-        /// <para>The sample rate. The value must be between 0 and 1.</para>
+        /// <para>The sampling rate. Valid values: 0 to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.89</para>
@@ -385,6 +443,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string SceneName { get; set; }
 
+        /// <summary>
+        /// <para>The security group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-xxx</para>
+        /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
@@ -410,12 +474,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The status of the configuration. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Editable</c>: The configuration can be edited.</para>
-        /// </description></item>
-        /// <item><description><para><c>Uneditable</c>: The configuration cannot be edited.</para>
-        /// </description></item>
+        /// <item><description>Editable: The configuration is editable.</description></item>
+        /// <item><description>Uneditable: The configuration is not editable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -425,17 +487,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The vSwitch ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vswitch-xxx</para>
+        /// </summary>
         [NameInMap("SwitchId")]
         [Validation(Required=false)]
         public string SwitchId { get; set; }
 
         /// <summary>
-        /// <para>Whether to use a Feature Store. Valid values:</para>
+        /// <para>Indicates whether to use Feature Store. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: A Feature Store is used. In this case, the response also returns <c>FeatureStoreProjectId</c>, <c>FeatureStoreProjectName</c>, <c>FeatureStoreModelId</c>, <c>FeatureStoreUserId</c>, and <c>FeatureStoreItemId</c>.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: A Feature Store is not used. In this case, the <c>UserTable</c>, <c>UserIdField</c>, <c>UserTablePartitionField</c>, <c>UserTablePartitionFieldFormat</c>, <c>ItemTable</c>, <c>ItemIdField</c>, <c>ItemTablePartitionField</c>, and <c>ItemTablePartitionFieldFormat</c> parameters are returned.</para>
-        /// </description></item>
+        /// <item><description>true: Feature Store is used. In this case, FeatureStoreProjectId, FeatureStoreProjectName, FeatureStoreModelId, FeatureStoreUserId, and FeatureStoreItemId are returned.</description></item>
+        /// <item><description>false: Feature Store is not used. In this case, UserTable, UserIdField, UserTablePartitionField, UserTablePartitionFieldFormat, ItemTable, ItemIdField, ItemTablePartitionField, and ItemTablePartitionFieldFormat are required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -446,7 +512,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? UseFeatureStore { get; set; }
 
         /// <summary>
-        /// <para>The name of the <c>user_id</c> field.</para>
+        /// <para>The name of the user_id field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_id</para>
@@ -456,7 +522,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string UserIdField { get; set; }
 
         /// <summary>
-        /// <para>The user table name.</para>
+        /// <para>The name of the user table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_table</para>
@@ -478,10 +544,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The format of the partition field in the user table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>yyyymmdd</c></para>
-        /// </description></item>
-        /// <item><description><para><c>yyyy-mm-dd</c></para>
-        /// </description></item>
+        /// <item><description>yyyymmdd</description></item>
+        /// <item><description>yyyy-mm-dd</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -491,6 +555,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string UserTablePartitionFieldFormat { get; set; }
 
+        /// <summary>
+        /// <para>The VPC ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-xxx</para>
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
@@ -505,6 +575,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string WorkflowName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the PAI workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

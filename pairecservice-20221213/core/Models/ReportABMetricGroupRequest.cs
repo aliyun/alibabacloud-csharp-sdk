@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ReportABMetricGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the base experiment.</para>
+        /// <para>The ID of the baseline experiment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DimensionFields { get; set; }
 
         /// <summary>
-        /// <para>The end date.</para>
+        /// <para>The end date. Format: YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-01</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the experiment group. You can call the <a href="https://help.aliyun.com/document_detail/2402573.html">ListExperimentGroups</a> operation to obtain the ID of the experiment group. This parameter is required for offline and real-time reports.</para>
+        /// <para>The ID of the experiment group. You can call the <a href="https://help.aliyun.com/document_detail/2402573.html">ListExperimentGroups</a> operation to obtain the ID. This parameter is required for offline and real-time reports.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the experiments. You can call the <a href="https://help.aliyun.com/document_detail/2402582.html">ListExperiments</a> operation to obtain the IDs of the experiments.</para>
+        /// <para>The list of experiment IDs. You can call the <a href="https://help.aliyun.com/document_detail/2402582.html">ListExperiments</a> operation to obtain the IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentIds { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,14 +73,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the report.</para>
+        /// <para>The report type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Realtime: real-time report.</para>
-        /// </description></item>
-        /// <item><description><para>Offline: offline report.</para>
-        /// </description></item>
-        /// <item><description><para>Market: dashboard report.</para>
-        /// </description></item>
+        /// <item><description>Realtime: real-time report</description></item>
+        /// <item><description>Offline: offline report</description></item>
+        /// <item><description>Market: dashboard report</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,7 +89,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ReportType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the scene ID.</para>
+        /// <para>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -102,7 +99,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The start date.</para>
+        /// <para>The start date. Format: YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-01</para>
@@ -112,12 +109,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The time statistics method. This parameter is required for real-time reports.</para>
+        /// <para>The statistical time type. This parameter is required for real-time reports. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Hour: The statistics are collected by hour.</para>
-        /// </description></item>
-        /// <item><description><para>Day: The statistics are accumulated from 00:00 on the current day.</para>
-        /// </description></item>
+        /// <item><description>Hour: hourly statistics</description></item>
+        /// <item><description>Day: cumulative statistics starting from 00:00 on the current day</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

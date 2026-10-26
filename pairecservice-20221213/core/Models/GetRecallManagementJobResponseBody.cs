@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetRecallManagementJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the job ended.</para>
+        /// <para>The synchronization end time. The format is YYYY-MM-DDTHH:mm:ss.SSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The log of the job.</para>
+        /// <para>The log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;success&quot;</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Log { get; set; }
 
         /// <summary>
-        /// <para>The recall management job ID.</para>
+        /// <para>The recall management task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RecallManagementJobId { get; set; }
 
         /// <summary>
-        /// <para>Details of the recall management table.</para>
+        /// <para>The recall management table details.</para>
         /// </summary>
         [NameInMap("RecallManagementTableInfo")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataVersion { get; set; }
 
             /// <summary>
-            /// <para>The recall management table version ID.</para>
+            /// <para>The table version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20250101000</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>Details of the recall management table.</para>
+        /// <para>The recall management table information.</para>
         /// </summary>
         [NameInMap("RecallManagerTableInfo")]
         [Validation(Required=false)]
         public GetRecallManagementJobResponseBodyRecallManagerTableInfo RecallManagerTableInfo { get; set; }
         public class GetRecallManagementJobResponseBodyRecallManagerTableInfo : TeaModel {
             /// <summary>
-            /// <para>The data version.</para>
+            /// <para>The data version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds=20250701</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataVersion { get; set; }
 
             /// <summary>
-            /// <para>The recall management table version ID.</para>
+            /// <para>The recall table version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20250101000</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the job started.</para>
+        /// <para>The synchronization start time. The format is YYYY-MM-DDTHH:mm:ss.SSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T22:24:33.132</para>
@@ -158,16 +158,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the job. Valid values are:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Init</c>: Initializing.</para>
-        /// </description></item>
-        /// <item><description><para><c>Running</c>: Running.</para>
-        /// </description></item>
-        /// <item><description><para><c>Success</c>: Successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>Failed</c>: Failed.</para>
-        /// </description></item>
+        /// <item><description><c>Init</c>: init.</description></item>
+        /// <item><description><c>Running</c>: running.</description></item>
+        /// <item><description><c>Success</c>: succeeded.</description></item>
+        /// <item><description><c>Failed</c>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

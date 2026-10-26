@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of historical records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of the traffic control history records.</para>
+        /// <para>The traffic control history records.</para>
         /// </summary>
         [NameInMap("TrafficControlTaskTrafficHistories")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the record.</para>
+            /// <para>The time in the behavior table, up to the current time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-10 10:10:58</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string RecordTime { get; set; }
 
             /// <summary>
-            /// <para>The intended traffic for the traffic control target.</para>
+            /// <para>The target traffic of the traffic control target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>

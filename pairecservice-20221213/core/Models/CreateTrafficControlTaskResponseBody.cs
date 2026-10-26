@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateTrafficControlTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42391E6D-822C-58F8-9F7E-D991BB86D6AD</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new traffic control task.</para>
+        /// <para>The ID of the traffic control task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
