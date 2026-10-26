@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class FinishMigrationStageRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-pe334f1nx04</para>
         /// </summary>

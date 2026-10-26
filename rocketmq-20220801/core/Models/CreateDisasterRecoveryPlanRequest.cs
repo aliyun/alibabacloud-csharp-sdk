@@ -10,15 +10,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateDisasterRecoveryPlanRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic consumer progress synchronization.</para>
+        /// <para>Specifies whether to enable automatic consumer automatic synchronization.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when you set <c>syncCheckpointEnabled</c> to true.</para>
+        /// <para>This parameter takes effect only when consumer automatic synchronization is enabled. That is, the <c>syncCheckpointEnabled</c> field is set to true.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -28,22 +23,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public bool? AutoSyncCheckpoint { get; set; }
 
         /// <summary>
-        /// <para>The instances involved in the Global Replicator task. You must specify this parameter.</para>
+        /// <para>The instances involved in the backup plan. This parameter is required.</para>
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
         public List<CreateDisasterRecoveryPlanRequestInstances> Instances { get; set; }
         public class CreateDisasterRecoveryPlanRequestInstances : TeaModel {
             /// <summary>
-            /// <para>The authentication method. If you set instanceType to ALIYUN_ROCKETMQ and the instance is an ApsaraMQ for RocketMQ 4.0 instance, you do not need to specify this parameter.</para>
+            /// <para>The authentication method. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ and the instance version is 4.0. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NO_AUTH: no authentication</description></item>
-            /// <item><description>ACL_AUTH: access control list (ACL)-based authentication</description></item>
-            /// </list>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NO_AUTH: no authentication</description></item>
-            /// <item><description>ACL_AUTH: access control list (ACL)-based authentication</description></item>
+            /// <item><description>ACL_AUTH: ACL authentication</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +44,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string AuthType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the consumer group.</para>
+            /// <para>The ID of the consumer group, which is used to pull messages from the source instance.
+            /// <notice>This parameter is required for self-managed instances. For Alibaba Cloud instances, this parameter is automatically generated.</notice></para>
             /// 
             /// <b>Example:</b>
             /// <para>GID_DS_XXX_YYY</para>
@@ -64,7 +55,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The instance endpoint. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</para>
+            /// <para>The endpoint URL. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ. This parameter is required if instanceType is set to EXTERNAL_ROCKETMQ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -74,7 +65,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string EndpointUrl { get; set; }
 
             /// <summary>
-            /// <para>The instance ID. This parameter is required only if you set instanceType to ALIYUN_ROCKETMQ.</para>
+            /// <para>The instance ID. This parameter is not required if instanceType is set to EXTERNAL_ROCKETMQ. This parameter is required if instanceType is set to ALIYUN_ROCKETMQ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rmq-cn-******</para>
@@ -84,10 +75,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance role. Valid values:</para>
+            /// <para>The role of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ACTIVE: primary instance</description></item>
-            /// <item><description>Passive: secondary instance</description></item>
+            /// <item><description>ACTIVE: primary</description></item>
+            /// <item><description>PASSIVE: secondary</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,15 +89,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceRole { get; set; }
 
             /// <summary>
-            /// <para>The instance type. Valid values:</para>
+            /// <para>The type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</description></item>
-            /// <item><description>EXTERNAL_ROCKETMQ: external RocketMQ instance</description></item>
-            /// </list>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ALIYUN_ROCKETMQ: ApsaraMQ for RocketMQ instance</description></item>
-            /// <item><description>EXTERNAL_ROCKETMQ: external RocketMQ instance</description></item>
+            /// <item><description>ALIYUN_ROCKETMQ: Alibaba Cloud instance</description></item>
+            /// <item><description>EXTERNAL_ROCKETMQ: external instance, open-source instance, or open-source cluster</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,14 +103,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The message attribute. When you synchronize a message to the destination cluster, the system automatically adds the attribute to the message for SQL-based filtering.</para>
+            /// <para>The message filtering property. When a message is synchronized to the destination cluster, this property is automatically added to the message for SQL-based filtering during message consumption.</para>
             /// </summary>
             [NameInMap("messageProperty")]
             [Validation(Required=false)]
             public CreateDisasterRecoveryPlanRequestInstancesMessageProperty MessageProperty { get; set; }
             public class CreateDisasterRecoveryPlanRequestInstancesMessageProperty : TeaModel {
                 /// <summary>
-                /// <para>The attribute key.</para>
+                /// <para>The key of the property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aaa</para>
@@ -134,7 +120,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string PropertyKey { get; set; }
 
                 /// <summary>
-                /// <para>The attribute value.</para>
+                /// <para>The value of the property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bbb</para>
@@ -146,10 +132,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The network type. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ. Valid values:</para>
+            /// <para>The network type. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ. This parameter is required if instanceType is set to EXTERNAL_ROCKETMQ. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP_INTERNET: Internet over TCP</description></item>
-            /// <item><description>TCP_VPC: virtual private cloud (VPC) over TCP.</description></item>
+            /// <item><description>TCP_INTERNET: TCP over the Internet</description></item>
+            /// <item><description>TCP_VPC: TCP over a VPC</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,7 +146,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The password used for authentication. This parameter is required only if you set authType to ACL_AUTH. If you set instanceType to ALIYUN_ROCKETMQ, you do not need to specify this parameter.</para>
+            /// <para>The password for authentication. This parameter is required if authType is set to ACL_AUTH. This parameter is not required if instanceType is set to ALIYUN_ROCKETMQ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -170,7 +156,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The region where the instance resides.</para>
+            /// <para>The region where the instance is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -180,7 +166,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</para>
+            /// <para>The ID of the security group. This parameter is required only if instanceType is set to EXTERNAL_ROCKETMQ and networkType is set to TCP_VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-bp17hpmgz9******</para>
@@ -190,7 +176,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The username used for authentication. This parameter is required only if you set authType to ACL_AUTH.</para>
+            /// <para>The username for authentication. This parameter is required if authType is set to ACL_AUTH.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -200,7 +186,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Username { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</para>
+            /// <para>The ID of the vSwitch with which the instance is associated. This parameter is required only if instanceType is set to EXTERNAL_ROCKETMQ and networkType is set to TCP_VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf6gwtbn6etadpv******</para>
@@ -210,7 +196,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</para>
+            /// <para>The ID of the VPC with which the instance is associated. This parameter is required only if instanceType is set to EXTERNAL_ROCKETMQ and networkType is set to TCP_VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz9qt50xhtj9krb******</para>
@@ -222,7 +208,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The description of the Global Replicator task.</para>
+        /// <para>The description of the plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -232,7 +218,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PlanDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the Global Replicator task. You must specify this parameter.</para>
+        /// <para>The name of the plan. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -242,7 +228,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>The type of the Global Replicator task. You must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/2843187.html">Global Replicator</a>. Valid values:</para>
+        /// <para>The type of the backup plan. This parameter is required. For more information, see <a href="https://help.aliyun.com/document_detail/2843187.html">Global Replicator</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ACTIVE_PASSIVE: one-way backup</description></item>
         /// <item><description>ACTIVE_ACTIVE: two-way backup</description></item>
@@ -256,12 +242,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PlanType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable consumer progress synchronization.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable consumer offset synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

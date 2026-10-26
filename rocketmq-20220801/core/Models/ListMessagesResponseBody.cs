@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListMessagesResponseBodyData Data { get; set; }
         public class ListMessagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>The paged data.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListMessagesResponseBodyDataList> List { get; set; }
             public class ListMessagesResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>Message body.</para>
+                /// <para>The message body.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Body { get; set; }
 
                 /// <summary>
-                /// <para>Message body size.</para>
+                /// <para>The size of the message body.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public int? BodySize { get; set; }
 
                 /// <summary>
-                /// <para>The client on which messages are produced.</para>
+                /// <para>The client that produced the message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx.xx.xx.xx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string BornHost { get; set; }
 
                 /// <summary>
-                /// <para>Message born time.</para>
+                /// <para>The time when the message was generated. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
@@ -84,6 +84,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The lite topic name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
                 /// </summary>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string LiteTopicName { get; set; }
 
                 /// <summary>
-                /// <para>The message group. This parameter is returned only for ordered messages.</para>
+                /// <para>The message group. This parameter is exclusive to ordered messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageGroup { get; set; }
 
                 /// <summary>
-                /// <para>Message Id.</para>
+                /// <para>The message ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7F000001000114B4340C5ABF94500079</para>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>Message keys.</para>
+                /// <para>The message key.</para>
                 /// </summary>
                 [NameInMap("messageKeys")]
                 [Validation(Required=false)]
@@ -129,7 +131,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageTag { get; set; }
 
                 /// <summary>
-                /// <para>Message type.</para>
+                /// <para>The message type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -149,7 +151,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The broker on which messages are stored.</para>
+                /// <para>The log broker server that stored the message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx.xx.xx.xx</para>
@@ -159,7 +161,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StoreHost { get; set; }
 
                 /// <summary>
-                /// <para>Message store time.</para>
+                /// <para>The time when the message was stored in the log broker. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
@@ -169,7 +171,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StoreTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the topic.</para>
+                /// <para>The topic name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>topic_test</para>
@@ -179,7 +181,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>Message user properties.</para>
+                /// <para>The user properties.</para>
                 /// </summary>
                 [NameInMap("userProperties")]
                 [Validation(Required=false)]
@@ -188,7 +190,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -198,7 +200,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -208,8 +210,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The scroll ID of the request.</para>
-            /// <para>The ID is automatically generated by the system. The result can be paginated only if this parameter is included in the pagination request.</para>
+            /// <para>The scroll ID for the request.</para>
+            /// <para>This value is automatically generated by the system. You must include this value in subsequent page requests to continue pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B13D0B07-F24B-4790-88D8-D47A38063D00</para>
@@ -219,7 +221,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ScrollId { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -271,7 +273,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3531B6A-5A88-52BD-B3C4-A024C3D0AA2E</para>

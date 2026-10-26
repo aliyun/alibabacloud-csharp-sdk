@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListConsumerGroupSubscriptionsResponseBodyData> Data { get; set; }
         public class ListConsumerGroupSubscriptionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether message consumption is consistent. Valid values:</para>
+            /// <para>The consistency of the subscription relationship.</para>
             /// <list type="bullet">
-            /// <item><description>false: Unconsumed messages exist in the consumer group.</description></item>
-            /// <item><description>true: No unconsumed message exists in the consumer group.</description></item>
+            /// <item><description><para>false: The subscription relationship is inconsistent.</para>
+            /// </description></item>
+            /// <item><description><para>true: The subscription relationship is consistent.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,10 +65,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string FilterExpression { get; set; }
 
             /// <summary>
-            /// <para>The type of the filter expression. Valid values:</para>
+            /// <para>The type of the filter expression.</para>
             /// <list type="bullet">
-            /// <item><description>SQL: filters messages by using SQL expressions.</description></item>
-            /// <item><description>TAG: filters messages by using tags.</description></item>
+            /// <item><description><para>SQL: SQL filtering.</para>
+            /// </description></item>
+            /// <item><description><para>TAG: Tag filtering.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,24 +81,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string FilterExpressionType { get; set; }
 
             /// <summary>
-            /// <para>The consumption mode of the consumer group. Valid values:</para>
+            /// <para>The consumption mode of the consumer group.</para>
             /// <list type="bullet">
-            /// <item><description>BROADCASTING: broadcasting consumption</description></item>
-            /// <item><description>CLUSTERING: clustering consumption</description></item>
+            /// <item><description><para>BROADCASTING: The broadcast consumption mode.</para>
+            /// </description></item>
+            /// <item><description><para>CLUSTERING: The cluster consumption mode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>BROADCASTING</para>
+            /// <para>CLUSTERING</para>
             /// </summary>
             [NameInMap("messageModel")]
             [Validation(Required=false)]
             public string MessageModel { get; set; }
 
             /// <summary>
-            /// <para>The subscription status. Valid values:</para>
+            /// <para>The subscription status.</para>
             /// <list type="bullet">
-            /// <item><description>ONLINE: The consumer group is online. If the consumer group contains multiple consumers, this value is returned as long as one of the consumers is online.</description></item>
-            /// <item><description>OFFLINE: The consumer group is offline. If the consumer group contains multiple consumers, this value is returned only if all consumers are offline.</description></item>
+            /// <item><description><para>ONLINE: The consumer group is online. If a consumer group contains multiple consumers, the group is considered online as long as at least one consumer is online.</para>
+            /// </description></item>
+            /// <item><description><para>OFFLINE: The consumer group is offline. If a consumer group contains multiple consumers, the group is considered offline only when all consumers are offline.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

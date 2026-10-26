@@ -20,19 +20,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetInstanceAccountResponseBodyData Data { get; set; }
         public class GetInstanceAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The status of the account.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DISABLE</description></item>
-            /// <item><description>ENABLE</description></item>
-            /// </list>
+            /// <para>The account status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLE</para>
@@ -42,7 +37,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string AccountStatus { get; set; }
 
             /// <summary>
-            /// <para>The password of the account.</para>
+            /// <para>The account password.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -52,6 +47,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Password { get; set; }
 
             /// <summary>
+            /// <para>The remark.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -60,7 +57,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The username of the account.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -112,7 +109,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</para>
+        /// <para>The unique ID of the request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B5C59E80-FCFC-5796-ABE4-D39EAAE578E4</para>

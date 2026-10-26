@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListAvailableZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Topic.NotFound</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result data that is returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAvailableZonesResponseBodyData> Data { get; set; }
         public class ListAvailableZonesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the zone was created.</para>
+            /// <para>The creation time, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the zone was last updated.</para>
+            /// <para>The update time, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the current zone.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-qingdao-b</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The name of the current zone.</para>
+            /// <para>The zone name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ha-cn-t9b30w902vm_qrs</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AF9A8B10-C426-530F-A0DD-96320B39****</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

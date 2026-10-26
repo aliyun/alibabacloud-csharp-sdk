@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class DeleteDisasterRecoveryItemResponseBody : TeaModel {
         /// <summary>
-        /// <para>Access denied details, only in the scenario where the user is denied access due to RAM not having permission</para>
+        /// <para>The details of the access denial. This field is returned only when the request is denied due to insufficient RAM permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DisasterRecoveryItemStatus.Error</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return data</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message</para>
+        /// <para>The dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instanceId</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current status of the disaster recovery item does not support this operation.</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B962390-D84B-5D44-8C11-79DFxxxx</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the operation was successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

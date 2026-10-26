@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetTopicResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Topic.NotFound</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTopicResponseBodyData Data { get; set; }
         public class GetTopicResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation time of the topic.</para>
+            /// <para>The time when the topic was created, in YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -47,15 +47,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the lite topic, in minutes.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>20</para>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("liteTopicExpiration")]
             [Validation(Required=false)]
             public long? LiteTopicExpiration { get; set; }
 
             /// <summary>
-            /// <para>The maximum TPS for message sending.</para>
+            /// <para>The maximum TPS for sending messages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -65,20 +67,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? MaxSendTps { get; set; }
 
             /// <summary>
-            /// <para>The type of messages in the topic.</para>
-            /// <para>Valid values:</para>
+            /// <para>The message type of the topic. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TRANSACTION: transactional messages</description></item>
-            /// <item><description>FIFO: ordered messages</description></item>
-            /// <item><description>DELAY: scheduled or delayed messages</description></item>
-            /// <item><description>NORMAL: normal messages</description></item>
-            /// </list>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>TRANSACTION: transactional messages</description></item>
-            /// <item><description>FIFO: ordered messages</description></item>
-            /// <item><description>DELAY: scheduled or delayed messages</description></item>
-            /// <item><description>NORMAL: normal messages</description></item>
+            /// <item><description>TRANSACTION: transactional message</description></item>
+            /// <item><description>FIFO: ordered message</description></item>
+            /// <item><description>DELAY: scheduled message or delayed message</description></item>
+            /// <item><description>LITE: lightweight topic message</description></item>
+            /// <item><description>NORMAL: normal message</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,7 +84,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string MessageType { get; set; }
 
             /// <summary>
-            /// <para>The region ID to which the instance belongs.</para>
+            /// <para>The maximum message priority allowed for the topic. Valid values: 0 to 9. A higher value indicates a higher priority.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9</para>
+            /// </summary>
+            [NameInMap("priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the region to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Remark information of the topic.</para>
+            /// <para>The remarks for the topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is the remark for test.</para>
@@ -109,11 +114,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The topic status.</para>
-            /// <para>Valid values:</para>
+            /// <para>The status of the topic. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>CREATING</description></item>
+            /// <item><description>RUNNING: running</description></item>
+            /// <item><description>CREATING: creating</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Topic name.</para>
+            /// <para>The topic name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>topic_test</para>
@@ -134,7 +138,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string TopicName { get; set; }
 
             /// <summary>
-            /// <para>Last modification time of the topic.</para>
+            /// <para>The last time the topic was modified, in YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TopicName</para>
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message.</para>
+        /// <para>The dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topicName</para>
@@ -166,7 +170,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -176,7 +180,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The topic cannot be found.</para>
@@ -186,7 +190,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</para>
+        /// <para>The request ID. Each request has a unique ID that you can use to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AF9A8B10-C426-530F-A0DD-96320B39****</para>
@@ -196,7 +200,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the execution was successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

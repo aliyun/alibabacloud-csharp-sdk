@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The access control list for the instance.</para>
+        /// <para>The access control information.</para>
         /// </summary>
         [NameInMap("aclInfo")]
         [Validation(Required=false)]
@@ -24,13 +24,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public List<string> AclTypes { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the authentication-free in VPCs feature is enabled.
-            /// Indicates whether the authentication-free in VPCs feature is enabled.
-            /// Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>Indicates whether password-free access is enabled for VPC connections under the intelligent identity recognition type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -42,7 +36,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The updated name of the instance.</para>
+        /// <para>The updated instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_instance</para>
@@ -52,24 +46,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The updated network information about the instance.</para>
+        /// <para>The updated network information of the instance.</para>
         /// </summary>
         [NameInMap("networkInfo")]
         [Validation(Required=false)]
         public UpdateInstanceRequestNetworkInfo NetworkInfo { get; set; }
         public class UpdateInstanceRequestNetworkInfo : TeaModel {
             /// <summary>
-            /// <para>The information about the Internet over which the instance is accessed. This parameter takes effect only if the Internet access feature is enabled for the instance.</para>
+            /// <para>The public network information. This parameter is valid only when the public network access feature is enabled for the instance.</para>
             /// </summary>
             [NameInMap("internetInfo")]
             [Validation(Required=false)]
             public UpdateInstanceRequestNetworkInfoInternetInfo InternetInfo { get; set; }
             public class UpdateInstanceRequestNetworkInfoInternetInfo : TeaModel {
                 /// <summary>
-                /// <para>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</para>
+                /// <para>The public network access IP whitelist.</para>
                 /// <list type="bullet">
-                /// <item><description>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
-                /// <item><description>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
+                /// <item><description>If no IP whitelist is configured, all IP address ranges are allowed to access the ApsaraMQ for RocketMQ server over the public network by default.</description></item>
+                /// <item><description>If an IP whitelist is configured, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ server over the public network.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("ipWhitelist")]
@@ -81,22 +75,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>Additional configurations of the instance.</para>
+        /// <para>The extension configurations of the instance.</para>
         /// </summary>
         [NameInMap("productInfo")]
         [Validation(Required=false)]
         public UpdateInstanceRequestProductInfo ProductInfo { get; set; }
         public class UpdateInstanceRequestProductInfo : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the elastic transactions per second (TPS) feature for the instance.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
-            /// <para>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fees</a>.</para>
+            /// <para>Specifies whether to enable the adaptive elasticity capability. A value of true indicates enabled, and a value of false indicates shutdown.</para>
+            /// </summary>
+            [NameInMap("adaptiveElasticity")]
+            [Validation(Required=false)]
+            public bool? AdaptiveElasticity { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether to enable the burstable elastic capacity beyond the specification.</para>
+            /// <para>After the burstable elastic capacity is enabled, ApsaraMQ for RocketMQ allows the instance to exceed the TPS limit of the base specification within a certain range. The portion that exceeds the base specification incurs additional elastic specification fees. For more information about billing, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fee</a>.</para>
             /// <remarks>
-            /// <para> The elastic TPS feature is supported only by specific instance editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</para>
+            /// <para>Only instances of specific specifications support the burstable elastic specification capability. For more information about supported instances, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -107,9 +103,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public bool? AutoScaling { get; set; }
 
             /// <summary>
-            /// <para>The retention period of messages. Unit: hours.</para>
-            /// <para>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</para>
-            /// <para>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</para>
+            /// <para>The message retention period. Unit: hours.</para>
+            /// <para>For the valid values, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> &gt; Resource Quotas &gt; Message retention period limit.</para>
+            /// <para>The log broker in ApsaraMQ for RocketMQ is fully serverless and elastic. Fees are charged based on the actual storage space used. You can control the storage capacity of messages by adjusting the message retention period. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fee</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>72</para>
@@ -119,8 +115,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public int? MessageRetentionTime { get; set; }
 
             /// <summary>
-            /// <para>The ratio of the number of messages that you can send to the number of messages that you can receive on the instance.</para>
-            /// <para>Value values: 0.25 to 1.</para>
+            /// <para>The ratio of messages sent to messages accepted.</para>
+            /// <para>Valid values: [0.25, 1]</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -131,11 +127,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             /// <summary>
             /// <para>Specifies whether to enable the message trace feature.</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
-            /// <para>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;This parameter does not take effect. Regardless of whether this parameter is enabled, the instance supports the message trace feature by default.
+            /// &lt;props=&quot;china&quot;&gt;This parameter takes effect only for Serverless instances. If the message trace feature is enabled, message trace fees are incurred. For more information about billing, see <a href="https://help.aliyun.com/document_detail/2586280.html">Serverless billing</a>.
+            /// &lt;props=&quot;china&quot;&gt;For pay-as-you-go and subscription instances, this parameter does not take effect. The message trace feature is supported by default regardless of whether this parameter is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -147,7 +141,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The updated description of the instance.</para>
+        /// <para>The updated remarks for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is the remark for test.</para>

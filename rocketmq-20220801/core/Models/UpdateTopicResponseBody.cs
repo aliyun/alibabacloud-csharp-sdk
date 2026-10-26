@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateTopicResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Topic.NotFound</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TopicName</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>动态错误信息</para>
+        /// <para>The dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topicName</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The topic cannot be found.</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, each request has a unique ID that can be used for troubleshooting and problem localization.</para>
+        /// <para>The ID of the request. This ID is unique to each request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AF9A8B10-C426-530F-A0DD-96320B39****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the execution result is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateInstanceAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the account.</para>
+        /// <para>The account password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +21,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The remark.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>This is the remark for test.</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The username of the account.</para>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

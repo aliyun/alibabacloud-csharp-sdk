@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListDisasterRecoveryItemsRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition. Topics are filtered by topic name.</para>
+        /// <para>The filter condition. Filters by topicName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic_test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of results to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <para>The topic name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>topic-test920</para>
+        /// <para>topic-test284</para>
         /// </summary>
         [NameInMap("topicName")]
         [Validation(Required=false)]

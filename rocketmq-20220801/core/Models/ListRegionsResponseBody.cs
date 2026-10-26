@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public List<ListRegionsResponseBodyData> Data { get; set; }
         public class ListRegionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the ApsaraMQ for RocketMQ instance was created.</para>
+            /// <para>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region ID, such as cn-hangzhou.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The region name.</para>
+            /// <para>The Chinese name of the region, such as Hangzhou.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hangzhou</para>
+            /// <para>杭州</para>
             /// </summary>
             [NameInMap("regionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether ApsaraMQ for RocketMQ V4 is activated.</para>
+            /// <para>Indicates whether RocketMQ V4 is activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public bool? SupportRocketmqV4 { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether ApsaraMQ for RocketMQ V5 is activated.</para>
+            /// <para>Indicates whether RocketMQ V5 is activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The time when the ApsaraMQ for RocketMQ instance was last modified.</para>
+            /// <para>The update time, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public int? BodySize { get; set; }
 
             /// <summary>
-            /// <para>The client on which the message was produced.</para>
+            /// <para>The host from which the message originated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.xx.xxx.xx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string BornHost { get; set; }
 
             /// <summary>
-            /// <para>The time when the message was generated.</para>
+            /// <para>The time when the message was generated, in YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-22 12:17:08</para>
@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The lite topic name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abc</para>
             /// </summary>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string LiteTopicName { get; set; }
 
             /// <summary>
-            /// <para>The sharding key. This parameter is returned only for ordered messages.</para>
+            /// <para>The former sharding key. This field applies only to ordered messages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -105,14 +107,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// <para>The message keys.</para>
+            /// <para>The message key.</para>
             /// </summary>
             [NameInMap("messageKeys")]
             [Validation(Required=false)]
             public List<string> MessageKeys { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The tag list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -132,6 +134,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string MessageType { get; set; }
 
             /// <summary>
+            /// <para>The priority.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7</para>
+            /// </summary>
+            [NameInMap("priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+            /// <summary>
             /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
@@ -142,7 +154,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The broker on which the message was stored.</para>
+            /// <para>The log broker host where the message is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.xx.xxx.xx</para>
@@ -152,7 +164,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string StoreHost { get; set; }
 
             /// <summary>
-            /// <para>The time when the message was stored.</para>
+            /// <para>The time when the message was stored in the log broker, in YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-22 12:17:08</para>
@@ -162,7 +174,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string StoreTime { get; set; }
 
             /// <summary>
-            /// <para>The default system attributes.</para>
+            /// <para>The default system properties.</para>
             /// </summary>
             [NameInMap("systemProperties")]
             [Validation(Required=false)]
@@ -179,7 +191,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string TopicName { get; set; }
 
             /// <summary>
-            /// <para>The user attributes.</para>
+            /// <para>The user properties.</para>
             /// </summary>
             [NameInMap("userProperties")]
             [Validation(Required=false)]

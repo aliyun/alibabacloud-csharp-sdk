@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition that is used to query instances. If you do not configure this parameter, all instances are queried.</para>
+        /// <para>The filter condition for the query. If you do not specify this parameter, all instances are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-7e22ody****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The paging number. Specifies the page of results to return.</para>
         /// <para>Valid values: 1 to 100000000.</para>
-        /// <para>If you set this parameter to a value smaller than 1, the system uses 1 as the value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the value.</para>
+        /// <para>If you set this parameter to a value less than 1, the system uses 1 as the default value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Value values: 10 to 200.</para>
-        /// <para>If you set this parameter to a value smaller than 10, the system uses 10 as the value. If you set this parameter to a value greater than 200, the system uses 200 as the value.</para>
+        /// <para>The paging size. The maximum number of results to return on each page.</para>
+        /// <para>Valid values: 10 to 200.</para>
+        /// <para>If you set this parameter to a value less than 10, the system uses 10 as the default value. If you set this parameter to a value greater than 200, the system uses 200 as the default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,12 +54,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The primary edition of the instance.</para>
+        /// <para>The primary series encoding of the instance.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: Standard Edition</description></item>
-        /// <item><description>ultimate: Enterprise Platinum Edition</description></item>
-        /// <item><description>professional: Professional Edition</description></item>
+        /// <item><description>standard: Standard Edition.</description></item>
+        /// <item><description>ultimate: Platinum Edition.</description></item>
+        /// <item><description>professional: Professional Edition.</description></item>
+        /// <item><description>dedicated: Dedicated Edition.</description></item>
+        /// <item><description>shared: Shared Edition.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("seriesCodes")]
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string StorageSecretKey { get; set; }
 
         /// <summary>
-        /// <para>The tags that are used to filter instances.</para>
+        /// <para>The list of resource labels that are used to filter instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;: &quot;rmq-test&quot;, &quot;value&quot;: &quot;test&quot;}]</para>

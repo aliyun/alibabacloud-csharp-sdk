@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListMessagesRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query time range. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-09 09:00:00</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The lite topic name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string LiteTopicName { get; set; }
 
         /// <summary>
-        /// <para>Message Id.</para>
+        /// <para>The message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F00000100207A4F0F294A938F7807AE</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>Message key.</para>
+        /// <para>The message key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>XSCBillResult</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string MessageKey { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The current page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size. The maximum number of results to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,8 +70,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scroll ID of the request.</para>
-        /// <para>You do not need to configure this parameter for the first page. This parameter is included in the pagination request based on the result returned for the first page.</para>
+        /// <para>The scroll ID for the request.</para>
+        /// <para>You do not need to specify this parameter for the first page request. For subsequent page requests, specify this parameter based on the value returned from the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B13D0B07-F24B-4790-88D8-D47A38063D00</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ScrollId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of the query time range. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-09 08:00:00</para>

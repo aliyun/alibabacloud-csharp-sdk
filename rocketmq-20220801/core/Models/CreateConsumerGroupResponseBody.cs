@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateConsumerGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidConsumerGroupId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result data that is returned.</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
+        /// <para>The dynamic fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ConsumerGroupId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message.</para>
+        /// <para>The dynamic fault message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>consumerGroupId</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The fault message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter consumerGroupId is invalid.</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Each request has a unique ID that is active and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AF9A8B10-C426-530F-A0DD-96320B39****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the execute operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

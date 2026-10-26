@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class AddDisasterRecoveryItemRequest : TeaModel {
         /// <summary>
-        /// <para>Topics included in the backup mapping. Required.</para>
+        /// <para>The topics included in the backup mapping. Required.</para>
         /// </summary>
         [NameInMap("topics")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Consumer group ID, required for ACTIVE_ACTIVE bidirectional backup</para>
+            /// <para>The ID of the consumer group. Required for ACTIVE_ACTIVE bidirectional backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GID_xxx</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The order in which messages are delivered to the target instance. The parameter values ​​are as follows:</para>
+            /// <para>The delivery order of messages to the target instance. Valid values for the parameter:</para>
             /// <list type="bullet">
             /// <item><description>Concurrently: concurrent delivery</description></item>
-            /// <item><description>Orderly: sequential delivery</description></item>
+            /// <item><description>Orderly: ordered delivery</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string DeliveryOrderType { get; set; }
 
             /// <summary>
-            /// <para>Instance ID, an instance ID will be automatically generated when <c>instanceType</c> is <c>EXTERNAL_ROCKETMQ</c>, and it can be obtained by querying the backup plan.</para>
+            /// <para>The instance ID. If instanceType is set to EXTERNAL_ROCKETMQ, an instance ID is automatically generated. You can obtain this ID by querying the backup plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rmq-cn-em93y94xxx</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instance type</para>
+            /// <para>The instance type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ALIYUN_ROCKETMQ: Alibaba Cloud instance</description></item>
-            /// <item><description>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</description></item>
+            /// <item><description>EXTERNAL_ROCKETMQ: external instance, open-source instance, or open-source cluster</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>Region ID</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Disaster recovery topic name, required</para>
+            /// <para>The name of the disaster recovery topic. Required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Topic_xxx</para>

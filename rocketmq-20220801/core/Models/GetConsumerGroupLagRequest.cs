@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetConsumerGroupLagRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the lite topic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string LiteTopicName { get; set; }
 
         /// <summary>
-        /// <para>The topic name.</para>
+        /// <para>The name of the topic to which the consumer group subscribes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal-topic-1</para>

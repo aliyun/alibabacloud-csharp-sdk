@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class DataLiteTopicLagMapValue : TeaModel {
         /// <summary>
+        /// <para>The number of accumulated messages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public long? ReadyCount { get; set; }
 
         /// <summary>
+        /// <para>The delivery latency. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

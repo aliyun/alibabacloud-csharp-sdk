@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The IP address whitelist.</para>
+        /// <para>The IP whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string IpWhitelist { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist.</para>
+        /// <para>The list of IP whitelists.</para>
         /// </summary>
         [NameInMap("ipWhitelists")]
         [Validation(Required=false)]

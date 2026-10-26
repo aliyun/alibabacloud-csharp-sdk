@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListConsumerConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MissingPageNumber</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public ListConsumerConnectionsResponseBodyData Data { get; set; }
         public class ListConsumerConnectionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The client connection list</para>
+            /// <para>The list of client connections.</para>
             /// </summary>
             [NameInMap("connections")]
             [Validation(Required=false)]
             public List<ListConsumerConnectionsResponseBodyDataConnections> Connections { get; set; }
             public class ListConsumerConnectionsResponseBodyDataConnections : TeaModel {
                 /// <summary>
-                /// <para>The ID of the client.</para>
+                /// <para>The client ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172.17.135.197@17392#1936705963#551717232#9873695589062458</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>Host IP/Public IP</para>
+                /// <para>The host IP address or Internet egress IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx.xx.xx.xx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string EgressIp { get; set; }
 
                 /// <summary>
-                /// <para>The <c>hostname</c> of the cloud-native box.</para>
+                /// <para>The client hostname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vos</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Hostname { get; set; }
 
                 /// <summary>
-                /// <para>The language of the client.</para>
+                /// <para>The client language.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>java</para>
@@ -74,10 +74,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>Consumption Mode</para>
+                /// <para>The consumption mode of the consumer:</para>
                 /// <list type="bullet">
-                /// <item><description>BROADCASTING</description></item>
-                /// <item><description>CLUSTERING</description></item>
+                /// <item><description><para>CLUSTERING</para>
+                /// </description></item>
+                /// <item><description><para>LITE_SELECTIVE</para>
+                /// </description></item>
+                /// <item><description><para>BROADCASTING</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageModel { get; set; }
 
                 /// <summary>
-                /// <para>The version of the client.</para>
+                /// <para>The client version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the instance resides.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -172,7 +176,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3620115-6F1F-5CFB-AA3F-BBD4853B2EC4</para>
@@ -182,7 +186,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

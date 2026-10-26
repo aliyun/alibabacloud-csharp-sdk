@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListTopicsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition for the query. If not provided, all topics under the instance will be queried.</para>
+        /// <para>The filter condition for the query. If not specified, all topics in the instance are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic_test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string MessageTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>Page number, indicating which page of results to return.</para>
+        /// <para>The page number of the results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, the maximum number of results to display per page.</para>
+        /// <para>The maximum number of results to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

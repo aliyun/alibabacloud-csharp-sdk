@@ -9,11 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListMigrationOperationsRequest : TeaModel {
+        /// <summary>
+        /// <para>The operation business status.</para>
+        /// </summary>
         [NameInMap("businessStatus")]
         [Validation(Required=false)]
         public List<string> BusinessStatus { get; set; }
 
         /// <summary>
+        /// <para>The filter condition for the query.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Supports filtering by operationKey, which is the topic name.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>xx</para>
         /// </summary>
@@ -22,6 +32,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-zxu37eiqq0x</para>
         /// </summary>
@@ -29,21 +41,26 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The operation status.</para>
+        /// </summary>
         [NameInMap("operationStatus")]
         [Validation(Required=false)]
         public List<string> OperationStatus { get; set; }
 
         /// <summary>
+        /// <para>The operation type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>IMPORT_CONSUMER_GROUP</para>
+        /// <para>MIGRATE_MESSAGE</para>
         /// </summary>
         [NameInMap("operationType")]
         [Validation(Required=false)]
         public string OperationType { get; set; }
 
         /// <summary>
+        /// <para>The page number of the results to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +71,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size, which specifies the maximum number of results to return per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

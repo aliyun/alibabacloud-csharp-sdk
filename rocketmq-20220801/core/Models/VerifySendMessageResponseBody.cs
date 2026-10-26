@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned by the operation. If the verification succeeds, this field contains the message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A64228900207A4F0F2931A4E0D40BE5</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates if the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

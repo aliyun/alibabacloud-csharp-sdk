@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateInstanceAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The status of the account.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DISABLE</description></item>
-        /// <item><description>ENABLE</description></item>
-        /// </list>
+        /// <para>The account status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>
@@ -25,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string AccountStatus { get; set; }
 
         /// <summary>
-        /// <para>The password of the account.</para>
+        /// <para>The account password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -35,6 +30,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The remark.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

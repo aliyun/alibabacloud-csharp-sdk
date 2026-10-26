@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance is changed.</para>
-        /// <para>You can call the <a href="https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups">ListResourceGroups</a> operation to query existing resource groups.</para>
+        /// <para>The ID of the resource group to which you want to transfer the specified instance.</para>
+        /// <para>You can call the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups">ListResourceGroups</a> operation to query existing resource groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource. Set this parameter to the ID of the ApsaraMQ for RocketMQ instance whose resource group you want to change.</para>
+        /// <para>The resource ID, which is the ID of the ApsaraMQ for RocketMQ instance. This parameter specifies the MSMQ queue instance whose resource group you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource.</para>
-        /// <para>Set this parameter to <b>instance</b>. The value of this parameter cannot be changed.</para>
+        /// <para>The resource type.</para>
+        /// <para>Set the value to <b>instance</b>, which indicates that the resource is an instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

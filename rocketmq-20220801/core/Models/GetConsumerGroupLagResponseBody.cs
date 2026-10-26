@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetConsumerGroupLagResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Topic.NotFound</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public GetConsumerGroupLagResponseBodyData Data { get; set; }
         public class GetConsumerGroupLagResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Consumer Group ID</para>
+            /// <para>The consumer group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CID-TEST</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>Instance ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rmq-cn-7e22ody****</para>
@@ -46,12 +46,15 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The message accumulation for lite topics.</para>
+            /// </summary>
             [NameInMap("liteTopicLagMap")]
             [Validation(Required=false)]
             public Dictionary<string, DataLiteTopicLagMapValue> LiteTopicLagMap { get; set; }
 
             /// <summary>
-            /// <para>Region ID</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -61,13 +64,15 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Backlog for each topic</para>
+            /// <para>The message accumulation for each topic.</para>
             /// </summary>
             [NameInMap("topicLagMap")]
             [Validation(Required=false)]
             public Dictionary<string, DataTopicLagMapValue> TopicLagMap { get; set; }
 
             /// <summary>
+            /// <para>The name of the subscribed topic.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test1</para>
             /// </summary>
@@ -76,14 +81,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string TopicName { get; set; }
 
             /// <summary>
-            /// <para>Total lag count</para>
+            /// <para>The total message accumulation.</para>
             /// </summary>
             [NameInMap("totalLag")]
             [Validation(Required=false)]
             public GetConsumerGroupLagResponseBodyDataTotalLag TotalLag { get; set; }
             public class GetConsumerGroupLagResponseBodyDataTotalLag : TeaModel {
                 /// <summary>
-                /// <para>Delivery delay time, in seconds</para>
+                /// <para>The delivery latency. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public long? DeliveryDuration { get; set; }
 
                 /// <summary>
-                /// <para>The number of messages being consumed.</para>
+                /// <para>The number of inflight messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -103,7 +108,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public long? InflightCount { get; set; }
 
                 /// <summary>
-                /// <para>Last consumption time</para>
+                /// <para>The timestamp of the last consumption.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735629607846</para>
@@ -113,7 +118,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public long? LastConsumeTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>Ready message count</para>
+                /// <para>The number of ready messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -127,7 +132,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>Dynamic error code</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>
@@ -147,7 +152,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -157,7 +162,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter instanceId is mandatory for this action .</para>

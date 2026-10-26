@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListTracesResponseBodyData Data { get; set; }
         public class ListTracesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Trace list.</para>
+            /// <para>The paginated data.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListTracesResponseBodyDataList> List { get; set; }
             public class ListTracesResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>Message born time.</para>
+                /// <para>The time when the message was generated, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Message id.</para>
+                /// <para>The message ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7F00000100207A4F0F294A938F7807AE</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>Message keys.</para>
+                /// <para>The message key.</para>
                 /// </summary>
                 [NameInMap("messageKeys")]
                 [Validation(Required=false)]
                 public List<string> MessageKeys { get; set; }
 
                 /// <summary>
-                /// <para>Message tag.</para>
+                /// <para>The list of tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the topic.</para>
+                /// <para>The topic name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>topic_test</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

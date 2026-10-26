@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListConsumerConnectionsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the Lite MSMQ topic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string LiteTopicName { get; set; }
 
         /// <summary>
+        /// <para>The name of the lite topic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test1</para>
         /// </summary>

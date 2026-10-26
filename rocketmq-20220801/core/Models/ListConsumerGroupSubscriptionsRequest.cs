@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListConsumerGroupSubscriptionsRequest : TeaModel {
         /// <summary>
-        /// <para>The topic name. If you do not specify this parameter, all subscriptions of the consumer group are queried.</para>
+        /// <para>The name of the topic. If you do not specify this parameter, all subscription relationships are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic_test</para>

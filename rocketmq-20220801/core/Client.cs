@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-guangzhou", "rocketmq.cn-guangzhou.aliyuncs.com	"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("rocketmq", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a topic mapping to a Global Replicator task.</para>
+        /// <para>Adds a backup mapping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a topic mapping to a Global Replicator task.</para>
+        /// <para>Adds a backup mapping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +135,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a topic mapping to a Global Replicator task.</para>
+        /// <para>Adds a backup mapping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -150,7 +154,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a topic mapping to a Global Replicator task.</para>
+        /// <para>Adds a backup mapping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -169,7 +173,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -227,7 +231,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -285,7 +289,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -304,7 +308,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -323,18 +327,160 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group.</para>
+        /// <para>创建 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentConversationResponse
+        /// </returns>
+        public CreateAgentConversationResponse CreateAgentConversationWithOptions(CreateAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialMessage))
+            {
+                body["initialMessage"] = request.InitialMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentConversationResponse
+        /// </returns>
+        public async Task<CreateAgentConversationResponse> CreateAgentConversationWithOptionsAsync(CreateAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialMessage))
+            {
+                body["initialMessage"] = request.InitialMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentConversationResponse
+        /// </returns>
+        public CreateAgentConversationResponse CreateAgentConversation(CreateAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAgentConversationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentConversationResponse
+        /// </returns>
+        public async Task<CreateAgentConversationResponse> CreateAgentConversationAsync(CreateAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAgentConversationWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group (ConsumerGroup) for ApsaraMQ for RocketMQ. A consumer group is a load balancing group in ApsaraMQ for RocketMQ that contains multiple consumers with consistent consumption behavior. Consumers must subscribe to related topics by specifying a consumer group to implement message subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-        /// The following limits are imposed on the ID:</para>
-        /// <list type="bullet">
-        /// <item><description>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</description></item>
-        /// <item><description>Length limit: The ID must be 1 to 60 characters in length.
-        /// For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -404,18 +550,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group.</para>
+        /// <para>Creates a consumer group (ConsumerGroup) for ApsaraMQ for RocketMQ. A consumer group is a load balancing group in ApsaraMQ for RocketMQ that contains multiple consumers with consistent consumption behavior. Consumers must subscribe to related topics by specifying a consumer group to implement message subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-        /// The following limits are imposed on the ID:</para>
-        /// <list type="bullet">
-        /// <item><description>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</description></item>
-        /// <item><description>Length limit: The ID must be 1 to 60 characters in length.
-        /// For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -485,18 +627,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group.</para>
+        /// <para>Creates a consumer group (ConsumerGroup) for ApsaraMQ for RocketMQ. A consumer group is a load balancing group in ApsaraMQ for RocketMQ that contains multiple consumers with consistent consumption behavior. Consumers must subscribe to related topics by specifying a consumer group to implement message subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-        /// The following limits are imposed on the ID:</para>
-        /// <list type="bullet">
-        /// <item><description>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</description></item>
-        /// <item><description>Length limit: The ID must be 1 to 60 characters in length.
-        /// For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -515,18 +653,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group.</para>
+        /// <para>Creates a consumer group (ConsumerGroup) for ApsaraMQ for RocketMQ. A consumer group is a load balancing group in ApsaraMQ for RocketMQ that contains multiple consumers with consistent consumption behavior. Consumers must subscribe to related topics by specifying a consumer group to implement message subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
-        /// The following limits are imposed on the ID:</para>
-        /// <list type="bullet">
-        /// <item><description>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</description></item>
-        /// <item><description>Length limit: The ID must be 1 to 60 characters in length.
-        /// For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use these operations only in the management link. Do not use them in the core data link for sending and receiving messages, as this may introduce risks to the link.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -545,7 +679,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Disaster Recovery Plan</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -611,7 +745,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Disaster Recovery Plan</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -677,7 +811,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Disaster Recovery Plan</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -696,7 +830,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Disaster Recovery Plan</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -715,13 +849,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x series instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -834,13 +968,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x series instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -953,13 +1087,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x series instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -979,13 +1113,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraMQ for RocketMQ 5.x instance.</para>
+        /// <para>Creates an ApsaraMQ for RocketMQ 5.x series instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. Integrate it only into the management and control link. Do not rely on OpenAPI in the core data link for message sending and receiving. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1005,7 +1139,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is used to access an instance.</para>
+        /// <para>Creates an access account for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1059,7 +1193,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is used to access an instance.</para>
+        /// <para>Creates an access account for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1113,7 +1247,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is used to access an instance.</para>
+        /// <para>Creates an access account for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1132,7 +1266,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is used to access an instance.</para>
+        /// <para>Creates an access account for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1151,7 +1285,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a specific instance.</para>
+        /// <para>Creates access permissions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1213,7 +1347,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a specific instance.</para>
+        /// <para>Creates access permissions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1275,7 +1409,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a specific instance.</para>
+        /// <para>Creates access permissions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1294,7 +1428,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a specific instance.</para>
+        /// <para>Creates access permissions for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1313,7 +1447,173 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist.</para>
+        /// <para>创建实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceInspectionResponse
+        /// </returns>
+        public CreateInstanceInspectionResponse CreateInstanceInspectionWithOptions(string instanceId, CreateInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Items))
+            {
+                body["items"] = request.Items;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceScope))
+            {
+                body["resourceScope"] = request.ResourceScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schedule))
+            {
+                body["schedule"] = request.Schedule;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceInspectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceInspectionResponse
+        /// </returns>
+        public async Task<CreateInstanceInspectionResponse> CreateInstanceInspectionWithOptionsAsync(string instanceId, CreateInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Items))
+            {
+                body["items"] = request.Items;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceScope))
+            {
+                body["resourceScope"] = request.ResourceScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schedule))
+            {
+                body["schedule"] = request.Schedule;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceInspectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceInspectionResponse
+        /// </returns>
+        public CreateInstanceInspectionResponse CreateInstanceInspection(string instanceId, CreateInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceInspectionResponse
+        /// </returns>
+        public async Task<CreateInstanceInspectionResponse> CreateInstanceInspectionAsync(string instanceId, CreateInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateInstanceInspectionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP address whitelist for access control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1359,7 +1659,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist.</para>
+        /// <para>Creates an IP address whitelist for access control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1405,7 +1705,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist.</para>
+        /// <para>Creates an IP address whitelist for access control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1424,7 +1724,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist.</para>
+        /// <para>Creates an IP address whitelist for access control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1443,7 +1743,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Topic</para>
+        /// <para>Creates a topic for ApsaraMQ for RocketMQ. A topic is the top-level container for message transmission and storage in ApsaraMQ for RocketMQ and is used to identify messages of the same business logic. In the messaging model, producers send messages to topics, and consumers consume messages by subscribing to specified topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1501,7 +1801,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Topic</para>
+        /// <para>Creates a topic for ApsaraMQ for RocketMQ. A topic is the top-level container for message transmission and storage in ApsaraMQ for RocketMQ and is used to identify messages of the same business logic. In the messaging model, producers send messages to topics, and consumers consume messages by subscribing to specified topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1559,7 +1859,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Topic</para>
+        /// <para>Creates a topic for ApsaraMQ for RocketMQ. A topic is the top-level container for message transmission and storage in ApsaraMQ for RocketMQ and is used to identify messages of the same business logic. In the messaging model, producers send messages to topics, and consumers consume messages by subscribing to specified topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1578,7 +1878,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Topic</para>
+        /// <para>Creates a topic for ApsaraMQ for RocketMQ. A topic is the top-level container for message transmission and storage in ApsaraMQ for RocketMQ and is used to identify messages of the same business logic. In the messaging model, producers send messages to topics, and consumers consume messages by subscribing to specified topics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1597,14 +1897,132 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentConversationResponse
+        /// </returns>
+        public DeleteAgentConversationResponse DeleteAgentConversationWithOptions(string conversationId, DeleteAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentConversationResponse
+        /// </returns>
+        public async Task<DeleteAgentConversationResponse> DeleteAgentConversationWithOptionsAsync(string conversationId, DeleteAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentConversationResponse
+        /// </returns>
+        public DeleteAgentConversationResponse DeleteAgentConversation(string conversationId, DeleteAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAgentConversationWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentConversationResponse
+        /// </returns>
+        public async Task<DeleteAgentConversationResponse> DeleteAgentConversationAsync(string conversationId, DeleteAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAgentConversationWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a specified consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// <para>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+        /// After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1647,8 +2065,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// <para>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+        /// After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1691,8 +2109,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// <para>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+        /// After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1714,8 +2132,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-        /// After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</para>
+        /// <para>Notice: OpenAPI operations provided by Alibaba Cloud are management API operations used to manage and query resources of Alibaba Cloud services. Integrate these operations only into management workflows. Do not rely on OpenAPI operations in the core data link for message sending and receiving. Otherwise, risks may occur in the workflows.
+        /// After you delete a specified consumer group, consumer clients with the identity of the consumer group cannot consume messages. Invoke this operation with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1731,7 +2149,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the subscriptions of a consumer group.</para>
+        /// <para>Deletes the subscription of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1785,7 +2203,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the subscriptions of a consumer group.</para>
+        /// <para>Deletes the subscription of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1839,7 +2257,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the subscriptions of a consumer group.</para>
+        /// <para>Deletes the subscription of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1858,7 +2276,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the subscriptions of a consumer group.</para>
+        /// <para>Deletes the subscription of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1877,7 +2295,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
+        /// <para>Deletes a backup mapping task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1913,7 +2331,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
+        /// <para>Deletes a backup mapping task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1949,7 +2367,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
+        /// <para>Deletes a backup mapping task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1964,7 +2382,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
+        /// <para>Deletes a backup mapping task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1979,7 +2397,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global message backup plan.</para>
+        /// <para>Deletes a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2015,7 +2433,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global message backup plan.</para>
+        /// <para>Deletes a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2051,7 +2469,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global message backup plan.</para>
+        /// <para>Deletes a backup plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2066,7 +2484,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global message backup plan.</para>
+        /// <para>Deletes a backup plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2227,7 +2645,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete access control ACL user</para>
+        /// <para>Deletes the access account information for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2263,7 +2681,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete access control ACL user</para>
+        /// <para>Deletes the access account information for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2299,7 +2717,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete access control ACL user</para>
+        /// <para>Deletes the access account information for a specified instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2314,7 +2732,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete access control ACL user</para>
+        /// <para>Deletes the access account information for a specified instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2329,7 +2747,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the permissions of a specific account of an instance.</para>
+        /// <para>Deletes the permissions of a specified account for a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2379,7 +2797,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the permissions of a specific account of an instance.</para>
+        /// <para>Deletes the permissions of a specified account for a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2429,7 +2847,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the permissions of a specific account of an instance.</para>
+        /// <para>Deletes the permissions of a specified account for a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2448,7 +2866,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the permissions of a specific account of an instance.</para>
+        /// <para>Deletes the permissions of a specified account for a specified resource in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2467,7 +2885,137 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific IP address whitelist from an instance.</para>
+        /// <para>关闭实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceInspectionResponse
+        /// </returns>
+        public DeleteInstanceInspectionResponse DeleteInstanceInspectionWithOptions(string instanceId, DeleteInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceInspectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceInspectionResponse
+        /// </returns>
+        public async Task<DeleteInstanceInspectionResponse> DeleteInstanceInspectionWithOptionsAsync(string instanceId, DeleteInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceInspectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceInspectionResponse
+        /// </returns>
+        public DeleteInstanceInspectionResponse DeleteInstanceInspection(string instanceId, DeleteInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceInspectionResponse
+        /// </returns>
+        public async Task<DeleteInstanceInspectionResponse> DeleteInstanceInspectionAsync(string instanceId, DeleteInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteInstanceInspectionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified global IP whitelist under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2523,7 +3071,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific IP address whitelist from an instance.</para>
+        /// <para>Deletes a specified global IP whitelist under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2579,7 +3127,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific IP address whitelist from an instance.</para>
+        /// <para>Deletes a specified global IP whitelist under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2598,7 +3146,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific IP address whitelist from an instance.</para>
+        /// <para>Deletes a specified global IP whitelist under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2622,7 +3170,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// <para>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -2663,7 +3211,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// <para>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -2704,7 +3252,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// <para>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -2724,7 +3272,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</para>
+        /// <para>Deleting a topic clears all publish-subscribe relationships under the topic. Call this operation with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -2739,7 +3287,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specific operation on a specific migration task.</para>
+        /// <para>Performs a specified operation on a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2791,7 +3339,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specific operation on a specific migration task.</para>
+        /// <para>Performs a specified operation on a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2843,7 +3391,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specific operation on a specific migration task.</para>
+        /// <para>Performs a specified operation on a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2862,7 +3410,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specific operation on a specific migration task.</para>
+        /// <para>Performs a specified operation on a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2881,7 +3429,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前迁移阶段</para>
+        /// <para>Completes the current migration stage for a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2927,7 +3475,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前迁移阶段</para>
+        /// <para>Completes the current migration stage for a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2973,7 +3521,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前迁移阶段</para>
+        /// <para>Completes the current migration stage for a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2992,7 +3540,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前迁移阶段</para>
+        /// <para>Completes the current migration stage for a specified migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3011,7 +3559,393 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
+        /// <para>查询 Agent 诊断会话详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationResponse
+        /// </returns>
+        public GetAgentConversationResponse GetAgentConversationWithOptions(string conversationId, GetAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationResponse
+        /// </returns>
+        public async Task<GetAgentConversationResponse> GetAgentConversationWithOptionsAsync(string conversationId, GetAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationResponse
+        /// </returns>
+        public GetAgentConversationResponse GetAgentConversation(string conversationId, GetAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentConversationWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationResponse
+        /// </returns>
+        public async Task<GetAgentConversationResponse> GetAgentConversationAsync(string conversationId, GetAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentConversationWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订阅 Agent 诊断会话事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationEventsResponse
+        /// </returns>
+        public GetAgentConversationEventsResponse GetAgentConversationEventsWithOptions(string conversationId, GetAgentConversationEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.After))
+            {
+                query["after"] = request.After;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentConversationEvents",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<GetAgentConversationEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订阅 Agent 诊断会话事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationEventsResponse
+        /// </returns>
+        public async Task<GetAgentConversationEventsResponse> GetAgentConversationEventsWithOptionsAsync(string conversationId, GetAgentConversationEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.After))
+            {
+                query["after"] = request.After;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentConversationEvents",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/events",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<GetAgentConversationEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订阅 Agent 诊断会话事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationEventsResponse
+        /// </returns>
+        public GetAgentConversationEventsResponse GetAgentConversationEvents(string conversationId, GetAgentConversationEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentConversationEventsWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订阅 Agent 诊断会话事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationEventsResponse
+        /// </returns>
+        public async Task<GetAgentConversationEventsResponse> GetAgentConversationEventsAsync(string conversationId, GetAgentConversationEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentConversationEventsWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话时间线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationTimelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationTimelineResponse
+        /// </returns>
+        public GetAgentConversationTimelineResponse GetAgentConversationTimelineWithOptions(string conversationId, GetAgentConversationTimelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.After))
+            {
+                query["after"] = request.After;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeImageData))
+            {
+                query["includeImageData"] = request.IncludeImageData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentConversationTimeline",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/timeline",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentConversationTimelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话时间线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationTimelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationTimelineResponse
+        /// </returns>
+        public async Task<GetAgentConversationTimelineResponse> GetAgentConversationTimelineWithOptionsAsync(string conversationId, GetAgentConversationTimelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.After))
+            {
+                query["after"] = request.After;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeImageData))
+            {
+                query["includeImageData"] = request.IncludeImageData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentConversationTimeline",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/timeline",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentConversationTimelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话时间线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationTimelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationTimelineResponse
+        /// </returns>
+        public GetAgentConversationTimelineResponse GetAgentConversationTimeline(string conversationId, GetAgentConversationTimelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentConversationTimelineWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话时间线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentConversationTimelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentConversationTimelineResponse
+        /// </returns>
+        public async Task<GetAgentConversationTimelineResponse> GetAgentConversationTimelineAsync(string conversationId, GetAgentConversationTimelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentConversationTimelineWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the time range in which a consumer offset can be reset for a topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3047,7 +3981,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
+        /// <para>Queries the time range in which a consumer offset can be reset for a topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3083,7 +4017,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
+        /// <para>Queries the time range in which a consumer offset can be reset for a topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3098,7 +4032,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
+        /// <para>Queries the time range in which a consumer offset can be reset for a topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3113,13 +4047,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified consumer group.</para>
+        /// <para>Retrieves the details of a specified consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3156,13 +4090,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified consumer group.</para>
+        /// <para>Retrieves the details of a specified consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3199,13 +4133,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified consumer group.</para>
+        /// <para>Retrieves the details of a specified consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3221,13 +4155,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified consumer group.</para>
+        /// <para>Retrieves the details of a specified consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control data links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3243,7 +4177,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Consumer Group Backlog Information</para>
+        /// <para>Queries the message accumulation of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3293,7 +4227,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Consumer Group Backlog Information</para>
+        /// <para>Queries the message accumulation of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3343,7 +4277,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Consumer Group Backlog Information</para>
+        /// <para>Queries the message accumulation of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3362,7 +4296,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Consumer Group Backlog Information</para>
+        /// <para>Queries the message accumulation of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3613,7 +4547,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan mapping.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3649,7 +4583,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan mapping.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3685,7 +4619,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan mapping.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3700,7 +4634,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan mapping.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3715,8 +4649,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -3751,8 +4690,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -3787,8 +4731,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetDisasterRecoveryPlanResponse
@@ -3802,8 +4751,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Global Replicator task.</para>
+        /// <para>Queries the details of a backup plan.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before querying, make sure you have created a Global Replicator backup plan. Before using Global Replicator, your account must have the AliyunServiceRoleForRMQDisasterRecovery service-linked role. This role is used to grant authorization for ApsaraMQ for RocketMQ to access the EventBridge event bus. The system typically creates this role automatically the first time you use the associated feature. If automatic creation failed, create the role manually.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetDisasterRecoveryPlanResponse
@@ -3817,13 +4771,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an instance.</para>
+        /// <para>Retrieves the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -3860,13 +4814,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an instance.</para>
+        /// <para>Retrieves the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -3903,13 +4857,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an instance.</para>
+        /// <para>Retrieves the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -3925,13 +4879,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an instance.</para>
+        /// <para>Retrieves the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management APIs used to manage and query Alibaba Cloud service resources. Use them only in management and control workflows. Do not rely on OpenAPI in core data link workflows for message sending and receiving, as this may introduce risks to the data link.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -3947,7 +4901,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the account used to access a specific instance.</para>
+        /// <para>Retrieves the account details for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3993,7 +4947,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the account used to access a specific instance.</para>
+        /// <para>Retrieves the account details for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4039,7 +4993,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the account used to access a specific instance.</para>
+        /// <para>Retrieves the account details for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4058,7 +5012,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the account used to access a specific instance.</para>
+        /// <para>Retrieves the account details for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4215,6 +5169,384 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionResponse
+        /// </returns>
+        public GetInstanceInspectionResponse GetInstanceInspectionWithOptions(string instanceId, GetInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceInspectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionResponse
+        /// </returns>
+        public async Task<GetInstanceInspectionResponse> GetInstanceInspectionWithOptionsAsync(string instanceId, GetInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceInspectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionResponse
+        /// </returns>
+        public GetInstanceInspectionResponse GetInstanceInspection(string instanceId, GetInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionResponse
+        /// </returns>
+        public async Task<GetInstanceInspectionResponse> GetInstanceInspectionAsync(string instanceId, GetInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetInstanceInspectionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例风险诊断报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionReportResponse
+        /// </returns>
+        public GetInstanceInspectionReportResponse GetInstanceInspectionReportWithOptions(string reportId, GetInstanceInspectionReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceInspectionReport",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/reports/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(reportId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceInspectionReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例风险诊断报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionReportResponse
+        /// </returns>
+        public async Task<GetInstanceInspectionReportResponse> GetInstanceInspectionReportWithOptionsAsync(string reportId, GetInstanceInspectionReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceInspectionReport",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/reports/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(reportId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceInspectionReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例风险诊断报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionReportResponse
+        /// </returns>
+        public GetInstanceInspectionReportResponse GetInstanceInspectionReport(string reportId, GetInstanceInspectionReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetInstanceInspectionReportWithOptions(reportId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例风险诊断报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionReportResponse
+        /// </returns>
+        public async Task<GetInstanceInspectionReportResponse> GetInstanceInspectionReportAsync(string reportId, GetInstanceInspectionReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetInstanceInspectionReportWithOptionsAsync(reportId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionRunResponse
+        /// </returns>
+        public GetInstanceInspectionRunResponse GetInstanceInspectionRunWithOptions(string instanceId, string runId, GetInstanceInspectionRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceInspectionRun",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(runId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceInspectionRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionRunResponse
+        /// </returns>
+        public async Task<GetInstanceInspectionRunResponse> GetInstanceInspectionRunWithOptionsAsync(string instanceId, string runId, GetInstanceInspectionRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceInspectionRun",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(runId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceInspectionRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionRunResponse
+        /// </returns>
+        public GetInstanceInspectionRunResponse GetInstanceInspectionRun(string instanceId, string runId, GetInstanceInspectionRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetInstanceInspectionRunWithOptions(instanceId, runId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceInspectionRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceInspectionRunResponse
+        /// </returns>
+        public async Task<GetInstanceInspectionRunResponse> GetInstanceInspectionRunAsync(string instanceId, string runId, GetInstanceInspectionRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetInstanceInspectionRunWithOptionsAsync(instanceId, runId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about the IP address whitelist of an instance.</para>
         /// </summary>
         /// 
@@ -4357,7 +5689,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific message.</para>
+        /// <para>Retrieves the details of a specified message.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4393,7 +5725,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific message.</para>
+        /// <para>Retrieves the details of a specified message.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4429,7 +5761,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific message.</para>
+        /// <para>Retrieves the details of a specified message.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4444,7 +5776,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specific message.</para>
+        /// <para>Retrieves the details of a specified message.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4459,7 +5791,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic Details</para>
+        /// <para>Retrieves the details of a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4495,7 +5827,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic Details</para>
+        /// <para>Retrieves the details of a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4531,7 +5863,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic Details</para>
+        /// <para>Retrieves the details of a specified topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4546,7 +5878,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic Details</para>
+        /// <para>Retrieves the details of a specified topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4561,7 +5893,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a specific message in a specific topic.</para>
+        /// <para>Retrieves the message trace for a specified message in a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4611,7 +5943,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a specific message in a specific topic.</para>
+        /// <para>Retrieves the message trace for a specified message in a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4661,7 +5993,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a specific message in a specific topic.</para>
+        /// <para>Retrieves the message trace for a specified message in a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4680,7 +6012,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a specific message in a specific topic.</para>
+        /// <para>Retrieves the message trace for a specified message in a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4699,7 +6031,161 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported zones.</para>
+        /// <para>查询 Agent 诊断会话列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentConversationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentConversationsResponse
+        /// </returns>
+        public ListAgentConversationsResponse ListAgentConversationsWithOptions(ListAgentConversationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Purpose))
+            {
+                query["purpose"] = request.Purpose;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Q))
+            {
+                query["q"] = request.Q;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentConversations",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentConversationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentConversationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentConversationsResponse
+        /// </returns>
+        public async Task<ListAgentConversationsResponse> ListAgentConversationsWithOptionsAsync(ListAgentConversationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Purpose))
+            {
+                query["purpose"] = request.Purpose;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Q))
+            {
+                query["q"] = request.Q;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentConversations",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentConversationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentConversationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentConversationsResponse
+        /// </returns>
+        public ListAgentConversationsResponse ListAgentConversations(ListAgentConversationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAgentConversationsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 Agent 诊断会话列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentConversationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentConversationsResponse
+        /// </returns>
+        public async Task<ListAgentConversationsResponse> ListAgentConversationsAsync(ListAgentConversationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAgentConversationsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries supported zones.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4735,7 +6221,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported zones.</para>
+        /// <para>Queries supported zones.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4771,7 +6257,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported zones.</para>
+        /// <para>Queries supported zones.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4786,7 +6272,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported zones.</para>
+        /// <para>Queries supported zones.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4801,7 +6287,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connections of a specific consumer client.</para>
+        /// <para>Retrieves the connection information for clients in a specified consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4851,7 +6337,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connections of a specific consumer client.</para>
+        /// <para>Retrieves the connection information for clients in a specified consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4901,7 +6387,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connections of a specific consumer client.</para>
+        /// <para>Retrieves the connection information for clients in a specified consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4920,7 +6406,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connections of a specific consumer client.</para>
+        /// <para>Retrieves the connection information for clients in a specified consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4939,7 +6425,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// <para>Lists the subscription relationships for a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4985,7 +6471,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// <para>Lists the subscription relationships for a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5031,7 +6517,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// <para>Lists the subscription relationships for a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5050,7 +6536,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscriptions of a specific consumer group.</para>
+        /// <para>Lists the subscription relationships for a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5069,13 +6555,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Consumer Groups</para>
+        /// <para>Queries the list of consumer groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5130,13 +6616,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Consumer Groups</para>
+        /// <para>Queries the list of consumer groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5191,13 +6677,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Consumer Groups</para>
+        /// <para>Queries the list of consumer groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5217,13 +6703,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Consumer Groups</para>
+        /// <para>Queries the list of consumer groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query related resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Using OpenAPI in the core data link for message sending and receiving is strictly prohibited. Otherwise, risks may occur in the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5243,8 +6729,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumer progress synchronization tasks.</para>
+        /// <para>Queries the list of consumer offset synchronization checkpoints.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDisasterRecoveryCheckpointsRequest
@@ -5301,8 +6792,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumer progress synchronization tasks.</para>
+        /// <para>Queries the list of consumer offset synchronization checkpoints.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDisasterRecoveryCheckpointsRequest
@@ -5359,8 +6855,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumer progress synchronization tasks.</para>
+        /// <para>Queries the list of consumer offset synchronization checkpoints.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDisasterRecoveryCheckpointsRequest
@@ -5378,8 +6879,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries consumer progress synchronization tasks.</para>
+        /// <para>Queries the list of consumer offset synchronization checkpoints.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, create a Global Replicator backup plan and add topic mapping items to the plan. Then use the corresponding planId, itemId, and source instance ID to query consumer offset synchronization checkpoints. To use Global Replicator, make sure that your account has the AliyunServiceRoleForRMQDisasterRecovery service-linked role. The system typically performs automatic creation of this role when you first use the associated feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDisasterRecoveryCheckpointsRequest
@@ -5397,7 +6903,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Global Replicator tasks of an instance.</para>
+        /// <para>Queries the list of backup mapping tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5455,7 +6961,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Global Replicator tasks of an instance.</para>
+        /// <para>Queries the list of backup mapping tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5513,7 +7019,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Global Replicator tasks of an instance.</para>
+        /// <para>Queries the list of backup mapping tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5532,7 +7038,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Global Replicator tasks of an instance.</para>
+        /// <para>Queries the list of backup mapping tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5551,7 +7057,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Replicator tasks.</para>
+        /// <para>Queries a list of backup plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5609,7 +7115,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Replicator tasks.</para>
+        /// <para>Queries a list of backup plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5667,7 +7173,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Replicator tasks.</para>
+        /// <para>Queries a list of backup plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5686,7 +7192,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Replicator tasks.</para>
+        /// <para>Queries a list of backup plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5705,7 +7211,153 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts that are used to access a specific instance.</para>
+        /// <para>查询巡检模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInspectionTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInspectionTemplatesResponse
+        /// </returns>
+        public ListInspectionTemplatesResponse ListInspectionTemplatesWithOptions(ListInspectionTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInspectionTemplates",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/templates",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInspectionTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询巡检模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInspectionTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInspectionTemplatesResponse
+        /// </returns>
+        public async Task<ListInspectionTemplatesResponse> ListInspectionTemplatesWithOptionsAsync(ListInspectionTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInspectionTemplates",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/templates",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInspectionTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询巡检模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInspectionTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInspectionTemplatesResponse
+        /// </returns>
+        public ListInspectionTemplatesResponse ListInspectionTemplates(ListInspectionTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInspectionTemplatesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询巡检模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInspectionTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInspectionTemplatesResponse
+        /// </returns>
+        public async Task<ListInspectionTemplatesResponse> ListInspectionTemplatesAsync(ListInspectionTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInspectionTemplatesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the access accounts for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5767,7 +7419,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts that are used to access a specific instance.</para>
+        /// <para>Retrieves the access accounts for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5829,7 +7481,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts that are used to access a specific instance.</para>
+        /// <para>Retrieves the access accounts for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5848,7 +7500,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts that are used to access a specific instance.</para>
+        /// <para>Retrieves the access accounts for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6013,6 +7665,516 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询巡检项关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionResourcesResponse
+        /// </returns>
+        public ListInstanceInspectionResourcesResponse ListInstanceInspectionResourcesWithOptions(string instanceId, ListInstanceInspectionResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["templateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInspectionResources",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/resources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInspectionResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询巡检项关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionResourcesResponse
+        /// </returns>
+        public async Task<ListInstanceInspectionResourcesResponse> ListInstanceInspectionResourcesWithOptionsAsync(string instanceId, ListInstanceInspectionResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["templateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInspectionResources",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/resources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInspectionResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询巡检项关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionResourcesResponse
+        /// </returns>
+        public ListInstanceInspectionResourcesResponse ListInstanceInspectionResources(string instanceId, ListInstanceInspectionResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceInspectionResourcesWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询巡检项关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionResourcesResponse
+        /// </returns>
+        public async Task<ListInstanceInspectionResourcesResponse> ListInstanceInspectionResourcesAsync(string instanceId, ListInstanceInspectionResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceInspectionResourcesWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionRunsResponse
+        /// </returns>
+        public ListInstanceInspectionRunsResponse ListInstanceInspectionRunsWithOptions(string instanceId, ListInstanceInspectionRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportStatus))
+            {
+                query["reportStatus"] = request.ReportStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Result))
+            {
+                query["result"] = request.Result;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["sortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["templateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInspectionRuns",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/runs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInspectionRunsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionRunsResponse
+        /// </returns>
+        public async Task<ListInstanceInspectionRunsResponse> ListInstanceInspectionRunsWithOptionsAsync(string instanceId, ListInstanceInspectionRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportStatus))
+            {
+                query["reportStatus"] = request.ReportStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Result))
+            {
+                query["result"] = request.Result;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["sortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["templateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInspectionRuns",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/runs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInspectionRunsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionRunsResponse
+        /// </returns>
+        public ListInstanceInspectionRunsResponse ListInstanceInspectionRuns(string instanceId, ListInstanceInspectionRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceInspectionRunsWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例巡检历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionRunsResponse
+        /// </returns>
+        public async Task<ListInstanceInspectionRunsResponse> ListInstanceInspectionRunsAsync(string instanceId, ListInstanceInspectionRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceInspectionRunsWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询已配置的实例诊断；仅返回配置摘要</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionsResponse
+        /// </returns>
+        public ListInstanceInspectionsResponse ListInstanceInspectionsWithOptions(ListInstanceInspectionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInspections",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInspectionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询已配置的实例诊断；仅返回配置摘要</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionsResponse
+        /// </returns>
+        public async Task<ListInstanceInspectionsResponse> ListInstanceInspectionsWithOptionsAsync(ListInstanceInspectionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInspections",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInspectionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询已配置的实例诊断；仅返回配置摘要</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionsResponse
+        /// </returns>
+        public ListInstanceInspectionsResponse ListInstanceInspections(ListInstanceInspectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceInspectionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询已配置的实例诊断；仅返回配置摘要</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInspectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInspectionsResponse
+        /// </returns>
+        public async Task<ListInstanceInspectionsResponse> ListInstanceInspectionsAsync(ListInstanceInspectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceInspectionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the IP address whitelists of an instance.</para>
         /// </summary>
         /// 
@@ -6159,13 +8321,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// <para>Queries the list of all ApsaraMQ for RocketMQ instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6242,13 +8404,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// <para>Queries the list of all ApsaraMQ for RocketMQ instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6325,13 +8487,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// <para>Queries the list of all ApsaraMQ for RocketMQ instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6351,13 +8513,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ApsaraMQ for RocketMQ instances in a specific region.</para>
+        /// <para>Queries the list of all ApsaraMQ for RocketMQ instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI operations provided by Alibaba Cloud are management API operations that are used to manage and query resources of Alibaba Cloud services. Integrate OpenAPI operations only into the management data link. Do not use OpenAPI operations in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6377,7 +8539,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries messages.</para>
+        /// <para>Queries a list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6451,7 +8613,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries messages.</para>
+        /// <para>Queries a list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6525,7 +8687,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries messages.</para>
+        /// <para>Queries a list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6544,7 +8706,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries messages.</para>
+        /// <para>Queries a list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6701,7 +8863,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration operations.</para>
+        /// <para>Queries the list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6781,7 +8943,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration operations.</para>
+        /// <para>Queries the list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6861,7 +9023,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration operations.</para>
+        /// <para>Queries the list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6880,7 +9042,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration operations.</para>
+        /// <para>Queries the list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6899,7 +9061,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries migration tasks.</para>
+        /// <para>Queries the list of migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6961,7 +9123,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries migration tasks.</para>
+        /// <para>Queries the list of migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7023,7 +9185,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries migration tasks.</para>
+        /// <para>Queries the list of migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7042,7 +9204,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries migration tasks.</para>
+        /// <para>Queries the list of migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7061,7 +9223,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// <para>Queries the list of regions.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7097,7 +9259,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// <para>Queries the list of regions.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7133,7 +9295,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// <para>Queries the list of regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7148,7 +9310,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
+        /// <para>Queries the list of regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7435,7 +9597,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic List</para>
+        /// <para>Queries the list of topics in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7499,7 +9661,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic List</para>
+        /// <para>Queries the list of topics in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7563,7 +9725,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic List</para>
+        /// <para>Queries the list of topics in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7582,7 +9744,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Topic List</para>
+        /// <para>Queries the list of topics in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7601,7 +9763,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the message traces of a specific topic.</para>
+        /// <para>Queries the list of message traces under a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7675,7 +9837,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the message traces of a specific topic.</para>
+        /// <para>Queries the list of message traces under a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7749,7 +9911,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the message traces of a specific topic.</para>
+        /// <para>Queries the list of message traces under a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7768,7 +9930,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the message traces of a specific topic.</para>
+        /// <para>Queries the list of message traces under a specified topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7925,6 +10087,472 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>响应 Agent 诊断交互</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RespondAgentConversationActionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RespondAgentConversationActionResponse
+        /// </returns>
+        public RespondAgentConversationActionResponse RespondAgentConversationActionWithOptions(string conversationId, string actionId, RespondAgentConversationActionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Answers))
+            {
+                body["answers"] = request.Answers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Decision))
+            {
+                body["decision"] = request.Decision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                body["note"] = request.Note;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RespondAgentConversationAction",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/actions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(actionId) + "/respond",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RespondAgentConversationActionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>响应 Agent 诊断交互</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RespondAgentConversationActionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RespondAgentConversationActionResponse
+        /// </returns>
+        public async Task<RespondAgentConversationActionResponse> RespondAgentConversationActionWithOptionsAsync(string conversationId, string actionId, RespondAgentConversationActionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Answers))
+            {
+                body["answers"] = request.Answers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Decision))
+            {
+                body["decision"] = request.Decision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
+            {
+                body["note"] = request.Note;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RespondAgentConversationAction",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/actions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(actionId) + "/respond",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RespondAgentConversationActionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>响应 Agent 诊断交互</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RespondAgentConversationActionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RespondAgentConversationActionResponse
+        /// </returns>
+        public RespondAgentConversationActionResponse RespondAgentConversationAction(string conversationId, string actionId, RespondAgentConversationActionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RespondAgentConversationActionWithOptions(conversationId, actionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>响应 Agent 诊断交互</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RespondAgentConversationActionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RespondAgentConversationActionResponse
+        /// </returns>
+        public async Task<RespondAgentConversationActionResponse> RespondAgentConversationActionAsync(string conversationId, string actionId, RespondAgentConversationActionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RespondAgentConversationActionWithOptionsAsync(conversationId, actionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行实例巡检</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInstanceInspectionResponse
+        /// </returns>
+        public RunInstanceInspectionResponse RunInstanceInspectionWithOptions(string instanceId, RunInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemOverrides))
+            {
+                body["itemOverrides"] = request.ItemOverrides;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/runs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunInstanceInspectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行实例巡检</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInstanceInspectionResponse
+        /// </returns>
+        public async Task<RunInstanceInspectionResponse> RunInstanceInspectionWithOptionsAsync(string instanceId, RunInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemOverrides))
+            {
+                body["itemOverrides"] = request.ItemOverrides;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/runs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunInstanceInspectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行实例巡检</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInstanceInspectionResponse
+        /// </returns>
+        public RunInstanceInspectionResponse RunInstanceInspection(string instanceId, RunInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行实例巡检</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInstanceInspectionResponse
+        /// </returns>
+        public async Task<RunInstanceInspectionResponse> RunInstanceInspectionAsync(string instanceId, RunInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunInstanceInspectionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送 Agent 诊断消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAgentConversationMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAgentConversationMessageResponse
+        /// </returns>
+        public SendAgentConversationMessageResponse SendAgentConversationMessageWithOptions(string conversationId, SendAgentConversationMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attachments))
+            {
+                body["attachments"] = request.Attachments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientContext))
+            {
+                body["clientContext"] = request.ClientContext;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Images))
+            {
+                body["images"] = request.Images;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                body["message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
+            {
+                body["messageType"] = request.MessageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketRequestId))
+            {
+                body["ticketRequestId"] = request.TicketRequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAgentConversationMessage",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/messages",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<SendAgentConversationMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送 Agent 诊断消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAgentConversationMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAgentConversationMessageResponse
+        /// </returns>
+        public async Task<SendAgentConversationMessageResponse> SendAgentConversationMessageWithOptionsAsync(string conversationId, SendAgentConversationMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attachments))
+            {
+                body["attachments"] = request.Attachments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientContext))
+            {
+                body["clientContext"] = request.ClientContext;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Images))
+            {
+                body["images"] = request.Images;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                body["message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
+            {
+                body["messageType"] = request.MessageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketRequestId))
+            {
+                body["ticketRequestId"] = request.TicketRequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAgentConversationMessage",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/messages",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<SendAgentConversationMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送 Agent 诊断消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAgentConversationMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAgentConversationMessageResponse
+        /// </returns>
+        public SendAgentConversationMessageResponse SendAgentConversationMessage(string conversationId, SendAgentConversationMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SendAgentConversationMessageWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送 Agent 诊断消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAgentConversationMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAgentConversationMessageResponse
+        /// </returns>
+        public async Task<SendAgentConversationMessageResponse> SendAgentConversationMessageAsync(string conversationId, SendAgentConversationMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SendAgentConversationMessageWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
@@ -8023,6 +10651,262 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StartDisasterRecoveryItemWithOptionsAsync(planId, itemId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>引导 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SteerAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SteerAgentConversationResponse
+        /// </returns>
+        public SteerAgentConversationResponse SteerAgentConversationWithOptions(string conversationId, SteerAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                body["commandId"] = request.CommandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                body["message"] = request.Message;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SteerAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/actions/steer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SteerAgentConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>引导 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SteerAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SteerAgentConversationResponse
+        /// </returns>
+        public async Task<SteerAgentConversationResponse> SteerAgentConversationWithOptionsAsync(string conversationId, SteerAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                body["commandId"] = request.CommandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                body["message"] = request.Message;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SteerAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/actions/steer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SteerAgentConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>引导 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SteerAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SteerAgentConversationResponse
+        /// </returns>
+        public SteerAgentConversationResponse SteerAgentConversation(string conversationId, SteerAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SteerAgentConversationWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>引导 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SteerAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SteerAgentConversationResponse
+        /// </returns>
+        public async Task<SteerAgentConversationResponse> SteerAgentConversationAsync(string conversationId, SteerAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SteerAgentConversationWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAgentConversationResponse
+        /// </returns>
+        public StopAgentConversationResponse StopAgentConversationWithOptions(string conversationId, StopAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/actions/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopAgentConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAgentConversationResponse
+        /// </returns>
+        public async Task<StopAgentConversationResponse> StopAgentConversationWithOptionsAsync(string conversationId, StopAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/actions/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopAgentConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAgentConversationResponse
+        /// </returns>
+        public StopAgentConversationResponse StopAgentConversation(string conversationId, StopAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopAgentConversationWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Agent 诊断会话执行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAgentConversationResponse
+        /// </returns>
+        public async Task<StopAgentConversationResponse> StopAgentConversationAsync(string conversationId, StopAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopAgentConversationWithOptionsAsync(conversationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8547,13 +11431,281 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update ConsumerGroup</para>
+        /// <para>重命名 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationResponse
+        /// </returns>
+        public UpdateAgentConversationResponse UpdateAgentConversationWithOptions(string conversationId, UpdateAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationResponse
+        /// </returns>
+        public async Task<UpdateAgentConversationResponse> UpdateAgentConversationWithOptionsAsync(string conversationId, UpdateAgentConversationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentConversation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationResponse
+        /// </returns>
+        public UpdateAgentConversationResponse UpdateAgentConversation(string conversationId, UpdateAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAgentConversationWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名 Agent 诊断会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationResponse
+        /// </returns>
+        public async Task<UpdateAgentConversationResponse> UpdateAgentConversationAsync(string conversationId, UpdateAgentConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAgentConversationWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Agent 诊断会话分享范围</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationShareScopeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationShareScopeResponse
+        /// </returns>
+        public UpdateAgentConversationShareScopeResponse UpdateAgentConversationShareScopeWithOptions(string conversationId, UpdateAgentConversationShareScopeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareScope))
+            {
+                body["shareScope"] = request.ShareScope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentConversationShareScope",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/share-scope",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentConversationShareScopeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Agent 诊断会话分享范围</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationShareScopeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationShareScopeResponse
+        /// </returns>
+        public async Task<UpdateAgentConversationShareScopeResponse> UpdateAgentConversationShareScopeWithOptionsAsync(string conversationId, UpdateAgentConversationShareScopeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareScope))
+            {
+                body["shareScope"] = request.ShareScope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentConversationShareScope",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/share-scope",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentConversationShareScopeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Agent 诊断会话分享范围</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationShareScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationShareScopeResponse
+        /// </returns>
+        public UpdateAgentConversationShareScopeResponse UpdateAgentConversationShareScope(string conversationId, UpdateAgentConversationShareScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAgentConversationShareScopeWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Agent 诊断会话分享范围</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentConversationShareScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentConversationShareScopeResponse
+        /// </returns>
+        public async Task<UpdateAgentConversationShareScopeResponse> UpdateAgentConversationShareScopeAsync(string conversationId, UpdateAgentConversationShareScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAgentConversationShareScopeWithOptionsAsync(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information and consumption retry policy of a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8612,13 +11764,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update ConsumerGroup</para>
+        /// <para>Updates the basic information and consumption retry policy of a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8677,13 +11829,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update ConsumerGroup</para>
+        /// <para>Updates the basic information and consumption retry policy of a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8703,13 +11855,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update ConsumerGroup</para>
+        /// <para>Updates the basic information and consumption retry policy of a consumer group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control links. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the data link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9029,13 +12181,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Updates the basic information and specification configurations of an ApsaraMQ for RocketMQ instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9098,13 +12250,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Updates the basic information and specification configurations of an ApsaraMQ for RocketMQ instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9167,13 +12319,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Updates the basic information and specification configurations of an ApsaraMQ for RocketMQ instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9193,13 +12345,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Updates the basic information and specification configurations of an ApsaraMQ for RocketMQ instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</para>
+        /// <para>Notice: The OpenAPI provided by Alibaba Cloud is a management and control API used to manage and query resources of Alibaba Cloud services. It is recommended only for integration in management and control paths. Do not use OpenAPI in the core data link for sending and receiving messages. Otherwise, risks may occur on the link.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9219,7 +12371,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specific account in a specific instance.</para>
+        /// <para>Updates the information of a specified account under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9273,7 +12425,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specific account in a specific instance.</para>
+        /// <para>Updates the information of a specified account under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9327,7 +12479,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specific account in a specific instance.</para>
+        /// <para>Updates the information of a specified account under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9346,7 +12498,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specific account in a specific instance.</para>
+        /// <para>Updates the information of a specified account under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9527,7 +12679,181 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Topic</para>
+        /// <para>修改实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceInspectionResponse
+        /// </returns>
+        public UpdateInstanceInspectionResponse UpdateInstanceInspectionWithOptions(string instanceId, UpdateInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Items))
+            {
+                body["items"] = request.Items;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceScope))
+            {
+                body["resourceScope"] = request.ResourceScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Revision))
+            {
+                body["revision"] = request.Revision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schedule))
+            {
+                body["schedule"] = request.Schedule;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceInspectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceInspectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceInspectionResponse
+        /// </returns>
+        public async Task<UpdateInstanceInspectionResponse> UpdateInstanceInspectionWithOptionsAsync(string instanceId, UpdateInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Items))
+            {
+                body["items"] = request.Items;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceScope))
+            {
+                body["resourceScope"] = request.ResourceScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Revision))
+            {
+                body["revision"] = request.Revision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schedule))
+            {
+                body["schedule"] = request.Schedule;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceInspection",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/monitoring/instance-inspections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceInspectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceInspectionResponse
+        /// </returns>
+        public UpdateInstanceInspectionResponse UpdateInstanceInspection(string instanceId, UpdateInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateInstanceInspectionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceInspectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceInspectionResponse
+        /// </returns>
+        public async Task<UpdateInstanceInspectionResponse> UpdateInstanceInspectionAsync(string instanceId, UpdateInstanceInspectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateInstanceInspectionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the remarks for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9581,7 +12907,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Topic</para>
+        /// <para>Updates the remarks for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9635,7 +12961,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Topic</para>
+        /// <para>Updates the remarks for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9654,7 +12980,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Topic</para>
+        /// <para>Updates the remarks for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9669,6 +12995,160 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateTopicWithOptionsAsync(instanceId, topicName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话客户端日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAgentConversationLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentConversationLogResponse
+        /// </returns>
+        public UploadAgentConversationLogResponse UploadAgentConversationLogWithOptions(string conversationId, UploadAgentConversationLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentGzipB64))
+            {
+                body["contentGzipB64"] = request.ContentGzipB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeEnd))
+            {
+                body["timeRangeEnd"] = request.TimeRangeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeStart))
+            {
+                body["timeRangeStart"] = request.TimeRangeStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAgentConversationLog",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/logs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAgentConversationLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话客户端日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAgentConversationLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentConversationLogResponse
+        /// </returns>
+        public async Task<UploadAgentConversationLogResponse> UploadAgentConversationLogWithOptionsAsync(string conversationId, UploadAgentConversationLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentGzipB64))
+            {
+                body["contentGzipB64"] = request.ContentGzipB64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeEnd))
+            {
+                body["timeRangeEnd"] = request.TimeRangeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeStart))
+            {
+                body["timeRangeStart"] = request.TimeRangeStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAgentConversationLog",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/conversations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(conversationId) + "/logs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAgentConversationLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话客户端日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAgentConversationLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentConversationLogResponse
+        /// </returns>
+        public UploadAgentConversationLogResponse UploadAgentConversationLog(string conversationId, UploadAgentConversationLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UploadAgentConversationLogWithOptions(conversationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话客户端日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAgentConversationLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentConversationLogResponse
+        /// </returns>
+        public async Task<UploadAgentConversationLogResponse> UploadAgentConversationLogAsync(string conversationId, UploadAgentConversationLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UploadAgentConversationLogWithOptionsAsync(conversationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9811,7 +13291,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
+        /// <para>Tests whether messages can be sent to a specified topic in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9881,7 +13361,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
+        /// <para>Tests whether messages can be sent to a specified topic in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9951,7 +13431,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
+        /// <para>Tests whether messages can be sent to a specified topic in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9970,7 +13450,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
+        /// <para>Tests whether messages can be sent to a specified topic in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

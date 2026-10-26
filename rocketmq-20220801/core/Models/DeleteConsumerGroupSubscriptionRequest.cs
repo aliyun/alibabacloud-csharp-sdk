@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <summary>
         /// <para>The type of the filter expression. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SQL: filters messages by using SQL expressions.</description></item>
-        /// <item><description>TAG: filters messages by using tags.</description></item>
+        /// <item><description>SQL: SQL filtering</description></item>
+        /// <item><description>TAG: tag filtering</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

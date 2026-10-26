@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListInstanceAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</para>
+        /// <para>The details of the access denial. This parameter is returned only if the request is denied due to insufficient RAM permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -37,19 +37,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public ListInstanceAccountResponseBodyData Data { get; set; }
         public class ListInstanceAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>A list of entries on the current page.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListInstanceAccountResponseBodyDataList> List { get; set; }
             public class ListInstanceAccountResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The status of the account.
-                /// Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>DISABLE</description></item>
-                /// <item><description>ENABLE</description></item>
-                /// </list>
+                /// <para>The account status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENABLE</para>
@@ -60,10 +55,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
                 /// <summary>
                 /// <para>The account type.</para>
-                /// <list type="bullet">
-                /// <item><description>CUSTOMER</description></item>
-                /// <item><description>DEFAULT</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CUSTOMER</para>
@@ -93,6 +84,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
+                /// <para>The remark.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -101,7 +94,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The username of the account.</para>
+                /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -113,7 +106,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -123,7 +116,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Number of items per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -133,7 +126,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total count of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -185,7 +178,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C115601B-8736-5BBF-AC99-7FEAE1245A80</para>
@@ -195,7 +188,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

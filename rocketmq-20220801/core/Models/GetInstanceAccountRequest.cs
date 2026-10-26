@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetInstanceAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account.</para>
-        /// <para>If you do not configure this parameter, the default username of the instance is used.</para>
+        /// <para>The username.</para>
+        /// <para>If you do not specify this parameter, the system returns details of the default account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

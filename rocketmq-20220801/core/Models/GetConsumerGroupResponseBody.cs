@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetConsumerGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidConsumerGroupId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public class GetConsumerGroupResponseBodyDataConsumeRetryPolicy : TeaModel {
                 /// <summary>
                 /// <para>The dead-letter topic.</para>
-                /// <para>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</para>
+                /// <para>If a consumer fails to consume a message due to an exception and the message still cannot be consumed after retries, the message is delivered to the dead-letter topic for subsequent business recovery or review. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DLQ_mqtest</para>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string DeadLetterTargetTopic { get; set; }
 
                 /// <summary>
-                /// <para>Fixed interval retry time,Value range, unit: seconds</para>
+                /// <para>The fixed retry interval. Unit: seconds.</para>
                 /// <list type="bullet">
-                /// <item><description>Concurrently:10-1800</description></item>
-                /// <item><description>Orderly:1-600</description></item>
+                /// <item><description>Concurrently (concurrent delivery): 10-1800</description></item>
+                /// <item><description>Orderly (ordered delivery): 1-600</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public int? FixedIntervalRetryTime { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of retries.</para>
+                /// <para>The maximum number of retry attempts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -69,12 +69,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public int? MaxRetryTimes { get; set; }
 
                 /// <summary>
-                /// <para>The retry policy.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>FixedRetryPolicy: fixed-interval retry</description></item>
-                /// <item><description>DefaultRetryPolicy: exponential backoff retry</description></item>
-                /// </list>
+                /// <para>The retry policy type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DefaultRetryPolicy</para>
@@ -96,7 +91,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The time when the consumer group was created.</para>
+            /// <para>The time when the consumer group was created, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -106,12 +101,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The message delivery method of the consumer group.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Concurrently: concurrent delivery</description></item>
-            /// <item><description>Orderly: ordered delivery</description></item>
-            /// </list>
+            /// <para>The delivery order of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Concurrently</para>
@@ -120,12 +110,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string DeliveryOrderType { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether exclusive consumption is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("exclusive")]
             [Validation(Required=false)]
             public bool? Exclusive { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The ID of the instance to which the consumer group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rmq-cn-7e22ody****</para>
@@ -135,16 +131,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Maximum received message tps</para>
+            /// <para>The maximum TPS for consuming messages.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1000</para>
+            /// <para>2000</para>
             /// </summary>
             [NameInMap("maxReceiveTps")]
             [Validation(Required=false)]
             public long? MaxReceiveTps { get; set; }
 
             /// <summary>
+            /// <para>The consumption pattern. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CLUSTERING: clustering consumption.</description></item>
+            /// <item><description>LITE_SELECTIVE: LITE_SELECTIVE.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>LITE_SELECTIVE</para>
             /// </summary>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string MessageModel { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the instance resides.</para>
+            /// <para>The region ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -163,7 +165,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the consumer group.</para>
+            /// <para>The remarks of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is the remark for test.</para>
@@ -174,11 +176,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             /// <summary>
             /// <para>The status of the consumer group.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>CREATING</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -188,6 +185,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The topic name for the lite type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test1</para>
             /// </summary>
@@ -196,7 +195,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string TopicName { get; set; }
 
             /// <summary>
-            /// <para>The time when the consumer group was last updated.</para>
+            /// <para>The time when the consumer group was last updated, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-01 20:05:50</para>
@@ -208,7 +207,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
+        /// <para>The dynamic fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ConsumerGroupId</para>
@@ -218,7 +217,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message.</para>
+        /// <para>The dynamic fault message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>consumerGroupId</para>
@@ -238,7 +237,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The fault message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter consumerGroupId is invalid.</para>
@@ -248,7 +247,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</para>
+        /// <para>The request ID. Each request has a unique ID, which can be used to troubleshoot and locate faults.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C7F94090-3358-506A-97DC-34BC803C****</para>
@@ -258,7 +257,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the execute operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

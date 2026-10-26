@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class DeleteConsumerGroupSubscriptionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</para>
+        /// <para>The access denial details. This parameter is returned only when the request is denied because the RAM user does not have the required permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>723CDA5C-E25C-5EAF-9601-******</para>
+        /// <para>723CDA5C-E25C-5EAF-9601-08C286DF8A4D</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

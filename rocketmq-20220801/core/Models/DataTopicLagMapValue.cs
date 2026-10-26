@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class DataTopicLagMapValue : TeaModel {
         /// <summary>
-        /// <para>Ready message count</para>
+        /// <para>The number of ready messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public long? ReadyCount { get; set; }
 
         /// <summary>
-        /// <para>The number of messages being consumed.</para>
+        /// <para>The number of inflight messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public long? InflightCount { get; set; }
 
         /// <summary>
-        /// <para>Delivery delay time, in seconds</para>
+        /// <para>The delivery latency. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public long? DeliveryDuration { get; set; }
 
         /// <summary>
-        /// <para>lastConsumeTimestamp</para>
+        /// <para>The timestamp of the last consumption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735629607846</para>

@@ -11,11 +11,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
     public class ListInstanceAccountRequest : TeaModel {
         /// <summary>
         /// <para>The status of the account.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DISABLE</description></item>
-        /// <item><description>ENABLE</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>
@@ -25,11 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string AccountStatus { get; set; }
 
         /// <summary>
-        /// <para>The account type.</para>
-        /// <list type="bullet">
-        /// <item><description>CUSTOMER</description></item>
-        /// <item><description>DEFAULT</description></item>
-        /// </list>
+        /// <para>The type of the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CUSTOMER</para>
@@ -39,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The first page is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

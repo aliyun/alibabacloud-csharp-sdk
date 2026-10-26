@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTraceResponseBodyData Data { get; set; }
         public class GetTraceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The broker trace.</para>
+            /// <para>The broker message trace information.</para>
             /// </summary>
             [NameInMap("brokerInfo")]
             [Validation(Required=false)]
             public GetTraceResponseBodyDataBrokerInfo BrokerInfo { get; set; }
             public class GetTraceResponseBodyDataBrokerInfo : TeaModel {
                 /// <summary>
-                /// <para>Delay status.</para>
+                /// <para>The scheduled message status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string DelayStatus { get; set; }
 
                 /// <summary>
-                /// <para>Operation list.</para>
+                /// <para>The list of operations.</para>
                 /// </summary>
                 [NameInMap("operations")]
                 [Validation(Required=false)]
                 public List<GetTraceResponseBodyDataBrokerInfoOperations> Operations { get; set; }
                 public class GetTraceResponseBodyDataBrokerInfoOperations : TeaModel {
                     /// <summary>
-                    /// <para>Operation time.</para>
+                    /// <para>The operation time, in YYYY-MM-DD HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string OperateTime { get; set; }
 
                     /// <summary>
-                    /// <para>Operation type.</para>
+                    /// <para>The operation type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ADD</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// <para>Preset delivery time.</para>
+                /// <para>The preset delivery time, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string PresetDelayTime { get; set; }
 
                 /// <summary>
-                /// <para>Withdraw scheduled message request result</para>
+                /// <para>The recall result. This field is non-empty when a recall record exists.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>RECALL_OK</para>
+                /// <para>RECALL_OK | RECALL_FAIL</para>
                 /// </summary>
                 [NameInMap("recallResult")]
                 [Validation(Required=false)]
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>Consumer trace info.</para>
+            /// <para>The consumer message trace information.</para>
             /// </summary>
             [NameInMap("consumerInfos")]
             [Validation(Required=false)]
             public List<GetTraceResponseBodyDataConsumerInfos> ConsumerInfos { get; set; }
             public class GetTraceResponseBodyDataConsumerInfos : TeaModel {
                 /// <summary>
-                /// <para>Consume status.</para>
+                /// <para>The consumption status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -122,14 +122,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ConsumerGroupId { get; set; }
 
                 /// <summary>
-                /// <para>Dead letter info.</para>
+                /// <para>The dead-letter message information.</para>
                 /// </summary>
                 [NameInMap("deadLetterInfo")]
                 [Validation(Required=false)]
                 public GetTraceResponseBodyDataConsumerInfosDeadLetterInfo DeadLetterInfo { get; set; }
                 public class GetTraceResponseBodyDataConsumerInfosDeadLetterInfo : TeaModel {
                     /// <summary>
-                    /// <para>MessageId.</para>
+                    /// <para>The message ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7F000001001F7A4F0F29463F0376047D</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string MessageId { get; set; }
 
                     /// <summary>
-                    /// <para>Arrival time in the dead letter queue.</para>
+                    /// <para>The time when the message arrived in the dead-letter queue, in YYYY-MM-DD HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// <para>Whether it is a dead letter message.</para>
+                /// <para>Indicates whether the message is a dead-letter message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public bool? DeadMessage { get; set; }
 
                 /// <summary>
-                /// <para>Consumer record list.</para>
+                /// <para>The list of consumption records.</para>
                 /// </summary>
                 [NameInMap("records")]
                 [Validation(Required=false)]
                 public List<GetTraceResponseBodyDataConsumerInfosRecords> Records { get; set; }
                 public class GetTraceResponseBodyDataConsumerInfosRecords : TeaModel {
                     /// <summary>
-                    /// <para>Client host.</para>
+                    /// <para>The hostname.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xx.xx.xx.xx</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ClientHost { get; set; }
 
                     /// <summary>
-                    /// <para>Consume status.</para>
+                    /// <para>The consumption status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SUCCESS</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ConsumeStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Whether to consume fifo.</para>
+                    /// <para>Indicates whether ordered consumption is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public bool? FifoEnable { get; set; }
 
                     /// <summary>
-                    /// <para>Operation list.</para>
+                    /// <para>The list of operations.</para>
                     /// </summary>
                     [NameInMap("operations")]
                     [Validation(Required=false)]
                     public List<GetTraceResponseBodyDataConsumerInfosRecordsOperations> Operations { get; set; }
                     public class GetTraceResponseBodyDataConsumerInfosRecordsOperations : TeaModel {
                         /// <summary>
-                        /// <para>Whether it is a dead letter message.</para>
+                        /// <para>Indicates whether the message is a dead-letter message.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                         public bool? DeadMessage { get; set; }
 
                         /// <summary>
-                        /// <para>Invisible time, milliseconds.</para>
+                        /// <para>The invisible time, in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                         public long? InvisibleTime { get; set; }
 
                         /// <summary>
-                        /// <para>Operation time.</para>
+                        /// <para>The operation time, in YYYY-MM-DD HH:mm:ss format.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-03-22 12:17:08</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                         public string OperateTime { get; set; }
 
                         /// <summary>
-                        /// <para>Operation type.</para>
+                        /// <para>The operation type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ADD</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string PopCk { get; set; }
 
                     /// <summary>
-                    /// <para>Consumer name.</para>
+                    /// <para>The consumer name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public GetTraceResponseBodyDataMessageInfo MessageInfo { get; set; }
             public class GetTraceResponseBodyDataMessageInfo : TeaModel {
                 /// <summary>
-                /// <para>Message body.</para>
+                /// <para>The message body.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Body { get; set; }
 
                 /// <summary>
-                /// <para>Message born host.</para>
+                /// <para>The origin of the message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>x.x.x.x</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string BornHost { get; set; }
 
                 /// <summary>
-                /// <para>Message born time.</para>
+                /// <para>The time when the message was generated, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
@@ -338,6 +338,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The lite topic name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
                 /// </summary>
@@ -346,7 +348,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string LiteTopicName { get; set; }
 
                 /// <summary>
-                /// <para>Message grpup.</para>
+                /// <para>The previous sharding key. This field is exclusive to ordered messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -366,14 +368,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>Message keys.</para>
+                /// <para>The message key.</para>
                 /// </summary>
                 [NameInMap("messageKeys")]
                 [Validation(Required=false)]
                 public List<string> MessageKeys { get; set; }
 
                 /// <summary>
-                /// <para>Message tag.</para>
+                /// <para>The list of tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -383,7 +385,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageTag { get; set; }
 
                 /// <summary>
-                /// <para>Message type.</para>
+                /// <para>The message type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -403,7 +405,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Message store host.</para>
+                /// <para>The log broker address where the message is stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>x.x.x.x</para>
@@ -413,7 +415,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StoreHost { get; set; }
 
                 /// <summary>
-                /// <para>Message store time.</para>
+                /// <para>The time when the message was stored in the log broker, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
@@ -433,7 +435,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>Message transaction id.</para>
+                /// <para>The transaction ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -443,7 +445,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string TransactionId { get; set; }
 
                 /// <summary>
-                /// <para>Message user properties.</para>
+                /// <para>The user properties.</para>
                 /// </summary>
                 [NameInMap("userProperties")]
                 [Validation(Required=false)]
@@ -452,21 +454,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The producer trace.</para>
+            /// <para>The producer message trace information.</para>
             /// </summary>
             [NameInMap("producerInfo")]
             [Validation(Required=false)]
             public GetTraceResponseBodyDataProducerInfo ProducerInfo { get; set; }
             public class GetTraceResponseBodyDataProducerInfo : TeaModel {
                 /// <summary>
-                /// <para>The production records.</para>
+                /// <para>The list of producer records.</para>
                 /// </summary>
                 [NameInMap("records")]
                 [Validation(Required=false)]
                 public List<GetTraceResponseBodyDataProducerInfoRecords> Records { get; set; }
                 public class GetTraceResponseBodyDataProducerInfoRecords : TeaModel {
                     /// <summary>
-                    /// <para>Arrive time.</para>
+                    /// <para>The time when the message arrived, in YYYY-MM-DD HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
@@ -476,7 +478,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ArriveTime { get; set; }
 
                     /// <summary>
-                    /// <para>Client host.</para>
+                    /// <para>The hostname.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xx.xx.xx.xx</para>
@@ -486,7 +488,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ClientHost { get; set; }
 
                     /// <summary>
-                    /// <para>Dead-letter queue message ID.</para>
+                    /// <para>The dead-letter queue message ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0A79275A00207A4F0F2916C92F9A0B94</para>
@@ -496,7 +498,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string DlqOriginMessageId { get; set; }
 
                     /// <summary>
-                    /// <para>Dead-letter queue topic.</para>
+                    /// <para>The dead-letter queue topic.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test_topic</para>
@@ -506,7 +508,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string DlqOriginTopic { get; set; }
 
                     /// <summary>
-                    /// <para>Message source.</para>
+                    /// <para>The message source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CONSOLE</para>
@@ -516,7 +518,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string MessageSource { get; set; }
 
                     /// <summary>
-                    /// <para>Producer duration.</para>
+                    /// <para>The time taken to send the message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -526,7 +528,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public long? ProduceDuration { get; set; }
 
                     /// <summary>
-                    /// <para>Producer status.</para>
+                    /// <para>The send status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SUCCESS</para>
@@ -536,7 +538,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ProduceStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Producer time.</para>
+                    /// <para>The time when the message was sent, in YYYY-MM-DD HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
@@ -546,7 +548,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ProduceTime { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the scheduled message withdrawal request was initiated</para>
+                    /// <para>The time when the recall request was initiated. This field is non-empty when messageSource is &quot;recall&quot;.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
@@ -556,7 +558,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string RecallTime { get; set; }
 
                     /// <summary>
-                    /// <para>Producer name.</para>
+                    /// <para>The producer name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -632,7 +634,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</para>
+        /// <para>The request ID. Each request has a unique ID that you can use to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7779A8FC-1BCD-5A1D-A603-C4A9BD8ADC49</para>
@@ -642,7 +644,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

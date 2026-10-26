@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListDisasterRecoveryCheckpointsRequest : TeaModel {
         /// <summary>
-        /// <para>Filter Condition</para>
+        /// <para>The filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic_test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>Source Instance ID</para>
+        /// <para>The instance ID of the source instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Current page number, starting from 1.</para>
+        /// <para>The current page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, the maximum number of results returned per page.</para>
+        /// <para>The page size. The maximum number of results to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

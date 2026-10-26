@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MissingPageNumber</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListInstancesResponseBodyData Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>The paged data.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyDataList> List { get; set; }
             public class ListInstancesResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The commodity code of the instance. The commodity code of ApsaraMQ for RocketMQ 5.0 instances has a similar format to ons_rmqsub_public_cn.</para>
+                /// <para>The commodity code of the ApsaraMQ for RocketMQ 5.x series instance, such as ons_rmqsub_public_cn.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ons_rmqsub_public_cn</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// <para>The time when the version of the instance was updated.</para>
+                /// <para>The time when the instance version was last updated, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-01 00:00:00</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance expires.</para>
+                /// <para>The time when the instance expires, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-09-01 00:00:00</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of consumer groups that are created on the instance.</para>
+                /// <para>The number of consumer groups created in the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -94,11 +94,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of the instance.</para>
-                /// <para>Valid values:</para>
+                /// <para>The billing method of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PayAsYouGo</description></item>
-                /// <item><description>Subscription</description></item>
+                /// <item><description>PayAsYouGo: pay-as-you-go (postpaid).</description></item>
+                /// <item><description>Subscription: subscription (prepaid).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -115,17 +114,29 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public ListInstancesResponseBodyDataListProductInfo ProductInfo { get; set; }
                 public class ListInstancesResponseBodyDataListProductInfo : TeaModel {
+                    /// <summary>
+                    /// <para>The capacity mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>provisioned: reserved capacity with elastic scaling.</description></item>
+                    /// <item><description>ondemand: pay-as-you-go.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>provisioned</para>
+                    /// </summary>
                     [NameInMap("capacityType")]
                     [Validation(Required=false)]
                     public string CapacityType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the message trace feature is enabled. Valid values:</para>
+                    /// <para>Specifies whether the message trace feature is enabled.</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
+                    /// <item><description>true: The message trace feature is enabled.</description></item>
+                    /// <item><description>false: The message trace feature is disabled.</description></item>
                     /// </list>
-                    /// <para>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</para>
+                    /// <para>&lt;props=&quot;intl&quot;&gt;This parameter does not take effect. Regardless of whether this parameter is enabled, the instance supports the message trace feature by default.
+                    /// &lt;props=&quot;china&quot;&gt;This parameter takes effect only for Serverless instances. If the message trace feature is enabled, message trace fees are incurred. For more information about billing, see <a href="https://help.aliyun.com/document_detail/2586280.html">Serverless billing description</a>.</para>
+                    /// <para>&lt;props=&quot;china&quot;&gt;For pay-as-you-go and subscription instances, this parameter does not take effect. Regardless of whether this parameter is enabled, the message trace feature is supported by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -137,7 +148,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the region in which the instance resides.</para>
+                /// <para>The ID of the region to which the instance belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -147,7 +158,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was released.</para>
+                /// <para>The time when the instance was released, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-09-07 00:00:00</para>
@@ -157,7 +168,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ReleaseTime { get; set; }
 
                 /// <summary>
-                /// <para>The instance description.</para>
+                /// <para>The remarks for the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This is remark for instance.</para>
@@ -177,12 +188,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The primary edition of the instance.</para>
-                /// <para>Valid values:</para>
+                /// <para>The primary series code of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>standard: Standard Edition</description></item>
-                /// <item><description>ultimate: Enterprise Platinum Edition</description></item>
-                /// <item><description>professional: Professional Edition</description></item>
+                /// <item><description>standard: Standard Edition.</description></item>
+                /// <item><description>ultimate: Platinum Edition.</description></item>
+                /// <item><description>professional: Professional Edition.</description></item>
+                /// <item><description>shared: Shared Edition.</description></item>
+                /// <item><description>dedicated: Dedicated Edition.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -193,7 +205,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string SeriesCode { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</para>
+                /// <para>The service code of the instance. The service code for ApsaraMQ for RocketMQ is rmq.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rmq</para>
@@ -203,7 +215,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ServiceCode { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was created.</para>
+                /// <para>The time when the instance was created, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-01 00:00:00</para>
@@ -213,14 +225,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance.</para>
-                /// <para>Valid values:</para>
+                /// <para>The instance status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>RELEASED</description></item>
-                /// <item><description>RUNNING</description></item>
-                /// <item><description>STOPPED</description></item>
-                /// <item><description>CHANGING</description></item>
-                /// <item><description>CREATING</description></item>
+                /// <item><description>RELEASED: Released.</description></item>
+                /// <item><description>RUNNING: Running.</description></item>
+                /// <item><description>STOPPED: Stopped.</description></item>
+                /// <item><description>CHANGING: Changing.</description></item>
+                /// <item><description>CREATING: Creating.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -231,11 +242,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The sub-category edition of the instance.</para>
-                /// <para>Valid values:</para>
+                /// <para>The sub-series code of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>cluster_ha: Cluster High-availability Edition</description></item>
-                /// <item><description>single_node: Standalone Edition</description></item>
+                /// <item><description>cluster_ha: cluster high-availability edition.</description></item>
+                /// <item><description>single_node: single-node edition.</description></item>
+                /// <item><description>serverless: serverless edition.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -246,14 +257,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string SubSeriesCode { get; set; }
 
                 /// <summary>
-                /// <para>The resource tags.</para>
+                /// <para>The resource tag list.</para>
                 /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
                 public List<ListInstancesResponseBodyDataListTags> Tags { get; set; }
                 public class ListInstancesResponseBodyDataListTags : TeaModel {
                     /// <summary>
-                    /// <para>The tag key of the resource.</para>
+                    /// <para>The key of the resource tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key</para>
@@ -263,7 +274,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value of the resource.</para>
+                    /// <para>The value of the resource tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>value</para>
@@ -275,7 +286,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// <para>The number of topics that are created on the instance.</para>
+                /// <para>The number of topics created in the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -285,7 +296,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public long? TopicCount { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was last modified.</para>
+                /// <para>The time when the instance was last modified, in YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-02 00:00:00</para>
@@ -295,7 +306,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who owns the instance.</para>
+                /// <para>The ID of the user to whom the instance belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6W0xz2uPfiwp****</para>
@@ -307,7 +318,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -317,7 +328,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -327,7 +338,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -359,7 +370,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -379,7 +390,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. Each request has a unique ID that you can use to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>84445A20-2B50-5306-A3C0-AF99FC1833C6</para>
@@ -389,7 +400,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

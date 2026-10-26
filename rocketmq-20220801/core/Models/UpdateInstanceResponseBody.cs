@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MissingInstanceId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result data that is returned.</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
+        /// <para>The dynamic fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message.</para>
+        /// <para>The dynamic fault message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instanceId</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The fault message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter instanceId is mandatory for this action .</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</para>
+        /// <para>The request ID. Each request ID is unique and active for troubleshooting and locating issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AA87DE09-DA44-52F4-9515-78B1B607****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the operation is executed successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
