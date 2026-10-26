@@ -2882,6 +2882,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.CallableAgentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableAgents, "CallableAgents", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExpertSuites))
+            {
+                request.ExpertSuitesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExpertSuites, "ExpertSuites", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
             {
                 request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
@@ -2915,6 +2919,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["DisplayName"] = request.DisplayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpertSuitesShrink))
+            {
+                body["ExpertSuites"] = request.ExpertSuitesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
             {
                 body["Metadata"] = request.MetadataShrink;
@@ -2926,6 +2934,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishImmediately))
+            {
+                body["PublishImmediately"] = request.PublishImmediately;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
             {
@@ -3002,6 +3014,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.CallableAgentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableAgents, "CallableAgents", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExpertSuites))
+            {
+                request.ExpertSuitesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExpertSuites, "ExpertSuites", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
             {
                 request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
@@ -3035,6 +3051,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["DisplayName"] = request.DisplayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpertSuitesShrink))
+            {
+                body["ExpertSuites"] = request.ExpertSuitesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
             {
                 body["Metadata"] = request.MetadataShrink;
@@ -3046,6 +3066,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishImmediately))
+            {
+                body["PublishImmediately"] = request.PublishImmediately;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
             {
@@ -23663,6 +23687,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                body["AgentVersion"] = request.AgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -23711,6 +23739,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                body["AgentVersion"] = request.AgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -59456,6 +59488,174 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnTagDataAssetsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agent会话标题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentSessionTitleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSessionTitleResponse
+        /// </returns>
+        public UpdateAgentSessionTitleResponse UpdateAgentSessionTitleWithOptions(UpdateAgentSessionTitleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentSessionTitleShrinkRequest request = new UpdateAgentSessionTitleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentSessionTitle",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentSessionTitleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agent会话标题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentSessionTitleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSessionTitleResponse
+        /// </returns>
+        public async Task<UpdateAgentSessionTitleResponse> UpdateAgentSessionTitleWithOptionsAsync(UpdateAgentSessionTitleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentSessionTitleShrinkRequest request = new UpdateAgentSessionTitleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentSessionTitle",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentSessionTitleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agent会话标题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentSessionTitleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSessionTitleResponse
+        /// </returns>
+        public UpdateAgentSessionTitleResponse UpdateAgentSessionTitle(UpdateAgentSessionTitleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAgentSessionTitleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Agent会话标题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentSessionTitleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSessionTitleResponse
+        /// </returns>
+        public async Task<UpdateAgentSessionTitleResponse> UpdateAgentSessionTitleAsync(UpdateAgentSessionTitleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAgentSessionTitleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

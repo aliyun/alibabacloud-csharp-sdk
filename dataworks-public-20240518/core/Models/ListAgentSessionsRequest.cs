@@ -47,6 +47,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string AgentName { get; set; }
 
             /// <summary>
+            /// <para>true仅返回归档会话；false或省略仅返回未归档会话。</para>
+            /// </summary>
+            [NameInMap("Archived")]
+            [Validation(Required=false)]
+            public bool? Archived { get; set; }
+
+            /// <summary>
             /// <para>The number of entries per page. Default value: 50.</para>
             /// 
             /// <b>Example:</b>

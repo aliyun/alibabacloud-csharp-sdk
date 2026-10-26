@@ -54,6 +54,48 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Agent 绑定的已发布专家套件。个人或企业套件使用 SuiteId，可选 Version；官方套件必须显式指定 Source=OFFICIAL 和官方目录中的 SuiteId，不传 Version。未传时创建为空，不会默认加载所有官方套件。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</para>
+        /// </summary>
+        [NameInMap("ExpertSuites")]
+        [Validation(Required=false)]
+        public List<CreateAgentRequestExpertSuites> ExpertSuites { get; set; }
+        public class CreateAgentRequestExpertSuites : TeaModel {
+            /// <summary>
+            /// <para>OFFICIAL 表示官方目录资源；DB 表示个人或企业资源。省略时保持原有数据库资源查询语义。官方资源在 Agent 发布时固定制品版本。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OFFICIAL</para>
+            /// </summary>
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            /// <summary>
+            /// <para>传入专家套件引用时，每项需提供 SuiteId，由服务端校验。Source=OFFICIAL 时为官方目录 ID；其他情况为专家套件管理返回的 ID。引用资源必须对调用者可见。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dataworks-data-analysis-extension</para>
+            /// </summary>
+            [NameInMap("SuiteId")]
+            [Validation(Required=false)]
+            public string SuiteId { get; set; }
+
+            /// <summary>
+            /// <para>仅用于个人或企业套件，必须为已发布快照的整数版本号。省略时在 Agent 发布时固定当前已发布版本。Source=OFFICIAL 时不传此字段。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public int? Version { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The extended metadata in key-value pairs.</para>
         /// 
         /// <b>Example:</b>
@@ -87,6 +129,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>是否在创建 Agent 后立即发布。true 发布创建的版本；false 或省略保持原有仅创建草稿行为。保存与发布不是原子操作，发布失败时草稿可能已存在；重试前应先查询 Agent，避免重复创建。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("PublishImmediately")]
+        [Validation(Required=false)]
+        public bool? PublishImmediately { get; set; }
+
+        /// <summary>
         /// <para>The list of skills.</para>
         /// 
         /// <b>Example:</b>
@@ -107,6 +159,36 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>Source=OFFICIAL 时传官方目录 ID，不传 Name 或 Version。个人或企业 Skill 不传此字段。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dataworks-semantic</para>
+            /// </summary>
+            [NameInMap("SkillId")]
+            [Validation(Required=false)]
+            public string SkillId { get; set; }
+
+            /// <summary>
+            /// <para>OFFICIAL 表示官方目录资源；DB 表示个人或企业资源，省略时保持原有按名称查询语义。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OFFICIAL</para>
+            /// </summary>
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            /// <summary>
+            /// <para>仅用于个人或企业 Skill，必须为已发布快照的整数版本。省略时在 Agent 发布时固定当前已发布版本；Source=OFFICIAL 时不传。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public int? Version { get; set; }
 
         }
 

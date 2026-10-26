@@ -16,6 +16,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public ListAgentSessionsResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class ListAgentSessionsResponseBodyJsonRpcResponse : TeaModel {
+            [NameInMap("Error")]
+            [Validation(Required=false)]
+            public ListAgentSessionsResponseBodyJsonRpcResponseError Error { get; set; }
+            public class ListAgentSessionsResponseBodyJsonRpcResponseError : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>400</para>
+                /// </summary>
+                [NameInMap("Code")]
+                [Validation(Required=false)]
+                public int? Code { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{}</para>
+                /// </summary>
+                [NameInMap("Data")]
+                [Validation(Required=false)]
+                public object Data { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>SESSION_FILTER_REQUIRED</para>
+                /// </summary>
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>SESSION_FILTER_REQUIRED</para>
+                /// </summary>
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID passed in by the requester. The value is returned as-is.</para>
             /// 
@@ -57,6 +95,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta Meta { get; set; }
                     public class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta : TeaModel {
+                        [NameInMap("Archived")]
+                        [Validation(Required=false)]
+                        public bool? Archived { get; set; }
+
                         /// <summary>
                         /// <para>The session source.</para>
                         /// 

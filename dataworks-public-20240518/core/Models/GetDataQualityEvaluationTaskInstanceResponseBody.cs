@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults> Results { get; set; }
             public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1708284916414</para>
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
@@ -81,20 +85,36 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails> Details { get; set; }
                 public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100.0</para>
+                    /// </summary>
                     [NameInMap("CheckedValue")]
                     [Validation(Required=false)]
                     public string CheckedValue { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0.0</para>
+                    /// </summary>
                     [NameInMap("ReferencedValue")]
                     [Validation(Required=false)]
                     public string ReferencedValue { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Passed</para>
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10001</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
@@ -107,6 +127,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig CheckingConfig { get; set; }
                     public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</para>
+                        /// </summary>
                         [NameInMap("ReferencedSamplesFilter")]
                         [Validation(Required=false)]
                         public string ReferencedSamplesFilter { get; set; }
@@ -119,14 +143,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             [Validation(Required=false)]
                             public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical Critical { get; set; }
                             public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>$checkValue &gt; 0.01</para>
+                                /// </summary>
                                 [NameInMap("Expression")]
                                 [Validation(Required=false)]
                                 public string Expression { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <remarks>
+                                /// </remarks>
+                                /// </summary>
                                 [NameInMap("Operator")]
                                 [Validation(Required=false)]
                                 public string Operator { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>100.0</para>
+                                /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
                                 public string Value { get; set; }
@@ -137,14 +174,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             [Validation(Required=false)]
                             public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected Expected { get; set; }
                             public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>$checkValue &gt; 0.01</para>
+                                /// </summary>
                                 [NameInMap("Expression")]
                                 [Validation(Required=false)]
                                 public string Expression { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <remarks>
+                                /// </remarks>
+                                /// </summary>
                                 [NameInMap("Operator")]
                                 [Validation(Required=false)]
                                 public string Operator { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>100.0</para>
+                                /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
                                 public string Value { get; set; }
@@ -155,14 +205,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             [Validation(Required=false)]
                             public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned Warned { get; set; }
                             public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>$checkValue &gt; 0.01</para>
+                                /// </summary>
                                 [NameInMap("Expression")]
                                 [Validation(Required=false)]
                                 public string Expression { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <remarks>
+                                /// </remarks>
+                                /// </summary>
                                 [NameInMap("Operator")]
                                 [Validation(Required=false)]
                                 public string Operator { get; set; }
 
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>100.0</para>
+                                /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
                                 public string Value { get; set; }
@@ -171,12 +234,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                         }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Fixed</para>
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>this is a odps _sql task</para>
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
@@ -189,24 +260,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers> ErrorHandlers { get; set; }
                     public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>SELECT * FROM tb_api_log WHERE id IS NULL</para>
+                        /// </summary>
                         [NameInMap("ErrorDataFilter")]
                         [Validation(Required=false)]
                         public string ErrorDataFilter { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>SaveErrorData</para>
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100001</para>
+                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>表不能为空</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
                     [NameInMap("ProjectId")]
                     [Validation(Required=false)]
                     public long? ProjectId { get; set; }
@@ -215,24 +306,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig SamplingConfig { get; set; }
                     public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Min</para>
+                        /// </summary>
                         [NameInMap("Metric")]
                         [Validation(Required=false)]
                         public string Metric { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</para>
+                        /// </summary>
                         [NameInMap("MetricParameters")]
                         [Validation(Required=false)]
                         public string MetricParameters { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>id IS NULL</para>
+                        /// </summary>
                         [NameInMap("SamplingFilter")]
                         [Validation(Required=false)]
                         public string SamplingFilter { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>SET odps.sql.udf.timeout=600s;</para>
+                        /// </summary>
                         [NameInMap("SettingConfig")]
                         [Validation(Required=false)]
                         public string SettingConfig { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>High</para>
+                    /// </summary>
                     [NameInMap("Severity")]
                     [Validation(Required=false)]
                     public string Severity { get; set; }
@@ -241,34 +352,62 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget Target { get; set; }
                     public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>maxcompute</para>
+                        /// </summary>
                         [NameInMap("DatabaseType")]
                         [Validation(Required=false)]
                         public string DatabaseType { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>odps.unit_test.tb_unit_test</para>
+                        /// </summary>
                         [NameInMap("TableGuid")]
                         [Validation(Required=false)]
                         public string TableGuid { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Table</para>
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>SYSTEM:user_defined_sql</para>
+                    /// </summary>
                     [NameInMap("TemplateCode")]
                     [Validation(Required=false)]
                     public string TemplateCode { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[   {     &quot;gender&quot;: &quot;male&quot;,     &quot;_count&quot;: 100   }, {     &quot;gender&quot;: &quot;female&quot;,     &quot;_count&quot;: 100   } ]</para>
+                /// </summary>
                 [NameInMap("Sample")]
                 [Validation(Required=false)]
                 public string Sample { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Passed</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20001</para>
+                /// </summary>
                 [NameInMap("TaskInstanceId")]
                 [Validation(Required=false)]
                 public long? TaskInstanceId { get; set; }

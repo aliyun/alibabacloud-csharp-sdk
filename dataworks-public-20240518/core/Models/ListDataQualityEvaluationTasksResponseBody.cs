@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks> DataQualityEvaluationTasks { get; set; }
             public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>45238</para>
+                /// </summary>
                 [NameInMap("DataSourceId")]
                 [Validation(Required=false)]
                 public long? DataSourceId { get; set; }

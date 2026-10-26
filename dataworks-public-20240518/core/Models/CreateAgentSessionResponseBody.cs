@@ -16,6 +16,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public CreateAgentSessionResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class CreateAgentSessionResponseBodyJsonRpcResponse : TeaModel {
+            [NameInMap("Error")]
+            [Validation(Required=false)]
+            public CreateAgentSessionResponseBodyJsonRpcResponseError Error { get; set; }
+            public class CreateAgentSessionResponseBodyJsonRpcResponseError : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>500</para>
+                /// </summary>
+                [NameInMap("Code")]
+                [Validation(Required=false)]
+                public int? Code { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{}</para>
+                /// </summary>
+                [NameInMap("Data")]
+                [Validation(Required=false)]
+                public object Data { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0x4883300000000019</para>
+                /// </summary>
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>创建 DataAgent 实例必须指定资源组，请在请求的 _meta.dataAgent.resourceGroupId 中传入资源组 ID</para>
+                /// </summary>
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The request ID passed by the caller. The value is returned as-is.</para>
             /// 
@@ -54,6 +92,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SessionId { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1789549200000</para>
+            /// </summary>
+            [NameInMap("Timestamp")]
+            [Validation(Required=false)]
+            public long? Timestamp { get; set; }
 
         }
 

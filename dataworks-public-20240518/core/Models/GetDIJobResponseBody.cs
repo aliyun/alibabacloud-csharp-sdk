@@ -351,6 +351,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string MigrationType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3726346</para>
+            /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }

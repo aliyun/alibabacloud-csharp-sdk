@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetAgentResponseBodyAgent Agent { get; set; }
         public class GetAgentResponseBodyAgent : TeaModel {
             /// <summary>
+            /// <para>本次读取的定义版本。更新当前定义时，将该值作为 UpdateAgent 的 ExpectedVersion，可拒绝覆盖其他调用者已提交的新版本。读取历史快照的版本不代表当前版本。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("AgentVersion")]
+            [Validation(Required=false)]
+            public int? AgentVersion { get; set; }
+
+            /// <summary>
             /// <para>A list of callable sub-agents.</para>
             /// </summary>
             [NameInMap("CallableAgents")]
@@ -96,6 +106,89 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
+
+            /// <summary>
+            /// <para>Agent 定义绑定的专家套件及固定发布版本。</para>
+            /// </summary>
+            [NameInMap("ExpertSuites")]
+            [Validation(Required=false)]
+            public List<GetAgentResponseBodyAgentExpertSuites> ExpertSuites { get; set; }
+            public class GetAgentResponseBodyAgentExpertSuites : TeaModel {
+                /// <summary>
+                /// <para>套件已删除、发布快照缺失或调用者无权查看时，不返回套件摘要，仅保留 ID 和版本号。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>数据分析专家能力集合</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>数据分析专家套件</para>
+                /// </summary>
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>analysis-suite</para>
+                /// </summary>
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>显式查询 Agent 已发布版本时返回固定的官方制品版本；查询草稿或自定义套件时不返回。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.1.0.202610211408</para>
+                /// </summary>
+                [NameInMap("PackageVersion")]
+                [Validation(Required=false)]
+                public string PackageVersion { get; set; }
+
+                /// <summary>
+                /// <para>可选套件摘要字段，当前新 DataAgent 应用不返回；缺省不表示版本 0。不可作为 UpdateAgent 的 Version，回写引用时必须省略。官方制品的固定版本请读取 PackageVersion。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.2.0</para>
+                /// </summary>
+                [NameInMap("SemanticVersion")]
+                [Validation(Required=false)]
+                public string SemanticVersion { get; set; }
+
+                /// <summary>
+                /// <para>OFFICIAL 表示官方目录资源；省略或 DB 表示个人或企业资源。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OFFICIAL</para>
+                /// </summary>
+                [NameInMap("Source")]
+                [Validation(Required=false)]
+                public string Source { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>suite_example</para>
+                /// </summary>
+                [NameInMap("SuiteId")]
+                [Validation(Required=false)]
+                public string SuiteId { get; set; }
+
+                /// <summary>
+                /// <para>仅个人或企业套件在引用明确指定版本或读取发布快照时返回；官方套件不返回。未返回不是 0；SDK 若将缺省整数初始化为 0，回写时必须省略。官方项只回写 Source 和 SuiteId，不传 Version、SemanticVersion 或 PackageVersion。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public int? Version { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The creation time, as a Unix timestamp in milliseconds.</para>
@@ -241,6 +334,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                /// <summary>
+                /// <para>指定 AgentVersion 查询已发布快照时返回固定的官方制品版本；查询草稿或自定义 Skill 时不返回。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.6.0.202608201110</para>
+                /// </summary>
+                [NameInMap("PackageVersion")]
+                [Validation(Required=false)]
+                public string PackageVersion { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>dataworks-semantic</para>
+                /// </summary>
+                [NameInMap("SkillId")]
+                [Validation(Required=false)]
+                public string SkillId { get; set; }
+
+                /// <summary>
+                /// <para>OFFICIAL 表示官方目录资源；省略或 DB 表示原有个人或企业资源。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OFFICIAL</para>
+                /// </summary>
+                [NameInMap("Source")]
+                [Validation(Required=false)]
+                public string Source { get; set; }
 
                 /// <summary>
                 /// <para>The skill version.</para>

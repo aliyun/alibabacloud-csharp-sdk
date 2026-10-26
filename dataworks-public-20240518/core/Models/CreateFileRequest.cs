@@ -272,6 +272,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string InputParameters { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dw_project.ods_user_info_d</para>
+        /// </summary>
         [NameInMap("OutputList")]
         [Validation(Required=false)]
         public string OutputList { get; set; }

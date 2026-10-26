@@ -42,6 +42,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Agent 绑定的已发布专家套件。个人或企业套件使用 SuiteId，可选 Version；官方套件必须显式指定 Source=OFFICIAL 和官方目录中的 SuiteId，不传 Version。未传时创建为空，不会默认加载所有官方套件。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</para>
+        /// </summary>
+        [NameInMap("ExpertSuites")]
+        [Validation(Required=false)]
+        public string ExpertSuitesShrink { get; set; }
+
+        /// <summary>
         /// <para>The extended metadata in key-value pairs.</para>
         /// 
         /// <b>Example:</b>
@@ -73,6 +83,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>是否在创建 Agent 后立即发布。true 发布创建的版本；false 或省略保持原有仅创建草稿行为。保存与发布不是原子操作，发布失败时草稿可能已存在；重试前应先查询 Agent，避免重复创建。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("PublishImmediately")]
+        [Validation(Required=false)]
+        public bool? PublishImmediately { get; set; }
 
         /// <summary>
         /// <para>The list of skills.</para>

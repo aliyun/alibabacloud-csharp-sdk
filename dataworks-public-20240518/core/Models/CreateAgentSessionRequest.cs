@@ -140,6 +140,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Mode { get; set; }
 
                     /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>qwen3.7-max(openai)</para>
+                    /// </summary>
+                    [NameInMap("Model")]
+                    [Validation(Required=false)]
+                    public string Model { get; set; }
+
+                    /// <summary>
                     /// <para>The DataWorks workspace ID. Used to initialize the session project context. If omitted, the session is treated as having no project context. You can later correct or switch the project context by using PromptAgentSession.</para>
                     /// 
                     /// <b>Example:</b>
@@ -148,6 +156,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [NameInMap("ProjectId")]
                     [Validation(Required=false)]
                     public string ProjectId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>none</para>
+                    /// </summary>
+                    [NameInMap("ReasoningEffort")]
+                    [Validation(Required=false)]
+                    public string ReasoningEffort { get; set; }
 
                     /// <summary>
                     /// <para>The ID of the resource group used for initialization.</para>
