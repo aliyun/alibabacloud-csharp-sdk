@@ -1,3 +1,8 @@
+2026-10-26 Version: 7.11.8
+- Update API CreateImagePipeline: add request parameters ImageSecurityOptions.
+- Update API DescribeImagePipelines: add response parameters Body.ImagePipeline.$.ImageSecurityOptions.
+
+
 2026-10-23 Version: 7.11.7
 - Update API DescribeDisks: add request parameters PerformanceLevel.
 

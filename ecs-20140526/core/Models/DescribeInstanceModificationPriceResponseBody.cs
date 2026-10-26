@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceModificationPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price information, including the price and discount rule information.</para>
+        /// <para>The PriceInfo data type, which includes pricing and discount rule information.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                /// <para>The final price, which is the original price minus the discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>113.880</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The related price.</para>
+            /// <para>The associated price.</para>
             /// </summary>
             [NameInMap("RelatedPrice")]
             [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? OriginalPrice { get; set; }
 
                     /// <summary>
-                    /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                    /// <para>The final price, which is the original price minus the discount.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>

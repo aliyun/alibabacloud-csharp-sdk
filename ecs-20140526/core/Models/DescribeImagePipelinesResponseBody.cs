@@ -129,6 +129,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string ImagePipelineId { get; set; }
 
+                [NameInMap("ImageSecurityOptions")]
+                [Validation(Required=false)]
+                public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions ImageSecurityOptions { get; set; }
+                public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageSecurityOptions : TeaModel {
+                    [NameInMap("SecurityScanMode")]
+                    [Validation(Required=false)]
+                    public string SecurityScanMode { get; set; }
+
+                }
+
                 [NameInMap("ImportImageOptions")]
                 [Validation(Required=false)]
                 public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions ImportImageOptions { get; set; }
@@ -320,7 +330,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query.</para>
+        /// <para>The number of entries returned per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -330,7 +340,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token returned by the current call. For more information about how to use the token, see the operation description.</para>
+        /// <para>The pagination token returned by this call. For more information, see the operation description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -350,7 +360,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of image templates returned.</para>
+        /// <para>The total number of image templates returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

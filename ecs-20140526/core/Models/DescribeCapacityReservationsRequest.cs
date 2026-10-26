@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeCapacityReservationsRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeCapacityReservationsRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The list of capacity reservation IDs. The value can be a JSON array that consists of up to 100 IDs, separated by commas (,).</para>
+            /// <para>The IDs of the capacity reservations. The value can be a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;crp-bp1gubrkqutenqdd****&quot;, &quot;crp-bp67acfmxazb5****&quot;]</para>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
-        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: Pay-as-you-go.</description></item>
+        /// <item><description>PrePaid: Subscription.</description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. You can use the instance type to query only active capacity reservations. Released capacity reservations can be queried only by using PrivatePoolOptions.Ids.</para>
+        /// <para>The instance type. You can use this parameter to query only active capacity reservations. To query released capacity reservations, you can only use the PrivatePoolOptions.Ids parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the capacity reservation query. Obtain the value from the result of the previous request.</para>
+        /// <para>The pagination token for the capacity reservation query. Obtain the token from the response of the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The operating system of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>windows: queries only capacity reservations for Windows instances.</description></item>
-        /// <item><description>linux: queries only capacity reservations for Linux instances.</description></item>
-        /// <item><description>all: queries all capacity reservations.</description></item>
+        /// <item><description>windows: Queries only capacity reservations for Windows instances.</description></item>
+        /// <item><description>linux: Queries only capacity reservations for Linux instances.</description></item>
+        /// <item><description>all: Queries all capacity reservations.</description></item>
         /// </list>
         /// <para>Default value: all.</para>
         /// 
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the capacity reservation. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
-        /// <para>Filtering by the default resource group is not supported.</para>
+        /// <para>Default resource group filtering is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -131,14 +131,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The status of the capacity reservation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>All: all states.</description></item>
-        /// <item><description>Pending: initializing. A capacity reservation that takes effect at a specified time enters the initializing state first.</description></item>
-        /// <item><description>Preparing: being prepared. A capacity reservation that takes effect at a specified time is in the being prepared state during the resource delivery phase.</description></item>
-        /// <item><description>Prepared: to take effect. A capacity reservation that takes effect at a specified time is in the to take effect state after resource delivery is complete but before the service officially takes effect.</description></item>
-        /// <item><description>Active: active.</description></item>
-        /// <item><description>Released: released, including manual release and automatic release upon expiration.</description></item>
+        /// <item><description>All: All statuses.</description></item>
+        /// <item><description>Pending: Initialization. Capacity reservations that take effect at a specified time enter the initialization status first.</description></item>
+        /// <item><description>Preparing: Preparing. Capacity reservations that take effect at a specified time are in the preparing status during resource delivery.</description></item>
+        /// <item><description>Prepared: Pending. Capacity reservations that take effect at a specified time are in the pending status after resource delivery is complete and before the service officially takes effect.</description></item>
+        /// <item><description>Active: Active.</description></item>
+        /// <item><description>Released: Released, including manual release and automatic release upon expiration.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, capacity reservations in all states except Pending and Released are queried.</para>
+        /// <para>If you do not specify this parameter, capacity reservations in all statuses except Pending and Released are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -155,8 +155,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeCapacityReservationsRequestTag> Tag { get; set; }
         public class DescribeCapacityReservationsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. N specifies that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>The tag key. N specifies that you can configure multiple tag keys for filtering. Valid values of N: 1 to 20.</para>
+            /// <para>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. N specifies that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value. N specifies that you can configure multiple tag values for filtering. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

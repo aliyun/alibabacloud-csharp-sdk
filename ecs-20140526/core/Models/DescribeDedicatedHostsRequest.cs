@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostName { get; set; }
 
         /// <summary>
-        /// <para>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent dedicated host type list.</para>
+        /// <para>The type of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent dedicated host type list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddh.g5</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. If you specify this parameter, the query is performed by using the combination of MaxResults and NextToken.</para>
+        /// <para>The maximum number of entries per page for a paged query. If you specify this parameter, the query uses the combination of MaxResults and NextToken for pagination.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NeedHostDetail { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned from the previous call to this operation. You do not need to specify this parameter when you call this operation for the first time.</para>
+        /// <para>The query token. Set the value to the NextToken value returned in the previous call to this operation. You do not need to specify this parameter when you call this operation for the first time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults for pagination.</para>
+        /// <para>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults for pagination.</para>
+        /// <para>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,6 +127,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to query the inventory information of the dedicated host.</para>
+        /// </summary>
         [NameInMap("QueryInventory")]
         [Validation(Required=false)]
         public bool? QueryInventory { get; set; }
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the capacity information at the socket level. You can view the remaining resource information (vCPU and memory usage, remaining amount, and total amount) at the socket level to determine whether ECS instances of the corresponding types can be created. Valid values:</para>
+        /// <para>Specifies whether to display socket-level capacity information. You can view the remaining resource information (vCPU and memory usage, remaining capacity, and total capacity) at the socket level to determine whether ECS instances of the corresponding type can be created. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Display the information. Only dedicated hosts of specific types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export dedicated host information</a>.</description></item>
         /// <item><description>false: Do not display the information.</description></item>
@@ -174,8 +177,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </remarks>
         /// <para>Generally, each dedicated host has two CPUs, and the ID of each CPU is Socket 0 or Socket 1. On an exclusive dedicated host, to ensure that the ECS instances on the dedicated host deliver maximum performance, ECS instances are not created across sockets. This means that an ECS instance is created based on only one socket.</para>
         /// <list type="bullet">
-        /// <item><description>If the remaining computing resources of one socket are greater than or equal to the requirements of the ECS instance type to be created, the ECS instance is created.</description></item>
-        /// <item><description>If the remaining computing resources of each socket are less than the requirements of the ECS instance type to be created, the ECS instance fails to be created. Even if the total remaining resources of the two sockets on the dedicated host meet the requirements of the ECS instance type, the ECS instance still cannot be created.</notice></description></item>
+        /// <item><description>If the remaining computing resources of one socket are greater than or equal to the resources required by the ECS instance type to be created, the ECS instance is created.</description></item>
+        /// <item><description>If the remaining computing resources of each socket are less than the resources required by the ECS instance type to be created, the ECS instance fails to be created. Even if the total remaining resources of the two sockets on the dedicated host are greater than the resources required by the ECS instance type, the ECS instance still cannot be created.</notice></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,13 +189,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SocketDetails { get; set; }
 
         /// <summary>
-        /// <para>The usage status of the dedicated host. Valid values:</para>
+        /// <para>The status of the dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Available: The dedicated host is running. This is the normal running status of the dedicated host.</para>
+        /// <item><description><para>Available: The dedicated host is running. This is the normal status of a dedicated host.</para>
         /// </description></item>
-        /// <item><description><para>UnderAssessment: The physical machine has risks and is in the incubation period of a fault. The physical machine is available, but may cause issues for the ECS instances on the dedicated host.</para>
+        /// <item><description><para>UnderAssessment: The physical machine has risks. The physical machine is available during the fault incubation period, but issues may occur on the ECS instances on the dedicated host.</para>
         /// </description></item>
-        /// <item><description><para>PermanentFailure: A permanent failure occurred and the dedicated host is unavailable.</para>
+        /// <item><description><para>PermanentFailure: A permanent failure occurred. The dedicated host is unavailable.</para>
         /// </description></item>
         /// <item><description><para>TempUnavailable: The dedicated host is temporarily unavailable.</para>
         /// </description></item>
@@ -209,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. The list can contain 0 to 20 tags.</para>
+        /// <para>The list of tags. You can specify 0 to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

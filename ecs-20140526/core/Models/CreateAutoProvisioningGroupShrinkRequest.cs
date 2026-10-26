@@ -61,13 +61,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The automatic release time of the pay-as-you-go instance. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// <list type="bullet">
-            /// <item><description><para>If the value of seconds (ss) is not 00, the release time is automatically set to the start of the current minute (mm).</para>
+            /// <item><description><para>If the value of the seconds (ss) field is not 00, the time is automatically rounded down to the current minute (mm).</para>
             /// </description></item>
-            /// <item><description><para>The earliest release time is half an hour after the current time.</para>
+            /// <item><description><para>The release time must be at least 30 minutes later than the current time.</para>
             /// </description></item>
-            /// <item><description><para>The latest release time cannot be more than three years after the current time.</para>
+            /// <item><description><para>The release time cannot be more than three years later than the current time.
+            /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
             /// </description></item>
             /// </list>
             /// 
@@ -81,8 +82,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The performance mode of the burstable instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Standard: standard mode. For more information about the performance of the instance, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
-            /// <item><description>Unlimited: unlimited mode. For more information about the performance of the instance, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+            /// <item><description>Standard: standard mode. For more information about instance performance, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+            /// <item><description>Unlimited: unlimited mode. For more information about instance performance, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
             /// </list>
             /// <para>Default value: null.</para>
             /// <para>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</para>
@@ -95,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreditSpecification { get; set; }
 
             /// <summary>
-            /// <para>The extended data disk configurations for the launch template.</para>
+            /// <para>The extended list of disk configurations for the launch template.</para>
             /// </summary>
             [NameInMap("DataDisk")]
             [Validation(Required=false)]
@@ -105,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <para>The ID of the automatic snapshot policy applied to the data disk.</para>
                 /// <para>Take note of the following items when you configure this parameter:</para>
                 /// <list type="bullet">
-                /// <item><description>This parameter takes effect only when you create an auto provisioning group of the instant delivery type (AutoProvisioningGroupType=instant).</description></item>
+                /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,8 +141,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>cloud_essd: enterprise SSD.</description></item>
                 /// <item><description>cloud: basic disk.</description></item>
                 /// </list>
-                /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</para>
-                /// <para>If both the launch template and the launch configuration are specified, the launch template takes precedence.</para>
+                /// <para>For instances with I/O optimization, the default value is cloud_efficiency. For instances without I/O optimization, the default value is cloud.</para>
+                /// <para>If both the launch template and the launch configurations are specified, the launch template takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_ssd</para>
@@ -187,9 +188,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Device { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
-                /// <para>Default value: null.</para>
-                /// <para>If both the launch template and the launch configurations are specified, the launch template takes precedence.</para>
+                /// <para>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
+                /// <para>Default value: empty.</para>
+                /// <para>If both a launch template and launch configurations are specified, the launch template takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_ssdData</para>
@@ -213,8 +214,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>Specifies whether to encrypt data disk N. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The data disk is encrypted.</description></item>
-                /// <item><description>false: The data disk is not encrypted.</description></item>
+                /// <item><description>true: The disk is encrypted.</description></item>
+                /// <item><description>false: The disk is not encrypted.</description></item>
                 /// </list>
                 /// <para>Default value: false.</para>
                 /// <para>If both the launch template and the launch configurations are specified, the launch template takes precedence.</para>
@@ -237,15 +238,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
-                /// <para>When you create an enterprise SSD as a data disk, set the performance level of the disk. The value of N must be the same as the value of N in LaunchConfiguration.DataDisk.N.Category. Valid values:</para>
+                /// <para>When you create an enterprise SSD to use as a data disk, configure the Settings for the performance level of the disk. The value of N must be the same as the value of N in LaunchConfiguration.DataDisk.N.Category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PL0: A single enterprise SSD can deliver up to 10,000 random read/write IOPS.</description></item>
-                /// <item><description>PL1 (default): A single enterprise SSD can deliver up to 50,000 random read/write IOPS.</description></item>
-                /// <item><description>PL2: A single enterprise SSD can deliver up to 100,000 random read/write IOPS.</description></item>
-                /// <item><description>PL3: A single enterprise SSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+                /// <item><description>PL0: A single enterprise SSD delivers up to 10,000 random read/write IOPS.</description></item>
+                /// <item><description>PL1 (default): A single enterprise SSD delivers up to 50,000 random read/write IOPS.</description></item>
+                /// <item><description>PL2: A single enterprise SSD delivers up to 100,000 random read/write IOPS.</description></item>
+                /// <item><description>PL3: A single enterprise SSD delivers up to 1,000,000 random read/write IOPS.</description></item>
                 /// </list>
-                /// <para>For more information about how to select the performance level of an enterprise SSD, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSD</a>.</para>
-                /// <para>If both the launch template and the launch configuration are specified, the launch template takes precedence.</para>
+                /// <para>For more information about how to select the performance level of an enterprise SSD, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</para>
+                /// <para>If both the launch template and the launch configurations are specified, the launch template takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL1</para>
@@ -273,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <list type="bullet">
                 /// <item><description>cloud_efficiency: 20 to 32768.</description></item>
                 /// <item><description>cloud_ssd: 20 to 32768.</description></item>
-                /// <item><description>cloud_essd: The valid values vary based on the value of LaunchConfiguration.DataDisk.N.PerformanceLevel.<list type="bullet">
+                /// <item><description>cloud_essd: The valid values are related to the value of LaunchConfiguration.DataDisk.N.PerformanceLevel.<list type="bullet">
                 /// <item><description>PL0: 40 to 32768.</description></item>
                 /// <item><description>PL1: 20 to 32768.</description></item>
                 /// <item><description>PL2: 461 to 32768.</description></item>
@@ -321,9 +322,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The hostname of the instance. Limits:</para>
             /// <list type="bullet">
-            /// <item><description>The hostname cannot start or end with a period (.) or a hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</description></item>
-            /// <item><description>For Windows instances, the hostname must be 2 to 15 characters in length. It cannot contain periods (.) and cannot contain only digits. It can contain letters, digits, and hyphens (-).</description></item>
-            /// <item><description>For other instances such as Linux instances, the hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The characters between two consecutive periods are considered a segment. Each segment can contain letters, digits, and hyphens (-).</description></item>
+            /// <item><description>The hostname cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods (.) or hyphens (-).</description></item>
+            /// <item><description>For Windows instances: The hostname must be 2 to 15 characters in length. It cannot contain periods (.) and cannot contain only digits. It can contain letters, digits, and hyphens (-).</description></item>
+            /// <item><description>For other instances such as Linux instances: The hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The characters between two consecutive periods are considered a segment. Each segment can contain letters, digits, and hyphens (-).</description></item>
             /// <item><description>You cannot specify both <c>LaunchConfiguration.HostName</c> and <c>LaunchConfiguration.HostNames.N</c>. Otherwise, an error is returned.</description></item>
             /// <item><description>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</description></item>
             /// </list>
@@ -338,9 +339,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The list of hostnames for one or more instances. Limits:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the instant delivery type (AutoProvisioningGroupType=instant).</description></item>
+            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
             /// <item><description>N indicates the number of instances. Valid values of N: 1 to 1000. The value of N must be the same as the value of the TotalTargetCapacity parameter.</description></item>
-            /// <item><description>Periods (.) and hyphens (-) cannot be used as the first or last characters, and cannot be used consecutively.</description></item>
+            /// <item><description>Periods (.) and hyphens (-) cannot be used as the first or last character and cannot be used consecutively.</description></item>
             /// <item><description>If both the launch template and the launch configurations are specified, the launch template takes precedence.</description></item>
             /// </list>
             /// 
@@ -352,7 +353,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<string> HostNames { get; set; }
 
             /// <summary>
-            /// <para>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with aliyun or acs:. It cannot contain http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>hangzhou-daily-update</para>
@@ -382,9 +383,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+            /// <para>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
             /// <para>Default value: the <c>InstanceId</c> of the instance.</para>
-            /// <para>When you create multiple ECS instances, you can batch configure sequential instance names. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Configure sequential instance names or hostnames</a>.</para>
+            /// <para>When you create multiple ECS instances, you can batch configure sequential instance names. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential instance names or hostnames</a>.</para>
             /// <para>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</para>
             /// 
             /// <b>Example:</b>
@@ -395,13 +396,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The billing method for network usage. Valid values:</para>
+            /// <para>The network billing method. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
             /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>In pay-by-traffic mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed service level indicators. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the pay-by-bandwidth mode.</para>
+            /// <para>In pay-by-traffic mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. During resource contention, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the pay-by-bandwidth mode.</para>
             /// </remarks>
             /// <para>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</para>
             /// 
@@ -440,12 +441,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? InternetMaxBandwidthOut { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the instance is an I/O optimized instance. Valid values:</para>
+            /// <para>Specifies whether the instance is an I/O optimization instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>none: non-I/O optimization.</description></item>
-            /// <item><description>optimized: I/O optimization.</description></item>
+            /// <item><description>none: The instance does not support I/O optimization.</description></item>
+            /// <item><description>optimized: The instance supports I/O optimization.</description></item>
             /// </list>
-            /// <para>The default value is cloud for retired instance types and non-I/O optimized instances, and optimized for other instance types.</para>
+            /// <para>The default value is none for retired instance types and optimized for other instance types.</para>
             /// <para>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</para>
             /// 
             /// <b>Example:</b>
@@ -561,7 +562,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <para>The ID of the automatic snapshot policy applied to the system disk.</para>
                 /// <para>Take note of the following items when you configure this parameter:</para>
                 /// <list type="bullet">
-                /// <item><description>This parameter takes effect only when you create an auto provisioning group of the instant delivery type (AutoProvisioningGroupType=instant).</description></item>
+                /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -612,9 +613,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>Specifies whether to encrypt system disk N. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: The system disk is encrypted.</para>
+                /// <item><description><para>true: The disk is encrypted.</para>
                 /// </description></item>
-                /// <item><description><para>false: The system disk is not encrypted.</para>
+                /// <item><description><para>false: The disk is not encrypted.</para>
                 /// </description></item>
                 /// </list>
                 /// <para>Default value: false.</para>
@@ -662,7 +663,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>cloud_essd: enterprise SSD.</description></item>
             /// <item><description>cloud: basic disk.</description></item>
             /// </list>
-            /// <para>The default value is cloud for retired instance types and non-I/O optimized instances, and cloud_efficiency for other instance types.</para>
+            /// <para>The default value is cloud for retired instance types that are not I/O optimization instances, and cloud_efficiency for other instance types.</para>
             /// <para>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</para>
             /// 
             /// <b>Example:</b>
@@ -684,7 +685,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SystemDiskDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
             /// <para>Default value: null.</para>
             /// <para>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</para>
             /// 
@@ -696,14 +697,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SystemDiskName { get; set; }
 
             /// <summary>
-            /// <para>The settings for the performance level of the enterprise SSD used as the system disk. Valid values:</para>
+            /// <para>The performance level Settings for the standard SSD used as the system disk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PL0 (default): A single enterprise SSD can deliver up to 10,000 random read/write IOPS.</description></item>
             /// <item><description>PL1: A single enterprise SSD can deliver up to 50,000 random read/write IOPS.</description></item>
             /// <item><description>PL2: A single enterprise SSD can deliver up to 100,000 random read/write IOPS.</description></item>
             /// <item><description>PL3: A single enterprise SSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
             /// </list>
-            /// <para>For more information about how to select enterprise SSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSDs</a>.</para>
+            /// <para>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSDs</a>.</para>
             /// <para>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</para>
             /// 
             /// <b>Example:</b>
@@ -733,7 +734,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag> Tag { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationTag : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the instance. Valid values of N: 1 to 20. If this parameter is specified, it cannot be left empty. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://. If both the launch template and the launch configurations are specified, the launch template takes precedence.</para>
+                /// <para>The tag key of the instance. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://. If both the launch template and the launch configurations are specified, the launch template takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -814,7 +815,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Core { get; set; }
 
                 /// <summary>
-                /// <para>The number of threads per core. The number of vCPUs of the ECS instance = the value of CpuOptions.Core × the value of CpuOptions.ThreadsPerCore.</para>
+                /// <para>The number of threads per core. The number of vCPUs of the ECS instance = Value of CpuOptions.Core × Value of CpuOptions.ThreadsPerCore.</para>
                 /// <para>A value of 1 for CpuOptions.ThreadsPerCore indicates that CPU hyper-threading is disabled.</para>
                 /// <para>Only specific instance types support the configuration of the number of threads per core.</para>
                 /// <para>Valid values and default value: For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/specify-and-view-cpu-options">Customize CPU options</a>.</para>
@@ -832,7 +833,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The image properties.</para>
             /// <para>Take note of the following items when you configure this parameter:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the instant delivery type (AutoProvisioningGroupType=instant).</description></item>
+            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
             /// </list>
             /// </summary>
             [NameInMap("ImageOptions")]
@@ -856,7 +857,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The subscription period of the resource. The unit is specified by PeriodUnit. This parameter is required and takes effect only when you create subscription instances. Valid values:</para>
+            /// <para>The subscription period of the resource. The unit is specified by the PeriodUnit parameter. This parameter is required and takes effect only when you create subscription instances. Valid values:</para>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
             /// <item><description>When PeriodUnit is set to Week, valid values of Period are 1, 2, 3, and 4.</description></item>
@@ -873,7 +874,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription period. Valid values: </para>
+            /// <para>The time unit of the subscription Billable methods. Valid values: </para>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
             /// <item><description>Week.</description></item>
@@ -897,6 +898,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSchedulerOptions : TeaModel {
                 /// <summary>
                 /// <para>The ID of the dedicated host cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dc-bp12wlf6bw0vz9v2</para>
                 /// </summary>
                 [NameInMap("DedicatedHostClusterId")]
                 [Validation(Required=false)]
@@ -904,6 +908,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 /// <summary>
                 /// <para>The ID of the dedicated host.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dh-bp67acfmxazb4p01</para>
                 /// </summary>
                 [NameInMap("DedicatedHostId")]
                 [Validation(Required=false)]
@@ -918,6 +925,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions SecurityOptions { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions : TeaModel {
+                /// <summary>
+                /// <para>The trusted system mode. Set the value to vTPM.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vTPM</para>
+                /// </summary>
                 [NameInMap("TrustedSystemMode")]
                 [Validation(Required=false)]
                 public string TrustedSystemMode { get; set; }
@@ -927,13 +940,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: The instance is protected from automatic release for 1 hour after it is created. After the 1-hour protection period ends, the system compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</description></item>
-            /// <item><description>0: The instance is not protected after it is created. The system compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</description></item>
+            /// <item><description>1: Alibaba Cloud guarantees that the instance is not subject to automatic release within 1 hour after it is created. After 1 hour, the system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</description></item>
+            /// <item><description>0: Alibaba Cloud does not guarantee that the instance is retained for 1 hour after it is created. The system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</description></item>
             /// </list>
-            /// <para>Alibaba Cloud sends you a notification by using an ECS system event 5 minutes before the instance is revoked. Spot instances use billing by the second. We recommend that you select an appropriate protection period based on the execution duration of your specific tasks.</para>
-            /// <para>Take note of the following items when you set this parameter:</para>
+            /// <para>Alibaba Cloud sends you a notification by using an ECS system event 5 minutes before the instance is revoked. Spot instances use pay-as-you-go billing by the second. We recommend that you select an appropriate protection period based on the execution duration of your specific nodes.</para>
+            /// <para>Take note of the following items when you configure the Settings for this parameter:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronization delivery type (AutoProvisioningGroupType=instant).</description></item>
+            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -948,14 +961,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description><para>Terminate: The instance is released.</para>
             /// </description></item>
-            /// <item><description><para>Stop: The instance enters the economical mode.</para>
+            /// <item><description><para>Stop: The instance enters economical mode.</para>
             /// </description></item>
             /// </list>
-            /// <para>For more information about the economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</para>
+            /// <para>For more information about economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</para>
             /// <para>Default value: Terminate.</para>
-            /// <para>Take note of the following items when you set this parameter:</para>
+            /// <para>Take note of the following items when you configure the Settings for this parameter:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronization delivery type (AutoProvisioningGroupType=instant).</description></item>
+            /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -968,7 +981,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>apg-test</para>
@@ -980,11 +993,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The delivery type of the auto provisioning group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>request: one-time asynchronous delivery. The auto provisioning group asynchronously delivers the instance cluster only at startup and does not retry if the scheduling failed.</para>
+        /// <item><description><para>request: one-time asynchronous delivery. The auto provisioning group asynchronously delivers the instance cluster only at startup and does not retry if the scheduling fails.</para>
         /// </description></item>
-        /// <item><description><para>instant: one-time synchronization delivery. The auto provisioning group creates instances in synchronization only at startup and returns the list of created instances and the reasons why creation failed in the response.</para>
+        /// <item><description><para>instant: one-time synchronization delivery. The auto provisioning group synchronously creates instances only at startup and returns the list of successfully created instances and the reasons for creation failed in the response.</para>
         /// </description></item>
-        /// <item><description><para>maintain: continuous delivery. The auto provisioning group attempts to deliver the instance cluster at startup, performs monitoring on the real-time capacity, and continues to create ECS instances if the target capacity is not reached.</para>
+        /// <item><description><para>maintain: continuous delivery. The auto provisioning group attempts to deliver the instance cluster at startup, monitoring the real-time capacity, and continues to create ECS instances if the target capacity is not reached.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: maintain.</para>
@@ -1004,14 +1017,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateAutoProvisioningGroupShrinkRequestCandidateOptions CandidateOptions { get; set; }
         public class CreateAutoProvisioningGroupShrinkRequestCandidateOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to only evaluate the success rate of delivering the target capacity for candidate instance types in the current request. If you set this parameter to true, no scale-out is performed. The system only evaluates the delivery success rate and returns the result in the LaunchResult.CandidateEvaluateLevel field of the response. Default value: false.</para>
+            /// <para>Specifies whether to only evaluate the success rate of candidate delivery for the target capacity in the current request. If you set this parameter to true, no scale-out is performed. The system only evaluates the delivery success rate and returns the result in the LaunchResult.CandidateEvaluateLevel field of the response. Default value: false.</para>
             /// </summary>
             [NameInMap("Evaluate")]
             [Validation(Required=false)]
             public bool? Evaluate { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for the auto provisioning group to scale out to the target capacity. After the timeout period elapses, no further scale-out attempts are made. Unit: minutes.</para>
+            /// <para>The timeout period for the auto provisioning group to scale out instances to reach the target capacity. After the timeout period expires, no further scale-out attempts are made. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -1023,7 +1036,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -1040,7 +1053,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateAutoProvisioningGroupShrinkRequestDataDiskConfig> DataDiskConfig { get; set; }
         public class CreateAutoProvisioningGroupShrinkRequestDataDiskConfig : TeaModel {
             /// <summary>
-            /// <para>The category of the data disk for the instance. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</para>
+            /// <para>The category of the instance data disk. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cloud_efficiency: ultra disk.</description></item>
             /// <item><description>cloud_ssd: standard SSD.</description></item>
@@ -1058,7 +1071,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The billing method for the capacity difference when the sum of <c>PayAsYouGoTargetCapacity</c> and <c>SpotTargetCapacity</c> is less than <c>TotalTargetCapacity</c>. Valid values:</para>
+        /// <para>The Billable methods for the capacity difference when the sum of <c>PayAsYouGoTargetCapacity</c> and <c>SpotTargetCapacity</c> is less than <c>TotalTargetCapacity</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PayAsYouGo: pay-as-you-go instances.</description></item>
         /// <item><description>Spot: spot instances.</description></item>
@@ -1083,10 +1096,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the instances that are removed during a scale-down event when the real-time capacity of the auto provisioning group exceeds the target capacity and triggers a scale-down. Valid values:</para>
+        /// <para>Specifies whether to release the instances that are removed during a scale-down event when the real-time capacity of the auto provisioning group exceeds the target capacity and trigger a scale-down. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>termination: releases the removed instances.</description></item>
-        /// <item><description>no-termination: only removes the instances from the auto provisioning group.</description></item>
+        /// <item><description>no-termination: only removes the instances from the auto provisioning group without releasing them.</description></item>
         /// </list>
         /// <para>Default value: no-termination.</para>
         /// 
@@ -1169,11 +1182,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The level of the instance family. This parameter is used to filter the instance types that meet the requirements. Valid values:</para>
+            /// <para>The level of the instance family, which is used to filter the instance types that meet the requirements. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>EntryLevel: entry-level, which refers to shared instance types. These instance types are more cost-effective but cannot guarantee stable computing performance. They are suitable for business scenarios with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
             /// <item><description>EnterpriseLevel: enterprise-level. These instance types provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-            /// <item><description>CreditEntryLevel: credit entry-level, which refers to burstable instances. These instance types use CPU credits to guarantee computing performance and are suitable for business scenarios with low CPU utilization but occasional CPU bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</description></item>
+            /// <item><description>CreditEntryLevel: credit entry-level, which refers to burstable instances. These instance types use CPU credits to ensure computing performance and are suitable for business scenarios with low CPU utilization but occasional CPU bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 10.</para>
             /// 
@@ -1185,7 +1198,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceFamilyLevel { get; set; }
 
             /// <summary>
-            /// <para>The instance type in the extended launch template. Valid values of N: 1 to 20. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+            /// <para>The instance type in the extension launch template. Valid values of N: 1 to 20. For more information about valid instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g5.large</para>
@@ -1251,10 +1264,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The weight of the instance type in the extended launch template. A higher weight indicates that a single instance has more computing power and fewer instances are required. Valid values: greater than 0.</para>
-            /// <para>You can calculate the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB of memory:</para>
+            /// <para>You can determine the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB of memory:</para>
             /// <list type="bullet">
-            /// <item><description>You can set the weight of the instance type with 8 vCPUs and 60 GiB of memory to 1.</description></item>
-            /// <item><description>You can set the weight of the instance type with 16 vCPUs and 120 GiB of memory to 2.</description></item>
+            /// <item><description>The weight of an instance type with 8 vCPUs and 60 GiB of memory can be set to 1.</description></item>
+            /// <item><description>The weight of an instance type with 16 vCPUs and 120 GiB of memory can be set to 2.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1267,7 +1280,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query active instance launch templates. If you specify both a launch template and launch configurations (<c>LaunchConfiguration.*</c>), the system preferentially uses the launch template.</para>
+        /// <para>The ID of the launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query active instance launch templates. If you specify both a launch template and launch configurations (<c>LaunchConfiguration.*</c>), the system preferentially uses the launch template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-bp1fgzds4bdogu03****</para>
@@ -1277,7 +1290,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The version of the instance launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> operation to query active instance launch template versions.</para>
+        /// <para>The version of the launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> operation to query active instance launch template versions.</para>
         /// <para>Default value: the default version of the launch template.</para>
         /// 
         /// <b>Example:</b>
@@ -1290,7 +1303,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum price of spot instances in the auto provisioning group.</para>
         /// <remarks>
-        /// <para>If the settings include both <c>MaxSpotPrice</c> and <c>LaunchTemplateConfig.N.MaxPrice</c>, the lower value is used.</para>
+        /// <para>If the Settings for both <c>MaxSpotPrice</c> and <c>LaunchTemplateConfig.N.MaxPrice</c> are specified, the lower value takes precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1304,9 +1317,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The minimum target capacity of the auto provisioning group. Valid values: positive integers.</para>
         /// <para>Take note of the following items when you configure this parameter:</para>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when you create an auto provisioning group of the instant delivery type (AutoProvisioningGroupType=instant).</description></item>
+        /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
         /// <item><description>If the instance inventory in the current region is less than the value of this parameter, the API call fails and no instances are created.</description></item>
-        /// <item><description>If the instance inventory in the current region is greater than the value of this parameter, instances are created based on the values of other configured parameters.</description></item>
+        /// <item><description>If the instance inventory in the current region is greater than the value of this parameter, instances are created based on the values of other specified parameters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1327,9 +1340,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The policy for creating pay-as-you-go instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>lowest-price: the cost optimization policy. The instance type with the lowest price is selected.</para>
+        /// <item><description><para>lowest-price: cost optimization policy. The instance type with the lowest price is selected.</para>
         /// </description></item>
-        /// <item><description><para>prioritized: the priority-based policy. Instances are created based on the priorities specified by <c>LaunchTemplateConfig.N.Priority</c>.</para>
+        /// <item><description><para>prioritized: priority-based policy. Instances are created based on the priority specified by <c>LaunchTemplateConfig.N.Priority</c>.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: lowest-price.</para>
@@ -1342,7 +1355,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PayAsYouGoAllocationStrategy { get; set; }
 
         /// <summary>
-        /// <para>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: less than or equal to the parameter value of <c>TotalTargetCapacity</c>.</para>
+        /// <para>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of <c>TotalTargetCapacity</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -1366,16 +1379,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution> SpecifyCapacityDistribution { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestPrePaidOptionsSpecifyCapacityDistribution : TeaModel {
                 /// <summary>
-                /// <para>The set of instance types. Duplicate instance types are not allowed, and the instance types must be within the scope of LaunchTemplateConfig.InstanceType.</para>
+                /// <para>The set of instance types. Duplicate instance types are not allowed, and the instance types must be within the range of LaunchTemplateConfig.InstanceType.</para>
                 /// </summary>
                 [NameInMap("InstanceTypes")]
                 [Validation(Required=false)]
                 public List<string> InstanceTypes { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of instances to be delivered within the scope of InstanceTypes.</para>
+                /// <para>The minimum number of instances to be delivered within the InstanceTypes range.</para>
                 /// <remarks>
-                /// <para>sum(MinTargetCapacity) &lt;= TotalTargetCapacity. The sum of MinTargetCapacity for all instance type sets cannot exceed TotalTargetCapacity. If the MinTargetCapacity requirement for any instance type set cannot be met due to inventory or other reasons, the entire request fails.</para>
+                /// <para>sum(MinTargetCapacity) &lt;= TotalTargetCapacity. The sum of MinTargetCapacity for all instance type sets cannot exceed TotalTargetCapacity. If any instance type set cannot meet the MinTargetCapacity requirement due to inventory or other reasons, the entire request fails.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -1422,7 +1435,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The resource pool policy used when creating instances. Take note of the following items when you configure this parameter:</para>
         /// <list type="bullet">
         /// <item><description>This parameter takes effect only when you create pay-as-you-go instances.</description></item>
-        /// <item><description>This parameter takes effect only when you create an auto provisioning group of the instant delivery type (AutoProvisioningGroupType=instant).</description></item>
+        /// <item><description>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ResourcePoolOptions")]
@@ -1432,11 +1445,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The policy for creating spot instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>lowest-price: the cost optimization policy. The instance type with the lowest price is selected.</para>
+        /// <item><description><para>lowest-price: cost optimization policy. The instance type with the lowest price is selected.</para>
         /// </description></item>
-        /// <item><description><para>diversified: the zone distribution balancing policy. Instances are created in the zones specified by the extended launch templates and evenly distributed across the zones.</para>
+        /// <item><description><para>diversified: balanced zone distribution policy. Instances are created in the zones specified by the extended launch template and evenly distributed across the zones.</para>
         /// </description></item>
-        /// <item><description><para>capacity-optimized: the capacity optimization policy. The optimal instance types and zones are selected based on the inventory.</para>
+        /// <item><description><para>capacity-optimized: capacity optimization distribution policy. The optimal instance type and zone are selected based on inventory.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: lowest-price.</para>
@@ -1449,11 +1462,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotAllocationStrategy { get; set; }
 
         /// <summary>
-        /// <para>The behavior of spot instances when they are interrupted. Valid values:</para>
+        /// <para>The behavior when a spot instance is interrupted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>stop: stops the instances.</para>
+        /// <item><description><para>stop: stops the instance.</para>
         /// </description></item>
-        /// <item><description><para>terminate: releases the instances.</para>
+        /// <item><description><para>terminate: releases the instance.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: terminate.</para>
@@ -1467,7 +1480,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of instance types with the lowest prices that are selected by the auto provisioning group to create instances. This parameter takes effect only when <c>SpotAllocationStrategy</c> is set to <c>lowest-price</c>.</para>
-        /// <para>Valid values: less than the value of N in <c>LaunchTemplateConfig.N</c>.</para>
+        /// <para>Valid values: an integer less than the value of N in <c>LaunchTemplateConfig.N</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -1477,7 +1490,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SpotInstancePoolsToUseCount { get; set; }
 
         /// <summary>
-        /// <para>The target capacity of spot instances in the auto provisioning group. Valid values: less than or equal to the parameter value of <c>TotalTargetCapacity</c>.</para>
+        /// <para>The target capacity of spot instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of <c>TotalTargetCapacity</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -1494,7 +1507,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig> SystemDiskConfig { get; set; }
         public class CreateAutoProvisioningGroupShrinkRequestSystemDiskConfig : TeaModel {
             /// <summary>
-            /// <para>The category of the system disk for the instance. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</para>
+            /// <para>The category of the instance system disk. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cloud_efficiency: ultra disk.</description></item>
             /// <item><description>cloud_ssd: standard SSD.</description></item>
@@ -1520,7 +1533,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class CreateAutoProvisioningGroupShrinkRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the auto provisioning group.</para>
-            /// <para>Valid values of N: 1 to 20. If this parameter is specified, it cannot be left empty. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -1561,7 +1574,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to release the instances in the auto provisioning group when the group expires. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: releases the instances in the group.</description></item>
-        /// <item><description>false: only removes the instances from the group.</description></item>
+        /// <item><description>false: only removes the instances from the group without releasing them.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -1586,8 +1599,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The time when the auto provisioning group starts. This parameter and <c>ValidUntil</c> determine the validity period.</para>
-        /// <para>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// <para>Default value: the UNIX timestamp when the API operation takes effect.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>Default value: the UNIX timestamp when the API operation takes effect.
+        /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-04-01T15:10:20Z</para>
@@ -1598,8 +1612,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The time when the auto provisioning group expires. This parameter and <c>ValidFrom</c> determine the validity period.</para>
-        /// <para>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// <para>Default value: 2099-12-31T23:59:59Z.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>Default value: 2099-12-31T23:59:59Z.
+        /// <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-06-01T15:10:20Z</para>
