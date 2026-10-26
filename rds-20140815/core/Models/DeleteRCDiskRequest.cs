@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteRCDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk that you want to release.</para>
+        /// <para>The ID of the cloud disk to be released.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

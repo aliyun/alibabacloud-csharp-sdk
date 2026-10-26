@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The minimum execution duration used to filter tasks. Only tasks whose execution duration is greater than this value are returned. Unit: seconds. Default value: 0, which indicates no restriction.</para>
+        /// <para>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than the specified value. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query based on task start time. Only tasks that started after this time are returned. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. The earliest supported time is 30 days before the current time. If a time earlier than 30 days is specified, it is automatically converted to 30 days before the current time.</para>
+        /// <para>The start time of the time range to query the task start time. This parameter specifies that the start time of the task is later than the specified time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days ago, it is automatically converted to 30 days ago.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Separate multiple instance IDs with commas (,). A maximum of 30 instance IDs are supported. Default value: empty, which indicates no restriction.</para>
+        /// <para>The instance ID, which is used to query the tasks of the corresponding instance. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. If this parameter is left empty, no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf62br2491p5l****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Currently, only Instance is supported.</para>
+        /// <para>The instance type. Only Instance is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: positive integers.
+        /// <para>The page number of the query result. Valid values: positive integers.
         /// Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to obtain the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -110,15 +110,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Scheduled</b>: Waiting to be executed.</description></item>
+        /// <item><description><b>Scheduled</b>: Pending execution.</description></item>
         /// <item><description><b>Running</b>: Running.</description></item>
         /// <item><description><b>Succeed</b>: Succeeded.</description></item>
         /// <item><description><b>Failed</b>: Failed.</description></item>
-        /// <item><description><b>Cancelling</b>: Being terminated.</description></item>
-        /// <item><description><b>Canceled</b>: Terminated.</description></item>
+        /// <item><description><b>Cancelling</b>: Cancelling.</description></item>
+        /// <item><description><b>Canceled</b>: Canceled.</description></item>
         /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
         /// </list>
-        /// <para>To query multiple statuses, separate them with commas (,). Default value: empty, which indicates all statuses.</para>
+        /// <para>Separate multiple values with commas (,). If this parameter is left empty, all statuses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You can call the DescribeTasks operation to obtain the task ID. Separate multiple task IDs with commas (,). A maximum of 30 task IDs are supported. Default value: empty, which indicates no restriction.</para>
+        /// <para>The task ID. You can call the DescribeTasks operation to query the task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. If this parameter is left empty, no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-83br18hloy3faf****</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task type. Separate multiple task types with commas (,). A maximum of 30 task types are supported. Default value: empty, which indicates no restriction.</para>
+        /// <para>The task type, which is used to query tasks of a specific type. Separate multiple task types with commas (,). You can specify up to 30 task types. If this parameter is left empty, no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>autotest_dispatch_cases</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The maximum execution duration used to filter tasks. Only tasks whose execution duration is not less than this value are returned. Unit: seconds. Default value: 0, which indicates no restriction.</para>
+        /// <para>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than or equal to the specified value. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query based on task start time. Only tasks that started before this time are returned. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The end time of the time range to query the task start time. This parameter specifies that the start time of the task is earlier than the specified time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

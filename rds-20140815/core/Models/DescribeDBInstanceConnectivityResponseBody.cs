@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceConnectivityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code of the connection diagnostics. Valid values:</para>
+        /// <para>The connectivity diagnostic error code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>SRC_IP_NOT_IN_USER_WHITELIST</b>: The source IP address is not added to the whitelist.</description></item>
-        /// <item><description><b>CONNECTION_ABNORMAL</b>: The connection is normal.</description></item>
+        /// <item><description><b>CONNECTION_ABNORMAL</b>: The connection is abnormal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnCheckErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message of the connection diagnostics.</para>
+        /// <para>The connectivity diagnostic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Src ip:39.106.64.59 not in user whitelist</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnCheckErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The result of the connection diagnostics. Valid values:</para>
+        /// <para>The connectivity diagnostic result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Success</b></description></item>
         /// <item><description><b>Failed</b></description></item>

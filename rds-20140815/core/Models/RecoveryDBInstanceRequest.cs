@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RecoveryDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID. You can call the DescribeBackups operation to query backup sets.</para>
-        /// <para>If you specify this parameter, the <b>DBInstanceId</b> parameter is optional.</para>
+        /// <para>The ID of the backup set. You can call the DescribeBackups operation to query the backup set ID.</para>
+        /// <para>When you specify this parameter, the <b>DBInstanceId</b> parameter is optional.</para>
         /// <remarks>
-        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
+        /// <para>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the original instance.</para>
+        /// <para>The ID of the original instance.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you want to recover data by backup set (by specifying the BackupId parameter), this parameter is optional.</description></item>
-        /// <item><description>If you want to recover data to a point in time (by specifying the RestoreTime parameter), this parameter is required.</description></item>
+        /// <item><description>This parameter is not required when you restore data from a backup set (by specifying the BackupId parameter).</description></item>
+        /// <item><description>This parameter is required when you restore data to a point in time (by specifying the RestoreTime parameter).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance storage capacity of the new instance. Unit: GB. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
+        /// <para>The storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// <remarks>
-        /// <para>The disk space of the new instance cannot be smaller than that of the original instance.</para>
+        /// <para>The storage capacity of the new instance cannot be less than that of the original instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The instance storage type of the new instance. Valid values:</para>
+        /// <para>The storage type of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd/ephemeral_ssd</b>: local SSD.</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD cloud disk.</description></item>
-        /// <item><description><b>cloud_essd</b>: Enterprise SSD (ESSD) cloud disk.</description></item>
+        /// <item><description><b>local_ssd/ephemeral_ssd</b>: local SSD</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+        /// <item><description><b>cloud_essd</b>: ESSD</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The database name. To restore data to a new instance, use the following format: <c>Original database name 1,New database name 2</c>.</para>
+        /// <para>The names of the databases. When you restore data to a new instance, specify the names in the <c>Original database name 1,New database name 2</c> format.</para>
         /// <remarks>
         /// <para>To restore data to an existing instance, see <a href="https://help.aliyun.com/document_detail/2628854.html">CopyDatabaseBetweenInstances</a>.</para>
         /// </remarks>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b>: classic network.</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
+        /// <item><description><b>Classic</b>: classic network</description></item>
+        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC)</description></item>
         /// </list>
-        /// <para>Default value: the network type of the original instance.</para>
+        /// <para>The default value is the network type of the original instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The billing method of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,13 +121,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration of the new instance. Valid values:</para>
+        /// <para>The subscription period of the new subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: year.</description></item>
-        /// <item><description><b>Month</b>: month.</description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically assigns an IP address based on the values of <b>VPCId</b> and <b>VSwitchId</b>.</para>
+        /// <para>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.XX.XX.69</para>
@@ -152,10 +152,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
-        /// <para>If you specify this parameter, the <b>DBInstanceId</b> parameter is required.</para>
+        /// <para>The point in time to which you want to restore data. The point in time must be within the backup retention period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
+        /// <para>When you specify this parameter, the <b>DBInstanceId</b> parameter is required.</para>
         /// <remarks>
-        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
+        /// <para>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the target instance.</para>
+        /// <para>The ID of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp17****</para>
@@ -178,11 +178,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The subscription duration of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the value of <b>UsedTime</b> ranges from <b>1 to 3</b>.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the value of <b>UsedTime</b> ranges from <b>1 to 9</b>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>3</b>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>9</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the new instance. Separate multiple values with commas (,).</para>
+        /// <para>The vSwitch ID of the new instance. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-****</para>

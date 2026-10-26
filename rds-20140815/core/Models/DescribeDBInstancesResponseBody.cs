@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. If the results are displayed on multiple pages, pass this value in the <b>NextToken</b> parameter in the next request to display the next page.</para>
+        /// <para>The pagination token. If the response is paginated, you can pass this value to the <b>NextToken</b> parameter in the next call to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>o7PORW5o2TJg****</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The page number.</para>
         /// <remarks>
-        /// <para>If you specify the <b>MaxResults</b> or <b>NextToken</b> parameter, only <b>1</b> is returned for this parameter. You can ignore this return value.</para>
+        /// <para>If you specify the <b>MaxResults</b> or <b>NextToken</b> parameter, this parameter returns only <b>1</b> and can be ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The total number of records.</para>
         /// <remarks>
-        /// <para>If you specify the <b>MaxResults</b> or <b>NextToken</b> parameter, only the number of records on the current page is returned for this parameter. You can ignore this return value.</para>
+        /// <para>If you specify the <b>MaxResults</b> or <b>NextToken</b> parameter, this parameter returns only the number of records on the current page and can be ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeRenewalPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRenewalPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The promotion information.</para>
+            /// <para>The pricing information.</para>
             /// </summary>
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
             public class DescribeRenewalPriceResponseBodyPriceInfoActivityInfo : TeaModel {
                 /// <summary>
-                /// <para>The error description.</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error description</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The currency unit.</para>
+            /// <para>The currency.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CNY</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discount amount.</para>
+            /// <para>The discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The final price, which is the original price minus the discount amount.</para>
+            /// <para>The final price, which is the original price minus the discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC9F4EF6-D038-4405-B497-1F48E722C9F2</para>

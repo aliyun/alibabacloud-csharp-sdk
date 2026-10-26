@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyAccountSecurityPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The custom password policy for ApsaraDB RDS for SQL Server accounts. The following policies are supported:</para>
+        /// <para>The custom account password policy for ApsaraDB RDS for SQL Server. Supported policies:</para>
         /// <list type="bullet">
-        /// <item><description>Set only the maximum password age. After this period expires, the password must be changed: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum age}}</c></description></item>
-        /// <item><description>Set only the minimum password age. The password cannot be changed again within this period: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the minimum age}}</c></description></item>
-        /// <item><description>Set both the maximum and minimum password ages: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum age, &quot;MinimumPasswordAge&quot;: Specify the minimum age}}</c></description></item>
+        /// <item><description>Set only the maximum password age. The password must be changed after this period: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: &lt;maximum_age&gt;}}</c></description></item>
+        /// <item><description>Set only the minimum password age. The password cannot be changed again within this period: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MinimumPasswordAge&quot;: &lt;minimum_age&gt;}}</c></description></item>
+        /// <item><description>Set both the maximum and minimum password ages: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: &lt;maximum_age&gt;, &quot;MinimumPasswordAge&quot;: &lt;minimum_age&gt;}}</c></description></item>
         /// </list>
         /// <remarks>
         /// <para>The minimum password age (valid values: 0 to 998) cannot be greater than the maximum password age (valid values: 0 to 999).</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

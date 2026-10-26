@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The successful event ID.</para>
+        /// <para>The success event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234221</para>

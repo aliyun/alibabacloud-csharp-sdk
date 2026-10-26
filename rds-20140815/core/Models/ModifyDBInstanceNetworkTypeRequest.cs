@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceNetworkTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for which the classic network address reservation is retained. Valid values: <b>1 to 120</b>. Unit: days. Default value: <b>7</b>.</para>
+        /// <para>The number of days for the classic network address reservation. Valid values: <b>1</b> to <b>120</b>. Unit: days. Default value: <b>7</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required if <b>RetainClassic</b> is set to <b>True</b>.</para>
+        /// <para>This parameter is required when the <b>RetainClassic</b> parameter is set to <b>True</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target network type. Set the value to <b>VPC</b>.</para>
+        /// <para>The target network type. Set the value to <b>VPC</b>, which indicates a virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Settings for the internal network IP address of the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the values of <b>VPCId</b> and <b>VSwitchId</b>.</para>
+        /// <para>Settings for the internal network IP address of the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.10.XX.XX</para>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the read/write splitting endpoint of the classic network type is retained for address reservation. Valid values: <b>1 to 120</b>. Unit: days. Default value: <b>7</b>.</para>
+        /// <para>The number of days for the classic network address reservation for read/write splitting. Valid values: <b>1</b> to <b>120</b>. Unit: days. Default value: <b>7</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the instance has a classic network type read/write splitting endpoint and <b>RetainClassic</b> is set to <b>True</b>.</para>
+        /// <para>This parameter takes effect only when the instance has a read/write splitting address of the classic network type and the <b>RetainClassic</b> parameter is set to <b>True</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ReadWriteSplittingClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// <para>Settings for the internal network read/write splitting IP address of the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the values of <b>VPCId</b> and <b>VSwitchId</b>.</para>
+        /// <para>Settings for the internal network IP address of the read/write splitting endpoint for the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the instance has a classic network type read/write splitting endpoint.</para>
+        /// <para>This parameter takes effect only when the instance has a read/write splitting address of the classic network type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to retain the classic network endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: The classic network endpoint is retained.</description></item>
-        /// <item><description><b>False</b> (default): The classic network endpoint is not retained.</description></item>
+        /// <item><description><b>True</b>: Retains the classic network endpoint.</description></item>
+        /// <item><description><b>False</b>: Does not retain the classic network endpoint. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RetainClassic { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6f7l4fg90****</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. This parameter is required if <b>VPCId</b> is specified.</para>
+        /// <para>The ID of the vSwitch. This parameter is required when the <b>VPCId</b> parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6adz52c2p****</para>

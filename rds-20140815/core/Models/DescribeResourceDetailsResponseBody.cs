@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupSize { get; set; }
 
         /// <summary>
-        /// <para>The disk capacity.</para>
+        /// <para>The storage capacity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DbInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The name of the database proxy instance.</para>
+        /// <para>The name of the proxy instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mr-n1m1wjrylfolvrt67s</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The used storage space, which consists of the space occupied by data files and log files. Unit: bytes. A value of -1 indicates that no data is available.</para>
+        /// <para>The used storage space, which consists of the space occupied by data files and logs. Unit: bytes. A value of -1 indicates that no data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4871684096</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The RDS whitelist group specifications.</para>
+        /// <para>The whitelist group specifications.</para>
         /// </summary>
         [NameInMap("RdsEcsSecurityGroupRel")]
         [Validation(Required=false)]
@@ -129,12 +129,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the instance. Separate multiple entries with commas (,). Each entry must be unique. A maximum of 1,000 entries are supported. The following two formats are supported:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple entries with commas (,). Duplicate entries are not allowed. You can add up to 1,000 entries. The following two formats are supported:</para>
         /// <list type="bullet">
         /// <item><description>IP address format, such as 10.10.XX.XX.</description></item>
-        /// <item><description>CIDR format, such as 10.10.XX.XX/24, where 24 indicates the length of the prefix in the IP address. The prefix length ranges from 1 to 32.</description></item>
+        /// <item><description>CIDR format, such as 10.10.XX.XX/24. In this format, 24 indicates the length of the prefix in the IP address, and the value ranges from 1 to 32.</description></item>
         /// </list>
-        /// <para>If this parameter is not specified, the whitelist information of the default group of the original instance is used.</para>
+        /// <para>If this parameter is not specified, the default whitelist of the original instance is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.1.14,172.16.1.13,172.16.1.44,172.16.1.43,172.16.1.74,172.16.1.73</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <remarks>
-        /// <para>The vSwitch must belong to the same zone as the ApsaraDB RDS instance.</para>
+        /// <para>The vSwitch must reside in the same zone as the ApsaraDB RDS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-wz9rbibex7v0lxbeyo6at</para>

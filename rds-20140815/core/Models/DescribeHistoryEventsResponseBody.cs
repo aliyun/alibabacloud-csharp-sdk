@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event list.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public DescribeHistoryEventsResponseBodyItemsData Data { get; set; }
             public class DescribeHistoryEventsResponseBodyItemsData : TeaModel {
                 /// <summary>
-                /// <para>The cloud service type of the application group. Valid values:</para>
+                /// <para>The type of the cloud service for the application group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>web</b>: web application.</description></item>
-                /// <item><description><b>native</b>: on-premises application.</description></item>
+                /// <item><description><b>web</b>: web application</description></item>
+                /// <item><description><b>native</b>: native application</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CmsProduct { get; set; }
 
                 /// <summary>
-                /// <para>The database type.</para>
+                /// <para>The type of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DetailImpact { get; set; }
 
                 /// <summary>
-                /// <para>The instance operation details.</para>
+                /// <para>The details of the instance operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DetailReason { get; set; }
 
                 /// <summary>
-                /// <para>The alert end time.</para>
+                /// <para>The end time of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-06T11:46:01Z</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The system event categorization. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Exception</b>: abnormal event.</description></item>
-                /// <item><description><b>Optimize</b>: optimization events.</description></item>
-                /// <item><description><b>Notification</b>: notification event.</description></item>
-                /// <item><description><b>Maintenance</b>: scheduled maintenance event.</description></item>
+                /// <item><description><b>Exception</b>: abnormal event</description></item>
+                /// <item><description><b>Optimize</b>: optimization events</description></item>
+                /// <item><description><b>Notification</b>: notification event</description></item>
+                /// <item><description><b>Maintenance</b>: scheduled maintenance event</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventDetail { get; set; }
 
                 /// <summary>
-                /// <para>The event ID.</para>
+                /// <para>The ID of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>669036</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventId { get; set; }
 
                 /// <summary>
-                /// <para>The event impact overview.</para>
+                /// <para>The impact overview of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
@@ -136,9 +136,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The event level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>INFO</b>: notification.</description></item>
-                /// <item><description><b>WARN</b>: warning.</description></item>
-                /// <item><description><b>CRITICAL</b>: critical.</description></item>
+                /// <item><description><b>INFO</b>: information</description></item>
+                /// <item><description><b>WARN</b>: warning</description></item>
+                /// <item><description><b>CRITICAL</b>: critical</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -159,14 +159,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventReason { get; set; }
 
                 /// <summary>
-                /// <para>The event status. Valid values:</para>
+                /// <para>The status of the event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Inquiring</b>: inquiring.</description></item>
-                /// <item><description><b>Scheduled</b>: scheduled.</description></item>
-                /// <item><description><b>Running</b>: running.</description></item>
-                /// <item><description><b>Succeed</b>: completed.</description></item>
-                /// <item><description><b>Failed</b>: failed.</description></item>
-                /// <item><description><b>Canceled</b>: canceled.</description></item>
+                /// <item><description><b>Inquiring</b>: inquiring</description></item>
+                /// <item><description><b>Scheduled</b>: scheduled</description></item>
+                /// <item><description><b>Running</b>: running</description></item>
+                /// <item><description><b>Succeed</b>: succeeded</description></item>
+                /// <item><description><b>Failed</b>: failed</description></item>
+                /// <item><description><b>Canceled</b>: canceled</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -180,13 +180,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <para>The system event type. Valid values: </para>
                 /// <list type="bullet">
                 /// <item><description><b>SystemMaintenance.Reboot</b>: The instance is restarted due to system maintenance.</description></item>
-                /// <item><description><b>SystemMaintenance.Redeploy</b>: The instance is redeployed due to system maintenance.</description></item>
-                /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system error.</description></item>
-                /// <item><description><b>SystemFailure.Redeploy</b>: The instance is redeployed due to a system error.</description></item>
-                /// <item><description><b>SystemFailure.Delete</b>: The instance is released due to an instance creation failure.</description></item>
-                /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance error.</description></item>
-                /// <item><description><b>InstanceExpiration.Stop</b>: The instance is stopped due to subscription expiration.</description></item>
-                /// <item><description><b>InstanceExpiration.Delete</b>: The instance is released due to subscription expiration.</description></item>
+                /// <item><description><b>SystemMaintenance.Redeploy</b>: The instance undergoes redeployment due to system maintenance.</description></item>
+                /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system fault.</description></item>
+                /// <item><description><b>SystemFailure.Redeploy</b>: The instance undergoes redeployment due to a system fault.</description></item>
+                /// <item><description><b>SystemFailure.Delete</b>: The instance is released because instance creation failed.</description></item>
+                /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance fault.</description></item>
+                /// <item><description><b>InstanceExpiration.Stop</b>: The subscription instance is stopped due to expiration.</description></item>
+                /// <item><description><b>InstanceExpiration.Delete</b>: The subscription instance is released due to expiration.</description></item>
                 /// <item><description><b>AccountUnbalanced.Stop</b>: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
                 /// <item><description><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance is released due to an overdue payment.</description></item>
                 /// </list>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the event was created.</para>
+                /// <para>The creation time of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-17T16:05:40Z</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The time when the event was last updated.</para>
+                /// <para>The update time of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-12-14T09:44:39.000+0000</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dhimgsearch</para>
@@ -259,10 +259,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the event is closed. Valid values:</para>
+                /// <para>Indicates whether the event is successfully closed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: closed.</description></item>
-                /// <item><description><b>1</b>: open.</description></item>
+                /// <item><description><b>0</b>: closed</description></item>
+                /// <item><description><b>1</b>: open</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? IsClosed { get; set; }
 
                 /// <summary>
-                /// <para>The product name.</para>
+                /// <para>The name of the product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -293,11 +293,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. Valid values:</para>
+                /// <para>The type of the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Instance</b>: instance resource.</description></item>
-                /// <item><description><b>Host</b>: host resource.</description></item>
-                /// <item><description><b>User</b>: user resource.</description></item>
+                /// <item><description><b>Instance</b>: instance</description></item>
+                /// <item><description><b>Host</b>: host</description></item>
+                /// <item><description><b>User</b>: user</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who owns the resource.</para>
+                /// <para>The ID of the user to which the resource belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16986832xxxxx</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4309</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The event source.</para>
+            /// <para>The source of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>loanBill</para>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The elapsed time of the query task. Unit: seconds.</para>
+            /// <para>The running duration of the query task. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1675232573125</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</para>

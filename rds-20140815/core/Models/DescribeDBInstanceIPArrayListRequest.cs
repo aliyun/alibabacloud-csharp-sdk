@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceIPArrayListRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b>: classic network in the enhanced whitelist mode.</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC) in the enhanced whitelist mode.</description></item>
-        /// <item><description><b>MIX</b>: general whitelist mode.</description></item>
+        /// <item><description><b>Classic</b>: the classic network in enhanced whitelist mode</description></item>
+        /// <item><description><b>VPC</b>: the VPC in enhanced whitelist mode</description></item>
+        /// <item><description><b>MIX</b>: the standard whitelist mode</description></item>
         /// </list>
-        /// <para>By default, the IP whitelist of all network types is returned.</para>
+        /// <para>By default, the IP addresses in the whitelists of all network types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>

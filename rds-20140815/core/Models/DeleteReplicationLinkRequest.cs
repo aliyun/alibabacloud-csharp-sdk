@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the data synchronization link between the primary instance and the disaster recovery instance and promote the disaster recovery instance to a primary instance. Valid values:</para>
+        /// <para>Specifies whether to delete the data synchronization link between the primary instance and the disaster recovery instance, and promote the disaster recovery instance to a primary instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.</description></item>

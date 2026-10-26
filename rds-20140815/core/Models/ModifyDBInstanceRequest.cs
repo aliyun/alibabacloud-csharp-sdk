@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to automatically use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Automatically uses coupons.</description></item>
-        /// <item><description><b>false</b>: Does not automatically use coupons.</description></item>
+        /// <item><description><b>true</b> (default): Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After a coupon is used, the amount deducted by the coupon is not refunded if you downgrade the instance specifications.</para>
+        /// <para>After a coupon is used, if a downgrade is required, the amount deducted by the coupon will not be refunded.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2340501.html">I/O burst feature for premium performance disks</a>. Valid values:</para>
+        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2340501.html">I/O performance burst feature for Premium ESSD cloud disks</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>
         /// <item><description><b>false</b>: Disabled.</description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">cold data archiving feature</a> for general-purpose cloud disks. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">data archiving feature for general cloud disks</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>&lt;props=&quot;china&quot;&gt;<b>true</b>: Enabled.</para>
         /// </description></item>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/26312.html">target storage capacity</a>, in GB. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the available storage capacity range for the target instance type.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/26312.html">target storage capacity</a>. Unit: GB. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the available storage capacity range for the target instance type.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You must specify at least one of this parameter and the <b>DBInstanceClass</b> parameter.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> to query the current storage capacity of the instance.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to view the current storage capacity of the instance.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>general_essd</b>: premium performance disk (recommended)</description></item>
+        /// <item><description><b>general_essd</b>: Premium ESSD (recommended)</description></item>
         /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
         /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
         /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<ModifyDBInstanceRequestDBNodes> DBNodes { get; set; }
         public class ModifyDBInstanceRequestDBNodes : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the node, which is used to specify a node.</para>
+            /// <para>The unique identifier of the node, which is used to specify the node.</para>
             /// <remarks>
             /// <para>This parameter is valid only for Cluster Edition instances.</para>
             /// </remarks>
@@ -148,11 +148,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Master</b>: primary node.</description></item>
-            /// <item><description><b>Slave</b>: secondary node.</description></item>
+            /// <item><description><b>Master</b>: Primary node.</description></item>
+            /// <item><description><b>Slave</b>: Secondary node.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>For Cluster Edition instances, you can leave this parameter empty and specify the NodeId parameter to identify the node.</para>
+            /// <para>For Cluster Edition instances, this parameter is not required. You can specify the node by using the NodeId parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -185,9 +185,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The type of specification change. Valid values:</para>
+        /// <para>The type of specification change for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Up</b> (default): Upgrades a subscription instance or upgrades/downgrades a pay-as-you-go instance.</description></item>
+        /// <item><description><b>Up</b> (default): Upgrades a subscription instance, or upgrades or downgrades a pay-as-you-go instance.</description></item>
         /// <item><description><b>Down</b>: Downgrades a subscription instance.</description></item>
         /// </list>
         /// 
@@ -199,14 +199,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The time when the new configurations take effect. Valid values:</para>
+        /// <para>The effective period for the new configurations. Valid values:</para>
         /// <remarks>
-        /// <para><b>Changing some configurations may affect the instance</b>. Read the impact section in the <a href="https://help.aliyun.com/document_detail/96061.html">feature documentation</a> before you configure this parameter. Perform the operation during off-peak hours.</para>
+        /// <para><b>Changing some configurations may affect the instance</b>. Read the <a href="https://help.aliyun.com/document_detail/96061.html">Impact section in the feature documentation</a> carefully before you configure this parameter, and perform the operation during off-peak hours.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b> (default): The new configurations take effect immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: The new configurations take effect during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</description></item>
-        /// <item><description><b>ScheduleTime</b>: The new configurations take effect at a specified time. The specified time must be at least 12 hours later than the current time. The actual switchover time follows the formula: EffectiveTime = ScheduleTime + SwitchTime.</description></item>
+        /// <item><description><b>Immediate</b> (default): Takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: Takes effect within the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</description></item>
+        /// <item><description><b>ScheduleTime</b>: Specifies a time for the switchover. The time must be at least 12 hours later than the current time, and the actual switch time follows the formula: EffectiveTime = ScheduleTime + SwitchTime.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE) feature</a> for premium performance disks. Valid values:</para>
+        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE) feature for Premium ESSD cloud disks</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Enabled.</description></item>
         /// <item><description><b>0</b>: Disabled.</description></item>
@@ -249,9 +249,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The parameters and their values. All parameter values are of the STRING type. You can call DescribeParameterTemplates to query parameter names and values.</para>
+        /// <para>The parameters and their values. All parameter values are of the string type. You can call the DescribeParameterTemplates operation to query parameter names and values.</para>
         /// <remarks>
-        /// <para>If you specify the <b>ParameterGroupId</b> parameter and both the ParameterGroupId and Parameters parameters modify the same parameter, the modification specified by the Parameters parameter takes precedence.</para>
+        /// <para>If you specify the <b>ParameterGroupId</b> parameter and a parameter is modified by both the ParameterGroupId and Parameters parameters, the modification in the Parameters parameter takes precedence.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Parameters")]
@@ -287,9 +287,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scheduled time for executing the parameter modification. The EffectiveTime parameter must be set to ScheduleTime. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>Specifies the execution time for modifying the parameter. This parameter is required when EffectiveTime is set to ScheduleTime. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
         /// <remarks>
-        /// <para>The specified time must be later than the current time (the time when the call is made).</para>
+        /// <para>The time must be later than the current time (the time when the API call is executed).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -300,8 +300,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/126002.html">minor engine version</a> of the PostgreSQL instance. If the specification change fails because the current minor engine version is not supported, specify the minor engine version to <b>upgrade the minor engine version during the specification change</b>.</para>
-        /// <para>Format: <c>rds_postgres_&lt;major version&gt;00_&lt;minor version&gt;</c>. Example for version 12 with minor version 20200830: <c>rds_postgres_1200_20200830</c>.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/126002.html">minor engine version</a> of the PostgreSQL instance. When you change the instance type and an error indicates that the minor engine version is not supported, you must specify this parameter <b>to upgrade the minor engine version during the instance type change</b>.</para>
+        /// <para>Format: <c>rds_postgres_&lt;Major version number&gt;00_&lt;Minor version number&gt;</c>. Example for version 12 on 20200830: <c>rds_postgres_1200_20200830</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_postgres_1200_20200830</para>

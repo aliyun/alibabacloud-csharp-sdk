@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The user backup ID.</para>
+        /// <para>The ID of the user backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>603524****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? BackupId { get; set; }
 
         /// <summary>
-        /// <para>The cross-region backup file ID.</para>
+        /// <para>The ID of the cross-region backup file.</para>
         /// <remarks>
-        /// <para>You must specify either <b>CrossBackupId</b> or the time range parameters (<b>StartTime</b> and <b>EndTime</b>).</para>
+        /// <para>You must specify either <b>CrossBackupId</b> or the start and end time parameters (<b>StartTime</b> and <b>EndTime</b>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</para>
+        /// <para>The end time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>For non-UTC+0 time zones, subtract 8 hours from the actual time before passing the value.</para>
+        /// <para>If the time zone is not UTC+0, you must subtract 8 hours from the actual time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -127,9 +127,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>For non-UTC+0 time zones, subtract 8 hours from the actual time before passing the value.</para>
+        /// <para>If the time zone is not UTC+0, you must subtract 8 hours from the actual time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

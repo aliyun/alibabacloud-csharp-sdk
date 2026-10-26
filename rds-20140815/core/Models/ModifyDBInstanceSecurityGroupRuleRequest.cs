@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceSecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports for the transport layer protocol (TCP/UDP) that the security group opens.</para>
-        /// <para>Valid values: 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</para>
+        /// <para>The range of destination ports for the transport layer protocol (TCP or UDP) that is supported by the security group.</para>
+        /// <para>Valid values: 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group rule ID. You can call <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> to obtain the security group rule ID.</para>
+        /// <para>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityGroupRuleId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address range. CIDR format and IPv4 format are supported.</para>
+        /// <para>The source IP address range. IP address ranges in CIDR format and IPv4 format are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

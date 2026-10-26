@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The High-availability Mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RPO</b>: Data consistency is preferred. The instance prioritizes data reliability to minimize data loss. Use RPO mode if you have high requirements for data consistency.</description></item>
-        /// <item><description><b>RTO</b>: Instance availability is preferred. The instance recovers services as soon as possible to maximize available time. Use RTO mode if you have high requirements for database uptime.</description></item>
+        /// <item><description><b>RPO</b>: Data consistency is prioritized. The instance ensures data reliability to minimize data loss. This mode is suitable for users who have high requirements for data consistency.</description></item>
+        /// <item><description><b>RTO</b>: Instance availability is prioritized. The instance recovers services as quickly as possible to maximize uptime. This mode is suitable for users who have high requirements for database uptime.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only for ApsaraDB RDS for MySQL instances.</para>
+        /// <para>This parameter is returned only for MySQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,12 +89,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The data replication mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Sync</b>: synchronous replication</description></item>
-        /// <item><description><b>Semi-sync</b>: semi-synchronous replication</description></item>
-        /// <item><description><b>Async</b>: asynchronous replication</description></item>
+        /// <item><description><b>Sync</b>: Synchronous.</description></item>
+        /// <item><description><b>Semi-sync</b>: Semi-synchronous.</description></item>
+        /// <item><description><b>Async</b>: Asynchronous.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only for ApsaraDB RDS for MySQL instances.</para>
+        /// <para>This parameter is returned only for MySQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

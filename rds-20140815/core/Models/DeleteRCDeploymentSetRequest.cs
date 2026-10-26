@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteRCDeploymentSetRequest : TeaModel {
         /// <summary>
-        /// <para>The deployment set ID.</para>
+        /// <para>The ID of the deployment set.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

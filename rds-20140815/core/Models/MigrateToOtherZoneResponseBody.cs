@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The order ID. This parameter is applicable only to ApsaraDB RDS for MySQL instances.</para>
+        /// <para>The order ID. This parameter is only applicable to ApsaraDB RDS for MySQL instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21334157599****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AttachWhitelistTemplateToInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InsName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The whitelist template ID. You can call DescribeAllWhitelistTemplate to obtain the ID.</para>
+        /// <para>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

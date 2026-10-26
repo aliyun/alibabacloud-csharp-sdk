@@ -23,21 +23,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderParams { get; set; }
 
         /// <summary>
-        /// <para>The price information.</para>
+        /// <para>The pricing information.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The price information.</para>
+            /// <para>The pricing information.</para>
             /// </summary>
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
             public class DescribePriceResponseBodyPriceInfoActivityInfo : TeaModel {
                 /// <summary>
-                /// <para>The error description.</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error description</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the request was successful.</para>
+                /// <para>Indicates whether the request is successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discount.</para>
+            /// <para>The discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The estimated hourly fee calculated based on the maximum RCU selected by the user.</para>
+            /// <para>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The estimated hourly fee calculated based on the minimum RCU selected by the user.</para>
+            /// <para>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2**</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The final price, which is the original price minus the discount.</para>
+            /// <para>The final price, which is the original price minus the discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10508</para>
@@ -213,14 +213,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The serverless price information.</para>
+        /// <para>The pricing information of the serverless instance.</para>
         /// </summary>
         [NameInMap("ServerlessPrice")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyServerlessPrice ServerlessPrice { get; set; }
         public class DescribePriceResponseBodyServerlessPrice : TeaModel {
             /// <summary>
-            /// <para>The discount amount for the maximum RCU.</para>
+            /// <para>The discount amount for the maximum number of RCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**.*</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUDiscountMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The discount amount for the minimum RCU.</para>
+            /// <para>The discount amount for the minimum number of RCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1*.*</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUDiscountMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The original price for the maximum RCU.</para>
+            /// <para>The original price for the maximum number of RCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2**.*</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUOriginalMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The original price for the minimum RCU.</para>
+            /// <para>The original price for the minimum number of RCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3*.*</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? RCUOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The original price of the disk.</para>
+            /// <para>The original price of the cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1*</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? StorageOriginalAmount { get; set; }
 
             /// <summary>
-            /// <para>The maximum total price before discount.</para>
+            /// <para>The maximum total original price before discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2**.*</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TotalOriginalMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The minimum total price before discount.</para>
+            /// <para>The minimum total original price before discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2*.*</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TotalOriginalMinAmount { get; set; }
 
             /// <summary>
-            /// <para>The trade price for the maximum RCU.</para>
+            /// <para>The final price for the maximum number of RCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**.*</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The trade price for the minimum RCU.</para>
+            /// <para>The final price for the minimum number of RCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2*.*</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The discount price of the disk.</para>
+            /// <para>The discount amount for the cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.*</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? ShowDiscount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee calculated based on the maximum RCU selected by the user.</para>
+        /// <para>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2**</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public float? TradeMaxRCUAmount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee calculated based on the minimum RCU selected by the user.</para>
+        /// <para>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1**</para>

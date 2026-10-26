@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC.</para>
+            /// <para>The creation time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-25T06:57:41Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time in UTC.</para>
+            /// <para>The modification time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-01T06:39:51Z</para>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReplicationInfo { get; set; }
 
             /// <summary>
-            /// <para>The synchronization status. Valid values:</para>
+            /// <para>The synchronization state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>steaming</b>: Synchronizing.</description></item>
-            /// <item><description><b>finish</b>: Completed.</description></item>
-            /// <item><description><b>disconnect</b>: Disconnected.</description></item>
+            /// <item><description><b>steaming</b>: Synchronization is in progress.</description></item>
+            /// <item><description><b>finish</b>: Synchronization is completed.</description></item>
+            /// <item><description><b>disconnect</b>: Synchronization is disconnected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The category of the source instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>other: Other.</description></item>
-            /// <item><description>aliyunRDS: ApsaraDB RDS instance.</description></item>
+            /// <item><description>other: The source instance is of another type.</description></item>
+            /// <item><description>aliyunRDS: The source instance is an ApsaraDB RDS instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,12 +166,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The task stage. Valid values:</para>
+            /// <para>The node stage. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>precheck</b>: Dry run.</description></item>
-            /// <item><description><b>basebackup</b>: Basic backup.</description></item>
-            /// <item><description><b>startup</b>: Startup.</description></item>
-            /// <item><description><b>increment</b>: Incremental synchronization.</description></item>
+            /// <item><description><b>precheck</b>: The node is in the dry run stage.</description></item>
+            /// <item><description><b>basebackup</b>: The node is in the basic backup stage.</description></item>
+            /// <item><description><b>startup</b>: The node is in the startup stage.</description></item>
+            /// <item><description><b>increment</b>: The node is in the incremental synchronization stage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,9 +184,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b>: Succeeded.</description></item>
-            /// <item><description><b>failure</b>: Failed.</description></item>
-            /// <item><description><b>running</b>: Running.</description></item>
+            /// <item><description><b>success</b>: The task is successful.</description></item>
+            /// <item><description><b>failure</b>: The task failed.</description></item>
+            /// <item><description><b>running</b>: The task is running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,8 +199,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>create</b>: Create a replication link.</description></item>
-            /// <item><description><b>create-dryrun</b>: Dry run for creating a replication link.</description></item>
+            /// <item><description><b>create</b>: Creates a synchronization link.</description></item>
+            /// <item><description><b>create-dryrun</b>: Performs a precheck for creating a synchronization link.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

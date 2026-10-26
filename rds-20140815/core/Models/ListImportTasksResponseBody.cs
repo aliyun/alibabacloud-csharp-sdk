@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<ListImportTasksResponseBodyItems> Items { get; set; }
         public class ListImportTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time in UTC. The time follows the format of YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the target instance.</para>
+            /// <para>The ID of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp*****</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The number of entries per page. Valid values: <b>1 to 100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// <remarks>
-        /// <para>If you specify this parameter, the <b>PageSize</b> and <b>PageNumber</b> parameters are not available.</para>
+        /// <para>If you specify this parameter, the <b>PageSize</b> and <b>PageNumber</b> parameters are unavailable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

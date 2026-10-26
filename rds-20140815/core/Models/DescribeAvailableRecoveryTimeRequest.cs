@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableRecoveryTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</para>
+        /// <para>The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the ID of the backup set.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

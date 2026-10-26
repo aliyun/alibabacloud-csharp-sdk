@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The VNC logon URL.</para>
         /// <remarks>
-        /// <para>Notice: The VNC logon URL is time-sensitive and valid for 15 seconds. If you do not use the URL within 15 seconds after the call succeeds, the URL automatically expires. In this case, call the operation again to obtain a new URL.</para>
+        /// <para>Notice: The VNC logon URL is time-sensitive and valid for 15 seconds. If the URL is not used within 15 seconds after a successful API call, it automatically expires. You must call the API operation again to obtain a new URL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

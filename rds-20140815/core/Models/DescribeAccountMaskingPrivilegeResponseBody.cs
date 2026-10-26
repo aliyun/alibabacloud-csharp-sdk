@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeAccountMaskingPrivilegeResponseBodyData Data { get; set; }
         public class DescribeAccountMaskingPrivilegeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of user encryption or data masking permissions.</para>
+            /// <para>The list of user encryption or masking permissions.</para>
             /// </summary>
             [NameInMap("UserPrivilege")]
             [Validation(Required=false)]
             public List<DescribeAccountMaskingPrivilegeResponseBodyDataUserPrivilege> UserPrivilege { get; set; }
             public class DescribeAccountMaskingPrivilegeResponseBodyDataUserPrivilege : TeaModel {
                 /// <summary>
-                /// <para>The permission expiration time in UTC format.</para>
+                /// <para>The expiration time of the permission, in UTC format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-22T02:01:20Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The permission type. The value restrictedAccess indicates restricted access (data masking required).</para>
+                /// <para>The permission type. A value of restrictedAccess indicates restricted access, which requires data masking.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>restrictedAccess</para>

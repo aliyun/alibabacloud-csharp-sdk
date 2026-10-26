@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The maximum adjustable CPU ratio.</para>
+            /// <para>The maximum adjustable ratio for the CPU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuAdjustableMaxValue { get; set; }
 
             /// <summary>
-            /// <para>The CPU usage.</para>
+            /// <para>The CPU increase ratio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIopsIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The maximum adjustable memory ratio.</para>
+            /// <para>The maximum adjustable ratio for the memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MemoryIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of the instance.</para>
+            /// <para>The number of CPUs of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string OriginMaxIops { get; set; }
 
             /// <summary>
-            /// <para>The actual memory usage. Unit: MB.</para>
+            /// <para>The actual memory used. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</para>

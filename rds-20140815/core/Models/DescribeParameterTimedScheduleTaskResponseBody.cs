@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduled task for parameter modification.</para>
+            /// <para>The ID of the scheduled parameter modification task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27056921</para>

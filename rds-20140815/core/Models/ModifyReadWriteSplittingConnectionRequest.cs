@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyReadWriteSplittingConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the read/write splitting endpoint. The prefix must be unique and can contain lowercase letters and hyphens (-). It must start with a letter and cannot exceed 30 characters in length.</para>
+        /// <para>The prefix of the read/write splitting endpoint. The prefix must be unique and can contain only lowercase letters and hyphens. It must start with a letter and be up to 30 characters in length.</para>
         /// <remarks>
-        /// <para>By default, the prefix is in the format of &quot;instance name + rw&quot;.</para>
+        /// <para>By default, the prefix consists of the instance name and the &quot;rw&quot; string.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The primary instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the primary instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The read weight distribution mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: Read weights are automatically assigned based on instance specifications.</description></item>
-        /// <item><description><b>Custom</b>: Read weights are manually assigned.</description></item>
+        /// <item><description><b>Standard</b>: automatically distributes weights based on instance specifications.</description></item>
+        /// <item><description><b>Custom</b>: uses custom weights.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify at least one of <b>MaxDelayTime</b> or <b>DistributionType</b>.</para>
+        /// <para>You must specify at least one of the <b>MaxDelayTime</b> and <b>DistributionType</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DistributionType { get; set; }
 
         /// <summary>
-        /// <para>The latency threshold, in seconds. If the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance. If you do not specify this parameter, the current value is retained.</para>
+        /// <para>The latency threshold, in seconds. If the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance. If you do not specify this parameter, the original value is retained.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The <b>MaxDelayTime</b> parameter is not applicable to SQL Server 2017 on RDS Cluster Edition instances.</description></item>
-        /// <item><description>You must specify at least one of <b>MaxDelayTime</b> or <b>DistributionType</b>.</description></item>
+        /// <item><description>The <b>MaxDelayTime</b> parameter does not apply to SQL Server 2017 Cluster Edition instances.</description></item>
+        /// <item><description>You must specify at least one of the <b>MaxDelayTime</b> and <b>DistributionType</b> parameters.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -93,15 +93,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The read weight distribution. This parameter specifies the read request weights for the primary instance and read-only instances. The value must be a multiple of 100 and cannot exceed 10000.</para>
+        /// <para>The read weights of the primary and read-only instances. The weight value must be a multiple of 100 and can be up to 10000.</para>
         /// <list type="bullet">
         /// <item><description>Format for ApsaraDB RDS instances: <c>{&quot;&lt;Read-only instance ID&gt;&quot;:&lt;Weight&gt;,&quot;master&quot;:&lt;Weight&gt;,&quot;slave&quot;:&lt;Weight&gt;}</c></description></item>
-        /// <item><description>Format for MyBASE instances: <c>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</c></description></item>
+        /// <item><description>Format for MyBase instances: <c>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</c></description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This parameter is required when <b>DistributionType</b> is set to <b>Custom</b>.</description></item>
-        /// <item><description>This parameter is invalid when <b>DistributionType</b> is set to <b>Standard</b>.</description></item>
+        /// <item><description>This parameter does not take effect when <b>DistributionType</b> is set to <b>Standard</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 

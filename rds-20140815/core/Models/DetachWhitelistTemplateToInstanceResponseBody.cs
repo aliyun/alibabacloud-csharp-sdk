@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client fault.</description></item>
-        /// <item><description><b>401</b>: Authentication failed.</description></item>
-        /// <item><description><b>404</b>: Request page not found.</description></item>
+        /// <item><description><b>401</b>: Failed to authenticate.</description></item>
+        /// <item><description><b>404</b>: The requested page is not found.</description></item>
         /// <item><description><b>500</b>: Server fault.</description></item>
         /// </list>
         /// 
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetachWhitelistTemplateToInstanceResponseBodyData Data { get; set; }
         public class DetachWhitelistTemplateToInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The return status. Valid values:</para>
+            /// <para>The returned status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ok</b>: Success.</description></item>
-            /// <item><description><b>error</b>: Error.</description></item>
+            /// <item><description><b>ok</b>: Successful.</description></item>
+            /// <item><description><b>error</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>200</b>: Successful.</description></item>
         /// <item><description><b>400</b>: Client error.</description></item>
         /// <item><description><b>500</b>: Server error.</description></item>
         /// </list>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>224DB9F7-3100-4899-AB9C-C938BCCB43E7</para>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Success.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

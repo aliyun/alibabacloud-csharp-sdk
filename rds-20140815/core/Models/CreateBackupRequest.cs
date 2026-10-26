@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// <para>The backup type. Valid values:</para>
+        /// <para>The backup method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Logical</b>: logical backup. Only MySQL instances with local disks support this type.</description></item>
-        /// <item><description><b>Physical</b>: physical backup. MySQL instances with local disks, SQL Server instances, and PostgreSQL instances support this type.</description></item>
-        /// <item><description><b>Snapshot</b>: snapshot backup. MySQL instances with cloud disks, SQL Server instances, PostgreSQL instances, and MariaDB instances support this type.</description></item>
+        /// <item><description><b>Logical</b>: logical backup (supported only for ApsaraDB RDS for MySQL instances with local SSDs)</description></item>
+        /// <item><description><b>Physical</b>: physical backup (supported for ApsaraDB RDS for MySQL instances with local SSDs, ApsaraDB RDS for SQL Server, and ApsaraDB RDS for PostgreSQL)</description></item>
+        /// <item><description><b>Snapshot</b>: snapshot backup (supported for ApsaraDB RDS for MySQL instances with cloud disks, ApsaraDB RDS for SQL Server, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for MariaDB)</description></item>
         /// </list>
         /// <para>Default value: <b>Physical</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When you use logical backup, the database must contain data (the data cannot be empty).</description></item>
-        /// <item><description>MariaDB instances support only snapshot backup. However, set this parameter to <b>Physical</b>.</description></item>
+        /// <item><description>When you use logical backup, the database must contain data.</description></item>
+        /// <item><description>ApsaraDB RDS for MariaDB instances support only snapshot backup, but you must set this parameter to <b>Physical</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><b>SQL Server</b>: When the BackupStrategy parameter is set to db, the BackupMethod parameter is set to Physical, and the BackupType parameter is set to FullBackup, you can specify the retention period of the backup set. Valid values: 7 to 730 days, or -1 (long-term retention (LTR)).</description></item>
-        /// <item><description><b>MySQL</b>: You can specify the retention period of the backup set. Valid values: 7 to 730 days, or -1 (long-term retention (LTR)).</description></item>
+        /// <item><description><b>SQL Server</b>: When the BackupStrategy parameter is set to db, the BackupMethod parameter is set to Physical, and the BackupType parameter is set to FullBackup, you can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</description></item>
+        /// <item><description><b>MySQL</b>: You can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>db</b>: single-database backup</description></item>
-        /// <item><description><b>instance</b>: instance backup</description></item>
+        /// <item><description><b>db</b>: database-level backup</description></item>
+        /// <item><description><b>instance</b>: instance-level backup</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>MySQL: The <b>BackupMethod</b> parameter is set to <b>Logical</b>.</description></item>
-        /// <item><description>SQL Server: The <b>BackupType</b> parameter is set to <b>FullBackup</b>.</description></item>
+        /// <item><description>For ApsaraDB RDS for MySQL: The <b>BackupMethod</b> parameter is set to <b>Logical</b>.</description></item>
+        /// <item><description>For ApsaraDB RDS for SQL Server: The <b>BackupType</b> parameter is set to <b>FullBackup</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupStrategy { get; set; }
 
         /// <summary>
-        /// <para>The backup method for SQL Server instances. Valid values:</para>
+        /// <para>The backup type for ApsaraDB RDS for SQL Server instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Auto</b> (default): automatically selects full backup or incremental backup.</description></item>
-        /// <item><description><b>FullBackup</b>: full backup.</description></item>
+        /// <item><description><b>Auto</b> (default): automatically selects full backup or incremental backup</description></item>
+        /// <item><description><b>FullBackup</b>: full backup</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when the <b>BackupMethod</b> parameter is set to <b>Physical</b>.</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

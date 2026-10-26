@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The precheck result.</para>
+        /// <para>The pre-check result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

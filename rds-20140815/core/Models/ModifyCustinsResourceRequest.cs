@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AdjustDeadline { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The original value. This parameter is required when <b>ResourceType</b> is set to <b>instance</b>.</para>
+        /// <para>The original value. This parameter is required when <b>resourcetype</b> is set to <b>instance</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreOriginalSpecification { get; set; }
 
         /// <summary>
-        /// <para>The target value. This parameter is applicable to target tracking rules and predictive rules. The value of TargetValue can contain up to three decimal places and must be greater than 0.</para>
+        /// <para>The target value, which applies to target tracking rules and predictive rules. The TargetValue parameter supports up to three decimal places and must be greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>

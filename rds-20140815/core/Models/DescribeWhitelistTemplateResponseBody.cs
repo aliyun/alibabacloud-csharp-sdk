@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client fault.</description></item>
-        /// <item><description><b>401</b>: Authentication failed.</description></item>
-        /// <item><description><b>404</b>: Request page not found.</description></item>
+        /// <item><description><b>401</b>: Failed to authenticate during identity verification.</description></item>
+        /// <item><description><b>404</b>: The requested page is not found.</description></item>
         /// <item><description><b>500</b>: Server fault.</description></item>
         /// </list>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>The IP address list.</para>
+                /// <para>The list of IP addresses.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.1.X.X,2.3.X.X</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Ips { get; set; }
 
                 /// <summary>
-                /// <para>The whitelist template ID.</para>
+                /// <para>The ID of the whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>424</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? TemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The whitelist template name.</para>
+                /// <para>The name of the whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>template_123</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The ID of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client error.</description></item>
         /// <item><description><b>500</b>: Server error.</description></item>
         /// </list>

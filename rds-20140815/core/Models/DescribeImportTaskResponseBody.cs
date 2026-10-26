@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>The Milvus version number.</para>
+        /// <para>The kernel version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbVersion { get; set; }
 
         /// <summary>
-        /// <para>The detailed information about the task.</para>
+        /// <para>The task details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Error Message</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The category of the source instance.</para>
+        /// <para>The category of the source instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ECS</b>: Alibaba Cloud ECS.</description></item>
         /// <item><description><b>other</b>: Other.</description></item>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The task type. This parameter is used to query tasks of specific types. Separate multiple task types with commas (,). A maximum of 30 task types are supported. If this parameter is left empty, tasks of all types are queried.</para>
+        /// <para>The task type, which is used to query tasks of specific types. Separate multiple values with commas (,). A maximum of 30 values are supported. By default, this parameter is left empty, which indicates that no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>import</para>

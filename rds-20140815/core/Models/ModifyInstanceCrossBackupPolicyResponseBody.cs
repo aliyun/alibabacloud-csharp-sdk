@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyInstanceCrossBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the cross-region backup feature. Valid values:</para>
+        /// <para>Indicates whether the overall cross-region backup feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
+        /// <item><description><b>Disable</b>: The feature is disabled.</description></item>
+        /// <item><description><b>Enable</b>: The feature is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CrossBackupRegion { get; set; }
 
         /// <summary>
-        /// <para>The type of cross-region backup retention. Default value: <b>1</b>, which indicates that all backups are retained.</para>
+        /// <para>The retention type of cross-region backups. Default value: <b>1</b>, which indicates that all backups are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of cross-region log backup. Valid values:</para>
+        /// <para>Indicates whether cross-region log backup is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: Disabled.</description></item>
-        /// <item><description><b>Enable</b>: Enabled.</description></item>
+        /// <item><description><b>Disable</b>: Cross-region log backup is disabled.</description></item>
+        /// <item><description><b>Enable</b>: Cross-region log backup is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LogBackupEnabled { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the source instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The cross-region backup retention method. Default value: <b>1</b>, which indicates retention by duration.</para>
+        /// <para>The retention method for cross-region backups. Default value: <b>1</b>, which indicates that backups are retained based on a specified retention period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? RetentType { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which cross-region backups are retained. Valid values: <b>7 to 1825</b>.</para>
+        /// <para>The retention period of cross-region backups. Valid values: <b>7 to 1825</b>. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

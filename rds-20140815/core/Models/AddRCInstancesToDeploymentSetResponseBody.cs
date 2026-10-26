@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AddRCInstancesToDeploymentSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The node status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>activation</b>: Running.</description></item>
-            /// <item><description><b>creating</b>: Being created.</description></item>
+            /// <item><description><b>activation</b>: running.</description></item>
+            /// <item><description><b>creating</b>: creating.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The instance IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rc-aaaa</para>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The node status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Success</b>: Succeeded.</description></item>
-            /// <item><description><b>Failed</b>: Failed.</description></item>
+            /// <item><description><b>Success</b>: succeeded.</description></item>
+            /// <item><description><b>Failed</b>: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

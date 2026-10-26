@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBProxyInstanceKernelVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The proxy ID.</para>
+        /// <para>The ID of the database proxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bu9****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44537EC8-DFA2-4745-B579-E733FF2C5B9A</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>334362871</para>

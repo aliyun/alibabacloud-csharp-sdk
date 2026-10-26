@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateDBInstanceEndpointAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned fields.</para>
+        /// <para>The list of returned fields.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The endpoint ID of the instance.</para>
+            /// <para>The ID of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>

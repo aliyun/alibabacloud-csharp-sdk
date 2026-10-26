@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryEventsStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event list.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryEventsStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The system event categorization. Valid values:</para>
+            /// <para>The categorization of system events. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Exception</b>: abnormal event.</description></item>
+            /// <item><description><b>Exception</b>: abnormal events.</description></item>
             /// <item><description><b>Optimize</b>: optimization events.</description></item>
-            /// <item><description><b>Notification</b>: notification event.</description></item>
-            /// <item><description><b>Maintenance</b>: scheduled maintenance event.</description></item>
+            /// <item><description><b>Notification</b>: notification events.</description></item>
+            /// <item><description><b>Maintenance</b>: scheduled O&amp;M events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EventCategory { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31</para>

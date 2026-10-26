@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>PREPAY</b>: subscription.</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go</description></item>
+        /// <item><description><b>PREPAY</b>: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<string> ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter. Not supported.</para>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
         /// </summary>
         [NameInMap("FeeOfInstances")]
         [Validation(Required=false)]
         public List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances> FeeOfInstances { get; set; }
         public class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances : TeaModel {
             /// <summary>
-            /// <para>Reserved parameter. Not supported.</para>
+            /// <para>The reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter. Not supported.</para>
+            /// <para>The reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Fee { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter. Not supported.</para>
+            /// <para>The reserved parameter. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The description of the enhanced monitoring metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sys cpu usage, sys cpu usage / total cpu</para>
+            /// <para>sys CPU usage, sys CPU used / total CPU</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The category of the enhanced monitoring metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>os</b>: operating system metric.</description></item>
-            /// <item><description><b>db</b>: database metric.</description></item>
+            /// <item><description><b>os</b>: operating system metrics</description></item>
+            /// <item><description><b>db</b>: database metrics</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The name of the group to which the enhanced monitoring metric belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU Usage</para>
+            /// <para>CPU usage</para>
             /// </summary>
             [NameInMap("GroupKeyType")]
             [Validation(Required=false)]
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The statistical method of the enhanced monitoring metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>avg</b>: average value.</description></item>
-            /// <item><description><b>min</b>: minimum value.</description></item>
-            /// <item><description><b>max</b>: maximum value.</description></item>
+            /// <item><description><b>avg</b>: average value</description></item>
+            /// <item><description><b>min</b>: minimum value</description></item>
+            /// <item><description><b>max</b>: maximum value</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5CD61041-35F7-10F7-BE94-33A48B221218</para>

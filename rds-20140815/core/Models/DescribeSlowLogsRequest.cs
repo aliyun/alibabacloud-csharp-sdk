@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlowLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end date of the query. The end date must be later than or equal to the start date, and the interval between the start date and the end date cannot exceed 31 days. Format: <i>yyyy-MM-dd</i>Z (UTC).</para>
+        /// <para>The end date of the query. The end date cannot be earlier than the start date, and the interval between the start date and the end date cannot exceed 31 days. Format: <i>yyyy-MM-dd</i>Z (UTC).</para>
         /// <remarks>
-        /// <para>If the end date is the same as the start date, the query starts from 08:00 on the start date and covers up to 24 hours of slow query log statistics.</para>
+        /// <para>If the end date is the same as the start date, the query starts from 08:00 on the start date by default, and slow query log statistics for up to 24 hours are queried.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number. Valid values: any positive integer up to the maximum value of the Integer type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -84,13 +84,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The sorting criterion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TotalExecutionCounts</b>: sorted by total number of executions in descending order.</description></item>
-        /// <item><description><b>TotalQueryTimes</b>: sorted by total execution duration in descending order.</description></item>
-        /// <item><description><b>TotalLogicalReads</b>: sorted by total number of logical reads in descending order.</description></item>
-        /// <item><description><b>TotalPhysicalReads</b>: sorted by total number of physical reads in descending order.</description></item>
+        /// <item><description><b>TotalExecutionCounts</b>: total number of executions</description></item>
+        /// <item><description><b>TotalQueryTimes</b>: total execution time</description></item>
+        /// <item><description><b>TotalLogicalReads</b>: total number of logical reads</description></item>
+        /// <item><description><b>TotalPhysicalReads</b>: total number of physical reads</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is supported only for SQL Server 2008 R2 instances.</para>
+        /// <para>This parameter is supported only for ApsaraDB RDS for SQL Server 2008 R2 instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

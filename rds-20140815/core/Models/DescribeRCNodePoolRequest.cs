@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The node pool ID.</para>
+        /// <para>The ID of the node pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np31da1b38983f4511b490fc62108a****</para>

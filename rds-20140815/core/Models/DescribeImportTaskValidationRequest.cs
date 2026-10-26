@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeImportTaskValidationRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The task ID. The task ID returned when you call the <b>ValidateImportTask</b> operation to create an import task dry run.</para>
+        /// <para>The task ID. This ID is returned when you call the <b>ValidateImportTask</b> operation to create a precheck for the import task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

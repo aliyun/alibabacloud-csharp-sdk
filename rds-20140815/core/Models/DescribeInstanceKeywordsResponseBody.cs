@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceKeywordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of reserved keywords, which indicates whether the reserved keywords are for account names or database names.</para>
+        /// <para>The type of the reserved keyword, which indicates whether the keyword is reserved for account names or database names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>account</para>

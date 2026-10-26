@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSecretsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The description of the credential.</para>
+            /// <para>The description of the credential provided by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The user credential of the Data API account.</para>
+            /// <para>The user credential of the created Data API account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:rds:cn-hangzhou:1335786****:dbInstance/rm-bp1m7l3j63****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SecretArn { get; set; }
 
             /// <summary>
-            /// <para>The credential name.</para>
+            /// <para>The name of the user credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Foo</para>

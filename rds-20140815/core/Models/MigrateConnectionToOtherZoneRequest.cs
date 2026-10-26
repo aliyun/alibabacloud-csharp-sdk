@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateConnectionToOtherZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint of the instance. This parameter is specified when the instance is created and is used to generate the connection string.</para>
+        /// <para>The endpoint of the instance. This endpoint is specified during creation and is used to generate a connection string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

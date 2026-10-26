@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchReplicationLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the source instance, which is the primary instance ID.</para>
+        /// <para>The source instance ID, which is the primary instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the target disaster recovery instance to which you want to switch.</para>
+        /// <para>The name of the target disaster recovery instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region of the target disaster recovery instance to which you want to switch.</para>
+        /// <para>The region ID of the target disaster recovery instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

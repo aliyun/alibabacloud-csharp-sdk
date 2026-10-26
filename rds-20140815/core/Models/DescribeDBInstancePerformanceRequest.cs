@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancePerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
+        /// <para>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</para>
+        /// <para>The interval between the start time and the end time must be greater than the monitoring frequency of the instance. Otherwise, an empty list may be returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance parameters</a>.</para>
+        /// <para>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance metrics</a>.</para>
         /// <remarks>
-        /// <para>If <b>Key</b> is set to <b>MySQL_SpaceUsage</b> or <b>SQLServer_SpaceUsage</b>, only monitoring data within the last day can be queried.</para>
+        /// <para>If <b>Key</b> is set to <b>MySQL_SpaceUsage</b> or <b>SQLServer_SpaceUsage</b>, you can query only the monitoring data collected within the last 24 hours.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>The interval between the start time and end time must be greater than the monitoring frequency of your instance. Otherwise, an empty list may be returned.</para>
+        /// <para>The interval between the start time and the end time must be greater than the monitoring frequency of the instance. Otherwise, an empty list may be returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Specifies whether the task can be canceled. Default value: -1. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>-1</b>: all tasks.</description></item>
-        /// <item><description><b>0</b>: Only tasks that cannot be canceled are returned.</description></item>
-        /// <item><description><b>1</b>: Only tasks that can be canceled are returned.</description></item>
+        /// <item><description><b>0</b>: tasks that cannot be canceled.</description></item>
+        /// <item><description><b>1</b>: tasks that can be canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? AllowCancel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the task time can be modified. Default value: -1. Valid values:</para>
+        /// <para>Specifies whether the execution time can be modified. Default value: -1. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>-1</b>: all tasks.</description></item>
-        /// <item><description><b>0</b>: Only tasks whose time cannot be modified are returned.</description></item>
-        /// <item><description><b>1</b>: Only tasks whose time can be modified are returned.</description></item>
+        /// <item><description><b>0</b>: tasks whose execution time cannot be modified.</description></item>
+        /// <item><description><b>1</b>: tasks whose execution time can be modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The task level. Default value: all. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b>: all levels.</description></item>
-        /// <item><description><b>S0</b>: Only tasks at the exception recovery level are returned.</description></item>
-        /// <item><description><b>S1</b>: Only tasks at the system O&amp;M level are returned.</description></item>
+        /// <item><description><b>all</b>: all tasks.</description></item>
+        /// <item><description><b>S0</b>: exception recovery tasks.</description></item>
+        /// <item><description><b>S1</b>: system O&amp;M tasks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ChangeLevel { get; set; }
 
         /// <summary>
-        /// <para>The database type. Default value: all. Valid values: mysql, pgsql, and mssql.</para>
+        /// <para>The database engine. Default value: all. Valid values: mysql, pgsql, mssql, and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbType { get; set; }
 
         /// <summary>
-        /// <para>The instance name. This parameter is optional. You can specify at most one instance name.</para>
+        /// <para>The instance name. This parameter is optional. If you specify this parameter, you can specify only one instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp191w771kd3****</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than 0. Default value: 1.</para>
+        /// <para>The page number, which must be greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product name. Valid values: RDS, POLARDB, MongoDB, and Redis. For ApsaraDB RDS instances, set this parameter to RDS.</para>
+        /// <para>The product name. Valid values: RDS, POLARDB, MongoDB, and Redis. For an ApsaraDB RDS instance, set the value to RDS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -113,9 +113,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to query the region ID.</para>
         /// <remarks>
-        /// <para>Set this parameter to <b>all</b> to specify all region IDs.</para>
+        /// <para>A value of <b>all</b> specifies all region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,12 +138,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The task status. This parameter is used to filter the returned tasks. Valid values:</para>
+        /// <para>The task status, which is used to filter the returned tasks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>-1</b>: all tasks.</description></item>
         /// <item><description><b>3</b>: pending tasks.</description></item>
-        /// <item><description><b>4</b>: in-progress tasks.</description></item>
-        /// <item><description><b>5</b>: succeeded tasks.</description></item>
+        /// <item><description><b>4</b>: tasks in progress.</description></item>
+        /// <item><description><b>5</b>: successfully completed tasks.</description></item>
         /// <item><description><b>6</b>: failed tasks.</description></item>
         /// <item><description><b>7</b>: canceled tasks.</description></item>
         /// </list>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>rds_apsaradb_ha</b>: primary/secondary node switch.</description></item>
+        /// <item><description><b>rds_apsaradb_ha</b>: primary and secondary node switch.</description></item>
         /// <item><description><b>rds_apsaradb_transfer</b>: instance migration.</description></item>
         /// <item><description><b>rds_apsaradb_upgrade</b>: minor engine version update.</description></item>
         /// <item><description><b>rds_apsaradb_maxscale</b>: proxy minor version upgrade.</description></item>

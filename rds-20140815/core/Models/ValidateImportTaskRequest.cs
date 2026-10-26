@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ValidateImportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain this parameter.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The estimated instance size. Unit: GB.</para>
+        /// <para>The estimated size of the instance. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? EstimatedSize { get; set; }
 
         /// <summary>
-        /// <para>The address of the source MySQL instance.</para>
+        /// <para>The address of the source MySQL database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the source MySQL user, encoded in Base64.</para>
+        /// <para>The Base64-encoded password of the source MySQL database user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The port number of the source MySQL instance.</para>
+        /// <para>The port number of the source MySQL database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to obtain this parameter.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the source instance. Valid values:</para>
+        /// <para>The type of the source platform. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ECS</description></item>
         /// </list>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? StreamPort { get; set; }
 
         /// <summary>
-        /// <para>The username of the source MySQL instance.</para>
+        /// <para>The username of the source MySQL database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string User { get; set; }
 
         /// <summary>
-        /// <para>The path of the Xtrabackup tool on the source instance.</para>
+        /// <para>The path to the XtraBackup tool on the source instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/usr/local/bin/xtrabackup</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<ListUserBackupFilesResponseBodyRecords> Records { get; set; }
         public class ListUserBackupFilesResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The user backup ID.</para>
+            /// <para>The ID of the user backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b-kwwvr7v8t7of****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string BackupId { get; set; }
 
             /// <summary>
-            /// <para>The binary log file information in the backup file. This parameter is returned if incremental data exists during the backup process.</para>
+            /// <para>The information about the binlog files in the backup file. This parameter is returned if incremental data is generated during the backup process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;binlogPosition\&quot;:\&quot;154\&quot;,\&quot;binlogFile\&quot;:\&quot;0.000002\&quot;}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the user backup import started. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the import of the user backup started. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1623231084000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the user backup was successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the user backup was successfully imported. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1623231750000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the user backup import was completed. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the import of the user backup was completed. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1623231750000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the OSS bucket in which the user backup file is stored.</para>
+            /// <para>The name of the OSS bucket where the user backup file is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BackupTest</para>

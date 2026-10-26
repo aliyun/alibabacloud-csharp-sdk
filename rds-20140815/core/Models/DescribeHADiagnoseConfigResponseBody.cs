@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHADiagnoseConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06B220E2-EAC5-4DBE-A1FC-1B62DB6A****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The availability check method that Alibaba Cloud uses for the ApsaraDB RDS instance. Valid values:</para>
+        /// <para>The availability detection method used by Alibaba Cloud for the ApsaraDB RDS instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>LONG</b>: persistent connection.</description></item>
         /// <item><description><b>SHORT</b>: short-lived connection.</description></item>

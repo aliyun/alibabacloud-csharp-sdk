@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the RDS Custom instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rc-dh2jf9n6j4s14926****</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query available regions.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -54,8 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of snapshots.</para>
-        /// <para>You can specify multiple snapshot IDs separated by commas (,). A maximum of 100 IDs can be specified.</para>
+        /// <para>The snapshot IDs. You can specify up to 100 IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;rcds-bp67acfmxazb4p****&quot;, &quot;rcds-bp67acfmxazb5p****&quot;, … &quot;rcds-bp67acfmxazb6p****&quot;]</para>
@@ -72,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeRCSnapshotsRequestTag> Tag { get; set; }
         public class DescribeRCSnapshotsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testRC</para>
@@ -82,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test01</para>

@@ -10,15 +10,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBNodeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete automatic payment. Valid values:</para>
+        /// <para>Specifies whether to automatically pay for the order.
+        /// Valid values:</para>
         /// <ol>
-        /// <item><description><para><b>true</b>: Automatic payment is automatically completed. Make sure that your account balance is sufficient.</para>
+        /// <item><description><para><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: An order is generated but no payment is made.</para>
+        /// <item><description><para><b>false</b>: Only an order is generated and no payment is made.</para>
         /// </description></item>
         /// </ol>
         /// <remarks>
-        /// <para>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete automatic payment.</para>
+        /// <para>Default value: true. If your payment method has an insufficient balance, you can set this parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,9 +63,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The storage type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD.</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The node information.</para>
         /// <remarks>
-        /// <para>This parameter is used for MySQL Cluster Edition instances.</para>
+        /// <para>This parameter applies to ApsaraDB RDS for MySQL Cluster Edition instances.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("DBNode")]
@@ -85,10 +86,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for this node modification. Valid values:</para>
+        /// <para>Specifies whether to perform a precheck before the node modifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: A dry run is performed without executing the modification. The system checks items such as request parameters, request format, business limits, and inventory.</description></item>
-        /// <item><description><b>false</b>: A request is sent. After the request passes the check, the modification is directly executed. This is the default value.</description></item>
+        /// <item><description><b>true</b>: A precheck is performed, but the modifications are not applied. The precheck includes checks on request parameters, request format, service limits, and inventory.</description></item>
+        /// <item><description><b>false</b>: A normal request is sent, and the modifications are directly applied after the precheck is passed (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,8 +102,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The effective period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b> (default): The modification takes effect immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: The modification takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>Immediate</b> (default): The modifications immediately take effect.</description></item>
+        /// <item><description><b>MaintainTime</b>: The modifications take effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,13 +122,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to asynchronously execute the provisioning. Valid values:</para>
+        /// <para>Specifies whether to asynchronously apply the modifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request only submits an order, and the modification is asynchronously executed. This is the default value.</description></item>
-        /// <item><description><b>false</b>: After the request passes the check, the modification is directly executed.</description></item>
+        /// <item><description><b>true</b>: Only an order is generated, and the modifications are asynchronously applied (default).</description></item>
+        /// <item><description><b>false</b>: The modifications are synchronously applied after the precheck is passed.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Default value: true. The modification is asynchronously executed. If you set this parameter to false, the modification is synchronously executed, and the response time is relatively longer.</para>
+        /// <para>Default value: true. The modifications are asynchronously applied. If you set this parameter to false, the modifications are synchronously applied, and the API response time is relatively long.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

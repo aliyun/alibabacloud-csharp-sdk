@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The commodity code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>rds: subscription</description></item>
-        /// <item><description>bards: pay-as-you-go</description></item>
+        /// <item><description><para>rds: subscription</para>
+        /// </description></item>
+        /// <item><description><para>bards: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Commodity { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
         /// <item><description><b>SQLServer</b></description></item>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the available regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: integers greater than 0 and up to the maximum value of the Integer type. Default value: <b>1</b>.</para>
+        /// <para>The page number. Valid values: any positive integer up to the maximum value of the Integer type. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The internal IP address or public IP address of the self-managed PostgreSQL database.</para>
         /// <list type="bullet">
         /// <item><description>In the one-click cloud migration scenario for a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
-        /// <item><description>In the one-click cloud migration scenario for a self-managed PostgreSQL database in an on-premises data center, set this parameter to the internal IP address of the on-premises data center.</description></item>
+        /// <item><description>In the one-click cloud migration scenario for a self-managed PostgreSQL database in a data center, set this parameter to the internal IP address of the data center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The port of the self-managed PostgreSQL database. You can run the netstat -a | grep PGSQL command to view the port.</para>
+        /// <para>The port of the self-managed PostgreSQL database. You can run the <c>netstat -a | grep PGSQL</c> command to view the port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5432</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task. You can obtain the task ID from the response message after you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</para>
+        /// <para>The ID of the task. You can obtain the task ID from the response message when you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>439946016</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. You can obtain the task name from the response message after you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</para>
+        /// <para>The name of the task. You can obtain the task name from the response message when you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slf7w7wj3g</para>

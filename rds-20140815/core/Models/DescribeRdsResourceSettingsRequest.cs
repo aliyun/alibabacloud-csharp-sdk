@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource niche. Valid values:</para>
+        /// <para>The resource position. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>noticeBar: notification bar.</description></item>
-        /// <item><description>popUp: pop-up dialog box.</description></item>
+        /// <item><description>noticeBar: The notification bar.</description></item>
+        /// <item><description>popUp: The pop-up window.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

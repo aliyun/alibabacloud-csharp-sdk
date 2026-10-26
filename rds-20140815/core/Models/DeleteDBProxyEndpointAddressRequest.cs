@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the database proxy endpoint to delete. Valid values:</para>
+        /// <para>The network type of the database proxy endpoint that you want to delete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Public</b>: Internet</description></item>
+        /// <item><description><b>Public</b>: public network</description></item>
         /// <item><description><b>VPC</b>: internal network (VPC)</description></item>
         /// <item><description><b>Classic</b>: internal network (classic network)</description></item>
         /// </list>
         /// <para>Default value: <b>Classic</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You cannot delete the internal endpoint that is created by default.</description></item>
+        /// <item><description>You cannot delete the default internal network endpoint.</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL supports only <b>Public</b> and <b>VPC</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</para>
+        /// <para>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to configure it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the available regions.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

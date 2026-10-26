@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListClassesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <remarks>
-        /// <para>This parameter is required when you query the instance type list for read-only instances, which means you set the <b>CommodityCode</b> parameter to a commodity code for read-only instances.</para>
+        /// <para>When you query the list of instance types for read-only instances, which means you specify the commodity code of a read-only instance for the <b>CommodityCode</b> parameter, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,12 +74,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The type of order to query. Valid values:</para>
+        /// <para>The order type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b>: New purchase.</description></item>
-        /// <item><description><b>UPGRADE</b>: Configuration change.</description></item>
+        /// <item><description><b>BUY</b>: Purchase.</description></item>
+        /// <item><description><b>UPGRADE</b>: Upgrade.</description></item>
         /// <item><description><b>RENEW</b>: Renewal.</description></item>
-        /// <item><description><b>CONVERT</b>: Billing method change.</description></item>
+        /// <item><description><b>CONVERT</b>: Billing method conversion.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -95,9 +95,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to obtain the region ID.</para>
         /// <remarks>
-        /// <para>This parameter is required if you use an Alibaba Cloud International Website account.</para>
+        /// <para>If you use an Alibaba Cloud international site account, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

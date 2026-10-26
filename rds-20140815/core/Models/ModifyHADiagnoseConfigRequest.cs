@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyHADiagnoseConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The availability detection method of the instance. Valid values:</para>
+        /// <para>The availability check method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SHORT</b>: short-lived connection</description></item>
-        /// <item><description><b>LONG</b>: persistent connection</description></item>
+        /// <item><description><b>SHORT</b>: Short connection.</description></item>
+        /// <item><description><b>LONG</b>: Long connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

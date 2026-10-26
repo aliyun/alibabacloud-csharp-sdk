@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to unbind all tags from the instance. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs. You can unbind tags from up to N instances at a time. Valid values of N: <b>1</b> to <b>50</b>.</para>
+        /// <para>The list of instance IDs. You can remove labels from N instances at a time. Valid values of N: <b>1</b> to <b>50</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b>: regular ApsaraDB RDS instance.</description></item>
-        /// <item><description><b>CUSTOM</b>: RDS Custom instance.</description></item>
-        /// <item><description><b>CUSTOMDEPLOYMENTSET</b>: RDS Custom deployment set.</description></item>
-        /// <item><description><b>CUSTOMDISK</b>: RDS Custom cloud disk.</description></item>
-        /// <item><description><b>CUSTOMSNAPSHOT</b>: RDS Custom snapshot.</description></item>
+        /// <item><description><b>INSTANCE</b>: Regular ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>CUSTOM</b>: ApsaraDB RDS Custom instance.</description></item>
+        /// <item><description><b>CUSTOMDEPLOYMENTSET</b>: ApsaraDB RDS Custom deployment set.</description></item>
+        /// <item><description><b>CUSTOMDISK</b>: ApsaraDB RDS Custom cloud disk.</description></item>
+        /// <item><description><b>CUSTOMSNAPSHOT</b>: ApsaraDB RDS Custom snapshot.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tag keys. You can remove up to N tag keys at a time. Valid values of N: <b>1</b> to <b>20</b>. Empty strings are not allowed.</para>
+        /// <para>The tag keys. You can remove N tag keys at a time. Valid values of N: <b>1</b> to <b>20</b>. Empty strings are not allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testkey1</para>

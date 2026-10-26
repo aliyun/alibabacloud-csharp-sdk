@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListUserBackupFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The user backup ID.</para>
+        /// <para>Queries target user backups by user backup ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b-kwwvr7v8t7of****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The comment of the user backup to query.</para>
+        /// <para>Queries target user backups by comment.</para>
         /// <remarks>
-        /// <para>You can enter part of the comment for fuzzy matching.</para>
+        /// <para>You can enter a partial comment of the target user backup for fuzzy match.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The OSS download URL of the user backup file. For information about how to obtain the OSS download URL of a user backup file, see <a href="https://help.aliyun.com/document_detail/39607.html">How do I obtain the URL of an uploaded object?</a>.</para>
+        /// <para>Queries target user backups by the OSS download URL of the user backup file. For more information about how to obtain the OSS download URL of a user backup file, see <a href="https://help.aliyun.com/document_detail/39607.html">Obtain the URL of an uploaded object</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://<b><b>.oss-ap-</b></b>.aliyuncs.com/backup_qp.xb</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the available regions.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</para>
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the user backup file. Valid values:</para>
+        /// <para>Queries target user backups by the status of the user backup file. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Importing</b>: The backup is being imported.</description></item>
         /// <item><description><b>Failed</b>: The import failed.</description></item>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tag information used to query the user backup.</para>
+        /// <para>Queries target user backups by tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1:value1</para>

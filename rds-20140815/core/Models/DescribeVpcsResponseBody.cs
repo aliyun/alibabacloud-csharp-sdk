@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The VPC status.</para>
+            /// <para>The status of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IzNo { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch status.</para>
+                /// <para>The status of the vSwitch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>

@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>200</b>: Normal.</description></item>
-        /// <item><description><b>400</b>: Client fault.</description></item>
-        /// <item><description><b>401</b>: Authentication failed.</description></item>
-        /// <item><description><b>404</b>: Request page not found.</description></item>
-        /// <item><description><b>500</b>: Server fault.</description></item>
+        /// <item><description><b>400</b>: Client error.</description></item>
+        /// <item><description><b>401</b>: Failed to authenticate.</description></item>
+        /// <item><description><b>404</b>: Requested page not found.</description></item>
+        /// <item><description><b>500</b>: Server error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeAllWhitelistTemplateResponseBodyData Data { get; set; }
         public class DescribeAllWhitelistTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? CurrPageNumbers { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether there is a next page of data that meets the conditions. Valid values:</para>
+            /// <para>Indicates whether the queried data has a next page. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Yes.</description></item>
             /// <item><description><b>false</b>: No.</description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether there is a previous page of data that meets the conditions. Valid values:</para>
+            /// <para>Indicates whether the queried data has a previous page. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Yes.</description></item>
             /// <item><description><b>false</b>: No.</description></item>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? HasPrev { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? MaxRecordsPerPage { get; set; }
 
             /// <summary>
-            /// <para>The whitelist template information returned by page.</para>
+            /// <para>The whitelist templates returned on the current page.</para>
             /// </summary>
             [NameInMap("Templates")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>The IP address list.</para>
+                /// <para>The list of IP addresses.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12.2.X.X,10.0.X.X</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Ips { get; set; }
 
                 /// <summary>
-                /// <para>The whitelist template ID.</para>
+                /// <para>The ID of the whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>412</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? TemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The whitelist template name.</para>
+                /// <para>The name of the whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>template_123</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The ID of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>168****</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? TotalPageNumbers { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>402</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client error.</description></item>
         /// <item><description><b>500</b>: Server error.</description></item>
         /// </list>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16C62438-491B-5C02-9B49-BA924A1372A2</para>

@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98504E07-BB0E-40FC-B152-E4882615812C</para>

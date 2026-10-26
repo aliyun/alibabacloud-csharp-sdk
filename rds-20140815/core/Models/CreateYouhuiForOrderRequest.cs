@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateYouhuiForOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ticket that was created.</para>
+        /// <para>The ID of the created ticket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. You can call the GetResourcePrice operation to obtain this value.</para>
+        /// <para>The promotion ID. You can call the GetResourcePrice operation to obtain the promotion ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query available region IDs.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The log retention period of SQL Explorer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>30: 30 days</description></item>
-        /// <item><description>180: 180 days</description></item>
-        /// <item><description>365: 1 year</description></item>
-        /// <item><description>1095: 3 years</description></item>
-        /// <item><description>1825: 5 years</description></item>
+        /// <item><description>30: 30 days.</description></item>
+        /// <item><description>180: 180 days.</description></item>
+        /// <item><description>365: 1 year.</description></item>
+        /// <item><description>1095: 3 years.</description></item>
+        /// <item><description>1825: 5 years.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<AttachRCInstancesResponseBodyResponses> Responses { get; set; }
         public class AttachRCInstancesResponseBodyResponses : TeaModel {
             /// <summary>
-            /// <para>The status code returned.</para>
+            /// <para>The returned status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The RDS Custom instance ID.</para>
+            /// <para>The instance ID of the RDS Custom instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rc-e2g521l55k038cr8****</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The message returned for the request.</para>
+            /// <para>The returned message of the request.</para>
             /// <remarks>
-            /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, exception information such as an error code is returned.</para>
+            /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

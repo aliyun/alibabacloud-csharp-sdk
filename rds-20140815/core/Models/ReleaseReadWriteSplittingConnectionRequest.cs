@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ReleaseReadWriteSplittingConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the primary instance. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the primary instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the read/write splitting endpoint to be released. Valid values: ReadOnlyAddress (unified read-only endpoint) and BackupAddress (read-only endpoint of the secondary instance).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ReadOnlyAddress</para>
+        /// </summary>
         [NameInMap("RWAddressType")]
         [Validation(Required=false)]
         public string RWAddressType { get; set; }

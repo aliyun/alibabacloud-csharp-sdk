@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last modified.</para>
+            /// <para>The time when the task was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-01T06:39:51Z</para>
@@ -49,12 +49,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The migration stage. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>precheck</b>: Precheck.</description></item>
-            /// <item><description><b>basebackup</b>: Full backup.</description></item>
-            /// <item><description><b>startup</b>: Link setup.</description></item>
-            /// <item><description><b>increment</b>: Incremental synchronization.</description></item>
-            /// <item><description><b>switch</b>: Cloud switchover.</description></item>
-            /// <item><description><b>success</b>: Migration completed.</description></item>
+            /// <item><description><b>precheck</b>: precheck</description></item>
+            /// <item><description><b>basebackup</b>: full backup</description></item>
+            /// <item><description><b>startup</b>: link setup</description></item>
+            /// <item><description><b>increment</b>: incremental synchronization</description></item>
+            /// <item><description><b>switch</b>: cloud cutover</description></item>
+            /// <item><description><b>success</b>: cloud migration completed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,13 +75,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReplicationInfo { get; set; }
 
             /// <summary>
-            /// <para>The replication status. Valid values:</para>
+            /// <para>The replication state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>unstarted</b>: Not started.</description></item>
-            /// <item><description><b>catchup</b>: Catching up.</description></item>
-            /// <item><description><b>streaming</b>: Streaming.</description></item>
-            /// <item><description><b>disconnect</b>: Disconnected.</description></item>
-            /// <item><description><b>finish</b>: Completed.</description></item>
+            /// <item><description><b>unstarted</b>: not started</description></item>
+            /// <item><description><b>catchup</b>: catching up</description></item>
+            /// <item><description><b>streaming</b>: streaming</description></item>
+            /// <item><description><b>disconnect</b>: disconnected</description></item>
+            /// <item><description><b>finish</b>: completed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,8 +104,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The type of the self-managed PostgreSQL database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>idcOnVpc</b>: A self-managed PostgreSQL database in an IDC that is connected to a VPC.</description></item>
-            /// <item><description><b>ecsOnVpc</b>: A self-managed PostgreSQL database on an Alibaba Cloud ECS instance.</description></item>
+            /// <item><description><b>idcOnVpc</b>: self-managed PostgreSQL database in an on-premises data center that is connected to a VPC</description></item>
+            /// <item><description><b>ecsOnVpc</b>: self-managed PostgreSQL database on an Alibaba Cloud ECS instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? SourcePort { get; set; }
 
             /// <summary>
-            /// <para>The switchover time.</para>
+            /// <para>The cutover time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-01T06:40:51Z</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. The query result is empty.</para>
+            /// <para>A reserved parameter. The value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>440437220</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>362c6c7a-4d20-4eac-898c-1495ceab374c</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of queried entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

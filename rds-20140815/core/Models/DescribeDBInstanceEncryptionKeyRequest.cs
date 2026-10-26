@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The custom key ID.</para>
+        /// <para>The ID of the custom key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>749c1df7-<b><b>-</b></b>-<b><b>-</b></b></para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the DescribeRegions operation to query the available regions.</para>
+        /// <para>The region ID of the instance. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The destination region ID. You can call the DescribeRegions operation to query the available regions.</para>
+        /// <para>The ID of the destination region. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>

@@ -19,13 +19,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Scheduled</b>: Waiting to be executed.</description></item>
-            /// <item><description><b>Running</b>: Running.</description></item>
-            /// <item><description><b>Succeed</b>: Succeeded.</description></item>
-            /// <item><description><b>Failed</b>: Failed.</description></item>
-            /// <item><description><b>Cancelling</b>: Being stopped.</description></item>
-            /// <item><description><b>Canceled</b>: Stopped.</description></item>
-            /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
+            /// <item><description><b>Scheduled</b>: pending execution</description></item>
+            /// <item><description><b>Running</b>: running</description></item>
+            /// <item><description><b>Succeed</b>: succeeded</description></item>
+            /// <item><description><b>Failed</b>: failed</description></item>
+            /// <item><description><b>Cancelling</b>: being canceled</description></item>
+            /// <item><description><b>Canceled</b>: canceled</description></item>
+            /// <item><description><b>Waiting</b>: waiting for the scheduled time</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

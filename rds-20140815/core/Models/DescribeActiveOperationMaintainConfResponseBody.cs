@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeActiveOperationMaintainConfResponseBodyConfig Config { get; set; }
         public class DescribeActiveOperationMaintainConfResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The creation time in the format of YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The creation time. The format is YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -27,11 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The cycle time. Multiple values are separated by commas (,).</para>
-            /// <list type="bullet">
-            /// <item><description>If cycleType is set to Week, valid values are 1 to 7, which represent Monday to Sunday.</description></item>
-            /// <item><description>If cycleType is set to Month, valid values are 1 to 28.</description></item>
-            /// </list>
+            /// <para>The cycle time. Multiple values are separated by commas. If cycleType is Week, valid values are 1 to 7, which represent Monday to Sunday. If cycleType is Month, valid values are 1 to 28.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -51,8 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CycleType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the O&amp;M time window in UTC.
-            /// Default value: 20:00:00Z.</para>
+            /// <para>The end time of the O&amp;M time window in UTC. Default value: 20:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20:00:00Z</para>
@@ -62,8 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the O&amp;M time window in UTC.
-            /// Default value: 18:00:00Z.</para>
+            /// <para>The start time of the O&amp;M time window in UTC. Default value: 18:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18:00:00Z</para>
@@ -73,7 +67,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time in the format of YYYY-MM-DDTHH:mm:ssZ, such as 2018-05-30T14:30:00Z.</para>
+            /// <para>The modification time. The format is YYYY-MM-DDTHH:mm:ssZ, such as 2018-05-30T14:30:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -83,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configuration is effective. Valid values: </para>
+            /// <para>Specifies whether the configuration takes effect. Valid values: </para>
             /// <list type="bullet">
             /// <item><description>1: Valid. </description></item>
             /// <item><description>2: Invalid.</description></item>
@@ -99,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the configuration has been set. The value is 0 for the first access. Valid values:</para>
+        /// <para>Specifies whether the configuration has been set. The value is 0 when you access the configuration for the first time. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Yes. </description></item>
         /// <item><description>0: No.</description></item>

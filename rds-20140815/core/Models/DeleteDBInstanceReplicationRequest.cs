@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteDBInstanceReplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the replication channel, which identifies the replication task.</para>
+        /// <para>The name of the replication channel, which is used to identify the replication task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>replication-channel-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

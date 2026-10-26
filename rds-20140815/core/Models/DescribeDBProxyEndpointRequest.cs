@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The proxy endpoint. You can call the <a href="https://help.aliyun.com/document_detail/610507.html">DescribeDBProxy</a> operation to query the proxy endpoint.</para>
+        /// <para>The proxy endpoint. You can call the DescribeDBProxy operation to query the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testproxy****.rwlb.rds.aliyuncs.com</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectString { get; set; }
 
         /// <summary>
-        /// <para>The proxy endpoint name. You can call the <a href="https://help.aliyun.com/document_detail/610507.html">DescribeDBProxy</a> operation to query the proxy endpoint name.</para>
+        /// <para>The name of the proxy endpoint. You can call the DescribeDBProxy operation to query the name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>keaxncrjluwu0gue****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to configure this parameter.</para>
+        /// <para>A reserved parameter. No configuration is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHostWebShellRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account that is used to log on to the host of the RDS instance.</para>
+        /// <para>The name of the account used to log on to the host of the ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

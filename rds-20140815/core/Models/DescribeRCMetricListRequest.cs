@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCMetricListRequest : TeaModel {
         /// <summary>
-        /// <para>Queries the monitoring data of specified resources in batches for Custom for SQL Server.
-        /// Format: a collection of <c>key:value</c> pairs.</para>
+        /// <para>The dimensions used to query the monitoring data of specified resources in batches for Custom for SQL Server. Format: a collection of <c>key:value</c> pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;instanceId&quot;:&quot;rc-l9hv3rv74ql7oa******&quot;},{&quot;instanceId&quot;:&quot;rc-b532l1uj8n6sex******&quot;}]</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <c>2024-08-06 10:15:00</c> format. The end time must be later than the start time.</para>
+        /// <para>The end time of the query. Format: <c>2024-08-06 10:15:00</c>. The end time must be later than the start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-06 10:15:00</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page for paging query.</para>
+        /// <para>The number of records to return on each page for paging in a paged query.</para>
         /// <para>Default value: 1000.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Length { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitoring metric</a>.</para>
+        /// <para>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The statistical period of the monitoring data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>60 (default)</description></item>
-        /// <item><description>An integer multiple of 60</description></item>
+        /// <item><description>Any integer multiple of 60</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +106,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <c>2024-08-06 10:05:00</c> format.</para>
+        /// <para>The start time of the query. Format: <c>2024-08-06 10:05:00</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-06 10:05:00</para>

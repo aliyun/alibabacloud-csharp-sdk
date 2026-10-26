@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeClassDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The edition. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Basic</b>: Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: High-availability Edition</description></item>
+        /// <item><description><b>HighAvailability</b>: high availability series</description></item>
         /// <item><description><b>AlwaysOn</b>: Cluster Edition</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
         /// </list>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClassGroup { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores for the instance type. Unit: cores.</para>
+        /// <para>The number of CPU cores of the instance type. Unit: cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The architecture.</para>
+        /// <para>The instruction set architecture.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x86</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MaxConnections { get; set; }
 
         /// <summary>
-        /// <para>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</para>
+        /// <para>The maximum I/O bandwidth of the instance type. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MaxIOMBPS { get; set; }
 
         /// <summary>
-        /// <para>The maximum IOPS for the instance type. Unit: operations per second.</para>
+        /// <para>The maximum IOPS of the instance type. Unit: operations per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>N/A</para>
@@ -123,13 +123,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MemoryClass { get; set; }
 
         /// <summary>
-        /// <para>The price.</para>
+        /// <para>The reference price.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;Unit: cents (CNY).
         /// &lt;props=&quot;intl&quot;&gt;Unit: cents (USD).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you set the CommodityCode parameter to a pay-as-you-go commodity code, the hourly price is returned.</description></item>
-        /// <item><description>If you set the CommodityCode parameter to a subscription commodity code, the monthly price is returned.</description></item>
+        /// <item><description>If you specify a pay-as-you-go commodity code in the CommodityCode parameter, the hourly price is displayed.</description></item>
+        /// <item><description>If you specify a subscription commodity code in the CommodityCode parameter, the monthly price is displayed.</description></item>
         /// </list>
         /// </remarks>
         /// 

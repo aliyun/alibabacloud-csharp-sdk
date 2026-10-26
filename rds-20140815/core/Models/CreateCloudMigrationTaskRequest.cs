@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateCloudMigrationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceAccount { get; set; }
 
         /// <summary>
-        /// <para>The category of the source instance.</para>
+        /// <para>The category of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>aliyunRDS</b>: ApsaraDB RDS instance.</description></item>
-        /// <item><description><b>other</b>: other.</description></item>
+        /// <item><description><b>aliyunRDS</b>: Alibaba Cloud RDS instance.</description></item>
+        /// <item><description><b>other</b>: Other.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The internal or public IP address of the self-managed PostgreSQL database.</para>
         /// <list type="bullet">
-        /// <item><description>To migrate a self-managed PostgreSQL database on an ECS instance to the cloud, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/98677.html">View IP addresses</a>.</description></item>
-        /// <item><description>To migrate a self-managed PostgreSQL database in an Internet Data Center (IDC) to the cloud, set this parameter to the internal IP address of the IDC.</description></item>
+        /// <item><description>For the one-click cloud migration scenario of a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/98677.html">View IP addresses</a>.</description></item>
+        /// <item><description>For the one-click cloud migration scenario of a self-managed PostgreSQL database in an IDC, set this parameter to the internal IP address of the IDC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The task name. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</para>
+        /// <para>The name of the task. You can specify a custom name. If you do not specify a name, the system automatically generates one.</para>
         /// 
         /// <b>Example:</b>
         /// <para>362c6c7a-4d20-4eac-898c-1495ceab374c</para>

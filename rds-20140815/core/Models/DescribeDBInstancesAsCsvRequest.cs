@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesAsCsvRequest : TeaModel {
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to configure it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? CachedAsync { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query instance IDs.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to configure it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query available region IDs.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

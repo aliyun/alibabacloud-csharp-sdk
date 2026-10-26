@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud disk to be detached.</para>
+        /// <para>The ID of the cloud disk to detach.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query available region IDs.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to view available region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

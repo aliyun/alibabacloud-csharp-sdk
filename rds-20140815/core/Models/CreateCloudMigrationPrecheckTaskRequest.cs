@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The username. The database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</para>
+        /// <para>The username of the database account. This is the database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the self-managed PostgreSQL database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>idcOnVpc</b>: IDC-based self-managed PostgreSQL database (the IDC is connected to the VPC).</description></item>
-        /// <item><description><b>ecsOnVpc</b>: ECS-based self-managed PostgreSQL database on Alibaba Cloud.</description></item>
+        /// <item><description><b>idcOnVpc</b>: a self-managed PostgreSQL database in an on-premises data center that is connected to a VPC.</description></item>
+        /// <item><description><b>ecsOnVpc</b>: a self-managed PostgreSQL database on an Alibaba Cloud ECS instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The internal IP address of the self-managed PostgreSQL database.</para>
         /// <list type="bullet">
-        /// <item><description>For one-click migration of an ECS-based self-managed PostgreSQL database, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
-        /// <item><description>For one-click migration of an IDC-based self-managed PostgreSQL database, set this parameter to the internal IP address of the IDC.</description></item>
+        /// <item><description>For the one-click cloud migration scenario of a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
+        /// <item><description>For the one-click cloud migration scenario of a self-managed PostgreSQL database in an IDC, set this parameter to the internal IP address of the IDC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The password. The password of the database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</para>
+        /// <para>The password of the database account. This is the password of the database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourcePassword { get; set; }
 
         /// <summary>
-        /// <para>The port of the self-managed PostgreSQL database. You can run the <c>netstat -a | grep PGSQL</c> command to view the port.</para>
+        /// <para>The port number of the self-managed PostgreSQL database. You can run the <c>netstat -a | grep PGSQL</c> command to view the port number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The task name. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</para>
+        /// <para>The name of the task. You can specify a custom name. If you do not specify a name, the system automatically generates one.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slf7w7wj3g</para>

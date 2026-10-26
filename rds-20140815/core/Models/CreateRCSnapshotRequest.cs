@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class CreateRCSnapshotRequest : TeaModel {
         /// <summary>
         /// <para>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>Default value: null.</para>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and does not need to be specified.</para>
+        /// <para>This parameter is deprecated. You do not need to specify it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? InstantAccess { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and does not need to be specified.</para>
+        /// <para>This parameter is deprecated. You do not need to specify it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Settings for the retention period of the snapshot. Unit: days. The snapshot is subject to automatic release after the retention period expires. Valid values: 1 to 65536.</para>
-        /// <para>Default value: null, which indicates that the snapshot is not subject to automatic release.</para>
+        /// <para>Settings for the retention period of the snapshot. Unit: days. After the retention period expires, the snapshot is subject to automatic release. Valid values: 1 to 65536.</para>
+        /// <para>Default value: empty, which indicates that the snapshot is not subject to automatic release.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>This parameter is deprecated and does not need to be specified.</para>
+        /// <para>This parameter is deprecated. You do not need to specify it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

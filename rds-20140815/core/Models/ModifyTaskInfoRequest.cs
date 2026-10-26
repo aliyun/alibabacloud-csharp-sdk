@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The action-related parameters, which can be extended as needed. When taskAction is set to modifySwitchTime, set ActionParams to <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
+        /// <para>The parameters related to the action. You can add extensions based on your business requirements. When TaskAction is set to modifySwitchTime, set ActionParams to <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
         /// <para>recoverMode specifies the task recovery pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>timePoint</b>: Execute at a specified point in time.</description></item>
-        /// <item><description><b>immediate</b>: Execute immediately.</description></item>
+        /// <item><description><b>timePoint</b>: executes the task at a specified point in time.</description></item>
+        /// <item><description><b>immediate</b>: executes the task immediately.</description></item>
         /// </list>
-        /// <para>recoverTime specifies the recovery time in UTC+0. Format: yyyy-MM-ddTHH:mm:ssZ. This parameter is required when recoverMode is set to timePoint.</para>
+        /// <para>recoverTime specifies the recovery time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. When recoverMode is set to timePoint, recoverTime is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;recoverTime&quot;:&quot;2023-04-12T18:30:00Z&quot;,&quot;recoverMode&quot;:&quot;timePoint&quot;}</para>

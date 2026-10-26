@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The system architecture of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>x86_64.</description></item>
-        /// <item><description>arm64.</description></item>
+        /// <item><description>x86_64</description></item>
+        /// <item><description>arm64</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>Queries available images for the specified instance type.</para>
+        /// <para>The instance type for which to query available images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.x2.xlarge.6cm</para>

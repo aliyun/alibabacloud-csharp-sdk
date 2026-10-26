@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableClassesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available instance types for the instance.</para>
+        /// <para>The list of available instance specifications.</para>
         /// </summary>
         [NameInMap("DBInstanceClasses")]
         [Validation(Required=false)]
         public List<DescribeAvailableClassesResponseBodyDBInstanceClasses> DBInstanceClasses { get; set; }
         public class DescribeAvailableClassesResponseBodyDBInstanceClasses : TeaModel {
             /// <summary>
-            /// <para>The instance type.</para>
+            /// <para>The instance specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds.mysql.c1.large</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The instance storage capacity range.</para>
+            /// <para>The instance storage range.</para>
             /// </summary>
             [NameInMap("DBInstanceStorageRange")]
             [Validation(Required=false)]
             public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange DBInstanceStorageRange { get; set; }
             public class DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange : TeaModel {
                 /// <summary>
-                /// <para>The maximum storage capacity. Unit: GB.</para>
+                /// <para>The maximum storage space. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? MaxValue { get; set; }
 
                 /// <summary>
-                /// <para>The minimum storage capacity. Unit: GB.</para>
+                /// <para>The minimum storage space. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? MinValue { get; set; }
 
                 /// <summary>
-                /// <para>The minimum granularity for storage capacity adjustment. The value is fixed at 5 GB increments.</para>
+                /// <para>The minimum step size for adjusting the storage space. The storage space increases in fixed increments of 5 GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>

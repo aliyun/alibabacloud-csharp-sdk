@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The parameter template information.</para>
+        /// <para>The information about the parameter template.</para>
         /// </summary>
         [NameInMap("ParamGroupInfo")]
         [Validation(Required=false)]
         public DescribeParametersResponseBodyParamGroupInfo ParamGroupInfo { get; set; }
         public class DescribeParametersResponseBodyParamGroupInfo : TeaModel {
             /// <summary>
-            /// <para>The parameter template ID.</para>
+            /// <para>The ID of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rpg-sys-01040401010200</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ParamGroupId { get; set; }
 
             /// <summary>
-            /// <para>The parameter template description.</para>
+            /// <para>The description of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sync_binlog=1000, innodb_flush_log_at_trx_commit=2, async</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ParameterGroupDesc { get; set; }
 
             /// <summary>
-            /// <para>The parameter template name.</para>
+            /// <para>The name of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql_innodb_8.0_basic_normal_high</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ParameterGroupName { get; set; }
 
             /// <summary>
-            /// <para>The parameter templatetype.</para>
+            /// <para>The templatetype of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

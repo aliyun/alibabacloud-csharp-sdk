@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAllWhitelistTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable fuzzy search. Valid values:</para>
+        /// <para>Specifies whether to enable fuzzy match. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>
         /// <item><description><b>false</b>: Disabled.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? FuzzySearch { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values: 10, 30, and 50.</para>
+        /// <para>The number of entries per page. Valid values: 10, 30, and 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MaxRecordsPerPage { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumbers { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the available regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. For more information about resource groups, see What is a resource group.</para>
+        /// <para>The ID of the resource group. For more information, see What is a resource group?</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyhigx******</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the whitelist template. Specify this parameter for fuzzy search. Fuzzy match is supported for template names. You can call the DescribeWhitelistTemplate operation to obtain the template name.</para>
+        /// <para>The name of the whitelist template. Specify this parameter for fuzzy match. You can call the DescribeWhitelistTemplate operation to obtain the template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>template</para>

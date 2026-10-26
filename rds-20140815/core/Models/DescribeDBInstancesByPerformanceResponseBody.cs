@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23907437-79B9-411A-9EE6-75A8F0F1C619</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances returned by the query.</para>
+        /// <para>The total number of queried instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28</para>

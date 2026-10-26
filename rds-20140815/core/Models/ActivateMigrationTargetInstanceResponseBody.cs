@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76364A52-E0AB-5CC8-9818-CF1DC482C092</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The port of the self-managed PostgreSQL database.</para>
+        /// <para>The port number of the self-managed PostgreSQL database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5432</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>440913675</para>

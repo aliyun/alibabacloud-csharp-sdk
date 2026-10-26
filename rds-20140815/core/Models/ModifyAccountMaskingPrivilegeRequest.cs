@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myDB</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The permission expiration time in UTC format. This parameter is required only for the fullAccess privilege.</para>
+        /// <para>The expiration time of the permission in UTC format. This parameter is required only for the fullAccess permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-22T02:01:20Z</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The privilege type. Valid values: noneAccess, restrictedAccess, and fullAccess.</para>
+        /// <para>The permission type. Valid values: noneAccess, restrictedAccess, and fullAccess.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The account name. You can specify multiple accounts separated by commas.</para>
+        /// <para>The name of the account. You can specify multiple account names separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

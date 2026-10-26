@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The authorization status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Authorized.</description></item>
-        /// <item><description><b>0</b>: Not authorized.</description></item>
+        /// <item><description><b>0</b>: Unauthorized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RemoveRCInstancesFromDeploymentSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C816A4BF-A6EC-4722-95F9-2055859CCFD2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The call results of the operation.</para>
+        /// <para>The results of the API call.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The node status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Success</b>: Succeeded.</description></item>
-            /// <item><description><b>Failed</b>: Failed.</description></item>
+            /// <item><description><b>Success</b>: successful</description></item>
+            /// <item><description><b>Failed</b>: failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

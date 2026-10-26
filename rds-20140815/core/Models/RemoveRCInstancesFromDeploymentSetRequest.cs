@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RemoveRCInstancesFromDeploymentSetRequest : TeaModel {
         /// <summary>
-        /// <para>The deployment set ID.</para>
+        /// <para>The ID of the deployment set.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RCInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

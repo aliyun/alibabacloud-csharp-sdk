@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AddRCInstancesToDeploymentSetRequest : TeaModel {
         /// <summary>
-        /// <para>The group number of the ECS instance in the deployment set when the deployment set policy is high availability group (AvailabilityGroup). You can use this parameter to specify the group number. Valid values: 1 to 7. If no value is specified, the system automatically assigns an active group.</para>
+        /// <para>The group number of the instance in the deployment set. This parameter is valid only when the deployment set strategy of the ECS instance to be added or adjusted is AvailabilityGroup. Valid values: 1 to 7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DeploymentSetGroupNo { get; set; }
 
         /// <summary>
-        /// <para>The deployment set ID.</para>
+        /// <para>The ID of the deployment set.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly release running instances. Valid values:</para>
+        /// <para>Specifies whether to forcibly release the running instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Forcibly release.</description></item>
-        /// <item><description><b>false</b> (default): Do not forcibly release.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b> (default): no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RCInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query available regions.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

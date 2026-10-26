@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to configure this parameter.</para>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The aggregation dimension. Valid values. The service and server values cannot be specified at the same time.</para>
+        /// <para>The aggregation dimension. You cannot specify both service and server at the same time. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>service: aggregates monitoring metrics by proxy endpoint.</para>
         /// </description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Dimension { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,19 +76,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics.</para>
-        /// <para>RDS MySQL supports only <b>Maxscale_CpuUsage</b>: CPU utilization.</para>
-        /// <para>RDS PostgreSQL supports the following performance metrics:</para>
+        /// <para>The performance metric.</para>
+        /// <para>ApsaraDB RDS for MySQL supports only <b>Maxscale_CpuUsage</b>: CPU utilization.</para>
+        /// <para>ApsaraDB RDS for PostgreSQL supports the following performance metrics:</para>
         /// <list type="bullet">
         /// <item><description><b>Maxscale_TotalConns</b>: connection rate</description></item>
-        /// <item><description><b>Maxscale_CurrentConns</b>: current connections</description></item>
+        /// <item><description><b>Maxscale_CurrentConns</b>: current number of connections</description></item>
         /// <item><description><b>Maxscale_DownFlows</b>: outbound traffic</description></item>
         /// <item><description><b>Maxscale_UpFlows</b>: inbound traffic</description></item>
         /// <item><description><b>Maxscale_QPS</b>: request rate (QPS)</description></item>
         /// <item><description><b>Maxscale_MemUsage</b>: memory utilization</description></item>
         /// <item><description><b>Maxscale_CpuUsage</b>: CPU utilization</description></item>
         /// </list>
-        /// <para>To query multiple performance metrics, separate them with commas (,). You can query up to six performance metrics at a time.</para>
+        /// <para>To query multiple performance metrics, separate the metrics with commas (,). You can query up to six performance metrics at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreatePostgresExtensionsRequest : TeaModel {
         /// <summary>
-        /// <para>The user to which the extension belongs. Only privileged accounts are supported.</para>
+        /// <para>The user to which the plug-in belongs. Only privileged accounts are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database name of the instance. You can call DescribeDatabases to query the database name.</para>
+        /// <para>The name of the database on the instance. You can call the DescribeDatabases operation to obtain the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBNames { get; set; }
 
         /// <summary>
-        /// <para>The plugins to install. Separate multiple plugins with commas (,).
-        /// If you do not specify the request parameter <b>SourceDatabase</b>, this parameter is required.</para>
+        /// <para>The plug-ins to be installed. Separate multiple plug-ins with commas (,).
+        /// If you do not specify the <b>SourceDatabase</b> request parameter, you must specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>citext,pg_profile</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -90,12 +90,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to confirm the security risk of installing specific extensions on instances that run minor engine versions that are too early. After you confirm the risk, the extensions can be installed.
+        /// <para>Specifies whether security risk of installing specific plug-ins on instances with outdated minor engine versions is confirmed. You can install the plug-ins only after you confirm security risk.
         /// Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false<remarks>
-        /// <para>For information about related risks, see <a href="https://help.aliyun.com/document_detail/2587815.html">Restrictions on creating extensions in ApsaraDB RDS for PostgreSQL</a>.</para>
+        /// <para>For information about the related risks, see <a href="https://help.aliyun.com/document_detail/2587815.html">Limits on creating plug-ins in ApsaraDB RDS for PostgreSQL</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? RiskConfirmed { get; set; }
 
         /// <summary>
-        /// <para>The source database from which plugins are synchronized to the target database. If you do not specify the request parameter <b>Extensions</b>, this parameter is required.</para>
+        /// <para>The source database from which plug-ins are synchronized to the destination database. If you do not specify the <b>Extensions</b> request parameter, you must specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source_db</para>

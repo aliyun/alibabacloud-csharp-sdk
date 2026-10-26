@@ -20,27 +20,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The list of enhanced monitoring metrics that are enabled for the instance.</para>
+        /// <para>The list of enhanced metrics that are enabled for the instance.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceMetricsResponseBodyItems> Items { get; set; }
         public class DescribeDBInstanceMetricsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The description of the enhanced monitoring metric.</para>
+            /// <para>The description of the enhanced metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sys cpu使用率，sys cpu使用量 / cpu总量</para>
+            /// <para>sys CPU usage, sys CPU usage / total CPU capacity</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The category of the enhanced monitoring metric. Valid values:</para>
+            /// <para>The category of the enhanced metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>os</b>: operating system metric.</description></item>
-            /// <item><description><b>db</b>: database metric.</description></item>
+            /// <item><description><b>os</b>: operating system metrics.</description></item>
+            /// <item><description><b>db</b>: database metrics.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Dimension { get; set; }
 
             /// <summary>
-            /// <para>The key of the group to which the enhanced monitoring metric belongs.</para>
+            /// <para>The key of the group to which the enhanced metric belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os.cpu_usage</para>
@@ -61,17 +61,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GroupKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the group to which the enhanced monitoring metric belongs.</para>
+            /// <para>The name of the group to which the enhanced metric belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU使用率</para>
+            /// <para>CPU usage</para>
             /// </summary>
             [NameInMap("GroupKeyType")]
             [Validation(Required=false)]
             public string GroupKeyType { get; set; }
 
             /// <summary>
-            /// <para>The statistical method of the enhanced monitoring metric. Valid values:</para>
+            /// <para>The statistical method for the enhanced metric. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>avg</b>: average value.</description></item>
             /// <item><description><b>min</b>: minimum value.</description></item>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The key of the enhanced monitoring metric.</para>
+            /// <para>The key of the enhanced metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os.cpu_usage.sys.avg</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MetricsKey { get; set; }
 
             /// <summary>
-            /// <para>The alias of the enhanced monitoring metric.</para>
+            /// <para>The alias of the enhanced metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os.cpu_usage.sys</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MetricsKeyAlias { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the enhanced monitoring metric.</para>
+            /// <para>The sequence number of the enhanced metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? SortRule { get; set; }
 
             /// <summary>
-            /// <para>The unit of the enhanced monitoring metric.</para>
+            /// <para>The unit of the enhanced metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>318C3754-F6D0-54BB-A55C-23EAA04708B7</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of enhanced monitoring metrics that are enabled for the instance.</para>
+        /// <para>The total number of enhanced metrics that are enabled for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

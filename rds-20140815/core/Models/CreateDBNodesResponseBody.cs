@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the created nodes. The value is of the String type. Multiple node IDs are separated by commas (,).</para>
+        /// <para>The IDs of the created nodes. The value is a string. Multiple node IDs are separated by commas (<c>,</c>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rn-abcd2****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2133400000****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</para>

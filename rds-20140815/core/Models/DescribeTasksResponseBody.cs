@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

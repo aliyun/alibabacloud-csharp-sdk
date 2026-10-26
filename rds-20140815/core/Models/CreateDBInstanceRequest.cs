@@ -15,8 +15,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>When you create multiple ApsaraDB RDS for MySQL instances, you can use the <b>Tag.Key</b> and <b>Tag.Value</b> parameters to add tags to the instances in the same batch. This facilitates instance management by tag after creation.</description></item>
-        /// <item><description>After multiple instances are created, the API operation returns only the <b>TaskId</b>, <b>RequestId</b>, and <b>Message</b> parameters. Other detail parameters are not returned. To query the details of a specific instance, call the DescribeDBInstanceAttribute operation.</description></item>
-        /// <item><description>If <b>Engine</b> is not set to <b>MySQL</b> and the value of this parameter is greater than <b>1</b>, the API operation fails and returns the error code <c>InvalidParam.Engine</c>.</description></item>
+        /// <item><description>After multiple instances are created, the operation returns only the <b>TaskId</b>, <b>RequestId</b>, and <b>Message</b> parameters, and does not return other detail parameters. To query the details of a specific instance, you can call the DescribeDBInstanceAttribute operation.</description></item>
+        /// <item><description>If <b>Engine</b> is not set to <b>MySQL</b> and the value of this parameter is greater than <b>1</b>, the operation fails and returns the error code <c>InvalidParam.Engine</c>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -44,11 +44,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. You must ensure that your account balance is sufficient.</description></item>
         /// <item><description><b>false</b>: generates an order without deducting fees.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is true. If your payment method has an insufficient balance, you can set AutoPay to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para>The default value is true. If your payment method has an insufficient balance, you can set AutoPay to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to pay the order manually.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,13 +79,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a voucher. Valid values:</para>
+        /// <para>Specifies whether to enable or disable automatic minor version upgrades. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: uses a voucher.</description></item>
-        /// <item><description><b>false</b>: does not use a voucher. This is the default value.</description></item>
+        /// <item><description><b>Auto</b>: Enabled.</description></item>
+        /// <item><description><b>Manual</b>: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Auto</para>
+        /// </summary>
+        [NameInMap("AutoUpgradeMinorVersion")]
+        [Validation(Required=false)]
+        public string AutoUpgradeMinorVersion { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to use vouchers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: uses vouchers.</description></item>
+        /// <item><description><b>false</b>: does not use vouchers. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you use a voucher and later need to downgrade the instance configuration, the amount deducted by the voucher will not be refunded.</para>
+        /// <para>If you use vouchers and later need to downgrade the instance configuration, the amount deducted by the vouchers will not be refunded.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The configuration information for Babelfish for ApsaraDB RDS for PostgreSQL.</para>
+        /// <para>The configuration information of Babelfish for ApsaraDB RDS for PostgreSQL.</para>
         /// <para>Configuration format: {&quot;babelfishEnabled&quot;:&quot;true&quot;,&quot;migrationMode&quot;:&quot;xxxxxxx&quot;,&quot;masterUsername&quot;:&quot;xxxxxxx&quot;,&quot;masterUserPassword&quot;:&quot;xxxxxxxx&quot;}</para>
         /// <para>Parameter description:</para>
         /// <list type="bullet">
@@ -121,11 +135,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the I/O performance burst feature for Premium ESSD cloud disks. Valid values:</para>
+        /// <para>Specifies whether to enable the I/O performance burst feature for premium cloud disks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: enables the feature.</description></item>
         /// <item><description><b>false</b>: disables the feature.<remarks>
-        /// <para>For more information about the I/O performance burst feature for Premium ESSD cloud disks, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is a Premium ESSD cloud disk?</a>.</para>
+        /// <para>For more information about the I/O performance burst feature for premium cloud disks, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is a premium cloud disk?</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -157,7 +171,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>cluster</b>: Cluster Edition for MySQL or PostgreSQL.</description></item>
         /// <item><description><b>AlwaysOn</b>: Cluster Edition for SQL Server.</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition.<remarks>
-        /// <para>This parameter is required when you create a SQL Server Enterprise Edition Cluster&lt;props=&quot;china&quot;&gt;, Basic Edition Standard, or Basic Edition Enterprise instance. For example, when you create a Basic Edition 2022 Enterprise Edition Cluster (2022_ent) instance, you must set this parameter to Basic.</para>
+        /// <para>This parameter is required when you create a SQL Server RDS Enterprise Edition&lt;props=&quot;china&quot;&gt;, Basic Edition Standard Edition, or Basic Edition Enterprise Edition instance. For example, when you create a Basic Edition 2022 RDS Enterprise Edition (2022_ent) instance, you must set this parameter to Basic.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -182,7 +196,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that the value is unique across different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -192,7 +206,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">data archiving</a> feature for Premium ESSD cloud disks. Valid values:</para>
+        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">data archiving</a> feature for premium cloud disks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: enables the feature.</description></item>
         /// <item><description><b>false</b>: disables the feature.</description></item>
@@ -237,7 +251,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The strategy for creating multiple instances at a time. This parameter takes effect only when <b>Amount</b> is greater than 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Atomicity</b>: atomicity. All instances in the same batch are created successfully, or none of them are created if one fails. This is the default value.</description></item>
+        /// <item><description><b>Atomicity</b>: atomicity. All instances in the same batch are created successfully, or if one instance fails to be created, all instances fail to be created. This is the default value.</description></item>
         /// <item><description><b>Partial</b>: non-atomicity. The creation of an instance is not affected by other instances in the same batch.</description></item>
         /// </list>
         /// 
@@ -253,7 +267,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CustomExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The instance type. You can specify a standard or Yitian instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
+        /// <para>The instance type. You can specify a standard or YiTian instance type. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
         /// <para>To create a Serverless instance, specify one of the following values:</para>
         /// <list type="bullet">
         /// <item><description>MySQL Basic Edition: <b>mysql.n2.serverless.1c</b></description></item>
@@ -272,9 +286,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. The name must be 2 to 255 characters in length. It must start with a letter and can contain digits, letters, and hyphens (-).</para>
+        /// <para>The description of the instance. The description must be 2 to 255 characters in length. It must start with a letter and can contain letters, digits, Chinese characters, and hyphens (-).</para>
         /// <remarks>
-        /// <para>The name cannot start with http:// or https://.</para>
+        /// <para>The description cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -307,22 +321,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. Valid values:</para>
+        /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: high-performance local SSD (recommended).</description></item>
-        /// <item><description><b>general_essd</b>: Premium ESSD cloud disk (recommended).</description></item>
+        /// <item><description><b>local_ssd</b>: premium local SSD (recommended).</description></item>
+        /// <item><description><b>general_essd</b>: premium cloud disk (recommended).</description></item>
         /// <item><description><b>cloud_essd</b>: PL1 ESSD.</description></item>
         /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
         /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD (not recommended, discontinued in some regions).</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD (not recommended, and no longer available in some regions).</description></item>
         /// </list>
         /// <para>The default value of this parameter is automatically determined based on the instance type specified by <b>DBInstanceClass</b>:</para>
         /// <list type="bullet">
-        /// <item><description>If the instance type is a high-performance local SSD type, the default value is <b>local_ssd</b>.</description></item>
-        /// <item><description>If the instance type is a cloud disk type, the default value is <b>cloud_essd</b>.</description></item>
+        /// <item><description>If the instance type code indicates a premium local SSD, the default value is <b>local_ssd</b>.</description></item>
+        /// <item><description>If the instance type code indicates a cloud disk, the default value is <b>cloud_essd</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Serverless instances support only PL1 ESSDs and Premium ESSD cloud disks.</para>
+        /// <para>Serverless instances support only PL1 ESSDs and premium cloud disks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -363,19 +377,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The time zone of the instance. This parameter takes effect only when <b>Engine</b> is set to <b>MySQL</b> or <b>PostgreSQL</b>.</para>
         /// <list type="bullet">
         /// <item><description>If <b>Engine</b> is set to <b>MySQL</b>:<list type="bullet">
-        /// <item><description>This parameter specifies the UTC time zone. Valid values: <b>-12:59</b> to <b>+13:00</b>.</description></item>
-        /// <item><description>For an instance with Premium Local SSDs, you can specify a named time zone, such as Asia/Hong_Kong. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</description></item>
+        /// <item><description>This parameter configures the UTC time zone. Valid values: <b>-12:59</b> to <b>+13:00</b>.</description></item>
+        /// <item><description>For an instance with premium local SSDs, you can specify a named time zone, such as Asia/Hong_Kong. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>If <b>Engine</b> is set to <b>PostgreSQL</b>:<list type="bullet">
-        /// <item><description>This parameter specifies a named time zone. UTC time zones are not supported. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</description></item>
+        /// <item><description>This parameter configures a named time zone. UTC time zones are not supported. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</description></item>
         /// <item><description>This parameter can be configured only for ApsaraDB RDS for PostgreSQL instances with cloud disks.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can set the time zone when you purchase a primary instance. Read-only instances do not support parameter settings for the time zone and inherit the time zone of the primary instance.</description></item>
+        /// <item><description>You can set the time zone when you purchase a primary instance. Read-only instances do not support time zone settings and inherit the time zone of the primary instance.</description></item>
         /// <item><description>If you do not specify this parameter, the system selects the default time zone based on the region where the instance is created.</description></item>
         /// </list>
         /// </remarks>
@@ -403,10 +417,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable release protection for the instance. This feature is supported only for pay-as-you-go instances. Valid values:</para>
+        /// <para>Specifies whether to enable the release protection feature for the ApsaraDB RDS instance. This feature is supported only for pay-as-you-go instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables release protection.</description></item>
-        /// <item><description><b>false</b>: disables release protection. This is the default value.</description></item>
+        /// <item><description><b>true</b>: enables the feature.</description></item>
+        /// <item><description><b>false</b>: disables the feature. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -417,10 +431,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a precheck before creating the instance. Valid values:</para>
+        /// <para>Specifies whether to perform a precheck for the instance creation operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a precheck but does not create the instance. The system checks the request parameters, request format, service limits, and inventory.</description></item>
-        /// <item><description><b>false</b>: sends a normal request and creates the instance after the request passes the precheck. This is the default value.</description></item>
+        /// <item><description><b>true</b>: performs a precheck but does not create the instance. The check items include request parameters, request format, business limits, and inventory.</description></item>
+        /// <item><description><b>false</b>: sends a normal request and creates the instance directly after the check passes. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -432,10 +446,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The ID of the key used for cloud disk encryption in the same region. If you specify this parameter, cloud disk encryption is enabled and cannot be disabled. You must also specify <b>RoleARN</b>.</para>
-        /// <para>You can view the key ID or create a new key in the Key Management Service (KMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Create a key</a>.</para>
+        /// <para>You can view the key ID in the Key Management Service (KMS) console or create a new key. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Create a CMK</a>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server, you do not need to specify this parameter. You only need to specify <b>RoleARN</b> to use the service key to create an instance with cloud disk encryption enabled.</description></item>
+        /// <item><description>For ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances, you do not need to specify this parameter. You only need to specify <b>RoleARN</b> to use the service key to create an instance with cloud disk encryption enabled.</description></item>
         /// <item><description>If RAM authorization requires RAM users to enable cloud disk encryption when creating instances, the instances cannot be created if cloud disk encryption is not enabled. Configure the following RAM policy for the RAM user:
         /// <c>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Deny&quot;,&quot;Action&quot;:&quot;rds:CreateDBInstance&quot;,&quot;Resource&quot;:&quot;*&quot;,&quot;Condition&quot;:{&quot;StringEquals&quot;:{&quot;rds:DiskEncryptionRequired&quot;:&quot;false&quot;}}}]}</c>
         /// Warning: This configuration also affects the CreateOrder operation for creating instances in the console.</description></item>
@@ -471,7 +485,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description>Regular instances<list type="bullet">
         /// <item><description>MySQL: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, and <b>8.0</b></description></item>
-        /// <item><description>SQL Server: <b>08r2_ent_ha</b> (cloud disk edition, discontinued), <b>2008r2</b> (high-performance local SSD, discontinued), <b>2012</b> (Enterprise Edition Standalone), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2014_ent_ha</b>, <b>2014_std_ha</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, <b>2022_web</b>, <b>2025_ent</b>, and <b>2025_std</b></description></item>
+        /// <item><description>SQL Server: <b>08r2_ent_ha</b> (cloud disk edition, discontinued), <b>2008r2</b> (premium local SSD, discontinued), <b>2012</b> (Enterprise Edition standalone), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2014_ent_ha</b>, <b>2014_std_ha</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, <b>2022_web</b>, <b>2025_ent</b>, and <b>2025_std</b></description></item>
         /// <item><description>PostgreSQL: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, <b>15.0</b>, <b>16.0</b>, <b>17.0</b>, and <b>18.0</b></description></item>
         /// <item><description>MariaDB: <b>10.3</b> and <b>10.6</b></description></item>
         /// </list>
@@ -486,7 +500,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>MariaDB does not support Serverless instances.</description></item>
-        /// <item><description>For SQL Server instances, <c>_ent</c> indicates the Enterprise Edition Cluster, <c>_ent_ha</c> indicates the Enterprise Edition, <c>_std_ha</c> indicates the Standard Edition, and <c>_web</c> indicates the Web Edition.</description></item>
+        /// <item><description>For SQL Server instances, <c>_ent</c> indicates Enterprise Cluster Edition, <c>_ent_ha</c> indicates Enterprise Edition, <c>_std_ha</c> indicates Standard Edition, and <c>_web</c> indicates Web Edition.</description></item>
         /// <item><description>SQL Server 2014 instances are not available on the international site.</description></item>
         /// <item><description>Babelfish for ApsaraDB RDS for PostgreSQL instances support only major version 15.0.</description></item>
         /// </list>
@@ -503,8 +517,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable <a href="https://help.aliyun.com/document_detail/2856526.html">native replication for ApsaraDB RDS for MySQL</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: enables native replication.</description></item>
-        /// <item><description><b>OFF</b>: disables native replication.</description></item>
+        /// <item><description><b>ON</b>: enables the feature.</description></item>
+        /// <item><description><b>OFF</b>: disables the feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -517,7 +531,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC).</description></item>
+        /// <item><description><b>VPC</b>: VPC.</description></item>
         /// <item><description><b>Classic</b>: classic network.</description></item>
         /// </list>
         /// <remarks>
@@ -536,7 +550,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a> feature for Premium ESSD cloud disks. Valid values:</para>
+        /// <para>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a> feature for premium cloud disks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: enables the feature.</description></item>
         /// <item><description><b>0</b>: disables the feature.</description></item>
@@ -568,7 +582,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
-        /// <item><description><b>Serverless</b>: Serverless billing method. MariaDB instances are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of ApsaraDB RDS for MySQL Serverless instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of ApsaraDB RDS for SQL Server Serverless instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of ApsaraDB RDS for PostgreSQL Serverless instances</a>.<remarks>
+        /// <item><description><b>Serverless</b>: serverless billing method. MariaDB instances are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of ApsaraDB RDS for MySQL Serverless instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of ApsaraDB RDS for SQL Server Serverless instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of ApsaraDB RDS for PostgreSQL Serverless instances</a>.<remarks>
         /// <para>The system automatically generates an order and completes the payment. You do not need to manually confirm the payment.</para>
         /// </remarks>
         /// </description></item>
@@ -583,10 +597,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription period unit. Valid values:</para>
+        /// <para>The subscription period of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: year.</description></item>
-        /// <item><description><b>Month</b>: month.</description></item>
+        /// <item><description><b>Year</b>: yearly subscription.</description></item>
+        /// <item><description><b>Month</b>: monthly subscription.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required when <b>PayType</b> is set to <b>Prepaid</b>.</para>
@@ -600,7 +614,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The port used to initialize the instance upon creation. Valid values:</para>
+        /// <para>The port used to initialize the instance during creation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MySQL: 1000 to 65534</description></item>
         /// <item><description>PostgreSQL, SQL Server, and MariaDB: 1000 to 5999</description></item>
@@ -645,7 +659,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -659,9 +673,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor (ARN) used for the authorization of the ApsaraDB RDS service account by the primary account to access KMS. You can call the CheckCloudResourceAuthorized operation to query the descriptor.</para>
+        /// <para>The global resource descriptor (ARN) used for the authorization of the ApsaraDB RDS service account to access KMS. You can invoke the CheckCloudResourceAuthorized operation to query the ARN.</para>
         /// <remarks>
-        /// <para>Notice: You must specify <b>RoleARN</b> when you enable cloud disk encryption.</para>
+        /// <para>Notice: When you enable cloud disk encryption, you must specify <b>RoleARN</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -672,10 +686,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RoleARN { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple IP addresses or CIDR blocks with commas (,). Each IP address or CIDR block must be unique. You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of a single instance. The following formats are supported:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple IP addresses or CIDR blocks with commas (,). Duplicate IP addresses or CIDR blocks are not allowed. You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of a single instance. The following formats are supported:</para>
         /// <list type="bullet">
         /// <item><description>IP addresses, such as 10.10.XX.XX.</description></item>
-        /// <item><description>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits long. The prefix length ranges from 1 to 32 bits.</description></item>
+        /// <item><description>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates the length of the prefix in the CIDR block, and the prefix length ranges from 1 to 32.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -687,7 +701,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The settings for the Serverless instance. This parameter is required when you create a Serverless instance.</para>
+        /// <para>The settings for the ApsaraDB RDS Serverless instance. This parameter is required when you create a Serverless instance.</para>
         /// <remarks>
         /// <para>MariaDB does not support Serverless instances.</para>
         /// </remarks>
@@ -697,13 +711,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public CreateDBInstanceRequestServerlessConfig ServerlessConfig { get; set; }
         public class CreateDBInstanceRequestServerlessConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the smart pause and resume feature for the Serverless instance. Valid values:</para>
+            /// <para>Specifies whether to enable the smart pause and start feature for the Serverless instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: enables the feature.</description></item>
             /// <item><description><b>false</b>: disables the feature. This is the default value.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is required only for MySQL and PostgreSQL Serverless instances. If no connections are established within 10 minutes, the instance enters the paused state and automatically resumes when a new connection is established.</para>
+            /// <para>This parameter is required only for MySQL and PostgreSQL Serverless instances. If no connections are established within 10 minutes, the instance enters the paused state. When a connection is established, the instance is automatically awakened.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -721,7 +735,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <item><description>PostgreSQL: <b>1</b> to <b>14</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para>The value of this parameter must be greater than or equal to the value of <b>MinCapacity</b>. Only <b>integers</b> are supported.</para>
+            /// <para>The value of this parameter must be greater than or equal to the value of <b>MinCapacity</b>, and only <b>integers</b> are supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -752,13 +766,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>Specifies whether to enable forced elastic scaling for the Serverless instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enables forced elastic scaling.</description></item>
-            /// <item><description><b>false</b>: disables forced elastic scaling. This is the default value.</description></item>
+            /// <item><description><b>true</b>: enables the feature.</description></item>
+            /// <item><description><b>false</b>: disables the feature. This is the default value.</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>This parameter is required only for MySQL and PostgreSQL Serverless instances. If you enable this parameter, the instance will be unavailable for 30 to 120 seconds during forced scaling. Use this parameter with caution based on your business requirements.</description></item>
-            /// <item><description>Elastic scaling of RCUs usually takes effect immediately. However, in some special cases (such as during the execution of a large transaction), scaling cannot be completed immediately. In this case, you can enable this parameter to force scaling.</description></item>
+            /// <item><description>This parameter is required only for MySQL and PostgreSQL Serverless instances. After you enable this feature, the instance may be unavailable for 30 to 120 seconds during forced scaling. Use this feature with caution based on your business requirements.</description></item>
+            /// <item><description>Elastic scaling of RCUs usually takes effect immediately. However, in some special cases (such as during the execution of large transactions), scaling cannot be completed immediately. In this case, you can enable this parameter to force scaling.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -778,7 +792,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Disable</b>: disables automatic storage expansion. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can also call the ModifyDasInstanceConfig operation to adjust this setting after the instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/173826.html">Configure automatic storage expansion</a>.</para>
+        /// <para>You can also call the ModifyDasInstanceConfig operation to adjust this setting after the instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/173826.html">Enable automatic storage expansion</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -789,7 +803,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>The threshold that triggers automatic storage expansion. Unit: %. Valid values:</para>
+        /// <para>The threshold percentage that triggers automatic storage expansion. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>10</b></description></item>
         /// <item><description><b>20</b></description></item>
@@ -809,7 +823,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? StorageThreshold { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage capacity after automatic storage expansion. Automatic storage expansion does not increase the total storage capacity of the instance beyond this value. Unit: GB.</para>
+        /// <para>The upper limit of the total storage capacity for automatic storage expansion. The automatic expansion does not cause the total storage capacity of the instance to exceed this value. Unit: GB.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>The value must be greater than or equal to 0.</description></item>
@@ -825,7 +839,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? StorageUpperBound { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be configured.</para>
+        /// <para>Deprecated. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gbk</para>
@@ -835,17 +849,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SystemDBCharset { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDBInstanceRequestTag> Tag { get; set; }
         public class CreateDBInstanceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Specify this parameter to add a tag to the instance.</para>
+            /// <para>The tag key. You can specify this parameter to add a tag to the instance.</para>
             /// <list type="bullet">
             /// <item><description>If the specified tag key already exists, the tag key is directly added to the instance. You can call the ListTagResources operation to query existing tags.</description></item>
-            /// <item><description>If the specified tag key does not exist, the system creates the tag key and adds it to the instance.</description></item>
+            /// <item><description>If the specified tag key does not exist, the tag key is created and then added to the instance.</description></item>
             /// <item><description>Empty strings are not allowed.</description></item>
             /// <item><description>This parameter must be used together with <b>Tag.Value</b>.</description></item>
             /// </list>
@@ -858,10 +872,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value that corresponds to the tag key. Specify this parameter to add a tag to the instance.</para>
+            /// <para>The tag value that corresponds to the tag key. You can specify this parameter to add a tag to the instance.</para>
             /// <list type="bullet">
             /// <item><description>If the specified tag value exists for the corresponding tag key, the tag value is directly added to the instance. You can call the ListTagResources operation to query existing tags.</description></item>
-            /// <item><description>If the specified tag value does not exist for the corresponding tag key, the system creates the tag value and adds it to the instance.</description></item>
+            /// <item><description>If the specified tag value does not exist for the corresponding tag key, the tag value is created and then added to the instance.</description></item>
             /// <item><description>This parameter must be used together with <b>Tag.Key</b>.</description></item>
             /// </list>
             /// 
@@ -875,11 +889,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the host for the logger node in the dedicated cluster.</para>
+        /// <para>The ID of the host on which the logger instance is created in the dedicated cluster.</para>
         /// <para>This parameter is required when you create an RDS Enterprise Edition instance in a dedicated cluster. If you do not specify this parameter, the system automatically allocates a host by default.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</description></item>
-        /// <item><description>If you do not have a host, you can call the CreateDedicatedHost operation to add one.</description></item>
+        /// <item><description>You can invoke the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</description></item>
+        /// <item><description>If you do not have a host, you can invoke the CreateDedicatedHost operation to add one.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -908,8 +922,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the host on which the secondary instance is created in the dedicated cluster.</para>
         /// <para>This parameter is required when you create a high-availability series or RDS Enterprise Edition instance in a dedicated cluster. If you do not specify this parameter, the system automatically allocates a host by default.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</description></item>
-        /// <item><description>If you do not have a host, you can call the CreateDedicatedHost operation to add one.</description></item>
+        /// <item><description>You can invoke the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</description></item>
+        /// <item><description>If you do not have a host, you can invoke the CreateDedicatedHost operation to add one.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -920,7 +934,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDedicatedHostIdForSlave { get; set; }
 
         /// <summary>
-        /// <para>The minor engine version of the RDS instance to be created. This parameter is required only when you create a MySQL or PostgreSQL instance.
+        /// <para>The minor engine version of the ApsaraDB RDS instance. This parameter is required only when you create a MySQL or PostgreSQL instance.
         /// Format:</para>
         /// <list type="bullet">
         /// <item><description><para>MySQL: <c>&lt;Instance version&gt;_&lt;Numeric version number&gt;</c>. Examples: <c>rds_20200229</c>, <c>xcluster_20200229</c>, and <c>xcluster80_20200229</c>. Description:</para>
@@ -930,16 +944,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description>xcluster80: MySQL 8.0 RDS Enterprise Edition.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the DescribeDBMiniEngineVersions operation to query the numeric version number. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/96060.html">AliSQL release notes</a>.</para>
+        /// <para>You can invoke the DescribeDBMiniEngineVersions operation to query the numeric version number. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/96060.html">AliSQL release notes</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>PostgreSQL: <c>rds_postgres_&lt;Major version&gt;00_&lt;Minor engine version number&gt;</c>. Example: <c>rds_postgres_1400_20220830</c>. Description:</para>
+        /// <item><description><para>PostgreSQL: <c>rds_postgres_&lt;Major version&gt;00_&lt;Minor version number&gt;</c>. Example: <c>rds_postgres_1400_20220830</c>. Description:</para>
         /// <list type="bullet">
         /// <item><description>1400: PostgreSQL major version 14.</description></item>
-        /// <item><description>20220830: AliPG minor engine version. You can call the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/126002.html">PostgreSQL release notes</a>.</description></item>
+        /// <item><description>20220830: AliPG minor engine version. You can invoke the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/126002.html">PostgreSQL release notes</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If Babelfish is enabled in <b>BabelfishConfig</b>, the minor engine version format for ApsaraDB RDS for PostgreSQL is: <c>rds_postgres_&lt;Major version&gt;00_&lt;AliPG minor engine version&gt;_babelfish</c>.</para>
+        /// <para>If Babelfish is enabled in <b>BabelfishConfig</b>, the minor engine version format for the ApsaraDB RDS for PostgreSQL instance is <c>rds_postgres_&lt;Major version&gt;00_&lt;AliPG minor engine version&gt;_babelfish</c>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -970,7 +984,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The ID of the user backup. You can call the ListUserBackupFiles operation to query the backup ID. If you specify this parameter, the instance is created based on the user backup.</para>
-        /// <para>To specify this parameter, the following limits apply:</para>
+        /// <para>If you specify this parameter, the following limits apply:</para>
         /// <list type="bullet">
         /// <item><description><b>PayType</b> must be set to <b>Postpaid</b>.</description></item>
         /// <item><description><b>Engine</b> must be set to <b>MySQL</b>.</description></item>
@@ -986,7 +1000,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string UserBackupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The VPC ID.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when the network type <b>InstanceNetworkType</b> is set to <b>VPC</b>.</para>
         /// </remarks>
@@ -999,12 +1013,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// <list type="bullet">
-        /// <item><description><b>Zone mapping</b>: The zone of the vSwitch must match the zone of the primary node (<b>ZoneId</b>) and the zone of the secondary node (<b>ZoneIdSlave1</b>). If you specify two vSwitch IDs, their order must match the order of <b>ZoneId</b> and <b>ZoneIdSlave1</b>.</description></item>
+        /// <item><description><b>Zone mapping</b>: The zone of the vSwitch specified by VSwitchId must correspond to the zone of the primary node (ZoneId) and the zone of the secondary node (ZoneIdSlave1). If you specify two vSwitch IDs, their sequence must match the sequence of ZoneId and ZoneIdSlave1.</description></item>
         /// <item><description><b>Network type limit</b>: <b>InstanceNetworkType</b> must be set to <b>VPC</b>.</description></item>
         /// <item><description><b>Multiple vSwitches</b>: If you specify <b>ZoneIdSlave1</b> and the value is not <b>Auto</b>, you must specify two vSwitch IDs and separate them with a comma (,).</description></item>
-        /// <item><description><b>Character limit</b>: <b>VSwitchId</b> cannot contain special characters such as spaces, exclamation marks (!), number signs (#), currency symbols (¥), ampersands (&amp;), and percent signs (%).</description></item>
+        /// <item><description><b>Character limit</b>: VSwitchId cannot contain special characters such as spaces, exclamation marks (!), number signs (#), yen signs (¥), ampersands (&amp;), or percent signs (%).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1015,8 +1029,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The list of whitelists.
-        /// To configure multiple IP addresses, separate them with commas (,). Do not add spaces before or after the commas. Example: <c>192.168.0.1,172.16.213.9</c>.</para>
+        /// <para>The whitelist templates.
+        /// When you need to configure multiple IP addresses, separate multiple IP addresses or CIDR blocks with commas (,). Do not include spaces before or after the commas. Example: <c>192.168.0.1,172.16.213.9</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1,172.16.213.9</para>
@@ -1028,10 +1042,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The zone ID of the primary node.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify a VPC and a vSwitch, you must specify the zone ID of the vSwitch. Otherwise, the instance cannot be created.</description></item>
-        /// <item><description>For a high-availability series instance, you must also specify <b>ZoneIdSlave1</b> to determine whether the instance uses a single-zone deployment or multi-zone deployment.</description></item>
-        /// <item><description>For an RDS Enterprise Edition instance, you must also specify <b>ZoneIdSlave1</b> and <b>ZoneIdSlave2</b> to determine whether the instance uses a single-zone deployment or multi-zone deployment.</description></item>
-        /// <item><description>For an ApsaraDB RDS Cluster Edition instance, you must also specify <b>ZoneIdSlave1</b> for a two-node instance, and both <b>ZoneIdSlave1</b> and <b>ZoneIdSlave2</b> for a three-node instance.</description></item>
+        /// <item><description>If you specify a VPC and a vSwitch, you must specify the zone ID of the target vSwitch. Otherwise, the instance cannot be created.</description></item>
+        /// <item><description>For a high-availability series instance, you must also specify <b>ZoneIdSlave1</b> to determine whether the instance uses a single-zone deployment or a multi-zone deployment.</description></item>
+        /// <item><description>For an RDS Enterprise Edition instance, you must also specify <b>ZoneIdSlave1</b> and <b>ZoneIdSlave2</b> to determine whether the instance uses a single-zone deployment or a multi-zone deployment.</description></item>
+        /// <item><description>For an ApsaraDB RDS for MySQL Cluster Edition instance, you must also specify <b>ZoneIdSlave1</b> for a two-node instance, and <b>ZoneIdSlave1</b> and <b>ZoneIdSlave2</b> for a three-node instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1044,7 +1058,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The zone ID of the secondary node.</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to <b>Auto</b>, the instance uses a multi-zone deployment and the system automatically selects a zone for the secondary node.</description></item>
+        /// <item><description>If you set this parameter to <b>Auto</b>, the instance uses a multi-zone deployment, and the system automatically selects a zone for the secondary node.</description></item>
         /// <item><description>If you set this parameter to the same value as <b>ZoneId</b>, the instance uses a single-zone deployment.</description></item>
         /// <item><description>If you set this parameter to a value different from <b>ZoneId</b>, the instance uses a multi-zone deployment.</description></item>
         /// </list>
@@ -1057,7 +1071,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the second secondary node. ApsaraDB RDS for MySQL Cluster Edition instances support the creation of one or two secondary nodes when you create an instance. You can use this parameter to specify the zone of the second secondary node.</para>
+        /// <para>The zone ID of the second secondary node. ApsaraDB RDS for MySQL Cluster Edition instances support the creation of one or two secondary nodes when you create the instance. If you want to create a second secondary node, you can use this parameter to specify the zone of the second secondary node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-d</para>

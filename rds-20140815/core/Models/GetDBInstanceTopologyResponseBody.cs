@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public GetDBInstanceTopologyResponseBodyData Data { get; set; }
         public class GetDBInstanceTopologyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The network connectivity information of the instance.</para>
+            /// <para>The list of network connection information for the instance.</para>
             /// </summary>
             [NameInMap("Connections")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The node list.</para>
+            /// <para>The nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The dedicated cluster ID.</para>
+                /// <para>The ID of the dedicated cluster.</para>
                 /// <remarks>
-                /// <para>This parameter is empty for non-dedicated cluster instances.</para>
+                /// <para>An empty value is returned for instances that are not deployed in a dedicated cluster.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -120,9 +120,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DedicatedHostGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The host ID in the dedicated cluster.</para>
+                /// <para>The ID of the host in the dedicated cluster.</para>
                 /// <remarks>
-                /// <para>This parameter is empty for non-dedicated cluster instances.</para>
+                /// <para>An empty value is returned for instances that are not deployed in a dedicated cluster.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The unique identifier of the instance.</para>
                 /// <remarks>
-                /// <para>This parameter returns <b>-1</b> for non-dedicated cluster instances.</para>
+                /// <para><b>-1</b> is returned for instances that are not deployed in a dedicated cluster.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The node type. Valid values:</para>
+                /// <para>The role of the node. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Master</b>: primary node.</description></item>
                 /// <item><description><b>Slave</b>: secondary node.</description></item>

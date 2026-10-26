@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCDisksRequest : TeaModel {
         /// <summary>
-        /// <para>The disk IDs. The value is a JSON array that contains up to 100 IDs separated by commas (,). Format: <c>[&quot;Disk ID1&quot;,&quot;Disk ID2&quot;]</c>.</para>
+        /// <para>The disk IDs. The value is a JSON array that supports up to 100 IDs separated by commas (,). Example: [&quot;DiskId1&quot;, &quot;DiskId2&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;rcd-bp67acfmxazb4p****&quot;, &quot;rcd-bp67acfmxazb4g****&quot;, … &quot;rcd-bp67acfmxazb4d****&quot;]</para>
@@ -20,11 +20,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// <para>The type of cloud disk or elastic ephemeral disk to query. Valid values:
-        /// ● all: queries both system cloud disks and data cloud disks.
-        /// ● system: queries only system cloud disks.
-        /// ● data: queries only data cloud disks.
-        /// Default value: all.</para>
+        /// <para>The type of the cloud disk or elastic ephemeral disk to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>all: Queries both system cloud disks and data cloud disks.</description></item>
+        /// <item><description>system: Queries only system cloud disks.</description></item>
+        /// <item><description>data: Queries only data cloud disks.
+        /// Default value: all.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>data</para>
@@ -75,15 +77,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The disk status. Valid values:
-        /// ● In_use: in use.
-        /// ● Available: to be attached.
-        /// ● Attaching: being attached.
-        /// ● Detaching: being detached.
-        /// ● Creating: being created.
-        /// ● ReIniting: being initialized.
-        /// ● All: all statuses.
-        /// Default value: All.</para>
+        /// <para>The disk status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>In_use: In use.</description></item>
+        /// <item><description>Available: Available.</description></item>
+        /// <item><description>Attaching: Attaching.</description></item>
+        /// <item><description>Detaching: Detaching.</description></item>
+        /// <item><description>Creating: Creating.</description></item>
+        /// <item><description>ReIniting: Initializing.</description></item>
+        /// <item><description>All: All statuses.
+        /// Default value: All.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>All</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeRCDisksRequestTag> Tag { get; set; }
         public class DescribeRCDisksRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Empty values and duplicate values are <b>not allowed</b>.</para>
+            /// <para>The tag key. Empty values and duplicates are not allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testkey1</para>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Empty values are <b>allowed</b>.</para>
+            /// <para>The tag value. Empty values are allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class QueryNotifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned fields.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? AliUid { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the notification has been confirmed, that is, whether the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation has been called to mark the notification as confirmed. Valid values:</para>
+                /// <para>Indicates whether the notification has been received. This indicates whether the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation was called to mark the notification as confirmed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The notification has been confirmed.</description></item>
-                /// <item><description><b>false</b>: The notification has not been confirmed.</description></item>
+                /// <item><description><b>true</b>: Yes.</description></item>
+                /// <item><description><b>false</b>: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? ConfirmFlag { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the notification recipient under the current Alibaba Cloud account who called the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notification as confirmed.</para>
-                /// <para>A return value of <b>0</b> indicates that the notification was automatically confirmed by the system.</para>
+                /// <para>The UID of the user who received the notification under the current Alibaba Cloud account. This user called the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notification as confirmed.</para>
+                /// <para>A value of <b>0</b> indicates that the notification was automatically received by the system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IdempotentCount { get; set; }
 
                 /// <summary>
-                /// <para>The idempotency identifier used to prevent duplicate notifications from being sent.</para>
+                /// <para>The ID used to ensure the idempotence of the notification and prevent duplicate notifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -111,12 +111,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The level of the notification. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>help</b>: help</description></item>
-                /// <item><description><b>success</b>: execution succeeded</description></item>
-                /// <item><description><b>warning</b>: warning</description></item>
-                /// <item><description><b>error</b>: execution failed</description></item>
-                /// <item><description><b>loading</b>: task in progress</description></item>
-                /// <item><description><b>notice</b>: general</description></item>
+                /// <item><description><b>help</b>: Help level.</description></item>
+                /// <item><description><b>success</b>: Success level.</description></item>
+                /// <item><description><b>warning</b>: Warning level.</description></item>
+                /// <item><description><b>error</b>: Error level.</description></item>
+                /// <item><description><b>loading</b>: In progress.</description></item>
+                /// <item><description><b>notice</b>: Notice level.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -127,15 +127,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The elements in the notification template, which are represented as a JSON string. The parameters in the JSON string vary based on the value of <b>TemplateName</b>.</para>
+                /// <para>The elements in the notification template, which consist of a JSON string. The parameters contained in the JSON string vary based on the <b>TemplateName</b>.</para>
                 /// <list type="bullet">
-                /// <item><description>If <b>TemplateName</b> is set to <b>RenewalRecommend</b>:<list type="bullet">
+                /// <item><description>If <b>TemplateName</b> is <b>RenewalRecommend</b>:<list type="bullet">
                 /// <item><description><b>instanceName</b>: the ID of the instance that is about to expire.</description></item>
                 /// <item><description><b>reservedTime</b>: the number of remaining days.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description>If <b>TemplateName</b> is set to <b>InstanceCreateFailed</b>:<list type="bullet">
-                /// <item><description><b>orderId</b>: the order ID for the instance purchase.</description></item>
+                /// <item><description>If <b>TemplateName</b> is <b>InstanceCreateFailed</b>:<list type="bullet">
+                /// <item><description><b>orderId</b>: the order ID for purchasing the instance.</description></item>
                 /// <item><description><b>reason</b>: the reason why the instance failed to be created.</description></item>
                 /// </list>
                 /// </description></item>
@@ -151,8 +151,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The notification template. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>RenewalRecommend</b>: renewal recommendation</description></item>
-                /// <item><description><b>InstanceCreateFailed</b>: instance creation failed with refund</description></item>
+                /// <item><description><b>RenewalRecommend</b>: Renewal recommendation.</description></item>
+                /// <item><description><b>InstanceCreateFailed</b>: Instance creation failure and refund.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -165,9 +165,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The notification type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Sell</b>: sale-related notification</description></item>
-                /// <item><description><b>Operation</b>: O&amp;M notification</description></item>
-                /// <item><description><b>Promotion</b>: promotional notification</description></item>
+                /// <item><description><b>Sell</b>: Sales notification.</description></item>
+                /// <item><description><b>Operation</b>: O&amp;M notification.</description></item>
+                /// <item><description><b>Promotion</b>: Promotional notification.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

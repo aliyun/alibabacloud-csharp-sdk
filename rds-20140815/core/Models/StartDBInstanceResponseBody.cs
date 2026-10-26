@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StartDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is supported only for dedicated cluster instances. The migration task ID.</para>
+        /// <para>The ID of the migration task. This parameter is only supported for instances in a dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>740</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of Integer.</para>
+        /// <para>The page number. Valid values: any positive integer up to the maximum value of the Integer data type.</para>
         /// <remarks>
         /// <para>Default value: <b>1</b>.</para>
         /// </remarks>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the SQL statement in the slow query log statistics. You can use this parameter to obtain the slow query log details of the SQL statement.</para>
+        /// <para>The unique identifier of the SQL statement in the slow query log statistics. You can use this identifier to query the slow query log details of the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>U2FsdGVk****</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SQLHASH { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The start time must be within the last 30 days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
+        /// <para>The start time of the query. The start time cannot be more than 30 days earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

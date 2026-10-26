@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The host address of the primary database. IP addresses and domain names are supported.</para>
+        /// <para>The host address of the primary database, which supports an IP address or a domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.1.100</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MasterPassword { get; set; }
 
         /// <summary>
-        /// <para>The port number of the primary database. The default port is 3306 for MySQL.</para>
+        /// <para>The port number of the primary database, which is typically 3306 for MySQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MasterUser { get; set; }
 
         /// <summary>
-        /// <para>The operation type. Specifies the operation to perform on the replication channel.</para>
+        /// <para>The operation type, which specifies the operation to be performed on the replication channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

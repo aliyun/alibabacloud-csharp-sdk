@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CalculateDBInstanceWeightRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the primary instance. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the primary instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

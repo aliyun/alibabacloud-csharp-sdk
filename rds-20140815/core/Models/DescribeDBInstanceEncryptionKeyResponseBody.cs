@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The scheduled time when the key is to be deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The estimated time when the key is deleted. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-08T08:14:16Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The scheduled time when the key is to be deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The estimated time when the key is deleted. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-08T08:14:16Z</para>
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The status of the key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Enabled</b>: The key is enabled.</description></item>
+            /// <item><description><b>Disabled</b>: The key is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The type of the key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CMK: customer master key (CMK).</description></item>
-            /// <item><description>ServiceKey: service key.</description></item>
+            /// <item><description>CMK: customer master key</description></item>
+            /// <item><description>ServiceKey: service key</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string KeyType { get; set; }
 
             /// <summary>
-            /// <para>The purpose of the key.</para>
+            /// <para>The usage of the key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENCRYPT/DECRYPT</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string KeyUsage { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the key material. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The expiration time of the key material. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-18T08:14:16Z</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Origin { get; set; }
 
             /// <summary>
-            /// <para>The usage of the key. Valid values:</para>
+            /// <para>The usage of the key:</para>
             /// <list type="bullet">
             /// <item><description><b>TDE</b>: transparent data encryption.</description></item>
             /// <item><description><b>DiskEncryption</b>: cloud disk encryption.</description></item>
@@ -183,8 +183,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: Enabled.</description></item>
-        /// <item><description><b>Disabled</b>: Disabled.</description></item>
+        /// <item><description><b>Enabled</b>: The key is enabled.</description></item>
+        /// <item><description><b>Disabled</b>: The key is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EncryptionKeyStatus { get; set; }
 
         /// <summary>
-        /// <para>The purpose of the key.</para>
+        /// <para>The usage of the key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENCRYPT/DECRYPT</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyUsage { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the key material. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The expiration time of the key material. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-18T08:14:16Z</para>

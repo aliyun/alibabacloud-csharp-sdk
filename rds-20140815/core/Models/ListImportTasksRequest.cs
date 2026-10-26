@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListImportTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The number of entries per page. Valid values: <b>1 to 100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// <remarks>
-        /// <para>If you specify this parameter, the <b>PageSize</b> and <b>PageNumber</b> parameters are not available.</para>
+        /// <para>If you specify this parameter, the <b>PageSize</b> and <b>PageNumber</b> parameters are unavailable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

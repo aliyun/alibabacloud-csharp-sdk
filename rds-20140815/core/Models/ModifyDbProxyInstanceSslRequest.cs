@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDbProxyInstanceSslRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// <para>A reserved parameter. No configuration is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint for which you want to enable SSL encryption.</para>
+        /// <para>The endpoint for which you want to enable Secure Sockets Layer (SSL) encryption.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyConnectString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</para>
+        /// <para>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform on SSL encryption. Valid values:</para>
+        /// <para>The operation to perform on Secure Sockets Layer (SSL) encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Disables SSL encryption.</description></item>
-        /// <item><description>1: Enables SSL encryption or changes the endpoint for which SSL encryption is enabled.</description></item>
-        /// <item><description>2: Updates the validity period of the SSL certificate.</description></item>
+        /// <item><description>0: Disables Secure Sockets Layer (SSL) encryption.</description></item>
+        /// <item><description>1: Enables Secure Sockets Layer (SSL) encryption or modifies the Secure Sockets Layer (SSL) encryption endpoint.</description></item>
+        /// <item><description>2: Updates the certificate validity period.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The preceding operations restart the instance. Proceed with caution.</para>
+        /// <para>Performing the preceding operations restarts the instance. Proceed with caution.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbProxySslEnabled { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

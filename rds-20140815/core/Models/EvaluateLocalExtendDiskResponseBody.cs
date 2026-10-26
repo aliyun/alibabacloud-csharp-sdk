@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class EvaluateLocalExtendDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the expansion is available. Valid values:</para>
+        /// <para>Indicates whether the resource is available. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: Available.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Not available.</para>
+        /// <item><description><para><b>false</b>: Unavailable.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The transfer type of the database instance.</para>
+        /// <para>The transmission type of the database instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? LocalUpgradeDiskLimit { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A4C4D26F-E5CE-5A28-8C54-46A6FB318223</para>

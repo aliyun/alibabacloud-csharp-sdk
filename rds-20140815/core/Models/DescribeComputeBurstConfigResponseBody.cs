@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeComputeBurstConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration details of the committed serverless feature.</para>
+        /// <para>The configuration details of the committed Serverless feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public Dictionary<string, object> ComputeBurstConfig { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the committed serverless feature is enabled.</para>
+        /// <para>Indicates whether the committed Serverless feature is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>
         /// <item><description><b>false</b>: Disabled.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? ComputeBurstEnabled { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>847BA085-B377-4BFA-8267-F82345ECE1D2</para>

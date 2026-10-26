@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: Only an order is generated. No payment is made.<remarks>
-        /// <para>If your payment method has an insufficient balance, set AutoPay to false. An unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <item><description><b>false</b>: Only an order is generated and no payment is deducted.<remarks>
+        /// <para>If your payment method has an insufficient balance, you can set AutoPay to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a precheck on the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. If the request passes the check, the instance is created.</description></item>
+        /// <item><description><b>true</b>: A precheck is performed, and the operation is not executed. Check items include request parameters, request format, business limits, and inventory.</description></item>
+        /// <item><description><b>false</b> (default): A normal request is sent, and the operation is executed immediately after the precheck is passed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The size of the disk after expansion. Unit: GiB.</para>
+        /// <para>The new size of the disk after expansion. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

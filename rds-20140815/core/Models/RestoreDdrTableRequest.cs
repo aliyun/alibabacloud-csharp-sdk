@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RestoreDdrTableRequest : TeaModel {
         /// <summary>
-        /// <para>The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</para>
+        /// <para>The ID of the cross-region backup set. You can call the DescribeCrossRegionBackups operation to query the ID.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>0</b>.</para>
         /// </remarks>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the existing instance to which you want to recover data.</para>
+        /// <para>The instance ID of the existing instance to be recovered.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to restore data. The point in time must be earlier than the current time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The restoration method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: restores data from a backup set. You must also specify the <b>BackupId</b> parameter.</description></item>
-        /// <item><description><b>1</b>: restores data to a point in time. You must also specify the <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b> parameters.</description></item>
+        /// <item><description><b>0</b>: restores data based on a backup set. If you set this parameter to 0, you must also specify the <b>BackupId</b> parameter.</description></item>
+        /// <item><description><b>1</b>: restores data to a point in time. If you set this parameter to 1, you must also specify the <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b> parameters.</description></item>
         /// </list>
         /// <para>Default value: <b>0</b>.</para>
         /// <para>This parameter is required.</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the source instance from which you want to recover data to a point in time.</para>
+        /// <para>The instance ID of the source instance to recover data to a point in time.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceDBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source instance for point-in-time restoration.</para>
+        /// <para>The ID of the source region for point-in-time restoration.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The databases and tables that you want to restore. Format:
-        /// <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 1 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 1 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 1 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 1 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 2 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 2 name&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 2 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 2 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 3 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 3 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 4 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 4 name&gt;&quot;}]}]</c></para>
+        /// <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of database 1&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 1 in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 1&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 2 in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 2&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of database 2&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 3 in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 3&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 4 in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 4&gt;&quot;}]}]</c></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

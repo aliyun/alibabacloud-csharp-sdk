@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b>: regular ApsaraDB RDS instance.</description></item>
-        /// <item><description><b>CUSTOM</b>: RDS Custom instance.</description></item>
-        /// <item><description><b>CUSTOMDEPLOYMENTSET</b>: RDS Custom deployment set.</description></item>
-        /// <item><description><b>CUSTOMDISK</b>: RDS Custom cloud disk.</description></item>
-        /// <item><description><b>CUSTOMSNAPSHOT</b>: RDS Custom snapshot.</description></item>
+        /// <item><description><b>INSTANCE</b>: regular ApsaraDB RDS instances.</description></item>
+        /// <item><description><b>CUSTOM</b>: ApsaraDB RDS Custom instances.</description></item>
+        /// <item><description><b>CUSTOMDEPLOYMENTSET</b>: ApsaraDB RDS Custom deployment sets.</description></item>
+        /// <item><description><b>CUSTOMDISK</b>: ApsaraDB RDS Custom cloud disks.</description></item>
+        /// <item><description><b>CUSTOMSNAPSHOT</b>: ApsaraDB RDS Custom snapshots.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Empty values and duplicate values are <b>not allowed</b>.</para>
+            /// <para>The tag key. The tag key <b>cannot</b> be empty or duplicate.</para>
             /// <remarks>
-            /// <para>An existing tag key is overwritten by a new tag key with the same name.</para>
+            /// <para>Duplicate tag keys are overwritten.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Empty values are <b>allowed</b>.</para>
+            /// <para>The tag value. The tag value <b>can</b> be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue1</para>

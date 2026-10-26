@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID.</para>
+        /// <para>The ID of the backup set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>327329803</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the backup set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b>: The backup is complete.</description></item>
+        /// <item><description><b>Success</b>: The backup is completed.</description></item>
         /// <item><description><b>Failed</b>: The backup failed.</description></item>
         /// </list>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>Narrow down the time range when you use this operation to query backup sets. A large time range may cause a timeout.</para>
+        /// <para>When you call this operation to query backup sets, keep the time range short. A long time range may cause a timeout.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum integer value.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2011-06-01T16:00Z</para>

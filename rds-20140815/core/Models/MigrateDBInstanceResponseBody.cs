@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The migration queue number. When the number is 0, the migration switchover is performed.</para>
+        /// <para>The migration queue number. When the value is 0, the migration and switchover are performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2245016</para>

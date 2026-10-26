@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client fault.</description></item>
-        /// <item><description><b>401</b>: Failed to authenticate.</description></item>
-        /// <item><description><b>404</b>: Request page not found.</description></item>
+        /// <item><description><b>401</b>: Authentication failed.</description></item>
+        /// <item><description><b>404</b>: The requested page is not found.</description></item>
         /// <item><description><b>500</b>: Server fault.</description></item>
         /// </list>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<string> InsName { get; set; }
 
             /// <summary>
-            /// <para>The whitelist template ID.</para>
+            /// <para>The ID of the whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>412</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client error.</description></item>
         /// <item><description><b>500</b>: Server error.</description></item>
         /// </list>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

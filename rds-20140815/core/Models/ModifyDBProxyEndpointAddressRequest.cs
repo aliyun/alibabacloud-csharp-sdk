@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the database proxy endpoint to be modified. Valid values:</para>
+        /// <para>The network type of the database proxy endpoint that you want to modify. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Public</b>: Internet</description></item>
-        /// <item><description><b>VPC</b> (default): virtual private cloud (VPC)</description></item>
+        /// <item><description><b>VPC</b> (default): VPC</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required when the database engine is RDS MySQL.</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</para>
+        /// <para>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para>A deprecated parameter. You do not need to configure this parameter.</para>
+        /// <para><b>[Deprecated]</b> You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the new database proxy endpoint. You can customize this value.</para>
+        /// <para>The prefix of the new database proxy endpoint. You can customize the prefix.</para>
         /// <remarks>
         /// <para>You must specify at least one of the <b>DBProxyNewConnectString</b> and <b>DBProxyNewConnectStringPort</b> parameters.</para>
         /// </remarks>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyNewConnectString { get; set; }
 
         /// <summary>
-        /// <para>The port number of the new database proxy endpoint. You can customize this value.</para>
+        /// <para>The port of the new database proxy endpoint. You can customize the port.</para>
         /// <remarks>
         /// <para>You must specify at least one of the <b>DBProxyNewConnectString</b> and <b>DBProxyNewConnectStringPort</b> parameters.</para>
         /// </remarks>

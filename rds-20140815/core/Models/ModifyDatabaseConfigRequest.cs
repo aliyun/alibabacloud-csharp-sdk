@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database name.</para>
         /// <remarks>
-        /// <para>Specifying multiple database names is not supported.</para>
+        /// <para>You cannot specify multiple database names.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The database attribute that you want to modify.</para>
+        /// <para>The database attribute to be modified.</para>
         /// <list type="bullet">
-        /// <item><description><b>Modify database attributes feature</b>: Enter the attribute name of the target database.</description></item>
-        /// <item><description><b>Data archiving to OSS feature</b>: Enter the status of the target database. Set this parameter to <c>covert_online_db_to_cold_storage</c> to convert an online database to a cold storage database, or set this parameter to <c>convert_cold_storage_db_to_online</c> to convert a cold storage database to an online database.</description></item>
+        /// <item><description><b>Modify database attributes feature</b>: Specify the name of the attribute for the destination database.</description></item>
+        /// <item><description><b>Data archiving to OSS feature</b>: Specify the status of the destination database. Set the value to <c>covert_online_db_to_cold_storage</c> to convert an online database to a cold storage database, or set the value to <c>convert_cold_storage_db_to_online</c> to convert a cold storage database to an online database.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DatabasePropertyName { get; set; }
 
         /// <summary>
-        /// <para>The value of the database attribute that you want to modify.</para>
+        /// <para>The expected value of the database attribute.</para>
         /// <list type="bullet">
-        /// <item><description><b>Modify database attributes feature</b>: Enter the attribute value of the target database.</description></item>
-        /// <item><description><b>Data archiving to OSS feature</b>: Set this parameter to <b>1</b> to convert the target database to cold storage or online status.</description></item>
+        /// <item><description><b>Modify database attributes feature</b>: Specify the value of the attribute for the destination database.</description></item>
+        /// <item><description><b>Data archiving to OSS feature</b>: Set the value to <b>1</b> to convert the destination database to a cold storage or online state.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

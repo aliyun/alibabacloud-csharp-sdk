@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? AuthorizationState { get; set; }
 
         /// <summary>
-        /// <para>The error message returned by the operation.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create backup encrypt service linked role error.</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Resource Name (ARN) of the service-linked role associated with backup encryption.</para>
+        /// <para>The ARN of the service-linked role for backup encryption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::113991************:role/AliyunServiceRoleForRdsBackupEncryption</para>

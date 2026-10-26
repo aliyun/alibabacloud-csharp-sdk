@@ -1,3 +1,7 @@
+2026-10-26 Version: 15.9.4
+- Update API CreateDBInstance: add request parameters AutoUpgradeMinorVersion.
+
+
 2026-10-13 Version: 15.9.3
 - Update API CreateMigrateTask: add request parameters KeepCDC.
 - Update API CreateOnlineDatabaseTask: add request parameters KeepCDC.

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the key used for TDE encryption.</para>
+        /// <para>The ID of the key used for TDE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key-szz644a355asjcuilll4u</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C816A4BF-A6EC-4722-95F9-2055859CCFD2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The key mode of instance-level TDE encryption. Valid values:</para>
+        /// <para>The key management method for instance-level TDE. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Aliyun_Generate_Key</b></description></item>
         /// <item><description><b>Customer_Provided_Key</b></description></item>

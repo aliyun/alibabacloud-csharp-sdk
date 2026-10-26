@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Enabled { get; set; }
 
         /// <summary>
-        /// <para>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</para>
+        /// <para>The rule algorithms. You can specify multiple algorithms and add extra parameters for masking algorithms. Format: {name: Algorithm 1}, {name: Algorithm 2, params: {encryption position, number of encrypted digits}}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;: &quot;sha256&quot;},
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RuleConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule to modify.</para>
+        /// <para>The name of the rule to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

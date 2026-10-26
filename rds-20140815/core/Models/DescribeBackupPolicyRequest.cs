@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>0</b>: no compression</description></item>
         /// <item><description><b>1</b>: zlib compression</description></item>
         /// <item><description><b>2</b>: parallel zlib compression</description></item>
-        /// <item><description><b>4</b>: QuickLZ compression with fast restoration for individual databases and tables enabled</description></item>
-        /// <item><description><b>8</b>: QuickLZ compression without fast restoration for individual databases and tables supported</description></item>
+        /// <item><description><b>4</b>: quicklz compression with database and table restoration enabled</description></item>
+        /// <item><description><b>8</b>: quicklz compression without database and table restoration supported</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CompressType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to retrieve the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The archived backup data retention policy for deleted <b>MySQL</b> instances. Valid values:</para>
+        /// <para>The data retention policy for archived backups of deleted <b>MySQL</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>None</b>: No archived backups are retained.</description></item>
-        /// <item><description><b>Lastest</b>: Only the last archived backup is retained.</description></item>
-        /// <item><description><b>All</b>: All archived backups are retained.</description></item>
+        /// <item><description><b>None</b>: no retention</description></item>
+        /// <item><description><b>Lastest</b>: retains the last backup</description></item>
+        /// <item><description><b>All</b>: retains all backups</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

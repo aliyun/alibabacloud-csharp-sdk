@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>Chinese site: 26842</description></item>
+        /// <item><description>China site: 26842</description></item>
         /// <item><description>International site: 26888</description></item>
         /// </list>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Bid { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5******</para>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The dynamic property of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance dynamics</a>.</para>
+        /// <para>The dynamic attributes of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance dynamics</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1 (indicates that the target instance is not participating in any promotions)</para>
+        /// <para>1 (indicating that the target instance does not participate in any promotional activities)</para>
         /// </summary>
         [NameInMap("IsActivity")]
         [Validation(Required=false)]

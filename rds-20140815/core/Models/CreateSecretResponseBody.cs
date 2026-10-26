@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The user credential of the created Data API account.</para>
+        /// <para>The ARN of the created Data API user credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:rds:cn-hangzhou:1335786****:dbInstance/rm-bp1m7l3j63****</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

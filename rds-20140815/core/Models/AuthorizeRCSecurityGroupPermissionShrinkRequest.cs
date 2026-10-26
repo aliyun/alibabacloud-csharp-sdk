@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AuthorizeRCSecurityGroupPermissionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the rule. Valid values:</para>
+        /// <para>The rule direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ingress</b>: inbound.</description></item>
-        /// <item><description><b>egress</b>: outbound.</description></item>
+        /// <item><description><b>ingress</b>: inbound traffic to the security group.</description></item>
+        /// <item><description><b>egress</b>: outbound traffic from the security group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

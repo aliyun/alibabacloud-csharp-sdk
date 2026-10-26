@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup task ID.</para>
+        /// <para>The ID of the backup task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>507****</para>

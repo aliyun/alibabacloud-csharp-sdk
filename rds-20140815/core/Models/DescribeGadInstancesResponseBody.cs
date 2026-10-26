@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeGadInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of active geo-redundancy database clusters.</para>
+        /// <para>The list of GAD clusters.</para>
         /// </summary>
         [NameInMap("GadInstances")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GadTest</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceID { get; set; }
 
                 /// <summary>
-                /// <para>A JSON array that contains DTS synchronization information.</para>
+                /// <para>The JSON array that contains the Data Transmission Service (DTS) synchronization information.</para>
                 /// <remarks>
-                /// <para>Each unit node (secondary node) synchronizes data with the central node (primary node) through DTS. This parameter contains the synchronization task ID and request ID of DTS.</para>
+                /// <para>Each unit node (secondary node) synchronizes data with the central node (primary node) through DTS. This parameter contains the DTS synchronization link ID and request ID.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The node type in the active geo-redundancy database cluster. Valid values:</para>
+                /// <para>The role of the node in the GAD cluster. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>CENTRAL</b>: central node. The only primary node in the cluster. All unit nodes synchronize data from this node.</description></item>
-                /// <item><description><b>UNIT</b>: unit node. A cluster can contain up to 10 unit nodes. All unit nodes synchronize data from the central node.</description></item>
+                /// <item><description><b>CENTRAL</b>: the central node, which is the only primary node in the cluster. All unit nodes synchronize data from this node.</description></item>
+                /// <item><description><b>UNIT</b>: the unit node. A cluster can have up to 10 unit nodes, and all unit nodes synchronize data from the central node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Role { get; set; }
 
                 /// <summary>
-                /// <para>The node status. Valid values:</para>
+                /// <para>The status of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>activation</b>: running.</description></item>
-                /// <item><description><b>creating</b>: being created.</description></item>
+                /// <item><description><b>activation</b>: running</description></item>
+                /// <item><description><b>creating</b>: being created</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The ID of the active geo-redundancy database cluster.</para>
+            /// <para>The ID of the GAD cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gad-rm-bp1npi2j8****</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The engine of the active geo-redundancy database cluster.</para>
+            /// <para>The database engine of the GAD cluster.</para>
             /// <remarks>
             /// <para>Only <b>mysql</b> is supported.</para>
             /// </remarks>
@@ -173,11 +173,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// <para>The cluster status. Valid values:</para>
+            /// <para>The status of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>activation</b>: running.</description></item>
-            /// <item><description><b>creating</b>: being created.</description></item>
-            /// <item><description><b>replica_adding</b>: a node is being added.</description></item>
+            /// <item><description><b>activation</b>: running</description></item>
+            /// <item><description><b>creating</b>: being created</description></item>
+            /// <item><description><b>replica_adding</b>: adding nodes</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

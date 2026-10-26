@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportUserBackupFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The user backup ID.</para>
+        /// <para>The ID of the user backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b-n8tpg24c6i0v****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the user backup is imported. The value <b>true</b> is returned if the import is successful. Otherwise, an error message is returned.</para>
+        /// <para>Indicates whether the user backup is imported. If the import is successful, <b>true</b> is returned. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

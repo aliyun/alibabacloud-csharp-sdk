@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateCloudMigrationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the target instance.</para>
+        /// <para>The name of the destination instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-bp102g323jd4****</para>

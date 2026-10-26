@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpdateUserBackupFileRequest : TeaModel {
         /// <summary>
-        /// <para>The user backup ID. You can call ListUserBackupFiles to obtain the ID.</para>
+        /// <para>The ID of the user backup. You can call the ListUserBackupFiles operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The new description to set for the user backup.</para>
+        /// <para>The new description of the user backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CommentTest</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to obtain the ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of supported database engines available for sale.</para>
+            /// <para>The list of available database engines.</para>
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>The list of supported database engine versions available for sale.</para>
+                /// <para>The list of available database engine versions.</para>
                 /// </summary>
                 [NameInMap("SupportedEngineVersions")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> SupportedEngineVersions { get; set; }
                 public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions : TeaModel {
                     /// <summary>
-                    /// <para>The list of supported instance editions available for sale.</para>
+                    /// <para>The list of available instance editions.</para>
                     /// </summary>
                     [NameInMap("SupportedCategorys")]
                     [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string Category { get; set; }
 
                         /// <summary>
-                        /// <para>The list of supported storage types available for sale.</para>
+                        /// <para>The list of available storage types.</para>
                         /// </summary>
                         [NameInMap("SupportedStorageTypes")]
                         [Validation(Required=false)]

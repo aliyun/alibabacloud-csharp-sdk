@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DefaultAlgo { get; set; }
 
         /// <summary>
-        /// <para>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</para>
+        /// <para>The rule algorithm. You can specify multiple algorithms. Additional parameters can be added for masking algorithms. Format: {name: Algorithm 1}, {name: Algorithm 2, params: {encryption position, number of encrypted digits}}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The rule configuration in JSON string format, which contains matching rules for databases, tables, and columns.</para>
+        /// <para>The rule configuration. The value is a JSON string that contains the matching rules for databases, tables, and columns.</para>
         /// </summary>
         [NameInMap("RuleConfig")]
         [Validation(Required=false)]
         public string RuleConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The rule name. Only one rule name can be specified at a time.</para>
+        /// <para>The name of the rule. Only one rule name can be specified at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,15 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The property list of the major engine version upgrade check report. Each attribute column contains the details of a check report entry.</para>
+        /// <para>The list of attributes in the check reports for major engine version upgrades.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems> Items { get; set; }
         public class DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The check time.</para>
-            /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the check is performed. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1635143903000</para>
@@ -28,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CheckTime { get; set; }
 
             /// <summary>
-            /// <para>The content of the major engine version upgrade check report.</para>
+            /// <para>The content of the check report for the major engine version upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[user_check_report]User check success\n[pg_upgrade_internal.log]Performing...</para>
@@ -38,8 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the check report.</para>
-            /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The expiration time of the check report. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1635748703000</para>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? RecommendDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The recommended minimum memory for the upgrade. Unit: GB.</para>
+            /// <para>The recommended minimum memory size for the upgrade. Unit: GB.</para>
             /// <remarks>
             /// <para>This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</para>
             /// </remarks>
@@ -75,8 +73,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? RecommendLeastMemSize { get; set; }
 
             /// <summary>
-            /// <para>The recommended memory for the upgrade. Unit: GB.</para>
-            /// <para>If the memory of the instance is greater than or equal to the recommended memory, the upgrade is performed at the fastest speed to minimize the read-only duration of the instance.</para>
+            /// <para>The recommended memory size for the upgrade. Unit: GB.</para>
+            /// <para>If the memory size of the instance is greater than or equal to the recommended memory size, the upgrade is performed at the maximum speed to minimize the read-only duration of the instance.</para>
             /// <remarks>
             /// <para>This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</para>
             /// </remarks>
@@ -89,15 +87,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? RecommendMemSize { get; set; }
 
             /// <summary>
-            /// <para>The result of major engine version upgrade check.</para>
-            /// <para>Valid values:</para>
+            /// <para>The result of the check for the major engine version upgrade. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Success: The check is passed.</description></item>
-            /// <item><description>Fail: The check failed.</description></item>
-            /// <item><description>warning: The check returned warnings. Review the report to determine whether to proceed with the upgrade.</description></item>
+            /// <item><description>Success: The check is successful.</description></item>
+            /// <item><description>Fail: The check fails.</description></item>
+            /// <item><description>warning: A warning is returned. You must check the report to determine whether to continue the upgrade.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the check result is <b>Fail</b>, check the value of the <b>Detail</b> parameter, resolve the errors, and try again. For common errors and solutions, see <a href="https://help.aliyun.com/document_detail/218391.html">Understand major engine version upgrade check report for ApsaraDB RDS for PostgreSQL</a>.</para>
+            /// <para>If the check result is <b>Fail</b>, check the value of the <b>Detail</b> parameter, troubleshoot the error, and try again. For more information about common errors and solutions, see <a href="https://help.aliyun.com/document_detail/218391.html">Interpret check reports for major engine version upgrades of ApsaraDB RDS for PostgreSQL instances</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -118,7 +115,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceMajorVersion { get; set; }
 
             /// <summary>
-            /// <para>The target instance version.</para>
+            /// <para>The major engine version of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12.0</para>
@@ -128,7 +125,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string TargetMajorVersion { get; set; }
 
             /// <summary>
-            /// <para>The node ID of the major engine version upgrade pre-check task.</para>
+            /// <para>The ID of the check task before the major engine version upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>416980000</para>
@@ -137,6 +134,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public int? TaskId { get; set; }
 
+            /// <summary>
+            /// <para>The mode of the major engine version upgrade.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zeroDownTimeUpgrade</para>
+            /// </summary>
             [NameInMap("UpgradeMode")]
             [Validation(Required=false)]
             public string UpgradeMode { get; set; }
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

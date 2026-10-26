@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLCollectorPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the SQL Explorer (SQL Audit) feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: enabled.</description></item>
-        /// <item><description><b>Disabled</b>: disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

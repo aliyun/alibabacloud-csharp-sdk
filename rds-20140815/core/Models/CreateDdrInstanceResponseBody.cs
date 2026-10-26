@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The endpoint of the new instance.</para>
         /// <remarks>
-        /// <para>The <b>DBInstanceNetType</b> parameter determines whether this endpoint is an internal endpoint or a public endpoint.</para>
+        /// <para>The <b>DBInstanceNetType</b> parameter determines whether the endpoint is an internal endpoint or a public endpoint.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the new instance.</para>
+        /// <para>The ID of the new instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-****</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The port of the new instance.</para>
+        /// <para>The port used to connect to the new instance.</para>
         /// <remarks>
-        /// <para>The <b>DBInstanceNetType</b> parameter determines whether this port is an internal port or a public port.</para>
+        /// <para>The <b>DBInstanceNetType</b> parameter determines whether the port is an internal port or a public port.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DeleteSlotRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client and make sure that the value is unique across different requests. The client token supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOC****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Target instance ID. You can call the DescribeDBInstances operation to query target instance ID.</para>
+        /// <para>Instance ID of the target instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter can be left empty.</para>
+        /// <para>The ID of the resource group. This parameter can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The replication slot name. You can call the DescribeSlots operation to query the replication slot name.</para>
+        /// <para>The name of the replication slot. You can call the DescribeSlots operation to query the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SlotName { get; set; }
 
         /// <summary>
-        /// <para>The replication slot status. You can call the DescribeSlots operation to query the replication slot status. Valid values:</para>
+        /// <para>The status of the replication slot. You can call the DescribeSlots operation to query the status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ACTIVE</b>: active.</description></item>
-        /// <item><description><b>INACTIVE</b>: inactive.</description></item>
+        /// <item><description><b>ACTIVE</b>: The replication slot is active.</description></item>
+        /// <item><description><b>INACTIVE</b>: The replication slot is inactive.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

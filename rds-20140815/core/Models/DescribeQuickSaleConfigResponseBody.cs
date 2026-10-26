@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The commodity code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>rds: subscription</description></item>
-        /// <item><description>bards: pay-as-you-go</description></item>
+        /// <item><description><para>rds: subscription</para>
+        /// </description></item>
+        /// <item><description><para>bards: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Commodity { get; set; }
 
         /// <summary>
-        /// <para>The commodity configuration details.</para>
+        /// <para>The product configuration details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

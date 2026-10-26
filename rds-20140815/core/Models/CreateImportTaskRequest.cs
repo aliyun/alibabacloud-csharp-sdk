@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The estimated data space. Unit: GB.</para>
+        /// <para>The estimated data size. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? EstimatedSize { get; set; }
 
         /// <summary>
-        /// <para>The host IP address of the source MySQL instance. ApsaraDB RDS accesses this IP address to obtain the backup.</para>
+        /// <para>The IP address of the source MySQL host. ApsaraDB RDS accesses this IP address to retrieve backups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The port of the source MySQL instance.</para>
+        /// <para>The port of the source MySQL database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query available regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourcePlatform { get; set; }
 
         /// <summary>
-        /// <para>The streaming port used to transfer the backup.</para>
+        /// <para>The streaming port used to transfer backups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? StreamPort { get; set; }
 
         /// <summary>
-        /// <para>The account of the source MySQL instance. The account must have permissions to create backups and set up replication. Refer to the following SQL statements for granting permissions:</para>
+        /// <para>The source MySQL account. The account must have the permissions to create backups and configure replication. Refer to the following SQL statements for granting permissions:</para>
         /// <pre><c>-- MySQL 5.7
         /// mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;s3cret\\&quot;;
         /// mysql&gt; GRANT RELOAD, LOCK TABLES, PROCESS, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO
@@ -123,9 +123,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// mysql&gt; GRANT SELECT ON performance_schema.keyring_component_status TO myadmin@\\&quot;%\\&quot;;
         /// mysql&gt; GRANT SELECT ON performance_schema.replication_group_members TO myadmin@\\&quot;%\\&quot;;
         /// mysql&gt; FLUSH PRIVILEGES;
-        /// 
-        /// This parameter is required.
         /// </c></pre>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myadmin</para>
@@ -135,7 +134,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string User { get; set; }
 
         /// <summary>
-        /// <para>The installation path of xtrabackup on the source instance.</para>
+        /// <para>The installation path of XtraBackup on the source instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/usr/bin/xtrabackup</para>

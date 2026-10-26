@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the AD domain. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: The instance is being joined to the AD domain.</description></item>
-        /// <item><description><b>0</b>: Failed to join the AD domain.</description></item>
-        /// <item><description><b>1</b>: Joined the AD domain.</description></item>
+        /// <item><description><b>-1</b>: The instance is joining the AD domain.</description></item>
+        /// <item><description><b>0</b>: The instance failed to join the AD domain.</description></item>
+        /// <item><description><b>1</b>: The instance joined the AD domain.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADStatus { get; set; }
 
         /// <summary>
-        /// <para>The reason for the exception.</para>
+        /// <para>The cause of the exception.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AbnormalReason { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The username of the AD domain.</para>
+        /// <para>The username for the AD domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_01</para>

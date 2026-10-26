@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The effective period. Valid values:</para>
+            /// <para>The effective time. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Immediate</b> (default): The changes take effect immediately.</description></item>
-            /// <item><description><b>MaintainTime</b>: The changes take effect within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</description></item>
+            /// <item><description><b>Immediate</b> (default): takes effect immediately.</description></item>
+            /// <item><description><b>MaintainTime</b>: takes effect within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage information.</para>
+            /// <para>The storage description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

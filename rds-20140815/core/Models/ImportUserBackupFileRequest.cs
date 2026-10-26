@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ImportUserBackupFileRequest : TeaModel {
         /// <summary>
-        /// <para>A JSON array that describes the backup file information in the OSS bucket. Example:
+        /// <para>The JSON array that describes the information about the backup file in the OSS bucket. Example:
         /// <c>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</c></para>
-        /// <para>The following list describes the parameters in the array:</para>
+        /// <para>Parameters in the array:</para>
         /// <list type="bullet">
-        /// <item><description><b>Bucket</b>: the name of the OSS bucket that stores the backup file. You can call <a href="https://help.aliyun.com/document_detail/31965.html">GetBucket</a> to query the bucket name.</description></item>
-        /// <item><description><b>Object</b>: the full path of the backup file in the directory. You can call <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> to query the path.</description></item>
-        /// <item><description><b>Location</b>: the region ID of the OSS bucket. You can call <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> to query the region ID.</description></item>
+        /// <item><description><b>Bucket</b>: the name of the OSS bucket where the backup file is stored. You can call the <a href="https://help.aliyun.com/document_detail/31965.html">GetBucket</a> operation to query the name.</description></item>
+        /// <item><description><b>Object</b>: the detailed path of the directory where the backup file is stored. You can call the <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> operation to query the path.</description></item>
+        /// <item><description><b>Location</b>: the region ID of the OSS bucket. You can call the <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> operation to query the region ID.</description></item>
         /// </list>
+        /// <para>This parameter is required when <b>Mode</b> is set to <b>oss</b>. For <b>Location</b>, specify the region ID of the OSS bucket. You can call the GetBucketLocation operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupFile { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the OSS bucket that stores the backup file of the self-managed MySQL 5.7 database. You can call DescribeRegions to query the region ID.</para>
+        /// <para>The region ID of the OSS bucket where the backup file of the self-managed MySQL 5.7 database is stored. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -39,11 +40,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to automatically set up replication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: automatically sets up replication. The <c>MasterInfo</c> parameter is required.</description></item>
-        /// <item><description>false: does not set up replication.</description></item>
+        /// <item><description>true: yes. The MasterInfo parameter is required.</description></item>
+        /// <item><description>false: no.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only for native replication instances. You must specify the <c>DBInstanceId</c> parameter when you call this operation.</para>
+        /// <para>This parameter takes effect only for native replication instances. You must specify the DBInstanceId parameter when you call this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The version of the MySQL database engine. Valid values: <b>5.7</b> and <b>8.0</b>.</para>
+        /// <para>The version of the MySQL database. Valid values: <b>5.7</b> and <b>8.0</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
@@ -84,18 +85,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>A JSON array that contains the master information for setting up MySQL replication (case-sensitive). Example:</para>
+        /// <para>The case-sensitive JSON array that provides the master information for setting up MySQL replication. Example:</para>
         /// <pre><c>{&quot;masterIp&quot;:&quot;172.20.xx.xx&quot;,&quot;masterPort&quot;:&quot;3306&quot;,&quot;masterUser&quot;:&quot;replica&quot;,&quot;masterPassword&quot;:&quot;W33uopkehBQ=&quot;}
         /// </c></pre>
-        /// <para>The following list describes the parameters in the array:</para>
+        /// <para>Parameters in the array:</para>
         /// <list type="bullet">
-        /// <item><description><c>masterIp</c>: the IP address of the primary database.</description></item>
-        /// <item><description><c>masterPort</c>: the port of the primary database.</description></item>
-        /// <item><description><c>masterUser</c>: the replication account of the primary database.</description></item>
-        /// <item><description><c>masterPassword</c>: the password of the replication account for the primary database. The password must be Base64-encoded.</description></item>
+        /// <item><description>masterIp: the IP address of the primary database.</description></item>
+        /// <item><description>masterPort: the port of the primary database.</description></item>
+        /// <item><description>masterUser: the replication account of the primary database.</description></item>
+        /// <item><description>masterPassword: the password of the replication account of the primary database. The password must be Base64-encoded.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only for native replication instances. You must specify the <c>DBInstanceId</c> parameter when you call this operation.</para>
+        /// <para>This parameter takes effect only for native replication instances. You must specify the DBInstanceId parameter when you call this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The import mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>oss: imports the backup from OSS.</description></item>
+        /// <item><description>oss: downloads the backup from OSS and imports it.</description></item>
         /// <item><description>stream: imports the backup over the network.</description></item>
         /// </list>
         /// 
@@ -124,10 +125,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ApsaraDB RDS instance. You can call DescribeRegions to query the region ID.</para>
+        /// <para>The region ID of the ApsaraDB RDS instance. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value of this parameter specifies the region ID in which you want to create the ApsaraDB RDS instance.</description></item>
+        /// <item><description>The value of this parameter is the region ID where you want to create the ApsaraDB RDS instance.</description></item>
         /// <item><description>The value must be the same as the value of the <b>BucketRegion</b> parameter.</description></item>
         /// </list>
         /// </remarks>
@@ -141,7 +142,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</para>
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -185,19 +186,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Retention { get; set; }
 
         /// <summary>
-        /// <para>A JSON array that provides the source information for the full backup (case-sensitive). Example:</para>
-        /// <pre><c>{&quot;sourceIp&quot;:&quot;172.20.xx
-        /// .xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}
+        /// <para>The case-sensitive JSON array that provides the source information of the full backup. Example:</para>
+        /// <pre><c>{&quot;sourceIp&quot;:&quot;172.20.xx.xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}
         /// </c></pre>
-        /// <para>The following list describes the parameters in the array:</para>
+        /// <para>Parameters in the array:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>sourceIp</c>: the source IP address.</para>
+        /// <item><description><para>sourceIp: the source IP address.</para>
         /// </description></item>
-        /// <item><description><para><c>sourcePort</c>: the Netcat listening port on the source.</para>
+        /// <item><description><para>sourcePort: the port listened by Netcat on the source.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only for native replication instances. You must specify the <c>DBInstanceId</c> parameter when you call this operation.</para>
+        /// <para>This parameter takes effect only for native replication instances. You must specify the DBInstanceId parameter when you call this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -208,11 +208,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceInfo { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call DescribeRegions to query the zone ID.</para>
+        /// <para>The zone ID. You can call the DescribeRegions operation to query the most recent zone list.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>After you specify a zone, the system creates a second-level snapshot in the zone, which significantly reduces the time required for backup import.</description></item>
-        /// <item><description>When you call CreateDBInstance to create an instance from the user backup, this zone is the zone in which the new instance resides.</description></item>
+        /// <item><description>After you specify a zone, the system creates a snapshot within seconds in the zone, which significantly reduces the time required to import the backup.</description></item>
+        /// <item><description>When you call the CreateDBInstance operation to create an instance by using the user backup, the instance is created in this zone.</description></item>
         /// </list>
         /// </remarks>
         /// 

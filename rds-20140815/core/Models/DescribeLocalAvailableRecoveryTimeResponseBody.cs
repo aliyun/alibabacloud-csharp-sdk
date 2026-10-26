@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the restorable time range for backups.</para>
+        /// <para>The start time of the restorable time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-11T09:48:52Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RecoveryBeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the restorable time range for backups.</para>
+        /// <para>The end time of the restorable time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-18T08:03:09Z</para>

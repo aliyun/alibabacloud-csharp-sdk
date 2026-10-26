@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateOrderForDeleteDBNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete automatic payment. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <ol>
-        /// <item><description><para><b>true</b>: automatically completes automatic payment. Make sure that your account balance is sufficient.</para>
+        /// <item><description><para><b>true</b>: enables automatic payment. You must ensure that your account balance is sufficient.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: generates the order without completing automatic payment.</para>
+        /// <item><description><para><b>false</b>: generates an unpaid order without deducting fees.</para>
         /// </description></item>
         /// </ol>
         /// <remarks>
-        /// <para>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete automatic payment.</para>
+        /// <para>Default value: true. If your payment method has an insufficient balance, you can change the Settings of the AutoPay parameter to false. In this case, an unpaid order is generated, and you can logon to the ApsaraDB RDS console to pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The additional business information about the instance.</para>
+        /// <para>The business extension parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-8vb9******</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The current database engine version. Valid values:</para>
-        /// <para>MySQL: <b>5.5, 5.6, 5.7, 8.0</b></para>
+        /// <para>MySQL: <b>5.5, 5.6, 5.7, and 8.0</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

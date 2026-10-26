@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>The encrypted memory size for the security-enhanced instance family. Unit: GB.</para>
+            /// <para>The encrypted memory size of the security-enhanced instance family. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The architecture type of the instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If the instance uses the <b>x86</b> architecture, this parameter is empty by default.</description></item>
+            /// <item><description>If the instance uses the <b>x86</b> architecture, this parameter is left empty by default.</description></item>
             /// <item><description>If the instance uses the <b>arm</b> architecture, <b>arm</b> is returned.</description></item>
             /// </list>
             /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</para>
+            /// <para>The maximum I/O bandwidth for the instance type. Unit: Mbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024Mbps</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIOMBPS { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS for the instance type.</para>
+            /// <para>The maximum IOPS for the instance type. Unit: operations per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIOPS { get; set; }
 
             /// <summary>
-            /// <para>The memory size for the instance type. Unit: GB.</para>
+            /// <para>The memory capacity for the instance type. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1GB</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MemoryClass { get; set; }
 
             /// <summary>
-            /// <para>The price for the instance type.</para>
+            /// <para>The price of the instance type.</para>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
             /// <item><description>Unit: cents (CNY).</description></item>
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>If you set the <b>CommodityCode</b> parameter to a pay-as-you-go commodity code, this parameter indicates the hourly price.</description></item>
-            /// <item><description>If you set the <b>CommodityCode</b> parameter to a subscription commodity code, this parameter indicates the monthly price.</description></item>
+            /// <item><description>If you specify a pay-as-you-go commodity code for the <b>CommodityCode</b> parameter, this parameter displays the hourly price.</description></item>
+            /// <item><description>If you specify a subscription commodity code for the <b>CommodityCode</b> parameter, this parameter displays the monthly price.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -139,16 +139,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description>Regular instances<list type="bullet">
             /// <item><description><b>Basic</b>: Basic Edition.</description></item>
-            /// <item><description><b>HighAvailability</b>: High availability series.</description></item>
-            /// <item><description><b>cluster</b>: MySQL or PostgreSQL Cluster Edition.</description></item>
-            /// <item><description><b>AlwaysOn</b>: SQL Server Cluster Edition.</description></item>
+            /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
+            /// <item><description><b>cluster</b>: Cluster Edition for MySQL or PostgreSQL.</description></item>
+            /// <item><description><b>AlwaysOn</b>: Cluster Edition for SQL Server.</description></item>
             /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description>Serverless instances<list type="bullet">
             /// <item><description><b>serverless_basic</b>: Serverless Basic Edition. (Applicable only to MySQL and PostgreSQL)</description></item>
-            /// <item><description><b>serverless_standard</b>: Serverless high availability series. (Applicable only to MySQL and PostgreSQL)</description></item>
-            /// <item><description><b>serverless_ha</b>: SQL Server Serverless high availability series.</description></item>
+            /// <item><description><b>serverless_standard</b>: Serverless High-availability Edition. (Applicable only to MySQL and PostgreSQL)</description></item>
+            /// <item><description><b>serverless_ha</b>: Serverless High-availability Edition for SQL Server.</description></item>
             /// </list>
             /// </description></item>
             /// </list>

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Resource Name (ARN) of the service-linked role associated with Cloud Hardware Security Module (CloudHSM) for backup encryption.</para>
+        /// <para>The ARN of the backup encryption service-linked role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1139916************:role/AliyunServiceRoleForRdsBackupEncryption</para>

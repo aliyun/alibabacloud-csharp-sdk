@@ -9,20 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstancesRequest : TeaModel {
+        /// <summary>
+        /// <para>The RDS Custom container cluster ID used to filter instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c463aaa89e2b84cacacfbf23c4867****</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The description used to filter instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance_Description</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The keyword used to perform a fuzzy match on the instance description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance</para>
+        /// </summary>
         [NameInMap("DescriptionForFuzzy")]
         [Validation(Required=false)]
         public string DescriptionForFuzzy { get; set; }
 
         /// <summary>
-        /// <para>Queries instances by host IP address.</para>
+        /// <para>The host IP address used to filter instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.XX.XX</para>
@@ -31,6 +49,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string HostIp { get; set; }
 
+        /// <summary>
+        /// <para>The image ID used to filter instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image-dsvjzw2ii8n4******</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
@@ -38,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance ID. This parameter is used to query a single instance.</para>
         /// <remarks>
-        /// <para>If no instance ID is specified (neither <b>InstanceId</b> nor <b>InstanceIds</b> is passed), the operation returns detailed information about all RDS Custom instances in the specified region.</para>
+        /// <para>If no instance ID is specified (neither <b>InstanceId</b> nor <b>InstanceIds</b> is specified), the details of all RDS Custom instances in the specified region are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,9 +74,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The instance IDs.</para>
-        /// <para>This parameter is used to query multiple instances at a time. Separate multiple instance IDs with commas (,). A maximum of 100 IDs are supported. Input format: <c>[&quot;InstanceID1&quot;,&quot;InstanceID2&quot;]</c>.</para>
+        /// <para>This parameter is used to query multiple instances at a time. Separate multiple instance IDs with commas (,). You can specify up to 100 instance IDs. Input format: <c>[&quot;InstanceId1&quot;,&quot;InstanceId2&quot;]</c>.</para>
         /// <remarks>
-        /// <para>If both <b>InstanceIds</b> and <b>InstanceId</b> are specified, the value of <b>InstanceIds</b> takes precedence.</para>
+        /// <para>If both <b>InstanceIds</b> and <b>InstanceId</b> are specified, the value of <b>InstanceIds</b> prevails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The page number of the instance status list.</para>
-        /// <para>Minimum value: 1. Default value: 1.</para>
+        /// <para>Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -84,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// <para>Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +119,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Queries instances by public IP address.</para>
+        /// <para>The public IP address used to filter instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121.89.XX.XX</para>
@@ -117,11 +141,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Pending</b>: Being created.</description></item>
-        /// <item><description><b>Running</b>: Running.</description></item>
-        /// <item><description><b>Starting</b>: Being started.</description></item>
-        /// <item><description><b>Stopping</b>: Being stopped.</description></item>
-        /// <item><description><b>Stopped</b>: Stopped.</description></item>
+        /// <item><description><b>Pending</b>: The instance is being created.</description></item>
+        /// <item><description><b>Running</b>: The instance is running.</description></item>
+        /// <item><description><b>Starting</b>: The instance is starting.</description></item>
+        /// <item><description><b>Stopping</b>: The instance is being stopped.</description></item>
+        /// <item><description><b>Stopped</b>: The instance is stopped.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +156,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Queries instances by the specified tag. Input format: <c>{&quot;TagKey&quot;:&quot;TagValue&quot;}</c>.</para>
+        /// <para>The tags used to filter instances. Input format: <c>{&quot;TagKey&quot;:&quot;TagValue&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;testRC&quot;:&quot;test01&quot;}</para>
@@ -142,7 +166,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The ID of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6f7l4fg90****</para>

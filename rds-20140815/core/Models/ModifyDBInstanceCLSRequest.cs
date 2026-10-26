@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EncryptionAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The encryption key ID. This parameter is required when you use a KMS key.</para>
+        /// <para>The ID of the encryption key. This parameter is required when you use a KMS key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>749c1df7-<b><b>-</b></b>-<b><b>-</b></b></para>
@@ -57,12 +57,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The column encryption key mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>client_key: configures a user-generated random key on the client side.</description></item>
-        /// <item><description>kms_key: configures a custom key by using Alibaba Cloud Key Management Service (KMS).</description></item>
+        /// <item><description>client_key: A user-generated random key configured on the client side.</description></item>
+        /// <item><description>kms_key: A custom key configured by using Alibaba Cloud KMS.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> After an instance is configured to use KMS for key management, you can no longer switch to the client-side random key mode.</para>
-        /// </remarks>
+        /// <para>Note
+        /// After an instance is configured to use a KMS key, you can no longer use a random key configured on the client side.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kms_key</para>
@@ -113,10 +112,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor of the RAM role, used to specify the role to assume. For details, see RAM role overview.</para>
-        /// <remarks>
-        /// <para> This parameter takes effect only when the column encryption key pattern is set to kms_key. If you do not specify this parameter, the internal default value is used.</para>
-        /// </remarks>
+        /// <para>The global resource descriptor of the role, used to specify the specific role. For details, see RAM role overview.
+        /// Note
+        /// This parameter takes effect only when the column encryption key pattern is set to kms_key. If you do not specify this parameter, the internal default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</para>

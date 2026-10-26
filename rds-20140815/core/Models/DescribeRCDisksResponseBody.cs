@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string AttachedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether burst (performance bursting) is enabled. Valid values:</para>
-            /// <para>true: Enabled.
-            /// false: Disabled.
-            /// This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see ESSD AutoPL cloud disks.</para>
+            /// <para>Indicates whether burstable performance is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.
+            /// This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see ESSD AutoPL cloud disks.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("BurstingEnabled")]
             [Validation(Required=false)]
@@ -39,10 +41,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The disk category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>cloud_efficiency</b>: ultra cloud disk.</description></item>
-            /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+            /// <item><description><b>cloud_efficiency</b>: Ultra cloud disk.</description></item>
+            /// <item><description><b>cloud_ssd</b>: Standard SSD cloud disk.</description></item>
             /// <item><description><b>cloud_essd</b>: ESSD cloud disk.</description></item>
-            /// <item><description><b>cloud_auto</b>: premium performance disk.</description></item>
+            /// <item><description><b>cloud_auto</b>: Premium performance disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the cloud disk was created. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-22T02:41:37Z</para>
@@ -63,10 +65,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether automatic snapshots are deleted when the cloud disk is deleted. Valid values:</para>
+            /// <para>Indicates whether automatic snapshots are deleted along with the cloud disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Automatic snapshots are deleted when the cloud disk is deleted.</description></item>
-            /// <item><description>false: Automatic snapshots are retained when the cloud disk is deleted.</description></item>
+            /// <item><description>true: Deletes the snapshots on the cloud disk.</description></item>
+            /// <item><description>false: Retains the snapshots on the cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,8 +113,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>Billable methods of the disk.</para>
-            /// <para>Only <b>PostPaid</b> is supported, which indicates the pay-as-you-go billing method.</para>
+            /// <para>The billing method of the disk.</para>
+            /// <para>Only <b>PostPaid</b> (pay-as-you-go) is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -142,10 +144,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DiskName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether only encrypted cloud disks are filtered. Valid values:</para>
+            /// <para>Indicates whether the cloud disk is encrypted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Only encrypted cloud disks are returned.</description></item>
-            /// <item><description>false (default): All cloud disks are returned.</description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+            /// <para>A reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -166,8 +168,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline performance}. Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</para>
-            /// <para>This parameter is supported only when <c>Category</c> is set to <c>cloud_auto</c>.</para>
+            /// <para>The provisioned read and write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1,000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50,000}.</para>
+            /// <para>This parameter is supported only when Category is set to cloud_auto.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4000</para>
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? IOPS { get; set; }
 
             /// <summary>
-            /// <para>The image ID used to create the RDS Custom instance. This parameter has a value only for cloud disks created from an image. Otherwise, the value is empty. This value remains unchanged throughout the lifecycle of the cloud disk.</para>
+            /// <para>The ID of the image used to create the RDS Custom instance. This parameter has a value only if the cloud disk was created from an image. Otherwise, the value is empty. The value remains unchanged throughout the lifecycle of the cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-2zeb24dw6wripjn2****</para>
@@ -197,12 +199,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The performance level (PL) of the ESSD cloud disk. Valid values:</para>
+            /// <para>The performance level of the ESSD cloud disk (not standard SSD). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: A single standard SSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: A single standard SSD can deliver up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: A single standard SSD can deliver up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: A single standard SSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
+            /// <item><description>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</description></item>
+            /// <item><description>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,7 +215,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the disk is detachable.</para>
+            /// <para>Indicates whether the disk is removable.</para>
             /// </summary>
             [NameInMap("Portable")]
             [Validation(Required=false)]
@@ -260,8 +262,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The snapshot ID used to create the cloud disk.</para>
-            /// <para>If no snapshot was specified when the cloud disk was created, this parameter is empty. This value remains unchanged throughout the lifecycle of the cloud disk.</para>
+            /// <para>The ID of the snapshot used to create the cloud disk.</para>
+            /// <para>If no snapshot was specified when the cloud disk was created, the value is empty. The value remains unchanged throughout the lifecycle of the cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rcds-bp67acfmxazb4p****</para>
@@ -273,12 +275,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The disk status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>In_use: in use.</description></item>
-            /// <item><description>Available: to be attached.</description></item>
-            /// <item><description>Attaching: being attached.</description></item>
-            /// <item><description>Detaching: being detached.</description></item>
-            /// <item><description>Creating: being created.</description></item>
-            /// <item><description>ReIniting: being initialized.</description></item>
+            /// <item><description>In_use: In use.</description></item>
+            /// <item><description>Available: Available.</description></item>
+            /// <item><description>Attaching: Attaching.</description></item>
+            /// <item><description>Detaching: Detaching.</description></item>
+            /// <item><description>Creating: Creating.</description></item>
+            /// <item><description>ReIniting: Initializing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -289,7 +291,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dedicated block storage cluster to which the cloud disk belongs. If the cloud disk is in a public cloud block storage cluster, this parameter is empty.</para>
+            /// <para>The ID of the dedicated block storage cluster to which the cloud disk belongs. If the cloud disk is in a public cloud block storage cluster, the value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dbsc-cn-zvp2rl601****</para>
@@ -340,8 +342,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: system cloud disk.</description></item>
-            /// <item><description>data: data cloud disk.</description></item>
+            /// <item><description>system: System cloud disk.</description></item>
+            /// <item><description>data: Data cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

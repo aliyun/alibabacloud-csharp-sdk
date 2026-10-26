@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyComputeBurstConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Set this parameter to <b>disabled</b> to disable the committed serverless feature.</para>
+        /// <para>To disable the provisioned Serverless feature, set this parameter to <b>disabled</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>disabled</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BurstStatus { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCziJZNwH****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CpuShrinkThreshold { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of CPUs for elastic scale-out. The value can be up to twice the initial CPU configuration of the instance.</para>
+        /// <para>The upper limit of CPUs for elastic scale-out. The value can be up to twice the initial CPU configuration of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ScaleMaxCpus { get; set; }
 
         /// <summary>
-        /// <para>The maximum memory for elastic scale-out. The value can be up to twice the initial memory configuration of the instance. Unit: GB. The value is adjusted in increments of 2 GB.</para>
+        /// <para>The upper limit of memory for elastic scale-out. The value can be up to twice the initial memory configuration of the instance. Unit: GB. The adjustment increment is 2 GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -132,16 +132,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ScaleMaxMemory { get; set; }
 
+        /// <summary>
+        /// <para>The upper limit of RCU scaling for ApsaraDB RDS for MySQL provisioned Serverless.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8.0</para>
+        /// </summary>
         [NameInMap("ScaleMaxRcu")]
         [Validation(Required=false)]
         public double? ScaleMaxRcu { get; set; }
 
+        /// <summary>
+        /// <para>The lower limit of RCU scaling for ApsaraDB RDS for MySQL provisioned Serverless.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.5</para>
+        /// </summary>
         [NameInMap("ScaleMinRcu")]
         [Validation(Required=false)]
         public double? ScaleMinRcu { get; set; }
 
         /// <summary>
-        /// <para>The specified time at which the modification takes effect. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC).</para>
+        /// <para>The specified time when the modification takes effect. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>SwitchTimeMode</b> is set to <b>2</b>.</para>
         /// </remarks>
@@ -156,9 +168,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The effective policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The modification takes effect immediately.</description></item>
-        /// <item><description><b>1</b>: The modification takes effect during the maintenance window. You can call the <b>ModifyDBInstanceMaintainTime</b> operation to modify the maintenance window.</description></item>
-        /// <item><description><b>2</b>: The modification takes effect at a specified point in time.</description></item>
+        /// <item><description><b>0</b>: Takes effect immediately.</description></item>
+        /// <item><description><b>1</b>: Takes effect within the maintenance window. You can call the <b>ModifyDBInstanceMaintainTime</b> operation to modify the maintenance window.</description></item>
+        /// <item><description><b>2</b>: Takes effect at a specified point in time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,7 +181,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTimeMode { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

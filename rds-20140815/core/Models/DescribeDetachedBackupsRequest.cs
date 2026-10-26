@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDetachedBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID.</para>
+        /// <para>The ID of the backup set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>327****</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Automated</b>: automatic backup.</description></item>
-        /// <item><description><b>Manual</b>: manual backup.</description></item>
+        /// <item><description><b>Automated</b>: automatic backup</description></item>
+        /// <item><description><b>Manual</b>: manual backup</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The backup set status. Valid values:</para>
+        /// <para>The status of the backup set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b>: The backup is complete.</description></item>
+        /// <item><description><b>Success</b>: The backup is completed.</description></item>
         /// <item><description><b>Failed</b>: The backup failed.</description></item>
         /// </list>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The end time of the query. The end time must be later than the start time.</para>
-        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
+        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-03-15T16:00Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</para>
         /// <remarks>
         /// <para>Default value: 1.</para>
         /// </remarks>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The start time of the query.</para>
-        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
+        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-03-01T16:00Z</para>

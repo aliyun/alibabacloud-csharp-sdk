@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The private IP address of the instance. The IP address must be within the CIDR block of the vSwitch specified by the <b>VSwitchId</b> parameter.</para>
         /// <remarks>
-        /// <para>You can call DescribeVSwitches to query the CIDR block of the target vSwitch.</para>
+        /// <para>You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The VPC ID.</para>
         /// <remarks>
-        /// <para>The VPC must be in the same region as the ApsaraDB RDS instance.</para>
+        /// <para>The VPC and the ApsaraDB RDS instance must be in the same region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <remarks>
-        /// <para>The vSwitch must be in the same zone as the ApsaraDB RDS instance.</para>
+        /// <para>The vSwitch and the ApsaraDB RDS instance must be in the same zone.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

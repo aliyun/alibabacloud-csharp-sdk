@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckCreateDdrDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set used for restoration from a backup set. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</para>
+        /// <para>The ID of the backup set that is used for restoration from a backup set. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>0</b>.</para>
         /// </remarks>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance storage of the destination instance. Valid values: <b>5 to 2000</b>. The value is incremented in steps of 5 GB. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
+        /// <para>The instance storage of the destination instance. Valid values: <b>5 to 2000</b>. The value increments by 5 GB. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the destination database engine. The valid values vary based on the value of <b>Engine</b>.</para>
+        /// <para>The version of the destination database engine. Valid values vary based on the <b>Engine</b> parameter:</para>
         /// <list type="bullet">
         /// <item><description>MySQL: <b>5.5/5.6/5.7/8.0</b></description></item>
-        /// <item><description>SQL Server: <b>2008r2 (instances with Premium Local SSDs, discontinued)/08r2_ent_ha (instances with cloud disks, discontinued)/2012/2012_ent_ha/2012_std_ha/2012_web/2014_std_ha/2016_ent_ha/2016_std_ha/2016_web/2017_std_ha/2017_ent/2019_std_ha/2019_ent</b></description></item>
+        /// <item><description>SQL Server: <b>2008r2 (Premium Local SSD, discontinued)/08r2_ent_ha (cloud disk, discontinued)/2012/2012_ent_ha/2012_std_ha/2012_web/2014_std_ha/2016_ent_ha/2016_std_ha/2016_web/2017_std_ha/2017_ent/2019_std_ha/2019_ent</b></description></item>
         /// <item><description>PostgreSQL: <b>10.0/11.0/12.0/13.0/14.0/15.0</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>For SQL Server instances, <c>_ent</c> indicates Enterprise Cluster Edition, <c>_ent_ha</c> indicates Enterprise Edition, <c>_std_ha</c> indicates Standard Edition, and <c>_web</c> indicates Web Edition.</para>
+        /// <para>For SQL Server instances, <c>_ent</c> indicates the Enterprise Cluster Edition, <c>_ent_ha</c> indicates the Enterprise Edition, <c>_std_ha</c> indicates the Standard Edition, and <c>_web</c> indicates the Web Edition.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the destination instance. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID of the destination instance. You can call the DescribeRegions operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to restore data when you restore data to a point in time. The point in time must be earlier than the current time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The point in time to which you want to restore data. The point in time must be earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The restoration method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): restores data from a backup set. If you set this parameter to 0, you must also specify <b>BackupSetId</b>.</description></item>
-        /// <item><description><b>1</b>: restores data to a point in time. If you set this parameter to 1, you must also specify <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b>.</description></item>
+        /// <item><description><b>0</b> (default): Restoration from a backup set. If you set this parameter to 0, you must also specify the <b>BackupSetId</b> parameter.</description></item>
+        /// <item><description><b>1</b>: Point-in-time restoration. If you set this parameter to 1, you must also specify the <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b> parameters.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance when you restore data to a point in time.</para>
+        /// <para>The ID of the source instance.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceDBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source region when you restore data to a point in time.</para>
+        /// <para>The region ID of the source instance.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>

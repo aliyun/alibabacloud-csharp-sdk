@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Set this parameter to 1, which specifies a forced switchover.</para>
+        /// <para>Set the value to 1, which specifies a forced switchover.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. This parameter does not take effect.</para>
+        /// <para>The reserved parameter. This parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-02-25T06:57:41Z</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The switchover time mode for cloud migration.</para>
-        /// <para>Set this parameter to 0, which specifies an immediate switchover.</para>
+        /// <para>Set the value to 0, which specifies an immediate switchover.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

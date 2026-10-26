@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client error.</description></item>
         /// <item><description><b>401</b>: Authentication failed.</description></item>
-        /// <item><description><b>404</b>: Request page not found.</description></item>
+        /// <item><description><b>404</b>: The requested page is not found.</description></item>
         /// <item><description><b>500</b>: Server error.</description></item>
         /// </list>
         /// 
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyWhitelistTemplateResponseBodyData Data { get; set; }
         public class ModifyWhitelistTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The return status. Valid values:</para>
+            /// <para>The returned status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ok</b>: Normal return.</description></item>
-            /// <item><description><b>error</b>: Error return.</description></item>
+            /// <item><description><b>ok</b>: Normal response.</description></item>
+            /// <item><description><b>error</b>: Error response.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Each request has a unique ID, which facilitates troubleshooting.</para>
+        /// <para>The request ID. The ID is unique for each request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

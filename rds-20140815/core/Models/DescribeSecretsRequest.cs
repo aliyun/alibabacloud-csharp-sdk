@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSecretsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Specifies the language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Chinese</description></item>
-        /// <item><description><b>en-US</b>: English</description></item>
+        /// <item><description><b>zh-CN</b>: Chinese.</description></item>
+        /// <item><description><b>en-US</b>: English.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>en-US</b>.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-xjkljj****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database engine type.</para>
         /// <remarks>
-        /// <para>This parameter currently supports only the value MySQL.</para>
+        /// <para>This parameter currently only supports the value MySQL.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number of the query result. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</para>
         /// <remarks>
         /// <para>Default value: 1.</para>
         /// </remarks>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID of the instance.</para>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxypivk***</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? CrossBackupId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+        /// <para>The start time of the time range to which data can be restored from the cross-region backup file. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-04T21:00:47Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RecoveryBeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the restorable time range for the cross-region backup file. The time follows the format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+        /// <para>The end time of the time range to which data can be restored from the cross-region backup file. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-07T02:23:26Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RecoveryEndTime { get; set; }
 
         /// <summary>
-        /// <para>The region where the source instance resides.</para>
+        /// <para>The region of the source instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-chengdu</para>

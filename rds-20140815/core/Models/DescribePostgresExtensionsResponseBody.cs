@@ -17,19 +17,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribePostgresExtensionsResponseBodyInstalledExtensions> InstalledExtensions { get; set; }
         public class DescribePostgresExtensionsResponseBodyInstalledExtensions : TeaModel {
             /// <summary>
-            /// <para>The extension category. Valid values:</para>
+            /// <para>The category of the extension. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>external_access</b>: external access.</description></item>
-            /// <item><description><b>index_support</b>: index support.</description></item>
-            /// <item><description><b>information_stat</b>: information statistics.</description></item>
-            /// <item><description><b>geography_space</b>: geospatial.</description></item>
-            /// <item><description><b>vector_engine</b>: vector engine.</description></item>
-            /// <item><description><b>timing_engine</b>: time series engine.</description></item>
-            /// <item><description><b>data_type</b>: data type.</description></item>
-            /// <item><description><b>encrypt_secure</b>: encryption and security.</description></item>
-            /// <item><description><b>text_process</b>: text processing.</description></item>
-            /// <item><description><b>operation_maintenance</b>: application O&amp;M.</description></item>
-            /// <item><description><b>self_develop</b>: self-developed.</description></item>
+            /// <item><description><b>external_access</b>: external access</description></item>
+            /// <item><description><b>index_support</b>: index support</description></item>
+            /// <item><description><b>information_sta</b>t: information statistics</description></item>
+            /// <item><description><b>geography_space</b>: geospatial</description></item>
+            /// <item><description><b>vector_engine</b>: vector engine</description></item>
+            /// <item><description><b>timing_engine</b>: time series engine</description></item>
+            /// <item><description><b>data_type</b>: data type</description></item>
+            /// <item><description><b>encrypt_secure</b>: encryption and security</description></item>
+            /// <item><description><b>text_process</b>: text processing</description></item>
+            /// <item><description><b>operation_maintenance</b>: application O&amp;M</description></item>
+            /// <item><description><b>self_develop</b>: self-developed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstalledVersion { get; set; }
 
             /// <summary>
-            /// <para>The extension name.</para>
+            /// <para>The name of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg_profile</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The user to which the extension belongs.</para>
+            /// <para>The owner of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_user</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The extension priority. Valid values:</para>
+            /// <para>The priority of the extension. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: displayed by default.</description></item>
-            /// <item><description><b>1</b>: displayed with priority.</description></item>
+            /// <item><description><b>0</b>: displayed by default</description></item>
+            /// <item><description><b>1</b>: displayed with priority</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The extensions on which this extension depends during installation.</para>
+            /// <para>The extensions on which this extension depends when it is installed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{dblink,plpgsql}</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The Alibaba Cloud account ID.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for exclusive extensions (extensions written by the user). Each Alibaba Cloud account can view only its own exclusive extensions.</para>
+            /// <para>This parameter is returned only for exclusive extensions (extensions written by users). Each Alibaba Cloud account displays only its own exclusive extensions.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The overview information about extensions.</para>
+        /// <para>The overview information about the extensions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribePostgresExtensionsResponseBodyUninstalledExtensions> UninstalledExtensions { get; set; }
         public class DescribePostgresExtensionsResponseBodyUninstalledExtensions : TeaModel {
             /// <summary>
-            /// <para>The extension category.</para>
+            /// <para>The category of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>information_stat</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstalledVersion { get; set; }
 
             /// <summary>
-            /// <para>The extension name.</para>
+            /// <para>The name of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg_cron</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The user to which the extension belongs.</para>
+            /// <para>The owner of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_user</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The extension priority.</para>
+            /// <para>The priority of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The extensions on which this extension depends during installation.</para>
+            /// <para>The extensions on which this extension depends when it is installed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{dblink,plpgsql}</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The Alibaba Cloud account ID.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for exclusive extensions (extensions written by the user). Each Alibaba Cloud account can view only its own exclusive extensions.</para>
+            /// <para>This parameter is returned only for exclusive extensions (extensions written by users). Each Alibaba Cloud account displays only its own exclusive extensions.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
