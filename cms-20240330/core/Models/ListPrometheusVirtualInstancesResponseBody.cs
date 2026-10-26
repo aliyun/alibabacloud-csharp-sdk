@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The HTTP API URL.</para>
+            /// <para>The HTTP API endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next token for the next page. It is empty when all results are returned.</para>
+        /// <para>The next token for the next page. This parameter is empty when all results are returned.</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances returned.</para>
+        /// <para>The total number of returned instances.</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

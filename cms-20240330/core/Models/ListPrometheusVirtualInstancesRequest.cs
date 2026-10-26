@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The next paging token for the paged query.</para>
+        /// <para>The next token for the paging query.</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

@@ -4778,6 +4778,138 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public CreateSubscriptionResponse CreateSubscriptionWithOptions(CreateSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public async Task<CreateSubscriptionResponse> CreateSubscriptionWithOptionsAsync(CreateSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSubscriptionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public async Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSubscriptionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
         /// </summary>
         /// 
@@ -8592,6 +8724,136 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public DeleteSubscriptionResponse DeleteSubscriptionWithOptions(string subscriptionId, DeleteSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public async Task<DeleteSubscriptionResponse> DeleteSubscriptionWithOptionsAsync(string subscriptionId, DeleteSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public DeleteSubscriptionResponse DeleteSubscription(string subscriptionId, DeleteSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public async Task<DeleteSubscriptionResponse> DeleteSubscriptionAsync(string subscriptionId, DeleteSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSubscriptionWithOptionsAsync(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a Umodel configuration.</para>
         /// </summary>
         /// 
@@ -9800,6 +10062,136 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>暂停订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSubscriptionResponse
+        /// </returns>
+        public DisableSubscriptionResponse DisableSubscriptionWithOptions(string subscriptionId, DisableSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId) + "/disable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSubscriptionResponse
+        /// </returns>
+        public async Task<DisableSubscriptionResponse> DisableSubscriptionWithOptionsAsync(string subscriptionId, DisableSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId) + "/disable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSubscriptionResponse
+        /// </returns>
+        public DisableSubscriptionResponse DisableSubscription(string subscriptionId, DisableSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSubscriptionResponse
+        /// </returns>
+        public async Task<DisableSubscriptionResponse> DisableSubscriptionAsync(string subscriptionId, DisableSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableSubscriptionWithOptionsAsync(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables a silence policy.</para>
         /// </summary>
         /// 
@@ -10096,6 +10488,136 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await EnableNotifyPolicyWithOptionsAsync(uuid, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSubscriptionResponse
+        /// </returns>
+        public EnableSubscriptionResponse EnableSubscriptionWithOptions(string subscriptionId, EnableSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId) + "/enable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSubscriptionResponse
+        /// </returns>
+        public async Task<EnableSubscriptionResponse> EnableSubscriptionWithOptionsAsync(string subscriptionId, EnableSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId) + "/enable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSubscriptionResponse
+        /// </returns>
+        public EnableSubscriptionResponse EnableSubscription(string subscriptionId, EnableSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSubscriptionResponse
+        /// </returns>
+        public async Task<EnableSubscriptionResponse> EnableSubscriptionAsync(string subscriptionId, EnableSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableSubscriptionWithOptionsAsync(subscriptionId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14716,6 +15238,136 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionResponse
+        /// </returns>
+        public GetSubscriptionResponse GetSubscriptionWithOptions(string subscriptionId, GetSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionResponse
+        /// </returns>
+        public async Task<GetSubscriptionResponse> GetSubscriptionWithOptionsAsync(string subscriptionId, GetSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionResponse
+        /// </returns>
+        public GetSubscriptionResponse GetSubscription(string subscriptionId, GetSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionResponse
+        /// </returns>
+        public async Task<GetSubscriptionResponse> GetSubscriptionAsync(string subscriptionId, GetSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSubscriptionWithOptionsAsync(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves Umodel configuration information.</para>
         /// </summary>
         /// 
@@ -15252,12 +15904,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the releases of an add-on.</para>
+        /// <para>Lists add-on releases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of integration configurations.</para>
+        /// <para>Queries the list of add-on configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15315,12 +15967,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the releases of an add-on.</para>
+        /// <para>Lists add-on releases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of integration configurations.</para>
+        /// <para>Queries the list of add-on configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15378,12 +16030,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the releases of an add-on.</para>
+        /// <para>Lists add-on releases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of integration configurations.</para>
+        /// <para>Queries the list of add-on configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15402,12 +16054,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the releases of an add-on.</para>
+        /// <para>Lists add-on releases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of integration configurations.</para>
+        /// <para>Queries the list of add-on configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21094,6 +21746,224 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询订阅规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSubscriptionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSubscriptionsResponse
+        /// </returns>
+        public ListSubscriptionsResponse ListSubscriptionsWithOptions(ListSubscriptionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentUuid))
+            {
+                query["agentUuid"] = request.AgentUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategyUuid))
+            {
+                query["notifyStrategyUuid"] = request.NotifyStrategyUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["subscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
+            {
+                query["subscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["subscriptionType"] = request.SubscriptionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Unbound))
+            {
+                query["unbound"] = request.Unbound;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSubscriptions",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSubscriptionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订阅规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSubscriptionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSubscriptionsResponse
+        /// </returns>
+        public async Task<ListSubscriptionsResponse> ListSubscriptionsWithOptionsAsync(ListSubscriptionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentUuid))
+            {
+                query["agentUuid"] = request.AgentUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategyUuid))
+            {
+                query["notifyStrategyUuid"] = request.NotifyStrategyUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["subscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
+            {
+                query["subscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionType))
+            {
+                query["subscriptionType"] = request.SubscriptionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Unbound))
+            {
+                query["unbound"] = request.Unbound;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSubscriptions",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSubscriptionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订阅规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSubscriptionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSubscriptionsResponse
+        /// </returns>
+        public ListSubscriptionsResponse ListSubscriptions(ListSubscriptionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSubscriptionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订阅规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSubscriptionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSubscriptionsResponse
+        /// </returns>
+        public async Task<ListSubscriptionsResponse> ListSubscriptionsAsync(ListSubscriptionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSubscriptionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries labels associated with resources.</para>
         /// </summary>
         /// 
@@ -21272,6 +22142,320 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List History name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserNotifyHistoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserNotifyHistoriesResponse
+        /// </returns>
+        public ListUserNotifyHistoriesResponse ListUserNotifyHistoriesWithOptions(ListUserNotifyHistoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                query["batchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizSource))
+            {
+                query["bizSource"] = request.BizSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCategory))
+            {
+                query["channelCategory"] = request.ChannelCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentId))
+            {
+                query["incidentId"] = request.IncidentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeNoChannel))
+            {
+                query["includeNoChannel"] = request.IncludeNoChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDesc))
+            {
+                query["isDesc"] = request.IsDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategyId))
+            {
+                query["notifyStrategyId"] = request.NotifyStrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategyName))
+            {
+                query["notifyStrategyName"] = request.NotifyStrategyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionKey))
+            {
+                query["partitionKey"] = request.PartitionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Receiver))
+            {
+                query["receiver"] = request.Receiver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["ruleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["ruleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendType))
+            {
+                query["sendType"] = request.SendType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                query["severity"] = request.Severity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["subscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
+            {
+                query["subscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Success))
+            {
+                query["success"] = request.Success;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["to"] = request.To;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserNotifyHistories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/userHistories",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserNotifyHistoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List History name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserNotifyHistoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserNotifyHistoriesResponse
+        /// </returns>
+        public async Task<ListUserNotifyHistoriesResponse> ListUserNotifyHistoriesWithOptionsAsync(ListUserNotifyHistoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                query["batchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizSource))
+            {
+                query["bizSource"] = request.BizSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCategory))
+            {
+                query["channelCategory"] = request.ChannelCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentId))
+            {
+                query["incidentId"] = request.IncidentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeNoChannel))
+            {
+                query["includeNoChannel"] = request.IncludeNoChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDesc))
+            {
+                query["isDesc"] = request.IsDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategyId))
+            {
+                query["notifyStrategyId"] = request.NotifyStrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyStrategyName))
+            {
+                query["notifyStrategyName"] = request.NotifyStrategyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionKey))
+            {
+                query["partitionKey"] = request.PartitionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Receiver))
+            {
+                query["receiver"] = request.Receiver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["ruleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["ruleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendType))
+            {
+                query["sendType"] = request.SendType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                query["severity"] = request.Severity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["subscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
+            {
+                query["subscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Success))
+            {
+                query["success"] = request.Success;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["to"] = request.To;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserNotifyHistories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/userHistories",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserNotifyHistoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List History name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserNotifyHistoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserNotifyHistoriesResponse
+        /// </returns>
+        public ListUserNotifyHistoriesResponse ListUserNotifyHistories(ListUserNotifyHistoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListUserNotifyHistoriesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List History name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserNotifyHistoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserNotifyHistoriesResponse
+        /// </returns>
+        public async Task<ListUserNotifyHistoriesResponse> ListUserNotifyHistoriesAsync(ListUserNotifyHistoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListUserNotifyHistoriesWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

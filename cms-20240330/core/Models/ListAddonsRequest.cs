@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
         [NameInMap("apiVersion")]
         [Validation(Required=false)]
         public string ApiVersion { get; set; }
