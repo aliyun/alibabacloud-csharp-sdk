@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextType { get; set; }
 
         /// <summary>
-        /// <para>An array of context items.</para>
+        /// <para>The context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<AddContextsRequestItems> Items { get; set; }
         public class AddContextsRequestItems : TeaModel {
             /// <summary>
-            /// <para>The unique agent ID.</para>
+            /// <para>The agent ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>952730733889060865</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>A list of categories to apply to the context item.</para>
+            /// <para>The categories.</para>
             /// </summary>
             [NameInMap("categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>The content of the context item.</para>
+            /// <para>The content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are a conversation assistant.</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The custom instructions for processing the context.</para>
+            /// <para>The custom instructions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Your custom instructions here</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CustomInstructions { get; set; }
 
             /// <summary>
-            /// <para>An object containing experience information for the context.</para>
+            /// <para>The experience.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, object> Experience { get; set; }
 
             /// <summary>
-            /// <para>The expiration timestamp for the context item.</para>
+            /// <para>The expiration date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1731231212334396</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ExpirationDate { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the context item is immutable. If set to <c>true</c>, the item cannot be changed after it is created. The default value is <c>false</c>.</para>
+            /// <para>The mutability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Immutable { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to perform inference based on the context. The default value is <c>false</c>.</para>
+            /// <para>The inference.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -120,21 +120,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Infer { get; set; }
 
             /// <summary>
-            /// <para>A map of key-value pairs to apply as labels.</para>
+            /// <para>The labels.</para>
             /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
-            /// <para>An array of message objects.</para>
+            /// <para>The messages.</para>
             /// </summary>
             [NameInMap("messages")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Messages { get; set; }
 
             /// <summary>
-            /// <para>Key-value pairs to store as metadata.</para>
+            /// <para>The metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RunId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the context item.</para>
+            /// <para>The timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1774578167</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The condition that triggers the context.</para>
+            /// <para>The trigger condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Identify and troubleshoot SLs issues</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TriggerCondition { get; set; }
 
             /// <summary>
-            /// <para>The unique user ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_user_001</para>

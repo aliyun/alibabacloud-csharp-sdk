@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MeasureList : TeaModel {
         /// <summary>
-        /// <para>The list of grouping dimensions for metric data. Specifies the dimension keys by which metric results are computed through grouping and aggregation.</para>
+        /// <para>The list of grouping dimensions for measure data, specifying the dimension keys used for grouping and aggregation of measure results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;host.name&quot;, &quot;region&quot;]</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MeasureCode { get; set; }
 
         /// <summary>
-        /// <para>The query time window, in seconds.</para>
+        /// <para>The query time window in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

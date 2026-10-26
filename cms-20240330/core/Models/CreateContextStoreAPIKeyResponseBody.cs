@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateContextStoreAPIKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The value of the API key. This value is returned only upon creation. Store it in a secure location.</para>
+        /// <para>The full API key value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The display name of the API key.</para>
+        /// <para>The name of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Production Service Key</para>

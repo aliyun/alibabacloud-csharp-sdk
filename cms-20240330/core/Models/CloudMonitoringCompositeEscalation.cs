@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CloudMonitoringCompositeEscalation : TeaModel {
         /// <summary>
-        /// <para>The multi-condition configuration list for the cloud service monitoring composite trigger. The list contains multiple sub-causes that are combined by using logical operators (AND/OR) to determine whether to trigger an alert.</para>
+        /// <para>The multi-condition configuration list for cloud service monitoring composite triggers, which includes multiple sub-trigger conditions combined by logical operators (AND/OR) to determine whether to trigger an alert.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;metricName&quot;:&quot;cpu_total&quot;,&quot;comparisonOperator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;90&quot;,&quot;times&quot;:3}]</para>
+        /// <para>[{&quot;metricName&quot;:&quot;cpuUsage&quot;,&quot;comparisonOperator&quot;:&quot;GT&quot;,&quot;threshold&quot;:&quot;80&quot;,&quot;period&quot;:60}]</para>
         /// </summary>
         [NameInMap("escalations")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive times the condition is met before the alert is triggered.</para>
+        /// <para>The consecutive trigger count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

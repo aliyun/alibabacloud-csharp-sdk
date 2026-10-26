@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetServiceObservabilityResponseBodyEntryPointInfo EntryPointInfo { get; set; }
         public class GetServiceObservabilityResponseBodyEntryPointInfo : TeaModel {
             /// <summary>
-            /// <para>The authentication token for reporting data.</para>
+            /// <para>The authentication token for data reporting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gaddp****@de20f2<em><b>1ce</b></em></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthToken { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint.</para>
+            /// <para>The internal-facing access address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrivateDomain { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project.</para>
+            /// <para>SLS Project</para>
             /// 
             /// <b>Example:</b>
             /// <para>proj-xtrace-xxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint.</para>
+            /// <para>The public network access address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FeeType { get; set; }
 
         /// <summary>
-        /// <para>The quota configuration.</para>
+        /// <para>The quota configurations.</para>
         /// </summary>
         [NameInMap("quotas")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The system configuration.</para>
+        /// <para>The system configurations.</para>
         /// </summary>
         [NameInMap("settings")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of application observability.</para>
+        /// <para>The application observability type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apm</para>

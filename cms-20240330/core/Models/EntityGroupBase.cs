@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The entity description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS 实例</para>
+        /// <para>ECS instance</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The entity name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS 全部实体</para>
+        /// <para>All ECS entities</para>
         /// </summary>
         [NameInMap("entityGroupName")]
         [Validation(Required=false)]
         public string EntityGroupName { get; set; }
 
         /// <summary>
-        /// <para>A collection of entity query rules.</para>
+        /// <para>The entity query rule set.</para>
         /// </summary>
         [NameInMap("entityQueries")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The Structured Process Language (SPL) search statement.</para>
+            /// <para>The SPL query statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The rule for entity discovery.</para>
+        /// <para>The rules used for entity discovery.</para>
         /// </summary>
         [NameInMap("entityRules")]
         [Validation(Required=false)]

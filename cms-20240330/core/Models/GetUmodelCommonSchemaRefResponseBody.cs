@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetUmodelCommonSchemaRefResponseBody : TeaModel {
         /// <summary>
-        /// <para>The referenced common Umodel Schema.</para>
+        /// <para>The referenced public Umodel schema.</para>
         /// </summary>
         [NameInMap("commonSchemaRef")]
         [Validation(Required=false)]
         public List<GetUmodelCommonSchemaRefResponseBodyCommonSchemaRef> CommonSchemaRef { get; set; }
         public class GetUmodelCommonSchemaRefResponseBodyCommonSchemaRef : TeaModel {
             /// <summary>
-            /// <para>The common Umodel Schema group.</para>
+            /// <para>The public Umodel schema group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apm-common</para>

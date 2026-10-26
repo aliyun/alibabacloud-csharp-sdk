@@ -24,6 +24,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> AddonNames { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>v2</para>
+            /// </summary>
+            [NameInMap("apiVersion")]
+            [Validation(Required=false)]
+            public string ApiVersion { get; set; }
+
+            /// <summary>
             /// <para>The information about the bound resource.</para>
             /// </summary>
             [NameInMap("bindResource")]

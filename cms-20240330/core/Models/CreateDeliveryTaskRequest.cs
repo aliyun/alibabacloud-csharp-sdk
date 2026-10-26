@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Prometheus instance that serves as the data source.</para>
+        /// <para>The ID of the data source, which is the ID of the Prometheus instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>A map of key-value pairs to attach as additional labels to all delivered metrics.</para>
+        /// <para>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</para>
         /// </summary>
         [NameInMap("externalLabels")]
         [Validation(Required=false)]
         public Dictionary<string, string> ExternalLabels { get; set; }
 
         /// <summary>
-        /// <para>The label conditions for filtering metrics. The key is the label name and the value is the value to match. The filtering behavior is controlled by <c>labelFiltersType</c>.</para>
+        /// <para>The metric filtering conditions. This parameter is used together with labelFiltersType. The key is the metric label name, and the value is the match value.</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
         public Dictionary<string, string> LabelFilters { get; set; }
 
         /// <summary>
-        /// <para>The mode for applying the label filters.</para>
+        /// <para>The metric filtering mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Allow</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>An array of delivery destination objects.</para>
+        /// <para>The list of delivery destinations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sinkList")]
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<CreateDeliveryTaskRequestSinkList> SinkList { get; set; }
         public class CreateDeliveryTaskRequestSinkList : TeaModel {
             /// <summary>
-            /// <para>The configuration for the sink, specified as key-value pairs. The valid keys and values depend on the value of <c>sinkType</c>.</para>
+            /// <para>The detailed configuration of the delivery destination. The meanings of the key and value vary based on the sinkType. For more information, see the following descriptions.</para>
             /// </summary>
             [NameInMap("sinkConfigs")]
             [Validation(Required=false)]
             public Dictionary<string, string> SinkConfigs { get; set; }
 
             /// <summary>
-            /// <para>The type of the delivery destination (sink).</para>
+            /// <para>The type of the delivery destination.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>An array of resource tags.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The task description.</para>
+        /// <para>The description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my delivery task</para>

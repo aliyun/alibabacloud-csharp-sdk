@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>

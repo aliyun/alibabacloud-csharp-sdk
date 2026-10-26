@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAddonReleasesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the add-on.</para>
+        /// <para>The add-on name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-gpu</para>
@@ -19,16 +19,25 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public string MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The next token for pagination.</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The parent AddonRelease ID.</para>
+        /// <para>The parent add-on release ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-xxxxxxxxxxxxx</para>

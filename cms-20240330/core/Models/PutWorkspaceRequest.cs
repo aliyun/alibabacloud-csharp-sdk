@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class PutWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the workspace.</para>
+        /// <para>The workspace description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group specified when the workspace is created.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ae******ey</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service project.</para>
+        /// <para>The Simple Log Service project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,21 +51,27 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SlsProject { get; set; }
 
         /// <summary>
-        /// <para>The tags bound to the workspace when it is created.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<PutWorkspaceRequestTags> Tags { get; set; }
         public class PutWorkspaceRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>env</para>
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>prod</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

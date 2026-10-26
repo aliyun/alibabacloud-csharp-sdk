@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateIntegrationPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The entity group used to create the policy. You can quickly create a policy using an entity group. The clusterId and vpcId parameters are independent of each other.</para>
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
+        [NameInMap("apiVersion")]
+        [Validation(Required=false)]
+        public string ApiVersion { get; set; }
+
+        /// <summary>
+        /// <para>The entity group used to create the policy. You can quickly create the policy by using the entity group. The clusterId and vpcId parameters are independent of each other.</para>
         /// </summary>
         [NameInMap("entityGroup")]
         [Validation(Required=false)]
         public CreateIntegrationPolicyRequestEntityGroup EntityGroup { get; set; }
         public class CreateIntegrationPolicyRequestEntityGroup : TeaModel {
             /// <summary>
-            /// <para>The cluster entity type. Examples: acs.ack.cluster, acs.one.cluster, and acs.asi.cluster.</para>
+            /// <para>The cluster entity type, such as acs.ack.cluster, acs.one.cluster, acs.asi.cluster, or others.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs.ack.cluster</para>
@@ -36,12 +44,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>arms-prom</para>
+            /// </summary>
             [NameInMap("clusterNamespace")]
             [Validation(Required=false)]
             public string ClusterNamespace { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to disable unique policy binding. If this parameter is set to true, you can create multiple policies for a container cluster.</para>
+            /// <para>Specifies whether to disable the unique binding of the policy. If this parameter is set to true, you can create multiple policies for a container cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ture</para>
@@ -61,7 +73,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who owns the cluster.</para>
+            /// <para>The ID of the user to which the cluster belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12xxxx</para>
@@ -71,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityUserId { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp18fgg3ffxa9czna40xt</para>
@@ -121,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<CreateIntegrationPolicyRequestTags> Tags { get; set; }
         public class CreateIntegrationPolicyRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>use</para>
@@ -131,7 +143,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>database</para>

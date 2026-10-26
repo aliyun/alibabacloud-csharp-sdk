@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MergeContactGroup : TeaModel {
         /// <summary>
-        /// <para>A list of unique identifiers for the members in the group.</para>
+        /// <para>The list of unique identifiers for members in the group.</para>
         /// </summary>
         [NameInMap("contacts")]
         [Validation(Required=false)]
         public List<string> Contacts { get; set; }
 
         /// <summary>
-        /// <para>An extension field that stores additional information.</para>
+        /// <para>The extension field used to store additional information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</para>
+        /// <para>{ &quot;department&quot;: &quot;O&amp;M Department&quot;, &quot;role&quot;: &quot;Engineer&quot; }</para>
         /// </summary>
         [NameInMap("extend")]
         [Validation(Required=false)]
         public Dictionary<string, object> Extend { get; set; }
 
         /// <summary>
-        /// <para>The time when the contact group was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The time when the contact group was last modified.</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name of the contact group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>运维团队</para>
+        /// <para>O&amp;M Team</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

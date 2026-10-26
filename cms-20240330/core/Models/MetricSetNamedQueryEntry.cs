@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MetricSetNamedQueryEntry : TeaModel {
         /// <summary>
-        /// <para>The label filter conditions. This parameter is optional and independent for each query.</para>
+        /// <para>The optional label filter conditions, which are independent for each query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;key&quot;:&quot;host.name&quot;,&quot;value&quot;:&quot;web-server-01&quot;,&quot;type&quot;:&quot;eq&quot;}]</para>
+        /// <para>[{&quot;name&quot;:&quot;env&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;value&quot;:&quot;prod&quot;}]</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetricSet { get; set; }
 
         /// <summary>
-        /// <para>The query name, such as $A or $B, referenced by condition triggers.</para>
+        /// <para>The query name, such as $A or $B, referenced by the condition trigger.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpuQuery</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public MaintainWindowForModify Body { get; set; }
 
         /// <summary>
-        /// <para>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business spaces.</para>
+        /// <para>The name of the workspace. This parameter is required by the backend and is used to isolate silence policy resources across different business workspaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-xxxx-cn-hangzhou</para>

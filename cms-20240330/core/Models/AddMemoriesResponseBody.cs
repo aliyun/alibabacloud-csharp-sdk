@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AddMemoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Request results.</para>
+        /// <para>The request results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<AddMemoriesResponseBodyResults> Results { get; set; }
         public class AddMemoriesResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>Event ID.</para>
+            /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>897294a7-67a4-4f60-976c-e136edc5f97e</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>Details.</para>
+            /// <para>The detailed information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Memory processing has been queued for background execution</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Processing status.</para>
+            /// <para>The processing status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending</para>

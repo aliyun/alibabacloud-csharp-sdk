@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetDataPipelineResponseBodyPipeline Pipeline { get; set; }
         public class GetDataPipelineResponseBodyPipeline : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in ISO 8601 format in UTC, such as 2026-08-10T05:00:00Z.</para>
             /// <para>This parameter is required.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         }
 
                         /// <summary>
-                        /// <para>The masking rule list.</para>
+                        /// <para>The data masking rule list.</para>
                         /// </summary>
                         [NameInMap("rules")]
                         [Validation(Required=false)]
                         public List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules> Rules { get; set; }
                         public class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules : TeaModel {
                             /// <summary>
-                            /// <para>The retained prefix length.</para>
+                            /// <para>The prefix retention length.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>2</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             public int? KeepPrefix { get; set; }
 
                             /// <summary>
-                            /// <para>The retained suffix length.</para>
+                            /// <para>The suffix retention length.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>2</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             public string MaskChar { get; set; }
 
                             /// <summary>
-                            /// <para>The masking mode.</para>
+                            /// <para>The data masking mode.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>keyword</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope in which the pipeline processing processor takes effect.</para>
+                        /// <para>The pipeline processing scope.</para>
                         /// </summary>
                         [NameInMap("scope")]
                         [Validation(Required=false)]
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                                 public string MatchType { get; set; }
 
                                 /// <summary>
-                                /// <para>The metric name.</para>
+                                /// <para>The metric names.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>[&quot;http_requests_total&quot;]</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector Selector { get; set; }
                         public class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector : TeaModel {
                             /// <summary>
-                            /// <para>The list of service names.</para>
+                            /// <para>The service name list.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The pipeline name.</para>
+            /// <para>The name of the pipeline.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -563,14 +563,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The masking rule list.</para>
+                    /// <para>The data masking rule list.</para>
                     /// </summary>
                     [NameInMap("rules")]
                     [Validation(Required=false)]
                     public List<GetDataPipelineResponseBodyPipelineProcessorsConfigRules> Rules { get; set; }
                     public class GetDataPipelineResponseBodyPipelineProcessorsConfigRules : TeaModel {
                         /// <summary>
-                        /// <para>The retained prefix length.</para>
+                        /// <para>The prefix retention length.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public int? KeepPrefix { get; set; }
 
                         /// <summary>
-                        /// <para>The retained suffix length.</para>
+                        /// <para>The suffix retention length.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -609,7 +609,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string MaskChar { get; set; }
 
                         /// <summary>
-                        /// <para>The masking mode.</para>
+                        /// <para>The data masking mode.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>keyword</para>
@@ -628,7 +628,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The scope in which the pipeline processing processor takes effect.</para>
+                    /// <para>The effective scope of pipeline processing.</para>
                     /// </summary>
                     [NameInMap("scope")]
                     [Validation(Required=false)]
@@ -724,7 +724,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             public string MatchType { get; set; }
 
                             /// <summary>
-                            /// <para>The metric name.</para>
+                            /// <para>The metric names.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>[&quot;http_requests_total&quot;]</para>
@@ -783,7 +783,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public GetDataPipelineResponseBodyPipelineProcessorsConfigSelector Selector { get; set; }
                     public class GetDataPipelineResponseBodyPipelineProcessorsConfigSelector : TeaModel {
                         /// <summary>
-                        /// <para>The list of service names.</para>
+                        /// <para>The service name list.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -849,7 +849,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string SignalType { get; set; }
 
             /// <summary>
-            /// <para>The output destinations.</para>
+            /// <para>The data sinks.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("sinks")]
@@ -874,7 +874,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the output destination.</para>
+                /// <para>The name of the data sink.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>error-archive</para>
@@ -894,7 +894,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The type of the output destination.</para>
+                /// <para>The type of the data sink.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>logstore</para>
@@ -931,7 +931,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string RunMode { get; set; }
 
                     /// <summary>
-                    /// <para>The read start point.</para>
+                    /// <para>The starting point for reading.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>latest</para>
@@ -1005,7 +1005,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string StatusMessage { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time in ISO 8601 format in UTC, such as 2026-08-10T05:10:00Z.</para>
             /// <para>This parameter is required.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 

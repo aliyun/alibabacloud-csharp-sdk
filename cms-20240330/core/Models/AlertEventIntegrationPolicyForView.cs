@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertEventIntegrationPolicyForView : TeaModel {
         /// <summary>
-        /// <para>The universally unique identifier (UUID).</para>
+        /// <para>UUID</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123123</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertEventIntegrationPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The time when the policy was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the policy is enabled.</para>
+        /// <para>Specifies whether it is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IntegrationSetting { get; set; }
 
         /// <summary>
-        /// <para>The key for the integration\&quot;s reporting endpoint.</para>
+        /// <para>The reporting entry key for the integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10-16818f1445e10a1d012922b285bfb334</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>The transformation settings.</para>
+        /// <para>The transform settings.</para>
         /// </summary>
         [NameInMap("transformerSetting")]
         [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The time when the policy was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-16T02:00:23Z</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The workspace.</para>
+        /// <para>workspace</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

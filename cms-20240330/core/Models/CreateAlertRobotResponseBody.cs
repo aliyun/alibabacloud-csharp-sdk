@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAlertRobotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The robot ID.</para>
+        /// <para>The ID of the robot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testId</para>

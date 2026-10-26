@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<PreviewDataPipelineResponseBodyDatasetsMeta> Meta { get; set; }
             public class PreviewDataPipelineResponseBodyDatasetsMeta : TeaModel {
                 /// <summary>
-                /// <para>The field name.</para>
+                /// <para>The name of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>trace_id</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The field type.</para>
+                /// <para>The type of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The dataset name.</para>
+            /// <para>The name of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error_spans</para>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The aggregated diagnostics.</para>
+        /// <para>The aggregation diagnostics.</para>
         /// </summary>
         [NameInMap("diagnostics")]
         [Validation(Required=false)]
         public Dictionary<string, object> Diagnostics { get; set; }
 
         /// <summary>
-        /// <para>The effective SPL script.</para>
+        /// <para>The effective SPL.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

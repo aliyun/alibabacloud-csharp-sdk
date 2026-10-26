@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the addon component to be connected to monitoring.</para>
+        /// <para>The name of the add-on component to be integrated for monitoring.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("aliyunLang")]
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
+        [NameInMap("apiVersion")]
+        [Validation(Required=false)]
+        public string ApiVersion { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 
@@ -51,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public EntityDiscoverRule EntityRules { get; set; }
 
         /// <summary>
-        /// <para>The environment type. If the policy type is CS or ECS, the corresponding value is used. For other types, the value is Cloud.</para>
+        /// <para>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the value is uniformly set to Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CS</para>
@@ -61,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The parent AddonReleaseId.</para>
+        /// <para>The parent add-on release ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-xxxxxxxxxxx</para>
@@ -71,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ParentAddonReleaseId { get; set; }
 
         /// <summary>
-        /// <para>The name of the plugin after access. If this parameter is not specified, a default rule name is generated.</para>
+        /// <para>The name of the plug-in after integration. If you do not specify this parameter, a default rule name is generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-gpu-integration-name</para>
@@ -91,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Values { get; set; }
 
         /// <summary>
-        /// <para>The version of the addon component to be connected to monitoring.</para>
+        /// <para>The version of the add-on component to be integrated for monitoring.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

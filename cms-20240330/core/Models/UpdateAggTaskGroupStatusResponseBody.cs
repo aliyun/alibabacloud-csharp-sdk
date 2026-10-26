@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AggTaskGroupName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-***</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source Prometheus instance for the aggregation task group.</para>
+        /// <para>The source Prometheus instance ID of the aggregation node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-xxx</para>

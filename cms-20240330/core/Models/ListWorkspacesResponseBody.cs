@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListWorkspacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.
+        /// <para>The maximum number of entries per page.
         /// Default value:
         ///     50
         /// Maximum value:
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListWorkspacesResponseBodyWorkspaces> Workspaces { get; set; }
         public class ListWorkspacesResponseBodyWorkspaces : TeaModel {
             /// <summary>
-            /// <para>The time when the workspace was created.</para>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was last modified.</para>
+            /// <para>The update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-ae******ey</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project name.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sls-project-test-001</para>
@@ -141,6 +141,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public class ListWorkspacesResponseBodyWorkspacesTags : TeaModel {
                 /// <summary>
                 /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key</para>
                 /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
@@ -148,6 +151,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                 /// <summary>
                 /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value</para>
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -156,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

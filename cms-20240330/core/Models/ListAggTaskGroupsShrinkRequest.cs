@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAggTaskGroupsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of aggregation task group IDs. The value must be a JSON-parsable string.</para>
+        /// <para>The list of IDs of the aggregation task groups. The value must be in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;aggTaskGroup-xxx&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterAggTaskGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The list of aggregation task group names. The value must be a JSON-parsable string.</para>
+        /// <para>The list of names of the aggregation task groups. The value must be in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;apiserver_request_total&quot;]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name to search for. Fuzzy match is supported.</para>
+        /// <para>The search keyword for names. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -60,12 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The status of the aggregation task group. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Running</description></item>
-        /// <item><description>Stopped</description></item>
-        /// </list>
-        /// <para>Default value: Running.</para>
+        /// <para>The status of the aggregation task group. Valid values: Running and Stopped. Default value: Running.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -75,14 +70,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The resource group tags.</para>
+        /// <para>The tags of the resource group.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the target Managed Service for Prometheus instance for the aggregation node group.</para>
+        /// <para>The instance ID of the target Prometheus instance for the aggregation node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-pq4apob9jm</para>

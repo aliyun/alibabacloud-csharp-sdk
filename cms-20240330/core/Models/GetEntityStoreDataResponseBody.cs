@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetEntityStoreDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of returned data.</para>
+        /// <para>The total count of the returned data list.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetEntityStoreDataResponseBodyResponseStatus ResponseStatus { get; set; }
         public class GetEntityStoreDataResponseBodyResponseStatus : TeaModel {
             /// <summary>
-            /// <para>Information about the execution procedure.</para>
+            /// <para>The information during the execution process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RetryPolicy { get; set; }
 
             /// <summary>
-            /// <para>A list of detailed status information.</para>
+            /// <para>The list of detailed status information.</para>
             /// </summary>
             [NameInMap("statusItem")]
             [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The execution information.</para>
+                /// <para>The computation execution information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Query execution timeout after 30 seconds</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The suggestion provided when an execution fault occurs.</para>
+                /// <para>The suggestions provided when an execution error occurs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Try to reduce the query scope or increase timeout limit, then retry</para>

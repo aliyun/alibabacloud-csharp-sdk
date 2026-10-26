@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusVirtualInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance.</para>
+        /// <para>The instance ID.</para>
         /// </summary>
         [NameInMap("instance")]
         [Validation(Required=false)]
         public CreatePrometheusVirtualInstanceResponseBodyInstance Instance { get; set; }
         public class CreatePrometheusVirtualInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751520976660</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiUrl { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-e815960b4c9ebc5c3d89790c7e82</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The cloud product.</para>
+            /// <para>The cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack-csi-fuse</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>Region ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhengzhou-jva</para>

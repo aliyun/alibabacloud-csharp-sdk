@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateDatasetRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.</para>
+        /// <para>The dataset name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The description of the dataset.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The schema of the dataset.</para>
+        /// <para>The table schema.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("schema")]

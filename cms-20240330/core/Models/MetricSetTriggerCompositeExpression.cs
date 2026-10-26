@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MetricSetTriggerCompositeExpression : TeaModel {
         /// <summary>
-        /// <para>The list of sub-conditions. Each item is a simple comparison expression.</para>
+        /// <para>The list of sub-conditions, where each item is a simple comparison expression.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;metric&quot;:&quot;cpu_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;90&quot;},{&quot;metric&quot;:&quot;mem_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;85&quot;}]</para>
+        /// <para>[{&quot;expressionType&quot;:&quot;SIMPLE&quot;,&quot;queryName&quot;:&quot;cpuQuery&quot;,&quot;operator&quot;:&quot;GT&quot;,&quot;threshold&quot;:80}]</para>
         /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]
         public List<MetricSetTriggerSimpleExpression> Conditions { get; set; }
 
         /// <summary>
-        /// <para>The expression type, fixed as COMPOSITE.</para>
+        /// <para>The expression type, which is fixed to COMPOSITE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COMPOSITE</para>
@@ -30,12 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ExpressionType { get; set; }
 
         /// <summary>
-        /// <para>The logical operator. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AND: All conditions are met.</description></item>
-        /// <item><description>OR: Any condition is met.</description></item>
-        /// <item><description>UNLESS: The first condition is met and none of the remaining conditions are met.</description></item>
-        /// </list>
+        /// <para>The logical operator. Valid values: AND (all conditions are met), OR (any condition is met), and UNLESS (the first condition is met and none of the others are met).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AND</para>

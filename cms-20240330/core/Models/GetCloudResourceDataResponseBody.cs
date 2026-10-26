@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetCloudResourceDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total list of returned data.</para>
+        /// <para>The total number of returned data records.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<List<string>> Data { get; set; }
 
         /// <summary>
-        /// <para>The list of headers.</para>
+        /// <para>The list of request headers.</para>
         /// </summary>
         [NameInMap("header")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetCloudResourceDataResponseBodyResponseStatus ResponseStatus { get; set; }
         public class GetCloudResourceDataResponseBodyResponseStatus : TeaModel {
             /// <summary>
-            /// <para>The information during execution.</para>
+            /// <para>The information during the execution process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The suggestion when an execution error occurs.</para>
+                /// <para>The suggestions provided when an execution error occurs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Try to reduce the query scope or increase timeout limit, then retry</para>

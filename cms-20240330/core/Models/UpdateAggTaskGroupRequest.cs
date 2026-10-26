@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAggTaskGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the aggregation task group. Currently, only the RecordingRuleYaml format is supported. The configuration must comply with the RecordingRule format of open source Prometheus.</para>
+        /// <para>The configuration of the aggregation task group. Only the RecordingRuleYaml format is supported. The configuration must meet the format requirements of RecordingRule in open-source Prometheus.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AggTaskGroupConfig { get; set; }
 
         /// <summary>
-        /// <para>The type of the aggregation task group configuration. The default value is RecordingRuleYaml, which is the RecordingRule format of open source Prometheus.</para>
+        /// <para>The configuration type of the aggregation task group. Default value: RecordingRuleYaml, which is the RecordingRule format of open-source Prometheus.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RecordingRuleYaml</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AggTaskGroupName { get; set; }
 
         /// <summary>
-        /// <para>The cron expression for scheduling when the scheduling mode is set to Cron. For example, \<c>0/1 \\* \\* \\* \\*\\</c> indicates that the task is scheduled every 1 minute, starting from the 0th minute.</para>
+        /// <para>The cron expression used when the scheduling mode is set to Cron. For example, 0/1 * * * * indicates that the task is scheduled every 1 minute starting from minute 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/1 * * * *</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CronExpr { get; set; }
 
         /// <summary>
-        /// <para>The fixed delay for scheduling. Unit: seconds. The default value is 30.</para>
+        /// <para>The fixed delay time for scheduling, in seconds. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp in seconds that indicates the start time of the scheduling.</para>
+        /// <para>The timestamp of the scheduling start time, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1724996015</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? FromTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of retries to execute the aggregation task. The default value is 20.</para>
+        /// <para>The maximum number of retries for executing the aggregation task. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxRetries { get; set; }
 
         /// <summary>
-        /// <para>The maximum retry time to execute the aggregation task. Unit: seconds. The default value is 600.</para>
+        /// <para>The maximum retry time to execute the aggregation node, in seconds. Default value: 600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxRunTimeInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The dry run configuration. This parameter is not configured by default. The input string must be a valid JSON string.</para>
+        /// <para>The precheck configuration. By default, this parameter is not configured. The input string must be a valid JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=\&quot;_arms/kubelet/cadvisor\&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrecheckString { get; set; }
 
         /// <summary>
-        /// <para>The scheduling mode. Valid values: Cron and FixedRate. The default value is FixedRate.</para>
+        /// <para>The scheduling mode. Valid values: Cron and FixedRate. Default value: FixedRate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FixedRate</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ScheduleMode { get; set; }
 
         /// <summary>
-        /// <para>The scheduling time expression. Recommended values are \<c>@s\\</c> and \<c>@m\\</c>. This expression indicates the granularity at which the scheduling time window is snapped. The default value is \<c>@m\\</c>.</para>
+        /// <para>The scheduling time expression. Use @s or @m to specify the alignment granularity of the scheduling time window. Default value: @m.</para>
         /// 
         /// <b>Example:</b>
         /// <para>@m</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ScheduleTimeExpr { get; set; }
 
         /// <summary>
-        /// <para>The status of the aggregation task group. Valid values: Running and Stopped. The default value is Running.</para>
+        /// <para>The status of the aggregation task group. Valid values: Running and Stopped. Default value: Running.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<UpdateAggTaskGroupRequestTags> Tags { get; set; }
         public class UpdateAggTaskGroupRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the resource group tag.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the resource group tag.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the target Prometheus instance for the aggregation task group.</para>
+        /// <para>The target Prometheus instance ID of the aggregation node group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TargetPrometheusId { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp in seconds that indicates the end time of the scheduling. A value of 0 indicates that the scheduling does not stop.</para>
+        /// <para>The timestamp of the scheduling end time, in seconds. A value of 0 indicates that the scheduling does not stop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

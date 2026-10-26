@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AddMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>Application agent ID.</para>
+        /// <para>The agent ID of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>952730733889060865</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Application ID.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mm_480d961a1b5e4efe84603f4cbc0f</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Asynchronous mode.</para>
+        /// <para>The asynchronous mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? AsyncMode { get; set; }
 
         /// <summary>
-        /// <para>Custom instructions.</para>
+        /// <para>The custom instructions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Your custom instructions here</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CustomInstructions { get; set; }
 
         /// <summary>
-        /// <para>Infer.</para>
+        /// <para>The inference setting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Infer { get; set; }
 
         /// <summary>
-        /// <para>Messages.</para>
+        /// <para>The messages.</para>
         /// </summary>
         [NameInMap("messages")]
         [Validation(Required=false)]
         public List<AddMemoriesRequestMessages> Messages { get; set; }
         public class AddMemoriesRequestMessages : TeaModel {
             /// <summary>
-            /// <para>Content.</para>
+            /// <para>The content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>My name is Zhang San and I live in Hangzhou.</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Role.</para>
+            /// <para>The role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Metadata.</para>
+        /// <para>The metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>Run ID.</para>
+        /// <para>The run ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jr-80ded1d6953c64ea</para>
@@ -109,6 +109,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RunId { get; set; }
 
         /// <summary>
+        /// <para>The timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12312314214</para>
         /// </summary>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Timestamp { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_user_001</para>

@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The action integration configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;enabled&quot;:true,&quot;actions&quot;:[]}</para>
         /// </summary>
         [NameInMap("actionIntegrationConfig")]
         [Validation(Required=false)]
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The annotations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;summary&quot;:&quot;CPU usage exceeds 90%&quot;}</para>
         /// </summary>
         [NameInMap("annotations")]
         [Validation(Required=false)]
@@ -36,6 +42,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The ARMS integration configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;enabled&quot;:false}</para>
         /// </summary>
         [NameInMap("armsIntegrationConfig")]
         [Validation(Required=false)]
@@ -53,6 +62,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The aggregated condition configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;:&quot;PROMETHEUS_SIMPLE_CONDITION&quot;,&quot;durationSecs&quot;:0,&quot;severity&quot;:&quot;CRITICAL&quot;}</para>
         /// </summary>
         [NameInMap("conditionConfig")]
         [Validation(Required=false)]
@@ -70,6 +82,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The aggregated data source configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;:&quot;PROMETHEUS&quot;,&quot;instanceId&quot;:&quot;prom-cn-hangzhou-xxxxx&quot;}</para>
         /// </summary>
         [NameInMap("datasourceConfig")]
         [Validation(Required=false)]
@@ -86,6 +101,48 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1783728000000</para>
+        /// </summary>
+        [NameInMap("drillEvalTime")]
+        [Validation(Required=false)]
+        public long? DrillEvalTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ONE_SHOT</para>
+        /// </summary>
+        [NameInMap("drillMode")]
+        [Validation(Required=false)]
+        public string DrillMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;startTime&quot;:1783728000000,&quot;endTime&quot;:1783814400000}</para>
+        /// </summary>
+        [NameInMap("drillTimeRange")]
+        [Validation(Required=false)]
+        public ManageAlertRulesUnifiedActionInputDrillTimeRange DrillTimeRange { get; set; }
+        public class ManageAlertRulesUnifiedActionInputDrillTimeRange : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1783814400000</para>
+            /// </summary>
+            [NameInMap("endTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1783728000000</para>
+            /// </summary>
+            [NameInMap("startTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>Specifies whether the rule is enabled.</para>
         /// 
         /// <b>Example:</b>
@@ -97,6 +154,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The labels.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;env&quot;:&quot;production&quot;}</para>
         /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
@@ -104,6 +164,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The aggregated notification configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;:&quot;DIRECT_NOTIFY&quot;,&quot;channels&quot;:[{&quot;type&quot;:&quot;GROUP&quot;,&quot;identifiers&quot;:[&quot;<contact-group-id>&quot;]}]}</para>
         /// </summary>
         [NameInMap("notifyConfig")]
         [Validation(Required=false)]
@@ -111,6 +174,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The observable resource configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;relationType&quot;:&quot;CLOUD_INSTANCE&quot;,&quot;resources&quot;:[]}</para>
         /// </summary>
         [NameInMap("observeResourceConfig")]
         [Validation(Required=false)]
@@ -144,6 +210,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The aggregated query configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;:&quot;PROMETHEUS_SINGLE_QUERY&quot;,&quot;expr&quot;:&quot;up &gt; 0&quot;}</para>
         /// </summary>
         [NameInMap("queryConfig")]
         [Validation(Required=false)]
@@ -151,6 +220,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The root cause analysis (RCA) configuration (optional). Provide as needed for CREATE/UPDATE/PATCH.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;enabled&quot;:false}</para>
         /// </summary>
         [NameInMap("rcaConfig")]
         [Validation(Required=false)]
@@ -168,6 +240,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The aggregated schedule configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;type&quot;:&quot;FIXED&quot;,&quot;intervalSecs&quot;:60}</para>
         /// </summary>
         [NameInMap("scheduleConfig")]
         [Validation(Required=false)]
@@ -185,6 +260,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The list of rule UUIDs to delete (BATCH_DELETE).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;]</para>
         /// </summary>
         [NameInMap("uuidList")]
         [Validation(Required=false)]

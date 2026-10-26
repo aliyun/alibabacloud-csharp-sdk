@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MaintainWindowForView : TeaModel {
         /// <summary>
-        /// <para>The time when the policy was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The effective time range.</para>
+        /// <para>The effective period range.</para>
         /// </summary>
         [NameInMap("effectTimeRange")]
         [Validation(Required=false)]
         public MaintainWindowForViewEffectTimeRange EffectTimeRange { get; set; }
         public class MaintainWindowForViewEffectTimeRange : TeaModel {
             /// <summary>
-            /// <para>The days of the week when the policy is effective.</para>
+            /// <para>The effective days of the week (Monday to Sunday).</para>
             /// </summary>
             [NameInMap("dayInWeek")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Effective { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the policy is enabled.</para>
+        /// <para>Indicates whether the mute policy is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The end time of the effective period.</para>
+        /// <para>The effective end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-26 12:02:01</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>The UUID.</para>
+        /// <para>UUID</para>
         /// 
         /// <b>Example:</b>
         /// <para>123-12-312-31-23123</para>
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test policy.</para>
+        /// <para>测试策略</para>
         /// </summary>
         [NameInMap("maintainWindowName")]
         [Validation(Required=false)]
         public string MaintainWindowName { get; set; }
 
         /// <summary>
-        /// <para>The start time of the effective period.</para>
+        /// <para>The effective start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-26 10:02:01</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The last time the resource was updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-07T02:19:05Z</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The workspace.</para>
+        /// <para>workspace</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

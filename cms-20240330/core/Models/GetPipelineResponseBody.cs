@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the pipeline.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The configuration for a one-time execution.</para>
+            /// <para>The configuration for one-time execution.</para>
             /// </summary>
             [NameInMap("runOnce")]
             [Validation(Required=false)]
             public GetPipelineResponseBodyExecutePolicyRunOnce RunOnce { get; set; }
             public class GetPipelineResponseBodyExecutePolicyRunOnce : TeaModel {
                 /// <summary>
-                /// <para>The start time of the execution, as a Unix timestamp.</para>
+                /// <para>The start timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1772519013</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public long? FromTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the execution, as a Unix timestamp.</para>
+                /// <para>The end timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1772519013</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The configuration for a scheduled execution.</para>
+            /// <para>The configuration for scheduled execution.</para>
             /// </summary>
             [NameInMap("scheduled")]
             [Validation(Required=false)]
             public GetPipelineResponseBodyExecutePolicyScheduled Scheduled { get; set; }
             public class GetPipelineResponseBodyExecutePolicyScheduled : TeaModel {
                 /// <summary>
-                /// <para>The start time of the execution, as a Unix timestamp.</para>
+                /// <para>The start timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1772519013</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public long? FromTime { get; set; }
 
                 /// <summary>
-                /// <para>The execution interval in seconds.</para>
+                /// <para>The time interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The pipeline configuration.</para>
+        /// <para>The pipeline information.</para>
         /// </summary>
         [NameInMap("pipeline")]
         [Validation(Required=false)]
         public GetPipelineResponseBodyPipeline Pipeline { get; set; }
         public class GetPipelineResponseBodyPipeline : TeaModel {
             /// <summary>
-            /// <para>The nodes in the pipeline.</para>
+            /// <para>The nodes.</para>
             /// </summary>
             [NameInMap("nodes")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The parameters for the node.</para>
+                /// <para>The parameters.</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
@@ -183,21 +183,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The pipeline\&quot;s data sink.</para>
+        /// <para>The output destination.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
         public GetPipelineResponseBodySink Sink { get; set; }
         public class GetPipelineResponseBodySink : TeaModel {
             /// <summary>
-            /// <para>The dataset configuration.</para>
+            /// <para>The dataset information.</para>
             /// </summary>
             [NameInMap("dataset")]
             [Validation(Required=false)]
             public GetPipelineResponseBodySinkDataset Dataset { get; set; }
             public class GetPipelineResponseBodySinkDataset : TeaModel {
                 /// <summary>
-                /// <para>The dataset name.</para>
+                /// <para>The dataset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataset_1</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The sink type.</para>
+            /// <para>The output destination type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset</para>
@@ -231,21 +231,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The pipeline\&quot;s data source.</para>
+        /// <para>The data source.</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
         public GetPipelineResponseBodySource Source { get; set; }
         public class GetPipelineResponseBodySource : TeaModel {
             /// <summary>
-            /// <para>The configuration of the Log Service Logstore.</para>
+            /// <para>The Simple Log Service Logstore information.</para>
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public GetPipelineResponseBodySourceLogstore Logstore { get; set; }
             public class GetPipelineResponseBodySourceLogstore : TeaModel {
                 /// <summary>
-                /// <para>The name of the Log Service Logstore.</para>
+                /// <para>The Simple Log Service Logstore name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-logstore</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Log Service project.</para>
+                /// <para>The Simple Log Service project name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-project</para>
@@ -264,6 +264,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
+                /// <summary>
+                /// <para>The filter statement for the Simple Log Service Logstore.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>status:500 and method:GET</para>
+                /// </summary>
                 [NameInMap("query")]
                 [Validation(Required=false)]
                 public string Query { get; set; }
@@ -271,7 +277,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The type of the data source.</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logstore</para>

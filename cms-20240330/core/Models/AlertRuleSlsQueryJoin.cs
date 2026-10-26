@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<AlertRuleSlsQueryJoinConditions> Conditions { get; set; }
         public class AlertRuleSlsQueryJoinConditions : TeaModel {
             /// <summary>
-            /// <para>The left operand of the condition. The format is $\<query_idx>.\<field_name_in_result_set>.</para>
+            /// <para>The left operand of the condition, in the format of $<query_idx>.<result set field name>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>$0.<b>topic</b></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string FirstField { get; set; }
 
             /// <summary>
-            /// <para>The comparison operator. Valid values are &lt;, &gt;, ==, !=, &lt;=, and &gt;=.</para>
+            /// <para>The comparison operator. Valid values: &lt;, &gt;, ==, !=, &lt;=, and &gt;=.</para>
             /// 
             /// <b>Example:</b>
             /// <para>==</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Oper { get; set; }
 
             /// <summary>
-            /// <para>The right operand of the condition. The format is $\<query_idx>.\<field_name_in_result_set>.</para>
+            /// <para>The right operand of the condition, in the format of $<query_idx>.<result set field name>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>$0.<b>topic</b></para>
@@ -49,28 +49,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The type of the collection operation.</para>
+        /// <para>The set operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CrossJoin: The Cartesian product.</para>
-        /// </description></item>
-        /// <item><description><para>FullJoin: The full join.</para>
-        /// </description></item>
-        /// <item><description><para>InnerJoin: The inner join.</para>
-        /// </description></item>
-        /// <item><description><para>LeftExclude: The left exclusion.</para>
-        /// </description></item>
-        /// <item><description><para>RightExclude: The right exclusion.</para>
-        /// </description></item>
-        /// <item><description><para>LeftJoin: The left join.</para>
-        /// </description></item>
-        /// <item><description><para>RightJoin: The right join.</para>
-        /// </description></item>
-        /// <item><description><para>NoJoin: No merge operation is performed.</para>
-        /// </description></item>
-        /// <item><description><para>Concat: Concatenation.</para>
-        /// </description></item>
+        /// <item><description>CrossJoin: Cartesian product</description></item>
+        /// <item><description>FullJoin: full join</description></item>
+        /// <item><description>InnerJoin: inner join</description></item>
+        /// <item><description>LeftExclude: left exclude</description></item>
+        /// <item><description>RightExclude: right exclude</description></item>
+        /// <item><description>LeftJoin: left join</description></item>
+        /// <item><description>RightJoin: right join</description></item>
+        /// <item><description>NoJoin: no join</description></item>
+        /// <item><description>Concat: concatenation</description></item>
         /// </list>
-        /// <para>For more information, see https\://www\.alibabacloud.com/help/en/sls/user-guide/set-operations.</para>
+        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/en/sls/user-guide/set-query-statistics-statement">https://www.alibabacloud.com/help/en/sls/user-guide/set-query-statistics-statement</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDeliveryTasksShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Fuzzy search by task name or task ID (like semantics).</para>
+        /// <para>Specifies the keywords used to perform a fuzzy search by task name or task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-task</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string KeyWords { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The maximum number of entries to return per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass in the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2bhocin5e2na</para>

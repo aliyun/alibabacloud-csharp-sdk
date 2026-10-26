@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class Queries : TeaModel {
         /// <summary>
-        /// <para>The end offset of the time range for SLS_MULTI_QUERY. This parameter is mutually exclusive with window.</para>
+        /// <para>The end offset of the time range for SLS_MULTI_QUERY (mutually exclusive with window).</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,20 +20,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// <para>The query expression. For PROMETHEUS_MULTI_QUERY, this is a PromQL expression. For SLS_MULTI_QUERY, this is an SPL expression.</para>
+        /// <para>The query expression (PromQL for PROMETHEUS_MULTI_QUERY and SPL for SLS_MULTI_QUERY).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleValue</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("expr")]
         [Validation(Required=false)]
         public string Expr { get; set; }
 
         /// <summary>
-        /// <para>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY. This parameter is optional and independent for each query.</para>
+        /// <para>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY (optional and independent per query).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;key&quot;:&quot;host.name&quot;,&quot;value&quot;:&quot;web-server-01&quot;,&quot;type&quot;:&quot;eq&quot;}]</para>
+        /// <para>[{&quot;name&quot;:&quot;env&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;value&quot;:&quot;prod&quot;}]</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The metric name for UMODEL_METRICSET_MULTI_QUERY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleName</para>
+        /// <para>示例名称</para>
         /// </summary>
         [NameInMap("metric")]
         [Validation(Required=false)]
@@ -53,24 +53,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The metric set name for UMODEL_METRICSET_MULTI_QUERY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleName</para>
+        /// <para>示例名称</para>
         /// </summary>
         [NameInMap("metricSet")]
         [Validation(Required=false)]
         public string MetricSet { get; set; }
 
         /// <summary>
-        /// <para>The query name used by PROMETHEUS_MULTI_QUERY and UMODEL_METRICSET_MULTI_QUERY, such as $A or $B, which can be referenced by condition triggers.</para>
+        /// <para>The query name for PROMETHEUS_MULTI_QUERY or UMODEL_METRICSET_MULTI_QUERY (such as $A or $B, referenced by condition triggers).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleName</para>
+        /// <para>示例名称</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The start offset of the time range for SLS_MULTI_QUERY. This parameter is mutually exclusive with window.</para>
+        /// <para>The start offset of the time range for SLS_MULTI_QUERY (mutually exclusive with window).</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Start { get; set; }
 
         /// <summary>
-        /// <para>The time unit for SLS_MULTI_QUERY. Valid values: day, hour, minute, and second.</para>
+        /// <para>The time unit for SLS_MULTI_QUERY (day, hour, minute, or second).</para>
         /// 
         /// <b>Example:</b>
         /// <para>second</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TimeUnit { get; set; }
 
         /// <summary>
-        /// <para>The snap window size for SLS_MULTI_QUERY. This parameter is mutually exclusive with start and end.</para>
+        /// <para>The alignment window size for SLS_MULTI_QUERY (mutually exclusive with start and end).</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

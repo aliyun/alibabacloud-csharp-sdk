@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>An extension field used to store additional configurations.</para>
+        /// <para>The extension field used to store additional configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;timeout&quot;: 3000}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> GmtModified { get; set; }
 
         /// <summary>
-        /// <para>The request header.</para>
+        /// <para>The request header information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Authorization&quot;: &quot;Bearer abc123&quot;}</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name of the webhook.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>运维告警通知</para>
+        /// <para>O&amp;M alert notification</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The type of the webhook. It indicates the destination platform.</para>
+        /// <para>The webhook type, which indicates its target platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The webhook URL used to send requests.</para>
+        /// <para>The webhook address used to send requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></para>

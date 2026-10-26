@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListWorkspacesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.
+        /// <para>The maximum number of entries per page.
         /// Default value:
         ///     50
         /// Maximum value:
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ae******ey</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The workspace name. Fuzzy match is used.</para>
+        /// <para>The workspace name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
-        /// <para>The workspace name. Exact match is used.</para>
+        /// <para>The names of the workspaces. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>

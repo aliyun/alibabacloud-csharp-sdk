@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The list of PodMonitors.</para>
+        /// <para>The PodMonitor list.</para>
         /// </summary>
         [NameInMap("podMonitors")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// <para>The configuration YAML.</para>
+            /// <para>The YAML configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiVersion: xxxxx</para>

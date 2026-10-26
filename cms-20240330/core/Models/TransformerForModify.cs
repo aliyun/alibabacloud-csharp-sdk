@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The filter criteria.</para>
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exit after a match is processed.</para>
+        /// <para>Specifies whether to exit after match processing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? QuitAfterMatch { get; set; }
 
         /// <summary>
-        /// <para>The sort number.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleAlertMetricInput : TeaModel {
         /// <summary>
-        /// <para>A list of filter conditions. Call the ListAlertMetrics operation to query the lists of parameters and filter conditions that the metric supports.</para>
+        /// <para>The list of filter conditions entered by the user. You can call ListAlertMetrics to query the parameters and filter conditions supported by the metric.</para>
         /// </summary>
         [NameInMap("filterValues")]
         [Validation(Required=false)]
         public List<AlertRuleAlertMetricInputFilterValue> FilterValues { get; set; }
 
         /// <summary>
-        /// <para>The key of the metric group.</para>
+        /// <para>The key of the metric group selected by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apm.jvm</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The key of the predefined metric.</para>
+        /// <para>The key of the predefined metric selected by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstat.jvm.GcPsMarkSweepCount</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetricId { get; set; }
 
         /// <summary>
-        /// <para>A list of parameters. Call the ListAlertMetrics operation to query the lists of parameters and filter conditions that the metric supports.</para>
+        /// <para>The list of input parameters. You can call ListAlertMetrics to query the parameters and filter conditions supported by the metric.</para>
         /// </summary>
         [NameInMap("paramValues")]
         [Validation(Required=false)]

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SlsQueryJoin : TeaModel {
         /// <summary>
-        /// <para>The list of join conditions for SLS query result sets. The conditions define the matching rules between multiple SLS query results for cross-Logstore data correlation analysis.</para>
+        /// <para>The list of join conditions for SLS query result sets, which defines the matching rules between multiple SLS query results for cross-logstore data association analysis.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;leftField&quot;:&quot;traceId&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;rightField&quot;:&quot;trace_id&quot;}]</para>
+        /// <para>[{&quot;lhsField&quot;:&quot;$0.hostIp&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;rhsField&quot;:&quot;$1.hostIp&quot;}]</para>
         /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]
         public List<SlsJoinCondition> Conditions { get; set; }
 
         /// <summary>
-        /// <para>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</para>
+        /// <para>The set operation type: InnerJoin / LeftJoin / RightJoin / FullJoin / LeftExclude / RightExclude / CrossJoin / NoJoin / Concat.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LEFT</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateContextStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration.</para>
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public CreateContextStoreRequestConfig Config { get; set; }
         public class CreateContextStoreRequestConfig : TeaModel {
             /// <summary>
-            /// <para>The metadata fields.</para>
+            /// <para>The metadata field.</para>
             /// </summary>
             [NameInMap("metadataField")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public CreateContextStoreRequestConfigSource Source { get; set; }
             public class CreateContextStoreRequestConfigSource : TeaModel {
                 /// <summary>
-                /// <para>The name of the Log Service Logstore.</para>
+                /// <para>The name of the Simple Log Service Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-logstore</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Log Service project.</para>
+                /// <para>The name of the Simple Log Service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-project</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextStoreName { get; set; }
 
         /// <summary>
-        /// <para>The type of the context store.</para>
+        /// <para>The context type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextType { get; set; }
 
         /// <summary>
-        /// <para>The properties of the dataset.</para>
+        /// <para>The dataset.</para>
         /// </summary>
         [NameInMap("dataset")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The description of the context store.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>

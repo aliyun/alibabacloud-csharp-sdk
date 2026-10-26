@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CronExpr { get; set; }
 
             /// <summary>
-            /// <para>The fixed scheduling delay, in seconds.</para>
+            /// <para>The fixed delay time for scheduling, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp that indicates the scheduling start time, in seconds.</para>
+            /// <para>The UNIX timestamp of the start time for scheduling, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409499000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? MaxRetries { get; set; }
 
             /// <summary>
-            /// <para>The maximum retry time for executing the aggregation task, in seconds.</para>
+            /// <para>The maximum retry time to execute the aggregation node, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ScheduleMode { get; set; }
 
             /// <summary>
-            /// <para>The schedule time expression.</para>
+            /// <para>The scheduling time expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@m</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ScheduleTimeExpr { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the source Managed Service for Prometheus instance for the aggregation node group.</para>
+            /// <para>The instance ID of the source Prometheus instance for the aggregation node group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-xxx</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the target Managed Service for Prometheus instance for the aggregation node group.</para>
+            /// <para>The instance ID of the target Prometheus instance for the aggregation node group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-xxx</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TargetPrometheusId { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp that indicates the scheduling end time, in seconds.</para>
+            /// <para>The UNIX timestamp of the end time for scheduling, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? ToTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the aggregation task group was last updated, in UNIX timestamp format.</para>
+            /// <para>The update time of the aggregation task group. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409499000</para>

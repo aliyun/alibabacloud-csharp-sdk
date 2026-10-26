@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class QueryAlertRulesEntityTypeFilter : TeaModel {
         /// <summary>
-        /// <para>Matches any value in the set (OR semantics).</para>
+        /// <para>The match for any item in the set (OR semantics).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;UMODEL_ENTITY&quot;,&quot;CLOUD_INSTANCE&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<string> In { get; set; }
 
         /// <summary>
-        /// <para>Excludes any value in the set (NOT IN semantics).</para>
+        /// <para>The exclusion of any item in the set (NOT IN semantics).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;TAG&quot;]</para>

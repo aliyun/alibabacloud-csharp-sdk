@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Dim { get; set; }
 
         /// <summary>
-        /// <para>If set to \<c>true\\</c>, the filter item does not appear in the \<c>group by\\</c> clause of a PromQL query.</para>
+        /// <para>Specifies whether to disable the dimension. If set to true, the filter item does not appear in the group by clause of PromQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? DimDisabled { get; set; }
 
         /// <summary>
-        /// <para>The display name in Chinese.</para>
+        /// <para>The Chinese display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Application Status</para>
+        /// <para>应用状态</para>
         /// </summary>
         [NameInMap("displayNameCn")]
         [Validation(Required=false)]
         public string DisplayNameCn { get; set; }
 
         /// <summary>
-        /// <para>The display name in English.</para>
+        /// <para>The English display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Application Status</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayNameEn { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to hide the filter. If hidden, the filter does not appear in the frontend UI. However, its value can be uploaded when rendering a PromQL query. For example, in an Application Performance Management (APM) scenario, the pid filter is typically hidden from the configuration UI. The frontend displays it as a separate application search list.</para>
+        /// <para>Specifies whether to hide the filter. If hidden, the filter is not displayed in frontend interactions, but its value can be passed when rendering PromQL. A typical example is the pid filter in APM scenarios, which is typically not displayed through configuration but shown as a separate application search list in the frontend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Hidden { get; set; }
 
         /// <summary>
-        /// <para>If set to \<c>true\\</c>, the filter item does not appear in the label filter of a PromQL query.</para>
+        /// <para>Specifies whether to disable the label. If set to true, the filter item does not appear in the label filter of PromQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? LabelDisabled { get; set; }
 
         /// <summary>
-        /// <para>The operator for the filter condition.</para>
+        /// <para>The filter condition operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>=</para>
@@ -80,24 +80,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Opt { get; set; }
 
         /// <summary>
-        /// <para>A list of supported options.</para>
+        /// <para>The list of supported options.</para>
         /// </summary>
         [NameInMap("supportedOpts")]
         [Validation(Required=false)]
         public List<AlertRuleAlertMetricFilterDefSupportedOpts> SupportedOpts { get; set; }
         public class AlertRuleAlertMetricFilterDefSupportedOpts : TeaModel {
             /// <summary>
-            /// <para>The display name in Chinese.</para>
+            /// <para>The Chinese display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Online</para>
+            /// <para>在线</para>
             /// </summary>
             [NameInMap("displayNameCn")]
             [Validation(Required=false)]
             public string DisplayNameCn { get; set; }
 
             /// <summary>
-            /// <para>The display name in English.</para>
+            /// <para>The English display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Online</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayNameEn { get; set; }
 
             /// <summary>
-            /// <para>The matching value.</para>
+            /// <para>The match value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>

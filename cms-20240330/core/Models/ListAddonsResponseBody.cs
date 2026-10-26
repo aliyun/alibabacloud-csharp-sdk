@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAddonsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of available add-ons.</para>
+        /// <para>The list of available integration components.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<ListAddonsResponseBodyAddons> Addons { get; set; }
         public class ListAddonsResponseBodyAddons : TeaModel {
             /// <summary>
-            /// <para>The alias of the add-on.</para>
+            /// <para>The alias of the integration component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>resume_vector_alias</para>
@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>A list of tags for the add-on.</para>
+            /// <para>The list of tags for the integration component.</para>
             /// </summary>
             [NameInMap("categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>A list of dashboards.</para>
+            /// <para>The list of dashboards.</para>
             /// </summary>
             [NameInMap("dashboards")]
             [Validation(Required=false)]
             public List<ListAddonsResponseBodyAddonsDashboards> Dashboards { get; set; }
             public class ListAddonsResponseBodyAddonsDashboards : TeaModel {
                 /// <summary>
-                /// <para>Dashboard description.</para>
+                /// <para>The dashboard description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Dashboard name.</para>
+                /// <para>The dashboard name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rum_view_link_rum_api</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the dashboard\&quot;s preview image.</para>
+                /// <para>The URL of the dashboard preview image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://xxxxxxx">http://xxxxxxx</a></para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Description</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace api monitor test</para>
@@ -83,21 +83,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>A list of supported integration policy types.</para>
+            /// <para>The list of supported integration policy types.</para>
             /// </summary>
             [NameInMap("environments")]
             [Validation(Required=false)]
             public List<ListAddonsResponseBodyAddonsEnvironments> Environments { get; set; }
             public class ListAddonsResponseBodyAddonsEnvironments : TeaModel {
                 /// <summary>
-                /// <para>A list of associated Common Schemas.</para>
+                /// <para>The list of associated common schemas.</para>
                 /// </summary>
                 [NameInMap("commonSchemaRefs")]
                 [Validation(Required=false)]
                 public List<ListAddonsResponseBodyAddonsEnvironmentsCommonSchemaRefs> CommonSchemaRefs { get; set; }
                 public class ListAddonsResponseBodyAddonsEnvironmentsCommonSchemaRefs : TeaModel {
                     /// <summary>
-                    /// <para>The group name of the Common Schema.</para>
+                    /// <para>The group name of the common schema.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs-ecs</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Group { get; set; }
 
                     /// <summary>
-                    /// <para>The version of the Common Schema.</para>
+                    /// <para>The version of the common schema.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.1.4</para>
@@ -119,28 +119,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>A list of dependencies for the add-on.</para>
+                /// <para>The list of dependencies for the integration component.</para>
                 /// </summary>
                 [NameInMap("dependencies")]
                 [Validation(Required=false)]
                 public ListAddonsResponseBodyAddonsEnvironmentsDependencies Dependencies { get; set; }
                 public class ListAddonsResponseBodyAddonsEnvironmentsDependencies : TeaModel {
                     /// <summary>
-                    /// <para>Supported cluster types.</para>
+                    /// <para>The supported cluster types.</para>
                     /// </summary>
                     [NameInMap("clusterTypes")]
                     [Validation(Required=false)]
                     public List<string> ClusterTypes { get; set; }
 
                     /// <summary>
-                    /// <para>The probes on which the integration depends.</para>
+                    /// <para>The probes required for integration dependencies.</para>
                     /// </summary>
                     [NameInMap("features")]
                     [Validation(Required=false)]
                     public Dictionary<string, bool?> Features { get; set; }
 
                     /// <summary>
-                    /// <para>A list of dependent services.</para>
+                    /// <para>The list of dependent services.</para>
                     /// </summary>
                     [NameInMap("services")]
                     [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the add-on is enabled.</para>
+                /// <para>Specifies whether the integration policy type is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 /// <para>The label of the integration policy type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>容器环境</para>
+                /// <para>Container environment</para>
                 /// </summary>
                 [NameInMap("label")]
                 [Validation(Required=false)]
@@ -189,14 +189,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Integration policy configuration.</para>
+                /// <para>The integration policy configurations.</para>
                 /// </summary>
                 [NameInMap("policies")]
                 [Validation(Required=false)]
                 public ListAddonsResponseBodyAddonsEnvironmentsPolicies Policies { get; set; }
                 public class ListAddonsResponseBodyAddonsEnvironmentsPolicies : TeaModel {
                     /// <summary>
-                    /// <para>The default status of the alert rule policy.</para>
+                    /// <para>The enabling status of the default policy for alert rules.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>RUNNING</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string AlertDefaultStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the add-on is installed by default.</para>
+                    /// <para>Specifies whether to install the component by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? DefaultInstall { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to assign a Service Account to communicate with the Console API.</para>
+                    /// <para>Specifies whether to assign a service account for communication with the console API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -226,14 +226,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? EnableServiceAccount { get; set; }
 
                     /// <summary>
-                    /// <para>Metric check rule.</para>
+                    /// <para>The metric check rule.</para>
                     /// </summary>
                     [NameInMap("metricCheckRule")]
                     [Validation(Required=false)]
                     public ListAddonsResponseBodyAddonsEnvironmentsPoliciesMetricCheckRule MetricCheckRule { get; set; }
                     public class ListAddonsResponseBodyAddonsEnvironmentsPoliciesMetricCheckRule : TeaModel {
                         /// <summary>
-                        /// <para>A list of Prometheus Query Language (PromQL) statements.</para>
+                        /// <para>The list of PromQL query statements.</para>
                         /// </summary>
                         [NameInMap("promQL")]
                         [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>Indicates whether to guide the user to restart pods after the add-on is installed.</para>
+                    /// <para>Specifies whether to trigger a pod restart guide immediately after the plug-in installation is completed during integration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -252,14 +252,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? NeedRestartAfterIntegration { get; set; }
 
                     /// <summary>
-                    /// <para>The supported protocol types.</para>
+                    /// <para>The supported protocol types in the configuration.</para>
                     /// </summary>
                     [NameInMap("protocols")]
                     [Validation(Required=false)]
                     public List<ListAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols> Protocols { get; set; }
                     public class ListAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols : TeaModel {
                         /// <summary>
-                        /// <para>Protocol description.</para>
+                        /// <para>The protocol description.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Support OpenTelemetry Protocal</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>Icon URL.</para>
+                        /// <para>The icon URL.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="http://xxxxxxx">http://xxxxxxx</a></para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Icon { get; set; }
 
                         /// <summary>
-                        /// <para>Protocol display name.</para>
+                        /// <para>The display name of the protocol.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>OpenTelemetry</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>Protocol name.</para>
+                        /// <para>The protocol name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>openTelemetry</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>Integration Center policy type.</para>
+                /// <para>The integration center policy type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CS</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The URL of the icon.</para>
+            /// <para>The icon URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxx">http://xxxxxxx</a></para>
@@ -335,14 +335,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Icon { get; set; }
 
             /// <summary>
-            /// <para>A list of keywords.</para>
+            /// <para>The list of keywords.</para>
             /// </summary>
             [NameInMap("keywords")]
             [Validation(Required=false)]
             public List<string> Keywords { get; set; }
 
             /// <summary>
-            /// <para>Language.</para>
+            /// <para>The language.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The time when the latest version was created.</para>
+            /// <para>The latest release creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-03T03:15:56Z</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string LatestReleaseCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the add-on.</para>
+            /// <para>The name of the integration component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rum_api_dashboard_explorer_link_metric_set</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the add-on can be installed only once.</para>
+            /// <para>Specifies whether the component can be installed only once.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Once { get; set; }
 
             /// <summary>
-            /// <para>The scenario of the component.</para>
+            /// <para>The component scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>middleware</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The version of the component.</para>
+            /// <para>The component version.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -404,7 +404,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The display weight of the add-on.</para>
+            /// <para>The display weight of the integration component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>

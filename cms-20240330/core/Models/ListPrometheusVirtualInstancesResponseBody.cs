@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusVirtualInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of instances.</para>
+        /// <para>The instance information.</para>
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiUrl { get; set; }
 
             /// <summary>
-            /// <para>Returned for the <c>PROMETHEUS_DS</c> data source type.</para>
+            /// <para>The applicable data source type: PROMETHEUS_DS.</para>
             /// <para>The Prometheus instance ID.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Returned for the <c>CMS_BASIC_QUERY</c> query type.</para>
+            /// <para>The applicable query type: CMS_BASIC_QUERY.</para>
             /// <para>The namespace of the metric.</para>
             /// 
             /// <b>Example:</b>
@@ -81,21 +81,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned on each page.</para>
+        /// <para>The maximum number of instances to return per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If all results are returned, this parameter is left empty.</para>
+        /// <para>The next token for the next page. It is empty when all results are returned.</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of instances returned.</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

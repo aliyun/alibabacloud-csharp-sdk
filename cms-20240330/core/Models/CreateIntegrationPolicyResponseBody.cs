@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateIntegrationPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the policy was created.</para>
+        /// <para>Indicates whether the policy is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Created { get; set; }
 
         /// <summary>
-        /// <para>The upload policy.</para>
+        /// <para>The policy.</para>
         /// </summary>
         [NameInMap("policy")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The workspace where the policy resides.</para>
+            /// <para>The workspace to which the policy belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prometheus</para>

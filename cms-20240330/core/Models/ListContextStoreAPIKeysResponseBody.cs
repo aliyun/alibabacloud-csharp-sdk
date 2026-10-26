@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContextStoreAPIKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. To retrieve the next page of results, include this value in the <c>nextToken</c> parameter of your next request. If this parameter is not returned, there are no more results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xCs4wJD41qEejNkappMSJ1OL2Ky2GeKLqmBLJrC61WrgUOj9F-31jHbo5Kgqzifv</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of API keys.</para>
+        /// <para>The results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<ListContextStoreAPIKeysResponseBodyResults> Results { get; set; }
         public class ListContextStoreAPIKeysResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The complete API key value.</para>
+            /// <para>The full value of the API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-3ac8d45d741e4f31b81aa6ee984ce9fd</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContextStoreName { get; set; }
 
             /// <summary>
-            /// <para>The time when the API key was created, represented as a Unix timestamp.</para>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The display name of the API key. This name helps you identify the purpose of the key.</para>
+            /// <para>The display name of the API key, used to identify its purpose.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Production Service Key</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-workspace</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The total count of entries that match the query.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>454</para>

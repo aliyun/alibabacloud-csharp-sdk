@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAggTaskGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The summary of the aggregation task group configuration.</para>
+        /// <para>The hash of the aggregation task group configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a54136014dc386a92c83a6ef1e97ff22</para>

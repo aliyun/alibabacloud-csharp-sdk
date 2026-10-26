@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListMemoryStoresResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of returned entries.</para>
+        /// <para>The maximum number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListMemoryStoresResponseBodyMemoryStores> MemoryStores { get; set; }
         public class ListMemoryStoresResponseBodyMemoryStores : TeaModel {
             /// <summary>
-            /// <para>The time when the memory store was created.</para>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the memory store.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Created by taishan-module-recovery</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MemoryStoreName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the memory store was last updated.</para>
+            /// <para>The update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Workspace</para>
+            /// <para>The workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-cms-1646467597142798-cn-shenzhen</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16C0A6D6-C3E7-511D-A60B-A87FD85F5BA7</para>
@@ -110,6 +110,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of memory stores.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]
         public int? Total { get; set; }

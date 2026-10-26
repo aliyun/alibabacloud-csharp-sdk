@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetAddonRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh and en. Default value: zh.</para>
+        /// <para>The locale. Default value: zh. Valid values: zh, en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>The version number of the add-on.</para>
+        /// <para>The version of the add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

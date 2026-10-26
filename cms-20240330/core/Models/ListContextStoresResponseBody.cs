@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContextStoresResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results returned per page.</para>
+        /// <para>The maximum number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If this field is empty, all results have been returned.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of context stores.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContextType { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the context store. The value is a Unix timestamp in milliseconds.</para>
+            /// <para>The creation time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:00:00Z.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the context store.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the context store.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the context store. The value is a Unix timestamp in milliseconds.</para>
+            /// <para>The update time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:10:00Z.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace-test</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The total number of context stores.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56</para>

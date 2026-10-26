@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
+        [NameInMap("apiVersion")]
+        [Validation(Required=false)]
+        public string ApiVersion { get; set; }
+
         /// <summary>
         /// <para>The environment type. Valid values: \<c>CS\\</c> (container) and \<c>ECS\\</c>.</para>
         /// 

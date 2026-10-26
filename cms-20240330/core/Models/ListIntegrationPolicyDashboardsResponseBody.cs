@@ -17,9 +17,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListIntegrationPolicyDashboardsResponseBodyDashboards> Dashboards { get; set; }
         public class ListIntegrationPolicyDashboardsResponseBodyDashboards : TeaModel {
             /// <summary>
-            /// <para>The dashboard engine. Valid values:
-            /// grafana: shared Grafana.
-            /// cms: the self-developed dashboard engine of CloudMonitor.</para>
+            /// <para>The dashboard engine. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>grafana: shared Grafana.</description></item>
+            /// <item><description>cms: the proprietary dashboard engine of CloudMonitor.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>grafana</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> Tags { get; set; }
 
             /// <summary>
-            /// <para>The title of the UI module. This is different from the name parameter.</para>
+            /// <para>The title of the UI module, not the name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The ID of the current Alibaba Cloud account. This parameter is read-only.</para>
+            /// <para>The ID of the current Alibaba Cloud account. This field is read-only.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1258199346721590</para>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL for PagerDuty integration. V1 and V2 are supported.</para>
+            /// <para>The integration webhook for PagerDuty. Both V1 and V2 are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&file=1734574878007.jpg">https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&amp;file=1734574878007.jpg</a></para>

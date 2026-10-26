@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class PreviewDataPipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The pipeline description.</para>
+        /// <para>The description of the pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Preview error span routing.</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The start time of the preview.</para>
+        /// <para>The start time of the preview. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784563200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? FromTime { get; set; }
 
         /// <summary>
-        /// <para>The pipeline type.</para>
+        /// <para>The type of the pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<PreviewDataPipelineRequestOutputs> Outputs { get; set; }
         public class PreviewDataPipelineRequestOutputs : TeaModel {
             /// <summary>
-            /// <para>The output name.</para>
+            /// <para>The name of the output.</para>
             /// 
             /// <b>Example:</b>
             /// <para>checkout_route</para>
@@ -160,14 +160,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The list of masking rules.</para>
+                    /// <para>The list of data masking rules.</para>
                     /// </summary>
                     [NameInMap("rules")]
                     [Validation(Required=false)]
                     public List<PreviewDataPipelineRequestOutputsProcessorsConfigRules> Rules { get; set; }
                     public class PreviewDataPipelineRequestOutputsProcessorsConfigRules : TeaModel {
                         /// <summary>
-                        /// <para>The length of the prefix to retain.</para>
+                        /// <para>The length of the retained prefix.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public int? KeepPrefix { get; set; }
 
                         /// <summary>
-                        /// <para>The length of the suffix to retain.</para>
+                        /// <para>The length of the retained suffix.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string MaskChar { get; set; }
 
                         /// <summary>
-                        /// <para>The masking mode.</para>
+                        /// <para>The data masking mode.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>keyword</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Mode { get; set; }
 
                         /// <summary>
-                        /// <para>The built-in sensitive types.</para>
+                        /// <para>The built-in sensitive data types.</para>
                         /// </summary>
                         [NameInMap("types")]
                         [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The pipeline processing scope.</para>
+                    /// <para>The effective scope of pipeline processing.</para>
                     /// </summary>
                     [NameInMap("scope")]
                     [Validation(Required=false)]
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                                 public string Kind { get; set; }
 
                                 /// <summary>
-                                /// <para>The field or dimension name.</para>
+                                /// <para>The name of the field or dimension.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>service.name</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             }
 
                             /// <summary>
-                            /// <para>The matching method.</para>
+                            /// <para>The match type.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>EXACT</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public PreviewDataPipelineRequestOutputsProcessorsConfigScopeMetricName MetricName { get; set; }
                         public class PreviewDataPipelineRequestOutputsProcessorsConfigScopeMetricName : TeaModel {
                             /// <summary>
-                            /// <para>The matching method.</para>
+                            /// <para>The match type.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>EXACT</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public PreviewDataPipelineRequestOutputsProcessorsConfigScopeServiceName ServiceName { get; set; }
                         public class PreviewDataPipelineRequestOutputsProcessorsConfigScopeServiceName : TeaModel {
                             /// <summary>
-                            /// <para>The matching method.</para>
+                            /// <para>The match type.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>EXACT</para>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public PreviewDataPipelineRequestOutputsProcessorsConfigSelector Selector { get; set; }
                     public class PreviewDataPipelineRequestOutputsProcessorsConfigSelector : TeaModel {
                         /// <summary>
-                        /// <para>The list of service names.</para>
+                        /// <para>The service name list.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -550,14 +550,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The list of masking rules.</para>
+                /// <para>The list of data masking rules.</para>
                 /// </summary>
                 [NameInMap("rules")]
                 [Validation(Required=false)]
                 public List<PreviewDataPipelineRequestProcessorsConfigRules> Rules { get; set; }
                 public class PreviewDataPipelineRequestProcessorsConfigRules : TeaModel {
                     /// <summary>
-                    /// <para>The length of the prefix to retain.</para>
+                    /// <para>The length of the retained prefix.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public int? KeepPrefix { get; set; }
 
                     /// <summary>
-                    /// <para>The length of the suffix to retain.</para>
+                    /// <para>The length of the retained suffix.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -596,7 +596,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string MaskChar { get; set; }
 
                     /// <summary>
-                    /// <para>The masking mode.</para>
+                    /// <para>The data masking mode.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>keyword</para>
@@ -606,7 +606,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Mode { get; set; }
 
                     /// <summary>
-                    /// <para>The built-in sensitive types.</para>
+                    /// <para>The built-in sensitive data types.</para>
                     /// </summary>
                     [NameInMap("types")]
                     [Validation(Required=false)]
@@ -615,7 +615,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The scope in which pipeline processing takes effect.</para>
+                /// <para>The effective scope of pipeline processing.</para>
                 /// </summary>
                 [NameInMap("scope")]
                 [Validation(Required=false)]
@@ -656,7 +656,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             public string Kind { get; set; }
 
                             /// <summary>
-                            /// <para>The field or dimension name.</para>
+                            /// <para>The name of the field or dimension.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>service.name</para>
@@ -675,7 +675,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         }
 
                         /// <summary>
-                        /// <para>The matching method.</para>
+                        /// <para>The match type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>EXACT</para>
@@ -701,7 +701,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public PreviewDataPipelineRequestProcessorsConfigScopeMetricName MetricName { get; set; }
                     public class PreviewDataPipelineRequestProcessorsConfigScopeMetricName : TeaModel {
                         /// <summary>
-                        /// <para>The matching method.</para>
+                        /// <para>The match type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>EXACT</para>
@@ -730,7 +730,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public PreviewDataPipelineRequestProcessorsConfigScopeServiceName ServiceName { get; set; }
                     public class PreviewDataPipelineRequestProcessorsConfigScopeServiceName : TeaModel {
                         /// <summary>
-                        /// <para>The matching method.</para>
+                        /// <para>The match type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>EXACT</para>
@@ -770,7 +770,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public PreviewDataPipelineRequestProcessorsConfigSelector Selector { get; set; }
                 public class PreviewDataPipelineRequestProcessorsConfigSelector : TeaModel {
                     /// <summary>
-                    /// <para>The list of service names.</para>
+                    /// <para>The service name list.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -905,7 +905,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string RunMode { get; set; }
 
                 /// <summary>
-                /// <para>The read start point.</para>
+                /// <para>The read start position.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>latest</para>
@@ -958,7 +958,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The end time for the preview.</para>
+        /// <para>The end time for the preview. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784566800</para>

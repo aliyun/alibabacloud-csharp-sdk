@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAddonsRequest : TeaModel {
         /// <summary>
-        /// <para>The language. Valid values: zh and en. The default value is zh.</para>
+        /// <para>The locale. Valid values: zh and en. Default value: zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
+        [NameInMap("apiVersion")]
+        [Validation(Required=false)]
+        public string ApiVersion { get; set; }
+
         /// <summary>
-        /// <para>Tag filtering.</para>
+        /// <para>The tag filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>database</para>
@@ -30,14 +34,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use regular expressions for the search. The default value is false.</para>
+        /// <para>Specifies whether to use regular expression matching for the query field. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("regexp")]
         [Validation(Required=false)]
         public bool? Regexp { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. You can search for add-ons by name, description, or keyword.</para>
+        /// <para>The search query. Supports searching by add-on name, description, or keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>105095</para>

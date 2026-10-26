@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The effective time range.</para>
+        /// <para>The effective period range.</para>
         /// </summary>
         [NameInMap("effectTimeRange")]
         [Validation(Required=false)]
         public MaintainWindowForModifyEffectTimeRange EffectTimeRange { get; set; }
         public class MaintainWindowForModifyEffectTimeRange : TeaModel {
             /// <summary>
-            /// <para>The days of the week when the policy is effective (Monday to Sunday).</para>
+            /// <para>The effective days (Monday to Sunday).</para>
             /// </summary>
             [NameInMap("dayInWeek")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Effective { get; set; }
 
         /// <summary>
-        /// <para>The time when the policy stops taking effect.</para>
+        /// <para>The effective end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-05 09:30:40</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MaintainWindowName { get; set; }
 
         /// <summary>
-        /// <para>The time when the policy starts to take effect.</para>
+        /// <para>The effective start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-04-11 07:55:00</para>

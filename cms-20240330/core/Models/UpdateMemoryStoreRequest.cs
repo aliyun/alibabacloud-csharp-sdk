@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateMemoryStoreRequest : TeaModel {
         /// <summary>
-        /// <para>Custom extraction strategies.</para>
+        /// <para>The custom extraction strategies.</para>
         /// </summary>
         [NameInMap("customExtractionStrategies")]
         [Validation(Required=false)]
         public List<CustomExtractionStrategy> CustomExtractionStrategies { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memoryStore test</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Extraction strategies. Supports &quot;Episodic&quot;, &quot;Summary&quot;, and &quot;Fact&quot;.</para>
+        /// <para>The extraction strategies. Valid values: Episodic, Summary, and Fact.</para>
         /// </summary>
         [NameInMap("extractionStrategies")]
         [Validation(Required=false)]
         public List<string> ExtractionStrategies { get; set; }
 
         /// <summary>
-        /// <para>Short-term memory retention time.</para>
+        /// <para>The retention period for short-term memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

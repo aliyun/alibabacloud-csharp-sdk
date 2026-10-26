@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ObserveGroupPromInstance : TeaModel {
         /// <summary>
-        /// <para>The ID of the Managed Service for Prometheus instance, such as rw-xxxxxxxxxx.</para>
+        /// <para>The ID of the Prometheus instance, such as rw-xxxxxxxxxx.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prom-12345</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The region where the Managed Service for Prometheus instance resides. If this parameter is left empty, the backend automatically populates the region based on the workspace to which the observation group belongs.</para>
+        /// <para>The region where the Prometheus instance resides. If left empty, the backend automatically populates it with the region of the workspace to which the observation group belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The time when the record was written or selected. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The time when the record is written or selected, in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-15 10:30:00</para>

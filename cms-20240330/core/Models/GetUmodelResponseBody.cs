@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetUmodelResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is reserved.</para>
+        /// <para>This field does not need to be populated.</para>
         /// </summary>
         [NameInMap("commonSchemaRef")]
         [Validation(Required=false)]
         public List<GetUmodelResponseBodyCommonSchemaRef> CommonSchemaRef { get; set; }
         public class GetUmodelResponseBodyCommonSchemaRef : TeaModel {
             /// <summary>
-            /// <para>The public Umodel schema group.</para>
+            /// <para>The common Umodel schema group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-job-123123</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The region of the resource.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>

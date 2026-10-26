@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteAlertRobotsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The chatbot ID.</para>
+        /// <para>The chatbot IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("robotIds")]

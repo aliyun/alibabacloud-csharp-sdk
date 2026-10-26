@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyPodMonitorsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the addon release.</para>
+        /// <para>The addon release name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>release-123456789</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonReleaseName { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the collector. If a release exists, pass the release name. If no release exists, pass the component name.</para>
+        /// <para>The collector identifier. If a release is available, specify the release name. Otherwise, specify the component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CollectorReleaseName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to encrypt the YAML.</para>
+        /// <para>Specifies whether to encrypt the YAML content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

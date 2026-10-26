@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetAddonResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The list of data corresponding to the request header.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAddonResponseBodyData Data { get; set; }
         public class GetAddonResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The alias of the component.</para>
+            /// <para>The alias of the integrated component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>resume_vector_alias</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The list of component categories.</para>
+            /// <para>The list of categories for the integrated component.</para>
             /// </summary>
             [NameInMap("categories")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The environment information.</para>
+            /// <para>The environment context.</para>
             /// </summary>
             [NameInMap("environments")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The dependencies.</para>
+                /// <para>The additional dependencies.</para>
                 /// </summary>
                 [NameInMap("dependencies")]
                 [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the feature is enabled.</para>
+                /// <para>Indicates whether the environment is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 /// <para>The display name of the environment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>容器环境</para>
+                /// <para>Container environment</para>
                 /// </summary>
                 [NameInMap("label")]
                 [Validation(Required=false)]
@@ -189,14 +189,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group.</para>
+                /// <para>The resource group ID.</para>
                 /// </summary>
                 [NameInMap("policies")]
                 [Validation(Required=false)]
                 public GetAddonResponseBodyDataEnvironmentsPolicies Policies { get; set; }
                 public class GetAddonResponseBodyDataEnvironmentsPolicies : TeaModel {
                     /// <summary>
-                    /// <para>The status of the default policy for alert rules.</para>
+                    /// <para>The enabled status of the default alert rule policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? DefaultInstall { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether a service account is assigned for communication with the console API.</para>
+                    /// <para>Indicates whether a service account is assigned to communicate with the Console API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule MetricCheckRule { get; set; }
                     public class GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule : TeaModel {
                         /// <summary>
-                        /// <para>The data check rule that is used after installation.</para>
+                        /// <para>The data check rule after installation.</para>
                         /// </summary>
                         [NameInMap("promQL")]
                         [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>Indicates whether to guide the user to restart pods after the add-on is installed.</para>
+                    /// <para>Indicates whether a pod restart is triggered immediately after the add-on is installed during integration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? NeedRestartAfterIntegration { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol.</para>
+                    /// <para>The protocols.</para>
                     /// </summary>
                     [NameInMap("protocols")]
                     [Validation(Required=false)]
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the target add-on to which the system redirects.</para>
+                    /// <para>The name of the target add-on for redirection.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-default</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The time when the latest version was created.</para>
+            /// <para>The latest creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-12 12:30:30</para>
@@ -404,7 +404,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The weight.</para>
+            /// <para>The weight value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</para>

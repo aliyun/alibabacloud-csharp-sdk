@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SeverityLevelsFilter : TeaModel {
         /// <summary>
-        /// <para>The hit condition: the set of severity levels covered by the rule contains at least one level in the array (OR semantics).</para>
+        /// <para>The match condition where the set of severity levels covered by the rule contains at least one severity level in the array (OR semantics).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;CRITICAL&quot;,&quot;ERROR&quot;]</para>

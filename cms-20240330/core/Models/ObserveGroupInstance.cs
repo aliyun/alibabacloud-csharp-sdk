@@ -10,77 +10,77 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ObserveGroupInstance : TeaModel {
         /// <summary>
-        /// <para>The entity category (adapted by entityType).</para>
+        /// <para>实体分类（由 entityType 适配）。</para>
         /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs of monitoring dimensions.</para>
+        /// <para>监控维度键值对。</para>
         /// </summary>
         [NameInMap("dimension")]
         [Validation(Required=false)]
         public Dictionary<string, string> Dimension { get; set; }
 
         /// <summary>
-        /// <para>The entity domain (such as acs).</para>
+        /// <para>实体域（如 acs）。</para>
         /// </summary>
         [NameInMap("entityDomain")]
         [Validation(Required=false)]
         public string EntityDomain { get; set; }
 
         /// <summary>
-        /// <para>The entity type (such as acs.ecs.instance).</para>
+        /// <para>实体类型（如 acs.ecs.instance）。</para>
         /// </summary>
         [NameInMap("entityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the observation group to which the entity belongs.</para>
+        /// <para>所属观测分组 ID。</para>
         /// </summary>
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>实例 ID。</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>实例名称。</para>
         /// </summary>
         [NameInMap("instanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>实例所属地域 ID。</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID of the instance.</para>
+        /// <para>实例所属资源组 ID。</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs of instance tags.</para>
+        /// <para>实例标签键值对。</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The UID of the user to which the instance belongs.</para>
+        /// <para>实例归属的用户 UID。</para>
         /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]

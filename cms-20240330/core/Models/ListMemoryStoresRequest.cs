@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListMemoryStoresRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results to return. The maximum value is 200.</para>
+        /// <para>The maximum number of results to return. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MemoryStoreName { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx</para>

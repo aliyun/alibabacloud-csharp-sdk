@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Url { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-1423134313712421-cn-shanghai</para>
