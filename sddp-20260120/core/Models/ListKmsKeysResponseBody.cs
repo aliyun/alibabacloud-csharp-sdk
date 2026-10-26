@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListKmsKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of records returned by this query.</para>
+        /// <para>The list of records returned by the query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The request identity, which is active when you invoke the operation to locate this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

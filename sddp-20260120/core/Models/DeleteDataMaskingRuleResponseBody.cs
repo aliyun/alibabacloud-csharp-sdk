@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class DeleteDataMaskingRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate the API call.</para>
+        /// <para>The request ID. You can use the ID to locate the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

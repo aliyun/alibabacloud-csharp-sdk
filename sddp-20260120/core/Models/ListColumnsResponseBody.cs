@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned by this query.</para>
+        /// <para>The list of records returned by the current query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListColumnsResponseBodyItems> Items { get; set; }
         public class ListColumnsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time of the data object. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
+            /// <para>The creation time of the data object. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788566400000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string DataAssetSourceId { get; set; }
 
             /// <summary>
-            /// <para>The database name.</para>
+            /// <para>The name of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>business_db</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The database engine type.</para>
+            /// <para>The type of the database engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The cloud instance identity to which the column belongs. This is a compatible field.</para>
+            /// <para>The instance identity of the cloud instance to which the column belongs. This is a compatible field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The compatible field for column encryption status. To query column encryption results, call ListDataMaskingColumns.</para>
+            /// <para>The compatibility field for the column encryption status. To query column encryption results, call ListDataMaskingColumns.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The cloud product code.</para>
+            /// <para>The code of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the asset.</para>
+            /// <para>The ID of the region where the asset is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the detection result revision record.</para>
+            /// <para>The identifier of the detection result correction record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -137,11 +137,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? RevisionId { get; set; }
 
             /// <summary>
-            /// <para>The revision status of the detection result. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: not revised.</description></item>
-            /// <item><description>1: revised.</description></item>
-            /// </list>
+            /// <para>The correction status of the detection result. Valid values: 0: Not corrected. 1: Corrected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -151,7 +147,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? RevisionStatus { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level ID.</para>
+            /// <para>The identifier of the sensitivity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -161,7 +157,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level name.</para>
+            /// <para>The name of the sensitivity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S2</para>
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the matched detection rule.</para>
+            /// <para>The identifier of the matched detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -191,7 +187,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The database schema name.</para>
+            /// <para>The name of the database schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>public</para>
@@ -208,7 +204,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public bool? Sensitive { get; set; }
 
             /// <summary>
-            /// <para>The data table name.</para>
+            /// <para>The name of the data table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer</para>
@@ -220,7 +216,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The number of records per page for this query.</para>
+        /// <para>The number of entries returned per page in the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -230,7 +226,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The request ID, which can be used to locate the current API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
@@ -240,7 +236,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the current query scope.</para>
+        /// <para>The total number of entries that meet the current statistics or query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

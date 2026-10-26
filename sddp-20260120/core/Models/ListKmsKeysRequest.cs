@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListKmsKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The database instance identity. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The instance identity of the database. You can obtain the value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</para>
+        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -44,13 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud product type ID. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>5: RDS.</description></item>
-        /// <item><description>8: POLARDB.</description></item>
-        /// <item><description>27: PolarDBX2.</description></item>
-        /// </list>
-        /// <para>If you specify both ProductId and ProductCode, the values must correspond to each other.</para>
+        /// <para>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If both this parameter and ProductCode are specified, they must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

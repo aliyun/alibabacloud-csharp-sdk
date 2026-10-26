@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class UpgradeKernelVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The ID of the request. You can use the ID to locate the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

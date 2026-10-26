@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number, starting from 1.</para>
+        /// <para>The page number of the current page. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The cloud database instance identity. Set this to the InstanceId value from the instance list.</para>
+        /// <para>The instance identity of the cloud database instance. Set the value to the InstanceId value in the instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string DataAssetSourceId { get; set; }
 
         /// <summary>
-        /// <para>The database name. Set this to the DbName value returned by ListDataSources.</para>
+        /// <para>The name of the database. Set the value to the DbName value returned by the ListDataSources operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>business_db</para>
@@ -40,11 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The start position for cursor-based pagination. Use the NextMarker value returned from the previous request. Keep the original filter conditions consistent.</para>
+        /// <para>The start position of the cursor-based pagination. Use the NextMarker value returned in the previous request for subsequent requests. Keep the value consistent with the original filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? Marker { get; set; }
 
         /// <summary>
-        /// <para>The name filter condition.</para>
+        /// <para>The name filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customer</para>
@@ -74,7 +70,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Keep other filter conditions consistent when querying the next page.</para>
+        /// <para>The number of entries to return on each page. Keep other filter conditions consistent when you query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</para>
+        /// <para>The code of the cloud service. Column encryption supports ApsaraDB RDS, PolarDB, and PolarDB-X 2.0. If you specify this parameter and ProductId at the same time, the values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -94,13 +90,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud product type ID. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>5: ApsaraDB RDS.</description></item>
-        /// <item><description>8: PolarDB.</description></item>
-        /// <item><description>27: PolarDB-X 2.0.</description></item>
-        /// </list>
-        /// <para>If you specify both ProductId and ProductCode, the values must correspond to each other.</para>
+        /// <para>The ID of the cloud service type. Valid values: 5: ApsaraDB RDS. 8: PolarDB. 27: PolarDB-X 2.0. If you specify this parameter and ProductCode at the same time, the values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -110,7 +100,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level ID. You can obtain this value from the list returned by ListRiskLevels.</para>
+        /// <para>The ID of the sensitivity level. You can obtain the ID from the response of the ListRiskLevels operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +110,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The detection rule or model ID. Set this to the Id of the corresponding detection rule within the target template.</para>
+        /// <para>The ID of the detection rule or model. Set the value to the ID of the corresponding detection rule in the target template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1001</para>
@@ -130,7 +120,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The classification and grading template ID. You can obtain this value from Items[].Id returned by ListTemplates. Keep this value consistent with the selected sensitivity level and detection model.</para>
+        /// <para>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The value must be consistent with the selected sensitivity level and detection model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

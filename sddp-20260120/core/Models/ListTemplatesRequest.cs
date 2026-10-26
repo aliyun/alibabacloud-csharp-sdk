@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A reserved feature type parameter. This parameter is not used to filter results in the current query and is not required for column encryption calls.</para>
+        /// <para>The reserved feature type parameter. This parameter is not used to filter results in the current query and is not required for column encryption calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,11 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response description. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Keep other filter conditions consistent when querying the next page.</para>
+        /// <para>The number of records returned per page. Keep other filter conditions consistent when querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scenario identifier for compatible template queries. This parameter is not required for column encryption queries. The available templates are determined by the returned list. Do not rely on this parameter to determine whether general-purpose templates are included.</para>
+        /// <para>The identifier of the compatible template query scenario. This parameter is not required for column encryption queries. The available templates are subject to the returned list. Do not rely on this parameter to determine whether general templates are included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

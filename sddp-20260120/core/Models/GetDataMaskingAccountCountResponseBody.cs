@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class GetDataMaskingAccountCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The permission statistics of column encryption accounts.</para>
+        /// <para>The statistics on the number of account permissions for column encryption.</para>
         /// </summary>
         [NameInMap("AccountCount")]
         [Validation(Required=false)]
         public GetDataMaskingAccountCountResponseBodyAccountCount AccountCount { get; set; }
         public class GetDataMaskingAccountCountResponseBodyAccountCount : TeaModel {
             /// <summary>
-            /// <para>The number of fullAccess accounts that have plaintext access.</para>
+            /// <para>The number of accounts with plaintext access (fullAccess).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? FullAccessCount { get; set; }
 
             /// <summary>
-            /// <para>The number of noneAccess accounts that are prohibited from decryption.</para>
+            /// <para>The number of accounts prohibited from decryption (noneAccess).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? NoneAccessCount { get; set; }
 
             /// <summary>
-            /// <para>The number of restrictedAccess accounts that have restricted access.</para>
+            /// <para>The number of accounts with restricted access (restrictedAccess).</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The request ID, which can be used to locate the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class DeleteDataMaskingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The database engine type. This value must match the EngineType of the target instance, such as MySQL or PostgreSQL.</para>
+        /// <para>The database engine type. The value must be the same as the EngineType of the target instance, such as MySQL or PostgreSQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The database instance identity. You can obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
+        /// <para>The database instance identifier. You can obtain this value from the Items[].InstanceId field in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -30,11 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response message. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two must correspond to each other.</para>
+        /// <para>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -54,13 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud product type identifier. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>5: RDS.</description></item>
-        /// <item><description>8: POLARDB.</description></item>
-        /// <item><description>27: PolarDBX2.</description></item>
-        /// </list>
-        /// <para>If both ProductId and ProductCode are specified, they must correspond to each other.</para>
+        /// <para>The cloud service type identifier. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If this parameter is specified together with ProductCode, the values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

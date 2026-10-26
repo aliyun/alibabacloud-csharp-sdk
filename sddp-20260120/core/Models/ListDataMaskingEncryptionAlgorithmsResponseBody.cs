@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public List<ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms> Algorithms { get; set; }
         public class ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms : TeaModel {
             /// <summary>
-            /// <para>The business error code for the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</para>
+            /// <para>The business error code for the record or operation. This parameter can be empty when no error occurs. Evaluate this parameter together with ErrorMessage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data_masking_not_running</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The business error description for the record or operation.</para>
+            /// <para>The business error message for the record or operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The instance is not in the running state</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The algorithm name.</para>
+            /// <para>The name of the algorithm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AES_256_GCM</para>

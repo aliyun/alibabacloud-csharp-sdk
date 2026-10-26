@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class GetInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The database instance identity. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The database instance ID. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</para>
+        /// <para>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -44,13 +44,13 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud product type identifier. Valid values:</para>
+        /// <para>The cloud service type identifier. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>5: RDS.</description></item>
         /// <item><description>8: POLARDB.</description></item>
-        /// <item><description>27: PolarDBX2.</description></item>
+        /// <item><description>27: PolarDBX2.
+        /// If this parameter is specified together with ProductCode, the values must match.</description></item>
         /// </list>
-        /// <para>If you specify both ProductId and ProductCode, the values must correspond to each other.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

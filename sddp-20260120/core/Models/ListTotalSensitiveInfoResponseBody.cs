@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListTotalSensitiveInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of statistics grouped by region, template, data type, or date.</para>
+        /// <para>The list of statistics categorized by region, template, data type, or date.</para>
         /// </summary>
         [NameInMap("DataCountDOList")]
         [Validation(Required=false)]
         public List<ListTotalSensitiveInfoResponseBodyDataCountDOList> DataCountDOList { get; set; }
         public class ListTotalSensitiveInfoResponseBodyDataCountDOList : TeaModel {
             /// <summary>
-            /// <para>The list of statistics grouped by region, template, data type, or date.</para>
+            /// <para>The list of statistics categorized by region, template, data type, or date.</para>
             /// </summary>
             [NameInMap("DataCountDOList")]
             [Validation(Required=false)]
             public List<ListTotalSensitiveInfoResponseBodyDataCountDOListDataCountDOList> DataCountDOList { get; set; }
             public class ListTotalSensitiveInfoResponseBodyDataCountDOListDataCountDOList : TeaModel {
                 /// <summary>
-                /// <para>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the day in the server time zone.</para>
+                /// <para>The statistics date, represented by a UNIX timestamp in nanoseconds. The time corresponds to 00:00:00 of the day in the server time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1788537600000000000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? SensitiveCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of data objects that match the current statistics or query scope.</para>
+                /// <para>The total number of data objects that meet the current statistics or query scope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             }
 
             /// <summary>
-            /// <para>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the day in the server time zone.</para>
+            /// <para>The statistics date, represented by a UNIX timestamp in nanoseconds. The time corresponds to 00:00:00 of the day in the server time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788537600000000000</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? Date { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the asset.</para>
+            /// <para>The ID of the region where the asset resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of counts aggregated by detection rule.</para>
+            /// <para>The list of quantities aggregated by detection rule.</para>
             /// </summary>
             [NameInMap("RuleInfoList")]
             [Validation(Required=false)]
             public List<ListTotalSensitiveInfoResponseBodyDataCountDOListRuleInfoList> RuleInfoList { get; set; }
             public class ListTotalSensitiveInfoResponseBodyDataCountDOListRuleInfoList : TeaModel {
                 /// <summary>
-                /// <para>The number of data objects that match the detection rule.</para>
+                /// <para>The number of data objects that hit the detection rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? RuleCount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the matched detection rule.</para>
+                /// <para>The ID of the hit detection rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1001</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the matched detection rule.</para>
+                /// <para>The name of the hit detection rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Phone number</para>
@@ -235,10 +235,10 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? SensitiveCount { get; set; }
 
             /// <summary>
-            /// <para>The data type of the statistics. Valid values:</para>
+            /// <para>The type of the statistics data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: structured data.</description></item>
-            /// <item><description>0: unstructured data.</description></item>
+            /// <item><description>1: Structured data.</description></item>
+            /// <item><description>0: Unstructured data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -262,14 +262,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             /// <para>The name of the data classification template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>General classification template</para>
+            /// <para>General data classification template</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The total number of data objects that match the current statistics or query scope.</para>
+            /// <para>The total number of data objects that meet the current statistics or query scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The request identity, which is active for locating the current API call when you invoke the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
@@ -311,14 +311,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of counts aggregated by detection rule.</para>
+        /// <para>The list of quantities aggregated by detection rule.</para>
         /// </summary>
         [NameInMap("RuleInfoList")]
         [Validation(Required=false)]
         public List<ListTotalSensitiveInfoResponseBodyRuleInfoList> RuleInfoList { get; set; }
         public class ListTotalSensitiveInfoResponseBodyRuleInfoList : TeaModel {
             /// <summary>
-            /// <para>The number of data objects that match the detection rule.</para>
+            /// <para>The number of data objects that hit the detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? RuleCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the matched detection rule.</para>
+            /// <para>The ID of the hit detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public int? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the matched detection rule.</para>
+            /// <para>The name of the hit detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Phone number</para>
@@ -500,7 +500,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? SensitiveUnStructSize { get; set; }
 
         /// <summary>
-        /// <para>The number of child-level sensitive data objects. In structured data scenarios, this value is used for sensitive column statistics.</para>
+        /// <para>The number of child sensitive data objects, which is used for sensitive column statistics in structured data scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -510,7 +510,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? SubSensitiveCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of child-level data objects. In structured data scenarios, this value is used for column-level statistics.</para>
+        /// <para>The total number of child data objects, which is used for column-level statistics in structured data scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? SubTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of data objects that match the current statistics or query scope.</para>
+        /// <para>The total number of data objects that meet the current statistics or query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

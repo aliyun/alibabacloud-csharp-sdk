@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class GetDataMaskingAccountCountRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response description. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
+        /// <para>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, the values are 5 (RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

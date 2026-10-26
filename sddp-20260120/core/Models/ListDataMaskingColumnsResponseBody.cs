@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The database name.</para>
+            /// <para>The name of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>business_db</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string DbName { get; set; }
 
             /// <summary>
-            /// <para>The database engine type.</para>
+            /// <para>The type of the database engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The business error code of the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</para>
+            /// <para>The business error code of the record or operation. It can be empty if no error occurs. Evaluate it together with ErrorMessage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data_masking_not_running</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The business error description of the record or operation.</para>
+            /// <para>The business error message of the record or operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The instance is not in the running state</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The instance identity of the database.</para>
+            /// <para>The database instance identity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
@@ -97,15 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The column encryption status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NotEncrypted: Not encrypted.</description></item>
-            /// <item><description>Processing: Being processed.</description></item>
-            /// <item><description>Success: Encryption succeeded.</description></item>
-            /// <item><description>Failed: Encryption failed.</description></item>
-            /// <item><description>Deleting: Being disabled.</description></item>
-            /// <item><description>DeleteFailed: Disabling failed.</description></item>
-            /// </list>
+            /// <para>The column encryption status. Valid values: NotEncrypted: not encrypted; Processing: processing; Success: encrypted successfully; Failed: encryption failed; Deleting: disabling; DeleteFailed: disabling failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -154,7 +146,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The cloud product code.</para>
+            /// <para>The code of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -164,12 +156,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The cloud product type ID. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>5: RDS.</description></item>
-            /// <item><description>8: POLARDB.</description></item>
-            /// <item><description>27: PolarDBX2.</description></item>
-            /// </list>
+            /// <para>The ID of the cloud service type. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -179,7 +166,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? ProductId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the asset.</para>
+            /// <para>The ID of the region where the asset is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
@@ -222,14 +209,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             /// <para>The name of the matched detection rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Phone number</para>
+            /// <para>Mobile phone number</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The table name.</para>
+            /// <para>The name of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer</para>
@@ -251,7 +238,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The ID of the request. It can be used to locate the current API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
@@ -261,7 +248,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the current query scope.</para>
+        /// <para>The total number of records that meet the current statistics or query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

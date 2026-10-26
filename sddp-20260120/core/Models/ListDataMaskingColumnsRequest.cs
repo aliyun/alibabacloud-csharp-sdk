@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListDataMaskingColumnsRequest : TeaModel {
         /// <summary>
-        /// <para>The column name filter.</para>
+        /// <para>The filter condition for the column name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>phone</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ColumnName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current query. Pages start from 1.</para>
+        /// <para>The current page number for the query. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>business_db</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The database engine type. This value must match the EngineType of the target instance, for example, MySQL or PostgreSQL.</para>
+        /// <para>The type of the database engine. It must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The instance identity of the database. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The instance identity of the database. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -60,11 +60,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response description. Valid values: zh: Chinese; en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -74,12 +70,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The column encryption status filter. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>NotEncrypted: Not encrypted.</description></item>
-        /// <item><description>Success: Encryption succeeded.</description></item>
-        /// <item><description>Failed: Encryption failed.</description></item>
-        /// </list>
+        /// <para>The filter for the column encryption status. Valid values: NotEncrypted: not encrypted; Success: encrypted successfully; Failed: encryption failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NotEncrypted</para>
@@ -89,7 +80,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string MaskingStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Keep other filter conditions consistent when querying the next page.</para>
+        /// <para>The number of records to return per page. Keep other filter conditions consistent when querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -99,7 +90,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond.</para>
+        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two must correspond to each other.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -109,13 +100,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud product type ID. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>5: RDS.</description></item>
-        /// <item><description>8: POLARDB.</description></item>
-        /// <item><description>27: PolarDBX2.</description></item>
-        /// </list>
-        /// <para>This value must correspond to ProductCode if both are specified.</para>
+        /// <para>The ID of the cloud service type. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2. It must correspond to ProductCode if both are specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -125,7 +110,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The compatible product ID list parameter. For column queries, use a single ProductId or ProductCode. Call the operation separately for each product when querying multiple products.</para>
+        /// <para>The compatible parameter for the list of product IDs. For the current column query, use a single ProductId or ProductCode. Call the operation separately to query multiple products.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -135,7 +120,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of a sensitivity level. You can obtain this value from the ListRiskLevels operation. The uppercase L in the parameter name must be preserved.</para>
+        /// <para>The ID of a single sensitivity level. You can obtain it from ListRiskLevels. The uppercase L in the parameter name must be preserved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -145,7 +130,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? RiskLeveLId { get; set; }
 
         /// <summary>
-        /// <para>The list of sensitivity level IDs, separated by commas. Select values from the ListRiskLevels response that corresponds to the same TemplateId.</para>
+        /// <para>The list of sensitivity level IDs. Separate multiple values with commas. Select the values from the response of ListRiskLevels corresponding to the same TemplateId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2</para>
@@ -155,7 +140,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RiskLevelIds { get; set; }
 
         /// <summary>
-        /// <para>The table name. For PostgreSQL or Oracle scenarios, preserve the schema.table format obtained from the table list.</para>
+        /// <para>The name of the table. In PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customer</para>
@@ -165,7 +150,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data classification template. You can obtain this value from Items[].Id in the response of the ListTemplates operation. This value must be consistent with the selected sensitivity level and detection model.</para>
+        /// <para>The ID of the data classification template. You can obtain it from Items[].Id in the response of ListTemplates. It must be consistent with the selected sensitivity level and detection model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -175,7 +160,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The list of detection model IDs, separated by commas. Select values from the ListIdentifyModels response that corresponds to the same TemplateId.</para>
+        /// <para>The list of detection model IDs. Separate multiple values with commas. Select the values from the response of ListIdentifyModels corresponding to the same TemplateId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1001,1002</para>

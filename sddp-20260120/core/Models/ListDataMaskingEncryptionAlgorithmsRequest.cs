@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListDataMaskingEncryptionAlgorithmsRequest : TeaModel {
         /// <summary>
-        /// <para>The database instance identifier. You can obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
+        /// <para>The database instance ID. You can obtain this value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response descriptions. Valid values: zh: Chinese. en: English.</para>
+        /// <para>The language of the response description. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</para>
+        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two parameters must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud product type identifier. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If specified together with ProductCode, the two values must correspond to each other.</para>
+        /// <para>The cloud product type identifier. Valid values: 5: RDS, 8: POLARDB, and 27: PolarDBX2. If both ProductId and ProductCode are specified, they must correspond to each other.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListDataAssetAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The database account name. Filters by exact account name.</para>
+        /// <para>The database account name. The system filters accounts by the exact account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_reader</para>
@@ -20,11 +20,21 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The authentication database of the MongoDB account. This parameter is used to distinguish accounts with the same name in different authentication databases.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
+        /// </summary>
+        [NameInMap("AuthDb")]
+        [Validation(Required=false)]
+        public string AuthDb { get; set; }
+
+        /// <summary>
         /// <para>The column encryption access permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>fullAccess: plaintext access.</description></item>
-        /// <item><description>restrictedAccess: restricted access.</description></item>
-        /// <item><description>noneAccess: decryption prohibited. noneAccess applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</description></item>
+        /// <item><description>fullAccess: plaintext access</description></item>
+        /// <item><description>restrictedAccess: restricted access</description></item>
+        /// <item><description>noneAccess: decryption prohibited. This value applies only to ApsaraDB RDS for MySQL instances whose current effective key mode is client_key.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +45,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string AuthRole { get; set; }
 
         /// <summary>
-        /// <para>The query business scenario. Use DataMasking for the column encryption scenario. This value is case-sensitive.</para>
+        /// <para>The business scenario for the query. Set this parameter to DataMasking for the column encryption scenario. Note that the value is case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DataMasking</para>
@@ -45,7 +55,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current query. Pages start from 1.</para>
+        /// <para>The page number of the current page. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,7 +65,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The database instance identity. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</para>
+        /// <para>The database instance ID. You can obtain this value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -65,10 +75,10 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +89,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Keep other filter conditions consistent when querying the next page.</para>
+        /// <para>The number of entries to return on each page. Keep other filter conditions consistent when querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -89,7 +99,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</para>
+        /// <para>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -99,7 +109,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud product type identifiers. Separate multiple values with commas (,). Valid values for the column encryption scenario: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
+        /// <para>The list of cloud service type IDs. Separate multiple values with commas (,). For the column encryption scenario, the valid values are 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
