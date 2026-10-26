@@ -4048,7 +4048,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a logo creation task.</para>
+        /// <para>Submits a logo generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4102,7 +4102,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a logo creation task.</para>
+        /// <para>Submits a logo generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4156,7 +4156,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a logo creation task.</para>
+        /// <para>Submits a logo generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4174,7 +4174,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a logo creation task.</para>
+        /// <para>Submits a logo generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8633,7 +8633,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8680,7 +8680,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8727,7 +8727,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8750,7 +8750,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9201,7 +9201,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9256,7 +9256,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9311,7 +9311,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9334,7 +9334,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">

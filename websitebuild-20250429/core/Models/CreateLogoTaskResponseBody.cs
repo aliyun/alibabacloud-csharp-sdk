@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateLogoTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</para>
+        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error code list in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The task ID returned when the call is successful. Note: Keep this ID secure. You must use this ID to query the status of the device creation.</para>
+        /// <para>The task ID returned when the call is successful. Note: Keep this ID secure. You must use this ID to query the device creation status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c3r127e325at9yd</para>

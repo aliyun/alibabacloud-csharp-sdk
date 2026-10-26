@@ -71,6 +71,25 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BuildType { get; set; }
 
         /// <summary>
+        /// <para>没有关联会话时为 null。</para>
+        /// </summary>
+        [NameInMap("ConversationInfo")]
+        [Validation(Required=false)]
+        public AppInstanceAggregateConversationInfo ConversationInfo { get; set; }
+        public class AppInstanceAggregateConversationInfo : TeaModel {
+            /// <summary>
+            /// <para>0 表示存在空会话。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("ChatNum")]
+            [Validation(Required=false)]
+            public long? ChatNum { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>

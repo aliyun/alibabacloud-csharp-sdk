@@ -343,6 +343,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCC</para>
+        /// </summary>
+        [NameInMap("UpgradeStatus")]
+        [Validation(Required=false)]
+        public string UpgradeStatus { get; set; }
+
     }
 
 }

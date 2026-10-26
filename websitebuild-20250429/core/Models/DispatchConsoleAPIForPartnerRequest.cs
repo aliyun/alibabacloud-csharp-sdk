@@ -12,6 +12,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <summary>
         /// <para>The access token obtained by calling GetUserAccessTokenForPartner.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00a00aaa-a000-00a0-a0a0-a0a0a000a00a</para>
         /// </summary>
         [NameInMap("LiveToken")]
         [Validation(Required=false)]
@@ -22,8 +25,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <list type="bullet">
         /// <item><description><b>deal</b>: Handles the alert (quarantine).</description></item>
         /// <item><description><b>ignore</b>: Ignores the alert.</description></item>
-        /// <item><description><b>mark_mis_info</b>: Marks the alert as a false positive (adds to the whitelist).</description></item>
-        /// <item><description><b>rm_mark_mis_info</b>: Unmarks the alert as a false positive (removes from the whitelist).</description></item>
+        /// <item><description><b>mark_mis_info</b>: Marks the alert as a false positive (adds it to the whitelist).</description></item>
+        /// <item><description><b>rm_mark_mis_info</b>: Unmarks the alert as a false positive (removes it from the whitelist).</description></item>
         /// <item><description><b>offline_handled</b>: Marks the alert as handled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

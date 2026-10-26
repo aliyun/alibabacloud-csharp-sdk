@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <summary>
         /// <para>The credential used to connect to the cloud application.</para>
         /// <remarks>
-        /// <para>This parameter is displayed for non-initial calls.</para>
+        /// <para>This parameter is displayed for subsequent calls.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

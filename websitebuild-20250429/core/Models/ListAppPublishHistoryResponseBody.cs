@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <list type="bullet">
         /// <item><description>ABTest: experiment data table</description></item>
         /// <item><description>ExperimentTool: experiment tool table</description></item>
-        /// <item><description>DataDiagnosis: data diagnosis</description></item>
+        /// <item><description>DataDiagnosis: data diagnostics</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Module")]
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>Specifies whether to display the history of applying alert templates to application groups. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Display.</description></item>
-            /// <item><description>false: Do not display. This is the default value.</description></item>
+            /// <item><description>true: Displayed.</description></item>
+            /// <item><description>false: Not displayed. Default value: false.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("History")]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<ListAppPublishHistoryResponseBodyModuleHistory> History { get; set; }
             public class ListAppPublishHistoryResponseBodyModuleHistory : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether quick rollback is supported.</para>
+                /// <para>Specifies whether quick rollback is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// <para>The sort type. Valid values: ASC and DESC.</para>
+                /// <para>The sort order. Valid values: ASC and DESC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DESC</para>
@@ -296,7 +296,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public List<string> Steps { get; set; }
 
                 /// <summary>
-                /// <para>The release subchannel.</para>
+                /// <para>The release sub-channel.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>wx0123456789abcdef</para>
                 /// </summary>
                 [NameInMap("Subchannel")]
                 [Validation(Required=false)]
@@ -337,7 +340,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no next query is available.</para>
+        /// <para>The token that is used to start the next query. If no next query exists, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>

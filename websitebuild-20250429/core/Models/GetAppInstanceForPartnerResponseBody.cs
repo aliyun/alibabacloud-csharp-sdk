@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppInstanceForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retries are allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message used to replace the <c>%s</c> placeholder in the error message of the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
         /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The returned error parameters.</para>
+        /// <para>The error arguments returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StaffType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the staff.</para>
+                /// <para>The staff status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>The application operation URL.</para>
+            /// <para>The application operation address.</para>
             /// </summary>
             [NameInMap("AppOperationAddress")]
             [Validation(Required=false)]
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public List<GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressActions> Actions { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressActions : TeaModel {
                     /// <summary>
-                    /// <para>The action key, which is used to uniquely identify an operation.</para>
+                    /// <para>The operation key value, which uniquely identifies an operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>BeginDialogue</para>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionKey { get; set; }
 
                     /// <summary>
-                    /// <para>The action display text, which is used to display the action name in the interface.</para>
+                    /// <para>The operation display text, which is used to display the operation name in the interface.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionText { get; set; }
 
                     /// <summary>
-                    /// <para>The enabled status, which indicates whether the operation is available.</para>
+                    /// <para>The enable status, which indicates whether the operation is available.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The link URL to which the user is redirected when the operation is clicked.</para>
+                    /// <para>The link URL to which you are redirected when you click the operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AiDesignUrl { get; set; }
 
                 /// <summary>
-                /// <para>The application publishing URL.</para>
+                /// <para>The application publish URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
@@ -417,14 +417,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AppPublishUrl { get; set; }
 
                 /// <summary>
-                /// <para>The list of dashboard operation buttons.</para>
+                /// <para>The list of operation buttons on the overview page.</para>
                 /// </summary>
                 [NameInMap("DashboardActions")]
                 [Validation(Required=false)]
                 public List<GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressDashboardActions> DashboardActions { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressDashboardActions : TeaModel {
                     /// <summary>
-                    /// <para>The action key, which is used to uniquely identify an operation.</para>
+                    /// <para>The operation key value, which uniquely identifies an operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CollectedNumber</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionKey { get; set; }
 
                     /// <summary>
-                    /// <para>The action display text, which is used to display the action name in the interface.</para>
+                    /// <para>The operation display text, which is used to display the operation name in the interface.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionText { get; set; }
 
                     /// <summary>
-                    /// <para>The enabled status, which indicates whether the operation is available.</para>
+                    /// <para>The enable status, which indicates whether the operation is available.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -454,7 +454,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The link URL to which the user is redirected when the operation is clicked.</para>
+                    /// <para>The link URL to which you are redirected when you click the operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
@@ -476,7 +476,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DesignUrl { get; set; }
 
                 /// <summary>
-                /// <para>The logon URL for the application instance.</para>
+                /// <para>The logon URL of the application instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
@@ -486,7 +486,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InstanceLoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The renewal URL.</para>
+                /// <para>The renewal purchase URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
@@ -506,7 +506,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ServerDeliveryUrl { get; set; }
 
                 /// <summary>
-                /// <para>The upgrade URL.</para>
+                /// <para>The upgrade purchase URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
@@ -535,7 +535,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BizId { get; set; }
 
                 /// <summary>
-                /// <para>The deletion flag.</para>
+                /// <para>The deletion indicator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fase</para>
@@ -545,7 +545,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? Deleted { get; set; }
 
                 /// <summary>
-                /// <para>The end time. The value is in ISO 8601 format and uses the UTC time zone.</para>
+                /// <para>The end time in ISO 8601 format in the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-18T02:23:00Z</para>
@@ -585,7 +585,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The application operation URL.</para>
+                /// <para>The application operation address.</para>
                 /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
@@ -632,7 +632,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary access URL for the image.</para>
+                    /// <para>The temporary access URL of the image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg">https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg</a></para>
@@ -688,7 +688,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public int? FinalStepNo { get; set; }
 
                     /// <summary>
-                    /// <para>The completion timestamp of the baseline instance. This value is returned when the FinishStatus parameter is FINISH.</para>
+                    /// <para>The completion timestamp of the baseline instance. This value is returned when FinishStatus (the completion status of the baseline instance) is FINISH.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2023-01-13T07:58:12Z</para>
@@ -719,7 +719,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                     /// <summary>
                     /// <para>&lt;props=&quot;china&quot;&gt;The name of the matrix.
-                    /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</para>
+                    /// &lt;props=&quot;intl&quot;&gt;This parameter is not available for public use.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Single-channel output</para>
@@ -775,7 +775,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>The unique identifier for an operation.</para>
+                /// <para>The unique identifier of an operation.</para>
                 /// </summary>
                 [NameInMap("OperationAddress")]
                 [Validation(Required=false)]
@@ -789,7 +789,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public List<GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressActions> Actions { get; set; }
                     public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressActions : TeaModel {
                         /// <summary>
-                        /// <para>The action key, which is used to uniquely identify an operation.</para>
+                        /// <para>The operation key value, which uniquely identifies an operation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CollectedNumber</para>
@@ -799,7 +799,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionKey { get; set; }
 
                         /// <summary>
-                        /// <para>The action display text, which is used to display the action name in the interface.</para>
+                        /// <para>The operation display text, which is used to display the operation name in the interface.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ActionText</para>
@@ -809,7 +809,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionText { get; set; }
 
                         /// <summary>
-                        /// <para>The enabled status, which indicates whether the operation is available.</para>
+                        /// <para>The enable status, which indicates whether the operation is available.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -819,7 +819,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
-                        /// <para>The link URL to which the user is redirected when the operation is clicked.</para>
+                        /// <para>The link URL to which you are redirected when you click the operation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Href</para>
@@ -851,7 +851,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string AiDesignUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The application publishing URL.</para>
+                    /// <para>The application publish URL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AppPublishUrl</para>
@@ -861,14 +861,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string AppPublishUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The list of dashboard operation buttons.</para>
+                    /// <para>The list of operation buttons on the overview page.</para>
                     /// </summary>
                     [NameInMap("DashboardActions")]
                     [Validation(Required=false)]
                     public List<GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressDashboardActions> DashboardActions { get; set; }
                     public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressDashboardActions : TeaModel {
                         /// <summary>
-                        /// <para>The action key, which is used to uniquely identify an operation.</para>
+                        /// <para>The operation key value, which uniquely identifies an operation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>AbortDialogue</para>
@@ -878,7 +878,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionKey { get; set; }
 
                         /// <summary>
-                        /// <para>The action display text, which is used to display the action name in the interface.</para>
+                        /// <para>The operation display text, which is used to display the operation name in the interface.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ActionText</para>
@@ -888,7 +888,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionText { get; set; }
 
                         /// <summary>
-                        /// <para>The enabled status, which indicates whether the operation is available.</para>
+                        /// <para>The enable status, which indicates whether the operation is available.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -898,7 +898,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
-                        /// <para>The link URL to which the user is redirected when the operation is clicked.</para>
+                        /// <para>The link URL to which you are redirected when you click the operation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Href</para>
@@ -920,7 +920,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string DesignUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The logon URL for the application instance.</para>
+                    /// <para>The logon URL of the application instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>InstanceLoginUrl</para>
@@ -930,7 +930,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string InstanceLoginUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The renewal URL.</para>
+                    /// <para>The renewal purchase URL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>renewBuyUrl</para>
@@ -950,7 +950,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ServerDeliveryUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The upgrade URL.</para>
+                    /// <para>The upgrade purchase URL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>UpgradeBuyUrl</para>
@@ -1080,6 +1080,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                     /// <summary>
                     /// <para>The upgrade status.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>DOING</para>
                     /// </summary>
                     [NameInMap("UpgradeStatus")]
                     [Validation(Required=false)]
@@ -1118,7 +1121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Slug { get; set; }
 
                 /// <summary>
-                /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The start time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1754447102000</para>
@@ -1190,7 +1193,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BuildType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether it is deleted.</para>
+            /// <para>Indicates whether the item is deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fase</para>
@@ -1240,7 +1243,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The end time. The value is in ISO 8601 format and uses the UTC time zone.</para>
+            /// <para>The end time in ISO 8601 format in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-05T15:59:00Z</para>
@@ -1310,10 +1313,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtPublish { get; set; }
 
             /// <summary>
-            /// <para>The URL of the application icon.</para>
+            /// <para>The application icon.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://yzm.zshud.com:34901/cloud-phone/%E5%85%BB%E7%94%9F_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/养生_1763631730804.png</a></para>
+            /// <para><a href="https://yzm.zshud.com:34901/cloud-phone/wellness_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/wellness_1763631730804.png</a></para>
             /// </summary>
             [NameInMap("IconUrl")]
             [Validation(Required=false)]
@@ -1364,7 +1367,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string AliyunPk { get; set; }
 
                     /// <summary>
-                    /// <para>The external bizId.</para>
+                    /// <para>The external business ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>WS20250801153127000002</para>
@@ -1394,7 +1397,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GmtModified { get; set; }
 
                     /// <summary>
-                    /// <para>The user to whom the ICP filing service code belongs.</para>
+                    /// <para>The owner of the ICP filing service code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>grantAliyunPk</para>
@@ -1456,7 +1459,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PartnerId { get; set; }
 
                 /// <summary>
-                /// <para>Valid values: unknown, init, testing, online.</para>
+                /// <para>Valid values: unknown, init, testing, and online.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -1655,7 +1658,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? OrderNum { get; set; }
 
                 /// <summary>
-                /// <para>The channel partner business ID.</para>
+                /// <para>The partner business ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100086</para>
@@ -1834,7 +1837,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BuildType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether it is deleted.</para>
+                /// <para>Indicates whether the item is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fase</para>
@@ -1884,7 +1887,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// <para>The end time. The value is in ISO 8601 format and uses the UTC time zone.</para>
+                /// <para>The end time in ISO 8601 format in the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-05-23T15:01:25.891Z</para>
@@ -1954,7 +1957,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtPublish { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the application icon.</para>
+                /// <para>The application icon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1617863868712071/1749090558651_%E9%AB%98%E5%BE%B7.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1617863868712071/1749090558651_%E9%AB%98%E5%BE%B7.png</a></para>
@@ -2171,7 +2174,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public int? OrderNum { get; set; }
 
                     /// <summary>
-                    /// <para>The channel partner business ID.</para>
+                    /// <para>The partner business ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100086</para>
@@ -2333,7 +2336,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The start time in ISO 8601 format in the UTC (Z) time zone.</para>
+                /// <para>The start time in ISO 8601 format and the UTC time zone (Z).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-22T02:23:00Z</para>
@@ -2363,7 +2366,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StatusText { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the application thumbnail.</para>
+                /// <para>The application thumbnail.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
@@ -2425,7 +2428,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The start time in ISO 8601 format in the UTC (Z) time zone.</para>
+            /// <para>The start time in ISO 8601 format and the UTC time zone (Z).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-24T10:10Z</para>
@@ -2455,7 +2458,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string StatusText { get; set; }
 
             /// <summary>
-            /// <para>The URL of the application thumbnail.</para>
+            /// <para>The application thumbnail.</para>
             /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>

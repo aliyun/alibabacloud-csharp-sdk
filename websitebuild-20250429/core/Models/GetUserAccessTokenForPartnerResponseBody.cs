@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public class GetUserAccessTokenForPartnerResponseBodyModule : TeaModel {
             /// <summary>
             /// <para>The value of the exchanged access token.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>000a00000a000000000000000a000000000a0a00000000000000000a0a00000a000000000000000a000000000000000a0a0a000000000a0a0000000000000000000000000a0000000a00000a0a000a000a00000000000a0a</para>
             /// </summary>
             [NameInMap("TokenValue")]
             [Validation(Required=false)]

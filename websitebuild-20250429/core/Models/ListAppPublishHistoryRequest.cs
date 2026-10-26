@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no next query is available.</para>
+        /// <para>The token that is used to start the next query. If no next query exists, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The release subchannel.</para>
+        /// <para>The release sub-channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>current</para>

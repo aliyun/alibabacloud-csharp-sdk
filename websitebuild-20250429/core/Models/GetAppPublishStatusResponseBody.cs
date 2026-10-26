@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPublishStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -153,10 +153,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>Indicates whether the call is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: The call is successful.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: The call fails.</para>
-            /// </description></item>
+            /// <item><description><c>true</c>: The call is successful.</description></item>
+            /// <item><description><c>false</c>: The call failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,7 +165,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? IsSuccess { get; set; }
 
             /// <summary>
-            /// <para>The additional information.</para>
+            /// <para>The additional description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>common notify successfully.</para>
@@ -177,7 +175,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The sort type, such as ASC or DESC.</para>
+            /// <para>The sorting type, such as ASC or DESC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DESC</para>
@@ -263,6 +261,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The publish subchannel.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>wx0123456789abcdef</para>
             /// </summary>
             [NameInMap("Subchannel")]
             [Validation(Required=false)]

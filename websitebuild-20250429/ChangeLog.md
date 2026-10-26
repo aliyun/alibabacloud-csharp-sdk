@@ -1,3 +1,6 @@
+2026-10-26 Version: 2.36.7
+- Generated csharp 2025-04-29 for WebsiteBuild.
+
 2026-10-22 Version: 2.36.6
 - Update API CheckUserResourceMeasure: add request parameters DesiredTotal.
 - Update API CheckUserResourceMeasure: add response parameters Body.Module.DesiredTotal.

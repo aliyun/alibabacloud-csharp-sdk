@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The deployment order ID.</para>
+        /// <para>The deployment ticket ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4998717</para>
