@@ -136,6 +136,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2026-07</para>
+            /// </summary>
+            [NameInMap("EosDate")]
+            [Validation(Required=false)]
+            public string EosDate { get; set; }
+
+            /// <summary>
             /// <para>The expiration time of the cluster.</para>
             /// 
             /// <b>Example:</b>
@@ -458,6 +466,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>长期支持</para>
+            /// </summary>
+            [NameInMap("VersionLifecycleStatus")]
+            [Validation(Required=false)]
+            public string VersionLifecycleStatus { get; set; }
 
             /// <summary>
             /// <para>The VPC ID.</para>
