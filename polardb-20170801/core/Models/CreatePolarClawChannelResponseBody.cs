@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the channel that was created.</para>
+        /// <para>The ID of the created channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>feishu</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NpmPackage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a new plugin was installed.</para>
+        /// <para>Indicates whether a new plugin is installed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the gateway was restarted.</para>
+        /// <para>Indicates whether the gateway is restarted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

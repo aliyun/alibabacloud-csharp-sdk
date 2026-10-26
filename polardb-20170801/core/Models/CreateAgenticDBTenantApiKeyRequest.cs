@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The description of the API key usage.</para>
+        /// <para>The description of the purpose.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Dedicated key for MCP Server</para>
+        /// <para>Dedicated key for MCP server</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tenant name. The name must be unique within the cluster and must be 2 to 64 characters in length.</para>
+        /// <para>The name of the tenant. The name must be unique within the same cluster and be 2 to 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

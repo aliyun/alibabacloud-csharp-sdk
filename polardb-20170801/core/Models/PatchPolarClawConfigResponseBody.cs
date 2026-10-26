@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ok { get; set; }
 
         /// <summary>
-        /// <para>A list of the top-level configuration keys that were modified.</para>
+        /// <para>The list of modified top-level configuration keys.</para>
         /// </summary>
         [NameInMap("PatchedKeys")]
         [Validation(Required=false)]
         public List<string> PatchedKeys { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the gateway was restarted.</para>
+        /// <para>Indicates whether the gateway is restarted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

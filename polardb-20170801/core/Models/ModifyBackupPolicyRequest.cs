@@ -246,6 +246,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The storage class used by the advanced backup policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STANDARD</para>
             /// </summary>
             [NameInMap("StorageClass")]
             [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway instance.</para>
+        /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

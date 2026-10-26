@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RetryKnowledgeBaseFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of failed retries.</para>
+        /// <para>The number of failed records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The failure reason.</para>
+            /// <para>The cause of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>No active ACL projection exists for the IM document</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The request result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The request was successful.</description></item>
+            /// <item><description><b>true</b>: The request is successful.</description></item>
             /// <item><description><b>false</b>: The request failed.</description></item>
             /// </list>
             /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of successful retries.</para>
+        /// <para>The number of successful records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

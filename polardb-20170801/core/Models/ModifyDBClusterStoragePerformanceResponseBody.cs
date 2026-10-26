@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2035629******</para>

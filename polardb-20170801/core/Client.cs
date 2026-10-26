@@ -638,13 +638,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ApplicationId</c> and <c>ServerName</c> parameters are required.</description></item>
-        /// <item><description>The <c>ApplicationId</c> parameter specifies the application ID.</description></item>
-        /// <item><description>The <c>ServerName</c> parameter specifies the MCP server name to add.</description></item>
-        /// <item><description>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</description></item>
-        /// <item><description>If the request fails, the API may return a 500 error code with a detailed error message.</description></item>
+        /// <item><description><c>ApplicationId</c> and <c>ServerName</c> are required query parameters.</description></item>
+        /// <item><description><c>ApplicationId</c> specifies the ID of the application program to operate on.</description></item>
+        /// <item><description><c>ServerName</c> specifies the name of the MCP server to add.</description></item>
+        /// <item><description>A successful response returns the request ID, message, status code, application program ID, and server name.</description></item>
+        /// <item><description>In case of a failed request, a 500 error code may be returned, along with a specific error message describing the fault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -706,13 +706,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ApplicationId</c> and <c>ServerName</c> parameters are required.</description></item>
-        /// <item><description>The <c>ApplicationId</c> parameter specifies the application ID.</description></item>
-        /// <item><description>The <c>ServerName</c> parameter specifies the MCP server name to add.</description></item>
-        /// <item><description>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</description></item>
-        /// <item><description>If the request fails, the API may return a 500 error code with a detailed error message.</description></item>
+        /// <item><description><c>ApplicationId</c> and <c>ServerName</c> are required query parameters.</description></item>
+        /// <item><description><c>ApplicationId</c> specifies the ID of the application program to operate on.</description></item>
+        /// <item><description><c>ServerName</c> specifies the name of the MCP server to add.</description></item>
+        /// <item><description>A successful response returns the request ID, message, status code, application program ID, and server name.</description></item>
+        /// <item><description>In case of a failed request, a 500 error code may be returned, along with a specific error message describing the fault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -774,13 +774,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ApplicationId</c> and <c>ServerName</c> parameters are required.</description></item>
-        /// <item><description>The <c>ApplicationId</c> parameter specifies the application ID.</description></item>
-        /// <item><description>The <c>ServerName</c> parameter specifies the MCP server name to add.</description></item>
-        /// <item><description>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</description></item>
-        /// <item><description>If the request fails, the API may return a 500 error code with a detailed error message.</description></item>
+        /// <item><description><c>ApplicationId</c> and <c>ServerName</c> are required query parameters.</description></item>
+        /// <item><description><c>ApplicationId</c> specifies the ID of the application program to operate on.</description></item>
+        /// <item><description><c>ServerName</c> specifies the name of the MCP server to add.</description></item>
+        /// <item><description>A successful response returns the request ID, message, status code, application program ID, and server name.</description></item>
+        /// <item><description>In case of a failed request, a 500 error code may be returned, along with a specific error message describing the fault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -804,13 +804,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>ApplicationId</c> and <c>ServerName</c> parameters are required.</description></item>
-        /// <item><description>The <c>ApplicationId</c> parameter specifies the application ID.</description></item>
-        /// <item><description>The <c>ServerName</c> parameter specifies the MCP server name to add.</description></item>
-        /// <item><description>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</description></item>
-        /// <item><description>If the request fails, the API may return a 500 error code with a detailed error message.</description></item>
+        /// <item><description><c>ApplicationId</c> and <c>ServerName</c> are required query parameters.</description></item>
+        /// <item><description><c>ApplicationId</c> specifies the ID of the application program to operate on.</description></item>
+        /// <item><description><c>ServerName</c> specifies the name of the MCP server to add.</description></item>
+        /// <item><description>A successful response returns the request ID, message, status code, application program ID, and server name.</description></item>
+        /// <item><description>In case of a failed request, a 500 error code may be returned, along with a specific error message describing the fault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1853,7 +1853,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用Lakebase挂载参数模板</para>
+        /// <para>Applies a parameter template to Lakebase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1903,7 +1903,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用Lakebase挂载参数模板</para>
+        /// <para>Applies a parameter template to Lakebase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1953,7 +1953,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用Lakebase挂载参数模板</para>
+        /// <para>Applies a parameter template to Lakebase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1971,7 +1971,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用Lakebase挂载参数模板</para>
+        /// <para>Applies a parameter template to Lakebase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1989,7 +1989,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves a PolarClaw device pairing.</para>
+        /// <para>Approves PolarClaw device pairing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2035,7 +2035,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves a PolarClaw device pairing.</para>
+        /// <para>Approves PolarClaw device pairing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2081,7 +2081,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves a PolarClaw device pairing.</para>
+        /// <para>Approves PolarClaw device pairing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2099,7 +2099,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves a PolarClaw device pairing.</para>
+        /// <para>Approves PolarClaw device pairing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7629,7 +7629,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key for an AgenticDB tenant.</para>
+        /// <para>Creates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7687,7 +7687,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key for an AgenticDB tenant.</para>
+        /// <para>Creates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7745,7 +7745,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key for an AgenticDB tenant.</para>
+        /// <para>Creates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7763,7 +7763,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an API key for an AgenticDB tenant.</para>
+        /// <para>Creates an AgenticDB tenant API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8949,16 +8949,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates API keys in batches.</para>
+        /// <para>Creates multiple API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>A maximum of three manually created backups can exist for each cluster at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -9026,16 +9026,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates API keys in batches.</para>
+        /// <para>Creates multiple API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>A maximum of three manually created backups can exist for each cluster at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -9103,16 +9103,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates API keys in batches.</para>
+        /// <para>Creates multiple API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>A maximum of three manually created backups can exist for each cluster at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -9132,16 +9132,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates API keys in batches.</para>
+        /// <para>Creates multiple API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
-        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
+        /// <item><description>A maximum of three manually created backups can exist for each cluster at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -15937,13 +15937,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarClaw Agent.</para>
+        /// <para>Creates a new PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Use this operation to create a PolarClaw Agent. You can optionally specify an <c>emoji</c> and an <c>avatar</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to create a PolarClaw agent and optionally configure its <c>Emoji</c> and <c>Avatar</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16005,13 +16005,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarClaw Agent.</para>
+        /// <para>Creates a new PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Use this operation to create a PolarClaw Agent. You can optionally specify an <c>emoji</c> and an <c>avatar</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to create a PolarClaw agent and optionally configure its <c>Emoji</c> and <c>Avatar</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16073,13 +16073,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarClaw Agent.</para>
+        /// <para>Creates a new PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Use this operation to create a PolarClaw Agent. You can optionally specify an <c>emoji</c> and an <c>avatar</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to create a PolarClaw agent and optionally configure its <c>Emoji</c> and <c>Avatar</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16097,13 +16097,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarClaw Agent.</para>
+        /// <para>Creates a new PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Use this operation to create a PolarClaw Agent. You can optionally specify an <c>emoji</c> and an <c>avatar</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to create a PolarClaw agent and optionally configure its <c>Emoji</c> and <c>Avatar</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16121,12 +16121,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a channel in PolarClaw.</para>
+        /// <para>Creates a new communication channel in PolarClaw.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16194,12 +16194,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a channel in PolarClaw.</para>
+        /// <para>Creates a new communication channel in PolarClaw.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16267,12 +16267,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a channel in PolarClaw.</para>
+        /// <para>Creates a new communication channel in PolarClaw.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -16290,12 +16290,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a channel in PolarClaw.</para>
+        /// <para>Creates a new communication channel in PolarClaw.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -16318,8 +16318,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16440,8 +16440,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16562,8 +16562,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16586,8 +16586,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16914,13 +16914,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Path</b>: The absolute path of the directory to create.</description></item>
-        /// <item><description><b>Recursive</b>: Specifies whether to recursively create parent directories. The default value is <c>false</c>.</description></item>
-        /// <item><description>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</description></item>
-        /// <item><description>Setting <c>Recursive</c> to <c>true</c> automatically creates all non-existent parent directories.</description></item>
-        /// <item><description>Ensure that you have sufficient permissions to create the directory.</description></item>
+        /// <item><description><b>Path</b>: The absolute path of the folder to create.</description></item>
+        /// <item><description><b>Recursive</b>: Specifies whether to use recursion to create parent folders. Default value: <c>false</c>.</description></item>
+        /// <item><description>This operation supports creating single-level or multi-level folder structures in a specified PolarFS instance.</description></item>
+        /// <item><description>If the <c>Recursive</c> Settings are <c>true</c>, the automatic creation of all non-existent parent folders is enabled.</description></item>
+        /// <item><description>Ensure that you have sufficient permissions when creating a folder.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16972,13 +16972,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Path</b>: The absolute path of the directory to create.</description></item>
-        /// <item><description><b>Recursive</b>: Specifies whether to recursively create parent directories. The default value is <c>false</c>.</description></item>
-        /// <item><description>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</description></item>
-        /// <item><description>Setting <c>Recursive</c> to <c>true</c> automatically creates all non-existent parent directories.</description></item>
-        /// <item><description>Ensure that you have sufficient permissions to create the directory.</description></item>
+        /// <item><description><b>Path</b>: The absolute path of the folder to create.</description></item>
+        /// <item><description><b>Recursive</b>: Specifies whether to use recursion to create parent folders. Default value: <c>false</c>.</description></item>
+        /// <item><description>This operation supports creating single-level or multi-level folder structures in a specified PolarFS instance.</description></item>
+        /// <item><description>If the <c>Recursive</c> Settings are <c>true</c>, the automatic creation of all non-existent parent folders is enabled.</description></item>
+        /// <item><description>Ensure that you have sufficient permissions when creating a folder.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17030,13 +17030,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Path</b>: The absolute path of the directory to create.</description></item>
-        /// <item><description><b>Recursive</b>: Specifies whether to recursively create parent directories. The default value is <c>false</c>.</description></item>
-        /// <item><description>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</description></item>
-        /// <item><description>Setting <c>Recursive</c> to <c>true</c> automatically creates all non-existent parent directories.</description></item>
-        /// <item><description>Ensure that you have sufficient permissions to create the directory.</description></item>
+        /// <item><description><b>Path</b>: The absolute path of the folder to create.</description></item>
+        /// <item><description><b>Recursive</b>: Specifies whether to use recursion to create parent folders. Default value: <c>false</c>.</description></item>
+        /// <item><description>This operation supports creating single-level or multi-level folder structures in a specified PolarFS instance.</description></item>
+        /// <item><description>If the <c>Recursive</c> Settings are <c>true</c>, the automatic creation of all non-existent parent folders is enabled.</description></item>
+        /// <item><description>Ensure that you have sufficient permissions when creating a folder.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17060,13 +17060,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Path</b>: The absolute path of the directory to create.</description></item>
-        /// <item><description><b>Recursive</b>: Specifies whether to recursively create parent directories. The default value is <c>false</c>.</description></item>
-        /// <item><description>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</description></item>
-        /// <item><description>Setting <c>Recursive</c> to <c>true</c> automatically creates all non-existent parent directories.</description></item>
-        /// <item><description>Ensure that you have sufficient permissions to create the directory.</description></item>
+        /// <item><description><b>Path</b>: The absolute path of the folder to create.</description></item>
+        /// <item><description><b>Recursive</b>: Specifies whether to use recursion to create parent folders. Default value: <c>false</c>.</description></item>
+        /// <item><description>This operation supports creating single-level or multi-level folder structures in a specified PolarFS instance.</description></item>
+        /// <item><description>If the <c>Recursive</c> Settings are <c>true</c>, the automatic creation of all non-existent parent folders is enabled.</description></item>
+        /// <item><description>Ensure that you have sufficient permissions when creating a folder.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17245,18 +17245,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -17318,18 +17318,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -17391,18 +17391,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -17424,18 +17424,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -39909,13 +39909,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</para>
+        /// <para>Queries the details of the current kernel version of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</para>
+        /// <para>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version overview</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -39978,13 +39978,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</para>
+        /// <para>Queries the details of the current kernel version of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</para>
+        /// <para>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version overview</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -40047,13 +40047,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</para>
+        /// <para>Queries the details of the current kernel version of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</para>
+        /// <para>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version overview</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -40072,13 +40072,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the current Milvus version of a PolarDB for MySQL cluster.</para>
+        /// <para>Queries the details of the current kernel version of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</para>
+        /// <para>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version overview</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -61105,7 +61105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List PolarClaw device pairings</para>
+        /// <para>Lists PolarClaw device pairings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61147,7 +61147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List PolarClaw device pairings</para>
+        /// <para>Lists PolarClaw device pairings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61189,7 +61189,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List PolarClaw device pairings</para>
+        /// <para>Lists PolarClaw device pairings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61207,7 +61207,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List PolarClaw device pairings</para>
+        /// <para>Lists PolarClaw device pairings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71257,7 +71257,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node specifications of a PolarDB cluster.</para>
+        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71359,7 +71359,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node specifications of a PolarDB cluster.</para>
+        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71461,7 +71461,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node specifications of a PolarDB cluster.</para>
+        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71479,7 +71479,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the node specifications of a PolarDB cluster.</para>
+        /// <para>Modifies the node specifications of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75141,18 +75141,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -75214,18 +75214,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -75287,18 +75287,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -75320,18 +75320,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
-        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -76281,7 +76281,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a PolarClaw configuration.</para>
+        /// <para>Updates the PolarClaw configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -76337,7 +76337,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a PolarClaw configuration.</para>
+        /// <para>Updates the PolarClaw configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -76393,7 +76393,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a PolarClaw configuration.</para>
+        /// <para>Updates the PolarClaw configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76411,7 +76411,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a PolarClaw configuration.</para>
+        /// <para>Updates the PolarClaw configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78521,7 +78521,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an api key.</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78571,7 +78571,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an api key.</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78621,7 +78621,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an api key.</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78639,7 +78639,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an api key.</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80561,7 +80561,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PolarClaw cron job.</para>
+        /// <para>Executes a PolarClaw scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80615,7 +80615,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PolarClaw cron job.</para>
+        /// <para>Executes a PolarClaw scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80669,7 +80669,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PolarClaw cron job.</para>
+        /// <para>Executes a PolarClaw scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80687,7 +80687,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PolarClaw cron job.</para>
+        /// <para>Executes a PolarClaw scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82197,13 +82197,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a PolarClaw Agent.</para>
+        /// <para>Disassociates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</para>
+        /// <h2>Request description</h2>
+        /// <para>Before calling this operation, use BindPolarClawAgent to establish a binding for the specified application, agent, and channel. This operation uses the same ApplicationId, AgentId, and Channel to remove the binding.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -82257,13 +82257,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a PolarClaw Agent.</para>
+        /// <para>Disassociates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</para>
+        /// <h2>Request description</h2>
+        /// <para>Before calling this operation, use BindPolarClawAgent to establish a binding for the specified application, agent, and channel. This operation uses the same ApplicationId, AgentId, and Channel to remove the binding.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -82317,13 +82317,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a PolarClaw Agent.</para>
+        /// <para>Disassociates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</para>
+        /// <h2>Request description</h2>
+        /// <para>Before calling this operation, use BindPolarClawAgent to establish a binding for the specified application, agent, and channel. This operation uses the same ApplicationId, AgentId, and Channel to remove the binding.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -82341,13 +82341,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a PolarClaw Agent.</para>
+        /// <para>Disassociates a PolarClaw agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>调用前，先通过 BindPolarClawAgent 为指定应用、Agent 和通道建立绑定。本接口使用同一组 ApplicationId、AgentId 和 Channel 解除绑定。</para>
+        /// <h2>Request description</h2>
+        /// <para>Before calling this operation, use BindPolarClawAgent to establish a binding for the specified application, agent, and channel. This operation uses the same ApplicationId, AgentId, and Channel to remove the binding.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -84765,7 +84765,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// <para>Updates the PolarClaw skill configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -84829,7 +84829,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// <para>Updates the PolarClaw skill configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -84893,7 +84893,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// <para>Updates the PolarClaw skill configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -84911,7 +84911,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the PolarClaw Skill configuration.</para>
+        /// <para>Updates the PolarClaw skill configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">

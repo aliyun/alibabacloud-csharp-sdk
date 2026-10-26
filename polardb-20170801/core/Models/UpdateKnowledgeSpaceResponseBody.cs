@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous workflow task. This value is empty if no actual model change occurs.</para>
+        /// <para>The ID of the asynchronous workflow task. This parameter is empty when no actual model changes occur.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52*****03</para>

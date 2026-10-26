@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters within your account, such as the cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, such as the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the latest version information or the list of available upgrade versions. Valid values:</para>
+        /// <para>Specifies whether to return the latest version information or a list of upgradable versions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LATEST_VERSION: queries the latest version information.</description></item>
-        /// <item><description>AVAILABLE_VERSION: queries the list of available upgrade versions.</description></item>
+        /// <item><description>LATEST_VERSION: Queries the latest version information.</description></item>
+        /// <item><description>AVAILABLE_VERSION: Queries the list of upgradable versions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

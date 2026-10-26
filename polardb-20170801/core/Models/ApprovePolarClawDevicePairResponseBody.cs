@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public ApprovePolarClawDevicePairResponseBodyDevice Device { get; set; }
         public class ApprovePolarClawDevicePairResponseBodyDevice : TeaModel {
             /// <summary>
-            /// <para>The creation time of the device pairing, in Unix milliseconds.</para>
+            /// <para>The creation time of the device pairing in Unix milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1778662316663</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DeviceFamily { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the device.</para>
+            /// <para>The unique identifier of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>device-l7rdl36iz6op66zf</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The operating system of the device.</para>
+            /// <para>The operating system platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linux</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The role of the device.</para>
+            /// <para>The device role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>operator</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>A list of permission scopes.</para>
+            /// <para>The list of permission scopes.</para>
             /// </summary>
             [NameInMap("Scopes")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PairRequestId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</para>

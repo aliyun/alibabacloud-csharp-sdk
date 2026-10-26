@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ApplyLakebaseMountParameterGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F45FFACC-xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The asynchronous task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>

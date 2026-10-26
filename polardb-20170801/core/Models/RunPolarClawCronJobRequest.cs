@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cron job to run.</para>
+        /// <para>The ID of the scheduled task to execute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the gateway after the job completes. Default value: true.</para>
+        /// <para>Specifies whether to restart the gateway after creation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

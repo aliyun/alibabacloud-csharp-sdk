@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAgenticDBTenantApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API key in plaintext. This value is returned only in this response.</para>
+        /// <para>The plaintext of the API key. This value is returned only in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pagc_key_xxxx.yyyy</para>
@@ -30,8 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The time when the API key was created.</para>
-        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The creation time. The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-10T08:00:00Z</para>
@@ -41,8 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the API key. This value is empty if the API key never expires.</para>
-        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The expiration time. This parameter is empty if the API key never expires. The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-01-01T00:00:00Z</para>

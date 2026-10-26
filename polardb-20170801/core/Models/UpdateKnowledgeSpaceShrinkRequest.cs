@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RerankModel { get; set; }
 
         /// <summary>
-        /// <para>The default chunking strategy configuration for the knowledge space. Both simple strategies and composite strategies that match by content type are supported.</para>
+        /// <para>The default chunking strategy configuration for the knowledge space. Simple strategies and composite strategies matched by content type are supported.</para>
         /// </summary>
         [NameInMap("ShardingStrategyConfig")]
         [Validation(Required=false)]

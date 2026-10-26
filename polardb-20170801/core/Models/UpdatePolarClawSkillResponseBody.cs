@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The updated Skill configuration. Sensitive values are masked.</para>
+        /// <para>The updated skill configuration. Sensitive values are masked.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public UpdatePolarClawSkillResponseBodyConfig Config { get; set; }
         public class UpdatePolarClawSkillResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the Skill.</para>
+            /// <para>Specifies whether the skill is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Skill identifier key.</para>
+        /// <para>The skill identifier key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibacloud-rds-copilot</para>

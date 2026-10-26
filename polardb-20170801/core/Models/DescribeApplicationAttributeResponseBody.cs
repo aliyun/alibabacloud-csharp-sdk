@@ -403,6 +403,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The domain name of the application endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>app.example.com</para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]

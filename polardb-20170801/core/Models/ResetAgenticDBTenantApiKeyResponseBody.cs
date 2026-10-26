@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ResetAgenticDBTenantApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The new API key in plaintext. This value is returned only in this response.</para>
+        /// <para>The plaintext of the new API key, which is returned only in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pagc_key_cGFnYy1icDFh...newSignature22ch</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The resource ID of the API key. This value remains unchanged after the reset.</para>
+        /// <para>The API key resource ID, which remains unchanged after the reset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ak-71304e39c7e841a1</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The reset time, which is the effective period of the new key.</para>
-        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The reset time, which indicates the effective period of the new key.</para>
+        /// <para>The time follows the ISO 8601 standard in the UTC time zone. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-10T14:00:00Z</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The expiration time.</para>
-        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time follows the ISO 8601 standard in the UTC time zone. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-01-01T00:00:00Z</para>

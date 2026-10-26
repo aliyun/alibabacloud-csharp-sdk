@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdatePolarClawSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The Skill API key. An empty string indicates that the key is deleted.</para>
+        /// <para>The skill API key. An empty string indicates that the key is deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-api</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Skill.</para>
+        /// <para>Specifies whether the skill is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The environment variables as a key-value map. A null value indicates that the variable is deleted.</para>
+        /// <para>The environment variables as a key-value map. An empty value indicates that the variable is deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NETA_TOKEN&quot;:&quot;my-token&quot;}</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public Dictionary<string, string> Env { get; set; }
 
         /// <summary>
-        /// <para>The Skill identifier key.</para>
+        /// <para>The skill identifier key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

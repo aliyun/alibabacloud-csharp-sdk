@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The status code of the response.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A list of paired devices.</para>
+        /// <para>The list of paired devices.</para>
         /// </summary>
         [NameInMap("Paired")]
         [Validation(Required=false)]
         public List<ListPolarClawDevicePairsResponseBodyPaired> Paired { get; set; }
         public class ListPolarClawDevicePairsResponseBodyPaired : TeaModel {
             /// <summary>
-            /// <para>The client ID.</para>
+            /// <para>The client identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cli</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ClientMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the device pairing was created, in Unix milliseconds.</para>
+            /// <para>The creation time of the device pairing in Unix milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1778659807727</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? CreatedAtMs { get; set; }
 
             /// <summary>
-            /// <para>The device family.</para>
+            /// <para>The hardware category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>empty</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DeviceFamily { get; set; }
 
             /// <summary>
-            /// <para>The unique device ID.</para>
+            /// <para>The unique identifier of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f92620d6bea04f65d48cf603c57b367c97e837c1ab9f6d78f741f477e99d857c</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The time when the device was last active, in Unix milliseconds.</para>
+            /// <para>The last active time of the device in Unix milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1778659807727</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? LastSeenAtMs { get; set; }
 
             /// <summary>
-            /// <para>The operating system.</para>
+            /// <para>The operating system platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linux</para>
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>A list of pending pairing requests.</para>
+        /// <para>The list of pending pairing requests.</para>
         /// </summary>
         [NameInMap("Pending")]
         [Validation(Required=false)]
         public List<ListPolarClawDevicePairsResponseBodyPending> Pending { get; set; }
         public class ListPolarClawDevicePairsResponseBodyPending : TeaModel {
             /// <summary>
-            /// <para>The client ID.</para>
+            /// <para>The client identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cli</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ClientMode { get; set; }
 
             /// <summary>
-            /// <para>The device family.</para>
+            /// <para>The hardware category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>server</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DeviceFamily { get; set; }
 
             /// <summary>
-            /// <para>The unique device ID.</para>
+            /// <para>The unique identifier of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>device-784x37k0vko734fk</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Whether the request is to repair an existing pairing.</para>
+            /// <para>Specifies whether the request is for re-pairing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PairRequestId { get; set; }
 
             /// <summary>
-            /// <para>The operating system.</para>
+            /// <para>The operating system platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linux</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PublicKey { get; set; }
 
             /// <summary>
-            /// <para>The requester\&quot;s remote IP address.</para>
+            /// <para>The IP address of the requester.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<string> Scopes { get; set; }
 
             /// <summary>
-            /// <para>Whether this is a silent pairing.</para>
+            /// <para>Specifies whether silent pairing is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Silent { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the pairing request, in Unix milliseconds.</para>
+            /// <para>The timestamp of the pairing request in Unix milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1778660347550</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</para>

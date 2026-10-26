@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RerankModel { get; set; }
 
         /// <summary>
-        /// <para>The default chunking strategy configuration for the knowledge space. Both simple strategies and composite strategies that match by content type are supported.</para>
+        /// <para>The default chunking strategy configuration for the knowledge space. Simple strategies and composite strategies matched by content type are supported.</para>
         /// </summary>
         [NameInMap("ShardingStrategyConfig")]
         [Validation(Required=false)]
         public UpdateKnowledgeSpaceRequestShardingStrategyConfig ShardingStrategyConfig { get; set; }
         public class UpdateKnowledgeSpaceRequestShardingStrategyConfig : TeaModel {
             /// <summary>
-            /// <para>The default chunking strategy. This strategy is used when no rule is matched.</para>
+            /// <para>The default chunking strategy. This strategy is used when no rules are matched.</para>
             /// </summary>
             [NameInMap("DefaultStrategy")]
             [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the default chunking strategy. Valid values: hybrid or hierarchical.</para>
+                /// <para>The type of the default chunking strategy. Valid values: hybrid and hierarchical.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hybrid</para>
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The list of override rules that are matched in order. Currently, a maximum of one exact-match rule with ContentType set to table is supported.</para>
+            /// <para>The list of override rules matched in sequence. Currently, a maximum of one exact match rule with ContentType set to table is supported.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<UpdateKnowledgeSpaceRequestShardingStrategyConfigRules> Rules { get; set; }
             public class UpdateKnowledgeSpaceRequestShardingStrategyConfigRules : TeaModel {
                 /// <summary>
-                /// <para>The match condition of the rule. Currently, only exact matching of table content by content type is supported.</para>
+                /// <para>The match conditions of the rule. Currently, only exact match for table content by content type is supported.</para>
                 /// </summary>
                 [NameInMap("Match")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 }
 
                 /// <summary>
-                /// <para>The chunking strategy to use when the rule is matched.</para>
+                /// <para>The chunking strategy used after a successful match.</para>
                 /// </summary>
                 [NameInMap("Strategy")]
                 [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     public UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesStrategyParameters Parameters { get; set; }
                     public class UpdateKnowledgeSpaceRequestShardingStrategyConfigRulesStrategyParameters : TeaModel {
                         /// <summary>
-                        /// <para>The processing mode for Markdown tables. Valid values: auto, on, or off.</para>
+                        /// <para>The processing mode for Markdown tables. Valid values: auto, on, and off.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>auto</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string MarkdownTables { get; set; }
 
                         /// <summary>
-                        /// <para>The maximum number of tokens per chunk for matched content. The value must be a positive integer.</para>
+                        /// <para>The maximum number of tokens per chunk for the matched content. The value must be a positive integer.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>512</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     }
 
                     /// <summary>
-                    /// <para>The type of the chunking strategy to use when the rule is matched. Valid values: hybrid or hierarchical.</para>
+                    /// <para>The type of the chunking strategy used after a rule is matched. Valid values: hybrid and hierarchical.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hierarchical</para>

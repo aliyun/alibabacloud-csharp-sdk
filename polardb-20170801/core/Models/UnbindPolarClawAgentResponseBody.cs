@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UnbindPolarClawAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The agent ID.</para>
+        /// <para>Agent ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The status code of the response.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The number of removed bindings.</para>
+        /// <para>The actual number of bindings removed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? RemovedCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of bindings after the operation.</para>
+        /// <para>The total number of global bindings after the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

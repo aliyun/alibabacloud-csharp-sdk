@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project to which the branch belongs.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the branch belongs.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

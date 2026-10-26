@@ -452,6 +452,38 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string LlmModel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pm-xxxxxx</para>
+            /// </summary>
+            [NameInMap("PolarAIEmbedderInstanceId")]
+            [Validation(Required=false)]
+            public string PolarAIEmbedderInstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pm-xxxxxx</para>
+            /// </summary>
+            [NameInMap("PolarAILlmInstanceId")]
+            [Validation(Required=false)]
+            public string PolarAILlmInstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pm-xxxxxx</para>
+            /// </summary>
+            [NameInMap("PolarAIRerankerInstanceId")]
+            [Validation(Required=false)]
+            public string PolarAIRerankerInstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pm-xxxxxx</para>
+            /// </summary>
+            [NameInMap("PolarAIVlInstanceId")]
+            [Validation(Required=false)]
+            public string PolarAIVlInstanceId { get; set; }
+
         }
 
         /// <summary>

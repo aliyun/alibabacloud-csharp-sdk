@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the new agent.</para>
+        /// <para>The details of the created agent.</para>
         /// </summary>
         [NameInMap("Agent")]
         [Validation(Required=false)]
         public CreatePolarClawAgentResponseBodyAgent Agent { get; set; }
         public class CreatePolarClawAgentResponseBodyAgent : TeaModel {
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>Agent ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>work</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The agent\&quot;s identity.</para>
+            /// <para>The identity information.</para>
             /// </summary>
             [NameInMap("Identity")]
             [Validation(Required=false)]
             public CreatePolarClawAgentResponseBodyAgentIdentity Identity { get; set; }
             public class CreatePolarClawAgentResponseBodyAgentIdentity : TeaModel {
                 /// <summary>
-                /// <para>The avatar\&quot;s path or content.</para>
+                /// <para>The avatar path or content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The workspace path.</para>
+            /// <para>The working directory path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home/node/.openclaw/workspace-work</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The agent ID.</para>
+        /// <para>Agent ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The display name of the agent.</para>
+        /// <para>The agent name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The workspace path.</para>
+        /// <para>The working directory path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home/node/.openclaw/workspace-work</para>

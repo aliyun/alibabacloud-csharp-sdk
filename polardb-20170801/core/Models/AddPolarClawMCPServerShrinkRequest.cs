@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The configuration object for the MCP server.</para>
+        /// <para>The MCP server configuration object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the MCP server.</para>
+        /// <para>The unique identifier of the MCP server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

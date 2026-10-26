@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The returned status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the added or updated MCP server.</para>
+        /// <para>The ID of the added or updated MCP server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-v1</para>

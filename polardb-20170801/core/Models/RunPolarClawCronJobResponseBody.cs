@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The unique ID for this job execution.</para>
+        /// <para>The ID of the executed task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8006e51c-dab3-4602-bc69-4f728002c6ce</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ok { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the job actually ran.</para>
+        /// <para>Indicates whether the task was actually executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ran { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>C61892A4-0850-4516-9E26-44D96C1782DE</para>

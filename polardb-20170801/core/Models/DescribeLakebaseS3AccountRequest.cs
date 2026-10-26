@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for your account, including region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The Access Key of the S3 account.</para>
         /// <remarks>
-        /// <para>The account name supports only uppercase letters, lowercase letters, and digits, with a maximum length of 32 characters.</para>
+        /// <para>The account name can contain only letters and digits and can be up to 32 characters in length.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

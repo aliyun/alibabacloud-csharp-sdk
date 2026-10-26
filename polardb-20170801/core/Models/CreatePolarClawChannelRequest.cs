@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public Dictionary<string, object> ChannelConfig { get; set; }
 
         /// <summary>
-        /// <para>The channel\&quot;s unique identifier.</para>
+        /// <para>The unique identifier of the channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The name and version of the npm package for the channel plugin.</para>
+        /// <para>The npm package name of the channel plugin, including the version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NpmPackage { get; set; }
 
         /// <summary>
-        /// <para>The channel plugin\&quot;s name.</para>
+        /// <para>The channel plugin name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to restart the gateway after the channel is created. Default: <c>true</c>.</para>
+        /// <para>Specifies whether to restart the gateway after creation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID.</para>
+        /// <para>The agent name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The avatar\&quot;s URL or path.</para>
+        /// <para>The avatar URL or path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Emoji { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the gateway after the agent is created. The default value is <c>true</c>.</para>
+        /// <para>Specifies whether to restart the gateway after creation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
-        /// <para>The absolute path of the agent workspace.</para>
+        /// <para>The absolute path of the agent working directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

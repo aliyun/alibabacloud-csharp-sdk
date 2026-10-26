@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The number of input points.</para>
+        /// <para>The number of input tokens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RecordInput { get; set; }
 
         /// <summary>
-        /// <para>The number of output points.</para>
+        /// <para>The number of output tokens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of routing rules (JSON array string).</para>
+        /// <para>The list of routing rules. The value is a JSON array string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

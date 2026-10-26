@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ApplyLakebaseMountParameterGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The parameter template ID. The ID starts with pagp-.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
+        /// <para>The PolarFS instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

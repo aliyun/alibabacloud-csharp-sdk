@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UserAccPolicy { get; set; }
 
         /// <summary>
-        /// <para>The Secret Key of the S3 account (masked).</para>
+        /// <para>The masked Secret Key of the S3 account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>password***</para>

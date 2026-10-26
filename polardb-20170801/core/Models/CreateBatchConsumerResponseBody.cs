@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<CreateBatchConsumerResponseBodyItems> Items { get; set; }
         public class CreateBatchConsumerResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the key is active.</para>
+            /// <para>Indicates whether the consumer is active.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Active { get; set; }
 
             /// <summary>
-            /// <para>The complete API key. Returned only in this response.</para>
+            /// <para>The complete API key. This value is returned only in the current response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiKeyStatus { get; set; }
 
             /// <summary>
-            /// <para>The API key status. Default value: Active.</para>
+            /// <para>The status of the API key. Default value: Active.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiStatus { get; set; }
 
             /// <summary>
-            /// <para>The budget limit, which equals the number of credits per package.</para>
+            /// <para>The budget limit, which is equal to the points of a single package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? BudgetLimit { get; set; }
 
             /// <summary>
-            /// <para>The budget policy ID. Each key has an independent budget policy.</para>
+            /// <para>The ID of the budget policy. Each key has an independent budget policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>023aacc1effc4b56bb154bfbec6ba9**</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? BudgetUsed { get; set; }
 
             /// <summary>
-            /// <para>The user group ID.</para>
+            /// <para>The ID of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-xxxxxx</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerTag { get; set; }
 
             /// <summary>
-            /// <para>The application description or remarks.</para>
+            /// <para>The application description or remark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myapp</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The expiration time.</para>
-            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-25T09:37:10Z</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the key has expired.</para>
+            /// <para>Indicates whether the consumer has expired.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The consumer status. Default value: Enabled.</para>
+            /// <para>The status of the consumer. Default value: Enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>

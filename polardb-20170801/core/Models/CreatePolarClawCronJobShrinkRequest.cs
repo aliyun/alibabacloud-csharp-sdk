@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawCronJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the agent that executes the task.</para>
+        /// <para>The ID of the specified execution agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically delete the job after its first execution. This is useful for one-time tasks. Default: <c>false</c>.</para>
+        /// <para>Specifies whether to automatically delete the task after the first execution. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DeleteAfterRun { get; set; }
 
         /// <summary>
-        /// <para>The configuration for delivering task execution results.</para>
+        /// <para>The result delivery configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Mode&quot;:&quot;announce&quot;,&quot;Channel&quot;:&quot;telegram&quot;}</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DeliveryShrink { get; set; }
 
         /// <summary>
-        /// <para>A description of the task.</para>
+        /// <para>The task description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily report generation</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the cron job is enabled. Default: <c>true</c>.</para>
+        /// <para>Specifies whether the task is enabled. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayloadShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the gateway upon job creation. Default: <c>true</c>.</para>
+        /// <para>Specifies whether to restart the gateway after creation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to run the job once immediately upon creation. Default: <c>false</c>.</para>
+        /// <para>Specifies whether to run it once immediately after creation. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScheduleShrink { get; set; }
 
         /// <summary>
-        /// <para>The session routing key, which determines the conversation session for the task.</para>
+        /// <para>The session routing key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent:main:feishu:direct:***</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionKey { get; set; }
 
         /// <summary>
-        /// <para>The session target. Valid values are <c>main</c>, <c>isolated</c>, and <c>current</c>.</para>
+        /// <para>The session target. Valid values: main, isolated, current.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionTarget { get; set; }
 
         /// <summary>
-        /// <para>The wake mode for the agent. Valid values are <c>now</c> and <c>next-heartbeat</c>.</para>
+        /// <para>The wake mode. Valid values: now, next-heartbeat.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

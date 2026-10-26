@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddPolarOSSAuthorizedAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The list of authorized accounts to add, separated by commas. You can pass in UIDs and RAM role ARNs in mixed parameter notation.</para>
+        /// <para>The list of authorized accounts to add. Separate multiple accounts with commas. You can specify a mix of UIDs and RAM role ARNs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

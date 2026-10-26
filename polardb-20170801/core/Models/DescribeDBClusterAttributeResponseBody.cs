@@ -85,10 +85,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterAttributeResponseBodyBranchChildBranch> ChildBranch { get; set; }
             public class DescribeDBClusterAttributeResponseBodyBranchChildBranch : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2/2</para>
+                /// </summary>
                 [NameInMap("BranchLsn")]
                 [Validation(Required=false)]
                 public string BranchLsn { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2026-01-01T00:00:00Z</para>
+                /// </summary>
                 [NameInMap("BranchTime")]
                 [Validation(Required=false)]
                 public string BranchTime { get; set; }
@@ -105,6 +113,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public bool? HasChild { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>pc-2bbb22b2bb22bb222</para>
+                /// </summary>
                 [NameInMap("InsName")]
                 [Validation(Required=false)]
                 public string InsName { get; set; }

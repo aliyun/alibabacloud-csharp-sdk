@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>A JSON merge-patch object.</para>
+        /// <para>The JSON merge patch object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConfigPatchShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the gateway after applying the patch. The default is <c>true</c>.</para>
+        /// <para>Specifies whether to restart the gateway after the patch is applied. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
