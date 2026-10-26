@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Nickname.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>我就是那个分析师大神</para>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("NickName")]
                 [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     /// <para>Name of the preset role.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>管理员</para>
+                    /// <para>test</para>
                     /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]

@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>The execution result of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The operation succeeded.</description></item>
-        /// <item><description>false: The operation failed.</description></item>
+        /// <item><description>true: The execution succeeded.</description></item>
+        /// <item><description>false: The execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The request succeeded.</description></item>
         /// <item><description>false: The request failed.</description></item>

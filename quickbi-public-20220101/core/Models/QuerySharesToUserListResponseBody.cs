@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Remarks on the work.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试报表的描述</para>
+            /// <para>Description of the test report</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the resource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>图表报表</para>
+                /// <para>Chart Report</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The path name of the directory where the resource is located.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>一级目录/二级目录</para>
+                /// <para>Level -1 Directory /Level -2 Directory</para>
                 /// </summary>
                 [NameInMap("PathName")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the report.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试报表</para>
+            /// <para>Test report</para>
             /// </summary>
             [NameInMap("WorkName")]
             [Validation(Required=false)]
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the workspace to which the report belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>专业版回归</para>
+            /// <para>Return to Professional Edition</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

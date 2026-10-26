@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The paginated result of the workspace list. The detailed information of workspaces is stored in the Data response parameter.</para>
+        /// <para>The paginated result of the workspace list. The detailed information of the workspaces is stored in the Data response parameter.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public List<QueryOrganizationWorkspaceListResponseBodyResultData> Data { get; set; }
             public class QueryOrganizationWorkspaceListResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether works can be made public. Valid values:</para>
+                /// <para>Indicates whether the content can be made public. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Public.</description></item>
                 /// <item><description>false: Not public.</description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? AllowPublishOperation { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether works can be shared with authorization. Valid values:</para>
+                /// <para>Indicates whether the content can be shared with authorization. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Authorized.</description></item>
                 /// <item><description>false: Not authorized.</description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? AllowShareOperation { get; set; }
 
                 /// <summary>
-                /// <para>The time when the workspace was created.</para>
+                /// <para>The time when the workspace was created. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-10 17:51:07</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CreateUserAccountName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the workspace was last modified.</para>
+                /// <para>The time when the workspace was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-10 17:51:07</para>
@@ -179,11 +179,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig WorkspaceExportConfig { get; set; }
                 public class QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig : TeaModel {
                     /// <summary>
-                    /// <para>Specifies how images are handled when exporting Excel files with formatting. This field takes effect only when configured at the organization level.
-                    /// Valid values:</para>
+                    /// <para>The image processing method when exporting to Excel with formatting. This parameter takes effect only when configured at the organization level. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>false: Image fields are not converted to images.</description></item>
-                    /// <item><description>true: Image fields can be converted to images. The option appears on the report export page, and users must manually select it to convert images.</description></item>
+                    /// <item><description>true: Image fields are converted to images. The option is displayed on the report export page, and users must manually select it to convert to images.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -194,7 +193,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? AllowExcelImageFile { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to allow exporting data as an Excel file.</para>
+                    /// <para>Specifies whether to export data to Excel.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -204,7 +203,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? DataExport { get; set; }
 
                     /// <summary>
-                    /// <para>The default export type (with formatting: true. Without formatting: false).</para>
+                    /// <para>The default export type. Valid values: true (with formatting) and false (without formatting).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -214,7 +213,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? DefaultExportType { get; set; }
 
                     /// <summary>
-                    /// <para>The master switch for export. If set to false, all export settings below do not take effect.</para>
+                    /// <para>The master switch for export. If this parameter is set to false, the following configurations do not take effect.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -224,7 +223,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportMainSwitch { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to allow exporting to a local device.</para>
+                    /// <para>Specifies whether to export to the local device.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -234,7 +233,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportToLocal { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether public links of works support export.</para>
+                    /// <para>Specifies whether to support exporting public links of the content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -244,7 +243,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportToPublicWork { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to allow exporting to a server.</para>
+                    /// <para>Specifies whether to export to the server.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -254,7 +253,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportToServer { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to allow exporting as an image.</para>
+                    /// <para>Specifies whether to export images.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -264,7 +263,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ImageExport { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to allow exporting as a PDF.</para>
+                    /// <para>Specifies whether to export to PDF.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -308,7 +307,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of rows per page specified in the request.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -318,7 +317,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of rows.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -340,10 +339,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

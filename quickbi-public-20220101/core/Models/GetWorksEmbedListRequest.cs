@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class GetWorksEmbedListRequest : TeaModel {
         /// <summary>
-        /// <para>The report name for fuzzy match.</para>
+        /// <para>The report name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test dataset</para>
@@ -42,12 +42,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The report type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>page: dashboard.</description></item>
-        /// <item><description>screen: data screen.</description></item>
-        /// <item><description>report: workbook.</description></item>
-        /// <item><description>ANALYSIS: ad hoc analysis.</description></item>
-        /// <item><description>dashboardOfflineQuery: self-service data retrieval.</description></item>
-        /// <item><description>dataForm: data entry form.</description></item>
+        /// <item><description>page: Dashboard.</description></item>
+        /// <item><description>screen: Data screen.</description></item>
+        /// <item><description>report: Workbook.</description></item>
+        /// <item><description>ANALYSIS: Ad hoc analysis.</description></item>
+        /// <item><description>dashboardOfflineQuery: Self-service data retrieval.</description></item>
+        /// <item><description>dataForm: Data entry.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

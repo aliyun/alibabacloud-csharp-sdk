@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你不是A部门分析师。</para>
+        /// <para>You are not a Division A analyst.</para>
         /// </summary>
         [NameInMap("HandleReason")]
         [Validation(Required=false)]

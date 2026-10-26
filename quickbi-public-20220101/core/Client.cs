@@ -3647,6 +3647,182 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>生成AIPro超级框嵌入ticket</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4AiProRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4AiProResponse
+        /// </returns>
+        public CreateTicket4AiProResponse CreateTicket4AiProWithOptions(CreateTicket4AiProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                query["AccountType"] = request.AccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProId))
+            {
+                query["AiProId"] = request.AiProId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomParam))
+            {
+                query["CustomParam"] = request.CustomParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                query["ExpireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuickBIUserId))
+            {
+                query["QuickBIUserId"] = request.QuickBIUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemUid))
+            {
+                query["SystemUid"] = request.SystemUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNum))
+            {
+                query["TicketNum"] = request.TicketNum;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTicket4AiPro",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTicket4AiProResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成AIPro超级框嵌入ticket</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4AiProRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4AiProResponse
+        /// </returns>
+        public async Task<CreateTicket4AiProResponse> CreateTicket4AiProWithOptionsAsync(CreateTicket4AiProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                query["AccountType"] = request.AccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProId))
+            {
+                query["AiProId"] = request.AiProId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomParam))
+            {
+                query["CustomParam"] = request.CustomParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                query["ExpireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuickBIUserId))
+            {
+                query["QuickBIUserId"] = request.QuickBIUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemUid))
+            {
+                query["SystemUid"] = request.SystemUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketNum))
+            {
+                query["TicketNum"] = request.TicketNum;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTicket4AiPro",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTicket4AiProResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成AIPro超级框嵌入ticket</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4AiProRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4AiProResponse
+        /// </returns>
+        public CreateTicket4AiProResponse CreateTicket4AiPro(CreateTicket4AiProRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTicket4AiProWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成AIPro超级框嵌入ticket</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTicket4AiProRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTicket4AiProResponse
+        /// </returns>
+        public async Task<CreateTicket4AiProResponse> CreateTicket4AiProAsync(CreateTicket4AiProRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTicket4AiProWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Generates a ticket to embed Copilot.</para>
         /// </summary>
         /// 
@@ -6487,7 +6663,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of embedded reports.</para>
+        /// <para>Queries a list of embedded reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6545,7 +6721,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of embedded reports.</para>
+        /// <para>Queries a list of embedded reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6603,7 +6779,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of embedded reports.</para>
+        /// <para>Queries a list of embedded reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6621,7 +6797,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of embedded reports.</para>
+        /// <para>Queries a list of embedded reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9699,6 +9875,174 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改AI Pro嵌入配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiproEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiproEmbedConfigResponse
+        /// </returns>
+        public ModifyAiproEmbedConfigResponse ModifyAiproEmbedConfigWithOptions(ModifyAiproEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProId))
+            {
+                query["AiProId"] = request.AiProId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatHistoryStatus))
+            {
+                query["ChatHistoryStatus"] = request.ChatHistoryStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryEnabled))
+            {
+                query["MemoryEnabled"] = request.MemoryEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowName))
+            {
+                query["ShowName"] = request.ShowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEnabled))
+            {
+                query["UploadEnabled"] = request.UploadEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAiproEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAiproEmbedConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AI Pro嵌入配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiproEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiproEmbedConfigResponse
+        /// </returns>
+        public async Task<ModifyAiproEmbedConfigResponse> ModifyAiproEmbedConfigWithOptionsAsync(ModifyAiproEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProId))
+            {
+                query["AiProId"] = request.AiProId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatHistoryStatus))
+            {
+                query["ChatHistoryStatus"] = request.ChatHistoryStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryEnabled))
+            {
+                query["MemoryEnabled"] = request.MemoryEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowName))
+            {
+                query["ShowName"] = request.ShowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEnabled))
+            {
+                query["UploadEnabled"] = request.UploadEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAiproEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAiproEmbedConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AI Pro嵌入配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiproEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiproEmbedConfigResponse
+        /// </returns>
+        public ModifyAiproEmbedConfigResponse ModifyAiproEmbedConfig(ModifyAiproEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAiproEmbedConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AI Pro嵌入配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiproEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiproEmbedConfigResponse
+        /// </returns>
+        public async Task<ModifyAiproEmbedConfigResponse> ModifyAiproEmbedConfigAsync(ModifyAiproEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAiproEmbedConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the configurations of a specified API data source.</para>
         /// </summary>
         /// 
@@ -10275,6 +10619,126 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryAccelerationLogByCubeIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiproEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiproEmbedConfigResponse
+        /// </returns>
+        public QueryAiproEmbedConfigResponse QueryAiproEmbedConfigWithOptions(QueryAiproEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAiproEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAiproEmbedConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiproEmbedConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiproEmbedConfigResponse
+        /// </returns>
+        public async Task<QueryAiproEmbedConfigResponse> QueryAiproEmbedConfigWithOptionsAsync(QueryAiproEmbedConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAiproEmbedConfig",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAiproEmbedConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiproEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiproEmbedConfigResponse
+        /// </returns>
+        public QueryAiproEmbedConfigResponse QueryAiproEmbedConfig(QueryAiproEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAiproEmbedConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiproEmbedConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiproEmbedConfigResponse
+        /// </returns>
+        public async Task<QueryAiproEmbedConfigResponse> QueryAiproEmbedConfigAsync(QueryAiproEmbedConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAiproEmbedConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10895,7 +11359,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries dataset optimization suggestions.</para>
+        /// <para>Queries optimization suggestions for datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10937,7 +11401,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries dataset optimization suggestions.</para>
+        /// <para>Queries optimization suggestions for datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10979,7 +11443,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries dataset optimization suggestions.</para>
+        /// <para>Queries optimization suggestions for datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10997,7 +11461,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries dataset optimization suggestions.</para>
+        /// <para>Queries optimization suggestions for datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13239,7 +13703,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in the current organization.</para>
+        /// <para>Queries the list of workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13293,7 +13757,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in the current organization.</para>
+        /// <para>Queries the list of workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13347,7 +13811,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in the current organization.</para>
+        /// <para>Queries the list of workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13365,7 +13829,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces in the current organization.</para>
+        /// <para>Queries the list of workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15383,7 +15847,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified data work.</para>
+        /// <para>Queries the details of a specified data work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15425,7 +15889,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified data work.</para>
+        /// <para>Queries the details of a specified data work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15467,7 +15931,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified data work.</para>
+        /// <para>Queries the details of a specified data work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15485,7 +15949,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified data work.</para>
+        /// <para>Queries the details of a specified data work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18111,6 +18575,150 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新数据源基础属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataSourcePropertiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataSourcePropertiesResponse
+        /// </returns>
+        public UpdateDataSourcePropertiesResponse UpdateDataSourcePropertiesWithOptions(UpdateDataSourcePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
+            {
+                query["DsId"] = request.DsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuickBIOwnerId))
+            {
+                query["QuickBIOwnerId"] = request.QuickBIOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowName))
+            {
+                query["ShowName"] = request.ShowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataSourceProperties",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataSourcePropertiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新数据源基础属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataSourcePropertiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataSourcePropertiesResponse
+        /// </returns>
+        public async Task<UpdateDataSourcePropertiesResponse> UpdateDataSourcePropertiesWithOptionsAsync(UpdateDataSourcePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
+            {
+                query["DsId"] = request.DsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuickBIOwnerId))
+            {
+                query["QuickBIOwnerId"] = request.QuickBIOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowName))
+            {
+                query["ShowName"] = request.ShowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataSourceProperties",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataSourcePropertiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新数据源基础属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataSourcePropertiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataSourcePropertiesResponse
+        /// </returns>
+        public UpdateDataSourcePropertiesResponse UpdateDataSourceProperties(UpdateDataSourcePropertiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataSourcePropertiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新数据源基础属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataSourcePropertiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataSourcePropertiesResponse
+        /// </returns>
+        public async Task<UpdateDataSourcePropertiesResponse> UpdateDataSourcePropertiesAsync(UpdateDataSourcePropertiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataSourcePropertiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Change the embedding status of a report, turn on embedding, or turn off embedding.</para>
         /// </summary>
         /// 
@@ -18951,7 +19559,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the role of a specified member in a workspace. The existing role is overwritten.</para>
+        /// <para>Modifies the role of a specified member in a workspace. Existing roles are overwritten.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19005,7 +19613,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the role of a specified member in a workspace. The existing role is overwritten.</para>
+        /// <para>Modifies the role of a specified member in a workspace. Existing roles are overwritten.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19059,7 +19667,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the role of a specified member in a workspace. The existing role is overwritten.</para>
+        /// <para>Modifies the role of a specified member in a workspace. Existing roles are overwritten.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19077,7 +19685,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the role of a specified member in a workspace. The existing role is overwritten.</para>
+        /// <para>Modifies the role of a specified member in a workspace. Existing roles are overwritten.</para>
         /// </summary>
         /// 
         /// <param name="request">

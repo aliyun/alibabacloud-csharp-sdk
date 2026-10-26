@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryReportPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The average duration (minutes).</para>
+        /// <para>The average time consumed in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? CostTimeAvgMin { get; set; }
 
         /// <summary>
-        /// <para>Current page number for organization member list:</para>
+        /// <para>The current page number of the organization member list.</para>
         /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
+        /// <item><description>Starting value: 1.</description></item>
         /// <item><description>Default value: 1.</description></item>
         /// </list>
         /// 
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page in a paged query.</para>
+        /// <para>The number of entries per page.</para>
         /// <list type="bullet">
         /// <item><description>Default value: 10.</description></item>
-        /// <item><description>Maximum value: 1,000.</description></item>
+        /// <item><description>Maximum value: 1000.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lastDay</b>: Yesterday</description></item>
-        /// <item><description><b>sevenDays</b>: Within seven days</description></item>
-        /// <item><description><b>thirtyDays</b>: Within 30 days</description></item>
+        /// <item><description><b>lastDay</b>: Yesterday.</description></item>
+        /// <item><description><b>sevenDays</b>: Within the last 7 days.</description></item>
+        /// <item><description><b>thirtyDays</b>: Within the last 30 days.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string QueryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security report.</para>
+        /// <para>The report ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6b407e50-e774-406b-9956-da2425c2****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ReportId { get; set; }
 
         /// <summary>
-        /// <para>The resource types.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>report</para>

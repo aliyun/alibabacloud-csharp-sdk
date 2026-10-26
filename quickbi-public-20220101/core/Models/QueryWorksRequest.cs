@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryWorksRequest : TeaModel {
         /// <summary>
-        /// <para>The report ID.</para>
+        /// <para>The work ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

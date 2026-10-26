@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public List<GetWorksEmbedListResponseBodyResultData> Data { get; set; }
             public class GetWorksEmbedListResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>The time when the report was embedded, in the format of YYYY-mm-DD hh:MM:ss.</para>
+                /// <para>The time when the report was embedded. Format: YYYY-MM-DD hh:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>YYYY-mm-DD hh:MM:ss</para>

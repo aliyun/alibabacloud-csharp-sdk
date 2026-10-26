@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryComponentPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The average duration (minutes).</para>
+        /// <para>The average duration, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? CostTimeAvgMin { get; set; }
 
         /// <summary>
-        /// <para>The current page number of the workspace member list:</para>
-        /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
-        /// <item><description>Default value: 1.</description></item>
-        /// </list>
+        /// <para>The current page number of the workspace member list. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,11 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page in a paged query.</para>
-        /// <list type="bullet">
-        /// <item><description>Default value: 10.</description></item>
-        /// <item><description>Maximum value: 1,000.</description></item>
-        /// </list>
+        /// <para>The number of entries per page for a paged query. Default value: 10. Maximum value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,9 +42,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lastDay</b>: Yesterday</description></item>
-        /// <item><description><b>sevenDays</b>: Within seven days</description></item>
-        /// <item><description><b>thirtyDays</b>: Within 30 days</description></item>
+        /// <item><description><b>lastDay</b>: yesterday</description></item>
+        /// <item><description><b>sevenDays</b>: within the last seven days</description></item>
+        /// <item><description><b>thirtyDays</b>: within the last thirty days</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,7 +56,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string QueryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</para>
+        /// <para>The ID of the report. Reports include data portals, dashboards, workbooks, and ad hoc queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6b407e50-e774-406b-9956-da2425c2****</para>
@@ -74,7 +66,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ReportId { get; set; }
 
         /// <summary>
-        /// <para>The resource types.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>report</para>

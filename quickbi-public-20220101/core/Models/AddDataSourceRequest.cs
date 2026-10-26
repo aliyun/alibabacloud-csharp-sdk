@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;userId&quot;: &quot;235345xxxxx24336&quot;,
+        ///   &quot;userAsOwner&quot;:true,
         ///   &quot;workspaceId&quot;: &quot;235345xxxxx24336&quot;,
         ///   &quot;dsType&quot;: &quot;postgresql&quot;,
         ///   &quot;config&quot;: {

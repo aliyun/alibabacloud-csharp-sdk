@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The preset workspace role ID. The existing role is overwritten. Valid values:</para>
+        /// <para>The ID of the preset workspace role. This operation overwrites existing roles. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>25: workspace administrator</description></item>
         /// <item><description>26: workspace developer</description></item>
@@ -29,10 +29,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? RoleId { get; set; }
 
         /// <summary>
-        /// <para>Multiple workspace role IDs, separated by commas. If this parameter is specified, it takes precedence.</para>
-        /// <remarks>
-        /// <para>Notice: roleId and roleIds cannot both be empty</para>
-        /// </remarks>
+        /// <para>The IDs of multiple workspace roles, separated by commas. If this parameter is specified, it takes precedence. <notice>roleId and roleIds cannot be both empty.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>25,26</para>

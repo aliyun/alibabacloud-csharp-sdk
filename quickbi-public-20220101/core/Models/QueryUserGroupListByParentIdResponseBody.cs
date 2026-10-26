@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The description of the sub-user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>用来测试的用户组</para>
+            /// <para>User Group for Testing</para>
             /// </summary>
             [NameInMap("UserGroupDescription")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the sub-user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>popapi测试分组</para>
+            /// <para>popapi test group</para>
             /// </summary>
             [NameInMap("UserGroupName")]
             [Validation(Required=false)]

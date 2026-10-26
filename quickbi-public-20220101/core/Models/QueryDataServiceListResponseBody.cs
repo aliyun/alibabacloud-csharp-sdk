@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     /// <para>Dataset name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试数据集</para>
+                    /// <para>test data source</para>
                     /// </summary>
                     [NameInMap("CubeName")]
                     [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                         /// <para>Remark for the returned field.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>主题配置已存在。</para>
+                        /// <para>Theme Configuration already exists</para>
                         /// </summary>
                         [NameInMap("Desc")]
                         [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                             /// <para>Display name in the cube model (can be in Chinese or English).</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>日期(year)</para>
+                            /// <para>date(year)</para>
                             /// </summary>
                             [NameInMap("Caption")]
                             [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Creator\&quot;s name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张仔龙</para>
+                /// <para>zhangsan</para>
                 /// </summary>
                 [NameInMap("CreatorName")]
                 [Validation(Required=false)]
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Dataset name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试数据集</para>
+                /// <para>test data source</para>
                 /// </summary>
                 [NameInMap("CubeName")]
                 [Validation(Required=false)]
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Description</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试用</para>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Modifier\&quot;s name</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张仔龙</para>
+                /// <para>zhangsan</para>
                 /// </summary>
                 [NameInMap("ModifierName")]
                 [Validation(Required=false)]
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Data service name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试报表</para>
+                /// <para>test report</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Owner\&quot;s name</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>李四</para>
+                /// <para>lisi</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Workspace name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试工作空间</para>
+                /// <para>test workspace</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
