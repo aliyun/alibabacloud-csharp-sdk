@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? ActiveUserCount { get; set; }
 
             /// <summary>
-            /// <para>The formatted date string in UTC+8, in the format of yyyy-MM-dd.</para>
+            /// <para>The formatted date string in the UTC+8 time zone. The format is yyyy-MM-dd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-30</para>

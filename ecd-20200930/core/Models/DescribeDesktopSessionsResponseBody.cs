@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>The duration of remote assistance for the end user. Unit: seconds.</para>
+            /// <para>The duration of remote assistance requested by the end user. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -115,6 +115,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
+
+            /// <summary>
+            /// <para>The IP address of the last connected client.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.0.0:8080</para>
+            /// </summary>
+            [NameInMap("LastClientIp")]
+            [Validation(Required=false)]
+            public string LastClientIp { get; set; }
 
             /// <summary>
             /// <para>The duration of the most recent connection to the cloud computer. Unit: seconds.</para>
@@ -137,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The name of the office network.</para>
+            /// <para>The office network name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestOfficeSite</para>
@@ -147,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to check the session status within the cloud computer.</para>
+            /// <para>Specifies whether to check the session status in the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -206,8 +216,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The end time of the session.
-            /// The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The end time of the session. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-28T02:31:43Z</para>
@@ -217,7 +226,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SessionEndTime { get; set; }
 
             /// <summary>
-            /// <para>The session idle duration. Unit: seconds.</para>
+            /// <para>The idle duration of the session. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -227,8 +236,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? SessionIdleTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the session.
-            /// The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The start time of the session. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-28T02:31:43Z</para>
@@ -248,7 +256,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SessionStatus { get; set; }
 
             /// <summary>
-            /// <para>The purchase method of the cloud computer.</para>
+            /// <para>The billing method of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>monthPackage</para>
@@ -285,7 +293,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ProductName { get; set; }
 
                 /// <summary>
-                /// <para>The terminal device serial number.</para>
+                /// <para>The serial number of the terminal device.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>96c530bc-6095-4014-8bbc-d461b8ac****</para>
@@ -319,7 +327,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of query results.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

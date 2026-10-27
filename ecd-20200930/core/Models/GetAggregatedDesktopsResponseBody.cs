@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetAggregatedDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of aggregation field information.</para>
+        /// <para>The list of aggregated field information.</para>
         /// <remarks>
         /// <para>Notice: When you use an aggregate query, only aggregation results are returned. The list of matched metadata is not returned.</para>
         /// </remarks>

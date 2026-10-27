@@ -27,7 +27,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectDuration { get; set; }
 
             /// <summary>
-            /// <para>The connection end time.</para>
+            /// <para>The time when the connection is disconnected.
+            /// The time is in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-27T20:03:13Z</para>
@@ -37,7 +38,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectEndTime { get; set; }
 
             /// <summary>
-            /// <para>The connection start time.</para>
+            /// <para>The start time of the connection.
+            /// The time is in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-19T10:12:38Z</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectStartTime { get; set; }
 
             /// <summary>
-            /// <para>The connection record ID.</para>
+            /// <para>The ID of the connection record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>528</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The pagination token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A8E03</para>

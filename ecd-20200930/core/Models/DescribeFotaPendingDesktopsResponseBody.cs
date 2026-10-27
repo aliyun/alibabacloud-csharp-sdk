@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFotaPendingDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The cloud computers whose images can be and are pending to be updated to the version specified in <c>TaskUid</c>.</para>
+        /// <para>The list of cloud computers that can be upgraded to the image version corresponding to <c>TaskUid</c> but have not been upgraded.</para>
         /// </summary>
         [NameInMap("FotaPendingDesktops")]
         [Validation(Required=false)]
         public List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> FotaPendingDesktops { get; set; }
         public class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops : TeaModel {
             /// <summary>
-            /// <para>The current version of the image used by the cloud computer.</para>
+            /// <para>The current image version of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1-D-20220513.143129</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestDesktop</para>
+            /// <para>demo-computer</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>To be hidden</para>
+            /// <para>windows</para>
             /// </summary>
             [NameInMap("FotaProject")]
             [Validation(Required=false)]
@@ -72,24 +72,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The ID of the office network.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou+dir-815419****</para>
+            /// <para>cn-shanghai+dir-428216****</para>
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The connected sessions.</para>
+            /// <para>The list of connected sessions.</para>
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions> Sessions { get; set; }
             public class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions : TeaModel {
                 /// <summary>
-                /// <para>The ID of the end user that connects to the cloud computer.</para>
+                /// <para>The ID of the connected user.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>end user id</para>
+                /// <para>alice</para>
                 /// </summary>
                 [NameInMap("EndUserId")]
                 [Validation(Required=false)]
@@ -99,17 +99,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The status of the cloud computer.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: The cloud computer is being created.</description></item>
-            /// <item><description>1: The cloud computer is being started.</description></item>
-            /// <item><description>2: The cloud computer is running.</description></item>
-            /// <item><description>3: The cloud computer is being stopped.</description></item>
-            /// <item><description>5: The cloud computer is stopped.</description></item>
-            /// <item><description>6: The cloud computer expires.</description></item>
-            /// <item><description>7: The cloud computer is deleted.</description></item>
-            /// <item><description>9: Failed to create the cloud computer.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -121,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -131,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token. If the NextToken parameter is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. If the value is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51592A88-0F2C-55E6-AD2C-2AD9C10D****</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot information.</para>
+        /// <para>The snapshots.</para>
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public List<DescribeSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class DescribeSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// <para>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the snapshot was created. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-20T14:52:28Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the snapshot was created. The time is displayed in UTC+0 in the <c>yyyy-mm-ddthh:mm:ssz</c> format in accordance with the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-20T14:52:28Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DeletionTime { get; set; }
 
             /// <summary>
-            /// <para>The snapshot description.</para>
+            /// <para>The description of the snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer to which the snapshot belongs.</para>
+            /// <para>The ID of the cloud desktop to which the snapshot belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-g03l3tlm8djoj****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer name.</para>
+            /// <para>The name of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer status.</para>
+            /// <para>The status of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the cloud disk to which the snapshot belongs.</para>
+            /// <para>The status of the disk to which the snapshot belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The snapshot creation progress, in percentage.</para>
+            /// <para>The creation progress of the snapshot. Unit: percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The remaining time required to create the snapshot. Unit: seconds.</para>
             /// <remarks>
-            /// <para>When <c>Status</c> is <c>PROGRESSING</c>, a <c>RemainTime</c> value of <c>-1</c> indicates that the remaining time is being calculated.</para>
+            /// <para>If <c>Status</c> is <c>PROGRESSING</c>, the value of <c>RemainTime</c> is <c>-1</c>, which indicates that the remaining time is being calculated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RemainTime { get; set; }
 
             /// <summary>
-            /// <para>The restore point ID.</para>
+            /// <para>The ID of the restore point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rp-btgmaa20wkcju****</para>
@@ -182,17 +182,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RestorePointId { get; set; }
 
             /// <summary>
-            /// <para>The restore point name.</para>
+            /// <para>The name of the restore point.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>DataDiskBackup</para>
+            /// <para>Data cloud disk backup</para>
             /// </summary>
             [NameInMap("RestorePointName")]
             [Validation(Required=false)]
             public string RestorePointName { get; set; }
 
             /// <summary>
-            /// <para>The snapshot ID.</para>
+            /// <para>The ID of the snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-2zeipxmnhej803x7****</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// <para>The snapshot name.</para>
+            /// <para>The name of the snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testSnapshotName</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// <para>The snapshot creation type.</para>
+            /// <para>The snapshot type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SnapshotType { get; set; }
 
             /// <summary>
-            /// <para>The capacity of the source cloud disk. Unit: GiB.</para>
+            /// <para>The capacity of the source disk. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SourceDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The type of the source cloud disk.</para>
+            /// <para>The type of the source disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether cloud disk encryption is enabled.</para>
+            /// <para>Indicates whether disk encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Key Management Service (KMS) key used for cloud disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</para>
+            /// <para>The ID of the KMS key used when disk encryption is enabled. You can obtain the key ID by calling the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</para>

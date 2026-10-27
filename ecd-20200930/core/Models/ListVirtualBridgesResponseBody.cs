@@ -67,7 +67,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BridgeType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The expiration time.
+            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-07T02:02:00Z</para>
@@ -109,7 +110,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned. Valid values: 1 to 100. If this parameter is not specified, the default value 100 is used. The number of returned entries can be less than but cannot be greater than the specified number.</para>
+        /// <para>The maximum number of entries to return. Valid values: 1 to 100. If you do not specify this parameter, the default value 100 is used.
+        /// The number of returned entries may be less than the specified value but cannot exceed it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

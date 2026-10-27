@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCloudDriveGroupRequest : TeaModel {
         /// <summary>
-        /// <para>List of user IDs to be set as team space administrators.</para>
+        /// <para>The list of user IDs to be set as team space administrators.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> AdminUserIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud disk in Cloud Drive Service.</para>
+        /// <para>The ID of the Wuying cloud disk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team.</para>
+        /// <para>The ID of the organizational team.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The size of the cloud disk in Cloud Drive Service. Unit: bytes. The size is unlimited.</para>
+        /// <para>The capacity of the Wuying cloud disk team space. Unit: bytes. Default value: unlimited.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

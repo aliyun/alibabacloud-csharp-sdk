@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to check the session status within the cloud computer.</para>
+        /// <para>Specifies whether to check the session status in the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? CheckOsSession { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer IDs. You can specify 1 to 100 IDs.</para>
+        /// <para>The cloud computer ID. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-02-13T02:51:43Z</para>
@@ -58,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The end user ID. This parameter is the same as EndUserId. You only need to specify one of them.</para>
+        /// <para>The end user ID. This parameter is the same as the EndUserId parameter. You only need to specify one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -82,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? FillHardwareInfo { get; set; }
 
         /// <summary>
-        /// <para>The language type of the response.</para>
+        /// <para>The language of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -102,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -112,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows per page in a paged query.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -122,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Wuying Cloud Computer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -153,8 +152,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SessionStatus { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.
-        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-28T02:31:43Z</para>
@@ -164,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The purchase method of the cloud computer.</para>
+        /// <para>The billing method of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>monthPackage</para>

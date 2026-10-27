@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUserConnectionRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The minimum value of the connection duration used as a filter condition.</para>
+        /// <para>The minimum connection duration used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectDurationFrom { get; set; }
 
         /// <summary>
-        /// <para>The maximum value of the connection duration used as a filter condition.</para>
+        /// <para>The maximum connection duration used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectDurationTo { get; set; }
 
         /// <summary>
-        /// <para>The minimum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The minimum end time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631266200000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectEndTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The maximum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The maximum end time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631268000000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectEndTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The minimum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The minimum start time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631239200000</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectStartTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The maximum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The maximum start time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631241000000</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectStartTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer pool ID.</para>
+        /// <para>The ID of the cloud computer pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer ID.</para>
+        /// <para>The ID of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-138dsptkrt00u****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The authorized user ID.</para>
+        /// <para>The ID of the authorized user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,11 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The type of user account system. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SIMPLE: convenience account</description></item>
-        /// <item><description>AD_CONNECTOR: enterprise AD account</description></item>
-        /// </list>
+        /// <para>The type of the user account system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SIMPLE</para>
@@ -116,9 +112,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The number of entries to return per page in a paging query.
+        /// Maximum value: 100.
+        /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -128,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that there is no next page.</para>
+        /// <para>The token used to start the next query. An empty NextToken indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -138,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

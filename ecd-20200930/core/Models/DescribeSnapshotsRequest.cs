@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer ID.</para>
+        /// <para>The ID of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer name.</para>
+        /// <para>The name of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopScenario { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the snapshots were created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC.</para>
+        /// <para>The end time of the snapshot creation. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-31T06:32:31Z</para>
@@ -54,11 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging.    </para>
-        /// <list type="bullet">
-        /// <item><description>Maximum value: 100.    </description></item>
-        /// <item><description>Default value: 10.</description></item>
-        /// </list>
+        /// <para>The number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken parameter value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8051af8d01b5479bec9f5ddf02e4a8fbd0ab6e7e43f8****</para>
@@ -88,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot ID.</para>
+        /// <para>The ID of the snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-2ze81owrnv9pity4****</para>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the snapshot. The name must be 2 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter. The name cannot start with <c>auto</c> to avoid conflicts with automatic snapshot names.</para>
+        /// <para>The display name of the snapshot. The name must be 2 to 127 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-). To prevent name conflicts with automatic snapshots, the name cannot start with <c>auto</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test data disk</para>
@@ -129,9 +125,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud disk from which the snapshot is created.</para>
+        /// <para>The type of the disk for which you want to create a snapshot.</para>
         /// <remarks>
-        /// <para>The value is case-insensitive.</para>
+        /// <para>The values are not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -142,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SourceDiskType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the snapshots were created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC.</para>
+        /// <para>The start time of the snapshot creation. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-30T06:32:31Z</para>

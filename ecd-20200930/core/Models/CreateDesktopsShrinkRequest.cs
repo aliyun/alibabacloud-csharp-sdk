@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AppRuleId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment.</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when <c>ChargeType</c> is set to <c>PrePaid</c>.</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when ChargeType is set to PrePaid. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop template ID. If no template ID is specified, you can create a cloud desktop by specifying the required fields.</para>
+        /// <para>The ID of the cloud desktop template. If you do not specify a template ID, you can complete the creation by specifying the required fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b-je9hani001wfn****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Amount { get; set; }
 
             /// <summary>
-            /// <para>The cloud desktop template ID.</para>
+            /// <para>The ID of the cloud desktop template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b-je9hani001wfn****</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The cloud desktop name. The naming rules are as follows:</para>
+            /// <para>The name of the cloud desktop. The name must meet the following rules:</para>
             /// <list type="bullet">
             /// <item><description>The name can be up to 64 characters in length.</description></item>
-            /// <item><description>The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>The name must start with a letter or a Chinese character, and cannot start with http:// or https://.</description></item>
             /// <item><description>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</description></item>
             /// </list>
             /// 
@@ -105,24 +105,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The list of users to whom the cloud desktops are assigned.</para>
+            /// <para>The list of users to whom the cloud desktop is assigned.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
             public List<string> EndUserIds { get; set; }
 
             /// <summary>
-            /// <para>The custom hostname of the cloud desktop. Settings are supported only for cloud desktops with the Windows operating system type in AD office networks.</para>
-            /// <para>The naming rules for the hostname are as follows:</para>
+            /// <para>The custom settings for the hostname of the cloud desktop. This parameter is supported only for cloud desktops whose operating system is Windows in an AD office network.</para>
+            /// <para>The hostname must meet the following rules:</para>
             /// <list type="bullet">
             /// <item><description>The hostname must be 2 to 15 characters in length.</description></item>
-            /// <item><description>The hostname can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</description></item>
+            /// <item><description>The hostname can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or contain only digits.</description></item>
             /// </list>
-            /// <para>When you create multiple cloud desktops, you can use the <c>name_prefix[begin_number,bits]name_suffix</c> format to name the cloud desktops in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</para>
+            /// <para>When you create multiple cloud desktops, you can use the name_prefix[begin_number,bits]name_suffix format to name them in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</para>
             /// <list type="bullet">
-            /// <item><description><c>name_prefix</c>: the prefix of the hostname.</description></item>
-            /// <item><description><c>[begin_number,bits]</c>: the sequential number in the hostname. <c>begin_number</c> specifies the start number. Valid values: 0 to 999999. Default value: 0. <c>bits</c> specifies the number of digits. Valid values: 1 to 6. Default value: 6.</description></item>
-            /// <item><description><c>name_suffix</c>: the suffix of the hostname.</description></item>
+            /// <item><description>name_prefix: the prefix of the hostname.</description></item>
+            /// <item><description>[begin_number,bits]: the sequential number in the hostname. begin_number is the starting number. Valid values: 0 to 999999. Default value: 0. bits is the number of digits. Valid values: 1 to 6. Default value: 6.</description></item>
+            /// <item><description>name_suffix: the suffix of the hostname.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Hostname { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable disk encryption.</para>
+            /// <para>Specifies whether to enable cloud disk encryption. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</para>
+            /// <para>The ID of the Key Management Service (KMS) key used when cloud disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain the key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This field is not publicly available.</para>
+        /// <para>This field is currently not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChannelCookie { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud desktop.</para>
+        /// <para>The billing method of the cloud desktop. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The parameters for creating a cloud desktop without a template. This parameter is invalid when the BundleID parameter is specified.</para>
+        /// <para>The parameters for creating a cloud desktop without a template. This parameter is invalid if the BundleId parameter is specified.</para>
         /// </summary>
         [NameInMap("DesktopAttachment")]
         [Validation(Required=false)]
@@ -194,10 +194,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopMemberIp { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop name. The naming rules are as follows:</para>
+        /// <para>The name of the cloud desktop. The name must meet the following rules:</para>
         /// <list type="bullet">
         /// <item><description>The name can be up to 64 characters in length.</description></item>
-        /// <item><description>The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The name must start with a letter or a Chinese character, and cannot start with http:// or https://.</description></item>
         /// <item><description>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</description></item>
         /// </list>
         /// 
@@ -209,14 +209,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>Controls the format of the desktop name.</para>
+        /// <para>The format of the cloud desktop name.</para>
         /// </summary>
         [NameInMap("DesktopNameModel")]
         [Validation(Required=false)]
         public string DesktopNameModelShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically append a suffix to the cloud desktop name when you create multiple cloud desktops in a batch.</para>
+        /// <para>Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops in a batch. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? DesktopNameSuffix { get; set; }
 
         /// <summary>
-        /// <para>The details of the scheduled task for the cloud desktop. This parameter is being deprecated. Use the TimerGroupId parameter instead.</para>
+        /// <para>The details of the scheduled tasks for the cloud desktop. This parameter is being deprecated. Use the TImerGroupId parameter instead.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<CreateDesktopsShrinkRequestDesktopTimers> DesktopTimers { get; set; }
         public class CreateDesktopsShrinkRequestDesktopTimers : TeaModel {
             /// <summary>
-            /// <para>Specifies whether end users can configure scheduled tasks.</para>
+            /// <para>Specifies whether to allow end users to configure scheduled tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The cron expression of the scheduled task.</para>
             /// <remarks>
-            /// <para>Notice: The time must be specified in UTC. For example, to specify 00:00 (UTC+8) every day, set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</notice></para>
+            /// <para>Notice: You must specify the time in UTC. For example, to specify 00:00:00 every day in UTC+8 (Beijing time), pass 0 0 16 ? * 1,2,3,4,5,6,7.</notice></para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to forcefully execute the scheduled task.</para>
+            /// <para>Specifies whether to forcibly execute the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? Enforce { get; set; }
 
             /// <summary>
-            /// <para>The time interval. Unit: minutes.</para>
+            /// <para>The time interval, in minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Interval { get; set; }
 
             /// <summary>
-            /// <para>The operation type of the scheduled task. Currently, only the disconnect scheduled task is supported.</para>
+            /// <para>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Shutdown</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized user IDs to add to the cloud desktops. You can specify 1 to 100 user IDs.</para>
+        /// <para>The list of IDs of authorized users to be added to the cloud desktop. You can specify 1 to 100 user IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExtendInfo { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop pool ID.</para>
+        /// <para>The ID of the cloud desktop pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-boyczi8enfyc5****</para>
@@ -353,17 +353,27 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The custom hostname of the cloud desktop. Settings are supported only for Windows cloud desktops with the Windows operating system type in AD office networks.</para>
-        /// <para>The naming rules for the hostname are as follows:</para>
+        /// <para>The GPU driver version of the host.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Grid19</para>
+        /// </summary>
+        [NameInMap("HostGpuDriverVersion")]
+        [Validation(Required=false)]
+        public string HostGpuDriverVersion { get; set; }
+
+        /// <summary>
+        /// <para>The custom settings for the hostname of the cloud desktop. This parameter is supported only for cloud desktops whose operating system is Windows in an AD office network.</para>
+        /// <para>The hostname must meet the following rules:</para>
         /// <list type="bullet">
         /// <item><description>The hostname must be 2 to 15 characters in length.</description></item>
-        /// <item><description>The hostname can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</description></item>
+        /// <item><description>The hostname can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or contain only digits.</description></item>
         /// </list>
-        /// <para>When you create multiple cloud desktops, you can use the <c>name_prefix[begin_number,bits]name_suffix</c> format to name the cloud desktops in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</para>
+        /// <para>When you create multiple cloud desktops, you can use the name_prefix[begin_number,bits]name_suffix format to name them in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</para>
         /// <list type="bullet">
-        /// <item><description><c>name_prefix</c>: the prefix of the hostname.</description></item>
-        /// <item><description><c>[begin_number,bits]</c>: the sequential number in the hostname. <c>begin_number</c> specifies the start number. Valid values: 0 to 999999. Default value: 0. <c>bits</c> specifies the number of digits. Valid values: 1 to 6. Default value: 6.</description></item>
-        /// <item><description><c>name_suffix</c>: the suffix of the hostname.</description></item>
+        /// <item><description>name_prefix: the prefix of the hostname.</description></item>
+        /// <item><description>[begin_number,bits]: the sequential number in the hostname. begin_number is the starting number. Valid values: 0 to 999999. Default value: 0. bits is the number of digits. Valid values: 1 to 6. Default value: 6.</description></item>
+        /// <item><description>name_suffix: the suffix of the hostname.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -374,7 +384,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>The parameters for purchasing a monthly hours package.</para>
+        /// <para>The purchase parameters for the monthly hourly package.</para>
         /// </summary>
         [NameInMap("MonthDesktopSetting")]
         [Validation(Required=false)]
@@ -382,7 +392,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public class CreateDesktopsShrinkRequestMonthDesktopSetting : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This field is not publicly available.</para>
+            /// <para>This field is currently not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -394,7 +404,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This field is not publicly available.</para>
+            /// <para>This field is currently not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -405,7 +415,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The plan option when purchasing a monthly hours package. Valid values: 120, 250, and 360.</para>
+            /// <para>The plan selected when purchasing a monthly hourly package. Valid values: 120, 250, and 360.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -417,7 +427,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The office network ID.</para>
+        /// <para>The ID of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-387822****</para>
@@ -427,7 +437,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The organizational unit (OU) path. If specified, the cloud desktop is added to the corresponding OU in Active Directory (AD).</para>
+        /// <para>The OU path. After this parameter is specified, the cloud desktop joins the corresponding organizational unit (OU) in Active Directory (AD).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.com/wuyingtest/computers</para>
@@ -437,9 +447,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OuPath { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the resource. The unit is specified by <c>PeriodUnit</c>. This parameter takes effect and is required only when <c>ChargeType</c> is set to <c>PrePaid</c>.</para>
+        /// <para>The subscription period of the resource. The unit is specified by PeriodUnit. This parameter takes effect and is required only when ChargeType is set to PrePaid.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values of this parameter:</para>
+        /// <item><description><para>If PeriodUnit is set to Month, valid values of this parameter are:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -447,7 +457,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <item><description>6</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values of this parameter:</para>
+        /// <item><description><para>If PeriodUnit is set to Year, valid values of this parameter are:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -466,7 +476,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription billing method duration.</para>
+        /// <para>The time unit for the subscription billing method. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -476,7 +486,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The ID of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system-all-enabled-policy</para>
@@ -486,7 +496,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotional event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23141</para>
@@ -496,7 +506,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The additional parameters for a specific purchase type.</para>
+        /// <para>The additional parameters for specific purchase types.</para>
         /// </summary>
         [NameInMap("PurchaseOptions")]
         [Validation(Required=false)]
@@ -513,7 +523,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string QosRuleId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -524,7 +534,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID for resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
+        /// <para>The user ID for resource ownership in the reseller pattern. This parameter is not required in the non-reseller pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1828644634819902</para>
@@ -534,7 +544,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The resource reserve pool ID (rp-xxx). This parameter is optional. If specified, the cloud desktop is created from the reserve pool, and compute resources are provided by the reserve pool without generating a compute fee order. If ZoneId is explicitly specified, it must match the zone of the reserve pool.</para>
+        /// <para>The ID of compute resource pool (rp-xxx). This parameter is optional. If this parameter is specified, the cloud desktop is created from compute resource pool, computing resources are provided by compute resource pool, and no computing fee order is generated. If the ZoneId parameter is explicitly specified, it must be the same as the zone of compute resource pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rp-xxx</para>
@@ -544,7 +554,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ReservePoolId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WUYING resource group.</para>
+        /// <para>The ID of the Wuying resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-3mtuc28rx95lx****</para>
@@ -555,7 +565,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This field is not publicly available.</para>
+        /// <para>This field is currently not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -566,7 +576,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SavingPlanId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WUYING automatic snapshot policy.</para>
+        /// <para>The ID of the Wuying automatic snapshot policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-28mp6my0l6zow****</para>
@@ -576,12 +586,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The purchase method of the cloud desktop. Valid values:</para>
+        /// <para>The billing method of the cloud desktop. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>prePaid: Monthly subscription with unlimited duration.</description></item>
-        /// <item><description>postPaid: Pay-as-you-go.</description></item>
-        /// <item><description>monthPackage: Monthly hours package.</description></item>
-        /// <item><description>jvsAgentPackage: JVS Agent hours package.</description></item>
+        /// <item><description>prePaid: monthly subscription without a duration limit.</description></item>
+        /// <item><description>postPaid: pay-as-you-go.</description></item>
+        /// <item><description>monthPackage: monthly duration package.</description></item>
+        /// <item><description>jvsAgentPackage: JVS agent duration package.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -641,9 +651,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TimerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop assignment mode.</para>
+        /// <para>The assignment mode of the cloud desktop. Valid values:</para>
         /// <remarks>
-        /// <para>If <c>EndUserId</c> is not specified, the created cloud desktops are not assigned to any user.</para>
+        /// <para>If EndUserId is not specified, the created cloud desktop is not assigned to any user.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -661,7 +671,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<CreateDesktopsShrinkRequestUserCommands> UserCommands { get; set; }
         public class CreateDesktopsShrinkRequestUserCommands : TeaModel {
             /// <summary>
-            /// <para>The command content.</para>
+            /// <para>The content of the command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bmV3LWl0ZW0gZDpcdGVzdF91c2VyX2NvbW1hbmRzLnR4dCAtdHlwZSBm****</para>
@@ -671,7 +681,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The encoding method of the command content (CommandContent).</para>
+            /// <para>The encoding method of the command content. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>Base64</para>
@@ -681,7 +691,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ContentEncoding { get; set; }
 
             /// <summary>
-            /// <para>The language type of the command.</para>
+            /// <para>The language type of the command. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>RunPowerShellScript</para>
@@ -705,7 +715,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable disk encryption.</para>
+        /// <para>Specifies whether to enable cloud disk encryption. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -715,7 +725,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? VolumeEncryptionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</para>
+        /// <para>The ID of the Key Management Service (KMS) key used when cloud disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain the key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</para>

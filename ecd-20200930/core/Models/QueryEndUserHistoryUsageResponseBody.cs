@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class QueryEndUserHistoryUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>269BDB16-2CD8-4865-84BD-11C40BC21DB0</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of user usage duration entries on the current page.</para>
+        /// <para>The list of user usage durations on the current page.</para>
         /// </summary>
         [NameInMap("UserUsageInfoList")]
         [Validation(Required=false)]
         public List<QueryEndUserHistoryUsageResponseBodyUserUsageInfoList> UserUsageInfoList { get; set; }
         public class QueryEndUserHistoryUsageResponseBodyUserUsageInfoList : TeaModel {
             /// <summary>
-            /// <para>The remarks of the user. This parameter has a value only for convenience account users.</para>
+            /// <para>The description of the user. This parameter has a value only for convenience users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test user</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of usage duration details for each desktop.</para>
+            /// <para>The list of usage duration details for each cloud desktop.</para>
             /// </summary>
             [NameInMap("DesktopUsageList")]
             [Validation(Required=false)]
             public List<QueryEndUserHistoryUsageResponseBodyUserUsageInfoListDesktopUsageList> DesktopUsageList { get; set; }
             public class QueryEndUserHistoryUsageResponseBodyUserUsageInfoListDesktopUsageList : TeaModel {
                 /// <summary>
-                /// <para>The desktop ID.</para>
+                /// <para>The ID of the cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecd-abc123</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopId { get; set; }
 
                 /// <summary>
-                /// <para>The desktop name.</para>
+                /// <para>The name of the cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DemoDesktop</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopName { get; set; }
 
                 /// <summary>
-                /// <para>The usage duration of the user on the desktop, in seconds.</para>
+                /// <para>The usage duration of the user on the cloud desktop, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1800</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The display name of the user. For convenience account users, this is the actual nickname. For AD users, this is the display name.</para>
+            /// <para>The display name of the user. For convenience users, this is the real nickname. For AD users, this is the display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John Smith</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The end user ID.</para>
+            /// <para>The ID of the end user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user01</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The username. For convenience account users, this is the nickname. For AD users, this is the UserPrincipalName.</para>
+            /// <para>The username. For convenience users, this is the nickname. For AD users, this is the UserPrincipalName.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhangsan</para>
@@ -126,21 +126,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// <para>The list of organization paths. For convenience account users, this contains multiple organization paths. For AD users, this is the organizational unit (OU) path.</para>
+            /// <para>The list of organization paths. For convenience users, this includes multiple organization paths. For AD users, this is the OU path.</para>
             /// </summary>
             [NameInMap("OrgPathList")]
             [Validation(Required=false)]
             public List<string> OrgPathList { get; set; }
 
             /// <summary>
-            /// <para>The list of user groups. This parameter has a value only for convenience account users.</para>
+            /// <para>The list of user groups. This parameter has a value only for convenience users.</para>
             /// </summary>
             [NameInMap("UserGroupList")]
             [Validation(Required=false)]
             public List<QueryEndUserHistoryUsageResponseBodyUserUsageInfoListUserGroupList> UserGroupList { get; set; }
             public class QueryEndUserHistoryUsageResponseBodyUserUsageInfoListUserGroupList : TeaModel {
                 /// <summary>
-                /// <para>The user group ID.</para>
+                /// <para>The ID of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ug-12345678</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string UserGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The user group name.</para>
+                /// <para>The name of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Default user group</para>

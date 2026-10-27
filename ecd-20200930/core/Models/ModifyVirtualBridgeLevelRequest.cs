@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect and is optional only when the billing method is <c>PrePaid</c>.</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect and is optional only when the billing method is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. Valid values of this parameter are determined by the value of the <c>PeriodUnit</c> parameter.</para>
+        /// <para>The renewal duration. The valid values depend on the value of the <c>PeriodUnit</c> parameter.</para>
         /// <list type="bullet">
         /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, and 6.</description></item>
         /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are 1, 2, and 3.</description></item>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration for the prepaid cloud disk. This parameter takes effect and is required only when the <c>CdsChargeType</c> parameter is set to <c>PrePaid</c>.</para>
+        /// <para>The unit of the subscription duration for the cloud disk. This parameter takes effect and is required only when the <c>CdsChargeType</c> parameter is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. You can call the pricing query operation to obtain the list of matched promotion IDs.</para>
+        /// <para>The promotion ID. You can call the pricing API operation to obtain the list of matched promotion IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23141</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteBridgeInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The virtual bridge ID.</para>
+        /// <para>The ID of the virtual bridge.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vb-fsifhaiushfishf***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BridgeId { get; set; }
 
         /// <summary>
-        /// <para>The virtual bridge specifications.</para>
+        /// <para>The specifications of the virtual bridge.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vb.pro</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string License { get; set; }
 
         /// <summary>
-        /// <para>The office network ID.</para>
+        /// <para>The ID of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-387822****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

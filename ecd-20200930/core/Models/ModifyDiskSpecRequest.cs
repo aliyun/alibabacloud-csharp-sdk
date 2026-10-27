@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment.</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to <c>true</c>, make sure that your account balance is sufficient. Otherwise, abnormal orders are generated.</description></item>
-        /// <item><description>If you set this parameter to <c>false</c>, you can log on to the console and make the payment on the <b>Expenses and Costs</b> page based on the returned order ID.</description></item>
+        /// <item><description>If you set this parameter to <c>true</c>, make sure that your account balance is sufficient. Otherwise, an abnormal order is generated.</description></item>
+        /// <item><description>If you set this parameter to <c>false</c>, you can log on to the console and pay for the order based on the returned order ID on the <b>Expenses and Costs</b> page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer ID.</para>
+        /// <para>The cloud desktop ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. You can obtain the list of matched promotion IDs by calling the pricing query operation.</para>
+        /// <para>The ID of the promotion. You can call the pricing API operation to obtain the list of matched promotion IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by cloud desktops.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the resource ownership in reseller mode. You do not need to specify this parameter if you are not in reseller mode.</para>
+        /// <para>The user ID of the resource owner in the reseller model. This parameter is not required in the non-reseller model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1422724566551XXX</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the system cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</para>
+        /// <para>The performance level of the system cloud disk. You can set the disk performance level when the cloud desktop specification is Enterprise Graphics or High-frequency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the data cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</para>
+        /// <para>The performance level of the data cloud disk. You can set the disk performance level when the cloud desktop specification is Enterprise Graphics or High-frequency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>

@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The business channel type code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1 (default): Enterprise Edition.</description></item>
+        /// <item><description>1: Enterprise Edition. This is the default value.</description></item>
         /// <item><description>3: Cloud Office.</description></item>
         /// <item><description>10: Standard Edition.</description></item>
         /// <item><description>20: Business Edition.</description></item>
         /// <item><description>30: Education Business Edition.</description></item>
-        /// <item><description>40: Cloud Phone isolated resources.</description></item>
+        /// <item><description>40: Cloud phone isolated resources.</description></item>
         /// <item><description>50: AgentBay.</description></item>
         /// </list>
         /// 
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The format is the same as StartTime. If the value is later than the current time, it is automatically truncated to the current time.</para>
+        /// <para>The end time of the query. The format is the same as that of StartTime. If the specified time is later than the current time, it is automatically truncated to the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-12-01T06:32:31Z</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. If specified, only active users of cloud desktops in this workspace are counted.</para>
+        /// <para>The workspace ID. If specified, only active users of desktops in this workspace are counted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-885351****</para>
@@ -49,11 +49,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The aggregation interval for statistics. Valid values:</para>
+        /// <para>The aggregation granularity of the statistics. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ONE_MINUTE: 1 minute.</description></item>
         /// <item><description>TWO_MINUTE: 2 minutes.</description></item>
-        /// <item><description>FIVE_MINUTE (default): 5 minutes.</description></item>
+        /// <item><description>FIVE_MINUTE: 5 minutes. This is the default value.</description></item>
         /// <item><description>ONE_HOUR: 1 hour.</description></item>
         /// <item><description>ONE_DAY: 1 day.</description></item>
         /// </list>
@@ -66,12 +66,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The following formats are supported:</para>
+        /// <para>The start time of the query. Two formats are supported:</para>
         /// <list type="bullet">
         /// <item><description>UTC format: yyyy-MM-ddTHH:mm:ssZ.</description></item>
         /// <item><description>Standard format: yyyy-MM-dd HH:mm:ss.</description></item>
         /// </list>
-        /// <para>The value cannot be earlier than 6 months before the current time or later than EndTime.</para>
+        /// <para>The start time cannot be earlier than six months ago or later than the end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-30T06:32:31Z</para>

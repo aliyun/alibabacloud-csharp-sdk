@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeResourceByCenterPolicyIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of resources.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Count { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("ResourceModelList")]
         [Validation(Required=false)]
         public List<DescribeResourceByCenterPolicyIdResponseBodyResourceModelList> ResourceModelList { get; set; }
         public class DescribeResourceByCenterPolicyIdResponseBodyResourceModelList : TeaModel {
             /// <summary>
-            /// <para>The cloud applications.</para>
+            /// <para>The list of cloud applications.</para>
             /// </summary>
             [NameInMap("AppModelList")]
             [Validation(Required=false)]
             public List<DescribeResourceByCenterPolicyIdResponseBodyResourceModelListAppModelList> AppModelList { get; set; }
             public class DescribeResourceByCenterPolicyIdResponseBodyResourceModelListAppModelList : TeaModel {
                 /// <summary>
-                /// <para>The application ID. This parameter is only applicable to cloud applications.</para>
+                /// <para>The application ID. This parameter is specific to resources whose resource type is App.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the cloud computer types supported by Alibaba Cloud Workspace.</para>
+            /// <para>The target cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by WUYING Workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.enterprise_office.8c32g</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The OS type.</para>
+            /// <para>The operating system type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The service type.</para>
+            /// <para>The product type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desktop</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The number of associated resource groups</para>
+            /// <para>The number of associated resource groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the resource.</para>
+            /// <para>The region where the resource resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The resource status.</para>
+            /// <para>The status of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Stopped</para>

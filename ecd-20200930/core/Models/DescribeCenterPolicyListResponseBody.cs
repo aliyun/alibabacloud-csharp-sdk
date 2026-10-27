@@ -813,6 +813,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferSpeedLocation { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("FolderSync")]
+            [Validation(Required=false)]
+            public string FolderSync { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the image quality policy is enabled for GPU-accelerated cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</para>
             /// 
             /// <b>Example:</b>

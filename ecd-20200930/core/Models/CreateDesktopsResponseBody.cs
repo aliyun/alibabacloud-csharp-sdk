@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The order ID.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the ChargeType request parameter is set to PrePaid.</para>
+        /// <para>This parameter is returned when the ChargeType request parameter is set to PrePaid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

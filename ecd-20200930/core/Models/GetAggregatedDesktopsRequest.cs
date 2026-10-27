@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetAggregatedDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The aggregation factor.</para>
+        /// <para>The aggregation factor. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>directory_id: office network ID</description></item>
+        /// <item><description>region: region</description></item>
+        /// <item><description>policy_group_id: cloud desktop policy ID</description></item>
+        /// <item><description>status: cloud desktop status</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>STATUS</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The virtual bridge ID.</para>
+        /// <para>The ID of the virtual bridge.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. The valid values of this parameter are determined by the value of the <c>PeriodUnit</c> parameter.</para>
+        /// <para>The renewal duration. The valid values depend on the value of the <c>PeriodUnit</c> parameter.</para>
         /// <list type="bullet">
         /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, and 6.</description></item>
         /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are 1, 2, and 3.</description></item>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Wuying Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeResourceByCenterPolicyIdRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.    </para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Maximum value: 100.    </description></item>
         /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l69tQX7yFxx6/4dbooBAOc</para>
@@ -45,14 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The service type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>app: cloud applications.</description></item>
-        /// <item><description>resourceGroup: resource groups.</description></item>
-        /// <item><description>desktop: cloud computers.</description></item>
-        /// <item><description>desktopGroup: cloud computer shares.</description></item>
-        /// </list>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desktop</para>

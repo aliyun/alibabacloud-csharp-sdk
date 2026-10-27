@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CronExpression { get; set; }
 
         /// <summary>
-        /// <para>The type of cloud disk for which the automatic snapshot policy creates snapshots.</para>
+        /// <para>The type of the cloud disk for which the automatic snapshot policy creates snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -41,17 +41,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</para>
+        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), and hyphens (-). Default value: empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统自动快照</para>
+        /// <para>System automatic snapshot</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

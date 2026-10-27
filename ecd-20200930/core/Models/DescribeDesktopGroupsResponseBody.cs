@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of shared cloud computers.</para>
+        /// <para>The list of shared cloud desktops.</para>
         /// </summary>
         [NameInMap("DesktopGroups")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The number of concurrent sessions allowed per cloud computer in a multi-session shared cloud computer group with multiple instances.</para>
+            /// <para>The number of concurrent sessions allowed per cloud desktop in shared cloud desktops with multiple sessions and multiple desktops.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? BindAmount { get; set; }
 
             /// <summary>
-            /// <para>This parameter applies only to subscription shared cloud computers and indicates the initial number of cloud computers purchased. Valid values: 0 to 200.</para>
+            /// <para>This parameter is applicable only to subscription shared cloud desktops and indicates the number of initially purchased cloud desktops. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Comments { get; set; }
 
             /// <summary>
-            /// <para>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds.</para>
+            /// <para>The maximum duration for a session to remain connected. When the session connection duration reaches this value, the session is automatically disconnected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600000</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? ConnectDuration { get; set; }
 
             /// <summary>
-            /// <para>The list of cloud computer counts by status.</para>
+            /// <para>The list of the number of cloud desktops in each state.</para>
             /// </summary>
             [NameInMap("CountPerStatus")]
             [Validation(Required=false)]
             public List<DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus> CountPerStatus { get; set; }
             public class DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus : TeaModel {
                 /// <summary>
-                /// <para>The number of cloud computers.</para>
+                /// <para>The number of cloud desktops.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The cloud computer status.</para>
+                /// <para>The cloud desktop state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The number of vCPUs.</para>
+            /// <para>The number of vCPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -106,8 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
-            /// <para>The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-17T14:51:07Z</para>
@@ -137,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DataDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The user disk capacity. Unit: GiB.</para>
+            /// <para>The user disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -147,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DataDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud computers that have been created.</para>
+            /// <para>The number of created cloud desktops.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -167,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the shared cloud computer.</para>
+            /// <para>The shared cloud desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CloudComputerPool01</para>
@@ -177,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by Wuying Cloud Computer.</para>
+            /// <para>The target cloud desktop specification. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the specification IDs supported by Wuying Cloud Computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.enterprise_office.4c4g</para>
@@ -187,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized users for the shared cloud computer.</para>
+            /// <para>The number of authorized users for the shared cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -227,8 +226,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the subscription shared cloud computer.</para>
-            /// <para>The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The expiration time of the subscription shared cloud desktop. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-17T16:00:00Z</para>
@@ -275,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The maximum idle duration after a user session is established. If no keyboard or mouse operations are performed within this duration, the session is disconnected. Unit: milliseconds.</para>
+            /// <para>The maximum idle time before a user session is disconnected. If no keyboard or mouse operations are performed within this maximum duration after a user session is established, the session is disconnected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90000</para>
@@ -295,7 +293,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the directory is an LDAP directory.</para>
+            /// <para>Indicates whether it is an LDAP directory.</para>
             /// </summary>
             [NameInMap("IsLdap")]
             [Validation(Required=false)]
@@ -303,6 +301,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</para>
+            /// <para>When a session is actively disconnected by the user or unexpectedly disconnected due to other factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within this retention period, the session is logged off and unsaved data is destroyed. If the user successfully reconnects within this retention period, the user can enter the original session and access the data before the disconnection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180000</para>
@@ -312,7 +311,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? KeepDuration { get; set; }
 
             /// <summary>
-            /// <para>The load balancing policy for multi-session shared cloud computers with multiple instances.</para>
+            /// <para>The load balancing policy for shared cloud desktops with multiple sessions and multiple desktops.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -323,7 +322,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>For pay-as-you-go shared cloud computers, this parameter indicates the maximum number of cloud computers that can be created.</description></item>
+            /// <item><description>For pay-as-you-go shared cloud desktops, this parameter indicates the maximum number of cloud desktops that can be created.</description></item>
+            /// <item><description>For subscription shared cloud desktops, this parameter indicates the sum of the initially purchased cloud desktops (<c>BuyDesktopsCount</c>) and the number of cloud desktops allowed for automatic creation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -345,7 +345,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>For pay-as-you-go shared cloud computers, this parameter indicates the minimum number of cloud computers that can be created.</description></item>
+            /// <item><description>For pay-as-you-go shared cloud desktops, this parameter indicates the minimum number of cloud desktops to be created.</description></item>
+            /// <item><description>For subscription shared cloud desktops, this parameter is equivalent to <c>BuyDesktopsCount</c> and indicates the number of initially purchased cloud desktops.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -356,7 +357,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MinDesktopsCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the office network to which the shared cloud computer belongs.</para>
+            /// <para>The name of the office network to which the shared cloud desktop belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-467671****</para>
@@ -366,7 +367,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the office network to which the shared cloud computers belong.</para>
+            /// <para>The ID of the office network to which the shared cloud computer belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+os-c5cy7q578s8jc****</para>
@@ -416,17 +417,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OwnBundleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer template.</para>
+            /// <para>The cloud desktop template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Standard Office Template</para>
+            /// <para>Standard office template</para>
             /// </summary>
             [NameInMap("OwnBundleName")]
             [Validation(Required=false)]
             public string OwnBundleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the shared cloud computer.</para>
+            /// <para>The shared cloud desktop type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -456,14 +457,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>The list of cloud computer policy IDs.</para>
+            /// <para>The list of cloud desktop policy IDs.</para>
             /// </summary>
             [NameInMap("PolicyGroupIdList")]
             [Validation(Required=false)]
             public List<string> PolicyGroupIdList { get; set; }
 
             /// <summary>
-            /// <para>The policy name associated with the shared cloud computer.</para>
+            /// <para>The Policy Name associated with the shared cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>All enabled policy</para>
@@ -473,7 +474,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupName { get; set; }
 
             /// <summary>
-            /// <para>The list of cloud computer policy names.</para>
+            /// <para>The list of cloud desktop policy names.</para>
             /// </summary>
             [NameInMap("PolicyGroupNameList")]
             [Validation(Required=false)]
@@ -490,7 +491,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the QoS rule.</para>
+            /// <para>The ID of the bandwidth throttling rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-5605u0gelk200****</para>
@@ -500,9 +501,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string QosRuleId { get; set; }
 
             /// <summary>
-            /// <para>The session occupancy threshold used as the auto scaling trigger condition for multi-session shared cloud computers. The session occupancy is calculated by using the following formula:</para>
-            /// <para><c>Session occupancy = Number of bound sessions / (Total number of cloud computers × Maximum number of sessions supported by each cloud computer) × 100%</c></para>
-            /// <para>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</para>
+            /// <para>The session usage threshold, which is used as the trigger for auto scaling of shared cloud desktops with multiple sessions and multiple desktops. The session usage is calculated by using the following formula:</para>
+            /// <para><c>Session usage = Number of attached sessions / (Total number of cloud desktop resources × Maximum number of sessions supported per cloud desktop) × 100%</c></para>
+            /// <para>When the session usage reaches this threshold, new cloud desktops are created. When the session usage does not reach this threshold, redundant cloud desktops are deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.85</para>
@@ -512,7 +513,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? RatioThreshold { get; set; }
 
             /// <summary>
-            /// <para>The reset type of the shared cloud computer.</para>
+            /// <para>The reset type of the shared cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -520,6 +521,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("ResetType")]
             [Validation(Required=false)]
             public long? ResetType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("SessionType")]
+            [Validation(Required=false)]
+            public int? SessionType { get; set; }
 
             /// <summary>
             /// <para>The convenience user group ID.</para>
@@ -542,7 +551,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The idle shutdown duration. When the cloud computer has been idle for this duration, it is automatically shut down. If a user connects after shutdown, the cloud computer automatically starts. Unit: milliseconds.</para>
+            /// <para>The idle shutdown time. When the idle time of the cloud desktop reaches this value, the cloud desktop is automatically shut down. If a user connects to the cloud desktop after it is shut down, the cloud desktop is automatically started. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900000</para>
@@ -572,7 +581,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk capacity. Unit: GiB.</para>
+            /// <para>The system cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -614,14 +623,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The user group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>R&amp;D Group</para>
+            /// <para>R&amp;D group</para>
             /// </summary>
             [NameInMap("UserGroupName")]
             [Validation(Required=false)]
             public string UserGroupName { get; set; }
 
             /// <summary>
-            /// <para>The organizational unit (OU) path of the user.</para>
+            /// <para>The user organizational unit path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -631,7 +640,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string UserOuPath { get; set; }
 
             /// <summary>
-            /// <para>The version number of the shared cloud computer.</para>
+            /// <para>The version number of the shared cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -641,7 +650,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Version { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether encryption is enabled.</para>
+            /// <para>Indicates whether the encryption feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -651,7 +660,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key used for disk encryption.</para>
+            /// <para>The ID of the KMS key used to encrypt the disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e5409ada-xxxx-xxxx-xxxx-89e31e23e993</para>

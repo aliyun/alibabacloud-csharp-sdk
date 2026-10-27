@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BatchModifyEntitlementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The assignment results.</para>
+        /// <para>The entitlements collection.</para>
         /// </summary>
         [NameInMap("Entitlements")]
         [Validation(Required=false)]
         public BatchModifyEntitlementResponseBodyEntitlements Entitlements { get; set; }
         public class BatchModifyEntitlementResponseBodyEntitlements : TeaModel {
             /// <summary>
-            /// <para>The assignment result details.</para>
+            /// <para>The collection of assignment results.</para>
             /// </summary>
             [NameInMap("AssignModels")]
             [Validation(Required=false)]
             public List<BatchModifyEntitlementResponseBodyEntitlementsAssignModels> AssignModels { get; set; }
             public class BatchModifyEntitlementResponseBodyEntitlementsAssignModels : TeaModel {
                 /// <summary>
-                /// <para>The cloud computer ID.</para>
+                /// <para>The cloud desktop ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecd-e94kzikmpljjx99pl</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopId { get; set; }
 
                 /// <summary>
-                /// <para>The user IDs (usernames) authorized to use the cloud computer.</para>
+                /// <para>The IDs of the users authorized to use the cloud desktop, which are the usernames.</para>
                 /// </summary>
                 [NameInMap("EndUserIds")]
                 [Validation(Required=false)]
                 public List<string> EndUserIds { get; set; }
 
                 /// <summary>
-                /// <para>The assignment result for a single cloud computer.</para>
+                /// <para>The assignment result for a single cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FINISHED</para>
