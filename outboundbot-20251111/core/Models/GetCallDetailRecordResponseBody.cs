@@ -380,6 +380,22 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public int? OutputTokens { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>INTERRUPTED</para>
+                /// </summary>
+                [NameInMap("PlaybackStatus")]
+                [Validation(Required=false)]
+                public string PlaybackStatus { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>好的</para>
+                /// </summary>
+                [NameInMap("PlayedAnswer")]
+                [Validation(Required=false)]
+                public string PlayedAnswer { get; set; }
+
+                /// <summary>
                 /// <para>The played text.</para>
                 /// 
                 /// <b>Example:</b>

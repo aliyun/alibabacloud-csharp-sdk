@@ -1,3 +1,8 @@
+2026-10-27 Version: 1.6.3
+- Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlaybackStatus.
+- Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlayedAnswer.
+
+
 2026-10-19 Version: 1.6.2
 - Update API ListCases: add response parameters Body.Data.List.$.TalkTurns.
 
