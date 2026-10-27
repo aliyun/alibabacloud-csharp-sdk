@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start paging.</para>
+        /// <para>The pagination start token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the domain name.</para>
+        /// <para>The domain name prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>

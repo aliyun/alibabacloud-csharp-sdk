@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateCustomDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the custom domain name.</para>
+        /// <para>The custom domain name information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

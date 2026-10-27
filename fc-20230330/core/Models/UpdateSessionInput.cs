@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? AllowInternetAccess { get; set; }
 
+        [NameInMap("autoPauseFileSystemOnly")]
+        [Validation(Required=false)]
+        public bool? AutoPauseFileSystemOnly { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to disable session ID reuse after the session expires. Default value: False, which indicates that after a session expires, you can use the same session ID to initiate requests. The system treats the request as a new session and binds it to a new instance. If you set this parameter to True, the session ID cannot be reused after the session expires.</para>
         /// 

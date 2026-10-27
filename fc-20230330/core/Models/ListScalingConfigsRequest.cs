@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListScalingConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The function name.</para>
+        /// <para>The name of the function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-func</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// <para>The number of auto scaling configurations to return.</para>
+        /// <para>The number of elastic configurations to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The starting pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>

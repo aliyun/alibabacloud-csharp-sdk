@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PolarFsMountConfig : TeaModel {
         /// <summary>
+        /// <para>The additional mount parameter settings.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>--skip-delete-rows-check=false  --skip-dir-nlink=0</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ExtraOptions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PolarFS file system instance to mount.</para>
+        /// <para>The PolarFS instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-xxx</para>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The local mount directory in the function\&quot;s runtime environment.</para>
+        /// <para>The local mount directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/mnt/polarfs</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string MountDir { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the file system is mounted as read-only. If <c>true</c>, write operations are prohibited.</para>
+        /// <para>The read-only mount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? ReadOnly { get; set; }
 
         /// <summary>
-        /// <para>The directory within the PolarFS file system to mount.</para>
+        /// <para>The PolarFS directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/share</para>

@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class TagResourceInput : TeaModel {
         /// <summary>
-        /// <para>Resource descriptor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +20,6 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ResourceArn { get; set; }
 
         /// <summary>
-        /// <para>Tag dictionary.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("tags")]

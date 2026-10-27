@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the start of the next page of results.</para>
+        /// <para>The pagination start token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the layer is an official layer. Valid values: true and false.</para>
+        /// <para>Specifies whether the layer is an official layer. Valid values: true, false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Official { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the layer name.</para>
+        /// <para>The layer name prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-layer</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the layer is public. Valid values: true and false.</para>
+        /// <para>Specifies whether the layer is public. Valid values: true, false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

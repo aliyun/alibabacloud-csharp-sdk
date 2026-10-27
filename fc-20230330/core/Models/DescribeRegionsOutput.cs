@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public DescribeRegionsOutputRegions Regions { get; set; }
         public class DescribeRegionsOutputRegions : TeaModel {
             /// <summary>
-            /// <para>The collection of region information.</para>
+            /// <para>The region information collection.</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
                 /// <para>The region name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>华北1（青岛）</para>
+                /// <para>China (Qingdao)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]

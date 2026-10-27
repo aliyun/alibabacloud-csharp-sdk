@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public CreateSnapshotInput Body { get; set; }
 
         /// <summary>
-        /// <para>The function alias.</para>
+        /// <para>The alias of the function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alias</para>

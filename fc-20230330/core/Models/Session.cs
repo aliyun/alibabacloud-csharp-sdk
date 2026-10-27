@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? AllowInternetAccess { get; set; }
 
+        [NameInMap("autoPauseFileSystemOnly")]
+        [Validation(Required=false)]
+        public bool? AutoPauseFileSystemOnly { get; set; }
+
         /// <summary>
         /// <para>The instance ID of the function associated with the session.</para>
         /// 

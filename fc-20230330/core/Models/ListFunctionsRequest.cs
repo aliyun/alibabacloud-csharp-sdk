@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListFunctionsRequest : TeaModel {
         /// <summary>
-        /// <para>The function description to filter by.</para>
+        /// <para>The description used to filter functions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_description</para>
@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The version to which the function belongs. Valid values:</para>
+        /// <para>The version of the function. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>v3: lists only FC 3.0 functions.</description></item>
-        /// <item><description>v2: lists only FC 2.0 functions.</description></item>
+        /// <item><description>v3: Lists only Function Compute 3.0 functions.</description></item>
+        /// <item><description>v2: Lists only Function Compute 2.0 functions.</description></item>
         /// </list>
-        /// <para>If not specified, both FC 3.0 and FC 2.0 functions are listed.</para>
+        /// <para>Default value: empty. An empty value indicates that both Function Compute 3.0 and Function Compute 2.0 functions are listed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v3</para>
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FcVersion { get; set; }
 
         /// <summary>
-        /// <para>The function name.</para>
+        /// <para>The name of the function.</para>
         /// </summary>
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// <para>The function GPU type to filter by.</para>
+        /// <para>The GPU type used to filter functions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fc.gpu.tesla.1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string GpuType { get; set; }
 
         /// <summary>
-        /// <para>The number of functions to return. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of functions to return. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The function name prefix.</para>
+        /// <para>The prefix of the function name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-func</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The function runtime to filter by.</para>
+        /// <para>The runtime used to filter functions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python3.10</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Runtime { get; set; }
 
         /// <summary>
-        /// <para>The function tags to filter by.</para>
+        /// <para>The tags used to filter functions.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

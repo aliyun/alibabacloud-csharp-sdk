@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of sessions to return. Default value: 20.</para>
+        /// <para>The maximum number of sessions to return. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The function alias or version information.</para>
+        /// <para>The alias or version of the function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliasName1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// <para>The session ID to filter by. If specified, all Active or Expired status information associated with this session is returned.</para>
+        /// <para>The ID of the session used for filtering. If you specify this parameter, all active or expired status information associated with the session is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-session-id-1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The session status to filter by. By default, all session information in Active or Expired status is returned. You can specify Active to retrieve only active session information, or specify Expired to retrieve only expired session information.</para>
+        /// <para>The session status to filter. By default, all session information in the Active or Expired state is returned. You can specify Active to retrieve only active session information, or specify Expired to retrieve only expired session information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>

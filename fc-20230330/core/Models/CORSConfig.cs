@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CORSConfig : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to allow sending credentials.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AllowCredentials { get; set; }
 
         /// <summary>
+        /// <para>The list of allowed request headers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;Content-Type&quot;, &quot;Authorization&quot;]</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<string> AllowHeaders { get; set; }
 
         /// <summary>
+        /// <para>The list of allowed HTTP methods.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;GET&quot;, &quot;POST&quot;, &quot;OPTIONS&quot;]</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<string> AllowMethods { get; set; }
 
         /// <summary>
+        /// <para>The list of allowed origins.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;<a href="https://example.com">https://example.com</a>&quot;, &quot;<a href="https://app.example.com%22%5D">https://app.example.com&quot;]</a></para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<string> AllowOrigins { get; set; }
 
         /// <summary>
+        /// <para>The list of exposed response headers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;X-Custom-Header&quot;]</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<string> ExposeHeaders { get; set; }
 
         /// <summary>
+        /// <para>The cache time for preflight requests, in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>

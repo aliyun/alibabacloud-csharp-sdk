@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListTriggersRequest : TeaModel {
         /// <summary>
-        /// <para>The number of triggers to return.</para>
+        /// <para>The number of returned triggers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the start of the next page of results.</para>
+        /// <para>The pagination start token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The trigger name prefix.</para>
+        /// <para>The prefix of the trigger name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-trigger</para>

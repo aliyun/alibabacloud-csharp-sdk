@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
     public class ListInstancesRequest : TeaModel {
         /// <summary>
         /// <para>The end time of the query range, specified as a UNIX timestamp in milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1790899200000</para>
         /// </summary>
         [NameInMap("endTimeMs")]
         [Validation(Required=false)]
@@ -32,6 +35,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The maximum number of instances to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
@@ -49,6 +55,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The token that specifies where to start the query. It is returned in a truncated response and can be used to retrieve the next page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-01234567-89abcdef-0123456789ab～</para>
         /// </summary>
         [NameInMap("startKey")]
         [Validation(Required=false)]
@@ -56,6 +65,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The start time of the query range, specified as a UNIX timestamp in milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1790812800000</para>
         /// </summary>
         [NameInMap("startTimeMs")]
         [Validation(Required=false)]

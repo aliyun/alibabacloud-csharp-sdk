@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class MicroSandboxConfig : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the Container Registry (ACR) Enterprise Edition image repository. This parameter is used together with MicroSandbox images. This parameter is optional. If not provided, the server resolves it as needed.</para>
+        /// <para>The ID of the ACR Enterprise Edition image repository instance. It is used in combination with MicroSandbox images. This parameter is optional. If it is not provided, the server resolves it on demand.</para>
         /// </summary>
         [NameInMap("acrInstanceId")]
         [Validation(Required=false)]
@@ -45,11 +45,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public RegistryConfig RegistryConfig { get; set; }
 
         /// <summary>
-        /// <para>The start command.</para>
+        /// <para>The startup command.</para>
         /// </summary>
         [NameInMap("startCommand")]
         [Validation(Required=false)]
         public string StartCommand { get; set; }
+
+        /// <summary>
+        /// <para>The build steps.</para>
+        /// </summary>
+        [NameInMap("steps")]
+        [Validation(Required=false)]
+        public List<Step> Steps { get; set; }
 
     }
 

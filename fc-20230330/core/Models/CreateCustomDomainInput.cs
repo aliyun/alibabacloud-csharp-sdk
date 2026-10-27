@@ -10,25 +10,28 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateCustomDomainInput : TeaModel {
         /// <summary>
-        /// <para>Permission authentication configuration.</para>
+        /// <para>The authentication configuration.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>HTTPS certificate information.</para>
+        /// <para>The HTTPS certificate information.</para>
         /// </summary>
         [NameInMap("certConfig")]
         [Validation(Required=false)]
         public CertConfig CertConfig { get; set; }
 
+        /// <summary>
+        /// <para>The CORS configuration.</para>
+        /// </summary>
         [NameInMap("corsConfig")]
         [Validation(Required=false)]
         public CORSConfig CorsConfig { get; set; }
 
         /// <summary>
-        /// <para>Domain name. Enter a custom domain name that has an ICP filing with Alibaba Cloud or has added Alibaba Cloud to the ICP filing information as a service provider.</para>
+        /// <para>The domain name. Specify a custom domain name that has an ICP filing obtained through Alibaba Cloud or has been added to Alibaba Cloud for ICP filing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +46,12 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? IsE2B { get; set; }
 
         /// <summary>
-        /// <para>Protocol type supported by the domain. HTTP: supports HTTP only. HTTPS: supports HTTPS only. HTTP,HTTPS: supports both HTTP and HTTPS.</para>
+        /// <para>The protocol types supported by the domain name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP: Only the HTTP protocol is supported.</description></item>
+        /// <item><description>HTTPS: Only the HTTPS protocol is supported.</description></item>
+        /// <item><description>HTTP,HTTPS: Both the HTTP and HTTPS protocols are supported.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
@@ -53,21 +61,21 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>Route table: maps PATHs to functions when accessing the custom domain.</para>
+        /// <para>The route table that maps paths to functions when the custom domain name is accessed.</para>
         /// </summary>
         [NameInMap("routeConfig")]
         [Validation(Required=false)]
         public RouteConfig RouteConfig { get; set; }
 
         /// <summary>
-        /// <para>TLS configuration information.</para>
+        /// <para>The TLS configuration information.</para>
         /// </summary>
         [NameInMap("tlsConfig")]
         [Validation(Required=false)]
         public TLSConfig TlsConfig { get; set; }
 
         /// <summary>
-        /// <para>Web Application Firewall configuration information.</para>
+        /// <para>The WAF configuration information.</para>
         /// </summary>
         [NameInMap("wafConfig")]
         [Validation(Required=false)]
