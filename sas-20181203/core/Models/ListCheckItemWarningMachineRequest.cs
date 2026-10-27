@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The name of the field that is used to query containers.</para>
+        /// <para>The name of the container security query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clusterId</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldName { get; set; }
 
         /// <summary>
-        /// <para>The value of the field that is used to query containers.</para>
+        /// <para>The value of the container security query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ce89cdd0ea732472a8703821b19e****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset group.</para>
+        /// <para>The ID of the asset group to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the ID of the asset group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries to display on each page during paging in a paged query. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to query servers in fuzzy match mode.</para>
+        /// <para>The fuzzy match keyword for servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>225</para>
@@ -101,9 +101,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the member accounts in the resource folder (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The type of the check item.</para>
+        /// <para>The category to which the check item belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cis</para>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskType { get; set; }
 
         /// <summary>
-        /// <para>The data source. Default value: default. Valid values:</para>
+        /// <para>The data source. If you leave this parameter empty, the baseline check results for servers are queried by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: The check items of baselines for hosts.</description></item>
-        /// <item><description><b>agentless</b>: The check items of baselines for agentless detection.</description></item>
+        /// <item><description><b>default</b>: server</description></item>
+        /// <item><description><b>agentless</b>: agentless</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The status of the check item. Valid values:</para>
+        /// <para>The status of the check item. Default value: null. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: failed</description></item>
         /// <item><description><b>2</b>: verifying</description></item>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The UUID array of the servers.</para>
+        /// <para>The list of server UUIDs.</para>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCustomBlockRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the record to delete.</para>
+        /// <para>The ID of the data to delete.</para>
         /// <remarks>
         /// <para>Call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to obtain this parameter.</para>
         /// </remarks>

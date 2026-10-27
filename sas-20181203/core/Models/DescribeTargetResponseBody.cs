@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The machine settings for the vulnerability type.</para>
+        /// <para>The machine settings corresponding to the vulnerability type.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<DescribeTargetResponseBodyTargets> Targets { get; set; }
         public class DescribeTargetResponseBodyTargets : TeaModel {
             /// <summary>
-            /// <para>The flag. This parameter can be empty.</para>
+            /// <para>The flag. This field can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>del</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Flag { get; set; }
 
             /// <summary>
-            /// <para>The target. The value is a machine UUID or a machine group ID.</para>
+            /// <para>The target, which is the UUID of the server or the ID of the server group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5c5f0169-3527-40a2-b5ff-0bc1db8f****</para>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The target type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>uuid</b>: added by individual asset</description></item>
-            /// <item><description><b>groupId</b>: added by server group.</description></item>
+            /// <item><description><b>uuid</b>: add a single asset</description></item>
+            /// <item><description><b>groupId</b>: add a server group</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The total number of machine configuration entries returned.</para>
+        /// <para>The total number of queried machine configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

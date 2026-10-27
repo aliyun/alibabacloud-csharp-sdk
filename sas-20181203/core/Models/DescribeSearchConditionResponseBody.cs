@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSearchConditionResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the filter conditions.</para>
+        /// <para>The list of filter conditions.</para>
         /// </summary>
         [NameInMap("ConditionList")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the filter condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>system</b>: default filter conditions.</description></item>
-            /// <item><description><b>user</b>: custom filter conditions.</description></item>
+            /// <item><description><b>system</b>: default filter conditions provided by the system.</description></item>
+            /// <item><description><b>user</b>: custom filter conditions defined by the user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,32 +31,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ConditionType { get; set; }
 
             /// <summary>
-            /// <para>The filter condition. The value of this parameter is in the JSON format and contains the following fields:</para>
+            /// <para>The filter conditions. The value is in JSON format and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>filterParams</b>: the parameters of the filter condition. The value of this field is in the JSON format and contains the following fields:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>labelKey</b>: the key for rendering.</para>
+            /// <item><description><b>filterParams</b>: the filter parameters. The value is in JSON format and contains the following fields:<list type="bullet">
+            /// <item><description><para><b>labelKey</b>: the key to be rendered.</para>
             /// </description></item>
             /// <item><description><para><b>label</b>: the display name.</para>
             /// </description></item>
-            /// <item><description><para><b>value</b>: the value of the filter condition. The value of this field is in the JSON format and contains the following fields:</para>
+            /// <item><description><para><b>value</b>: the value of the filter condition. The value is in JSON format and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>name</b>: the name of the filter item.</description></item>
-            /// <item><description><b>value</b>: the value of the filter item.</description></item>
+            /// <item><description><b>name</b>: the filter option.</description></item>
+            /// <item><description><b>value</b>: the value of the filter option.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>LogicalExp</b>: the logical relationship among the filter conditions. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>AND</b>: The filter conditions are evaluated by using a logical <b>AND</b>.</description></item>
-            /// <item><description><b>OR</b>: The filter conditions are evaluated by using a logical <b>OR</b>.</description></item>
-            /// </list>
-            /// </description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> If the value of <b>ConditionType</b> is <b>system</b>, <b>labelKey</b> is returned. The labelKey field is used only for internationalization rendering.</para>
+            /// <item><description><b>LogicalExp</b>: the logical relationship between conditions. Valid values:<list type="bullet">
+            /// <item><description><b>AND</b>: The filter conditions have an <b>AND</b> relationship.</description></item>
+            /// <item><description><b>OR</b>: The filter conditions have an <b>OR</b> relationship.<remarks>
+            /// <para>When <b>ConditionType</b> is set to <b>system</b>, <b>labelKey</b> exists and is used only for internationalization rendering.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;filterParams\&quot;:[{\&quot;labelKey\&quot;:\&quot;a|b\&quot;,\&quot;value\&quot;:\&quot;{\\\&quot;name\\\&quot;:\\\&quot;sadsasd\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;dasdsdas\\\&quot;}\&quot;}],\&quot;LogicalExp\&quot;:\&quot;OR\&quot;}</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilterConditions { get; set; }
 
             /// <summary>
-            /// <para>The filter condition name.</para>
+            /// <para>The name of the filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>StopMachine</para>
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3AEC47AF-8CFA-485E-AC9A-3A8ABC06EA7F</para>

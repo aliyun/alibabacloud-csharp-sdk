@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>sas</b>: Security Center edition.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Server Guard users must use <b>aegis</b>, and Security Center users must use <b>sas</b>.</para>
+        /// <para>If you use Server Guard, set this parameter to <b>aegis</b>. If you use Security Center, set this parameter to <b>sas</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member accounts in the resource directory (Alibaba Cloud account).</para>
+        /// <para>The ID of the member accounts (Alibaba Cloud account) in the resource folder.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

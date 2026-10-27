@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetHoneypotAttackStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Minimum value: <b>1</b>. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number of the returned page. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time in timestamp format.</para>
+        /// <para>The end time in the timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1675058931215</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned by default. &gt; Specify a value for the paging parameter.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default. Do not leave this parameter empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SrcIp { get; set; }
 
         /// <summary>
-        /// <para>The start time in timestamp format.</para>
+        /// <para>The start time in the timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1681624877761</para>
@@ -82,12 +82,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTimeStamp { get; set; }
 
         /// <summary>
-        /// <para>The type of attack source statistics information. Valid values:</para>
+        /// <para>The type of statistics for the attack source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TOP_ATTACKED_AGENT</b>: the top 5 probes by number of attacks.</description></item>
-        /// <item><description><b>TOP_ATTACKED_IP</b>: the top 5 IP addresses by number of attacks.</description></item>
-        /// <item><description><b>ATTACK_EVENT_TYPE</b>: the intrusion event type.</description></item>
-        /// <item><description><b>ATTACK_HONEYPOT_TYPE</b>: the type of the compromised honeypot.</description></item>
+        /// <item><description><b>TOP_ATTACKED_AGENT</b>: The top 5 probes that are attacked most frequently.</description></item>
+        /// <item><description><b>TOP_ATTACKED_IP</b>: The top 5 IP addresses that are attacked most frequently.</description></item>
+        /// <item><description><b>ATTACK_EVENT_TYPE</b>: The intrusion event type.</description></item>
+        /// <item><description><b>ATTACK_HONEYPOT_TYPE</b>: The type of the attacked honeypot.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

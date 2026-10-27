@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSearchConditionRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>117.220.XX.XX</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset. Valid values:</para>
+        /// <para>The Asset Type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: Elastic Compute Service (ECS) instances.</description></item>
-        /// <item><description><b>cloud_product</b>: cloud services except ECS.</description></item>
+        /// <item><description><b>ecs</b>: queries the filter conditions for all ECS servers.</description></item>
+        /// <item><description><b>cloud_product</b>: queries the filter conditions for all other cloud services.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

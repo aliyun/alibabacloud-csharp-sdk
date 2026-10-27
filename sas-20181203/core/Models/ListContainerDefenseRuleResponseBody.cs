@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListContainerDefenseRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of a failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, and any other value indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the request.</para>
+        /// <para>The HTTP status code of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The list of clusters associated with the rule.</para>
+            /// <para>The list of clusters in the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cfb41a8**8a106</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The rule action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Alert.</para>
+            /// <item><description><para><b>1</b>: alert</para>
             /// </description></item>
-            /// <item><description><para><b>2</b>: Block.</para>
+            /// <item><description><para><b>2</b>: block</para>
             /// </description></item>
             /// </list>
             /// 
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The switch status of the rule. Valid values:</para>
+            /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled.</description></item>
-            /// <item><description><b>0</b>: disabled.</description></item>
+            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><b>0</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,8 +119,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: system rule.</description></item>
-            /// <item><description><b>2</b>: user-defined rule.</description></item>
+            /// <item><description><b>1</b>: system rule</description></item>
+            /// <item><description><b>2</b>: custom user rule</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -143,14 +143,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination information of the query result.</para>
+        /// <para>The pagination information of the query results.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListContainerDefenseRuleResponseBodyPageInfo PageInfo { get; set; }
         public class ListContainerDefenseRuleResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastRowKey { get; set; }
 
             /// <summary>
-            /// <para>The value of NextToken returned when the NextToken-based pagination method is used.</para>
+            /// <para>The NextToken value returned when the NextToken pagination method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B60***</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in a paging query.</para>
+            /// <para>The maximum number of entries returned per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of returned entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. This ID is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E3A63BA-***843</para>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: successful.</description></item>
-        /// <item><description><b>false</b>: failed.</description></item>
+        /// <item><description><b>true</b>: successful</description></item>
+        /// <item><description><b>false</b>: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

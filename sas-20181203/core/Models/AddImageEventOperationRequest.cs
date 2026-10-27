@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddImageEventOperationRequest : TeaModel {
         /// <summary>
-        /// <para>The rule conditions. The value is in the JSON format. Valid values of keys:</para>
+        /// <para>The rule conditions. The value is in JSON format. Valid keys:</para>
         /// <list type="bullet">
-        /// <item><description><b>condition</b>: the matching condition.</description></item>
-        /// <item><description><b>type</b>: the matching type.</description></item>
-        /// <item><description><b>value</b>: the matching value.</description></item>
+        /// <item><description><b>condition</b>: The matching condition.</description></item>
+        /// <item><description><b>type</b>: The matching type.</description></item>
+        /// <item><description><b>value</b>: The matching value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Conditions { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the alert item.</para>
+        /// <para>The alert metric keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PEM</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventKey { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert item.</para>
+        /// <para>The alert metric name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PEM</para>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The alert type.</para>
+        /// <para>The Alarm Metric for alerting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to <b>sensitiveFile</b>.</description></item>
+        /// <item><description><b>sensitiveFile</b>: Sensitive file.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The remarks that you want to add.</para>
+        /// <para>The note to add.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The operation code.</para>
+        /// <para>The operation code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to <b>whitelist</b> to add the alert item to the whitelist.</description></item>
+        /// <item><description><b>whitelist</b>: Whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,10 +81,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperationCode { get; set; }
 
         /// <summary>
-        /// <para>The application scope of the rule. The value is in the JSON format. Valid values of keys:</para>
+        /// <para>The rule scope. The value is in JSON format. Valid keys:</para>
         /// <list type="bullet">
-        /// <item><description><b>type</b></description></item>
-        /// <item><description><b>value</b></description></item>
+        /// <item><description><b>type</b>: The scope type.</description></item>
+        /// <item><description><b>value</b>: The scope value.<remarks>
+        /// <para>This parameter and <b>Source</b> cannot be empty at the same time. If <b>Source</b> is set to <b>agentless</b>, this parameter does not take effect.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,8 +100,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The source of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b>: image.</description></item>
-        /// <item><description><b>agentless</b>: agentless detection.</description></item>
+        /// <item><description><b>image</b>: Image.</description></item>
+        /// <item><description><b>agentless</b>: Agentless detection.<remarks>
+        /// <para>This parameter and <b>Scenarios</b> cannot be empty at the same time. If this parameter is set to <b>agentless</b>, the <b>Scenarios</b> parameter does not take effect.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

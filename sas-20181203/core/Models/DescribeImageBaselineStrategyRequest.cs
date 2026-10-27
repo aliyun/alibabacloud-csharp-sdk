@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The data source. If this parameter is left empty, the image baseline policy is queried by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: image</description></item>
-        /// <item><description><b>agentless</b>: agentless.</description></item>
+        /// <item><description><b>default</b>: Image</description></item>
+        /// <item><description><b>agentless</b>: Agentless</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

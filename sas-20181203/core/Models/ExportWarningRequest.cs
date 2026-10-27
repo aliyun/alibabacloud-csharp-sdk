@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportWarningRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the baseline issues are handled. Valid values:</para>
+        /// <para>Specifies whether the baseline issue is handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: handled</description></item>
-        /// <item><description><b>N</b>: unhandled</description></item>
+        /// <item><description><b>Y</b>: The issue is handled.</description></item>
+        /// <item><description><b>N</b>: The issue is not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The type of the export task. Set the value to <b>hc_check_warning</b>, which indicates that baseline check results are exported.</para>
+        /// <para>The type of the export task. Set the value to <b>hc_check_warning</b>, which indicates exporting baseline check results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hc_check_warning</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The export method for weak password baseline check results. Valid values:</para>
+        /// <para>Specifies the export method for weak password baseline check results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Export weak passwords after masking.</description></item>
-        /// <item><description><b>1</b>: Export weak passwords in plaintext.</description></item>
+        /// <item><description><b>0</b>: Weak passwords are masked before export.</description></item>
+        /// <item><description><b>1</b>: Weak passwords are exported in plaintext.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsCleartextPwd { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to export a summary of the baseline check results. Valid values:</para>
+        /// <para>Specifies whether to export the baseline check results in summary mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: The results are not exported in summary mode.</description></item>
+        /// <item><description><b>1</b>: The results are exported in summary mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsSummaryExport { get; set; }
 
         /// <summary>
-        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -101,9 +101,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The risk levels of the baselines. Separate multiple risk levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b>: high-risk</description></item>
-        /// <item><description><b>medium</b>: medium-risk</description></item>
-        /// <item><description><b>low</b>: low-risk</description></item>
+        /// <item><description><b>high</b>: High</description></item>
+        /// <item><description><b>medium</b>: Medium</description></item>
+        /// <item><description><b>low</b>: Low</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,8 +136,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The statuses of the risk items in the baseline check results. Separate multiple status values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3</b>: passed</description></item>
-        /// <item><description><b>1</b>: failed</description></item>
+        /// <item><description><b>3</b>: Passed</description></item>
+        /// <item><description><b>1</b>: Failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TypeNames { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers for which you want to export the baseline check results. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the server assets for which you want to export the baseline check results. Separate multiple UUIDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>inet-7c676676-06fa-442e-90fb-b802e****,inet-7c676676-06fa-442e-90fb-b****</para>

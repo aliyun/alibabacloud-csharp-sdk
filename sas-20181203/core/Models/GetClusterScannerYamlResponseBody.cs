@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A20733-10A0-4AF6-BE6B-E3322413BB68</para>
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Indicates whether incremental scanning is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disabled.</description></item>
-        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

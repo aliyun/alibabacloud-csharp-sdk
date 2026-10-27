@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BatchCreateMaliciousNoteRequest : TeaModel {
         /// <summary>
-        /// <para>The batches.</para>
+        /// <para>The batch list.</para>
         /// </summary>
         [NameInMap("ImageMaliciousFileList")]
         [Validation(Required=false)]
         public List<BatchCreateMaliciousNoteRequestImageMaliciousFileList> ImageMaliciousFileList { get; set; }
         public class BatchCreateMaliciousNoteRequestImageMaliciousFileList : TeaModel {
             /// <summary>
-            /// <para>The ID of the alert.</para>
-            /// <remarks>
-            /// <para> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the alert IDs.</para>
-            /// </remarks>
+            /// <para>The alert ID. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -30,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EventId { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The note.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Malware sample</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The configuration target. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
         /// <item><description><b>vulType</b>: The vulnerability type. Valid values:<list type="bullet">
-        /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
+        /// <item><description><b>cve</b>: Linux system vulnerability.</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
         /// <item><description><b>emg</b>: Emergency vulnerability.</description></item>

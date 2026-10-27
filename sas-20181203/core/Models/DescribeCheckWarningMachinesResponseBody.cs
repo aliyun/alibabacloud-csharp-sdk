@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The instance name of the server.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test****</para>
+            /// <para>win-oracl****</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]

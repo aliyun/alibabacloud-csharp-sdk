@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The name of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>docker-law</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The container ID.</para>
+        /// <para>The ID of the container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c08d5fc1a329a4b88950a253d082f****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The query type for the baseline. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>BaselineNameAlias</b>: baseline name</description></item>
-        /// <item><description><b>BaselineClassAlias</b>: baseline category.</description></item>
+        /// <item><description><b>BaselineClassAlias</b>: baseline classification</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The container image name.</para>
+        /// <para>The name of the container image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The SHA256 value of the image digest.</para>
+        /// <para>The SHA-256 value of the image digest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</para>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageDigest { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Settings for paged query paging. The number of image baseline check result details to display per page. Default value: <b>10</b>, which indicates that 10 image baseline check result details are displayed per page.</para>
+        /// <para>The Settings for the number of image baseline check result details to return on each page in a paged query. Default value: <b>10</b>, which indicates that 10 image baseline check result details are displayed on each page during paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

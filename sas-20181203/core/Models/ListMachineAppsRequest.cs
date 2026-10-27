@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListMachineAppsRequest : TeaModel {
         /// <summary>
-        /// <para>The SAE application ID.</para>
+        /// <para>The ID of the SAE application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b41f4bf-349f-4263-89b1-9234c034****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The SAE application name.</para>
+        /// <para>The name of the SAE application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-commprice-shop</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>5</b>: Premium Edition</description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
         /// <item><description><b>7</b>: Ultimate Edition</description></item>
-        /// <item><description><b>10</b>: value-added service Edition.</description></item>
+        /// <item><description><b>10</b>: Value-added Service Edition</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuthVersion { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query.</para>
+        /// <para>The page number of the current page returned during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>The maximum number of entries to return per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

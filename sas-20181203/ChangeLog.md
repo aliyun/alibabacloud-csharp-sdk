@@ -1,3 +1,7 @@
+2026-10-27 Version: 10.3.3
+- Update API ListAgentlessRiskUuid: add request parameters Lang.
+
+
 2026-10-20 Version: 10.3.2
 - Update API DescribeFieldStatistics: add response parameters Body.GroupedFields.OracleInstanceCount.
 

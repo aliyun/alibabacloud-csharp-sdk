@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information on check results.</para>
+        /// <para>The check result information.</para>
         /// </summary>
         [NameInMap("Checks")]
         [Validation(Required=false)]
         public List<ListClusterCheckResultResponseBodyChecks> Checks { get; set; }
         public class ListClusterCheckResultResponseBodyChecks : TeaModel {
             /// <summary>
-            /// <para>Subtype of the cloud product.</para>
+            /// <para>The subtype of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetSubType { get; set; }
 
             /// <summary>
-            /// <para>Asset type.</para>
+            /// <para>The asset type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetType { get; set; }
 
             /// <summary>
-            /// <para>ID of the check item.</para>
+            /// <para>The ID of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// <para>Information about the standards, requirements, and sections associated with the check result.</para>
+            /// <para>The standards, regulations, and sections associated with the check result.</para>
             /// </summary>
             [NameInMap("CheckPolicies")]
             [Validation(Required=false)]
             public List<ListClusterCheckResultResponseBodyChecksCheckPolicies> CheckPolicies { get; set; }
             public class ListClusterCheckResultResponseBodyChecksCheckPolicies : TeaModel {
                 /// <summary>
-                /// <para>Requirement ID of the check item.</para>
+                /// <para>The ID of the regulation for the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? RequirementId { get; set; }
 
                 /// <summary>
-                /// <para>Display name of the requirement for the check item.</para>
+                /// <para>The display name of the regulation for the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Alibaba cloud OSS best security practices</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RequirementShowName { get; set; }
 
                 /// <summary>
-                /// <para>Section ID of the check item.</para>
+                /// <para>The ID of the section for the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? SectionId { get; set; }
 
                 /// <summary>
-                /// <para>Display name of the section for the check item.</para>
+                /// <para>The display name of the section for the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Log Audit</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string SectionShowName { get; set; }
 
                 /// <summary>
-                /// <para>Standard ID of the check item.</para>
+                /// <para>The ID of the standard for the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? StandardId { get; set; }
 
                 /// <summary>
-                /// <para>Display name of the standard for the check item.</para>
+                /// <para>The display name of the standard for the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Best security practices</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Name of the check item.</para>
+            /// <para>The name of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS-PublicReadOpenManifestFileWithoutEncryption</para>
@@ -126,12 +126,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckShowName { get; set; }
 
             /// <summary>
-            /// <para>Source type of the security check item:</para>
+            /// <para>The source type of the Threat Detection Service check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>CUSTOM</b>:User-defined</para>
-            /// </description></item>
-            /// <item><description><para><b>SYSTEM</b>:Predefined by the Security Platform</para>
-            /// </description></item>
+            /// <item><description><b>CUSTOM</b>: Custom.</description></item>
+            /// <item><description><b>SYSTEM</b>: Predefined by the Threat Detection Service platform.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,45 +140,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckType { get; set; }
 
             /// <summary>
-            /// <para>Subtype of the cloud product asset. Values:</para>
+            /// <para>The asset subtype of the cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>When <b>InstanceType</b> is <b>ECS</b>, this parameter can take the following values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>INSTANCE</b></para>
-            /// </description></item>
-            /// <item><description><para><b>DISK</b></para>
-            /// </description></item>
-            /// <item><description><para><b>SECURITY_GROUP</b></para>
-            /// </description></item>
+            /// <item><description>If <b>InstanceType</b> is set to <b>ECS</b>, valid values are:<list type="bullet">
+            /// <item><description><b>INSTANCE</b></description></item>
+            /// <item><description><b>DISK</b></description></item>
+            /// <item><description><b>SECURITY_GROUP</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>When <b>InstanceType</b> is <b>ACR</b>, this parameter can take the following values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>REPOSITORY_ENTERPRISE</b></para>
-            /// </description></item>
-            /// <item><description><para><b>REPOSITORY_PERSON</b></para>
-            /// </description></item>
+            /// <item><description>If <b>InstanceType</b> is set to <b>ACR</b>, valid values are:<list type="bullet">
+            /// <item><description><b>REPOSITORY_ENTERPRISE</b></description></item>
+            /// <item><description><b>REPOSITORY_PERSON</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>When <b>InstanceType</b> is <b>RAM</b>, this parameter can take the following values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>ALIAS</b></para>
-            /// </description></item>
-            /// <item><description><para><b>USER</b></para>
-            /// </description></item>
-            /// <item><description><para><b>POLICY</b></para>
-            /// </description></item>
-            /// <item><description><para><b>GROUP</b></para>
-            /// </description></item>
+            /// <item><description>If <b>InstanceType</b> is set to <b>RAM</b>, valid values are:<list type="bullet">
+            /// <item><description><b>ALIAS</b></description></item>
+            /// <item><description><b>USER</b></description></item>
+            /// <item><description><b>POLICY</b></description></item>
+            /// <item><description><b>GROUP</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>When <b>InstanceType</b> is <b>WAF</b>, this parameter can take the following values:</para>
-            /// <list type="bullet">
+            /// <item><description>If <b>InstanceType</b> is set to <b>WAF</b>, valid values are:<list type="bullet">
             /// <item><description><b>DOMAIN</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>For other <b>InstanceType</b> values, this parameter can take the following value:</para>
-            /// <list type="bullet">
+            /// <item><description>If <b>InstanceType</b> is set to other values, valid values are:<list type="bullet">
             /// <item><description><b>INSTANCE</b></description></item>
             /// </list>
             /// </description></item>
@@ -194,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceSubType { get; set; }
 
             /// <summary>
-            /// <para>Asset type of the cloud product.</para>
+            /// <para>The asset type of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Workload</para>
@@ -204,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>Timestamp of the latest check, in milliseconds.</para>
+            /// <para>The timestamp of the latest check. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1657793398000</para>
@@ -214,14 +198,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastCheckTime { get; set; }
 
             /// <summary>
-            /// <para>Risk level of the check item. Possible values:</para>
+            /// <para>The risk level of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>HIGH</b>:High</para>
-            /// </description></item>
-            /// <item><description><para><b>MEDIUM</b>:Medium</para>
-            /// </description></item>
-            /// <item><description><para><b>LOW</b>:Low</para>
-            /// </description></item>
+            /// <item><description><b>HIGH</b>: High.</description></item>
+            /// <item><description><b>MEDIUM</b>: Medium.</description></item>
+            /// <item><description><b>LOW</b>: Low.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -232,18 +213,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Status of the check item. Values:</para>
+            /// <para>The status of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PASS</b>: Passed</para>
-            /// </description></item>
-            /// <item><description><para><b>NOT_PASS</b>: Not passed</para>
-            /// </description></item>
-            /// <item><description><para><b>CHECKING</b>: Checking</para>
-            /// </description></item>
-            /// <item><description><para><b>NOT_CHECK</b>: Not checked</para>
-            /// </description></item>
-            /// <item><description><para><b>WHITELIST</b>: Whitelisted</para>
-            /// </description></item>
+            /// <item><description><b>PASS</b>: Passed.</description></item>
+            /// <item><description><b>NOT_PASS</b>: Failed.</description></item>
+            /// <item><description><b>CHECKING</b>: Checking.</description></item>
+            /// <item><description><b>NOT_CHECK</b>: Not checked.</description></item>
+            /// <item><description><b>WHITELIST</b>: Whitelisted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -254,7 +230,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Whether the check depends on TRIAL permissions.</para>
+            /// <para>Specifies whether the check depends on the TRIAL permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -264,12 +240,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? TrialPermission { get; set; }
 
             /// <summary>
-            /// <para>Whether the check item requires enabling data delivery of operation audit for more than 30 days to build a behavior baseline.</para>
+            /// <para>Specifies whether the check item requires enabling data delivery for ActionTrail for more than 30 days to build a behavior baseline. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>:Required</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>:Not Required</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -280,8 +254,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TrialPermissionType { get; set; }
 
             /// <summary>
-            /// <para>Vendor of the asset. Values:</para>
-            /// <para>0: Alibaba Cloud 3: Other cloud 4: Other cloud 5: Other cloud 7: Other cloud</para>
+            /// <para>The vendor of the asset. Valid values:</para>
+            /// <para>0: Alibaba Cloud.
+            /// 3: Other cloud.
+            /// 4: Other cloud.
+            /// 5: Other cloud.
+            /// 7: Other cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -293,14 +271,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Pagination information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListClusterCheckResultResponseBodyPageInfo PageInfo { get; set; }
         public class ListClusterCheckResultResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of data entries displayed on the current page during pagination.</para>
+            /// <para>The number of data entries displayed on the current page during paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -310,7 +288,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>Page number in the pagination query.</para>
+            /// <para>The page number of the current page during paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -320,7 +298,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>Number of items per page in the pagination query. The default value is <b>20</b>, indicating that 20 items are displayed per page.</para>
+            /// <para>The number of alerting events to display on each page during paging in a paged query. Default value: <b>20</b>, which indicates that 20 alerting events are displayed on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -330,7 +308,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of data entries.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>83</para>
@@ -342,7 +320,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the current request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</para>

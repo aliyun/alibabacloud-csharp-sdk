@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListContainerDefenseRuleRequestConditions> Conditions { get; set; }
         public class ListContainerDefenseRuleRequestConditions : TeaModel {
             /// <summary>
-            /// <para>The condition type. The following type is supported:</para>
+            /// <para>The condition type. The following types are supported:</para>
             /// <list type="bullet">
-            /// <item><description><b>ruleName</b>: rule name.</description></item>
+            /// <item><description><b>ruleName</b>: the rule name.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>Specifies the page number from which to display the query results. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the rule is a system default rule.&gt;Notice: This parameter is deprecated..</para>
+        /// <para>Specifies whether the rule is a system default rule. <notice><b>[Deprecated]</b></notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsDefaultRule { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
+        /// <para>Specifies the maximum number of entries to return on each page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Specify a value for PageSize.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: system rule</description></item>
-        /// <item><description>2: user rule.</description></item>
+        /// <item><description>2: user rule</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

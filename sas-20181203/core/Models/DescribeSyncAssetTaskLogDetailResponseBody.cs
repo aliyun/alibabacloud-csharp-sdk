@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeSyncAssetTaskLogDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeSyncAssetTaskLogDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of IDC scan task details returned on the current page.</para>
+            /// <para>The number of IDC scan task details displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page during paging in a paged query.</para>
+            /// <para>The page number of the current page in a paged query during paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of IDC scan node details returned on each page during paging in a paged query. Default value: 20, which indicates that 20 IDC scan node details are returned per page.</para>
+            /// <para>The number of IDC scan node details displayed on each page in a paged query. Default value: 20. This indicates that 20 IDC scan node details are displayed on each page during paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -108,12 +108,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: Pending.</description></item>
-            /// <item><description><b>START</b>: Started.</description></item>
-            /// <item><description><b>MESSAGE_SEND</b>: Command issued.</description></item>
-            /// <item><description><b>SUCCESS</b>: Completed.</description></item>
-            /// <item><description><b>FAIL</b>: Failed.</description></item>
-            /// <item><description><b>TIMEOUT</b>: Timed out.</description></item>
+            /// <item><description><b>INIT</b>: pending</description></item>
+            /// <item><description><b>START</b>: started</description></item>
+            /// <item><description><b>MESSAGE_SEND</b>: command issued</description></item>
+            /// <item><description><b>SUCCESS</b>: completed</description></item>
+            /// <item><description><b>FAIL</b>: failed</description></item>
+            /// <item><description><b>TIMEOUT</b>: timed out</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskMsg { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the task was reported.</para>
+            /// <para>The timestamp of the report time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671614217000</para>

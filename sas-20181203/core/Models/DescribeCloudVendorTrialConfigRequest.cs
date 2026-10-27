@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudVendorTrialConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Unique ID of the AK.</para>
+        /// <para>The unique ID of the AccessKey.</para>
         /// <remarks>
-        /// <h2>You can call <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> to get the AuthId.</h2>
+        /// <h2>You can call <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> to obtain the AuthId.</h2>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? AuthId { get; set; }
 
         /// <summary>
-        /// <para>Cloud asset vendor. Values:</para>
+        /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Tencent</b>: Tencent Cloud</description></item>
         /// <item><description><b>AWS</b>: Amazon Web Services</description></item>

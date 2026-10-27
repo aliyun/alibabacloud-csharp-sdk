@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterCheckResultRequest : TeaModel {
         /// <summary>
-        /// <para>Fuzzy search key for check items.</para>
+        /// <para>The keyword for fuzzy search of check items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>container</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckKey { get; set; }
 
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Page number for the current page in a paginated query. The default value is <b>1</b>.</para>
+        /// <para>Specifies the page number of the current page during paging in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Language type for requests and responses. The default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b>: Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Number of records to display per page when performing a paginated query. The default value is <b>20</b>, indicating 20 records per page.</para>
+        /// <para>The Settings for paging in a paged query. Specifies the number of records to display on each page. Default value: <b>20</b>, which indicates that 20 records are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -68,19 +66,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>List of risk levels.</para>
+        /// <para>The list of risk levels.</para>
         /// </summary>
         [NameInMap("RiskLevels")]
         [Validation(Required=false)]
         public List<string> RiskLevels { get; set; }
 
         /// <summary>
-        /// <para>Custom sorting type. Values:</para>
+        /// <para>The custom sort type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RISK_LEVEL</b>: Risk level.</para>
-        /// </description></item>
-        /// <item><description><para><b>STATUS</b>: Check item status.</para>
-        /// </description></item>
+        /// <item><description><b>RISK_LEVEL</b>: Risk level.</description></item>
+        /// <item><description><b>STATUS</b>: Check item status.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SortType { get; set; }
 
         /// <summary>
-        /// <para>List of check item statuses.</para>
+        /// <para>The list of check item statuses.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BatchUpdateMaliciousFileWhitelistConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The whitelist rules.</para>
+        /// <para>The list of whitelist rules for sensitive file alerts in agentless detection.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
         public List<BatchUpdateMaliciousFileWhitelistConfigRequestConfigList> ConfigList { get; set; }
         public class BatchUpdateMaliciousFileWhitelistConfigRequestConfigList : TeaModel {
             /// <summary>
-            /// <para>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</para>
+            /// <para>The ID of the whitelist rule for sensitive file alerts in agentless detection. This parameter is optional. If you do not specify this parameter, a new rule is created. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to obtain the ID of the whitelist rule for sensitive files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert.</para>
+            /// <para>The alerting name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Set the value to <b>ALL</b>, which indicates all alert types.</description></item>
+            /// <item><description><b>ALL</b>: all Alarm Metrics.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The field that you want to use in the whitelist rule.</para>
+            /// <para>The field used to determine the whitelist for sensitive file alerts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fileMd5</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Field { get; set; }
 
             /// <summary>
-            /// <para>The value of the field that you want to use in the whitelist rule.</para>
+            /// <para>The expected field value to be whitelisted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b2cf9747ee49d8d9b105cf16e078cc16</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// <para>The logical operator that you want to use in the whitelist rule.</para>
+            /// <para>The operator used to evaluate the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Set the value to strEqual, which indicates the equality operator (=).</description></item>
+            /// <item><description>strEqual: equal to.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The feature to which this operation belongs.</para>
+            /// <para>The business source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Set the value to agentless, which indicates the agentless detection feature.</description></item>
+            /// <item><description>agentless: agentless detection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The type of the assets on which you want the whitelist rule to take effect. Valid values:</para>
+            /// <para>The type of the target to which the rule applies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALL: all assets</description></item>
-            /// <item><description>SELECTION_KEY: selected assets</description></item>
+            /// <item><description>ALL: all assets.</description></item>
+            /// <item><description>SELECTION_KEY: assets selected by using the asset selection component.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The assets on which you want the whitelist rule to take effect. Valid values:</para>
+            /// <para>The scope of the target to which the rule applies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALL: all assets</description></item>
-            /// <item><description>Others: selected assets</description></item>
+            /// <item><description>ALL: all assets.</description></item>
+            /// <item><description>Other values: the key of the asset scope selected by using the asset selection component.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

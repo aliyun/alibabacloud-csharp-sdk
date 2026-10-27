@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList> BaselineItemList { get; set; }
             public class DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList : TeaModel {
                 /// <summary>
-                /// <para>The classification key of the baseline main item.</para>
+                /// <para>The classification key of the primary baseline item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>identification</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ClassKey { get; set; }
 
                 /// <summary>
-                /// <para>The key of the baseline subitem.</para>
+                /// <para>The key of the sub-baseline item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>duplicate_pwd_hash</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ItemKey { get; set; }
 
                 /// <summary>
-                /// <para>The name key of the baseline main item.</para>
+                /// <para>The name key of the primary baseline item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>identification</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The retention period of baseline risks. Unit: days.</para>
+            /// <para>The retention period of baseline risks, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyId { get; set; }
 
             /// <summary>
-            /// <para>The Policy Name.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -128,9 +128,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the baseline check policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default</b>: default policy</description></item>
-            /// <item><description><b>full</b>: full baseline item policy</description></item>
-            /// <item><description><b>normal</b>: common baseline item policy.</description></item>
+            /// <item><description><b>default</b>: Default policy</description></item>
+            /// <item><description><b>full</b>: Full baseline item policy</description></item>
+            /// <item><description><b>normal</b>: Standard baseline item policy</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

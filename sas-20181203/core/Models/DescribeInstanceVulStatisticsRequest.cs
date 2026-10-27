@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstanceVulStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The vulnerability type of the Serverless asset. Valid values:</para>
+        /// <para>The vulnerability types for serverless assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sca</b>: middleware vulnerability</para>
+        /// <item><description><para><b>sca</b>: middleware vulnerabilities</para>
         /// </description></item>
-        /// <item><description><para><b>app</b>: scanner vulnerability</para>
+        /// <item><description><para><b>app</b>: scanner vulnerabilities</para>
         /// </description></item>
         /// </list>
         /// <remarks>

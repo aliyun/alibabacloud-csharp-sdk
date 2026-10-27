@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOpaPluginStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster IDs.</para>
+        /// <para>The list of cluster IDs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// <para>You can query this value by calling the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>

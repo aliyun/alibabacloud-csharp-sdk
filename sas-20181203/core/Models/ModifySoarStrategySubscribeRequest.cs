@@ -10,10 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifySoarStrategySubscribeRequest : TeaModel {
         /// <summary>
-        /// <para>The policy ID.</para>
-        /// <remarks>
-        /// <para>Call the <a href="~~DescribeSoarStrategies~~">DescribeSoarStrategies</a> operation to obtain this parameter.</para>
-        /// </remarks>
+        /// <para>The strategy ID.
+        /// You can call the <a href="~~DescribeSoarStrategies~~">DescribeSoarStrategies</a> operation to obtain this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,10 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The add or remove status. Valid values:</para>
+        /// <para>Specifies whether to add or remove the strategy template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: adds the policy template to My Policies</description></item>
-        /// <item><description>false: removes the policy template from My Policies.</description></item>
+        /// <item><description>true: Adds the strategy template to My Strategies.</description></item>
+        /// <item><description>false: Removes the strategy template from My Strategies.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

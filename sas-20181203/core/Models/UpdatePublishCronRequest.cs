@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePublishCronRequest : TeaModel {
         /// <summary>
-        /// <para>The Cron expression for the upgrade start time.</para>
+        /// <para>The cron expression for the upgrade start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The day of the week for the upgrade time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MON</b>: Monday</description></item>
-        /// <item><description><b>TUE</b>: Tuesday</description></item>
-        /// <item><description><b>WED</b>: Wednesday</description></item>
-        /// <item><description><b>THU</b>: Thursday</description></item>
-        /// <item><description><b>FRI</b>: Friday</description></item>
-        /// <item><description><b>SAT</b>: Saturday</description></item>
+        /// <item><description><b>MON</b>: Monday.</description></item>
+        /// <item><description><b>TUE</b>: Tuesday.</description></item>
+        /// <item><description><b>WED</b>: Wednesday.</description></item>
+        /// <item><description><b>THU</b>: Thursday.</description></item>
+        /// <item><description><b>FRI</b>: Friday.</description></item>
+        /// <item><description><b>SAT</b>: Saturday.</description></item>
         /// <item><description><b>SUN</b>: Sunday.</description></item>
         /// </list>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CronDay { get; set; }
 
         /// <summary>
-        /// <para>The publish start timestamp. Unit: milliseconds.</para>
+        /// <para>The start timestamp of the release, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1657407600000</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CronTime { get; set; }
 
         /// <summary>
-        /// <para>The upgrade start cycle type. Valid values:</para>
+        /// <para>The cycle type for the upgrade start time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>day</b>: every day</description></item>
-        /// <item><description><b>week</b>: every week.</description></item>
+        /// <item><description><b>day</b>: Daily.</description></item>
+        /// <item><description><b>week</b>: Weekly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CronType { get; set; }
 
         /// <summary>
-        /// <para>The upgrade duration. Unit: hours.</para>
+        /// <para>The duration of the upgrade, in hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GenerateOnceTaskRequest : TeaModel {
         /// <summary>
-        /// <para>A JSON string that contains additional parameters for the task.</para>
+        /// <para>The extended information field.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The source that initiated the task.</para>
+        /// <para>The source of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Manual</para>
@@ -31,18 +31,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The name of the scan task.</para>
+        /// <para>The node name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
+        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: Client troubleshooting node.</description></item>
+        /// <item><description><b>CLIENT_DEV_OPS</b>: Cloud O&amp;M node.</description></item>
+        /// <item><description><b>ASSET_SECURITY_CHECK</b>: Asset collection node.</description></item>
+        /// <item><description><b>ASSETS_COLLECTION</b>: Asset Fingerprints collection node.</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: Container image scan node.</description></item>
+        /// <item><description><b>AI_SECURITY_CHECK</b>: AI asset synchronization node.</description></item>
+        /// <item><description><b>IDC_PROBE_SCAN</b>: IDC probe scan node.</description></item>
+        /// <item><description><b>ATTACK_SURFACE_SCAN</b>: Attack surface border asset scan node.</description></item>
+        /// <item><description><b>ASSET_EXPOSURE_SCAN</b>: Asset exposure scan node.</description></item>
+        /// <item><description><b>VUL_CHECK_TASK</b>: Vulnerability scanning node.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,28 +54,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The type of the scan task. Valid values:</para>
+        /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CLIENT_PROBLEM_CHECK</b>: a client troubleshooting task</para>
-        /// </description></item>
-        /// <item><description><para><b>CLIENT_DEV_OPS</b>: a cloud DevOps task</para>
-        /// </description></item>
-        /// <item><description><para><b>ASSET_SECURITY_CHECK</b>: an asset collection task</para>
-        /// </description></item>
-        /// <item><description><para><b>ASSETS_COLLECTION</b>: an asset fingerprinting task</para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_SCAN</b>: a container image scan task</para>
-        /// </description></item>
-        /// <item><description><para><b>AI_SECURITY_CHECK</b>: an AI asset synchronization task</para>
-        /// </description></item>
-        /// <item><description><para><b>IDC_PROBE_SCAN</b>: an IDC probe scan task</para>
-        /// </description></item>
-        /// <item><description><para><b>ATTACK_SURFACE_SCAN</b>: an attack surface scan task</para>
-        /// </description></item>
-        /// <item><description><para><b>ASSET_EXPOSURE_SCAN</b>: an asset exposure scan task</para>
-        /// </description></item>
-        /// <item><description><para><b>VUL_CHECK_TASK</b>: a vulnerability scan task</para>
-        /// </description></item>
+        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: Client troubleshooting node.</description></item>
+        /// <item><description><b>CLIENT_DEV_OPS</b>: Cloud O&amp;M node.</description></item>
+        /// <item><description><b>ASSET_SECURITY_CHECK</b>: Asset collection node.</description></item>
+        /// <item><description><b>ASSETS_COLLECTION</b>: Asset Fingerprints collection node.</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: Container image scan node.</description></item>
+        /// <item><description><b>AI_SECURITY_CHECK</b>: AI asset synchronization node.</description></item>
+        /// <item><description><b>IDC_PROBE_SCAN</b>: IDC probe scan node.</description></item>
+        /// <item><description><b>ATTACK_SURFACE_SCAN</b>: Attack surface border asset scan node.</description></item>
+        /// <item><description><b>ASSET_EXPOSURE_SCAN</b>: Asset exposure scan node.</description></item>
+        /// <item><description><b>VUL_CHECK_TASK</b>: Vulnerability scanning node.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

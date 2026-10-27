@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClientConfStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The resource tag of the client to query.</para>
+        /// <para>Specifies the client resource tag to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description>major</description></item>
         /// <item><description>advanced</description></item>
-        /// <item><description>basic.</description></item>
+        /// <item><description>basic</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

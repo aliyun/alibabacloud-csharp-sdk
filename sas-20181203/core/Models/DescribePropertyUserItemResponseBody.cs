@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribePropertyUserItemResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyUserItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page in a paged query.</para>
+            /// <para>The number of entries returned on the current page for a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page to display in a paged query.</para>
+            /// <para>The page number of the current page returned for a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries displayed on each page in a paged query.</para>
+            /// <para>The maximum number of entries returned per page for a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The account name.</para>
+            /// <para>The name of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adm</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The unique identifier that Alibaba Cloud generated for the request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76068BE2-F9C4-4EDD-967B-F503B8CCDD3D</para>

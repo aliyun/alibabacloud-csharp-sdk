@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyUserItemRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page to display in a paged query.</para>
+        /// <para>The page number of the current page returned for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully refresh the data to be queried. Valid values:</para>
+        /// <para>Specifies whether to forcibly refresh the data to be queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Forcefully refresh.</description></item>
-        /// <item><description><b>false</b>: Do not forcefully refresh.</description></item>
+        /// <item><description><b>true</b>: Forces a refresh.</description></item>
+        /// <item><description><b>false</b>: Does not force a refresh.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? ForceFlush { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to display on each page in a paged query.</para>
+        /// <para>The maximum number of entries returned per page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

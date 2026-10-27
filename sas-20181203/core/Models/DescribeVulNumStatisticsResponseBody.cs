@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulNumStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of application vulnerability entries detected by the scanner on your assets.</para>
+        /// <para>The number of scanner application vulnerability records in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AppCnt { get; set; }
 
         /// <summary>
-        /// <para>The number of application vulnerabilities detected by the scanner on your assets.</para>
+        /// <para>The number of scanner application vulnerabilities in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AppNum { get; set; }
 
         /// <summary>
-        /// <para>The total number of handled CMS vulnerabilities.</para>
+        /// <para>The number of handled Web-CMS vulnerabilities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CmsDealedTotalNum { get; set; }
 
         /// <summary>
-        /// <para>The number of Web-CMS vulnerabilities on your assets.</para>
+        /// <para>The number of the Web-CMS vulnerability in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CmsNum { get; set; }
 
         /// <summary>
-        /// <para>The number of Linux software vulnerabilities on your assets.</para>
+        /// <para>The number of the Linux system vulnerability in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CveNum { get; set; }
 
         /// <summary>
-        /// <para>The number of urgent vulnerabilities on your assets.</para>
+        /// <para>The number of emergency vulnerabilities in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? EmgNum { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E22C89D2-FE13-5800-8746-9D0EF1827A59</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of middleware vulnerabilities on your assets.</para>
+        /// <para>The number of middleware vulnerabilities in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ScaNum { get; set; }
 
         /// <summary>
-        /// <para>The number of Windows system vulnerabilities on your assets.</para>
+        /// <para>The number of the Windows system vulnerability in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SysNum { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerabilities with a high fix priority.</para>
+        /// <para>The number of high-priority vulnerabilities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VulAsapSum { get; set; }
 
         /// <summary>
-        /// <para>This field is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This field is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VulDealedTotalNum { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerabilities with a medium fix priority.</para>
+        /// <para>The number of medium-priority vulnerabilities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VulLaterSum { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerabilities with a low fix priority.</para>
+        /// <para>The number of low-priority vulnerabilities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

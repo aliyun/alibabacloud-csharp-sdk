@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Minimum value: <b>1</b>. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the malicious file that you want to query.</para>
+        /// <para>The name of the malicious file to query.</para>
         /// <remarks>
-        /// <para>Fuzzy match is supported.</para>
+        /// <para>Fuzzy search is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,11 +88,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The severity levels of the malicious samples in container images that you want to query. Separate multiple values with commas (,). Valid values:</para>
+        /// <para>The severity levels of the malicious image samples to query. You can specify multiple values separated by commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>serious</b>: urgent</description></item>
-        /// <item><description><b>suspicious</b>: suspicious</description></item>
-        /// <item><description><b>remind</b>: reminder.</description></item>
+        /// <item><description><b>serious</b>: Urgent</description></item>
+        /// <item><description><b>suspicious</b>: Suspicious</description></item>
+        /// <item><description><b>remind</b>: Reminder</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Levels { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash of the malicious file.</para>
+        /// <para>The MD5 hash value of the malicious file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d836968041f7683b5459****</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MaliciousMd5 { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query. Default value: <b>20</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the image repository.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the value of the <b>RepoId</b> response parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the repository ID from the <b>RepoId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The instance ID of the container image.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the value of the <b>InstanceId</b> response parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the instance ID from the <b>InstanceId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the image repository.</para>
         /// <remarks>
-        /// <para>Fuzzy match is supported.</para>
+        /// <para>Fuzzy search is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The namespace of the image repository.</para>
         /// <remarks>
-        /// <para>Fuzzy match is supported.</para>
+        /// <para>Fuzzy search is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>us-east-1</b>: US (Virginia)</description></item>
         /// <item><description><b>us-west-1</b>: US (Silicon Valley)</description></item>
         /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
-        /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
+        /// <item><description><b>eu-west-1</b>: UK (London)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
-        /// <para>The collection of scan ranges.</para>
+        /// <para>The scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

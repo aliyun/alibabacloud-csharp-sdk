@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Chester-Test</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>117.71.xx.xx</para>
+        /// <para>192.168.xx.xx</para>
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The description of the cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testRemark</para>
+        /// <para>remark test</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

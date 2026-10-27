@@ -81,6 +81,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The plug-in status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>online</para>
             /// </summary>
             [NameInMap("PluginStatus")]
             [Validation(Required=false)]

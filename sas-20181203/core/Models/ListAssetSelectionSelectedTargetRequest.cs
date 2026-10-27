@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetSelectionSelectedTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the asset selection.</para>
+        /// <para>The unique identifier for the current asset selection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFunctionTrialStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the function module.</para>
+        /// <para>The name of the feature module.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trail_file_detect_api_reward</para>

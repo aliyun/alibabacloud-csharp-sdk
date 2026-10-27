@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddImageVulWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: zh. Valid values:</para>
+        /// <para>The language of the request and response. Default value: zh. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The reason why you add the vulnerability to the whitelist.</para>
+        /// <para>The reason for adding the whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>already config in another way</para>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The source of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b></description></item>
-        /// <item><description><b>agentless</b></description></item>
+        /// <item><description><b>image</b>: image</description></item>
+        /// <item><description><b>agentless</b>: agentless</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The object on which you want to perform the operation. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The operation target. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>type</b>: the object type. The value is fixed to repo.</description></item>
-        /// <item><description><b>target</b>: the object content. The value is in the Namespace/Image repository format.</description></item>
+        /// <item><description><b>type</b>: the target type. Set the value to repo.</description></item>
+        /// <item><description><b>target</b>: the target content. Format: namespace/image repository.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The vulnerability type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: system vulnerability</description></item>
         /// <item><description><b>sca</b>: application vulnerability</description></item>
@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The whitelist. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The whitelist. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
         /// <item><description><b>Type</b>: the vulnerability type. Valid values: cve and sca.</description></item>
-        /// <item><description><b>Name</b>: the name of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</description></item>
-        /// <item><description><b>AliasName</b>: the alias of the vulnerability that is specified in CVE.</description></item>
+        /// <item><description><b>Name</b>: the name in the vulnerability advisory.</description></item>
+        /// <item><description><b>AliasName</b>: the alias in the vulnerability advisory.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

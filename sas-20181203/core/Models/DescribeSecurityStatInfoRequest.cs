@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityStatInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account in the resource folder. This parameter is used by the multi-account security management feature of Security Center to query the security information of specified member accounts.</para>
+        /// <para>The ID of the member account. This parameter is used for the multi-account security control feature of Security Center to query the security information of other member accounts in the resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>

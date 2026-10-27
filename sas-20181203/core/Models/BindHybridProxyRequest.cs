@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers that you want to add to Security Center over the proxy server.</para>
+        /// <para>The UUIDs of the servers connected to the proxy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("YundunUuids")]

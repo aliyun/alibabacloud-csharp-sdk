@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageRepoListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>Specifies the number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The search field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>repoName</b>: image repository name</description></item>
-        /// <item><description><b>repoNamespace</b>: image repository namespace</description></item>
+        /// <item><description><b>repoName</b>: image repository name.</description></item>
+        /// <item><description><b>repoNamespace</b>: image repository namespace.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>OperateType</b> is set to <b>other</b>.</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>count</b>: statistics</description></item>
+        /// <item><description><b>count</b>: statistics.</description></item>
         /// <item><description><b>other</b>: other.</description></item>
         /// </list>
         /// 
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page during paging.</para>
+        /// <para>Specifies the maximum number of entries to return on each page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Set PageSize to a non-empty value.</para>
+        /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether the item is selected. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No.</description></item>
-        /// <item><description><b>1</b>: Yes.</description></item>
+        /// <item><description><b>0</b>: no.</description></item>
+        /// <item><description><b>1</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Selected { get; set; }
 
         /// <summary>
-        /// <para>The dimension of the defense switch configuration. Valid values:</para>
+        /// <para>The operation dimension for the defense switch configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>image_repo</b>: image repository ID.</description></item>
         /// </list>

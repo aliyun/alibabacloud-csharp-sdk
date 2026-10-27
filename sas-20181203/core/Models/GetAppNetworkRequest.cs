@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The timestamp of the end time. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The difference between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
+        /// <para>The interval between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The timestamp of the start time. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The difference between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
+        /// <para>The interval between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

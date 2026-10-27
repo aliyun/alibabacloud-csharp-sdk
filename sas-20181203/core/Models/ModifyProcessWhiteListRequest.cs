@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyProcessWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash of the process startup file.</para>
+        /// <para>The MD5 hash value of the process startup file.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeWhiteListProcess~~">DescribeWhiteListProcess</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeWhiteListProcess~~">DescribeWhiteListProcess</a> operation to query the value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Md5s { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically retrieves the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173.128.XX.XX</para>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The whitelist status of the process. Valid values:</para>
+        /// <para>Specifies the whitelist status of the process. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Remove from the whitelist.</description></item>
-        /// <item><description><b>2</b>: Add to the whitelist.</description></item>
+        /// <item><description><b>1</b>: remove from the whitelist</description></item>
+        /// <item><description><b>2</b>: add to the whitelist</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the policy.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to query the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyPostPayModuleSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
@@ -20,11 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Performs a dry run. The system checks the request but does not perform the actual operation.</description></item>
-        /// <item><description>false: Performs the request normally.
-        /// Default value: false.</description></item>
+        /// <item><description>true: Only prechecks the request and does not perform the actual operation.</description></item>
+        /// <item><description>false: Performs the actual operation.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DryRun")]
@@ -32,14 +31,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The switch configuration of the EDR module.</para>
+        /// <para>The switch configuration for the EDR module.</para>
         /// </summary>
         [NameInMap("EdrModuleSwitch")]
         [Validation(Required=false)]
         public ModifyPostPayModuleSwitchRequestEdrModuleSwitch EdrModuleSwitch { get; set; }
         public class ModifyPostPayModuleSwitchRequestEdrModuleSwitch : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable automatic binding of new assets to the EDR module. A value of 0 indicates that the feature is disabled. A value of 1 indicates that the feature is enabled.</para>
+            /// <para>Specifies whether to enable automatic binding of new assets to the EDR module. Valid values: 0: disabled. 1: enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("AutoBind")]
             [Validation(Required=false)]
@@ -47,6 +49,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The authorized quota for EDR hosts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("EDR_HOST_USAGE")]
             [Validation(Required=false)]
@@ -73,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition </description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
-        /// <item><description><b>5</b>: Advanced Edition</description></item>
+        /// <item><description><b>5</b>: Premium Edition</description></item>
         /// <item><description><b>6</b>: Anti-virus Edition    </description></item>
         /// <item><description><b>7</b>: Ultimate Edition</description></item>
         /// </list>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The pay-as-you-go instance ID. This parameter is required.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain the value of this parameter.</para>
+        /// <para>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The switch status of pay-as-you-go modules. The value is a JSON string. Valid values:</para>
+        /// <para>The switch status of the pay-as-you-go modules. The value is a JSON string. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Key:<list type="bullet">
         /// <item><description><b>VUL</b>: Vulnerability fixing module</description></item>
@@ -114,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>ANTI_RANSOMWARE</b>: Anti-ransomware management</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Value: 0 indicates disabled. 1 indicates enabled.</description></item>
+        /// <item><description>Value: 0 indicates disabled, and 1 indicates enabled.</description></item>
         /// </list>
         /// <remarks>
         /// <para>The values of modules that are not specified remain unchanged.</para>
@@ -129,9 +134,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayModuleSwitch { get; set; }
 
         /// <summary>
-        /// <para>The switches of pay-as-you-go modules.</para>
+        /// <para>The switch status of the pay-as-you-go modules.</para>
         /// <remarks>
-        /// <para>Notice:  This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
+        /// <para>Notice: This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
         /// </remarks>
         /// </summary>
         [NameInMap("PostPayModuleSwitchObj")]
@@ -139,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ModifyPostPayModuleSwitchRequestPostPayModuleSwitchObj PostPayModuleSwitchObj { get; set; }
         public class ModifyPostPayModuleSwitchRequestPostPayModuleSwitchObj : TeaModel {
             /// <summary>
-            /// <para>The agentless detection module. Valid values:</para>
+            /// <para>The Agentless detection module. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: disabled</description></item>
             /// <item><description><b>1</b>: enabled</description></item>
@@ -183,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>1</b>: enabled</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Notice: You cannot manually change the switch of the basic service module. If any other module is enabled, the enabling status of this module is enabled. If all other modules are shutdown, this module is not in the shutdown state.</notice></para>
+            /// <para>Notice: The switch for the basic service module cannot be manually modified. This module is enabled when any other module is enabled, and disabled when all other modules are disabled.</notice></para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -194,7 +199,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BasicService { get; set; }
 
             /// <summary>
-            /// <para>The Cloud Security Posture Management (CSPM) module. Valid values:</para>
+            /// <para>The Cloud Security Posture Management module. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: disabled</description></item>
             /// <item><description><b>1</b>: enabled</description></item>
@@ -208,7 +213,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Cspm { get; set; }
 
             /// <summary>
-            /// <para>The Cloud Threat Detection and Response (CTDR) module. Valid values:</para>
+            /// <para>The Cloud Threat Detection and Response module. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: disabled</description></item>
             /// <item><description><b>1</b>: enabled</description></item>

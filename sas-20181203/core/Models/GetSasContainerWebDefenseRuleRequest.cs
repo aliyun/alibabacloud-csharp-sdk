@@ -12,7 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The rule ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListSasContainerWebDefenseRule~~">ListSasContainerWebDefenseRule</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~ListSasContainerWebDefenseRule~~">ListSasContainerWebDefenseRule</a> operation to obtain this parameter.
+        /// This parameter is required. If you do not specify this parameter, the API returns an HTTP 400 error with the error code -101.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

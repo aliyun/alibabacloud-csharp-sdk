@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListBySensitiveFileRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page returned. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number of the returned page. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageDigest { get; set; }
 
         /// <summary>
-        /// <para>Specifies the language type for requests and responses. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page in a paged query. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page during paging in a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the image repository namespace.</para>
+        /// <para>The name of the namespace of the image repository.</para>
         /// <remarks>
         /// <para>Fuzzy match is supported.</para>
         /// </remarks>
@@ -96,11 +96,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoNamespace { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the file. Separate multiple levels with commas (,). Valid values:</para>
+        /// <para>The risk level of the file. Separate multiple risk levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b>: high</description></item>
-        /// <item><description><b>medium</b>: medium</description></item>
-        /// <item><description><b>low</b>: low</description></item>
+        /// <item><description><b>high</b>: High.</description></item>
+        /// <item><description><b>medium</b>: Medium.</description></item>
+        /// <item><description><b>low</b>: Low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The scan scope collection. Valid values:</para>
+        /// <para>The scan scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b>: image</description></item>
-        /// <item><description><b>container</b>: container</description></item>
+        /// <item><description><b>image</b>: Images.</description></item>
+        /// <item><description><b>container</b>: Containers.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ScanRange")]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The alerting type for sensitive files. Valid values:</para>
+        /// <para>The alert type for sensitive files. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>npm_token</b>: NPM access token</description></item>
         /// <item><description><b>ftp_cfg</b>: FTP configuration</description></item>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>esmtp_cfg</b>: ESMTP mail server configuration</description></item>
         /// <item><description><b>docker_registry_cfg</b>: Docker image repository configuration</description></item>
         /// <item><description><b>pem</b>: PEM</description></item>
-        /// <item><description><b>common_cred</b>: common credential</description></item>
+        /// <item><description><b>common_cred</b>: Common credential</description></item>
         /// <item><description><b>sftp_cfg</b>: SFTP connection configuration</description></item>
         /// <item><description><b>grafana_token</b>: Grafana token</description></item>
         /// <item><description><b>slack_token</b>: Slack token</description></item>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>openssh_private_key</b>: OpenSSH private key</description></item>
         /// <item><description><b>square_oauth</b>: Square OAuth credential</description></item>
         /// <item><description><b>typeform_token</b>: Typeform token</description></item>
-        /// <item><description><b>common_database_cfg</b>: common database connection configuration</description></item>
+        /// <item><description><b>common_database_cfg</b>: Common database connection configuration</description></item>
         /// <item><description><b>wordpress_database_cfg</b>: WordPress database configuration</description></item>
         /// <item><description><b>googlecloud_api_key</b>: Google Cloud API key</description></item>
         /// <item><description><b>vscode_sftp</b>: VSCode SFTP configuration</description></item>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>tencentcloud_ak</b>: SecretId of other cloud providers</description></item>
         /// <item><description><b>rsa_private_key</b>: RSA private key</description></item>
         /// <item><description><b>github_personal_token</b>: GitHub personal access token</description></item>
-        /// <item><description><b>pgp</b>: PGP ciphertext file</description></item>
+        /// <item><description><b>pgp</b>: PGP encrypt file</description></item>
         /// <item><description><b>stripe_skpk</b>: Stripe secret key</description></item>
         /// <item><description><b>square_token</b>: Square access token</description></item>
         /// <item><description><b>rails_carrierwave</b>: Rails Carrierwave file upload credential</description></item>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>huaweicloud_ak</b>: Secret Access Key of other cloud providers</description></item>
         /// <item><description><b>aws_s3cmd</b>: AWS S3cmd configuration</description></item>
         /// <item><description><b>php_config</b>: PHP configuration</description></item>
-        /// <item><description><b>common_private_key</b>: common private key type</description></item>
+        /// <item><description><b>common_private_key</b>: Common private key type</description></item>
         /// <item><description><b>microsoft_mdf</b>: Microsoft SQL database</description></item>
         /// <item><description><b>mediawiki_cfg</b>: MediaWiki configuration</description></item>
         /// <item><description><b>jenkins_cred</b>: Jenkins credential</description></item>
@@ -234,8 +234,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>rails_app_token</b>: Rails app token</description></item>
         /// <item><description><b>git_cred</b>: Git user credential</description></item>
         /// <item><description><b>newrelic_api_key</b>: New Relic user API key</description></item>
-        /// <item><description><b>github_hub</b>: hub configuration that stores GitHub tokens</description></item>
-        /// <item><description><b>rubygem</b>: RubyGems token</description></item>
+        /// <item><description><b>github_hub</b>: Hub configuration that stores GitHub tokens</description></item>
+        /// <item><description><b>rubygem</b>: RubyGems token<remarks>
+        /// <para>This parameter is required. If you do not specify this parameter, the API returns an HTTP 400 error with the error code -101.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -248,9 +251,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The status of the sensitive file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: unhandled</description></item>
-        /// <item><description><b>1</b>: ignored</description></item>
-        /// <item><description><b>2</b>: false positive</description></item>
+        /// <item><description><b>0</b>: Unhandled.</description></item>
+        /// <item><description><b>1</b>: Ignored.</description></item>
+        /// <item><description><b>2</b>: False positive.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

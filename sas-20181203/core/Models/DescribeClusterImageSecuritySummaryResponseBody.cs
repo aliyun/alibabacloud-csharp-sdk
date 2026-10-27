@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>high</b>: High.</description></item>
-                /// <item><description><b>medium</b>: Medium.</description></item>
-                /// <item><description><b>low</b>: Low.</description></item>
+                /// <item><description><b>high</b>: High risk.</description></item>
+                /// <item><description><b>medium</b>: Medium risk.</description></item>
+                /// <item><description><b>low</b>: Low risk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The warning level. Valid values:</para>
+                /// <para>The alert level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>asap</b>: High. Fix the vulnerability at the earliest opportunity.</description></item>
-                /// <item><description><b>nntf</b>: Medium. The vulnerability can be temporarily left unfixed.</description></item>
-                /// <item><description><b>later</b>: Low. The vulnerability can be left unfixed.</description></item>
+                /// <item><description><b>asap</b>: High. Fix as soon as possible.</description></item>
+                /// <item><description><b>nntf</b>: Medium. Can be fixed later.</description></item>
+                /// <item><description><b>later</b>: Low. Can be left unfixed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -104,9 +104,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>high</b>: High.</description></item>
-                /// <item><description><b>medium</b>: Medium.</description></item>
-                /// <item><description><b>low</b>: Low.</description></item>
+                /// <item><description><b>high</b>: High risk.</description></item>
+                /// <item><description><b>medium</b>: Medium risk.</description></item>
+                /// <item><description><b>low</b>: Low risk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -136,11 +136,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The warning level. Valid values:</para>
+                /// <para>The alert level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>asap</b>: High. Fix the vulnerability at the earliest opportunity.</description></item>
-                /// <item><description><b>nntf</b>: Medium. The vulnerability can be temporarily left unfixed.</description></item>
-                /// <item><description><b>later</b>: Low. The vulnerability can be left unfixed.</description></item>
+                /// <item><description><b>asap</b>: High. Fix as soon as possible.</description></item>
+                /// <item><description><b>nntf</b>: Medium. Can be fixed later.</description></item>
+                /// <item><description><b>later</b>: Low. Can be left unfixed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

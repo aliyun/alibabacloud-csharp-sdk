@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the asset to scan. You can obtain this value from the Host Assets and Cloud Products page. In host security detection scenarios, this parameter specifies the UUID of the host to scan. In snapshot security detection and custom image security detection scenarios, this parameter specifies the ID of the image or snapshot to scan.</para>
+        /// <para>The UUID of the scanned asset. You can obtain the UUID on the Host Assets and Cloud Products pages. In the host security detection scenario, this parameter specifies the UUID of the scanned host. In the snapshot security detection and custom image security detection scenarios, this parameter specifies the ID of the scanned image or snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06293273b67d19516cfcc712194f****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageUuid { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the asset to query. You can obtain this value from Node Management &gt; Details &gt; Detection Objects.</para>
+        /// <para>Instance ID of the asset instance to query. You can obtain instance ID by choosing Task Management &gt; Details &gt; Detection Target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1fu4aqltf1huhc****</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query. The default number of entries displayed per page is 20. If this parameter is left empty, 20 entries are returned by default for paging.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The asset name or IP address.</para>
+        /// <para>The name or IP address of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>
@@ -63,14 +63,131 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The collection of scan ranges.</para>
+        /// <para>The scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
         public string ScanRangeShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the sensitive file.</para>
+        /// <para>The type of the sensitive file. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>npm_token</b>: NPM access token</description></item>
+        /// <item><description><b>ftp_cfg</b>: FTP configuration</description></item>
+        /// <item><description><b>google_oauth_key</b>: Google OAuth key</description></item>
+        /// <item><description><b>planetscale_passwd</b>: PlanetScale password</description></item>
+        /// <item><description><b>github_ssh_key</b>: GitHub SSH key</description></item>
+        /// <item><description><b>msbuild_publish_profile</b>: MSBuild publish profile</description></item>
+        /// <item><description><b>fastly_cdn_token</b>: Fastly CDN token</description></item>
+        /// <item><description><b>ssh_private_key</b>: SSH private key</description></item>
+        /// <item><description><b>aws_cli</b>: AWS CLI credential</description></item>
+        /// <item><description><b>cpanel_proftpd</b>: cPanel ProFTPd credential</description></item>
+        /// <item><description><b>postgresql_passwd</b>: PostgreSQL password file</description></item>
+        /// <item><description><b>discord_client_cred</b>: Discord client credential</description></item>
+        /// <item><description><b>rails_database</b>: Rails database configuration</description></item>
+        /// <item><description><b>aws_access_key</b>: AWS access key</description></item>
+        /// <item><description><b>esmtp_cfg</b>: ESMTP mail server configuration</description></item>
+        /// <item><description><b>docker_registry_cfg</b>: Docker image registry configuration</description></item>
+        /// <item><description><b>pem</b>: PEM</description></item>
+        /// <item><description><b>common_cred</b>: common credential</description></item>
+        /// <item><description><b>sftp_cfg</b>: SFTP connection configuration</description></item>
+        /// <item><description><b>grafana_token</b>: Grafana token</description></item>
+        /// <item><description><b>slack_token</b>: Slack token</description></item>
+        /// <item><description><b>ec_private_key</b>: EC private key</description></item>
+        /// <item><description><b>pypi_token</b>: PyPI upload token</description></item>
+        /// <item><description><b>finicity_token</b>: Finicity platform token</description></item>
+        /// <item><description><b>k8s_client_key</b>: Kubernetes client private key</description></item>
+        /// <item><description><b>git_cfg</b>: Git configuration</description></item>
+        /// <item><description><b>django_key</b>: Django key</description></item>
+        /// <item><description><b>jenkins_ssh</b>: Jenkins SSH configuration file</description></item>
+        /// <item><description><b>openssh_private_key</b>: OpenSSH private key</description></item>
+        /// <item><description><b>square_oauth</b>: Square OAuth credential</description></item>
+        /// <item><description><b>typeform_token</b>: Typeform token</description></item>
+        /// <item><description><b>common_database_cfg</b>: common database connection configuration</description></item>
+        /// <item><description><b>wordpress_database_cfg</b>: WordPress database configuration</description></item>
+        /// <item><description><b>googlecloud_api_key</b>: Google Cloud API key</description></item>
+        /// <item><description><b>vscode_sftp</b>: VSCode SFTP configuration</description></item>
+        /// <item><description><b>apache_htpasswd</b>: Apache htpasswd</description></item>
+        /// <item><description><b>planetscale_token</b>: PlanetScale token</description></item>
+        /// <item><description><b>contentful_preview_token</b>: Contentful preview token</description></item>
+        /// <item><description><b>php_database_cfg</b>: PHP application database password</description></item>
+        /// <item><description><b>atom_remote_sync</b>: Atom remote sync configuration</description></item>
+        /// <item><description><b>aws_session_token</b>: AWS session token</description></item>
+        /// <item><description><b>atom_sftp_cfg</b>: Atom SFTP configuration</description></item>
+        /// <item><description><b>asana_client_private_key</b>: Asana project management platform client key</description></item>
+        /// <item><description><b>tencentcloud_ak</b>: SecretId of other cloud providers</description></item>
+        /// <item><description><b>rsa_private_key</b>: RSA private key</description></item>
+        /// <item><description><b>github_personal_token</b>: GitHub personal access token</description></item>
+        /// <item><description><b>pgp</b>: PGP encrypted file</description></item>
+        /// <item><description><b>stripe_skpk</b>: Stripe secret key</description></item>
+        /// <item><description><b>square_token</b>: Square access token</description></item>
+        /// <item><description><b>rails_carrierwave</b>: Rails Carrierwave file upload credential</description></item>
+        /// <item><description><b>dbeaver_database_cfg</b>: DBeaver database configuration</description></item>
+        /// <item><description><b>robomongo_cred</b>: Robomongo credential</description></item>
+        /// <item><description><b>github_oauth_token</b>: GitHub OAuth access token</description></item>
+        /// <item><description><b>pulumi_token</b>: Pulumi token</description></item>
+        /// <item><description><b>ventrilo_voip</b>: Ventrilo VoIP server configuration</description></item>
+        /// <item><description><b>macos_keychain</b>: macOS keychain</description></item>
+        /// <item><description><b>amazon_mws_token</b>: Amazon MWS token</description></item>
+        /// <item><description><b>dynatrace_token</b>: Dynatrace token</description></item>
+        /// <item><description><b>java_keystore</b>: Java keystore</description></item>
+        /// <item><description><b>microsoft_sdf</b>: Microsoft SQL CE database</description></item>
+        /// <item><description><b>kubernetes_dashboard_cred</b>: Kubernetes Dashboard user credential</description></item>
+        /// <item><description><b>atlassian_token</b>: Atlassian token</description></item>
+        /// <item><description><b>rdp</b>: Remote Desktop Protocol (RDP) connection</description></item>
+        /// <item><description><b>mailgun_key</b>: Mailgun webhook signing key</description></item>
+        /// <item><description><b>mailchimp_api_key</b>: Mailchimp API key</description></item>
+        /// <item><description><b>netrc_cfg</b>: .netrc configuration file</description></item>
+        /// <item><description><b>openvpn_cfg</b>: OpenVPN client configuration</description></item>
+        /// <item><description><b>github_refresh_token</b>: GitHub refresh token</description></item>
+        /// <item><description><b>salesforce</b>: Salesforce credential</description></item>
+        /// <item><description><b>sendinblue</b>: Sendinblue token</description></item>
+        /// <item><description><b>pkcs_private_key</b>: PKCS#12 key</description></item>
+        /// <item><description><b>rubyonrails_passwd</b>: Ruby on Rails password file</description></item>
+        /// <item><description><b>filezilla_ftp</b>: FileZilla FTP configuration</description></item>
+        /// <item><description><b>databricks_token</b>: Databricks token</description></item>
+        /// <item><description><b>gitLab_personal_token</b>: GitLab personal access token</description></item>
+        /// <item><description><b>rails_master_key</b>: Rails master key</description></item>
+        /// <item><description><b>sqlite</b>: SQLite3/SQLite database</description></item>
+        /// <item><description><b>firefox_logins</b>: Firefox logon configuration</description></item>
+        /// <item><description><b>mailgun_private_token</b>: Mailgun private token</description></item>
+        /// <item><description><b>joomla_cfg</b>: Joomla configuration</description></item>
+        /// <item><description><b>hashicorp_terraform_token</b>: HashiCorp Terraform token</description></item>
+        /// <item><description><b>jetbrains_ides</b>: JetBrains IDEs configuration</description></item>
+        /// <item><description><b>heroku_api_key</b>: Heroku API key</description></item>
+        /// <item><description><b>messagebird_token</b>: MessageBird token</description></item>
+        /// <item><description><b>github_app_token</b>: GitHub App token</description></item>
+        /// <item><description><b>hashicorp_vault_token</b>: HashiCorp Vault token</description></item>
+        /// <item><description><b>pgp_private_key</b>: PGP private key</description></item>
+        /// <item><description><b>sshpasswd</b>: SSH password</description></item>
+        /// <item><description><b>huaweicloud_ak</b>: Secret Access Key of other cloud providers</description></item>
+        /// <item><description><b>aws_s3cmd</b>: AWS S3cmd configuration</description></item>
+        /// <item><description><b>php_config</b>: PHP configuration</description></item>
+        /// <item><description><b>common_private_key</b>: common private key type</description></item>
+        /// <item><description><b>microsoft_mdf</b>: Microsoft SQL database</description></item>
+        /// <item><description><b>mediawiki_cfg</b>: MediaWiki configuration</description></item>
+        /// <item><description><b>jenkins_cred</b>: Jenkins credential</description></item>
+        /// <item><description><b>rubygems_cred</b>: RubyGems credential</description></item>
+        /// <item><description><b>clojars_token</b>: Clojars token</description></item>
+        /// <item><description><b>phoenix_web_passwd</b>: Phoenix Web credential</description></item>
+        /// <item><description><b>puttygen_private_key</b>: PuTTYgen private key</description></item>
+        /// <item><description><b>google_oauth_token</b>: Google OAuth access token</description></item>
+        /// <item><description><b>rubyonrails_cfg</b>: Ruby on Rails database configuration</description></item>
+        /// <item><description><b>lob_api_key</b>: Lob API key</description></item>
+        /// <item><description><b>pkcs_cred</b>: PKCS#12 certificate</description></item>
+        /// <item><description><b>otr_private_key</b>: OTR private key</description></item>
+        /// <item><description><b>contentful_delivery_token</b>: Contentful delivery token</description></item>
+        /// <item><description><b>digital_ocean_tugboat</b>: DigitalOcean Tugboat configuration</description></item>
+        /// <item><description><b>dsa_private_key</b>: DSA private key</description></item>
+        /// <item><description><b>rails_app_token</b>: Rails App token</description></item>
+        /// <item><description><b>git_cred</b>: Git user credential</description></item>
+        /// <item><description><b>newrelic_api_key</b>: New Relic User API key</description></item>
+        /// <item><description><b>github_hub</b>: hub configuration that stores GitHub tokens</description></item>
+        /// <item><description><b>rubygem</b>: RubyGems token<remarks>
+        /// <para>This parameter is required. If this parameter is not provided, the API returns HTTP 400 and the error code -101.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>sshpasswd</para>
@@ -82,8 +199,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The fix status of the baseline risk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: unfixed</description></item>
-        /// <item><description><b>1</b>: fixed.</description></item>
+        /// <item><description><b>0</b>: Unfixed.</description></item>
+        /// <item><description><b>1</b>: Fixed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

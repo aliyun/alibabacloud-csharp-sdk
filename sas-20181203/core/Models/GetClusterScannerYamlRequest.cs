@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterScannerYamlRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container cluster to query.</para>
+        /// <para>The ID of the container cluster.</para>
         /// <remarks>
         /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The collection of allowed CIDR blocks.</para>
+        /// <para>The list of allowed CIDR blocks.</para>
         /// </summary>
         [NameInMap("SecurityGroupProbeIpList")]
         [Validation(Required=false)]

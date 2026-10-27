@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The number of platform configuration check instance authorizations allocated to the member accounts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("CspmInstanceCapacity")]
             [Validation(Required=false)]

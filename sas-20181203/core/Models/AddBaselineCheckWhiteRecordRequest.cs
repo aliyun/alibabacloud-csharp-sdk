@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</para>
+        /// <para>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -37,20 +37,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The reason why the check item is added to the whitelist.</para>
+        /// <para>The reason for adding the item to the whitelist.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无效</para>
+        /// <para>Invalid</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The data source. If you leave this parameter empty, the default value is used. Valid values:</para>
+        /// <para>The data source. If this parameter is left empty, servers are queried by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>default</b>: server</description></item>
-        /// <item><description><b>agentless</b>: agentless detection</description></item>
+        /// <item><description><b>agentless</b>: agentless</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The type of the assets on which the whitelist rule takes effect. Valid values:</para>
+        /// <para>The type of the target to which the whitelist applies. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>all_instance</b>: all servers</description></item>
-        /// <item><description><b>instance</b>: specific servers</description></item>
+        /// <item><description><b>instance</b>: specified servers</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

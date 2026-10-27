@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the server group that you want to delete.</para>
+        /// <para>Specifies the ID of the server group to delete.</para>
         /// <remarks>
-        /// <para>To delete a server group, you must specify the server group ID. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the server group ID.</para>
+        /// <para>To delete a server group, you must provide the server group ID. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.172.XX.XX</para>

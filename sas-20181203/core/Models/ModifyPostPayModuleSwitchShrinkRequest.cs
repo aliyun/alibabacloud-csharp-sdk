@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyPostPayModuleSwitchShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
@@ -20,11 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Performs a dry run. The system checks the request but does not perform the actual operation.</description></item>
-        /// <item><description>false: Performs the request normally.
-        /// Default value: false.</description></item>
+        /// <item><description>true: Only prechecks the request and does not perform the actual operation.</description></item>
+        /// <item><description>false: Performs the actual operation.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DryRun")]
@@ -32,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The switch configuration of the EDR module.</para>
+        /// <para>The switch configuration for the EDR module.</para>
         /// </summary>
         [NameInMap("EdrModuleSwitch")]
         [Validation(Required=false)]
@@ -57,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition </description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
-        /// <item><description><b>5</b>: Advanced Edition</description></item>
+        /// <item><description><b>5</b>: Premium Edition</description></item>
         /// <item><description><b>6</b>: Anti-virus Edition    </description></item>
         /// <item><description><b>7</b>: Ultimate Edition</description></item>
         /// </list>
@@ -72,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The pay-as-you-go instance ID. This parameter is required.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain the value of this parameter.</para>
+        /// <para>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The switch status of pay-as-you-go modules. The value is a JSON string. Valid values:</para>
+        /// <para>The switch status of the pay-as-you-go modules. The value is a JSON string. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Key:<list type="bullet">
         /// <item><description><b>VUL</b>: Vulnerability fixing module</description></item>
@@ -98,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>ANTI_RANSOMWARE</b>: Anti-ransomware management</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Value: 0 indicates disabled. 1 indicates enabled.</description></item>
+        /// <item><description>Value: 0 indicates disabled, and 1 indicates enabled.</description></item>
         /// </list>
         /// <remarks>
         /// <para>The values of modules that are not specified remain unchanged.</para>
@@ -113,9 +112,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayModuleSwitch { get; set; }
 
         /// <summary>
-        /// <para>The switches of pay-as-you-go modules.</para>
+        /// <para>The switch status of the pay-as-you-go modules.</para>
         /// <remarks>
-        /// <para>Notice:  This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
+        /// <para>Notice: This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
         /// </remarks>
         /// </summary>
         [NameInMap("PostPayModuleSwitchObj")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebLockBindListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paging query. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number of the current page returned for a paging query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page for a paging query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy match field for the server. The value can be a server name or IP address.</para>
+        /// <para>The fuzzy match keyword for the server, which can be the server name or IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the access source.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116.30.XX.XX</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The protection status of the servers that you want to query. Valid values:</para>
+        /// <para>The protection status of the servers to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b>: Protection is enabled.</description></item>
         /// <item><description><b>off</b>: Protection is disabled.</description></item>
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the asset that you want to query.</para>
+        /// <para>The UUID of the asset to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

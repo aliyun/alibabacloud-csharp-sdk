@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAutoTagRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
-        /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
-        /// </remarks>
+        /// <para>The maximum number of entries to return per page during paging. Default value: 20. If this parameter is left empty, 20 entries are returned. Specify a value for this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -33,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The rule name.</para>
+        /// <para>The name of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-001</para>

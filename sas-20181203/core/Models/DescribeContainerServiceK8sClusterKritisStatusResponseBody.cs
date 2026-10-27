@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerServiceK8sClusterKritisStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Kritis status information of the ACK cluster.</para>
+        /// <para>The Kritis status information of the Container Service for Kubernetes cluster.</para>
         /// </summary>
         [NameInMap("KritisStatus")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578AB****</para>

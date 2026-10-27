@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityEventMarkMissListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The alert event name (child class).</para>
+        /// <para>The name of the alert event (subtype).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Login with unusual location</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The number of whitelist rules to display on each page in a paged query. Default value: <b>20</b>, which indicates that 20 whitelist rules are displayed on each page.</para>
+        /// <para>The number of whitelist rules to return on each page during paging. Default value: <b>20</b>, which indicates that 20 whitelist rules are returned on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The asset search keyword. You can enter the IP address, public IP address, private IP address, or asset name for fuzzy matching.</para>
+        /// <para>The asset search criterion. You can specify the IP address, public IP address, private IP address, or name of an asset for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>

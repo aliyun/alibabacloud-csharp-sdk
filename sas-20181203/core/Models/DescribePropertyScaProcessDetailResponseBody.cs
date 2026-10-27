@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribePropertyScaProcessDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyScaProcessDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries returned on the current page for paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page for paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+            /// <para>The number of processes returned on each page for paging in a paged query. Default value: <b>10</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The processes collected by the asset fingerprints feature.</para>
+        /// <para>The list of processes in Asset Fingerprints.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan by Asset Fingerprints. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1597987834000</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name of the server.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hc-host-****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the process.</para>
+            /// <para>The process ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>522</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The version of web application service.</para>
+            /// <para>The version of the web application service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.10.0</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADE57832-9666-511C-9A80-B87DE2E8****</para>

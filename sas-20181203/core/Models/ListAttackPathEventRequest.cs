@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The subtype of the cloud service asset.</para>
             /// <remarks>
-            /// <para>Call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the subtypes of cloud service assets.</para>
+            /// <para>You can call the <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> operation to query the subtype of the cloud service asset.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the cloud service asset.</para>
             /// <remarks>
-            /// <para>Call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the types of cloud service assets.</para>
+            /// <para>You can call the <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> operation to query the type of the cloud service asset.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>start</b>: start node.</description></item>
-            /// <item><description><b>end</b>: end node.</description></item>
+            /// <item><description><b>start</b>: the start node</description></item>
+            /// <item><description><b>end</b>: the end node</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The vendor of the cloud service asset.</para>
             /// <remarks>
-            /// <para>Call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the vendors of cloud service assets.</para>
+            /// <para>You can call the <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> operation to query the vendor of the cloud service asset.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The page number of the results to return. Default value: 1, which indicates the first page.</para>
+        /// <para>The number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time as a timestamp. Unit: milliseconds.</para>
+        /// <para>The timestamp of the end time. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1668064495000</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -116,9 +116,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The path name description.</para>
+        /// <para>The description of the path name.</para>
         /// <remarks>
-        /// <para>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path name descriptions.</para>
+        /// <para>You can call the <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> operation to query the description of the path name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The path type.</para>
         /// <remarks>
-        /// <para>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</para>
+        /// <para>You can call the <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> operation to query the path type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> RiskLevelList { get; set; }
 
         /// <summary>
-        /// <para>The start time as a timestamp. Unit: milliseconds.</para>
+        /// <para>The timestamp of the start time. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1666886400000</para>

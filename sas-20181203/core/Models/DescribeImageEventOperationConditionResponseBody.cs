@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageEventOperationConditionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code of the call.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The alerting type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sensitiveFile</b>: sensitive file.</description></item>
+            /// <item><description><b>sensitiveFile</b>: Sensitive file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <para>The condition key. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>MD5</b>: MD5.</description></item>
-                    /// <item><description><b>PATH</b>: path.</description></item>
+                    /// <item><description><b>PATH</b>: Path.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The operation code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>whitelist</b>: whitelist.</description></item>
+                /// <item><description><b>whitelist</b>: Whitelist.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -141,10 +141,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

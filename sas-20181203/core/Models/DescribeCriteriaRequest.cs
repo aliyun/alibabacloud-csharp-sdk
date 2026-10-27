@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The Asset Type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: queries all ECS servers.</description></item>
+        /// <item><description><b>ecs</b>: Queries all ECS servers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</para>
+        /// <para>The ID of the Alibaba Cloud account for the member accounts in the resource folder.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the fuzzy query field supports automatic matching. Default value: <b>false</b>. Valid values:</para>
+        /// <para>Specifies whether the entered fuzzy query field supports automatic matching. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Supported.</description></item>
-        /// <item><description><b>false</b>: Not supported.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

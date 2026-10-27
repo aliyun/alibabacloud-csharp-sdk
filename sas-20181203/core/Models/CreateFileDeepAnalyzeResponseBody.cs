@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         ///   &quot;result&quot;: 0,
         ///   &quot;file_analysis&quot;: {
         ///     &quot;summary&quot;: {
-        ///       &quot;ai_interpretation&quot;: &quot;The file is a script for the JetBrains PhpStorm stub generation tool, which is a legitimate developer tool. The code uses the PhpParser library to parse PHP source code and generate the PhpStormStubsMap.php mapping file. The engine analysis did not detect any attempts to invoke dangerous functions, external input processing, code obfuscation, or malicious behavior characteristics, and the file is determined to be normal.&quot;
+        ///       &quot;ai_interpretation&quot;: &quot;The file is a JetBrains PhpStorm stub generation tool script and is a legitimate developer tool. The code uses the PhpParser library to parse PHP source code and generate the PhpStormStubsMap.php mapping file. The DPI engine analysis did not detect any dangerous function invoke, external input processing, code obfuscation, or malicious behavior characteristics. The file is determined to be normal.&quot;
         ///     }
         ///   }
         /// }</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The stage description.</para>
+        /// <para>The phase description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>File hash parsed</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The stage status.</para>
+        /// <para>The phase status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSoarPlaybookTaskDetailRequest : TeaModel {
         /// <summary>
-        /// <para>Playbook ID.</para>
+        /// <para>The ID of the playbook.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2627461.html">DescribePlaybooks</a> interface.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/3000306.html">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PlaybookId { get; set; }
 
         /// <summary>
-        /// <para>The vulnerability ID passed when creating the policy task.</para>
+        /// <para>The ID of the vulnerability passed when creating the policy task.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="~~DescribeVulList~~">DescribeVulList</a> interface.</para>
+        /// <para>You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>UUID of the playbook task execution.</para>
+        /// <para>The UUID of the playbook task execution.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a> interface.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The query type of the baseline to query. Valid values:</para>
+        /// <para>The query type for the baseline to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>BaselineNameAlias</b>: baseline name</para>
         /// </description></item>
-        /// <item><description><para><b>BaselineClassAlias</b>: baseline category.</para>
+        /// <item><description><para><b>BaselineClassAlias</b>: baseline category</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page when using paging. Default value: 20, which indicates the first page.</para>
+        /// <para>The page number of the current page when paging in a paged query. Default value: 20, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageUuid { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when using paging. Default value: <b>20</b>, which indicates that 20 logon configuration entries are displayed per page.</para>
+        /// <para>The number of logon configuration entries to return on each page when paging in a paged query. Default value: <b>20</b>, which indicates that 20 logon configuration entries are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -81,13 +81,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the baseline to query. Separate multiple levels with commas (,). By default, all levels are included. Valid values:</para>
+        /// <para>The risk level of the baselines to query. Separate multiple risk levels with commas (,). By default, all risk levels are queried. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>high</b>: high risk</para>
         /// </description></item>
         /// <item><description><para><b>medium</b>: medium risk</para>
         /// </description></item>
-        /// <item><description><para><b>low</b>: low risk.</para>
+        /// <item><description><para><b>low</b>: low risk</para>
         /// </description></item>
         /// </list>
         /// 
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The scan scope.</para>
+        /// <para>The scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

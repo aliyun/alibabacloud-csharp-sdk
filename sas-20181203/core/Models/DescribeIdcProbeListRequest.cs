@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeIdcProbeListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1, which indicates that the first page is returned.</para>
+        /// <para>Specifies the page number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IdcName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page when paging. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
+        /// <para>Specifies the maximum number of entries to return on each page for a paging query. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Specify a value for the PageSize parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The usage status of the probe. Valid values:</para>
+        /// <para>The status of the probe. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: enabled</description></item>
-        /// <item><description><b>1</b>: disabled.</description></item>
+        /// <item><description><b>0</b>: Enabled.</description></item>
+        /// <item><description><b>1</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

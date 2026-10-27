@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
-        /// <item><description><b>emg</b>: emergency vulnerability.</description></item>
+        /// <item><description><b>emg</b>: emergency vulnerability</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The query type. Set this parameter to vul.</para>
+        /// <para>The query type. Set the value to vul.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vul</para>

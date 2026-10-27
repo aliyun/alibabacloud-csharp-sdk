@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RebootMachineRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the server that you want to restart.</para>
+        /// <para>The UUID of the server to restart.</para>
         /// <remarks>
         /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>

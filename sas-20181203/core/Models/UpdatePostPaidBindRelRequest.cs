@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The type of free quota used for the binding operation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>freeEnterprise</para>
             /// </summary>
             [NameInMap("FreeType")]
             [Validation(Required=false)]

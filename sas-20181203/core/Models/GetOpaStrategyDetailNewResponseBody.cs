@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOpaStrategyDetailNewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success, whereas any other value indicates failure. You can use this field to identify the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The risky image build command information.</para>
+                /// <para>The information about risky image build commands.</para>
                 /// </summary>
                 [NameInMap("BuildRisk")]
                 [Validation(Required=false)]
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The malicious sample configuration information.</para>
+                /// <para>The configuration information for malicious samples.</para>
                 /// </summary>
                 [NameInMap("MaliciousFile")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile MaliciousFile { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile : TeaModel {
                     /// <summary>
-                    /// <para>The malicious sample item information.</para>
+                    /// <para>The information about malicious sample items.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The sensitive file information.</para>
+                /// <para>The information about sensitive files.</para>
                 /// </summary>
                 [NameInMap("SensitiveFile")]
                 [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul Vul { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul : TeaModel {
                     /// <summary>
-                    /// <para>The vulnerability item information.</para>
+                    /// <para>The information about vulnerability items.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -271,8 +271,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// <para>The ID of the vulnerability type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>cve</b>: system vulnerability</description></item>
-                        /// <item><description><b>app</b>: application vulnerability</description></item>
+                        /// <item><description><b>cve</b>: System vulnerability.</description></item>
+                        /// <item><description><b>app</b>: Application vulnerability.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> ImageName { get; set; }
 
             /// <summary>
-            /// <para>The image tag.</para>
+            /// <para>The image label.</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
@@ -366,8 +366,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>zh</b>: Chinese</description></item>
-            /// <item><description><b>en</b>: English</description></item>
+            /// <item><description><b>zh</b>: Chinese.</description></item>
+            /// <item><description><b>en</b>: English.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -380,8 +380,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether the policy supports malicious images from the Internet. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: supported</description></item>
-            /// <item><description><b>false</b>: not supported</description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? MaliciousImage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries to return per page during paging in a paged query.</para>
+            /// <para>The maximum number of entries to return per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -404,9 +404,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The action to perform when the policy is matched. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: alert</description></item>
-            /// <item><description><b>2</b>: block</description></item>
-            /// <item><description><b>3</b>: allow</description></item>
+            /// <item><description><b>1</b>: Alert.</description></item>
+            /// <item><description><b>2</b>: Block.</description></item>
+            /// <item><description><b>3</b>: Allow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetOpaStrategyDetailNewResponseBodyDataScopes> Scopes { get; set; }
             public class GetOpaStrategyDetailNewResponseBodyDataScopes : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the policy in the cluster.</para>
+                /// <para>The policy instance ID in the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ack-0</para>
@@ -436,8 +436,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>Specifies whether all namespaces are included. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: yes</description></item>
-                /// <item><description><b>0</b>: no</description></item>
+                /// <item><description><b>1</b>: Yes.</description></item>
+                /// <item><description><b>0</b>: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -499,8 +499,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether the policy supports unscanned images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: supported</description></item>
-            /// <item><description><b>false</b>: not supported</description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E819FD71-D240-5E54-AA7F-20FED2ECBEB6</para>

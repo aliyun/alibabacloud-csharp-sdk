@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The region of the Security Center instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>cn-hangzhou</b>: China (Hangzhou).</description></item>
-            /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
-            /// <item><description><b>cn-beijing</b>: China (Beijing).</description></item>
+            /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
+            /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
+            /// <item><description><b>cn-beijing</b>: China (Beijing)</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the snapshot to delete.</para>
+            /// <para>The ID of the snapshot to be deleted.</para>
             /// <remarks>
             /// <para>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</para>
             /// </remarks>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECS_FILE</b>: backup snapshot of ECS files.</description></item>
-            /// <item><description><b>OSS</b>: backup snapshot of Alibaba Cloud OSS.</description></item>
-            /// <item><description><b>NAS</b>: backup snapshot of Alibaba Cloud NAS.</description></item>
-            /// <item><description><b>OTS_TABLE</b>: backup snapshot of Alibaba Cloud Tablestore.</description></item>
+            /// <item><description><b>ECS_FILE</b>: backup snapshots of ECS files</description></item>
+            /// <item><description><b>OSS</b>: backup snapshots of Alibaba Cloud OSS</description></item>
+            /// <item><description><b>NAS</b>: backup snapshots of Alibaba Cloud NAS</description></item>
+            /// <item><description><b>OTS_TABLE</b>: backup snapshots of Alibaba Cloud Tablestore</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to retain the latest snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: retains the latest snapshot.</description></item>
-        /// <item><description><b>false</b>: does not retain the latest snapshot.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

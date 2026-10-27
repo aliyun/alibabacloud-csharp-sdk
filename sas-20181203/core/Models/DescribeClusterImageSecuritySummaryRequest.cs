@@ -22,25 +22,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The container search field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>instanceId</b>: container instance ID</description></item>
-        /// <item><description><b>clusterId</b>: cluster ID</description></item>
-        /// <item><description><b>regionId</b>: container region</description></item>
-        /// <item><description><b>clusterName</b>: cluster name</description></item>
-        /// <item><description><b>image</b>: image name</description></item>
-        /// <item><description><b>imageRepoName</b>: image repository name</description></item>
-        /// <item><description><b>imageRepoNamespace</b>: image repository namespace</description></item>
-        /// <item><description><b>imageRepoTag</b>: image repository tag</description></item>
-        /// <item><description><b>imageDigest</b>: image digest</description></item>
-        /// <item><description><b>clusterType</b>: cluster type</description></item>
-        /// <item><description><b>hostIp</b>: public IP address</description></item>
-        /// <item><description><b>pod</b>: pod</description></item>
-        /// <item><description><b>podIp</b>: pod IP address</description></item>
-        /// <item><description><b>containerId</b>: container ID</description></item>
+        /// <item><description><b>instanceId</b>: the container instance ID</description></item>
+        /// <item><description><b>clusterId</b>: the cluster ID</description></item>
+        /// <item><description><b>regionId</b>: the container region</description></item>
+        /// <item><description><b>clusterName</b>: the cluster name</description></item>
+        /// <item><description><b>image</b>: the image name</description></item>
+        /// <item><description><b>imageRepoName</b>: the image repository name</description></item>
+        /// <item><description><b>imageRepoNamespace</b>: the image repository namespace</description></item>
+        /// <item><description><b>imageRepoTag</b>: the image repository tag</description></item>
+        /// <item><description><b>imageDigest</b>: the image digest</description></item>
+        /// <item><description><b>clusterType</b>: the cluster type</description></item>
+        /// <item><description><b>hostIp</b>: the public IP address</description></item>
+        /// <item><description><b>pod</b>: the pod</description></item>
+        /// <item><description><b>podIp</b>: the pod IP address</description></item>
+        /// <item><description><b>containerId</b>: the container ID</description></item>
         /// <item><description><b>vulStatus</b>: whether the container has vulnerabilities</description></item>
         /// <item><description><b>alarmStatus</b>: whether the container has security alerts</description></item>
         /// <item><description><b>riskStatus</b>: whether the container has risks</description></item>
-        /// <item><description><b>riskLevel</b>: container risk level</description></item>
-        /// <item><description><b>containerScope</b>: container type.</description></item>
+        /// <item><description><b>riskLevel</b>: the container risk level</description></item>
+        /// <item><description><b>containerScope</b>: the container type</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the access source.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60.190.XXX.XXX</para>

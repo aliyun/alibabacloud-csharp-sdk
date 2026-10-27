@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeChartListRequest : TeaModel {
         /// <summary>
-        /// <para>The language type for the request and response messages. Valid values:</para>
+        /// <para>The language type of the request and response messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The project code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>customize_report</b>: custom report.</description></item>
+        /// <item><description><b>customize_report</b>: Custom report.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

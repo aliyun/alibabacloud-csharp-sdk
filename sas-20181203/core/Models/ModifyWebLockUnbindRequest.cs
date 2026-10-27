@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockUnbindRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the server from which you want to remove the protection directories.</para>
+        /// <para>The UUID of the server from which you want to dissociate the protected directory.</para>
         /// <remarks>
-        /// <para>Call <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> to obtain the UUID of the server.</para>
+        /// <para>You can call the <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> operation to retrieve the UUID of the server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

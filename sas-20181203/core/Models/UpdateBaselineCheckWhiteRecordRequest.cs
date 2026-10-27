@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.</para>
+        /// <para>You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The reason for adding the whitelist entry.</para>
+        /// <para>The reason for adding the item to the whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Manually processed.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The list of asset UUIDs for which container names are to be removed from the whitelist.</para>
+        /// <para>The list of UUIDs of the assets whose container names need to be removed from the whitelist.</para>
         /// </summary>
         [NameInMap("RemoveContainerUuids")]
         [Validation(Required=false)]
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: host</description></item>
-        /// <item><description><b>agentless</b>: agentless.</description></item>
+        /// <item><description><b>default</b>: Server</description></item>
+        /// <item><description><b>agentless</b>: agentless</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The type of the target on which the whitelist takes effect. Valid values:</para>
+        /// <para>The type of the target to which the whitelist applies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all_instance</b>: all servers</description></item>
-        /// <item><description><b>instance</b>: specific servers.</description></item>
+        /// <item><description><b>all_instance</b>: All servers</description></item>
+        /// <item><description><b>instance</b>: Specified servers</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The list of configuration IDs to delete.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to obtain configuration IDs.</para>
+        /// <para>You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to retrieve the configuration IDs.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConfigIdList")]
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> ConfigIdList { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values: </para>
+        /// <para>The vulnerability type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>cve: Linux software vulnerability </description></item>
+        /// <item><description>cve: Linux software vulnerability. </description></item>
         /// <item><description>sys: Windows system vulnerability.</description></item>
         /// </list>
         /// 

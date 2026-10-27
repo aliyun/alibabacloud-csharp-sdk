@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeAssetRefreshTaskConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The asset synchronization configuration.</para>
+        /// <para>The list of asset refresh configurations.</para>
         /// </summary>
         [NameInMap("AssetRefreshConfigs")]
         [Validation(Required=false)]
         public List<ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs> AssetRefreshConfigs { get; set; }
         public class ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs : TeaModel {
             /// <summary>
-            /// <para>The type of the configuration. Valid values:</para>
+            /// <para>The configuration type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: server synchronization task</description></item>
-            /// <item><description><b>1</b>: cloud service synchronization task</description></item>
-            /// <item><description><b>2</b>: scheduled AccessKey pair verification task</description></item>
+            /// <item><description><b>0</b>: Host refresh task</description></item>
+            /// <item><description><b>1</b>: Cloud service refresh task</description></item>
+            /// <item><description><b>2</b>: AccessKey scheduled check task</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SchedulePeriod { get; set; }
 
             /// <summary>
-            /// <para>The status of the configuration. Valid values:</para>
+            /// <para>The enabling status of the configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled</description></item>
-            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><b>1</b>: Enabled</description></item>
+            /// <item><description><b>0</b>: Disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</para>
+            /// <para>The ID of the specified AccessKey record when you configure an AccessKey scheduled check task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2308</para>
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? TargetId { get; set; }
 
             /// <summary>
-            /// <para>The service provider of the cloud asset. Valid values:</para>
+            /// <para>The cloud asset vendor. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>3</b>: Tencent Cloud</description></item>
             /// <item><description><b>4</b>: Huawei Cloud</description></item>
-            /// <item><description><b>7</b>: Amazon Web Services (AWS) Cloud</description></item>
+            /// <item><description><b>7</b>: Amazon Web Services</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The region in which your Security Center service resides.</para>
+        /// <para>The region of the Security Center instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

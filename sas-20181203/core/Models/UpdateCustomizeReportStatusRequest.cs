@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateCustomizeReportStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The pinning time. Unit: milliseconds.</para>
+        /// <para>The time when the report is pinned. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717430400000</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The report ID.</para>
         /// <remarks>
-        /// <para>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ReportId { get; set; }
 
         /// <summary>
-        /// <para>The report status. Valid values:</para>
+        /// <para>The status of the report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disabled.</description></item>
-        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

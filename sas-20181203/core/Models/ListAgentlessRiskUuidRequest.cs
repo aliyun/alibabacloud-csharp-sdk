@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
+        /// <para>报告语言。取值：zh（中文）、en（英文）。不传或为空时使用 zh。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        /// <summary>
         /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>

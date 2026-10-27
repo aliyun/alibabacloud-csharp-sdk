@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSystemAggregationRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The rule cluster ID.</para>
+        /// <para>The ID of the rule aggregation.</para>
         /// </summary>
         [NameInMap("AggregationIds")]
         [Validation(Required=false)]
         public List<int?> AggregationIds { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query.</para>
+        /// <para>The page number of the current page for a paged query. This parameter is used for paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,10 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language type for requests and responses. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>The maximum number of entries to return on each page for a paged query. This parameter is used for paging.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The rule name.</para>
+        /// <para>The name of the rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>规则****</para>
+        /// <para>Rule****</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><b>2</b>: Windows</description></item>
         /// <item><description><b>1</b>: Linux</description></item>
-        /// <item><description><b>0</b>: all.</description></item>
+        /// <item><description><b>0</b>: All</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

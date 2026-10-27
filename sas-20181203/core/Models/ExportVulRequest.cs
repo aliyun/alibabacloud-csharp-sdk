@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The asset type where the vulnerability is detected. Separate multiple types with commas (,). Valid values:</para>
+        /// <para>The asset type where the vulnerability resides. Separate multiple types with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS</b>: host asset</description></item>
+        /// <item><description><b>ECS</b>: server asset</description></item>
         /// <item><description><b>CONTAINER</b>: container asset</description></item>
         /// </list>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetType { get; set; }
 
         /// <summary>
-        /// <para>The additional vulnerability type when querying application vulnerabilities. This parameter is required when Type is set to app. The value is fixed as <b>sca</b>.</para>
+        /// <para>The additional vulnerability type when you query application vulnerabilities. You must configure this parameter when you query application vulnerabilities, which means the Type parameter is set to app. Set the value to <b>sca</b>.</para>
         /// <remarks>
-        /// <para>If this parameter is set to <b>sca</b>, both application vulnerabilities (<b>app</b> type) and software composition analysis (<b>sca</b> type) vulnerabilities are queried. If this parameter is not set, only application vulnerabilities are queried.</para>
+        /// <para>If you set this parameter to <b>sca</b>, you can query application vulnerabilities (type <b>app</b>) and software composition analysis (type <b>sca</b>) vulnerabilities. If you do not set this parameter, only application vulnerabilities are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AttachTypes { get; set; }
 
         /// <summary>
-        /// <para>The name of the container affected by the vulnerability.</para>
+        /// <para>The name of the container affected by the vulnerabilities to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxljob-7b87597b99-mcskr</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the first scan was performed.</para>
+        /// <para>The end time of the first scan.</para>
         /// <remarks>
         /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// </remarks>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CreateTsEnd { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range during which the first scan was performed.</para>
+        /// <para>The start time of the first scan.</para>
         /// <remarks>
         /// <para>The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// </remarks>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CveId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the vulnerability is fixed. Valid values:</para>
+        /// <para>Specifies whether the vulnerabilities to be queried are fixed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>y</b>: fixed</description></item>
-        /// <item><description><b>n</b>: not fixed</description></item>
+        /// <item><description><b>n</b>: unfixed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset group to which the server with the vulnerability belongs.</para>
+        /// <para>The ID of the asset group to which the servers affected by the vulnerabilities to be queried belong.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image affected by the vulnerability.</para>
+        /// <para>The name of the image affected by the vulnerabilities to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>container-<em><b>:</b></em>*</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The priority of the vulnerability to query. Separate multiple priorities with commas (,). Valid values:</para>
+        /// <para>The priorities of the vulnerabilities to be queried. Separate multiple priorities with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asap</b>: high</description></item>
         /// <item><description><b>later</b>: medium</description></item>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The path of the process affected by the vulnerability.</para>
+        /// <para>The path of the process affected by the vulnerabilities to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/etc/test</para>
@@ -169,10 +169,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether runtime application self-protection (RASP) supports real-time protection against the vulnerability. Valid values:</para>
+        /// <para>Specifies whether Runtime Application Self-Protection (RASP) supports real-time protection against the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not supported.</description></item>
-        /// <item><description><b>1</b>: Supported.</description></item>
+        /// <item><description><b>0</b>: not supported</description></item>
+        /// <item><description><b>1</b>: supported</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,11 +193,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Filters results by label. Valid values:</para>
+        /// <para>The tags used for filtering. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>Restart required</description></item>
-        /// <item><description>Remote utilization</description></item>
+        /// <item><description>Remote exploitation</description></item>
         /// <item><description>EXP exists</description></item>
         /// <item><description>Exploitable</description></item>
         /// <item><description>Privilege escalation</description></item>
@@ -209,8 +209,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>Remote utilization</b></description></item>
         /// <item><description><b>EXP exists</b></description></item>
         /// <item><description><b>Available</b></description></item>
-        /// <item><description><b>Elevation of Privilege</b></description></item>
-        /// <item><description><b>Code Execution</b></description></item>
+        /// <item><description><b>Elevation of privilege</b></description></item>
+        /// <item><description><b>Code execution</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchTags { get; set; }
 
         /// <summary>
-        /// <para>The type of vulnerabilities to export. Valid values:</para>
+        /// <para>The type of the vulnerabilities to be exported. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers to query for vulnerabilities. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers on which you want to query vulnerabilities. Separate multiple UUIDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1587bedb-fdb4-48c4-9330-****</para>
@@ -249,9 +249,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Uuids { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs of the VPC-connected instances to query for vulnerabilities. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the VPC-connected instances where the vulnerabilities to be queried reside. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the value of this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

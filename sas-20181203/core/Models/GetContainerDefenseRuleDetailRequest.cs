@@ -26,7 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The rule ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> API operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to obtain this parameter.
+        /// This parameter is required. If it is not provided, the API returns HTTP 400 and the error code -101.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

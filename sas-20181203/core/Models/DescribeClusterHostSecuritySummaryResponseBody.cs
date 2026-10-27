@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterHostSecuritySummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The host alert details.</para>
+        /// <para>The details of host alerts.</para>
         /// </summary>
         [NameInMap("ClusterHostEvent")]
         [Validation(Required=false)]
         public DescribeClusterHostSecuritySummaryResponseBodyClusterHostEvent ClusterHostEvent { get; set; }
         public class DescribeClusterHostSecuritySummaryResponseBodyClusterHostEvent : TeaModel {
             /// <summary>
-            /// <para>The host alert details.</para>
+            /// <para>The details of host alerts.</para>
             /// </summary>
             [NameInMap("AlarmEvent")]
             [Validation(Required=false)]
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The warning level. Valid values:</para>
+                /// <para>The alert level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>serious</b>: urgent.</description></item>
-                /// <item><description><b>suspicious</b>: suspicious.</description></item>
-                /// <item><description><b>remind</b>: reminder.</description></item>
+                /// <item><description><b>serious</b>: Urgent.</description></item>
+                /// <item><description><b>suspicious</b>: Suspicious.</description></item>
+                /// <item><description><b>remind</b>: Reminder.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The host baseline details.</para>
+            /// <para>The details of host baselines.</para>
             /// </summary>
             [NameInMap("BaselineEvent")]
             [Validation(Required=false)]
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The baseline risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>high</b>: high risk.</description></item>
-                /// <item><description><b>medium</b>: medium risk.</description></item>
-                /// <item><description><b>low</b>: low risk.</description></item>
+                /// <item><description><b>high</b>: High.</description></item>
+                /// <item><description><b>medium</b>: Medium.</description></item>
+                /// <item><description><b>low</b>: Low.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The host vulnerability details.</para>
+            /// <para>The details of host vulnerabilities.</para>
             /// </summary>
             [NameInMap("VulEvent")]
             [Validation(Required=false)]
@@ -102,11 +102,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The warning level. Valid values:</para>
+                /// <para>The vulnerability severity. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>asap</b>: high. Fix the vulnerability at the earliest opportunity.</description></item>
-                /// <item><description><b>nntf</b>: medium. The vulnerability can be temporarily left unfixed.</description></item>
-                /// <item><description><b>later</b>: low. The vulnerability can be left unfixed.</description></item>
+                /// <item><description><b>asap</b>: High. Fix as soon as possible.</description></item>
+                /// <item><description><b>nntf</b>: Medium. Fix later.</description></item>
+                /// <item><description><b>later</b>: Low. Fix is optional.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF4****</para>

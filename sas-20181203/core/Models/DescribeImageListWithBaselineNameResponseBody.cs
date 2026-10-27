@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeImageListWithBaselineNameResponseBodyImageInfos> ImageInfos { get; set; }
         public class DescribeImageListWithBaselineNameResponseBodyImageInfos : TeaModel {
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c08d5fc1a329a4b88950a253d082f1****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>docker-law</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The container ID.</para>
+            /// <para>The ID of the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// <para>The SHA256 value of the image digest.</para>
+            /// <para>The SHA-256 value of the image digest.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the first scan, in milliseconds.</para>
+            /// <para>The timestamp of the first scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// <para>The number of images with a <b>high</b> risk level that have baseline risk issues.</para>
+            /// <para>The number of images that have baseline risk issues with a risk level of <b>high</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighRiskImage { get; set; }
 
             /// <summary>
-            /// <para>The image name.</para>
+            /// <para>The name of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-conta****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the image was created, in milliseconds.</para>
+            /// <para>The timestamp when the image was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636962328000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the image was updated, in milliseconds.</para>
+            /// <para>The timestamp when the image was updated. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636974116000</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the most recent scan, in milliseconds.</para>
+            /// <para>The timestamp of the last scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// <para>The number of images with a <b>low</b> risk level that have baseline risk issues.</para>
+            /// <para>The number of images that have baseline risk issues with a risk level of <b>low</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? LowRiskImage { get; set; }
 
             /// <summary>
-            /// <para>The number of images with a <b>medium</b> risk level that have baseline risk issues.</para>
+            /// <para>The number of images that have baseline risk issues with a risk level of <b>medium</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The number of images that do not have baseline risk issues.</para>
+            /// <para>The number of images that do not have baseline risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -279,8 +279,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the image has security risks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b>: The image has risks.</description></item>
-            /// <item><description><b>NO</b>: The image does not have risks.</description></item>
+            /// <item><description><b>YES</b>: yes</description></item>
+            /// <item><description><b>NO</b>: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// <para>The version of the image.</para>
+            /// <para>The image tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scan target.</para>
+            /// <para>The ID of the scanned object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-bp17m0pc0xprzbwo****</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the scan target.</para>
+            /// <para>The name of the scanned object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spod</para>
@@ -321,10 +321,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The object type of the scan target. Valid values:</para>
+            /// <para>The scan object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>** ECS_IMAGE**: image.</description></item>
-            /// <item><description>** ECS_SNAPSHOT**: snapshot.</description></item>
+            /// <item><description>** ECS_IMAGE**: image</description></item>
+            /// <item><description>** ECS_SNAPSHOT**: snapshot</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The paging information for the paged query results.</para>
+        /// <para>The information displayed on the page during paging for a paged query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+            /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>Settings for paging in a paged query. The number of image baseline check results to display per page. Default value: <b>10</b>, which indicates that 10 image baseline check results are displayed per page.</para>
+            /// <para>The Settings for the number of image baseline check results to return on each page in a paged query. Default value: <b>10</b>, which indicates that 10 image baseline check results are displayed on each page during paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5B8C2156-2DB9-5A42-99E7-F2ED5AE9EA1F</para>

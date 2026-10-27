@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebLockBindListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of servers that have web tamper-proofing protection enabled.</para>
+        /// <para>The collection of information about servers protected by web tamper-proofing.</para>
         /// </summary>
         [NameInMap("BindList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuditCount { get; set; }
 
             /// <summary>
-            /// <para>The number of blocked events.</para>
+            /// <para>The number of blocks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The startup progress of web tamper-proofing protection, in percentage. Value range: 0 to 100%.</para>
+            /// <para>The startup progress of the web tamper-proofing protection, in percentage. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Percent { get; set; }
 
             /// <summary>
-            /// <para>The error code for the web tamper-proofing service exception. Valid values:</para>
+            /// <para>The error code for the abnormal status of the web tamper-proofing service. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>2001</b>: The client is offline.</description></item>
-            /// <item><description><b>9999</b>: The connection timeout.</description></item>
+            /// <item><description><b>9999</b>: Connection timeout.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The details of the web tamper-proofing service exception. Valid values:</para>
+            /// <para>The details of the abnormal status of the web tamper-proofing service. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>client offline</b>: The client is offline.</description></item>
-            /// <item><description><b>timeout</b>: The connection timeout.</description></item>
+            /// <item><description><b>timeout</b>: Connection timeout.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,13 +125,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServiceDetail { get; set; }
 
             /// <summary>
-            /// <para>The web tamper-proofing service status of the server. Valid values:</para>
+            /// <para>The status of the web tamper-proofing service on the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>stop</b>: The tamper-proofing service is not started.</description></item>
-            /// <item><description><b>initializing</b>: The tamper-proofing service is starting.</description></item>
-            /// <item><description><b>exception</b>: The tamper-proofing service is abnormal.</description></item>
-            /// <item><description><b>running</b>: The tamper-proofing service is running.</description></item>
-            /// <item><description><b>closing</b>: The tamper-proofing service is undergoing shutdown.</description></item>
+            /// <item><description><b>stop</b>: The service is not started.</description></item>
+            /// <item><description><b>initializing</b>: The service is starting.</description></item>
+            /// <item><description><b>exception</b>: The service status is abnormal.</description></item>
+            /// <item><description><b>running</b>: The service is running.</description></item>
+            /// <item><description><b>closing</b>: The service is in shutdown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number of the current page returned for a paging query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page for a paging query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. The China value is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
+        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9354C1A-D709-4873-9AAE-41513327B247</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of servers attached to web tamper-proofing.</para>
+        /// <para>The total number of servers protected by web tamper-proofing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11409</para>

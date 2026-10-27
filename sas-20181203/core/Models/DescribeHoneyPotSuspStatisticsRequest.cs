@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHoneyPotSuspStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the request. Set the value to <b>honeypot</b>.</para>
+        /// <para>Specifies the source of the request. Set the value to <b>honeypot</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The time range of the data to query. Unit: days.</para>
+        /// <para>Specifies the time range of the data to query. Unit: days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? StatisticsDays { get; set; }
 
         /// <summary>
-        /// <para>The Asset Type to query. Valid values:</para>
+        /// <para>Specifies the asset type to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>vpcInstanceId</b>: VPC-connected instance</description></item>
         /// <item><description><b>uuid</b>: server</description></item>

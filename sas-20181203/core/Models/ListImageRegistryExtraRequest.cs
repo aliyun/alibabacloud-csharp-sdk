@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListImageRegistryExtraRequest : TeaModel {
         /// <summary>
-        /// <para>The image repository ID.</para>
+        /// <para>The ID of the image registry.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

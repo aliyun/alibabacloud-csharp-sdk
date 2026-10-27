@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page to return. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number of the returned page. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no additional results exist. If NextToken has a value, the value indicates the token to use for the next query.</para>
+        /// <para>The pagination token for the next query. If this parameter is empty, no subsequent queries are available. If a value is returned, it is used as the token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1426C575705AE8545E8360A6EFA3B***</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paging query. Default value: 20. Maximum value: 2000.</para>
+        /// <para>The maximum number of entries to return on each page for paging in a paged query. Default value: 20. Maximum value: 2000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</para>
+        /// <para>Specifies whether to use the NextToken method to retrieve the vulnerability list. If this parameter is used, TotalCount is not returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Uses the NextToken method.</description></item>
-        /// <item><description><b>false</b>: Does not use the NextToken method.</description></item>
+        /// <item><description><b>true</b>: Use the NextToken method.</description></item>
+        /// <item><description><b>false</b>: Do not use the NextToken method.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

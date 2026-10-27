@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListBackupRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The backup end time. The value is a timestamp in milliseconds.</para>
+        /// <para>The end time of the backup. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1699600611000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BackupEndTime { get; set; }
 
         /// <summary>
-        /// <para>The backup start time. The value is a timestamp in milliseconds.</para>
+        /// <para>The start time of the backup. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1699514211000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BackupStartTime { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineRemark { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query. The default number of entries per page for paging is 20. If the PageSize parameter is empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Do not leave the PageSize parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The list of backup task statuses. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BACKUP_COMPLETE</b>: backup succeeded</description></item>
-        /// <item><description><b>BACKUP_FAILED</b>: backup failed</description></item>
-        /// <item><description><b>PARTIAL_COMPLETE</b>: partial backup succeeded.</description></item>
+        /// <item><description><b>BACKUP_COMPLETE</b>: The backup is successful.</description></item>
+        /// <item><description><b>BACKUP_FAILED</b>: The backup fails.</description></item>
+        /// <item><description><b>PARTIAL_COMPLETE</b>: The backup is partially successful.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("StatusList")]

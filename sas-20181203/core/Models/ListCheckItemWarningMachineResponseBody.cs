@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckItemWarningMachineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The servers on which the alerts are generated.</para>
+        /// <para>The list of servers with alerts.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListCheckItemWarningMachineResponseBodyList> List { get; set; }
         public class ListCheckItemWarningMachineResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>Type of cloud product assets</para>
+            /// <para>The type of the cloud service asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The edition of Security Center that is authorized to protect the asset. Valid values:</para>
+            /// <para>The authorization version of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Basic edition</description></item>
-            /// <item><description><b>6</b>: Anti-virus edition</description></item>
-            /// <item><description><b>5</b>: Advanced edition</description></item>
-            /// <item><description><b>3</b>: Enterprise edition</description></item>
-            /// <item><description><b>7</b>: Ultimate edition</description></item>
-            /// <item><description><b>10</b>: Value-added Plan edition</description></item>
+            /// <item><description><b>1</b>: Free Edition</description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+            /// <item><description><b>5</b>: Premium Edition</description></item>
+            /// <item><description><b>3</b>: Enterprise Edition</description></item>
+            /// <item><description><b>7</b>: Ultimate Edition</description></item>
+            /// <item><description><b>10</b>: Value-added Service Edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AuthVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Security Center is authorized to protect the asset. Valid values:</para>
+            /// <para>Indicates whether the asset is bound to an authorization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The asset is bound to an authorization.</description></item>
+            /// <item><description><b>false</b>: The asset is not bound to an authorization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerName { get; set; }
 
             /// <summary>
-            /// <para>The details of the baselines for which the risk item can be fixed.</para>
+            /// <para>The list of fixable baselines in which the risk of this check item is detected.</para>
             /// </summary>
             [NameInMap("FixList")]
             [Validation(Required=false)]
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Whether the repair is supported. Valid values:</para>
+            /// <para>Indicates whether fixing is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Supported</description></item>
-            /// <item><description><b>1</b>: Not Supported</description></item>
+            /// <item><description><b>0</b>: not supported</description></item>
+            /// <item><description><b>1</b>: supported</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sql-test-0****</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the affected asset.</para>
+            /// <para>The public IP address of the affected asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.210.XX.XX</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the affected asset.</para>
+            /// <para>The private IP address of the affected asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.25.XX.XX</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest handling of the check item risk on the server. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694692471000</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastHandleTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694692471000</para>
@@ -182,10 +182,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a port on the server is accessible over the Internet. Valid values:</para>
+            /// <para>Indicates whether the server has ports open to the Internet. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The server has ports open to the Internet.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The server does not have ports open to the Internet.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,7 +198,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? PortOpen { get; set; }
 
             /// <summary>
-            /// <para>The prompt for the risk item.</para>
+            /// <para>The check prompt for the baseline check risk item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>There is a weak password (username/password): root/he*****34</para>
@@ -206,7 +208,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Prompt { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the asset.</para>
+            /// <para>The ID of the region where the asset resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -234,7 +236,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset that is scanned.</para>
+            /// <para>The ID of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30****</para>
@@ -244,7 +246,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset on which the malicious image sample is detected.</para>
+            /// <para>The name of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jenkins****</para>
@@ -254,10 +256,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The type of the asset. Valid values:</para>
+            /// <para>The object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECS_SNAPSHOT</b></description></item>
-            /// <item><description><b>ECS_IMAGE</b></description></item>
+            /// <item><description><b>ECS_SNAPSHOT</b>: snapshot</description></item>
+            /// <item><description><b>ECS_IMAGE</b>: image</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -280,7 +282,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The information about the baselines on which the risk item is detected.</para>
+            /// <para>The list of baselines in which the risk of this check item is detected.</para>
             /// </summary>
             [NameInMap("WarningRiskList")]
             [Validation(Required=false)]
@@ -318,7 +320,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query results.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -335,7 +337,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page during paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -345,7 +347,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries displayed on each page during paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -355,7 +357,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of affected assets.</para>
+            /// <para>The total number of affected assets returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>107</para>
@@ -367,7 +369,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22B5615F-700E-575A-A6D5-DC8D7741****</para>

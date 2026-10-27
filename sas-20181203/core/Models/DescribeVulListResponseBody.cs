@@ -695,7 +695,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the operating system for your asset.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CentOS  7.2 64位</para>
+            /// <para>CentOS 7.2 64-bit</para>
             /// </summary>
             [NameInMap("OsName")]
             [Validation(Required=false)]

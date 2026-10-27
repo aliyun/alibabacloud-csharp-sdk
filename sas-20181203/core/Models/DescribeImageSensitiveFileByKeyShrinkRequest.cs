@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageSensitiveFileByKeyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page. Default value: <b>1</b>.</para>
+        /// <para>Specifies the page number of the returned results. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the image.</para>
+        /// <para>The image UUID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeImageListBySensitiveFile~~">DescribeImageListBySensitiveFile</a> operation to obtain this parameter from the ImageInfos[].Uuid field in the response.
+        /// This parameter is required. If you do not specify this parameter, the API returns an HTTP 400 error with the error code -101.
+        /// The ByKey suffix in the operation name indicates filtering by sensitive file type. To locate an image, you must specify this parameter (imageUuid). SensitiveFileKey is an optional filter condition for the sensitive file type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0083a31ccf7c10367a6e783e8601****</para>
@@ -30,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageUuid { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -44,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paging query. Default value: <b>20</b>.</para>
+        /// <para>Specifies the maximum number of entries to return on each page in a paging query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -65,12 +70,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanRangeShrink { get; set; }
 
         /// <summary>
-        /// <para>The alerting type of the sensitive file. Valid values:</para>
+        /// <para>The sensitive file alerting type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>npm_token</b>: NPM access token</description></item>
         /// <item><description><b>ftp_cfg</b>: FTP configuration</description></item>
         /// <item><description><b>google_oauth_key</b>: Google OAuth key</description></item>
-        /// <item><description><b>planetscale_passwd</b>: Planetscale password</description></item>
+        /// <item><description><b>planetscale_passwd</b>: PlanetScale password</description></item>
         /// <item><description><b>github_ssh_key</b>: GitHub SSH key</description></item>
         /// <item><description><b>msbuild_publish_profile</b>: MSBuild publish profile</description></item>
         /// <item><description><b>fastly_cdn_token</b>: Fastly CDN token</description></item>
@@ -83,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>aws_access_key</b>: AWS access key</description></item>
         /// <item><description><b>esmtp_cfg</b>: ESMTP mail server configuration</description></item>
         /// <item><description><b>docker_registry_cfg</b>: Docker image repository configuration</description></item>
-        /// <item><description><b>pem</b>: PEM</description></item>
+        /// <item><description><b>pem</b>: PEM file</description></item>
         /// <item><description><b>common_cred</b>: common credential</description></item>
         /// <item><description><b>sftp_cfg</b>: SFTP connection configuration</description></item>
         /// <item><description><b>grafana_token</b>: Grafana token</description></item>
@@ -102,15 +107,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>wordpress_database_cfg</b>: WordPress database configuration</description></item>
         /// <item><description><b>googlecloud_api_key</b>: Google Cloud API key</description></item>
         /// <item><description><b>vscode_sftp</b>: VSCode SFTP configuration</description></item>
-        /// <item><description><b>apache_htpasswd</b>: Apache htpasswd</description></item>
-        /// <item><description><b>planetscale_token</b>: Planetscale token</description></item>
+        /// <item><description><b>apache_htpasswd</b>: Apache htpasswd file</description></item>
+        /// <item><description><b>planetscale_token</b>: PlanetScale token</description></item>
         /// <item><description><b>contentful_preview_token</b>: Contentful preview token</description></item>
         /// <item><description><b>php_database_cfg</b>: PHP application database password</description></item>
         /// <item><description><b>atom_remote_sync</b>: Atom remote synchronization configuration</description></item>
         /// <item><description><b>aws_session_token</b>: AWS session token</description></item>
         /// <item><description><b>atom_sftp_cfg</b>: Atom SFTP configuration</description></item>
         /// <item><description><b>asana_client_private_key</b>: Asana project management platform client key</description></item>
-        /// <item><description><b>tencentcloud_ak</b>: SecretId of other cloud service providers</description></item>
+        /// <item><description><b>tencentcloud_ak</b>: Tencent Cloud SecretId</description></item>
         /// <item><description><b>rsa_private_key</b>: RSA private key</description></item>
         /// <item><description><b>github_personal_token</b>: GitHub personal access token</description></item>
         /// <item><description><b>pgp</b>: PGP encrypted file</description></item>
@@ -151,11 +156,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>jetbrains_ides</b>: JetBrains IDEs configuration</description></item>
         /// <item><description><b>heroku_api_key</b>: Heroku API key</description></item>
         /// <item><description><b>messagebird_token</b>: MessageBird token</description></item>
-        /// <item><description><b>github_app_token</b>: GitHub app token</description></item>
+        /// <item><description><b>github_app_token</b>: GitHub App token</description></item>
         /// <item><description><b>hashicorp_vault_token</b>: HashiCorp Vault token</description></item>
         /// <item><description><b>pgp_private_key</b>: PGP private key</description></item>
         /// <item><description><b>sshpasswd</b>: SSH password</description></item>
-        /// <item><description><b>huaweicloud_ak</b>: Secret access key of other cloud service providers</description></item>
+        /// <item><description><b>huaweicloud_ak</b>: Huawei Cloud Secret Access Key</description></item>
         /// <item><description><b>aws_s3cmd</b>: AWS S3cmd configuration</description></item>
         /// <item><description><b>php_config</b>: PHP configuration</description></item>
         /// <item><description><b>common_private_key</b>: common private key type</description></item>
@@ -177,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>rails_app_token</b>: Rails app token</description></item>
         /// <item><description><b>git_cred</b>: Git user credential</description></item>
         /// <item><description><b>newrelic_api_key</b>: New Relic user API key</description></item>
-        /// <item><description><b>github_hub</b>: Hub configuration that stores GitHub tokens</description></item>
+        /// <item><description><b>github_hub</b>: hub configuration that stores GitHub tokens</description></item>
         /// <item><description><b>rubygem</b>: RubyGems token</description></item>
         /// </list>
         /// 

@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The request source. The system verifies the purchased edition based on the request source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>edr</b>: AgenticEDR</para>
+        /// <item><description><para><b>edr</b>: AgenticEDR.</para>
         /// </description></item>
-        /// <item><description><para><b>secOpsAgent</b>: Security O&amp;M agent</para>
+        /// <item><description><para><b>secOpsAgent</b>: Security operations agent.</para>
         /// </description></item>
         /// </list>
         /// 

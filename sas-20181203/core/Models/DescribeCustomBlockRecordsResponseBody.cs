@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paged query during paging.</para>
+            /// <para>The current page number during paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page in a paged query during paging.</para>
+            /// <para>The maximum number of data entries returned per page during paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The list of policy records.</para>
+        /// <para>The list of policies.</para>
         /// </summary>
         [NameInMap("RecordList")]
         [Validation(Required=false)]
         public List<DescribeCustomBlockRecordsResponseBodyRecordList> RecordList { get; set; }
         public class DescribeCustomBlockRecordsResponseBodyRecordList : TeaModel {
             /// <summary>
-            /// <para>The UNIX timestamp when the brute-force attacks IP blocking expires.</para>
+            /// <para>The UNIX timestamp when the IP block against brute-force attacks expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671506882063</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? BlockExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The IP address blocked for brute-force attacks prevention.</para>
+            /// <para>The IP address blocked to prevent brute-force attacks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45.227.XX.XX</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BlockIp { get; set; }
 
             /// <summary>
-            /// <para>The direction in which the server brute-force attacks interception policy blocks the IP address. Valid values:</para>
+            /// <para>The direction of the IP address blocked by the server interception policy against brute-force attacks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>in</b>: inbound</description></item>
-            /// <item><description><b>out</b>: outbound.</description></item>
+            /// <item><description><b>out</b>: outbound</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Bound { get; set; }
 
             /// <summary>
-            /// <para>The number of servers on which the blocking rule has taken effect.</para>
+            /// <para>The number of servers on which the block takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The total number of servers on which the blocked IP record needs to take effect.</para>
+            /// <para>The total number of servers on which the IP block is expected to take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -140,11 +140,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The status of the brute-force attacks defense rule. Valid values:</para>
+            /// <para>The status of the defense rule against brute-force attacks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Invalid.</description></item>
-            /// <item><description><b>1</b>: Enabled.</description></item>
-            /// <item><description><b>2</b>: Failed.</description></item>
+            /// <item><description><b>0</b>: invalid</description></item>
+            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><b>2</b>: failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The query type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>uuid</b>: asset ID.</description></item>
+                /// <item><description><b>uuid</b>: asset ID</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>028CF634-5268-5660-9575-48C9ED6B7T8Y</para>

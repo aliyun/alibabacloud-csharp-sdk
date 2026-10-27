@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ResetLogShipperRequest : TeaModel {
         /// <summary>
-        /// <para>The global retention period of hot data.</para>
+        /// <para>The global data retention period in the hot storage tier.</para>
         /// <remarks>
-        /// <para> The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days.</para>
+        /// <para>Valid values: greater than or equal to 7 days and less than the log retention period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,16 +23,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HotTtl { get; set; }
 
         /// <summary>
-        /// <para>The settings of the log analysis feature.</para>
+        /// <para>The configuration information for log analysis in Security Center.</para>
         /// </summary>
         [NameInMap("LogMetaList")]
         [Validation(Required=false)]
         public List<ResetLogShipperRequestLogMetaList> LogMetaList { get; set; }
         public class ResetLogShipperRequestLogMetaList : TeaModel {
             /// <summary>
-            /// <para>The Logstore that you want to configure.</para>
+            /// <para>The Logstore to be configured.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the Logstore.</para>
+            /// <para>You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to obtain the value of this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ConfigLogStore { get; set; }
 
             /// <summary>
-            /// <para>The retention period of hot data in the Logstore.</para>
+            /// <para>The data retention period in the hot storage tier of the Logstore.</para>
             /// <remarks>
-            /// <para> The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days. If you specify this parameter for the Logstore, the global retention period of hot data specified by the HotTtl parameter is overwritten.</para>
+            /// <para>Valid values: greater than or equal to 7 days and less than the log retention period. Specifying the data retention period in the hot storage tier for a single Logstore overrides the global settings.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HotTtl { get; set; }
 
             /// <summary>
-            /// <para>The status of the log analysis feature. Valid values:</para>
+            /// <para>The current enabling status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>disabled</b></description></item>
-            /// <item><description><b>enabled</b></description></item>
+            /// <item><description><b>disabled</b>: The feature is disabled.</description></item>
+            /// <item><description><b>enabled</b>: The feature is enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The log retention period of the Logstore.</para>
+            /// <para>The log retention period of the Logstore in days.</para>
             /// <remarks>
-            /// <para> If you specify this parameter for the Logstore, the global log retention period specified by the Ttl parameter is overwritten.</para>
+            /// <para>Specifying the log retention period for a single Logstore overrides the global settings.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The global log retention period.</para>
+        /// <para>The global log retention period in days.</para>
         /// <remarks>
-        /// <para> This parameter is supported only when the log analysis feature uses the pay-as-you-go billing method.</para>
+        /// <para>This parameter is supported only in the pay-as-you-go billing mode for logs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

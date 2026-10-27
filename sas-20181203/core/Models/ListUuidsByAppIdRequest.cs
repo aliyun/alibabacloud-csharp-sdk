@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUuidsByAppIdRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the SAE application.</para>
+        /// <para>The SAE application ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain the value of this parameter.
+        /// This parameter is required. If it is not provided, the API returns HTTP 400 with the error code -101.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5b41f4bf-349f-4263-89b1-9234c034****</para>
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain the value of this parameter.
+        /// This parameter is required. If it is not provided, the API returns HTTP 400 with the error code -101.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -64,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The UID of the resource directory.</para>
+        /// <para>The UID of the associated resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeImageBaselineCheckResultResponseBodyBaselineResult> BaselineResult { get; set; }
         public class DescribeImageBaselineCheckResultResponseBodyBaselineResult : TeaModel {
             /// <summary>
-            /// <para>The type key of the baseline item.</para>
+            /// <para>The key of the baseline item type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>identification</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The alias of the baseline item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>身份鉴别</para>
+            /// <para>Identity authentication</para>
             /// </summary>
             [NameInMap("BaselineNameAlias")]
             [Validation(Required=false)]
             public string BaselineNameAlias { get; set; }
 
             /// <summary>
-            /// <para>The name key of the baseline item.</para>
+            /// <para>The key of the baseline item name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>identification</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>high</b>: high risk</description></item>
             /// <item><description><b>medium</b>: medium risk</description></item>
-            /// <item><description><b>low</b>: low risk.</description></item>
+            /// <item><description><b>low</b>: low risk</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineNameLevel { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the first scan, in milliseconds.</para>
+            /// <para>The timestamp of the first scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1610304058366</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the most recent scan, in milliseconds.</para>
+            /// <para>The timestamp of the latest scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1610304058301</para>
@@ -124,8 +124,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The fix status of the baseline risk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Unfixed.</description></item>
-            /// <item><description><b>1</b>: Fixed.</description></item>
+            /// <item><description><b>0</b>: unfixed</description></item>
+            /// <item><description><b>1</b>: fixed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The paging information.</para>
+        /// <para>The paging information for a paged query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageBaselineCheckResultResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageBaselineCheckResultResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page when using paging.</para>
+            /// <para>The number of entries returned on the current page when paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page when using paging.</para>
+            /// <para>The page number of the current page when paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page when using paging.</para>
+            /// <para>The maximum number of entries returned per page when paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

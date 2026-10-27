@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> ImageList { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the network object.</para>
+        /// <para>The namespace to which the network object belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</para>
+        /// <para>The maximum number of entries to return per page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The object type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IMAGE: image.</description></item>
+        /// <item><description>IMAGE: Image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

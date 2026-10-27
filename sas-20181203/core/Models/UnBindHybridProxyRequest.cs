@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers that you want to remove from the proxy cluster.</para>
+        /// <para>The list of Security Center client UUIDs for the machines connected to the proxy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("YundunUuids")]

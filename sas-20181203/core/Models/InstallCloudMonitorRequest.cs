@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AgentAccessKey { get; set; }
 
         /// <summary>
-        /// <para>The AccessSecret required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to obtain this parameter.</para>
+        /// <para>The AccessKey secret required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to obtain this parameter.</para>
         /// <remarks>
         /// <para>This parameter is required only when you install the CloudMonitor agent on a non-Alibaba Cloud server.</para>
         /// </remarks>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AgentSecretKey { get; set; }
 
         /// <summary>
-        /// <para>The version of the CloudMonitor agent to install. You can obtain the latest CloudMonitor agent version from <a href="https://help.aliyun.com/document_detail/183431.html">Plugin overview</a>.</para>
+        /// <para>The version of the CloudMonitor agent to install. You can obtain the latest CloudMonitor agent version from <a href="https://help.aliyun.com/document_detail/183431.html">Agent overview</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

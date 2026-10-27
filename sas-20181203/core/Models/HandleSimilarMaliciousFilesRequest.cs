@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The handling action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>addWhitelist: adds to the whitelist.</description></item>
-        /// <item><description>offWhitelist: removes from the whitelist.</description></item>
-        /// <item><description>offline_handled: handled offline.</description></item>
-        /// <item><description>mark_mis_info: submits as a false positive.</description></item>
-        /// <item><description>ignore: ignores the alert.</description></item>
+        /// <item><description>addWhitelist: Adds the alert to the whitelist.</description></item>
+        /// <item><description>offWhitelist: Removes the alert from the whitelist.</description></item>
+        /// <item><description>offline_handled: Marks the alert as handled offline.</description></item>
+        /// <item><description>mark_mis_info: Submits the alert as a false positive.</description></item>
+        /// <item><description>ignore: Ignores the alert.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The file source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>agentless: host detection.</description></item>
-        /// <item><description>ecs_snapshot: user snapshot detection.</description></item>
-        /// <item><description>ecs_image: user custom image detection.</description></item>
+        /// <item><description>agentless: Host detection.</description></item>
+        /// <item><description>ecs_snapshot: User snapshot detection.</description></item>
+        /// <item><description>ecs_image: Custom image detection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The batch processing scenario. Valid values:</para>
+        /// <para>The scenario for batch processing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>same_file_md5: same file MD5.</description></item>
-        /// <item><description>default (default value): same alerting type.</description></item>
+        /// <item><description>same_file_md5: The same file MD5.</description></item>
+        /// <item><description>default: The same alerting type. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

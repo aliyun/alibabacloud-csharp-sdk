@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListVirusScanTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result list.</para>
+        /// <para>The list of results.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListVirusScanTaskResponseBodyList> List { get; set; }
         public class ListVirusScanTaskResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The end timestamp, in milliseconds.</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1662343860051</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The task progress percentage.</para>
+            /// <para>The progress percentage of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>62</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The scanned file information.</para>
+            /// <para>The information about the scanned files.</para>
             /// </summary>
             [NameInMap("ScanPath")]
             [Validation(Required=false)]
@@ -76,8 +76,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The scan type of the virus scan task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>system</b>: automatic system scan</description></item>
-            /// <item><description><b>user</b>: custom user scan.</description></item>
+            /// <item><description><b>system</b>: automatic scan</description></item>
+            /// <item><description><b>user</b>: custom scan</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ScanType { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp, in milliseconds.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1651290987000</para>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The execution status of the virus scan task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Scanning.</description></item>
-            /// <item><description><b>2</b>: Completed.</description></item>
-            /// <item><description><b>3</b>: Failed.</description></item>
-            /// <item><description><b>4</b>: Timed out.</description></item>
+            /// <item><description><b>1</b>: scanning</description></item>
+            /// <item><description><b>2</b>: completed</description></item>
+            /// <item><description><b>3</b>: failed</description></item>
+            /// <item><description><b>4</b>: timed out</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The name of the task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan.</description></item>
             /// </list>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListVirusScanTaskResponseBodyPageInfo PageInfo { get; set; }
         public class ListVirusScanTaskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The current page number in the paged query.</para>
+            /// <para>The page number of the current page for paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in the paged query.</para>
+            /// <para>The maximum number of entries returned per page for paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of returned entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>224</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</para>
