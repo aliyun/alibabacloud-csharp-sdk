@@ -17,12 +17,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string BatchId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>arms</para>
         /// </summary>
         [NameInMap("bizSource")]
         [Validation(Required=false)]
+        [Obsolete]
         public string BizSource { get; set; }
 
         /// <summary>
@@ -105,12 +109,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string NotifyStrategyName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
         /// </summary>
         [NameInMap("partitionKey")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PartitionKey { get; set; }
 
         /// <summary>

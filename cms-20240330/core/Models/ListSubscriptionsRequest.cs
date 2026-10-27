@@ -89,12 +89,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("unbound")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? Unbound { get; set; }
 
         /// <summary>

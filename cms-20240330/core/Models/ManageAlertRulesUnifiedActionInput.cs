@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public ArmsIntegrationConfig ArmsIntegrationConfig { get; set; }
 
         /// <summary>
-        /// <para>The business source (optional). Examples: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, sls. Provide as needed for CREATE/UPDATE/PATCH.</para>
+        /// <para>The business source. Valid values include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls. Pass this field as needed for CREATE, UPDATE, and PATCH actions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("bizSource")]
         [Validation(Required=false)]
         public string BizSource { get; set; }
 
         /// <summary>
-        /// <para>The aggregated condition configuration.</para>
+        /// <para>The condition aggregation configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;PROMETHEUS_SIMPLE_CONDITION&quot;,&quot;durationSecs&quot;:0,&quot;severity&quot;:&quot;CRITICAL&quot;}</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instance {{instance}} CPU usage exceeds {{threshold}}%</para>
+        /// <para>实例 {{instance}} CPU 使用率超过 {{threshold}}%</para>
         /// </summary>
         [NameInMap("contentTemplate")]
         [Validation(Required=false)]
         public string ContentTemplate { get; set; }
 
         /// <summary>
-        /// <para>The aggregated data source configuration.</para>
+        /// <para>The data source aggregation configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;PROMETHEUS&quot;,&quot;instanceId&quot;:&quot;prom-cn-hangzhou-xxxxx&quot;}</para>
@@ -101,6 +101,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The alert drill evaluation time in Unix milliseconds. This field is required by the backend when drillMode is ONE_SHOT. The time cannot be later than the current time or earlier than 90 days ago.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1783728000000</para>
         /// </summary>
@@ -109,6 +111,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? DrillEvalTime { get; set; }
 
         /// <summary>
+        /// <para>The alert drill mode. This field is required by the backend when the action is DRILL_ALERT. Valid values: ONE_SHOT specifies a single point in time to simulate a complete lifecycle consisting of three events: OCCURRED, PERSISTENT, and RECOVERED. TIME_TRAVEL specifies a time range to simulate the lifecycle in multiple rounds based on the rule scheduling interval.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ONE_SHOT</para>
         /// </summary>
@@ -117,6 +121,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DrillMode { get; set; }
 
         /// <summary>
+        /// <para>The alert drill time range in Unix milliseconds. This field is required by the backend when drillMode is TIME_TRAVEL. The endTime must be later than the startTime and cannot be later than the current time. The lifecycle is simulated in multiple rounds based on the rule scheduling interval. The maximum number of rounds is 500. If the limit is exceeded, the backend returns a 400 error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;startTime&quot;:1783728000000,&quot;endTime&quot;:1783814400000}</para>
         /// </summary>
@@ -125,6 +131,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public ManageAlertRulesUnifiedActionInputDrillTimeRange DrillTimeRange { get; set; }
         public class ManageAlertRulesUnifiedActionInputDrillTimeRange : TeaModel {
             /// <summary>
+            /// <para>The drill end time in Unix milliseconds. The end time must be later than the start time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1783814400000</para>
             /// </summary>
@@ -133,6 +141,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? EndTime { get; set; }
 
             /// <summary>
+            /// <para>The drill start time in Unix milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1783728000000</para>
             /// </summary>
@@ -163,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// <para>The aggregated notification configuration.</para>
+        /// <para>The notification aggregation configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;DIRECT_NOTIFY&quot;,&quot;channels&quot;:[{&quot;type&quot;:&quot;GROUP&quot;,&quot;identifiers&quot;:[&quot;<contact-group-id>&quot;]}]}</para>
@@ -185,7 +195,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> The monitored object instance ID. Use observeResourceConfig.resources instead. Retained only for backward compatibility with legacy SDKs.</para>
+        /// <para><b>[Deprecated]</b> The ID of the monitored object instance. For new integrations, use observeResourceConfig.resources instead. This field is retained only for compatibility with legacy SDKs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -198,7 +208,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> The monitored object resource type. Use observeResourceConfig.entityType instead. Retained only for backward compatibility with legacy SDKs.</para>
+        /// <para><b>[Deprecated]</b> The resource type of the monitored object. For new integrations, use observeResourceConfig.entityType instead. This field is retained only for compatibility with legacy SDKs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -209,7 +219,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ObserveResourceType { get; set; }
 
         /// <summary>
-        /// <para>The aggregated query configuration.</para>
+        /// <para>The query aggregation configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;PROMETHEUS_SINGLE_QUERY&quot;,&quot;expr&quot;:&quot;up &gt; 0&quot;}</para>
@@ -219,7 +229,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public QueryConfigUnified QueryConfig { get; set; }
 
         /// <summary>
-        /// <para>The root cause analysis (RCA) configuration (optional). Provide as needed for CREATE/UPDATE/PATCH.</para>
+        /// <para>The root cause analysis (RCA) configuration. Pass this field as needed for CREATE, UPDATE, and PATCH actions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;enabled&quot;:false}</para>
@@ -229,7 +239,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public AlertRuleRcaConfig RcaConfig { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Aligned with V1 AlertRule.regionId. If not provided, the gateway callerRegionId is used.</para>
+        /// <para>The region ID. This aligns with V1 AlertRule.regionId. If not provided, the gateway callerRegionId is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -239,7 +249,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The aggregated schedule configuration.</para>
+        /// <para>The schedule aggregation configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;FIXED&quot;,&quot;intervalSecs&quot;:60}</para>
@@ -249,7 +259,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public ScheduleConfigUnified ScheduleConfig { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the rule. Required for UPDATE/PATCH.</para>
+        /// <para>The UUID of the rule. This field is required for UPDATE and PATCH actions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx-xxx-xxx</para>
@@ -259,7 +269,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The list of rule UUIDs to delete (BATCH_DELETE).</para>
+        /// <para>The list of UUIDs for the rules to be deleted. This is used for the BATCH_DELETE action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;]</para>
@@ -269,7 +279,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<string> UuidList { get; set; }
 
         /// <summary>
-        /// <para>The workspace. Required for CREATE/UPDATE and other actions.</para>
+        /// <para>The workspace ID. This field is required for CREATE, UPDATE, PATCH, DELETE, ENABLE, DISABLE, BATCH_DELETE, BATCH_ENABLE, and BATCH_DISABLE actions. It identifies the CloudMonitor workspace to which the rule belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

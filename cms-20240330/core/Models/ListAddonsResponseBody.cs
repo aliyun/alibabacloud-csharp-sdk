@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<ListAddonsResponseBodyAddonsDashboards> Dashboards { get; set; }
             public class ListAddonsResponseBodyAddonsDashboards : TeaModel {
                 /// <summary>
-                /// <para>The dashboard description.</para>
+                /// <para>The description of the dashboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The dashboard name.</para>
+                /// <para>The name of the dashboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rum_view_link_rum_api</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the integration policy type is enabled.</para>
+                /// <para>Specifies whether it is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string AlertDefaultStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to install the component by default.</para>
+                    /// <para>Specifies whether to install by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether to trigger a pod restart guide immediately after the plug-in installation is completed during integration.</para>
+                    /// <para>Specifies whether to initiate a pod restart guide immediately after the plug-in installation is completed during integration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? NeedRestartAfterIntegration { get; set; }
 
                     /// <summary>
-                    /// <para>The supported protocol types in the configuration.</para>
+                    /// <para>The supported protocol types for configuration.</para>
                     /// </summary>
                     [NameInMap("protocols")]
                     [Validation(Required=false)]
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The latest release creation time.</para>
+            /// <para>The time of the latest release. The time is in ISO 8601 format and includes the UTC identifier or time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-03T03:15:56Z</para>

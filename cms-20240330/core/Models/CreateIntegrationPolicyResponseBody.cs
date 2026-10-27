@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Created { get; set; }
 
         /// <summary>
-        /// <para>The policy.</para>
+        /// <para>The uploaded policy.</para>
         /// </summary>
         [NameInMap("policy")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The workspace to which the policy belongs.</para>
+            /// <para>The workspace where the policy resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prometheus</para>

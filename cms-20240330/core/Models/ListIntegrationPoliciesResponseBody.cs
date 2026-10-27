@@ -48,6 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> AddonNames { get; set; }
 
             /// <summary>
+            /// <para>The policy version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v2</para>
             /// </summary>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ApiVersion { get; set; }
 
             /// <summary>
-            /// <para>The information about the bound resources.</para>
+            /// <para>The information about the bound resource.</para>
             /// </summary>
             [NameInMap("bindResource")]
             [Validation(Required=false)]
@@ -176,7 +178,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesAnnotations> Annotations { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesAnnotations : TeaModel {
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>The operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -196,7 +198,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag values.</para>
+                        /// <para>The tag value.</para>
                         /// </summary>
                         [NameInMap("tagValues")]
                         [Validation(Required=false)]
@@ -229,14 +231,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string FieldKey { get; set; }
 
                         /// <summary>
-                        /// <para>The field values. Separate multiple values with commas (,).</para>
+                        /// <para>The field content. Separate multiple values with commas (,).</para>
                         /// </summary>
                         [NameInMap("fieldValues")]
                         [Validation(Required=false)]
                         public List<string> FieldValues { get; set; }
 
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>The operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -291,7 +293,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesLabels> Labels { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesLabels : TeaModel {
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>The operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -301,7 +303,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Op { get; set; }
 
                         /// <summary>
-                        /// <para>The tag key.</para>
+                        /// <para>The label key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -311,7 +313,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag values.</para>
+                        /// <para>The tag value.</para>
                         /// </summary>
                         [NameInMap("tagValues")]
                         [Validation(Required=false)]
@@ -344,7 +346,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesTags> Tags { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesTags : TeaModel {
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>The operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -354,7 +356,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Op { get; set; }
 
                         /// <summary>
-                        /// <para>The tag key.</para>
+                        /// <para>The label key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>key</para>
@@ -364,7 +366,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag values.</para>
+                        /// <para>The tag value.</para>
                         /// </summary>
                         [NameInMap("tagValues")]
                         [Validation(Required=false)]
@@ -417,7 +419,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The billing type.</para>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CS_Pro</para>
@@ -434,7 +436,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListIntegrationPoliciesResponseBodyPoliciesManagedInfo ManagedInfo { get; set; }
             public class ListIntegrationPoliciesResponseBodyPoliciesManagedInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the elastic network interface (ENI) for the managed probe. Example: eni-xxxx.</para>
+                /// <para>The elastic network interface (ENI) ID of the managed probe. Example: eni-xxxx.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-12345678</para>
@@ -486,7 +488,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The Access Center policy type.</para>
+            /// <para>The access center policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS</para>
@@ -533,7 +535,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? Ready { get; set; }
 
                 /// <summary>
-                /// <para>The number of rules.</para>
+                /// <para>The total number of rules.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>278</para>

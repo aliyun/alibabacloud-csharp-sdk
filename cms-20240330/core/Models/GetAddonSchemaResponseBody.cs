@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetAddonSchemaResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of data table fields.</para>
+        /// <para>The list of data table fields.</para>
         /// </summary>
         [NameInMap("fields")]
         [Validation(Required=false)]
         public List<GetAddonSchemaResponseBodyFields> Fields { get; set; }
         public class GetAddonSchemaResponseBodyFields : TeaModel {
             /// <summary>
-            /// <para>A list of display conditions.</para>
+            /// <para>The list of display conditions.</para>
             /// </summary>
             [NameInMap("conditions")]
             [Validation(Required=false)]
             public List<GetAddonSchemaResponseBodyFieldsConditions> Conditions { get; set; }
             public class GetAddonSchemaResponseBodyFieldsConditions : TeaModel {
                 /// <summary>
-                /// <para>The control mode of the field.</para>
+                /// <para>The field control mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>show</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The name of the field.</para>
+                /// <para>The field name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>store.storageTarget</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Field { get; set; }
 
                 /// <summary>
-                /// <para>The operator for the condition.</para>
+                /// <para>The condition operator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>==</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the field is hidden. Valid values: \<c>true\\</c> (hidden) and \<c>false\\</c> (displayed).</para>
+            /// <para>Specifies whether the field is hidden. Valid values: true: Hidden. false: Displayed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The type of the element.</para>
+            /// <para>The element type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>input</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Element { get; set; }
 
             /// <summary>
-            /// <para>The path of the field.</para>
+            /// <para>The field path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql.host</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The name of the field.</para>
+            /// <para>The field name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>host</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The placeholder text.</para>
+            /// <para>The input prompt.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Please enter the metrics collection interval</para>
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Placeholder { get; set; }
 
             /// <summary>
-            /// <para>Other properties of the component.</para>
+            /// <para>The other properties of the component.</para>
             /// </summary>
             [NameInMap("props")]
             [Validation(Required=false)]
             public GetAddonSchemaResponseBodyFieldsProps Props { get; set; }
             public class GetAddonSchemaResponseBodyFieldsProps : TeaModel {
                 /// <summary>
-                /// <para>The information about the data source.</para>
+                /// <para>The data source information.</para>
                 /// </summary>
                 [NameInMap("dataSource")]
                 [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the label.</para>
+                    /// <para>The label value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tagValue</para>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>A collection of related data.</para>
+                /// <para>The related data collection.</para>
                 /// </summary>
                 [NameInMap("related")]
                 [Validation(Required=false)]
                 public List<string> Related { get; set; }
 
                 /// <summary>
-                /// <para>The mode.</para>
+                /// <para>The selection mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>single</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The type of the field.</para>
+            /// <para>The field type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string</para>
@@ -211,14 +211,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The validation rule for the field.</para>
+            /// <para>The field validation rules.</para>
             /// </summary>
             [NameInMap("validation")]
             [Validation(Required=false)]
             public GetAddonSchemaResponseBodyFieldsValidation Validation { get; set; }
             public class GetAddonSchemaResponseBodyFieldsValidation : TeaModel {
                 /// <summary>
-                /// <para>The maximum value. The value is inclusive.</para>
+                /// <para>The maximum value of the score range (inclusive).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? Max { get; set; }
 
                 /// <summary>
-                /// <para>The maximum length that is supported by the text control.</para>
+                /// <para>The maximum length supported by the text control.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? MaxLength { get; set; }
 
                 /// <summary>
-                /// <para>The details.</para>
+                /// <para>The detailed information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>length limit</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E5B1D3D4-BB28-5996-8AD2-***********</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the schema.</para>
+        /// <para>The schema type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>common</para>

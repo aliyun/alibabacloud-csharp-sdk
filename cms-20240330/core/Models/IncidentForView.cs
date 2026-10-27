@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentForView : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>-1 表示未屏蔽</para>
+        /// </summary>
+        [NameInMap("blockingExpireTimestamp")]
+        [Validation(Required=false)]
+        public long? BlockingExpireTimestamp { get; set; }
+
+        /// <summary>
         /// <para>The details of the incident.</para>
         /// 
         /// <b>Example:</b>
@@ -167,6 +175,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("subscriptionUuid")]
         [Validation(Required=false)]
         public string SubscriptionUuid { get; set; }
+
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
         /// <para>The timestamp when the incident was created.</para>

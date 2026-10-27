@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the add-on component to be integrated for monitoring.</para>
+        /// <para>The name of the add-on that requires monitoring integration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
+        /// <para>The catalog version of the add-on. Valid values: v1 and v2.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v2</para>
         /// </summary>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public EntityDiscoverRule EntityRules { get; set; }
 
         /// <summary>
-        /// <para>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the value is uniformly set to Cloud.</para>
+        /// <para>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the environment type is uniformly set to Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CS</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The parent add-on release ID.</para>
+        /// <para>The ID of the parent add-on release.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-xxxxxxxxxxx</para>
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Values { get; set; }
 
         /// <summary>
-        /// <para>The version of the add-on component to be integrated for monitoring.</para>
+        /// <para>The version of the add-on that requires monitoring integration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
