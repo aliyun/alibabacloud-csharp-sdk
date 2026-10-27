@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateGatewayConsumerForPolarDBXRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/196830.html">describedbinstances</a> operation to query the details of all instances in the specified region, including the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

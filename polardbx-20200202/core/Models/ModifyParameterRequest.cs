@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyParameterRequest : TeaModel {
         /// <summary>
-        /// <para>The client request token. You can set this parameter to any unique string.</para>
+        /// <para>The client token. It can be any unique string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>compute</b>: compute layer parameter.</description></item>
-        /// <item><description><b>storage</b>: storage layer parameter.</description></item>
+        /// <item><description><b>compute</b>: compute layer parameters</description></item>
+        /// <item><description><b>storage</b>: storage layer parameters</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,12 +44,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string ParamLevel { get; set; }
 
+        /// <summary>
+        /// <para>The parameter template ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates in the specified region, including the parameter template IDs.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rpg-s1y1xy06****fqs7y</para>
+        /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>A JSON-formatted string. MapKey specifies the parameter name, and MapValue specifies the parameter value. The modifiable parameters are dynamically added or removed. Call the <a href="https://help.aliyun.com/document_detail/196856.html">DescribeParameterTemplates</a> operation to query the available parameters. You can specify multiple parameters at a time.</para>
+        /// <para>The parameters in JSON format. The key represents the parameter name, and the value represents the parameter value. Modifiable parameters are dynamically added or removed. Call the <a href="https://help.aliyun.com/document_detail/196856.html">DescribeParameterTemplates</a> operation to obtain the list of modifiable parameters. You can specify multiple parameters at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;CONN_POOL_BLOCK_TIMEOUT&quot;:6000}</para>

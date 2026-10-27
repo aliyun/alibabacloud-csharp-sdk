@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the time range for querying historical instances in the topology. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the historical instance range for the topology query, in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-22T10:30:45Z 04:00:00</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time range for querying historical instances in the topology. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the historical instance range for the topology query, in the yyyy-MM-dd HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-21T10:30:45Z 04:00:00</para>

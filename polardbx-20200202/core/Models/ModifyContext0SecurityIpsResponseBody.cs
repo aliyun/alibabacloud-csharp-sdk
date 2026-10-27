@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The identity type used for authentication in the request. Valid values:</para>
+            /// <para>The type of identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SubUser: RAM user.</description></item>
             /// <item><description>AssumedRoleUser: RAM role.</description></item>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-hzjasd****</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B2F3840-5C98-475C-B269-2D5C3A31797C</para>

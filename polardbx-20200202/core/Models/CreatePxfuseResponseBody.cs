@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The type of access denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The policy details.</para>
+        /// <para>The details of the returned policy.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreatePxfuseResponseBodyData Data { get; set; }
         public class CreatePxfuseResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the instance already exists.</para>
+            /// <para>Indicates whether the resource already exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>

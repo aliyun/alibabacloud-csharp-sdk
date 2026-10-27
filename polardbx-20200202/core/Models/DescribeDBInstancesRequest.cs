@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
+        /// <summary>
+        /// <para>The database version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5.5</para>
+        /// </summary>
         [NameInMap("DbVersion")]
         [Validation(Required=false)]
         public string DbVersion { get; set; }
 
         /// <summary>
-        /// <para>The description of the database.</para>
+        /// <para>The description or remark of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-test</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance must have a log engine.</para>
+        /// <para>Specifies whether a log engine is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,7 +60,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>30</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -75,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyst47******</para>
@@ -86,6 +97,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para>The instance edition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>enterprise</b>: Enterprise Edition</description></item>
+        /// <item><description><b>standard</b>: Standard Edition</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>enterprise</para>

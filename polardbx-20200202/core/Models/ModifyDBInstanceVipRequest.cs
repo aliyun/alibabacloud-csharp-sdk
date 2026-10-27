@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the CN cluster for the instance, such as default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("InstanceClusterName")]
         [Validation(Required=false)]
         public string InstanceClusterName { get; set; }
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) where the access endpoint resides.</para>
+        /// <para>The ID of the VPC where the endpoint is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

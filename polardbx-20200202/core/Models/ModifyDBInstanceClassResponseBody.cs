@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDBInstanceClassResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID. An order is generated when you upgrade, downgrade, or change the instance specifications.</para>
+        /// <para>The order ID. An order is generated when you upgrade or downgrade an instance, or change the instance specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20211103105558</para>
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the instance specification change task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public int? TaskId { get; set; }

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The GDN instance name.</para>
+                /// <para>The name of the GDN instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gdn-***</para>
@@ -43,6 +43,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public string GdnInstanceName { get; set; }
 
+                /// <summary>
+                /// <para>The replication mode of the GDN. Valid values: gdn_mode_master_slave and gdn_mode_bidirectional.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gdn_mode_master_slave</para>
+                /// </summary>
                 [NameInMap("GdnMode")]
                 [Validation(Required=false)]
                 public string GdnMode { get; set; }
@@ -58,14 +64,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The member list.</para>
+                /// <para>The list of members.</para>
                 /// </summary>
                 [NameInMap("MemberList")]
                 [Validation(Required=false)]
                 public List<DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList> MemberList { get; set; }
                 public class DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList : TeaModel {
                     /// <summary>
-                    /// <para>The instance specifications.</para>
+                    /// <para>The instance type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>polarx.x4.medium.2e</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string ClassCode { get; set; }
 
                     /// <summary>
-                    /// <para>The CN node specifications.</para>
+                    /// <para>The CN node specifications. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB</description></item>
                     /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB</description></item>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string CnNodeClassCode { get; set; }
 
                     /// <summary>
-                    /// <para>The number of CN nodes.</para>
+                    /// <para>The number of compute nodes (CNs).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -117,12 +123,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string CommodityCode { get; set; }
 
+                    /// <summary>
+                    /// <para>The data synchronization status of the member.</para>
+                    /// </summary>
                     [NameInMap("DataSyncStatus")]
                     [Validation(Required=false)]
                     public string DataSyncStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The DN node specifications.</para>
+                    /// <para>The DN node specifications. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB</description></item>
                     /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB</description></item>
@@ -149,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string DnNodeClassCode { get; set; }
 
                     /// <summary>
-                    /// <para>The number of DN nodes.</para>
+                    /// <para>The number of data nodes (DNs).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -159,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string DnNodeCount { get; set; }
 
                     /// <summary>
-                    /// <para>The expiration time.</para>
+                    /// <para>The expiration time. The format is YYYY-MM-DDTHH:mm:ss.SSS±HHmm, which includes the time zone offset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-01-02T13:11:10.000+0000</para>
@@ -179,7 +188,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string GmtCreated { get; set; }
 
                     /// <summary>
-                    /// <para>The member name (PolarDB-X instance name).</para>
+                    /// <para>The name of the member, which is the name of the PolarDB-X instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pxc-***</para>
@@ -191,8 +200,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <summary>
                     /// <para>The billing method of the instance. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-                    /// <item><description><b>Prepaid</b>: subscription.</description></item>
+                    /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+                    /// <item><description><b>Prepaid</b>: subscription</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -212,6 +221,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string PrimaryZone { get; set; }
 
+                    /// <summary>
+                    /// <para>The read/write status of the member.</para>
+                    /// </summary>
                     [NameInMap("ReadWriteStatus")]
                     [Validation(Required=false)]
                     public string ReadWriteStatus { get; set; }
@@ -227,7 +239,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>The member role.</para>
+                    /// <para>The role of the member.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>primary、
@@ -248,7 +260,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string SecondaryZone { get; set; }
 
                     /// <summary>
-                    /// <para>The data replication lag.</para>
+                    /// <para>The data synchronization latency.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1s</para>
@@ -258,7 +270,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string SecondsBehindMaster { get; set; }
 
                     /// <summary>
-                    /// <para>The member status.</para>
+                    /// <para>The status of the member.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Creating</para>
@@ -268,21 +280,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The switchover task status.</para>
+                    /// <para>The status of the switchover task.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>prepared: Parameter initialization is complete.
-                    /// set_old_primary_readonly: The original primary instance is set to read-only.
-                    /// set_new_primary_read_write: The switchover is complete.
-                    /// timeout: The task has timed out.
-                    /// rollback: The task has been rolled back</para>
+                    /// <para>prepared: Parameter initialization completed
+                    /// set_old_primary_readonly: Write operations disabled on the original primary instance
+                    /// set_new_primary_read_write: Switchover completed
+                    /// timeout: Task timed out
+                    /// rollback: Rolled back</para>
                     /// </summary>
                     [NameInMap("TaskStatus")]
                     [Validation(Required=false)]
                     public string TaskStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The zone for three-zone deployment. This zone is active along with the primary and secondary zones.</para>
+                    /// <para>The third active zone in a three-zone deployment.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-zhangjiakou-a</para>
@@ -313,14 +325,29 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public string MysqlVersion { get; set; }
 
+                /// <summary>
+                /// <para>The replication conflict handling strategy. Valid values: DIRECT_OVERWRITE, OVERWRITE, IGNORE, and INTERRUPT.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OVERWRITE</para>
+                /// </summary>
                 [NameInMap("RplConflictStrategy")]
                 [Validation(Required=false)]
                 public string RplConflictStrategy { get; set; }
 
+                /// <summary>
+                /// <para>The DML replication policy. Valid values: MERGE, SERIAL, TRANSACTION, and SPLIT.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SPLIT</para>
+                /// </summary>
                 [NameInMap("RplDmlStrategy")]
                 [Validation(Required=false)]
                 public string RplDmlStrategy { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to synchronously replicate DDL operations.</para>
+                /// </summary>
                 [NameInMap("RplSyncDdl")]
                 [Validation(Required=false)]
                 public bool? RplSyncDdl { get; set; }
@@ -336,7 +363,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The switchover history.</para>
+                /// <para>The switchover logs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;&quot;</para>
@@ -380,9 +407,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</para>
+        /// <para>This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -403,7 +430,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

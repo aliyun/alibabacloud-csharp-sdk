@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdatePolarDBXInstanceNodeRequest : TeaModel {
+        /// <summary>
+        /// <para>The node specifications of the storage nodes to add.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql.n4.medium.25</para>
+        /// </summary>
         [NameInMap("AddDNSpec")]
         [Validation(Required=false)]
         public string AddDNSpec { get; set; }
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? CNNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The client token, which is an arbitrary random string.</para>
+        /// <para>The client token. It can be any random string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance name ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +70,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public int? DbInstanceNodeCount { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the storage nodes to remove.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-xdb-s-pxcshr****rh7fn2654fc</para>
+        /// </summary>
         [NameInMap("DeleteDNIds")]
         [Validation(Required=false)]
         public string DeleteDNIds { get; set; }
@@ -79,6 +91,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the storage pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("StoragePoolName")]
         [Validation(Required=false)]
         public string StoragePoolName { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateDBRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account that is authorized to access the created database.</para>
+        /// <para>The name of the account to be authorized for the new database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The permissions granted to the account on the new database. Valid values:</para>
+        /// <para>The permissions granted to the new account on the database. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ReadWrite</b></description></item>
         /// <item><description><b>ReadOnly</b></description></item>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The character set. The following character sets are supported:</para>
+        /// <para>The character set. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>utf8</b></description></item>
         /// <item><description><b>gbk</b></description></item>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the database to create.</para>
+        /// <para>The name of the database to be created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The mode selected when creating the database. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>auto</b>: The database supports automatic partitioning. You do not need to specify a partition key when creating a table.</description></item>
-        /// <item><description><b>drds</b>: The database does not support automatic partitioning. You must use dedicated table and database sharding syntax and specify sharding keys when creating a table.</description></item>
+        /// <item><description><b>drds</b>: The database does not support automatic partitioning. You must use the dedicated database and table sharding syntax and specify the shard keys when creating a table.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The name of the security administrator account.</para>
         /// <remarks>
-        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</para>
+        /// <para>This parameter is required if the three-role mode is enabled. If the three-role mode is not enabled, this parameter is optional.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The password of the security administrator account.</para>
         /// <remarks>
-        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</para>
+        /// <para>This parameter is required if the three-role mode is enabled. If the three-role mode is not enabled, this parameter is optional.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -136,6 +136,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string SecurityAccountPassword { get; set; }
 
+        /// <summary>
+        /// <para>The name of the storage pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("StoragePoolName")]
         [Validation(Required=false)]
         public string StoragePoolName { get; set; }

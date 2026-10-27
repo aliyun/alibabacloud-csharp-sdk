@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query for the binary log list.</para>
+        /// <para>The end time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,12 +31,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-hzrh51fze****pon-cdc</para>
+        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current binary log list. Default value: 1.</para>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of binary logs to return on each page. Default value: 30.</para>
+        /// <para>The number of entries per page. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query for the binary log list.</para>
+        /// <para>The start time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

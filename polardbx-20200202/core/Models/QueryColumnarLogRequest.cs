@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? MaxResultRows { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the request. The region ID must be the same as the region where the SQLQuery service is deployed.</para>
+        /// <para>The region ID of the request. The value must match the region where the SQLQuery service is deployed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The read-only query statement to execute. Only a single MySQL SELECT statement is supported, and it must access the fully qualified polardbx_sls table. Multi-statement queries, write operations, locks, user variables, dynamic placeholders, and reserved hints are not supported.</para>
+        /// <para>The read-only query statement to execute. Only a single MySQL SELECT statement is supported. Query tables must use the fully qualified form polardbx_sls.<table_name>, and only the following tables are allowed: polardbx_sls.polardbx_log (kernel logs), polardbx_sls.slow_detail_log (slow query logs), polardbx_sls.slow_trans_log (slow transaction logs), and polardbx_sls.sql_audit_log (audit logs). Multi-statement queries, write operations, locks, user variables, dynamic placeholders, and reserved hints are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>select * from device where name = \&quot;105506012111488797\&quot;</para>
+        /// <para>SELECT * FROM polardbx_sls.sql_audit_log LIMIT 100</para>
         /// </summary>
         [NameInMap("SQL")]
         [Validation(Required=false)]

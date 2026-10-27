@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public ModifyOpenSearchClassResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class ModifyOpenSearchClassResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The authentication action.</para>
+            /// <para>The authorization action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The display name of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The owner ID of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The identity type used for authentication in the request. Valid values:</para>
+            /// <para>The type of identity used for authorization in the request. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SubUser: RAM user.</description></item>
             /// <item><description>AssumedRoleUser: RAM role.</description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted complete diagnostic message.</para>
+            /// <para>The encoded full diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of permission denial.</para>
+            /// <para>The no permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>

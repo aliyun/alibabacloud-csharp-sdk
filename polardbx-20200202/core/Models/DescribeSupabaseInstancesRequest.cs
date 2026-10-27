@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSupabaseInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name. This parameter is used for exact match filtering. Separate multiple instance names with commas (,).</para>
+        /// <para>The instance name. Exact match is used for filtering. Separate multiple names with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxsp-hz********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance description. This parameter supports fuzzy match.</para>
+        /// <para>The instance description. Fuzzy match is used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project name</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: If you do not specify this parameter or specify a value less than 10, the default value is 10. If you specify a value greater than 100, the default value is 100.</para>
+        /// <para>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify the Settings or the Settings value is less than 10, the default value is 10. If the Settings value is greater than 100, the default value is 100. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxdds</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -21,10 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CycleTime { get; set; }
 
         /// <summary>
-        /// <para>The cycle mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Week: weekly.</description></item>
-        /// </list>
+        /// <para>The cycle type. Valid value: Week.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. Specify the time in the HH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Specify the time in the HH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the configuration. Valid values:</para>
+        /// <para>Specifies whether to enable the feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Enabled.</description></item>
         /// <item><description><b>0</b>: Disabled.</description></item>

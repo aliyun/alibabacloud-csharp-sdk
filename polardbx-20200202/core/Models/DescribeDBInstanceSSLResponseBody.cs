@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? SSLEnabled { get; set; }
 
             /// <summary>
-            /// <para>The certificate expiration time.</para>
+            /// <para>The expiration time of the certificate. The time is in the YYYY-MM-DDTHH:mm:ssZ format and is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-04T09:39:07Z</para>

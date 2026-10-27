@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ExecuteMetaQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed information about the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public ExecuteMetaQueryResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class ExecuteMetaQueryResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -75,10 +75,22 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public ExecuteMetaQueryResponseBodyData Data { get; set; }
         public class ExecuteMetaQueryResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The actual top-level LIMIT offset applied to the SQL statement. If no offset is specified, the value is 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("AppliedOffset")]
             [Validation(Required=false)]
             public long? AppliedOffset { get; set; }
 
+            /// <summary>
+            /// <para>The effective upper limit of returned rows for this request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("AppliedRowLimit")]
             [Validation(Required=false)]
             public long? AppliedRowLimit { get; set; }
@@ -90,14 +102,29 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the query result contains at least one more row beyond the effective row limit for this request.</para>
+            /// </summary>
             [NameInMap("HasMore")]
             [Validation(Required=false)]
             public bool? HasMore { get; set; }
 
+            /// <summary>
+            /// <para>The size in bytes of the Rows JSON array in the returned result after UTF-8 encoding, excluding protocol overhead.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2048</para>
+            /// </summary>
             [NameInMap("RecordsSizeBytes")]
             [Validation(Required=false)]
             public long? RecordsSizeBytes { get; set; }
 
+            /// <summary>
+            /// <para>The actual number of result rows returned for this request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("ReturnedRowCount")]
             [Validation(Required=false)]
             public long? ReturnedRowCount { get; set; }
@@ -113,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? RowCount { get; set; }
 
             /// <summary>
-            /// <para>The number of affected or returned rows. This field is available only for compute nodes (CNs).</para>
+            /// <para>The number of affected or returned rows. This field is available only for CN.</para>
             /// </summary>
             [NameInMap("Rows")]
             [Validation(Required=false)]
@@ -122,7 +149,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The additional information returned by the operation. success is returned if the request is successful. Otherwise, an error code is returned.</para>
+        /// <para>The additional message returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

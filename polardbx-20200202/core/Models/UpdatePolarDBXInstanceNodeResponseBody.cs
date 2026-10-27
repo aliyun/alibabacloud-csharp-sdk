@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdatePolarDBXInstanceNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID generated when the number of instance nodes is changed.</para>
+        /// <para>The ID of the order generated when the number of nodes for the instance is changed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20211103105558</para>

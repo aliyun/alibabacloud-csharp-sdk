@@ -222,6 +222,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Service 当前已确认的小版本完整 tag，未知时为空。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>polardb-2.6.0_release_contextdb-20261023</para>
+                /// </summary>
+                [NameInMap("MinorVersion")]
+                [Validation(Required=false)]
+                public string MinorVersion { get; set; }
+
+                /// <summary>
                 /// <para>The number of nodes.</para>
                 /// 
                 /// <b>Example:</b>

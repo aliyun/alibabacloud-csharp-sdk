@@ -27,7 +27,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CdcInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The CN node specifications.</para>
+            /// <para>The CN node specifications. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB</description></item>
+            /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB</description></item>
+            /// <item><description><b>polarx.x8.large.2e</b>: 4 cores, 32 GB</description></item>
+            /// <item><description><b>polarx.x4.xlarge.2e</b>: 8 cores, 32 GB</description></item>
+            /// <item><description><b>polarx.x8.xlarge.2e</b>: 8 cores, 64 GB</description></item>
+            /// <item><description><b>polarx.x4.2xlarge.2e</b>: 16 cores, 64 GB</description></item>
+            /// <item><description><b>polarx.x8.2xlarge.2e</b>: 16 cores, 128 GB</description></item>
+            /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB</description></item>
+            /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB</description></item>
+            /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB</description></item>
+            /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>polarx.x4.large.2e</para>
@@ -57,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ColumnarInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The column store read-only instance information.</para>
+            /// <para>The information about the column store read-only instance.</para>
             /// </summary>
             [NameInMap("ColumnarReadDBInstances")]
             [Validation(Required=false)]
@@ -74,7 +87,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the instance contains the multi-stream log service. Valid values:</para>
+            /// <para>Indicates whether the multi-flow log service is included. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -83,6 +100,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public bool? ContainBinlogX { get; set; }
 
+            /// <summary>
+            /// <para>The CPU architecture.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>x86</para>
+            /// </summary>
             [NameInMap("CpuType")]
             [Validation(Required=false)]
             public string CpuType { get; set; }
@@ -118,7 +141,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBType { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The database version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.7</para>
@@ -138,7 +161,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The DN node specifications.</para>
+            /// <para>The DN node specifications. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB</description></item>
+            /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB</description></item>
+            /// <item><description><b>mysql.x8.medium.25</b>: 2 cores, 16 GB</description></item>
+            /// <item><description><b>mysql.n2.large.25</b>: 4 cores, 8 GB</description></item>
+            /// <item><description><b>mysql.n4.large.25</b>: 4 cores, 16 GB</description></item>
+            /// <item><description><b>mysql.x8.large.25</b>: 4 cores, 32 GB</description></item>
+            /// <item><description><b>mysql.n2.xlarge.25</b>: 8 cores, 16 GB</description></item>
+            /// <item><description><b>mysql.n4.xlarge.25</b>: 8 cores, 32 GB</description></item>
+            /// <item><description><b>mysql.x8.xlarge.25</b>: 8 cores, 64 GB</description></item>
+            /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 cores, 64 GB</description></item>
+            /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 cores, 128 GB</description></item>
+            /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB</description></item>
+            /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB</description></item>
+            /// <item><description><b>mysql.st.8xlarge.25</b>: 60 cores, 470 GB</description></item>
+            /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>mysql.n4.medium.25</para>
@@ -167,6 +207,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string Engine { get; set; }
 
+            /// <summary>
+            /// <para>The database engine version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8.0</para>
+            /// </summary>
             [NameInMap("EngineVersion")]
             [Validation(Required=false)]
             public string EngineVersion { get; set; }
@@ -215,14 +261,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The lock reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Overdue</para>
+            /// <para>Overdue payments</para>
             /// </summary>
             [NameInMap("LockReason")]
             [Validation(Required=false)]
             public string LockReason { get; set; }
 
             /// <summary>
-            /// <para>The current Milvus version.</para>
+            /// <para>The current kernel version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx-kernel_5.4.12-16349923_xcluster-20210926</para>
@@ -269,7 +315,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeDBInstancesResponseBodyDBInstancesNodes> Nodes { get; set; }
             public class DescribeDBInstancesResponseBodyDBInstancesNodes : TeaModel {
                 /// <summary>
-                /// <para>The instance specifications.</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polarx.x4.large.2e</para>
@@ -289,6 +335,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>The node name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pxc-bjryuycxlckxxxx-cn</para>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
                 /// </summary>
@@ -320,6 +371,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+            /// <item><description><b>Prepaid</b>: subscription</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Prepaid</para>
@@ -328,6 +383,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string PayType { get; set; }
 
+            /// <summary>
+            /// <para>The primary instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pxc-hzrof9vitxxx</para>
+            /// </summary>
             [NameInMap("PrimaryInstanceId")]
             [Validation(Required=false)]
             public string PrimaryInstanceId { get; set; }
@@ -382,6 +443,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             /// <summary>
             /// <para>The instance edition. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>enterprise</b>: Enterprise Edition</description></item>
+            /// <item><description><b>standard</b>: Standard Edition</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>enterprise</para>
@@ -391,7 +456,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Series { get; set; }
 
             /// <summary>
-            /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/339826.html">Instance status table</a>.</para>
+            /// <para>The instance status. For more information, see the following section.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -400,6 +465,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The storage type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>custom_local_ssd | cloud_auto</para>
+            /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
@@ -415,7 +486,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? StorageUsed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance supports multi-stream. Valid values:</para>
+            /// <para>Indicates whether the current instance supports multi-stream. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -425,7 +500,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? SupportBinlogX { get; set; }
 
             /// <summary>
-            /// <para>The set of tags.</para>
+            /// <para>The tag set.</para>
             /// </summary>
             [NameInMap("TagSet")]
             [Validation(Required=false)]
@@ -454,7 +529,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The tertiary active zone for three-zone deployment.</para>
+            /// <para>The third active zone in a Three-zone deployment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-k</para>
@@ -464,7 +539,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TertiaryZone { get; set; }
 
             /// <summary>
-            /// <para>The topology type.</para>
+            /// <para>The topology type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>3azones</b>: Three-zone deployment (three active zones)</description></item>
+            /// <item><description><b>1azone</b>: Single-zone deployment (single active zone)</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -475,7 +554,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TopologyType { get; set; }
 
             /// <summary>
-            /// <para>The instance type.</para>
+            /// <para>The instance type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ReadWrite</b>: primary instance</description></item>
+            /// <item><description><b>ReadOnly</b>: read-only instance</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ReadWrite</para>
@@ -485,7 +568,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPCID</para>
@@ -504,10 +587,22 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
+            /// <summary>
+            /// <para>The GDN role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>master | standby</para>
+            /// </summary>
             [NameInMap("gdnRole")]
             [Validation(Required=false)]
             public string GdnRole { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the instance belongs to a global database network (GDN).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("isInGdn")]
             [Validation(Required=false)]
             public bool? IsInGdn { get; set; }

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The dashboard password.</para>
+        /// <para>The Dashboard password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DashboardPassword { get; set; }
 
         /// <summary>
-        /// <para>The instance description.</para>
+        /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Supabase实例</para>
+        /// <para>Supabase instance</para>
         /// </summary>
         [NameInMap("DbInstanceDescription")]
         [Validation(Required=false)]
@@ -72,11 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeSpec { get; set; }
 
         /// <summary>
-        /// <para>The billing type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PREPAY: subscription.</description></item>
-        /// <item><description>POSTPAY: pay-as-you-go.</description></item>
-        /// </list>
+        /// <para>The billing method. Valid values: PREPAY and POSTPAY.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,12 +83,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Year</description></item>
-        /// <item><description>Month</description></item>
-        /// <item><description>Hour</description></item>
-        /// </list>
+        /// <para>The billing cycle. Valid values: Year, Month, and Hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>

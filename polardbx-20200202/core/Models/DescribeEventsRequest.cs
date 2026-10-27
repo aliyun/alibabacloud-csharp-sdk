@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-18T03:07:25Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-18T03:07:25Z</para>

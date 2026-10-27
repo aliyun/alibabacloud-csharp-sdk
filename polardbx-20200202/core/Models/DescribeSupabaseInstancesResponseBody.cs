@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSupabaseInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denied details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAacnceTlBNjlFODgyLTlBMDUtNUUyRC04MzE5LUQwMzZDRjJFQTM3NA==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The access denial type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The paginated result of the instance list.</para>
+        /// <para>The paginated list of instances.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeSupabaseInstancesResponseBodyDataInstances> Instances { get; set; }
             public class DescribeSupabaseInstancesResponseBodyDataInstances : TeaModel {
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the instance was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-08T07:19:05.000+0000</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The instance description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>我的 Supabase 项目</para>
+                /// <para>My Supabase project</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The Supabase specification code.</para>
+                /// <para>The Supabase instance type code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polarx.supabase.x4.2xlarge</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: If you do not specify this parameter or specify a value less than 10, the default value is 10. If you specify a value greater than 100, the default value is 100.</para>
+        /// <para>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify the Settings or the Settings value is less than 10, the default value is 10. If the Settings value is greater than 100, the default value is 100. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxdds</para>

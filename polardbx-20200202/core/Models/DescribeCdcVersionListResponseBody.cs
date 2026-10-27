@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeCdcVersionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The data struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeCdcVersionListResponseBodyData Data { get; set; }
         public class DescribeCdcVersionListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the associated legacy project. You can ignore this parameter.</para>
+            /// <para>The ID of the associated legacy project. You can ignore this field.</para>
             /// </summary>
             [NameInMap("VersionList")]
             [Validation(Required=false)]

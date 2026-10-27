@@ -102,6 +102,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public int? CrossRegionDataBackupRetention { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3,7,1,5,6,2,4</para>
+        /// </summary>
         [NameInMap("CrossRegionFilterValue")]
         [Validation(Required=false)]
         public string CrossRegionFilterValue { get; set; }

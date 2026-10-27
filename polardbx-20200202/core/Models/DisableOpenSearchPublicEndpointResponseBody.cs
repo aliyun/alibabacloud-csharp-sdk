@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DisableOpenSearchPublicEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The name of the authentication principal.</para>
+            /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>The owner ID of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSupabaseApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denied details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The authentication principal name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>

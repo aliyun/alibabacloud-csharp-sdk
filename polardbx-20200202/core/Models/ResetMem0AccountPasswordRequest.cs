@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The API key.</para>
+        /// <para>apikey</para>
         /// 
         /// <b>Example:</b>
         /// <para>aafdf2e7d0988ef623***</para>

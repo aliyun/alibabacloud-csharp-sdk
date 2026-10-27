@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDBInstanceVipResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
+        /// <para>This parameter is empty if the request is successful. If the request fails, an exception message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

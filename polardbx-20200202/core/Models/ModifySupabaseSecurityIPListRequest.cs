@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifySupabaseSecurityIPListRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The whitelist group name.</para>
+        /// <para>The name of the whitelist group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -31,12 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The modification mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Cover: overwrites the existing whitelist.</description></item>
-        /// <item><description>Append: appends entries to the existing whitelist.</description></item>
-        /// <item><description>Delete: deletes entries from the existing whitelist.</description></item>
-        /// </list>
+        /// <para>The modification mode. Valid values: Cover, Append, and Delete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Append</para>
@@ -57,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IP whitelist. Separate multiple IP addresses with commas (,).</para>
+        /// <para>The IP whitelist. Separate multiple IP addresses with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

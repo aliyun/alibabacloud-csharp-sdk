@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of parameters.</para>
+        /// <para>The list of items.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTasksResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether cancellation is allowed. Valid values:</para>
+            /// <para>Indicates whether the event can be canceled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not allowed.</description></item>
-            /// <item><description><b>1</b>: allowed.</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AllowCancel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether modification is allowed. Valid values:</para>
+            /// <para>Indicates whether the time can be modified. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not allowed.</description></item>
-            /// <item><description><b>1</b>: allowed.</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// <para>The change level (can be ignored).</para>
+            /// <para>The change level. This parameter can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Risk</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ChangeLevelZh { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The impact (not output).</para>
+            /// <para>The impact. This parameter is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The result information (can be ignored).</para>
+            /// <para>The result information. This parameter can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -237,8 +237,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>3</b>: pending. </description></item>
-            /// <item><description><b>4</b>: running.</description></item>
+            /// <item><description><b>3</b>: pending </description></item>
+            /// <item><description><b>4</b>: running</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// <para>The switchover time.</para>
+            /// <para>The switchover time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The task type in English (can be ignored).</para>
+            /// <para>The task type in English. This parameter can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TaskTypeEn { get; set; }
 
             /// <summary>
-            /// <para>The task type in Chinese (can be ignored).</para>
+            /// <para>The task type in Chinese. This parameter can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23</para>

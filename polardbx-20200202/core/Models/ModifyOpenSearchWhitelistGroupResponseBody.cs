@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyOpenSearchWhitelistGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details of the access denied error.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last updated, in timestamp format.</para>
+            /// <para>The time when the task was last updated, in the UNIX timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-17T02:27:11Z</para>

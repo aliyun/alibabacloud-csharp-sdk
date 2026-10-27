@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The DPI engine version. Default value: 2.0.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2.0</para>
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
@@ -26,8 +32,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The parameter level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>compute</b>: compute layer.</description></item>
-        /// <item><description><b>storage</b>: storage layer.</description></item>
+        /// <item><description><b>compute</b>: the compute layer.</description></item>
+        /// <item><description><b>storage</b>: the storage layer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

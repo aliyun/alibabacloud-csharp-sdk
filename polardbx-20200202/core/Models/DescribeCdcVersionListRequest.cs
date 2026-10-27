@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeCdcVersionListRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-bjrl7****k2vp7</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the CDC instance. This parameter specifies the CDC instance for which to query versions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-***</para>
+        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The ID of the region where the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

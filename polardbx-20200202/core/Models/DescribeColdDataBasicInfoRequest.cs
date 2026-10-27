@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeColdDataBasicInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the PolarDB-X instance.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-htri0ori2r****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

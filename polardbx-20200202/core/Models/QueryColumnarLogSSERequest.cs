@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of result rows to return for this request. Valid values: 1 to 10000. If this parameter is not specified, no additional row limit is imposed on the SQL submitted by the caller. The server-side SSE upper limit of 10000 rows and the top-level LIMIT clause in the SQL statement still apply.</para>
+        /// <para>The maximum number of result rows to return for this request. Valid values: 1 to 10000. If this parameter is not specified, no additional row limit is applied to the SQL statement submitted by the caller. The result is still subject to the server-side SSE upper limit of 10000 rows and the top-level LIMIT clause in the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The read-only query statement to execute. Only a single MySQL SELECT statement is supported, and it must access the fully qualified polardbx_sls table. Multi-statement queries, write operations, locks, user variables, dynamic placeholders, and reserved hints are not supported.</para>
+        /// <para>The read-only query statement to execute. Only a single MySQL SELECT statement is supported. The query table must use the fully qualified form polardbx_sls.<table_name>, and only the following tables are allowed: polardbx_sls.polardbx_log (kernel logs), polardbx_sls.slow_detail_log (slow query logs), polardbx_sls.slow_trans_log (slow transaction logs), and polardbx_sls.sql_audit_log (audit logs). Multi-statement queries, write operations, locks, user variables, dynamic placeholders, and reserved hints are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>select * from device where name = \&quot;108001022203365239\&quot;</para>
+        /// <para>SELECT * FROM polardbx_sls.sql_audit_log LIMIT 100</para>
         /// </summary>
         [NameInMap("SQL")]
         [Validation(Required=false)]

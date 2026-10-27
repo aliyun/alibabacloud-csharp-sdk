@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateOpenSearchAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details of the access denied error.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no-permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The details of the returned policy.</para>
+        /// <para>The returned policy details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateOpenSearchAccountResponseBodyData Data { get; set; }
         public class CreateOpenSearchAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The account name.</para>
+            /// <para>The name of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardbx_meta_ro</para>

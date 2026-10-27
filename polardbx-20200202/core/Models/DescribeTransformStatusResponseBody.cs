@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? CanFinish { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the migration switchover can be performed. Valid values:</para>
+            /// <para>Indicates whether a migration switchover can be performed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The migration switchover can be performed.</description></item>
-            /// <item><description><b>false</b>: The migration switchover cannot be performed.</description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is used by the one-click upgrade feature of PolarDB.</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? CanSwitch { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the switchover operation can be reverted.</para>
+            /// <para>Indicates whether the switchover operation can be undone.</para>
             /// </summary>
             [NameInMap("CanUndoSwitch")]
             [Validation(Required=false)]
             public bool? CanUndoSwitch { get; set; }
 
             /// <summary>
-            /// <para>The Enterprise Edition instance name.</para>
+            /// <para>The name of the Enterprise instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-*****</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public Dictionary<string, object> ReportSummary { get; set; }
 
             /// <summary>
-            /// <para>The date when the data report was generated.</para>
+            /// <para>The generation date of the data report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-02 16:52:47.0</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? ReportTime { get; set; }
 
             /// <summary>
-            /// <para>The standard instance name.</para>
+            /// <para>The name of the standard instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-*****</para>

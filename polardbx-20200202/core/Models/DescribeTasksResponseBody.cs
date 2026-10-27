@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<DescribeTasksResponseBodyItems> Items { get; set; }
         public class DescribeTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The start time of the task, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</para>
+            /// <para>The start time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-20T19:40:00Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The database name associated with the task. This parameter is generally empty.</para>
+            /// <para>The name of the database associated with the task. This field is usually empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DBName</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</para>
+            /// <para>The end time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-20T20:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The task progress, in percentage (%).</para>
+            /// <para>The task progress, in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The detailed progress information of the task. This parameter is generally empty.</para>
+            /// <para>The detailed progress of the task. This field is usually empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ProgressInfo</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ProgressInfo { get; set; }
 
             /// <summary>
-            /// <para>The scale-out ID if the task is a scale-out task. This is a unique key in the backend.</para>
+            /// <para>The scale-out token. If the task is a scale-out task, this field returns a scale-out ID, which is a unique backend key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task action, which is the unique key for the backend task type.</para>
+            /// <para>The task action. This is a unique key for the backend task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>multi_scale_out</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

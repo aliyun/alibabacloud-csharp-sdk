@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of source IP address restrictions.</para>
+        /// <para>The list of source IP addresses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string IPs { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The remark.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000G2DJ1YGee321432</para>

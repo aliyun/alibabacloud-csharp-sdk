@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public CreateBackupResponseBodyData Data { get; set; }
         public class CreateBackupResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The ID of the backup set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>111</para>
+            /// </summary>
             [NameInMap("BackupSetId")]
             [Validation(Required=false)]
             public string BackupSetId { get; set; }
@@ -23,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>Empty if the request is successful. An error message is returned if the request fails.</para>
+        /// <para>The message. If the request is successful, this field is empty. If the request fails, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -43,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

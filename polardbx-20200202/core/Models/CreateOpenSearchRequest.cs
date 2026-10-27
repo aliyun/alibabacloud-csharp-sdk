@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateOpenSearchRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Default value: true.</para>
+        /// <para>Specifies whether to enable auto-renewal. Default value: true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled.</description></item>
-        /// <item><description><b>false</b>: disabled.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request. Use a different value for each creation request.</para>
+        /// <para>The idempotency token. Make sure that the value is unique for each creation request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestInstance</para>
+        /// <para>Test instance</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The node specifications code of PolarDBX Search data nodes. Available specifications depend on the region and sales configuration. Use a PolarDBX Search specification code that is available for purchase in the current region.</para>
+        /// <para>The code for the node specifications of the PolarDBX Search data node. The active node specifications vary by region and sales configuration. Use a PolarDBX Search node specifications code that is available for purchase in the current region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBNodeClass { get; set; }
 
         /// <summary>
-        /// <para>The PolarDBX Search DPI engine version. The value is fixed to 3.0. If this parameter is not specified, the default value 3.0 is used.</para>
+        /// <para>The database engine version of PolarDBX Search. The current fixed DPI engine version is 3.0. If this parameter is not specified, 3.0 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>A compatible parameter that does not take effect. Use DBNodeClass to specify the PolarDBX Search data node specifications.</para>
+        /// <para>A compatible parameter. This parameter does not take effect. Specify the node specifications of the PolarDBX Search data node by using DBNodeClass.</para>
         /// 
         /// <b>Example:</b>
         /// <para>opensearch.sn2ne.large.1</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// <para>The number of PolarDBX Search data nodes. The value must be a positive integer and a multiple of the number of selected zones.</para>
+        /// <para>The number of PolarDBX Search data nodes. The value must be a positive integer and an integer multiple of the number of selected zones.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? NodeCount { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance.</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PREPAY</b>: subscription.</description></item>
-        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>PREPAY</b>: subscription</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Valid values for subscription: Year and Month. Default value for pay-as-you-go: Hour.</para>
+        /// <para>The billing cycle. For subscription instances, only Year and Month are supported. For pay-as-you-go instances, the default value is Hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter can be left empty. This parameter is not supported.</para>
+        /// <para>The resource group ID. This parameter can be left empty and is not currently supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxxxx</para>
@@ -152,10 +152,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The topology type. Valid values:</para>
+        /// <para>The active topology type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1azone</b>: single active zone.</description></item>
-        /// <item><description><b>3azones</b>: three active zones.</description></item>
+        /// <item><description><b>1azone</b>: single-zone.</description></item>
+        /// <item><description><b>3azones</b>: Three-zone deployment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string TopologyType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Specify the number of months or years for prepaid instances.</para>
+        /// <para>The subscription duration. You can specify a duration in months or years for subscription instances.</para>
         /// <remarks>
         /// <para>When Period is set to Year, valid values for this parameter are 1, 2, and 3.</para>
         /// </remarks>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The second zone. This parameter is required when TopologyType is set to 3azones. The value cannot be the same as other zones.</para>
+        /// <para>The secondary zone. This parameter is required when TopologyType is set to 3azones, and the value must be different from other zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Zone2 { get; set; }
 
         /// <summary>
-        /// <para>The third zone. This parameter is required when TopologyType is set to 3azones. The value cannot be the same as other zones.</para>
+        /// <para>The third zone for Three-zone deployment. This parameter is required when TopologyType is set to 3azones, and the value must be different from other active zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-j</para>

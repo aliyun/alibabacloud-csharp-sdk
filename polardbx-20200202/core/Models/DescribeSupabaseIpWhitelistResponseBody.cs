@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSupabaseIpWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details of the access denied error.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>The type of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIORITY</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeSupabaseIpWhitelistResponseBodyDataGroupItems> GroupItems { get; set; }
             public class DescribeSupabaseIpWhitelistResponseBodyDataGroupItems : TeaModel {
                 /// <summary>
-                /// <para>The group name.</para>
+                /// <para>The name of the group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>defaultGroup</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The group tag.</para>
+                /// <para>The tag of the group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateDBResponseBody : TeaModel {
         /// <summary>
-        /// <para>Empty if the request is successful. An error message is returned if the request fails.</para>
+        /// <para>The error message. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

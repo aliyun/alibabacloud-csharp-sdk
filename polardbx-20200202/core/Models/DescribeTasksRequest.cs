@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the task.</para>
+        /// <para>The end time of the task. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the task.</para>
+        /// <para>The start time of the task. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

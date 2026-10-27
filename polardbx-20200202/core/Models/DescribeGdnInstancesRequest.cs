@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string FilterType { get; set; }
 
         /// <summary>
-        /// <para>The filter value for querying resources.</para>
-        /// <para>Used together with FilterKey.</para>
+        /// <para>The filter value used when querying resources.</para>
+        /// <para>This parameter is used in conjunction with FilterKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-<em><b>、
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string FilterValue { get; set; }
 
         /// <summary>
-        /// <para>GDN ID。</para>
+        /// <para>The GDN ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-***</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GDNId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</para>
+        /// <para>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

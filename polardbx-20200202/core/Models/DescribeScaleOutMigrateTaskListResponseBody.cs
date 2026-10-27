@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeScaleOutMigrateTaskListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The migration task progress.</para>
+        /// <para>The progress of the migration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>

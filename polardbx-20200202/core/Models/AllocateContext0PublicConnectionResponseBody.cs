@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class AllocateContext0PublicConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public AllocateContext0PublicConnectionResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class AllocateContext0PublicConnectionResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>The action that is evaluated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>The action that is evaluated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public AllocateContext0PublicConnectionResponseBodyData Data { get; set; }
         public class AllocateContext0PublicConnectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoint.</para>
+            /// <para>The connection string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test2.polarx.huhehaote.rds.aliyuncs.com</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The context service instance name.</para>
+            /// <para>The name of the context service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>context0-example</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-hzjasd****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The network type of the endpoint.</para>
+            /// <para>The network type of the connection string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? DBInstanceNetType { get; set; }
 
             /// <summary>
-            /// <para>The target node type: service or dashboard.</para>
+            /// <para>The target node type. Valid values: service and dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>The port of the endpoint.</para>
+            /// <para>The port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3300</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the Anti-DDoS Proxy instance protected by the policy.</para>
+            /// <para>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://anchashi.aliyun-inc.coM">https://anchashi.aliyun-inc.coM</a></para>

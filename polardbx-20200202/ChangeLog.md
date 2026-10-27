@@ -1,3 +1,7 @@
+2026-10-27 Version: 3.12.1
+- Update API DescribeContext0Info: add response parameters Body.Data.Instance.MinorVersion.
+
+
 2026-08-31 Version: 3.11.0
 - Support API QueryColumnarLog.
 - Support API QueryColumnarLogSSE.

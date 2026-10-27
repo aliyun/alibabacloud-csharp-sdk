@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyContext0SecurityIpsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The modification mode of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: overwrites the whitelist group.</description></item>
-        /// <item><description>1: adds a whitelist group.</description></item>
-        /// <item><description>2: deletes a whitelist group.</description></item>
+        /// <item><description>0: Overwrites the whitelist group.</description></item>
+        /// <item><description>1: Adds a whitelist group.</description></item>
+        /// <item><description>2: Deletes a whitelist group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</para>
+        /// <para>The IP addresses in the whitelist. Separate multiple IP addresses with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

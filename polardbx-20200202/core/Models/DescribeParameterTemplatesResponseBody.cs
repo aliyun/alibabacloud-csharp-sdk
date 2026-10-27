@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? ParameterCount { get; set; }
 
             /// <summary>
-            /// <para>The parameter list.</para>
+            /// <para>The list of parameters.</para>
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string CheckingCode { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the parameter is dynamic. Valid values:</para>
+                /// <para>Specifies whether the parameter is dynamic. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: No.</description></item>
-                /// <item><description><b>1</b>: Yes.</description></item>
+                /// <item><description><b>0</b>: no.</description></item>
+                /// <item><description><b>1</b>: yes.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ParameterValue { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the parameter can be modified. Valid values:</para>
+                /// <para>Specifies whether the parameter can be modified. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Cannot be modified.</description></item>
-                /// <item><description><b>1</b>: Can be modified.</description></item>
+                /// <item><description><b>0</b>: The parameter cannot be modified.</description></item>
+                /// <item><description><b>1</b>: The parameter can be modified.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? Revisable { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the parameter can be modified by the user.</para>
+                /// <para>Specifies whether the parameter can be modified by the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

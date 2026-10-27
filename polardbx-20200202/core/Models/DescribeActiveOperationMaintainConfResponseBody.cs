@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeActiveOperationMaintainConfResponseBodyConfig Config { get; set; }
         public class DescribeActiveOperationMaintainConfResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-11T10:08:27Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CycleType { get; set; }
 
             /// <summary>
-            /// <para>The O&amp;M end time.</para>
+            /// <para>The end time of the O&amp;M window. The time is displayed in UTC in the HH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>The O&amp;M start time.</para>
+            /// <para>The start time of the O&amp;M window. The time is displayed in UTC in the HH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-11T10:08:27Z</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the O&amp;M window has been configured. Valid values:</para>
+        /// <para>Specifies whether the settings are configured. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Configured.</description></item>
         /// <item><description>0: Not configured.</description></item>

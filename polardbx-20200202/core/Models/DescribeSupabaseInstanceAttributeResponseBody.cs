@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authentication principal.</para>
+            /// <para>The authentication principal type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-13 10:01:50 +0800</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The minor engine version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</para>
+            /// <para>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</para>
             /// </summary>
             [NameInMap("MinorVersion")]
             [Validation(Required=false)]

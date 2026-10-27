@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeOpenSearchInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeOpenSearchInfoResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeOpenSearchInfoResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The authentication action.</para>
+            /// <para>The authorization action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity used for authentication in the request.</para>
+            /// <para>The identity used for authorization in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The ID of the owner of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The type of access denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
-                /// <item><description><b>PREPAY</b>: subscription.</description></item>
+                /// <item><description><b>POSTPAY</b>: pay-as-you-go</description></item>
+                /// <item><description><b>PREPAY</b>: subscription</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The OpenSearch-compatible version.</para>
+                /// <para>The OpenSearch compatible version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0</para>
@@ -139,8 +139,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The deployment mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>multiple: multi-zone deployment.</description></item>
-                /// <item><description>single: single-zone deployment.</description></item>
+                /// <item><description>multiple: multi-zone deployment</description></item>
+                /// <item><description>single: single-zone deployment</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -193,9 +193,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The network type of the connection string. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Public</b>: public endpoint.</description></item>
-                /// <item><description><b>Private</b>: private endpoint.</description></item>
-                /// <item><description><b>Inner</b>: private endpoint (classic network).</description></item>
+                /// <item><description><b>Public</b>: public endpoint</description></item>
+                /// <item><description><b>Private</b>: private endpoint</description></item>
+                /// <item><description><b>Inner</b>: private endpoint (classic network)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the last task was updated (in timestamp format).</para>
+                /// <para>The last task update time in UNIX timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-02T16:01:51Z</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC) in which the access endpoint resides.</para>
+                /// <para>The ID of the virtual private cloud (VPC) where the access endpoint resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-2ze99u5upo8zxyf5dlfl5</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? CoordinatorNodeCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of CPU cores of a single coordinator node.</para>
+                /// <para>The number of CPU cores per coordinator node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -285,14 +285,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? CoordinatorNodeCpu { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether coordinator nodes are enabled.</para>
+                /// <para>Indicates whether the coordinator node is enabled.</para>
                 /// </summary>
                 [NameInMap("CoordinatorNodeEnabled")]
                 [Validation(Required=false)]
                 public bool? CoordinatorNodeEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of a single coordinator node. Unit: GB.</para>
+                /// <para>The memory size per coordinator node, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? DataNodeCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of CPU cores of a single data node.</para>
+                /// <para>The number of CPU cores per data node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? DataNodeCpu { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of a single data node. Unit: GB.</para>
+                /// <para>The memory size per data node, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -334,8 +334,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The master node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The master node is a single node.</description></item>
-                /// <item><description><b>2</b>: The master node is in Cluster Edition.</description></item>
+                /// <item><description><b>0</b>: single-node master</description></item>
+                /// <item><description><b>2</b>: cluster-edition master</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? MasterNodeCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of CPU cores of a single dedicated master node.</para>
+                /// <para>The number of CPU cores per dedicated master node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -356,14 +356,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? MasterNodeCpu { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether dedicated master nodes are enabled.</para>
+                /// <para>Indicates whether the dedicated master node is enabled.</para>
                 /// </summary>
                 [NameInMap("MasterNodeEnabled")]
                 [Validation(Required=false)]
                 public bool? MasterNodeEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of a single dedicated master node. Unit: GB.</para>
+                /// <para>The memory size per dedicated master node, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -373,9 +373,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? MasterNodeMemoryGB { get; set; }
 
                 /// <summary>
-                /// <para>The number of replica nodes in the primary zone.</para>
+                /// <para>The number of secondary nodes in the primary zone.</para>
                 /// <remarks>
-                /// <para>The <b>ReplicaCount</b> and <b>SlaveReplicaCount</b> parameters apply only to cloud-native instances. If the instance uses a cluster architecture, these parameters indicate the number of replica nodes of a <b>single shard</b> in the primary and secondary zones.</para>
+                /// <para>The <b>ReplicaCount</b> and <b>SlaveReplicaCount</b> parameters apply only to cloud-native instances. If the instance uses a cluster architecture, these parameters indicate the number of secondary nodes per shard in the primary and secondary zones.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? ReplicaCount { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of a single data node. Unit: GB.</para>
+                /// <para>The storage space per data node, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>

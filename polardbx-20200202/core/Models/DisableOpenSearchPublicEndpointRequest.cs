@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

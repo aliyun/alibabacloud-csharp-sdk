@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateSupabaseNetTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The security principal name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The owner ID of the security principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authentication principal.</para>
+            /// <para>The security principal type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The encoded diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public CreateSupabaseNetTypeResponseBodyData Data { get; set; }
         public class CreateSupabaseNetTypeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The public endpoint.</para>
+            /// <para>The public network connection endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test2.polarx.huhehaote.rds.aliyuncs.com</para>

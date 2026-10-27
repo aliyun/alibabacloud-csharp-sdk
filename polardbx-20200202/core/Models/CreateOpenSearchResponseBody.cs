@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the security principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the authentication principal belongs.</para>
+            /// <para>The Alibaba Cloud account ID of the security principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authentication principal.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>

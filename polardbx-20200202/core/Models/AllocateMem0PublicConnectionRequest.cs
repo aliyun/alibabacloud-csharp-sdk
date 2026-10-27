@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The port number.</para>
+        /// <para>The port.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

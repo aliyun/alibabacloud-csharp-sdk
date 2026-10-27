@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// <para>The backup type. Currently, only &quot;0&quot; is supported, which indicates a fast backup.</para>
+        /// <para>The backup type. Valid values: 0: quick backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

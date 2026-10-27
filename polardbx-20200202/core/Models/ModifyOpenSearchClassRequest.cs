@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyOpenSearchClassRequest : TeaModel {
         /// <summary>
-        /// <para>The target disk size per node, in GB. If not specified, the current disk size is retained.</para>
+        /// <para>The target disk size per node, in GB. If this parameter is not specified, the current disk size is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The node specifications code of the PolarDB-X Search data node. This parameter is required. Active node specifications depend on the region and sales configuration, and must differ from the current node specifications.</para>
+        /// <para>The node specifications code for PolarDBX Search data nodes. This parameter is required. The active node specifications depend on the region and sales configuration, and must differ from the current node specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>opensearch.sn2ne.large.1</para>

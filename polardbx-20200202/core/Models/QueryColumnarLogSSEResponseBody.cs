@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>As described above.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:QueryColumnarLogSSE</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>NoPermissionType</para>
+            /// <para>The type of the permission denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned only when Type is EOF. Indicates whether the service or API row limit truncated the SQL submitted by the caller. A value of false when the SQL statement has a smaller LIMIT that was fully executed does not indicate that no more data exists in the underlying table.</para>
+        /// <para>Returned only when Type is EOF. Indicates whether the service or API row limit truncated the SQL statement submitted by the caller. A value of false when the SQL statement completes with a smaller LIMIT does not indicate that no more data exists in the underlying table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether at least one RECORD event was sent before the ERROR occurred. A value of true indicates that the results already received by the caller are incomplete and must not be treated as complete query results.</para>
+        /// <para>Indicates whether at least one RECORD event was sent before the ERROR occurred. A value of true indicates that the results already received by the caller are incomplete and should not be treated as complete query results.</para>
         /// </summary>
         [NameInMap("Partial")]
         [Validation(Required=false)]
         public bool? Partial { get; set; }
 
         /// <summary>
-        /// <para>Returned only when Type is EOF. The elapsed time from the start of JDBC statement execution to the completion of reading the last result row or probe row. Unit: milliseconds.</para>
+        /// <para>Returned only when Type is EOF. The elapsed time in milliseconds from the start of JDBC statement execution to the completion of reading the last result row or probe row.</para>
         /// 
         /// <b>Example:</b>
         /// <para>125</para>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string QueryId { get; set; }
 
         /// <summary>
-        /// <para>Returned only when Type is RECORD. A batch of query results carried by this event. Each row is a JSON key-value object that maps column names to text values. SQL NULL values are encoded as the string null.</para>
+        /// <para>Returned only when Type is RECORD. A batch of query results carried by this event. Each row is a JSON key-value object that maps column names to text values. SQL NULL is encoded as the string null.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> Records { get; set; }
 
         /// <summary>
-        /// <para>Returned only when Type is EOF. The sum of UTF-8 bytes of the JSON objects for all returned rows. This value does not include arrays, SSE frames, or fixed response fields.</para>
+        /// <para>Returned only when Type is EOF. The total UTF-8 byte size of all returned row JSON objects. This value does not include arrays, SSE frames, or fixed response fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8192</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The SSE event type. RECORD indicates a batch of query results. EOF indicates that the query has completed. ERROR indicates that the query ended abnormally.</para>
+        /// <para>The SSE event type. RECORD carries a batch of query results. EOF indicates that the query has completed. ERROR indicates that the query ended with an exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RECORD</para>

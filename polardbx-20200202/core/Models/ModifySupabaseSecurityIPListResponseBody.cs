@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifySupabaseSecurityIPListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details of the access denied error.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The type of the no permission error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public ModifySupabaseSecurityIPListResponseBodyData Data { get; set; }
         public class ModifySupabaseSecurityIPListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxsp-*********</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The whitelist group name.</para>
+            /// <para>The name of the whitelist group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>special</para>

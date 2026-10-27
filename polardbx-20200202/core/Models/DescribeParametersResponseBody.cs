@@ -55,6 +55,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             }
 
+            /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pxc-********</para>
+            /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:QueryColumnarLog</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The top-level SQL LIMIT offset that the service actually applied. The value is 0 if no offset is specified in the SQL statement.</para>
+        /// <para>The top-level SQL LIMIT offset that the service actually applied. The value is 0 if the SQL statement does not specify an offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The elapsed time from the start of the JDBC statement execution to the completion of reading the last returned row or probe row. Unit: milliseconds.</para>
+        /// <para>The elapsed time from the start of the JDBC statement execution to the completion of reading the last result row or probe row. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>125</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string QueryId { get; set; }
 
         /// <summary>
-        /// <para>The list of query results. Each row is a JSON key-value object that maps column names to text values. All scalar values are returned as strings. SQL NULL is encoded as the string null, and empty strings remain as empty strings.</para>
+        /// <para>The list of query results. Each row is a JSON key-value object that maps column names to text values. All scalars are returned as strings. SQL NULL is encoded as the string null, and empty strings remain as empty strings.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of result rows actually returned in this synchronous response.</para>
+        /// <para>The actual number of result rows returned in this synchronous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

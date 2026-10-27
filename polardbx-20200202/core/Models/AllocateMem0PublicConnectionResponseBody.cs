@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class AllocateMem0PublicConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public AllocateMem0PublicConnectionResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class AllocateMem0PublicConnectionResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>As described above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>As described above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>As described above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
