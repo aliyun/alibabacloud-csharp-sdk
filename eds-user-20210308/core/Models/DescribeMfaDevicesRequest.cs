@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeMfaDevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The AD domain name.</para>
+        /// <para>The address of the AD office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn.misumi.pri</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AdDomain { get; set; }
 
         /// <summary>
-        /// <para>The business channel.</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>An array of end user usernames.</para>
+        /// <para>The list of usernames of the convenience accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -39,12 +39,18 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
+        /// <summary>
+        /// <para>Filters the virtual MFA devices by convenience account username.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page. Valid range: 1–500.<br>Default value: 100.<br></para>
+        /// <para>The maximum number of results to return. Valid values: 1 to 500. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. This value is the <c>NextToken</c> returned from a previous call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>An array of serial numbers for virtual MFA devices.</para>
+        /// <para>The list of serial numbers of the virtual MFA devices.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2d9ae94-a64b-4a0d-8024-9519ca50****</para>

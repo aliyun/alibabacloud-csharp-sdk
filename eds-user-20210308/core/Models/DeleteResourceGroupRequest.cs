@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DeleteResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to delete.</para>
         /// <remarks>
-        /// <para> The ID of the resource group that you want to delete.</para>
+        /// <para>If the <c>ResourceGroupIds</c> parameter is not empty, both parameters take effect.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you also specify ResourceGroupIds, both parameters take effect.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aj01tck67a0szp***</para>
@@ -35,12 +33,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The list of IDs of the resource groups to delete.</para>
         /// <remarks>
-        /// <para> The IDs of the resource groups that you want to delete.</para>
+        /// <para>If the <c>ResourceGroupIds</c> parameter is not empty, both parameters take effect.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you also specify ResourceGroupId, both parameters take effect.</description></item>
-        /// </list>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]

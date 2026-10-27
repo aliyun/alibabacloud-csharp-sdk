@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
     public class DescribeGroupUserResponseBody : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para> This field is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This field is deprecated.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Groups")]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<DescribeGroupUserResponseBodyGroups> Groups { get; set; }
         public class DescribeGroupUserResponseBodyGroups : TeaModel {
             /// <summary>
-            /// <para>The user group ID.</para>
+            /// <para>The ID of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ug-91mvbosdjsdfh****</para>
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>开发组</para>
+            /// <para>Development team</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The number of members in the user group.</para>
+            /// <para>The number of members.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, all results have been queried.</para>
+        /// <para>The token for the next query. If NextToken is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AA8D67CB-345D-5CDA-986E-FFAC7D0****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The members.</para>
+        /// <para>The list of members.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public class DescribeGroupUserResponseBodyUsers : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para> This field is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This field is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This field is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This field is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The user name.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alex****</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the user was added to the user group.</para>
+            /// <para>The time when the member was added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-26T02:59:22.000+00:00</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This field is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This field is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string NickName { get; set; }
 
             /// <summary>
-            /// <para>The mobile number.</para>
+            /// <para>The mobile phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>138****1111</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the user.</para>
+            /// <para>The remarks of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remark</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the new user group.</para>
+        /// <para>The new name of the user group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>开发组</para>
+        /// <para>Development group</para>
         /// </summary>
         [NameInMap("NewGroupName")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ChangeUserPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The new password for the user.</para>
+        /// <para>The new password for the user. The password must meet the password length and character type policies of the current enterprise. If no policy is configured, the password must be at least 10 characters in length and contain uppercase letters, lowercase letters, and digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Admin@12***</para>

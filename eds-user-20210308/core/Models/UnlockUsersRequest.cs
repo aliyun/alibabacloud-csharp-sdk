@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UnlockUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which the convenience users are automatically locked.</para>
+        /// <para>The date when the convenience user is automatically locked. The format is YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-03-03</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AutoLockTime { get; set; }
 
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The usernames of the convenience users that you want to unlock.</para>
+        /// <para>The list of usernames of the convenience users to unlock.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

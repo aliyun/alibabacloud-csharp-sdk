@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ListPropertyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that is used for the next query. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token used to start the next query. An empty NextToken indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the properties.</para>
+        /// <para>The property information.</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public List<ListPropertyResponseBodyProperties> Properties { get; set; }
         public class ListPropertyResponseBodyProperties : TeaModel {
             /// <summary>
-            /// <para>The ID of the property.</para>
+            /// <para>The property ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? PropertyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the property.</para>
+            /// <para>The property name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>department</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyKey { get; set; }
 
             /// <summary>
-            /// <para>Details about the property values.</para>
+            /// <para>The property value information.</para>
             /// </summary>
             [NameInMap("PropertyValues")]
             [Validation(Required=false)]
             public List<ListPropertyResponseBodyPropertiesPropertyValues> PropertyValues { get; set; }
             public class ListPropertyResponseBodyPropertiesPropertyValues : TeaModel {
                 /// <summary>
-                /// <para>The value of the property.</para>
+                /// <para>The property value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>A</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string PropertyValue { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the property value.</para>
+                /// <para>The property value ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>42</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The usernames (<c>EndUserId</c>) to exclude by exact match.</para>
+        /// <para>The list of usernames (EndUserIds) to exclude by exact match.</para>
         /// </summary>
         [NameInMap("ExcludeEndUserIds")]
         [Validation(Required=false)]
         public List<string> ExcludeEndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The string for a fuzzy search on the username (<c>EndUserId</c>) and email address (<c>Email</c>). The wildcard character (<c>*</c>) is supported. For example, if you set this parameter to <c>a*m</c>, the query returns all results where the username or email address starts with <c>a</c> and ends with <c>m</c>.</para>
+        /// <para>The fuzzy search string. This parameter supports matching the username (EndUserId) and email address (Email). Wildcards (<em>) are supported. For example, if you set this parameter to a</em>m, all results where the username or email address starts with a and ends with m are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a*m</para>
@@ -36,12 +36,15 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// <para>The fuzzy match condition mapping for user information. This parameter supports fields such as the username, remarks, phone number, email address, nickname, and employee ID.</para>
+        /// </summary>
         [NameInMap("FilterMap")]
         [Validation(Required=false)]
         public string FilterMapShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the number of cloud desktops that are assigned to the user.</para>
+        /// <para>Specifies whether to return the number of cloud computers assigned to the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public bool? IncludeDesktopCount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the number of desktop groups that are assigned to the user.</para>
+        /// <para>Specifies whether to return the number of cloud computer pools assigned to the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -60,19 +63,22 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public bool? IncludeDesktopGroupCount { get; set; }
 
+        /// <summary>
+        /// <para>The list of convenience account usernames to include in the query results.</para>
+        /// </summary>
         [NameInMap("IncludeEndUserIds")]
         [Validation(Required=false)]
         public List<string> IncludeEndUserIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include organization information in the response.</para>
+        /// <para>Specifies whether to include organization information.</para>
         /// </summary>
         [NameInMap("IncludeOrgInfo")]
         [Validation(Required=false)]
         public bool? IncludeOrgInfo { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the supported logon types in the response.</para>
+        /// <para>Specifies whether to include the supported logon types.</para>
         /// </summary>
         [NameInMap("IncludeSupportIdps")]
         [Validation(Required=false)]
@@ -86,7 +92,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public bool? IsQueryAllSubOrgs { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. If you specify a value greater than 100, the system automatically sets this parameter to 100.</para>
+        /// <para>The number of entries per page in a paged query. If the value exceeds 100, it is automatically reset to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If the number of results exceeds the value of the <c>MaxResults</c> parameter, a <c>NextToken</c> is returned. You can use the <c>NextToken</c> to query the next page of results.</para>
+        /// <para>The token for the next query. You do not need to specify this parameter when you call this operation for the first time. If the response does not contain all results, a non-empty NextToken is returned. You can use the returned NextToken in subsequent queries to obtain the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -106,14 +112,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sorting parameters.</para>
+        /// <para>The supported sorting parameters.</para>
         /// </summary>
         [NameInMap("OrderParam")]
         [Validation(Required=false)]
         public string OrderParamShrink { get; set; }
 
         /// <summary>
-        /// <para>The organization ID.</para>
+        /// <para>The ID of the enterprise organization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>org-aliyun-wy-org-id</para>
@@ -133,14 +139,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string OwnerType { get; set; }
 
         /// <summary>
-        /// <para>The user properties for a fuzzy search.</para>
+        /// <para>The list of user attributes for fuzzy queries.</para>
         /// </summary>
         [NameInMap("PropertyFilterParam")]
         [Validation(Required=false)]
         public List<FilterUsersShrinkRequestPropertyFilterParam> PropertyFilterParam { get; set; }
         public class FilterUsersShrinkRequestPropertyFilterParam : TeaModel {
             /// <summary>
-            /// <para>The property ID.</para>
+            /// <para>The ID of the attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>328</para>
@@ -150,7 +156,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? PropertyId { get; set; }
 
             /// <summary>
-            /// <para>The property value ID.</para>
+            /// <para>The IDs of the attribute values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1255</para>
@@ -162,14 +168,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The information about property keys and property values.</para>
+        /// <para>The list of attribute names and attribute values.</para>
         /// </summary>
         [NameInMap("PropertyKeyValueFilterParam")]
         [Validation(Required=false)]
         public List<FilterUsersShrinkRequestPropertyKeyValueFilterParam> PropertyKeyValueFilterParam { get; set; }
         public class FilterUsersShrinkRequestPropertyKeyValueFilterParam : TeaModel {
             /// <summary>
-            /// <para>The property key.</para>
+            /// <para>The name of the attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job</para>
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyKey { get; set; }
 
             /// <summary>
-            /// <para>The property value.</para>
+            /// <para>The values of the attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -190,12 +196,15 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         }
 
+        /// <summary>
+        /// <para>The switch mapping for additional response information. This parameter controls whether to include desktop policy information.</para>
+        /// </summary>
         [NameInMap("ShowExtras")]
         [Validation(Required=false)]
         public Dictionary<string, string> ShowExtras { get; set; }
 
         /// <summary>
-        /// <para>The user status by which to filter the results.</para>
+        /// <para>The user status used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

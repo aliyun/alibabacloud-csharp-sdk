@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class LockUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the LockUsers operation.</para>
+        /// <para>The result of the lock operation for the convenience accounts.</para>
         /// </summary>
         [NameInMap("LockUsersResult")]
         [Validation(Required=false)]
         public LockUsersResponseBodyLockUsersResult LockUsersResult { get; set; }
         public class LockUsersResponseBodyLockUsersResult : TeaModel {
             /// <summary>
-            /// <para>A list of convenience accounts that failed to lock.</para>
+            /// <para>The list of convenience accounts that failed to be locked.</para>
             /// </summary>
             [NameInMap("FailedUsers")]
             [Validation(Required=false)]
             public List<LockUsersResponseBodyLockUsersResultFailedUsers> FailedUsers { get; set; }
             public class LockUsersResponseBodyLockUsersResultFailedUsers : TeaModel {
                 /// <summary>
-                /// <para>The username of the convenience account that failed to lock.</para>
+                /// <para>The convenience account that failed to be locked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alice</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>A list of successfully locked convenience accounts.</para>
+            /// <para>The list of convenience accounts that are successfully locked.</para>
             /// </summary>
             [NameInMap("LockedUsers")]
             [Validation(Required=false)]

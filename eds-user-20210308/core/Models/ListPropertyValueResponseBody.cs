@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ListPropertyValueResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about property values.</para>
+        /// <para>The list of property values.</para>
         /// </summary>
         [NameInMap("PropertyValueInfos")]
         [Validation(Required=false)]
         public List<ListPropertyValueResponseBodyPropertyValueInfos> PropertyValueInfos { get; set; }
         public class ListPropertyValueResponseBodyPropertyValueInfos : TeaModel {
             /// <summary>
-            /// <para>The value of the property.</para>
+            /// <para>The property value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HR</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyValue { get; set; }
 
             /// <summary>
-            /// <para>The ID of the property value.</para>
+            /// <para>The property value ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>978</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C52013A5-3422-5D1F-B22C-A57110972AD9</para>

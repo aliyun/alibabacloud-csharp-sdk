@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class SetUserPropertyValueRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</para>
+        /// <para>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? PropertyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the property value. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the ID of the property value.</para>
+        /// <para>The property value ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? PropertyValueId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the convenience user. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to query the user ID.</para>
+        /// <para>The user ID. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to obtain this parameter, which corresponds to the value of the <c>Id</c> response parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? UserId { get; set; }
 
         /// <summary>
-        /// <para>The username of the convenience user.</para>
+        /// <para>The username. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to obtain this parameter, which corresponds to the value of the <c>EndUserId</c> response parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

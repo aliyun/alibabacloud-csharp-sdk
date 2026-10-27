@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class GetUsersCountRequest : TeaModel {
         /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -18,6 +22,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>The business channel type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -26,6 +32,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para>This parameter is currently not available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>co-0esnf80jab***</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CheckUsedPropertyValueRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query property ID.</para>
+        /// <para>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? PropertyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the property value. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the ID of the property value.</para>
+        /// <para>The property value ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to obtain this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

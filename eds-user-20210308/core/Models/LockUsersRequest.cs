@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class LockUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The channel.</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to log off the current session of the convenience account when the account is locked.</para>
+        /// </summary>
         [NameInMap("LogoutSession")]
         [Validation(Required=false)]
         public bool? LogoutSession { get; set; }

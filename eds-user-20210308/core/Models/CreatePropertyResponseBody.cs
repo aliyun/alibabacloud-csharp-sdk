@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreatePropertyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of creating the property.</para>
+        /// <para>The creation result.</para>
         /// </summary>
         [NameInMap("CreateResult")]
         [Validation(Required=false)]
         public CreatePropertyResponseBodyCreateResult CreateResult { get; set; }
         public class CreatePropertyResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the property.</para>
+            /// <para>The property ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>390</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? PropertyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the property.</para>
+            /// <para>The property key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>department</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyKey { get; set; }
 
             /// <summary>
-            /// <para>The result of creating the property value.</para>
+            /// <para>The property value creation result.</para>
             /// </summary>
             [NameInMap("SavePropertyValueModel")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the property value.</para>
+                    /// <para>The property value ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>390</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public long? PropertyId { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the property.</para>
+                    /// <para>The property value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HR</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 }
 
                 /// <summary>
-                /// <para>Details of the property values that were created.</para>
+                /// <para>The successfully created property values.</para>
                 /// </summary>
                 [NameInMap("SavePropertyValues")]
                 [Validation(Required=false)]
                 public List<CreatePropertyResponseBodyCreateResultSavePropertyValueModelSavePropertyValues> SavePropertyValues { get; set; }
                 public class CreatePropertyResponseBodyCreateResultSavePropertyValueModelSavePropertyValues : TeaModel {
                     /// <summary>
-                    /// <para>The value of the property.</para>
+                    /// <para>The property value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HR</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public string PropertyValue { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the property value.</para>
+                    /// <para>The property value ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>978</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgByLayerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The organizations.</para>
+        /// <para>The list of organization information.</para>
         /// </summary>
         [NameInMap("Orgs")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <para>The name of the organization.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>开发部</para>
+            /// <para>Development Department</para>
             /// </summary>
             [NameInMap("OrgName")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

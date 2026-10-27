@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgByLayerRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The name of the organization.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>产品部</para>
+        /// <para>Product Department</para>
         /// </summary>
         [NameInMap("OrgName")]
         [Validation(Required=false)]

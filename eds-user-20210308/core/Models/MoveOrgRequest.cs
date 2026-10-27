@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class MoveOrgRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent organization.</para>
+        /// <para>The ID of the target parent organization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NewParentOrgId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the organization that you want to move.</para>
+        /// <para>The ID of the organization to be moved.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

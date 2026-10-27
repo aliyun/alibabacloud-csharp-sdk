@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateUsersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether all convenience accounts are created.</para>
+        /// </summary>
         [NameInMap("AllSucceed")]
         [Validation(Required=false)]
         public bool? AllSucceed { get; set; }
 
         /// <summary>
-        /// <para>The result of creating convenience accounts.</para>
+        /// <para>The result of the convenience account creation operation.</para>
         /// </summary>
         [NameInMap("CreateResult")]
         [Validation(Required=false)]
         public CreateUsersResponseBodyCreateResult CreateResult { get; set; }
         public class CreateUsersResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>The convenience accounts that were successfully created.</para>
+            /// <para>The information about the convenience accounts that are created.</para>
             /// </summary>
             [NameInMap("CreatedUsers")]
             [Validation(Required=false)]
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>The user name.</para>
+                /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test1</para>
@@ -58,7 +61,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string Phone { get; set; }
 
                 /// <summary>
-                /// <para>The display name.</para>
+                /// <para>The display name of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Bean</para>
@@ -68,7 +71,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string RealNickName { get; set; }
 
                 /// <summary>
-                /// <para>The user\&quot;s remark.</para>
+                /// <para>The user remarks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>remark1</para>
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The convenience accounts that failed to be created.</para>
+            /// <para>The information about the convenience accounts that failed to be created.</para>
             /// </summary>
             [NameInMap("FailedUsers")]
             [Validation(Required=false)]
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>The user name.</para>
+                /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test2</para>

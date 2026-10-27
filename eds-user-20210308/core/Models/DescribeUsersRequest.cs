@@ -31,18 +31,24 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames (EndUserId) to exclude exactly.</para>
+        /// <para>The list of usernames (EndUserId) to be exactly excluded.</para>
         /// </summary>
         [NameInMap("ExcludeEndUserIds")]
         [Validation(Required=false)]
         public List<string> ExcludeEndUserIds { get; set; }
 
+        /// <summary>
+        /// <para>Excludes convenience users that belong to the specified user group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ug-12341234****</para>
+        /// </summary>
         [NameInMap("ExcludeGroupId")]
         [Validation(Required=false)]
         public string ExcludeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy search string that supports matching by username (EndUserId) and email (Email). This field supports wildcards (*). For example, if you set this field to <c>a*m</c>, all results whose username or email starts with <c>a</c> and ends with <c>m</c> are returned.</para>
+        /// <para>The fuzzy search string. This parameter supports matching usernames (EndUserId) and email addresses (Email). This field supports wildcards (*). For example, if you set this field to <c>a*m</c>, all results where the username or email address starts with <c>a</c> and ends with <c>m</c> are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a*m</para>
@@ -51,23 +57,29 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// <para>The mapping of fuzzy match conditions for user information. This parameter supports usernames, nicknames, mobile phone numbers, email addresses, remarks, and employee IDs.</para>
+        /// </summary>
         [NameInMap("FilterMap")]
         [Validation(Required=false)]
         public Dictionary<string, string> FilterMap { get; set; }
 
+        /// <summary>
+        /// <para>Filters users based on the allocation relationship of specified resources. The mapping key is the resource type.</para>
+        /// </summary>
         [NameInMap("FilterWithAssignedResource")]
         [Validation(Required=false)]
         public Dictionary<string, string> FilterWithAssignedResource { get; set; }
 
         /// <summary>
-        /// <para>Filters users based on whether cloud resources are assigned.</para>
+        /// <para>Filters users based on whether cloud resources are allocated.</para>
         /// </summary>
         [NameInMap("FilterWithAssignedResources")]
         [Validation(Required=false)]
         public Dictionary<string, bool?> FilterWithAssignedResources { get; set; }
 
         /// <summary>
-        /// <para>Performs an exact match by user group ID and queries the list of accounts that belong to the specified user group.</para>
+        /// <para>The user group ID for exact match. Queries the list of accounts that belong to the specified user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ug-12341234****</para>
@@ -87,9 +99,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public bool? IsQueryAllSubOrgs { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.  </para>
+        /// <para>The number of entries to return on each page in a paging query.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 500.  </description></item>
+        /// <item><description>Valid values: 1 to 500.</description></item>
         /// <item><description>Default value: 200.</description></item>
         /// </list>
         /// 
@@ -101,7 +113,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. You do not need to set this parameter for the first request. If not all results are returned in a single query, a non-empty NextToken is returned. You can pass the returned NextToken in subsequent requests to continue the query.</para>
+        /// <para>The token for the next query. You do not need to specify this parameter for the first call.<br>If the results returned in a single call do not include all entries, a non-empty NextToken is returned. You can use the returned NextToken in subsequent calls to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -111,7 +123,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Performs an exact match by organization ID and queries the list of accounts that belong to the specified organization.</para>
+        /// <para>The organization ID for exact match. Queries the list of accounts that belong to the specified organization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>org-4mdgc1cocc59z****</para>
@@ -121,7 +133,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string OrgId { get; set; }
 
         /// <summary>
-        /// <para>Queries extended user information.</para>
+        /// <para>The extended information of users to query.</para>
         /// </summary>
         [NameInMap("ShowExtras")]
         [Validation(Required=false)]
@@ -133,6 +145,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <para>The status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

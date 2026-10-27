@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
     public class DescribeGroupUserRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not available for public use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy search string that matches the username (EndUserId) and email address (Email) of the regular user.</para>
+        /// <para>The fuzzy search string. This parameter supports matching the username (EndUserId) and email address (Email).</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries to return per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. You can obtain this parameter from the response parameters of the last call to this operation.</para>
+        /// <para>The token for the next query. You can obtain the token from the response parameters of the previous call to this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK****</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not available for public use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

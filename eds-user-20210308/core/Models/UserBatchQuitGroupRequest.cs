@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UserBatchQuitGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The user IDs.</para>
+        /// <para>The list of user IDs.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]

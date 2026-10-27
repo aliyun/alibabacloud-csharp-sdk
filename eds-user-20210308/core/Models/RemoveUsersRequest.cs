@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveUsersRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
+        [NameInMap("UnbindDesktops")]
+        [Validation(Required=false)]
+        public bool? UnbindDesktops { get; set; }
+
         /// <summary>
-        /// <para>The usernames of the convenience users that you want to remove.</para>
+        /// <para>The usernames of the convenience users to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

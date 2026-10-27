@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The channel.</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
+        /// <summary>
+        /// <para>The list of organization IDs to query.</para>
+        /// </summary>
         [NameInMap("IncludeOrgIds")]
         [Validation(Required=false)]
         public List<string> IncludeOrgIds { get; set; }
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public bool? IsQueryAllSubOrgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return. Valid values: 1 to 100.<br>Default value: 100.</para>
+        /// <para>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</para>
+        /// <para>The pagination token. Set the value to the NextToken parameter returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK****</para>
@@ -51,17 +54,17 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The organization name.</para>
+        /// <para>The name of the organization.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProductDepartment</para>
+        /// <para>Product Department</para>
         /// </summary>
         [NameInMap("OrgName")]
         [Validation(Required=false)]
         public string OrgName { get; set; }
 
         /// <summary>
-        /// <para>The parent organization ID.</para>
+        /// <para>The ID of the parent organization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>org-11fs****</para>
@@ -70,6 +73,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string ParentOrgId { get; set; }
 
+        /// <summary>
+        /// <para>The switch mapping for additional response information. This parameter controls whether to return organization paths and resource policy information.</para>
+        /// </summary>
         [NameInMap("ShowExtras")]
         [Validation(Required=false)]
         public string ShowExtrasShrink { get; set; }

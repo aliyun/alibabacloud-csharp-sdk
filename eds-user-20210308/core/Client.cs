@@ -39,12 +39,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove local administrator permissions on a cloud computer for a convenience account.</para>
+        /// <para>Grants or revokes local administrator permissions on a cloud desktop for a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</para>
+        /// <para>A convenience account with local administrator permissions can install software or modify specific system settings on the cloud desktop.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -94,12 +94,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove local administrator permissions on a cloud computer for a convenience account.</para>
+        /// <para>Grants or revokes local administrator permissions on a cloud desktop for a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</para>
+        /// <para>A convenience account with local administrator permissions can install software or modify specific system settings on the cloud desktop.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -149,12 +149,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove local administrator permissions on a cloud computer for a convenience account.</para>
+        /// <para>Grants or revokes local administrator permissions on a cloud desktop for a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</para>
+        /// <para>A convenience account with local administrator permissions can install software or modify specific system settings on the cloud desktop.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -172,12 +172,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove local administrator permissions on a cloud computer for a convenience account.</para>
+        /// <para>Grants or revokes local administrator permissions on a cloud desktop for a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</para>
+        /// <para>A convenience account with local administrator permissions can install software or modify specific system settings on the cloud desktop.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the administrator activates the mode, you can use this API to modify the user logon password.</para>
+        /// <para>Modifies the logon password of a user in administrator activation mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the administrator activates the mode, you can use this API to modify the user logon password.</para>
+        /// <para>Modifies the logon password of a user in administrator activation mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the administrator activates the mode, you can use this API to modify the user logon password.</para>
+        /// <para>Modifies the logon password of a user in administrator activation mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the administrator activates the mode, you can use this API to modify the user logon password.</para>
+        /// <para>Modifies the logon password of a user in administrator activation mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom property.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom property.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom property.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom property.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom attribute value.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom attribute value.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom attribute value.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -577,7 +577,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of convenience accounts associated with a specified custom attribute value.</para>
+        /// <para>Queries the number of convenience accounts associated with a specified custom property value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -595,7 +595,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -657,7 +657,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -719,7 +719,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -737,7 +737,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -755,7 +755,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an organization.</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -805,7 +805,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an organization.</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -855,7 +855,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an organization.</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -873,7 +873,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an organization.</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -891,14 +891,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user attribute.</para>
+        /// <para>Creates a user property.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </description></item>
-        /// <item><description>You can add up to 50 different attribute values to a single property.</description></item>
+        /// <item><description>You can create up to 10 different properties under an Alibaba Cloud account. Each property includes a property key (PropertyKey) and multiple property values (PropertyValue).</description></item>
+        /// <item><description>You can add up to 50 different property values to a single property.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -949,14 +949,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user attribute.</para>
+        /// <para>Creates a user property.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </description></item>
-        /// <item><description>You can add up to 50 different attribute values to a single property.</description></item>
+        /// <item><description>You can create up to 10 different properties under an Alibaba Cloud account. Each property includes a property key (PropertyKey) and multiple property values (PropertyValue).</description></item>
+        /// <item><description>You can add up to 50 different property values to a single property.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1007,14 +1007,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user attribute.</para>
+        /// <para>Creates a user property.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </description></item>
-        /// <item><description>You can add up to 50 different attribute values to a single property.</description></item>
+        /// <item><description>You can create up to 10 different properties under an Alibaba Cloud account. Each property includes a property key (PropertyKey) and multiple property values (PropertyValue).</description></item>
+        /// <item><description>You can add up to 50 different property values to a single property.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1033,14 +1033,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user attribute.</para>
+        /// <para>Creates a user property.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </description></item>
-        /// <item><description>You can add up to 50 different attribute values to a single property.</description></item>
+        /// <item><description>You can create up to 10 different properties under an Alibaba Cloud account. Each property includes a property key (PropertyKey) and multiple property values (PropertyValue).</description></item>
+        /// <item><description>You can add up to 50 different property values to a single property.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1099,6 +1099,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceClassification))
             {
                 query["ResourceClassification"] = request.ResourceClassification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupDescription))
+            {
+                query["ResourceGroupDescription"] = request.ResourceGroupDescription;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
             {
@@ -1166,6 +1170,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["ResourceClassification"] = request.ResourceClassification;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupDescription))
+            {
+                query["ResourceGroupDescription"] = request.ResourceGroupDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
             {
                 query["ResourceGroupName"] = request.ResourceGroupName;
@@ -1227,15 +1235,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Easily create accounts for your end users.</para>
+        /// <para>Creates a convenience account for an end user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
-        /// &lt;props=&quot;intl&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username, email address, and phone number. The username is required, and you must specify at least one of the email address and phone number.
+        /// &lt;props=&quot;intl&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username and email address, both of which are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1299,15 +1305,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Easily create accounts for your end users.</para>
+        /// <para>Creates a convenience account for an end user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
-        /// &lt;props=&quot;intl&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username, email address, and phone number. The username is required, and you must specify at least one of the email address and phone number.
+        /// &lt;props=&quot;intl&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username and email address, both of which are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1371,15 +1375,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Easily create accounts for your end users.</para>
+        /// <para>Creates a convenience account for an end user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
-        /// &lt;props=&quot;intl&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username, email address, and phone number. The username is required, and you must specify at least one of the email address and phone number.
+        /// &lt;props=&quot;intl&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username and email address, both of which are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1397,15 +1399,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Easily create accounts for your end users.</para>
+        /// <para>Creates a convenience account for an end user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
-        /// &lt;props=&quot;intl&quot;&gt;
-        /// A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username, email address, and phone number. The username is required, and you must specify at least one of the email address and phone number.
+        /// &lt;props=&quot;intl&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username and email address, both of which are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1423,7 +1423,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource group.</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1473,7 +1473,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource group.</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1523,7 +1523,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource group.</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1541,7 +1541,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource group.</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1559,7 +1559,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach a user from a user attribute.</para>
+        /// <para>Dissociates a user from a user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1613,7 +1613,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach a user from a user attribute.</para>
+        /// <para>Dissociates a user from a user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1667,7 +1667,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach a user from a user attribute.</para>
+        /// <para>Dissociates a user from a user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1685,7 +1685,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach a user from a user attribute.</para>
+        /// <para>Dissociates a user from a user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1703,7 +1703,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query group members.</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1769,7 +1769,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query group members.</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1835,7 +1835,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query group members.</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1853,7 +1853,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query group members.</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2071,7 +2071,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists virtual MFA devices bound to directory accounts.</para>
+        /// <para>Queries the virtual MFA devices bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2137,7 +2137,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists virtual MFA devices bound to directory accounts.</para>
+        /// <para>Queries the virtual MFA devices bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2203,7 +2203,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists virtual MFA devices bound to directory accounts.</para>
+        /// <para>Queries the virtual MFA devices bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2221,7 +2221,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists virtual MFA devices bound to directory accounts.</para>
+        /// <para>Queries the virtual MFA devices bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2239,7 +2239,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find subordinate organizations.</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2289,7 +2289,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find subordinate organizations.</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2339,7 +2339,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find subordinate organizations.</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2357,7 +2357,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find subordinate organizations.</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2380,7 +2380,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations use a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2461,7 +2461,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations use a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2542,7 +2542,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations use a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2565,7 +2565,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations use a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2775,7 +2775,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user basic information</para>
+        /// <para>Queries the basic information of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2825,7 +2825,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user basic information</para>
+        /// <para>Queries the basic information of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2875,7 +2875,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user basic information</para>
+        /// <para>Queries the basic information of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2893,7 +2893,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user basic information</para>
+        /// <para>Queries the basic information of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2911,7 +2911,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
+        /// <para>Queries the information of convenience users, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3037,7 +3037,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
+        /// <para>Queries the information of convenience users, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3163,7 +3163,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
+        /// <para>Queries the information of convenience users, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3181,7 +3181,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
+        /// <para>Queries the information of convenience users, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3199,7 +3199,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filter account information by user attribute.</para>
+        /// <para>Queries convenience account information by filtering based on user property.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3323,7 +3323,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filter account information by user attribute.</para>
+        /// <para>Queries convenience account information by filtering based on user property.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3447,7 +3447,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filter account information by user attribute.</para>
+        /// <para>Queries convenience account information by filtering based on user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3465,7 +3465,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filter account information by user attribute.</para>
+        /// <para>Queries convenience account information by filtering based on user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3483,14 +3483,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the number of Active Directory (AD) users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3543,14 +3543,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the number of Active Directory (AD) users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3603,14 +3603,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the number of Active Directory (AD) users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3629,14 +3629,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the number of Active Directory (AD) users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3655,7 +3655,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// <para>Retrieves the information about the currently logged-on administrator based on the authorization code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3697,7 +3697,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// <para>Retrieves the information about the currently logged-on administrator based on the authorization code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3739,7 +3739,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// <para>Retrieves the information about the currently logged-on administrator based on the authorization code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3757,7 +3757,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
+        /// <para>Retrieves the information about the currently logged-on administrator based on the authorization code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3775,14 +3775,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the total number of Wuying convenience users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3835,14 +3835,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the total number of Wuying convenience users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3895,14 +3895,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the total number of Wuying convenience users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3921,14 +3921,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数量</para>
+        /// <para>Retrieves the total number of Wuying convenience users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</para>
         /// <remarks>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the returned data is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3947,7 +3947,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize the organization ID.</para>
+        /// <para>Initializes the organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3989,7 +3989,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize the organization ID.</para>
+        /// <para>Initializes the organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4031,7 +4031,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize the organization ID.</para>
+        /// <para>Initializes the organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4049,7 +4049,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initialize the organization ID.</para>
+        /// <para>Initializes the organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4067,7 +4067,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of existing user attributes under the current account.</para>
+        /// <para>Queries the list of user properties under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4109,7 +4109,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of existing user attributes under the current account.</para>
+        /// <para>Queries the list of user properties under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4151,7 +4151,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of existing user attributes under the current account.</para>
+        /// <para>Queries the list of user properties under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4169,7 +4169,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of existing user attributes under the current account.</para>
+        /// <para>Queries the list of user properties under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4187,7 +4187,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of attribute values for a specific user attribute.</para>
+        /// <para>Queries the list of property values for a specific user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4233,7 +4233,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of attribute values for a specific user attribute.</para>
+        /// <para>Queries the list of property values for a specific user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4279,7 +4279,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of attribute values for a specific user attribute.</para>
+        /// <para>Queries the list of property values for a specific user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4297,7 +4297,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of attribute values for a specific user attribute.</para>
+        /// <para>Queries the list of property values for a specific user property.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4315,12 +4315,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Locks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</para>
+        /// <para>After the device is locked, the status of the virtual MFA device changes to LOCKED. When the corresponding convenience account logs on to a Wuying terminal through an office network with MFA enabled, the logon fails because the MFA device cannot be authenticated. You can call <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4370,12 +4370,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Locks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</para>
+        /// <para>After the device is locked, the status of the virtual MFA device changes to LOCKED. When the corresponding convenience account logs on to a Wuying terminal through an office network with MFA enabled, the logon fails because the MFA device cannot be authenticated. You can call <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4425,12 +4425,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Locks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</para>
+        /// <para>After the device is locked, the status of the virtual MFA device changes to LOCKED. When the corresponding convenience account logs on to a Wuying terminal through an office network with MFA enabled, the logon fails because the MFA device cannot be authenticated. You can call <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4448,12 +4448,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Locks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</para>
+        /// <para>After the device is locked, the status of the virtual MFA device changes to LOCKED. When the corresponding convenience account logs on to a Wuying terminal through an office network with MFA enabled, the logon fails because the MFA device cannot be authenticated. You can call <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4471,14 +4471,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot be used to sign in to Wuying clients.</para>
+        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot log on to cloud desktop terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to cloud desktop terminals and therefore cannot access any cloud desktop resources.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <c>Status</c> value in the response is 0 for unlocked accounts and 9 for locked accounts.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the response is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4531,14 +4531,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot be used to sign in to Wuying clients.</para>
+        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot log on to cloud desktop terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to cloud desktop terminals and therefore cannot access any cloud desktop resources.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <c>Status</c> value in the response is 0 for unlocked accounts and 9 for locked accounts.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the response is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4591,14 +4591,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot be used to sign in to Wuying clients.</para>
+        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot log on to cloud desktop terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to cloud desktop terminals and therefore cannot access any cloud desktop resources.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <c>Status</c> value in the response is 0 for unlocked accounts and 9 for locked accounts.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the response is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4617,14 +4617,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot be used to sign in to Wuying clients.</para>
+        /// <para>Locks one or more convenience accounts. Locked convenience accounts cannot log on to cloud desktop terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</para>
+        /// <para>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to cloud desktop terminals and therefore cannot access any cloud desktop resources.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <c>Status</c> value in the response is 0 for unlocked accounts and 9 for locked accounts.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <c>Status</c> value in the response is 0, the convenience account is not locked. If the <c>Status</c> value is 9, the convenience account is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4643,7 +4643,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the name and description of a group.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4697,7 +4697,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the name and description of a group.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4751,7 +4751,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the name and description of a group.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4769,7 +4769,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the name and description of a group.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4787,7 +4787,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an organization.</para>
+        /// <para>Updates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4837,7 +4837,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an organization.</para>
+        /// <para>Updates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4887,7 +4887,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an organization.</para>
+        /// <para>Updates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4905,7 +4905,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an organization.</para>
+        /// <para>Updates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4923,7 +4923,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the contact information of a convenience account.</para>
+        /// <para>Updates the contact information of a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4977,7 +4977,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the contact information of a convenience account.</para>
+        /// <para>Updates the contact information of a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5031,7 +5031,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the contact information of a convenience account.</para>
+        /// <para>Updates the contact information of a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5049,7 +5049,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the contact information of a convenience account.</para>
+        /// <para>Updates the contact information of a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5067,7 +5067,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift organization.</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5117,7 +5117,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift organization.</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5167,7 +5167,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift organization.</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5185,7 +5185,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift organization.</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5203,7 +5203,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift users to the target organization architecture.</para>
+        /// <para>Moves users to the target organizational structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5253,7 +5253,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift users to the target organization architecture.</para>
+        /// <para>Moves users to the target organizational structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5303,7 +5303,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift users to the target organization architecture.</para>
+        /// <para>Moves users to the target organizational structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5321,7 +5321,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift users to the target organization architecture.</para>
+        /// <para>Moves users to the target organizational structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5339,7 +5339,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the user synchronization status.</para>
+        /// <para>Queries the user synchronization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5381,7 +5381,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the user synchronization status.</para>
+        /// <para>Queries the user synchronization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5423,7 +5423,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the user synchronization status.</para>
+        /// <para>Queries the user synchronization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5441,7 +5441,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the user synchronization status.</para>
+        /// <para>Queries the user synchronization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5459,7 +5459,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a group. Supports batch operations.</para>
+        /// <para>Deletes one or more user groups. Batch operations are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5509,7 +5509,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a group. Supports batch operations.</para>
+        /// <para>Deletes one or more user groups. Batch operations are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5559,7 +5559,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a group. Supports batch operations.</para>
+        /// <para>Deletes one or more user groups. Batch operations are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5577,7 +5577,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a group. Supports batch operations.</para>
+        /// <para>Deletes one or more user groups. Batch operations are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5595,12 +5595,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the virtual MFA device attached to a convenience account.</para>
+        /// <para>Deletes the virtual MFA device bound to a convenience user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</para>
+        /// <para>Deleting the virtual MFA device bound to a convenience user unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The convenience user must bind a new virtual MFA device when logging on to the Wuying terminal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5650,12 +5650,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the virtual MFA device attached to a convenience account.</para>
+        /// <para>Deletes the virtual MFA device bound to a convenience user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</para>
+        /// <para>Deleting the virtual MFA device bound to a convenience user unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The convenience user must bind a new virtual MFA device when logging on to the Wuying terminal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5705,12 +5705,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the virtual MFA device attached to a convenience account.</para>
+        /// <para>Deletes the virtual MFA device bound to a convenience user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</para>
+        /// <para>Deleting the virtual MFA device bound to a convenience user unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The convenience user must bind a new virtual MFA device when logging on to the Wuying terminal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5728,12 +5728,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the virtual MFA device attached to a convenience account.</para>
+        /// <para>Deletes the virtual MFA device bound to a convenience user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</para>
+        /// <para>Deleting the virtual MFA device bound to a convenience user unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The convenience user must bind a new virtual MFA device when logging on to the Wuying terminal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5751,7 +5751,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove an organization.</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5797,7 +5797,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove an organization.</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5843,7 +5843,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove an organization.</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5861,7 +5861,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove an organization.</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5879,7 +5879,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a set of user attributes.</para>
+        /// <para>Deletes a set of user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5927,7 +5927,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a set of user attributes.</para>
+        /// <para>Deletes a set of user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5975,7 +5975,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a set of user attributes.</para>
+        /// <para>Deletes a set of user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5993,7 +5993,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a set of user attributes.</para>
+        /// <para>Deletes a set of user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6011,7 +6011,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete one or more convenience accounts.</para>
+        /// <para>Deletes one or more convenience users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6027,6 +6027,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         public RemoveUsersResponse RemoveUsersWithOptions(RemoveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnbindDesktops))
+            {
+                query["UnbindDesktops"] = request.UnbindDesktops;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
@@ -6038,6 +6043,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6057,7 +6063,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete one or more convenience accounts.</para>
+        /// <para>Deletes one or more convenience users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6073,6 +6079,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         public async Task<RemoveUsersResponse> RemoveUsersWithOptionsAsync(RemoveUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnbindDesktops))
+            {
+                query["UnbindDesktops"] = request.UnbindDesktops;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
@@ -6084,6 +6095,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6103,7 +6115,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete one or more convenience accounts.</para>
+        /// <para>Deletes one or more convenience users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6121,7 +6133,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete one or more convenience accounts.</para>
+        /// <para>Deletes one or more convenience users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6139,7 +6151,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a convenience account, including generating a password reset token and sending a password reset email to the mailbox of the convenience account.</para>
+        /// <para>Resets the password of a convenience user, including generating a password reset token and sending a password reset email to the email address of the convenience user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6189,7 +6201,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a convenience account, including generating a password reset token and sending a password reset email to the mailbox of the convenience account.</para>
+        /// <para>Resets the password of a convenience user, including generating a password reset token and sending a password reset email to the email address of the convenience user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6239,7 +6251,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a convenience account, including generating a password reset token and sending a password reset email to the mailbox of the convenience account.</para>
+        /// <para>Resets the password of a convenience user, including generating a password reset token and sending a password reset email to the email address of the convenience user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6257,7 +6269,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a convenience account, including generating a password reset token and sending a password reset email to the mailbox of the convenience account.</para>
+        /// <para>Resets the password of a convenience user, including generating a password reset token and sending a password reset email to the email address of the convenience user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6275,7 +6287,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate a user attribute with a specific user.</para>
+        /// <para>Associates a user property with a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6333,7 +6345,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate a user attribute with a specific user.</para>
+        /// <para>Associates a user property with a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6391,7 +6403,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate a user attribute with a specific user.</para>
+        /// <para>Associates a user property with a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6409,7 +6421,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate a user attribute with a specific user.</para>
+        /// <para>Associates a user property with a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6427,7 +6439,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronize all education information.</para>
+        /// <para>Synchronizes all education information.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6457,7 +6469,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronize all education information.</para>
+        /// <para>Synchronizes all education information.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6487,7 +6499,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronize all education information.</para>
+        /// <para>Synchronizes all education information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6501,7 +6513,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronize all education information.</para>
+        /// <para>Synchronizes all education information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6515,7 +6527,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源转移到资源组中</para>
+        /// <para>Transfers resources to a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6569,7 +6581,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源转移到资源组中</para>
+        /// <para>Transfers resources to a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6623,7 +6635,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源转移到资源组中</para>
+        /// <para>Transfers resources to a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6641,7 +6653,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源转移到资源组中</para>
+        /// <para>Transfers resources to a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6659,7 +6671,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源从资源组中转出</para>
+        /// <para>Moves resources out of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6676,6 +6688,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppRuleId))
+            {
+                query["AppRuleId"] = request.AppRuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
                 query["BusinessChannel"] = request.BusinessChannel;
@@ -6683,6 +6699,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
                 query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -6695,6 +6715,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceGroupId))
             {
                 query["TargetResourceGroupId"] = request.TargetResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerId))
+            {
+                query["TimerId"] = request.TimerId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6717,7 +6741,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源从资源组中转出</para>
+        /// <para>Moves resources out of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6734,6 +6758,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppRuleId))
+            {
+                query["AppRuleId"] = request.AppRuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
                 query["BusinessChannel"] = request.BusinessChannel;
@@ -6741,6 +6769,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
                 query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -6753,6 +6785,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetResourceGroupId))
             {
                 query["TargetResourceGroupId"] = request.TargetResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerId))
+            {
+                query["TimerId"] = request.TimerId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6775,7 +6811,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源从资源组中转出</para>
+        /// <para>Moves resources out of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6793,7 +6829,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将资源从资源组中转出</para>
+        /// <para>Moves resources out of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6811,7 +6847,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Unlocks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6861,7 +6897,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Unlocks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6911,7 +6947,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Unlocks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6929,7 +6965,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock the virtual MFA device attached to a convenience account.</para>
+        /// <para>Unlocks the virtual MFA device bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6947,14 +6983,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock one or more convenience accounts. After being unlocked, the convenience accounts can log on to WUYING Terminal.</para>
+        /// <para>Unlocks one or more convenience users. Unlocked convenience users can log on to Wuying terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </para>
+        /// <para>Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources. To allow a convenience user to log on to a Wuying terminal, you must unlock the user first.</para>
         /// <remarks>
-        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <c>Status</c> in the returned data is 0, the convenience account is not locked. If the value of <c>Status</c> is 9, the convenience account is locked.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query the information of convenience users. If the <c>Status</c> parameter in the response is 0, the convenience user is not locked. If the <c>Status</c> parameter is 9, the convenience user is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7007,14 +7043,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock one or more convenience accounts. After being unlocked, the convenience accounts can log on to WUYING Terminal.</para>
+        /// <para>Unlocks one or more convenience users. Unlocked convenience users can log on to Wuying terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </para>
+        /// <para>Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources. To allow a convenience user to log on to a Wuying terminal, you must unlock the user first.</para>
         /// <remarks>
-        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <c>Status</c> in the returned data is 0, the convenience account is not locked. If the value of <c>Status</c> is 9, the convenience account is locked.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query the information of convenience users. If the <c>Status</c> parameter in the response is 0, the convenience user is not locked. If the <c>Status</c> parameter is 9, the convenience user is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7067,14 +7103,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock one or more convenience accounts. After being unlocked, the convenience accounts can log on to WUYING Terminal.</para>
+        /// <para>Unlocks one or more convenience users. Unlocked convenience users can log on to Wuying terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </para>
+        /// <para>Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources. To allow a convenience user to log on to a Wuying terminal, you must unlock the user first.</para>
         /// <remarks>
-        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <c>Status</c> in the returned data is 0, the convenience account is not locked. If the value of <c>Status</c> is 9, the convenience account is locked.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query the information of convenience users. If the <c>Status</c> parameter in the response is 0, the convenience user is not locked. If the <c>Status</c> parameter is 9, the convenience user is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7093,14 +7129,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlock one or more convenience accounts. After being unlocked, the convenience accounts can log on to WUYING Terminal.</para>
+        /// <para>Unlocks one or more convenience users. Unlocked convenience users can log on to Wuying terminals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </para>
+        /// <para>Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources. To allow a convenience user to log on to a Wuying terminal, you must unlock the user first.</para>
         /// <remarks>
-        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <c>Status</c> in the returned data is 0, the convenience account is not locked. If the value of <c>Status</c> is 9, the convenience account is locked.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query the information of convenience users. If the <c>Status</c> parameter in the response is 0, the convenience user is not locked. If the <c>Status</c> parameter is 9, the convenience user is locked.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7119,7 +7155,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify User Attributes.</para>
+        /// <para>Updates user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7175,7 +7211,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify User Attributes.</para>
+        /// <para>Updates user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7231,7 +7267,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify User Attributes.</para>
+        /// <para>Updates user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7249,7 +7285,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify User Attributes.</para>
+        /// <para>Updates user properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7267,7 +7303,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add users to a group in batch.</para>
+        /// <para>Adds users to a user group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7317,7 +7353,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add users to a group in batch.</para>
+        /// <para>Adds users to a user group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7367,7 +7403,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add users to a group in batch.</para>
+        /// <para>Adds users to a user group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7385,7 +7421,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add users to a group in batch.</para>
+        /// <para>Adds users to a user group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7403,7 +7439,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove users from a group in batch.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7453,7 +7489,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove users from a group in batch.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7503,7 +7539,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove users from a group in batch.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7521,7 +7557,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove users from a group in batch.</para>
+        /// <para>Removes multiple users from a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">

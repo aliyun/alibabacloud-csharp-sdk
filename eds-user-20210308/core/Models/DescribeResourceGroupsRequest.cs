@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeResourceGroupsRequest : TeaModel {
+        /// <summary>
+        /// <para>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>JVSClaw</para>
+        /// </summary>
         [NameInMap("AgentType")]
         [Validation(Required=false)]
         public string AgentType { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The IDs of the cloud platform resource groups.</para>
         /// </summary>
         [NameInMap("AliyunResourceGroupIds")]
         [Validation(Required=false)]
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <remarks>
         /// <para>Fixed value: AliyunConsole.</para>
         /// <list type="bullet">
-        /// <item><description>For Elastic Desktop Service Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</description></item>
+        /// <item><description>For Wuying Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -78,24 +84,27 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The resource classification within the resource group.</para>
+        /// <para>The resource classification in the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Default</para>
         /// </summary>
         [NameInMap("ResourceClassification")]
         [Validation(Required=false)]
         public string ResourceClassification { get; set; }
 
         /// <summary>
-        /// <para>The list of resource group IDs.</para>
+        /// <para>The IDs of the resource groups.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
         public List<string> ResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The resource group name.</para>
+        /// <para>The name of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DepartmentAResourceGroup</para>
+        /// <para>Department A resource group</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

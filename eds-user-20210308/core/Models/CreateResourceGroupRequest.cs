@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? IsResourceGroupWithOfficeSite { get; set; }
 
         /// <summary>
-        /// <para>For WUYING Workspace Enterprise Edition, set this parameter to <c>AliyunConsole</c>. Other platforms are not supported.</para>
+        /// <para>For Elastic Desktop Service (EDS) Enterprise Edition, set the value to <c>AliyunConsole</c>. Other platforms are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunConsole</para>
@@ -49,15 +49,31 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
+        /// <summary>
+        /// <para>The resource category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Default</para>
+        /// </summary>
         [NameInMap("ResourceClassification")]
         [Validation(Required=false)]
         public string ResourceClassification { get; set; }
 
         /// <summary>
+        /// <para>The description of the resource group. This parameter is optional. The description can be up to 500 characters in length and is saved as-is.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Department A resource group</para>
+        /// </summary>
+        [NameInMap("ResourceGroupDescription")]
+        [Validation(Required=false)]
+        public string ResourceGroupDescription { get; set; }
+
+        /// <summary>
         /// <para>The name of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>部门A资源组</para>
+        /// <para>Department A resource group</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

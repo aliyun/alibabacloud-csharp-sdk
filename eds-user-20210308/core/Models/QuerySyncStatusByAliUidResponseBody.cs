@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class QuerySyncStatusByAliUidResponseBody : TeaModel {
         /// <summary>
-        /// <para>System status code.</para>
+        /// <para>The system status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public QuerySyncStatusByAliUidResponseBodyData Data { get; set; }
         public class QuerySyncStatusByAliUidResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Alibaba Cloud account ID.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131239236086****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string CorpId { get; set; }
 
             /// <summary>
-            /// <para>Creation Time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-30 07:50:42</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The updated at time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-02 14:27:39</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Auto increment ID.</para>
+            /// <para>The auto-increment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18500</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The latest start time.</para>
+            /// <para>The last start time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-02 14:31:39</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string LatestBeginTime { get; set; }
 
             /// <summary>
-            /// <para>The latest end time, regardless of whether the operation succeeded or failed.</para>
+            /// <para>The last end time, regardless of success or failure. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-02 16:13:12</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string LatestEndTime { get; set; }
 
             /// <summary>
-            /// <para>The latest success time.</para>
+            /// <para>The last success time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-02 18:24:01</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the request fails.</para>
+        /// <para>The error message returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

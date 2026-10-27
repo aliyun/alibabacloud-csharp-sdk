@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class GetUsersCountResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of user groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? GroupCount { get; set; }
 
         /// <summary>
+        /// <para>The user quota.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? MaxUserNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of organizations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>278</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? OrgCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9677D40F-0040-5956-A0EB-11B8B88****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of users.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UnlockMfaDeviceRequest : TeaModel {
         /// <summary>
-        /// <para>The domain of the Active Directory (AD) workspace.</para>
+        /// <para>The address of the AD office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>welab.co.id</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AdDomain { get; set; }
 
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the virtual MFA device. The serial number is unique for each device.</para>
+        /// <para>The serial number of the virtual MFA device. You can call <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> to obtain the serial number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

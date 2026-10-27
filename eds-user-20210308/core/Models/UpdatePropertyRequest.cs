@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UpdatePropertyRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The business channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The ID of the property that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</para>
+        /// <para>The ID of the property to update. You can call <a href="~~ListProperty~~">ListProperty</a> to query the property ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? PropertyId { get; set; }
 
         /// <summary>
-        /// <para>The new property name.</para>
+        /// <para>The updated property name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,17 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string PropertyKey { get; set; }
 
         /// <summary>
-        /// <para>The values of property.</para>
+        /// <para>The list of all updated property values for the property.</para>
+        /// <remarks>
+        /// <para>Notice: The property values specified here overwrite the existing property values instead of appending to them.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("PropertyValues")]
         [Validation(Required=false)]
         public List<UpdatePropertyRequestPropertyValues> PropertyValues { get; set; }
         public class UpdatePropertyRequestPropertyValues : TeaModel {
             /// <summary>
-            /// <para>The new property value.</para>
+            /// <para>The updated property value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue</para>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyValue { get; set; }
 
             /// <summary>
-            /// <para>The ID of property value that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property value ID.</para>
+            /// <para>The ID of the updated property value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>978</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of removing the convenience user.</para>
+        /// <para>The result of deleting the convenience users.</para>
         /// </summary>
         [NameInMap("RemoveUsersResult")]
         [Validation(Required=false)]
         public RemoveUsersResponseBodyRemoveUsersResult RemoveUsersResult { get; set; }
         public class RemoveUsersResponseBodyRemoveUsersResult : TeaModel {
             /// <summary>
-            /// <para>The convenience users that failed to be removed.</para>
+            /// <para>The information about the users that failed to be deleted.</para>
             /// </summary>
             [NameInMap("FailedUsers")]
             [Validation(Required=false)]
             public List<RemoveUsersResponseBodyRemoveUsersResultFailedUsers> FailedUsers { get; set; }
             public class RemoveUsersResponseBodyRemoveUsersResultFailedUsers : TeaModel {
                 /// <summary>
-                /// <para>The ID of the convenience user that failed to be removed.</para>
+                /// <para>The convenience user that failed to be deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test2</para>
@@ -55,17 +55,25 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             }
 
+            [NameInMap("ProcessingUsers")]
+            [Validation(Required=false)]
+            public List<string> ProcessingUsers { get; set; }
+
             /// <summary>
-            /// <para>The convenience users that were removed.</para>
+            /// <para>The convenience users that are successfully deleted.</para>
             /// </summary>
             [NameInMap("RemovedUsers")]
             [Validation(Required=false)]
             public List<string> RemovedUsers { get; set; }
 
+            [NameInMap("SubmittedUsers")]
+            [Validation(Required=false)]
+            public List<string> SubmittedUsers { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

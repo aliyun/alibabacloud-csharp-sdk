@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeUserRequest : TeaModel {
         /// <summary>
-        /// <para>Business type.</para>
+        /// <para>The business type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>Username.</para>
+        /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alex</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>List of attributes to query.</para>
+        /// <para>The list of attributes to query.</para>
         /// </summary>
         [NameInMap("RequireExtraAttributes")]
         [Validation(Required=false)]

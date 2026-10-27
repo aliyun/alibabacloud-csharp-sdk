@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UnlockUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>023F4EC4-3602-4A3E-A514-4970847D59DB</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of unlocking the convenience user.</para>
+        /// <para>The result of the unlock operation for the convenience users.</para>
         /// </summary>
         [NameInMap("UnlockUsersResult")]
         [Validation(Required=false)]
         public UnlockUsersResponseBodyUnlockUsersResult UnlockUsersResult { get; set; }
         public class UnlockUsersResponseBodyUnlockUsersResult : TeaModel {
             /// <summary>
-            /// <para>The convenience users that failed to be unlocked.</para>
+            /// <para>The list of convenience users that fail to be unlocked.</para>
             /// </summary>
             [NameInMap("FailedUsers")]
             [Validation(Required=false)]
             public List<UnlockUsersResponseBodyUnlockUsersResultFailedUsers> FailedUsers { get; set; }
             public class UnlockUsersResponseBodyUnlockUsersResultFailedUsers : TeaModel {
                 /// <summary>
-                /// <para>The ID of the convenience user that failed to be unlocked.</para>
+                /// <para>The convenience user that fails to be unlocked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alice</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The convenience users that were unlocked.</para>
+            /// <para>The list of convenience users that are successfully unlocked.</para>
             /// </summary>
             [NameInMap("UnlockedUsers")]
             [Validation(Required=false)]

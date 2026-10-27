@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CheckUsedPropertyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97624-2405-54AC-BD44-A63FBE97****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of convenience users that are associated with the property.</para>
+        /// <para>The number of convenience accounts associated with the specified custom property.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

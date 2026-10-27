@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UpdatePropertyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the modification.</para>
+        /// <para>The update result.</para>
         /// </summary>
         [NameInMap("UpdateResult")]
         [Validation(Required=false)]
         public UpdatePropertyResponseBodyUpdateResult UpdateResult { get; set; }
         public class UpdatePropertyResponseBodyUpdateResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the property.</para>
+            /// <para>The property ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>390</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? PropertyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the property.</para>
+            /// <para>The property name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testkey2</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string PropertyKey { get; set; }
 
             /// <summary>
-            /// <para>The result of the property value modification.</para>
+            /// <para>The property value update result.</para>
             /// </summary>
             [NameInMap("SavePropertyValueModel")]
             [Validation(Required=false)]
             public UpdatePropertyResponseBodyUpdateResultSavePropertyValueModel SavePropertyValueModel { get; set; }
             public class UpdatePropertyResponseBodyUpdateResultSavePropertyValueModel : TeaModel {
                 /// <summary>
-                /// <para>The property values that failed to be modified.</para>
+                /// <para>The property values that failed to update.</para>
                 /// </summary>
                 [NameInMap("FailedPropertyValues")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the property.</para>
+                    /// <para>The property ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>390</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public long? PropertyId { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the property.</para>
+                    /// <para>The property value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>testvalue</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 }
 
                 /// <summary>
-                /// <para>The property values that were modified.</para>
+                /// <para>The successfully updated property values.</para>
                 /// </summary>
                 [NameInMap("SavePropertyValues")]
                 [Validation(Required=false)]
                 public List<UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelSavePropertyValues> SavePropertyValues { get; set; }
                 public class UpdatePropertyResponseBodyUpdateResultSavePropertyValueModelSavePropertyValues : TeaModel {
                     /// <summary>
-                    /// <para>The value of the property.</para>
+                    /// <para>The property value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>testvalue2</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     public string PropertyValue { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the property value.</para>
+                    /// <para>The property value ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>978</para>

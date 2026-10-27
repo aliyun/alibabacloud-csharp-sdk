@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the user group.</para>
+        /// <para>The user group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ug-eld7uv7vtgqsz****</para>

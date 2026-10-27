@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class BatchSetDesktopManagerRequest : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,12 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>Whether the convenience account has the local administrator permissions on cloud computers.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: no</description></item>
-        /// <item><description>1 (default): yes</description></item>
-        /// </list>
+        /// <para>Specifies whether the convenience account has local administrator permissions on the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string IsDesktopManager { get; set; }
 
         /// <summary>
-        /// <para>The convenience accounts.</para>
+        /// <para>The list of convenience accounts.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Users")]

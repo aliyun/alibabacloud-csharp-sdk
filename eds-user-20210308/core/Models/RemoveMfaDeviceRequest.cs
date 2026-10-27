@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AdDomain { get; set; }
 
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the virtual MFA device. You can call the <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> operation to get this information.</para>
+        /// <para>The serial number of the virtual MFA device. You can call the <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> operation to obtain the serial number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

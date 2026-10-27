@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string OrgId { get; set; }
 
         /// <summary>
-        /// <para>The mobile number.</para>
+        /// <para>The phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1301234****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Elastic Desktop Service account.</para>
+        /// <para>The Wuying account ID of the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678901234****</para>
