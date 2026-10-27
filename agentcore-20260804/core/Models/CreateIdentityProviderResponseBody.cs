@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateIdentityProviderResponseBodyData Data { get; set; }
         public class CreateIdentityProviderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual received status and URL.</para>
+            /// <para>The actual SAML configuration is read back on demand only in the GetIdentityProvider operation. SCIM queries and preparations return the actual receiving status and URL.</para>
             /// </summary>
             [NameInMap("configuration")]
             [Validation(Required=false)]
             public CreateIdentityProviderResponseBodyDataConfiguration Configuration { get; set; }
             public class CreateIdentityProviderResponseBodyDataConfiguration : TeaModel {
                 /// <summary>
-                /// <para>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. Queries return the short name.</para>
+                /// <para>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is required when you manually enter the configuration. It cannot be empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. This is different from the entity ID of the service provider (SP) returned in queries.</para>
+                /// <para>This parameter is required for manual entry. It must be non-empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. It is different from the Entity ID of the service provider (SP) returned in queries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -54,27 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The actual switch value, which is Enabled or Disabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Disabled</para>
-                /// </summary>
-                [NameInMap("jitProvisionStatus")]
-                [Validation(Required=false)]
-                public string JitProvisionStatus { get; set; }
-
-                /// <summary>
-                /// <para>The actual switch value, which is Enabled or Disabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Disabled</para>
-                /// </summary>
-                [NameInMap("jitUpdateStatus")]
-                [Validation(Required=false)]
-                public string JitUpdateStatus { get; set; }
-
-                /// <summary>
-                /// <para>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -84,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The actual switch value, which is Enabled or Disabled. This is not equivalent to the expected loginEnabled value saved in AC.</para>
+                /// <para>The actual switch value is Enabled or Disabled. It is not equivalent to the expected loginEnabled value saved in the access configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -130,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateIdentityProviderResponseBodyDataSaml Saml { get; set; }
             public class CreateIdentityProviderResponseBodyDataSaml : TeaModel {
                 /// <summary>
-                /// <para>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. Queries return the short name.</para>
+                /// <para>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -140,7 +120,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is required when you manually enter the configuration. It cannot be empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. This is different from the entity ID of the service provider (SP) returned in queries.</para>
+                /// <para>This parameter is required for manual entry. It must be non-empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. It is different from the Entity ID of the service provider (SP) returned in queries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -150,27 +130,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>This parameter can be set independently. If it is omitted during an update, the existing value is retained. If it is omitted for the first time, the default value is false. A valid SAML configuration is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
-                [NameInMap("jitProvisionEnabled")]
-                [Validation(Required=false)]
-                public bool? JitProvisionEnabled { get; set; }
-
-                /// <summary>
-                /// <para>This parameter can be set independently. If it is omitted during an update, the existing value is retained. If it is omitted for the first time, the default value is false. A valid SAML configuration is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
-                [NameInMap("jitUpdateEnabled")]
-                [Validation(Required=false)]
-                public bool? JitUpdateEnabled { get; set; }
-
-                /// <summary>
-                /// <para>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -180,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is required when you manually enter the configuration. It must be a non-empty array that uses PEM X.509 certificate text. The current validity period is verified. A maximum of 10 certificates are supported.</para>
+                /// <para>This parameter is required for manual entry and must be a non-empty array. Use PEM X.509 certificate text. The current validity period is verified. A maximum of 10 certificates are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</para>
@@ -194,15 +154,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The binding status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CONFIGURED: The configuration is accepted and the system is waiting to activate the user pool.</description></item>
-            /// <item><description>SYNCING: The system is synchronizing organization members.</description></item>
-            /// <item><description>SYNCED: The synchronization of organization members is complete.</description></item>
+            /// <item><description>CONFIGURED: The configuration is accepted and waiting for the user pool to be activated.</description></item>
+            /// <item><description>SYNCING: Organization members are being synchronized.</description></item>
+            /// <item><description>SYNCED: Organization members are synchronized.</description></item>
             /// <item><description>READY: The binding is in effect.</description></item>
-            /// <item><description>SYNC_FAILED: The synchronization of organization members failed.</description></item>
-            /// <item><description>UPDATING: The system is updating the configuration.</description></item>
-            /// <item><description>UPDATE_FAILED: The configuration update failed.</description></item>
-            /// <item><description>DISCONNECTING: The system is unbinding.</description></item>
-            /// <item><description>DISCONNECT_FAILED: The unbinding failed.</description></item>
+            /// <item><description>SYNC_FAILED: Organization member synchronization failed.</description></item>
+            /// <item><description>UPDATING: The configuration is being updated.</description></item>
+            /// <item><description>UPDATE_FAILED: Configuration update failed.</description></item>
+            /// <item><description>DISCONNECTING: The binding is being removed.</description></item>
+            /// <item><description>DISCONNECT_FAILED: Binding removal failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -220,14 +180,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>Retains the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</para>
+            /// <para>Retains the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
             public CreateIdentityProviderResponseBodyDataSyncScope SyncScope { get; set; }
             public class CreateIdentityProviderResponseBodyDataSyncScope : TeaModel {
                 /// <summary>
-                /// <para>When the mode is SelectedDepartments, this parameter must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</para>
+                /// <para>When the mode is SelectedDepartments, at least one non-empty department ID must be included, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;10001&quot;]</para>
@@ -276,7 +236,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

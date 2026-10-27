@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateIdentityProviderRequestBodyMetadata Metadata { get; set; }
             public class CreateIdentityProviderRequestBodyMetadata : TeaModel {
                 /// <summary>
-                /// <para>The App ID of the Feishu application. This parameter is required when the binding type is Feishu.</para>
+                /// <para>The app ID of the Feishu application. This parameter is required when the binding type is Feishu.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cli_exampleappid01</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</para>
+                /// <para>The appKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexampleappkey01</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppSecret { get; set; }
 
                 /// <summary>
-                /// <para>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</para>
+                /// <para>The corpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexamplecorpid01</para>
@@ -111,21 +111,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>Controls the initial synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull link.</para>
+            /// <para>Controls the first synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull link.</para>
             /// </summary>
             [NameInMap("syncOnBind")]
             [Validation(Required=false)]
             public bool? SyncOnBind { get; set; }
 
             /// <summary>
-            /// <para>Retains the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</para>
+            /// <para>Retains the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestBodySyncScope SyncScope { get; set; }
             public class CreateIdentityProviderRequestBodySyncScope : TeaModel {
                 /// <summary>
-                /// <para>When the mode is SelectedDepartments, this parameter must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</para>
+                /// <para>When the mode is SelectedDepartments, at least one non-empty department ID must be included, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;10001&quot;]</para>

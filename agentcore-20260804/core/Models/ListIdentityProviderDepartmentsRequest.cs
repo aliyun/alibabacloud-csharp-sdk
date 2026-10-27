@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next token returned from the previous page. Do not specify this parameter for the first query. To continue pagination, keep the identity provider and parentDepartmentId unchanged and pass the token as is. If the returned value is empty or not returned, it indicates that there are no subsequent pages at the current hierarchy.</para>
+        /// <para>The nextToken returned from the previous page. Do not specify this parameter for the first query. When continuing pagination, keep the identity provider and parentDepartmentId unchanged, and pass the token as is. An empty or missing return value indicates that there are no subsequent pages at the current hierarchy level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-next-page-token</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent department. Specifies the department whose direct child departments you want to query. If this parameter is not specified or is left empty, the root hierarchy is queried without recursively returning all descendants. When expanding a node in the list, specify the ID of the node instead of its parentId.</para>
+        /// <para>Queries the direct child departments of the specified department. If this parameter is not specified or is empty, the root hierarchy is queried, and all descendants are not recursively returned. When expanding a node in the list, pass the ID of the node, not its parentId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>
