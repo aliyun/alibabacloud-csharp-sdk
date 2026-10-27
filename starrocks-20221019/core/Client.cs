@@ -3863,13 +3863,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
+        /// <para>Queries Serverless StarRocks instances and supports filtering by instance name or tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// <para>Danger: After an instance is released, all physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3950,13 +3950,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
+        /// <para>Queries Serverless StarRocks instances and supports filtering by instance name or tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// <para>Danger: After an instance is released, all physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4037,13 +4037,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
+        /// <para>Queries Serverless StarRocks instances and supports filtering by instance name or tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// <para>Danger: After an instance is released, all physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4063,13 +4063,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</para>
+        /// <para>Queries Serverless StarRocks instances and supports filtering by instance name or tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
+        /// <para>Danger: After an instance is released, all physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</para>
         /// </remarks>
         /// </description>
         /// 

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string AclId { get; set; }
 
             /// <summary>
-            /// <para>The AI dedicated cluster ID. The ID is prefixed with af-. This parameter is returned if an unreleased dedicated cluster exists, including those being created. If no dedicated cluster is created, this parameter is empty.</para>
+            /// <para>The AI dedicated cluster ID. The ID has an af- prefix. This parameter is returned if an unreleased dedicated cluster exists, including those being created. If no dedicated cluster is created, this parameter is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>af-498ae4af</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string AiFunctionClusterId { get; set; }
 
             /// <summary>
-            /// <para>The internal network connection endpoint of the AI dedicated cluster. The format is fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This parameter is returned only after the dedicated cluster is created. If no dedicated cluster is created, this parameter is empty.</para>
+            /// <para>The internal network endpoint of the AI dedicated cluster. The format is fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This parameter is returned only after the dedicated cluster is created. If no dedicated cluster is created, this parameter is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fe-af-498ae4af-internal.starrocks.aliyuncs.com</para>
@@ -81,15 +81,19 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public long? BeginTime { get; set; }
 
+            [NameInMap("ComputeFree")]
+            [Validation(Required=false)]
+            public bool? ComputeFree { get; set; }
+
             /// <summary>
-            /// <para>Specifies whether the AI center is enabled. Default value: false.</para>
+            /// <para>Indicates whether the AI center is enabled. Default value: false.</para>
             /// </summary>
             [NameInMap("EnableAiFunction")]
             [Validation(Required=false)]
             public bool? EnableAiFunction { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether automatic minor version upgrades are allowed.</para>
+            /// <para>Indicates whether automatic minor version upgrades are allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -99,14 +103,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? EnableAutoMinorVersionUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether disaster recovery is enabled.</para>
+            /// <para>Indicates whether disaster recovery is enabled.</para>
             /// </summary>
             [NameInMap("EnableMultiAz")]
             [Validation(Required=false)]
             public bool? EnableMultiAz { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether SSL is enabled.</para>
+            /// <para>Indicates whether SSL is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? EnableSSL { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the audit plug-in is enabled.</para>
+            /// <para>Indicates whether the audit plug-in is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? EnabledAuditLoader { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether encryption is enabled.</para>
+            /// <para>Indicates whether encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -136,6 +140,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
+            /// <para>The end-of-support date for the cluster version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-07</para>
             /// </summary>
@@ -177,13 +183,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>not_init: Not initialized.</description></item>
-            /// <item><description>unpaid: Pending payment.</description></item>
+            /// <item><description>unpaid: Unpaid.</description></item>
             /// <item><description>paid: Paid.</description></item>
             /// <item><description>creating: Creating.</description></item>
             /// <item><description>creating_failed: Creation failed.</description></item>
             /// <item><description>created: Created.</description></item>
             /// <item><description>running: Running.</description></item>
-            /// <item><description>updating: Updating.</description></item>
+            /// <item><description>updating: Upgrading.</description></item>
             /// <item><description>agent_creating: Creating the agent.</description></item>
             /// <item><description>agent_scaling_up: Scaling up the agent.</description></item>
             /// <item><description>modifying_config: Updating configurations.</description></item>
@@ -192,14 +198,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <item><description>scaling_in: Scaling in.</description></item>
             /// <item><description>scaling_up: Scaling up.</description></item>
             /// <item><description>scaling_down: Scaling down.</description></item>
-            /// <item><description>upgrading: Upgrading.</description></item>
-            /// <item><description>enable_public_network: Enabling public network access.</description></item>
-            /// <item><description>disable_public_network: Disabling public network access.</description></item>
+            /// <item><description>upgrading: Upgrading the version.</description></item>
+            /// <item><description>enable_public_network: Enabling the public network.</description></item>
+            /// <item><description>disable_public_network: Disabling the public network.</description></item>
             /// <item><description>convert_from_trial_to_official: Converting the edition.</description></item>
             /// <item><description>migration_cluster_to_serverless: Migrating the cluster.</description></item>
             /// <item><description>modifying_timezone: Modifying the time zone.</description></item>
             /// <item><description>switch_az: Switching the primary and secondary zones.</description></item>
-            /// <item><description>enabling: Resuming.</description></item>
+            /// <item><description>enabling: Recovering.</description></item>
             /// <item><description>disable: Unavailable.</description></item>
             /// <item><description>actively_disabled: Unavailable.</description></item>
             /// <item><description>deleting: Deleting.</description></item>
@@ -216,7 +222,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether read/write splitting is enabled. If enabled, the leader FE node processes write requests and other nodes process read requests.</para>
+            /// <para>Indicates whether read/write splitting is enabled. If enabled, the leader FE node processes write requests and other nodes process read requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -347,8 +353,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The running mode of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>shared_nothing: Shared-nothing architecture.</description></item>
-            /// <item><description>shared_data: Shared-data architecture.</description></item>
+            /// <item><description>shared_nothing: Shared-nothing.</description></item>
+            /// <item><description>shared_data: Shared-data.</description></item>
             /// <item><description>lakehouse: Lakehouse.</description></item>
             /// </list>
             /// 
@@ -370,7 +376,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public long? RunningTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the security group is a managed security group.</para>
+            /// <para>Indicates whether the managed security group is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -419,14 +425,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The list of vSwitches.</para>
+            /// <para>The vSwitches.</para>
             /// </summary>
             [NameInMap("VSwitches")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyDataVSwitches> VSwitches { get; set; }
             public class DescribeInstancesResponseBodyDataVSwitches : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether the vSwitch is the primary vSwitch.</para>
+                /// <para>Indicates whether the vSwitch is the primary vSwitch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -468,8 +474,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Version { get; set; }
 
             /// <summary>
+            /// <para>The version lifecycle status.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>长期支持</para>
+            /// <para>Long-term support</para>
             /// </summary>
             [NameInMap("VersionLifecycleStatus")]
             [Validation(Required=false)]

@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public bool? SupportBackup { get; set; }
 
+            [NameInMap("SupportConvertComputeFreeToPostPaid")]
+            [Validation(Required=false)]
+            public bool? SupportConvertComputeFreeToPostPaid { get; set; }
+
             /// <summary>
             /// <para>Indicates whether agent creation is supported.</para>
             /// 
