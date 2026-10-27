@@ -172,6 +172,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>PENDING/RUNNING 时轮询 GetIdentityProviderSCIM；保留失败、暂停和取消事实，不表示 SAML 状态。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PENDING</para>
+            /// </summary>
+            [NameInMap("operationStatus")]
+            [Validation(Required=false)]
+            public string OperationStatus { get; set; }
+
+            /// <summary>
             /// <para>The logon protocol. Currently, only SAML is supported. This field may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</para>
             /// 
             /// <b>Example:</b>
@@ -229,6 +239,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> X509Certificates { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>独立 SCIM 状态；不改变原 status 的共享资源及登录配置含义。与查询接口的 data.status 对应。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>UPDATING</para>
+            /// </summary>
+            [NameInMap("scimStatus")]
+            [Validation(Required=false)]
+            public string ScimStatus { get; set; }
 
             /// <summary>
             /// <para>The operation status of shared resources and logon configurations. It indicates the user pool lifecycle and logon configuration task status of CustomSSO, and does not represent the SCIM operation result. Query GetIdentityProviderSCIM.operationStatus for the SCIM switch result. You cannot use this field to determine whether all protocols are configured.</para>
