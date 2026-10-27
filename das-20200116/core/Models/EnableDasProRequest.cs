@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class EnableDasProRequest : TeaModel {
         /// <summary>
-        /// <para>The database instance ID.</para>
+        /// <para>The instance ID of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage duration of SQL Explorer data. Unit: day. Default value: <b>30</b>. Valid values:</para>
+        /// <para>The storage duration of SQL Explorer data. Unit: days. Default value: <b>30</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>180</b></para>
-        /// </description></item>
-        /// <item><description><para><b>365</b></para>
-        /// </description></item>
-        /// <item><description><para><b>1095</b></para>
-        /// </description></item>
-        /// <item><description><para><b>1825</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>180</b></description></item>
+        /// <item><description><b>365</b></description></item>
+        /// <item><description><b>1095</b></description></item>
+        /// <item><description><b>1825</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,9 +38,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? SqlRetention { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to create the database instance.</para>
+        /// <para>The instance ID, which is the ID of the Alibaba Cloud account that created the database instance.</para>
         /// <remarks>
-        /// <para>This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</para>
+        /// <para>This parameter is optional. After you specify the ID of the target database instance, the system automatically obtains the instance ID when you call the API operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

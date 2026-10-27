@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetPfsSqlSampleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The SQL sample data.</para>
+        /// <para>The returned SQL sample data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetPfsSqlSampleResponseBodyData> Data { get; set; }
         public class GetPfsSqlSampleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of internal on-disk temporary tables that were created when the SQL statement was executed.</para>
+            /// <para>The number of on-disk internal temporary tables created during statement execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? CreateTmpDiskTables { get; set; }
 
             /// <summary>
-            /// <para>The number of internal temporary tables that were created when the SQL statement was executed.</para>
+            /// <para>The number of internal temporary tables created during statement execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? CreateTmpTables { get; set; }
 
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDB</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Db { get; set; }
 
             /// <summary>
-            /// <para>The end ID of the event. By default, the value of this parameter is NULL when the event starts and is changed to the event ID when the event ends.</para>
+            /// <para>The end event ID. This parameter is NULL by default when the event starts and is updated to the current event ID of the thread when the event ends.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? EndEventId { get; set; }
 
             /// <summary>
-            /// <para>The number of errors returned for the SQL statement.</para>
+            /// <para>The number of errors in the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? EventId { get; set; }
 
             /// <summary>
-            /// <para>The name of the event.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>statement/sql/select</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The execution duration. Unit: millisecond.</para>
+            /// <para>The execution duration, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.199</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public double? Latency { get; set; }
 
             /// <summary>
-            /// <para>The lock wait duration. Unit: millisecond.</para>
+            /// <para>The lock wait time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.09</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public double? LockLatency { get; set; }
 
             /// <summary>
-            /// <para>The ID of the logical database.</para>
+            /// <para>The logical database ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxx</para>
@@ -137,12 +137,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string LogicId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:</para>
+            /// <para>Indicates whether the server could not find a good index to use for the statement. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,12 +151,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? NoGoodIndexUsed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether table scans were performed when indexes were not used. Valid values:</para>
+            /// <para>Indicates whether the statement performed a table scan without using an index. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,7 +178,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The number of rows affected by the SQL statement.</para>
+            /// <para>The number of affected rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -192,7 +188,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? RowsAffected { get; set; }
 
             /// <summary>
-            /// <para>The number of rows scanned by the SQL statement.</para>
+            /// <para>The number of scanned rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048576</para>
@@ -212,9 +208,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? RowsSent { get; set; }
 
             /// <summary>
-            /// <para>The number of joins that are used to perform table scans without using indexes.</para>
+            /// <para>The number of joins that perform table scans without using indexes.</para>
             /// <remarks>
-            /// <para>: This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</para>
+            /// <para>Notice: This parameter counts the joins that do not use indexes during a join query. If the value is not 0, check the table indexes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -225,7 +221,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SelectFullJoin { get; set; }
 
             /// <summary>
-            /// <para>The number of joins that used ranges on referenced tables.</para>
+            /// <para>The number of joins that use a range search on a reference table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -235,7 +231,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SelectFullRangeJoin { get; set; }
 
             /// <summary>
-            /// <para>The number of joins that used ranges on the first table.</para>
+            /// <para>The number of joins that use a range on the first table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -245,9 +241,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SelectRange { get; set; }
 
             /// <summary>
-            /// <para>The number of joins that did not have key values. The keys and values were checked for each row of data.</para>
+            /// <para>The number of joins without keys that check for key usage after each row.</para>
             /// <remarks>
-            /// <para>: This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</para>
+            /// <para>Notice: This parameter counts the joins that do not use indexes during a join query. If the value is not 0, check the table indexes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -268,7 +264,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SelectScan { get; set; }
 
             /// <summary>
-            /// <para>The number of merges that the sorting algorithm must perform.</para>
+            /// <para>The number of merge passes that the sort algorithm must perform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -278,7 +274,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SortMergePasses { get; set; }
 
             /// <summary>
-            /// <para>The number of times the data was sorted by using ranges.</para>
+            /// <para>The number of sorts that use a range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -298,7 +294,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SortRows { get; set; }
 
             /// <summary>
-            /// <para>The number of sorts that were performed during table scans.</para>
+            /// <para>The number of sort scans.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -308,7 +304,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? SortScan { get; set; }
 
             /// <summary>
-            /// <para>The sample SQL statement.</para>
+            /// <para>The SQL sample.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select * from xxxx where ****</para>
@@ -318,7 +314,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Sql { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement ID.</para>
+            /// <para>The SQL ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>651b56fe9418d48edb8fdf0980ec****</para>
@@ -338,7 +334,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? ThreadId { get; set; }
 
             /// <summary>
-            /// <para>The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the SQL statement was executed. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1660100753556</para>
@@ -358,7 +354,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The number of warnings returned for the SQL statement.</para>
+            /// <para>The number of warnings for the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -370,9 +366,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -395,10 +391,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ModifyAutoScalingConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration item of the bandwidth auto scaling feature.</para>
+        /// <para>The configuration items for the bandwidth elastic scaling feature.</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public ModifyAutoScalingConfigRequestBandwidth Bandwidth { get; set; }
         public class ModifyAutoScalingConfigRequestBandwidth : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to apply the <b>Bandwidth</b> configuration of the bandwidth auto scaling feature. Valid values:</para>
+            /// <para>Specifies whether to apply the configurations under the <b>Bandwidth</b> configuration item for the bandwidth elastic scaling feature:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,14 +31,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Apply { get; set; }
 
             /// <summary>
-            /// <para>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %. Valid values:</para>
+            /// <para>The threshold of average bandwidth usage that triggers automatic bandwidth downgrade. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>10</b></para>
-            /// </description></item>
-            /// <item><description><para><b>20</b></para>
-            /// </description></item>
-            /// <item><description><para><b>30</b></para>
-            /// </description></item>
+            /// <item><description><b>10</b></description></item>
+            /// <item><description><b>20</b></description></item>
+            /// <item><description><b>30</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,20 +49,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? BandwidthUsageLowerThreshold { get; set; }
 
             /// <summary>
-            /// <para>The average bandwidth usage threshold that triggers automatic bandwidth upgrade. Unit: %. Valid values:</para>
+            /// <para>The threshold of average bandwidth usage that triggers automatic bandwidth upgrade. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>50</b></para>
-            /// </description></item>
-            /// <item><description><para><b>60</b></para>
-            /// </description></item>
-            /// <item><description><para><b>70</b></para>
-            /// </description></item>
-            /// <item><description><para><b>80</b></para>
-            /// </description></item>
-            /// <item><description><para><b>90</b></para>
-            /// </description></item>
-            /// <item><description><para><b>95</b></para>
-            /// </description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>60</b></description></item>
+            /// <item><description><b>70</b></description></item>
+            /// <item><description><b>80</b></description></item>
+            /// <item><description><b>90</b></description></item>
+            /// <item><description><b>95</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,12 +70,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? BandwidthUsageUpperThreshold { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic bandwidth downgrade. Valid values:</para>
+            /// <para>Specifies whether to enable automatic bandwidth downgrade:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,18 +84,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Downgrade { get; set; }
 
             /// <summary>
-            /// <para>The observation window of the bandwidth auto scaling feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
+            /// <para>The observation window for automatic bandwidth upgrade. The parameter value consists of a number and a time unit suffix. The time suffix <b>m</b> indicates minutes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>5m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>10m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>15m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>30m</b></para>
-            /// </description></item>
+            /// <item><description><b>1m</b></description></item>
+            /// <item><description><b>5m</b></description></item>
+            /// <item><description><b>10m</b></description></item>
+            /// <item><description><b>15m</b></description></item>
+            /// <item><description><b>30m</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,12 +104,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ObservationWindowSize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic bandwidth upgrade. Valid values:</para>
+            /// <para>Specifies whether to enable automatic bandwidth upgrade:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,19 +131,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The configuration item of the resource auto scaling feature.</para>
+        /// <para>The configuration items for the resource elastic scaling feature.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public ModifyAutoScalingConfigRequestResource Resource { get; set; }
         public class ModifyAutoScalingConfigRequestResource : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to apply the <b>Resource</b> configuration of the resource auto scaling feature. Valid values:</para>
+            /// <para>Specifies whether to apply the configurations under the <b>Resource</b> configuration item for the resource elastic scaling feature:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,14 +155,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Apply { get; set; }
 
             /// <summary>
-            /// <para>The average CPU utilization threshold that triggers automatic resource scale-out. Unit: %. Valid values:</para>
+            /// <para>The threshold of average CPU utilization that triggers automatic resource scale-up. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>70</b></para>
-            /// </description></item>
-            /// <item><description><para><b>80</b></para>
-            /// </description></item>
-            /// <item><description><para><b>90</b></para>
-            /// </description></item>
+            /// <item><description><b>70</b></description></item>
+            /// <item><description><b>80</b></description></item>
+            /// <item><description><b>90</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -198,20 +173,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? CpuUsageUpperThreshold { get; set; }
 
             /// <summary>
-            /// <para>The observation window of the automatic resource scale-in feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
+            /// <para>The observation window for scale-down. The parameter value consists of a number and a time unit suffix. The time suffix <b>m</b> indicates minutes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>3m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>5m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>10m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>20m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>30m</b></para>
-            /// </description></item>
+            /// <item><description><b>1m</b></description></item>
+            /// <item><description><b>3m</b></description></item>
+            /// <item><description><b>5m</b></description></item>
+            /// <item><description><b>10m</b></description></item>
+            /// <item><description><b>20m</b></description></item>
+            /// <item><description><b>30m</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,12 +194,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string DowngradeObservationWindowSize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable resource auto scaling. Valid values:</para>
+            /// <para>Specifies whether to enable resource elastic scaling:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -244,20 +211,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The observation window of the automatic resource scale-out feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
+            /// <para>The observation window for scale-up. The parameter value consists of a number and a time unit suffix. The time suffix <b>m</b> indicates minutes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>3m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>5m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>10m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>20m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>30m</b></para>
-            /// </description></item>
+            /// <item><description><b>1m</b></description></item>
+            /// <item><description><b>3m</b></description></item>
+            /// <item><description><b>5m</b></description></item>
+            /// <item><description><b>10m</b></description></item>
+            /// <item><description><b>20m</b></description></item>
+            /// <item><description><b>30m</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,22 +234,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The configuration item of the shard auto scaling feature.</para>
+        /// <para>The configuration items for the shard elastic scaling feature.</para>
         /// </summary>
         [NameInMap("Shard")]
         [Validation(Required=false)]
         public ModifyAutoScalingConfigRequestShard Shard { get; set; }
         public class ModifyAutoScalingConfigRequestShard : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to apply the <b>Shard</b> configuration of the shard auto scaling feature. Valid values:</para>
+            /// <para>Specifies whether to apply the configurations under the <b>Shard</b> configuration item for the shard elastic scaling feature:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The shard auto scaling feature is available only for Tair (Redis OSS-compatible) cloud-native cluster instances on the China site (aliyun.com).</para>
+            /// <para>Notice: The shard elastic scaling feature is supported only when the target database instance is Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) edition in cluster architecture on the China site.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -299,15 +258,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Apply { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic shard removal. Valid values:</para>
+            /// <para>Specifies whether to enable automatic shard reduction:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The automatic shard removal feature is in a canary release.</para>
+            /// <para>The automatic shard reduction feature is currently in canary release.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -318,18 +275,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Downgrade { get; set; }
 
             /// <summary>
-            /// <para>The observation window of the automatic shard removal feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>h</b> time unit suffix specifies the hour. The <b>d</b> time unit suffix specifies the day. Valid values:</para>
+            /// <para>The observation window for automatic shard reduction. The parameter value consists of a number and a time unit suffix. The time suffix <b>h</b> indicates hours, and <b>d</b> indicates days. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1h</b></para>
-            /// </description></item>
-            /// <item><description><para><b>2h</b></para>
-            /// </description></item>
-            /// <item><description><para><b>3h</b></para>
-            /// </description></item>
-            /// <item><description><para><b>1d</b></para>
-            /// </description></item>
-            /// <item><description><para><b>7d</b></para>
-            /// </description></item>
+            /// <item><description><b>1h</b></description></item>
+            /// <item><description><b>2h</b></description></item>
+            /// <item><description><b>3h</b></description></item>
+            /// <item><description><b>1d</b></description></item>
+            /// <item><description><b>7d</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -343,7 +295,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string DowngradeObservationWindowSize { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.</para>
+            /// <para>The maximum total number of shards for the instance. The value must be a positive integer. Valid values: 4 to 32.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -356,14 +308,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MaxShards { get; set; }
 
             /// <summary>
-            /// <para>The average memory usage threshold that triggers automatic shard removal. Unit: %. Valid values:</para>
+            /// <para>The threshold of average memory utilization that triggers automatic shard reduction. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>10</b></para>
-            /// </description></item>
-            /// <item><description><para><b>20</b></para>
-            /// </description></item>
-            /// <item><description><para><b>30</b></para>
-            /// </description></item>
+            /// <item><description><b>10</b></description></item>
+            /// <item><description><b>20</b></description></item>
+            /// <item><description><b>30</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -377,18 +326,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MemUsageLowerThreshold { get; set; }
 
             /// <summary>
-            /// <para>The average memory usage threshold that triggers automatic shard addition. Unit: %. Valid values:</para>
+            /// <para>The threshold of average memory utilization that triggers automatic shard addition. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>50</b></para>
-            /// </description></item>
-            /// <item><description><para><b>60</b></para>
-            /// </description></item>
-            /// <item><description><para><b>70</b></para>
-            /// </description></item>
-            /// <item><description><para><b>80</b></para>
-            /// </description></item>
-            /// <item><description><para><b>90</b></para>
-            /// </description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>60</b></description></item>
+            /// <item><description><b>70</b></description></item>
+            /// <item><description><b>80</b></description></item>
+            /// <item><description><b>90</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -402,7 +346,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MemUsageUpperThreshold { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.</para>
+            /// <para>The minimum total number of shards for the instance. The value must be a positive integer. Valid values: 4 to 32.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -415,12 +359,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MinShards { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic shard addition. Valid values:</para>
+            /// <para>Specifies whether to enable automatic shard addition:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -431,16 +373,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Upgrade { get; set; }
 
             /// <summary>
-            /// <para>The observation window of the automatic shard addition feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
+            /// <para>The observation window for automatic shard addition. The parameter value consists of a number and a time unit suffix. The time suffix <b>m</b> indicates minutes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>5m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>10m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>15m</b></para>
-            /// </description></item>
-            /// <item><description><para><b>30m</b></para>
-            /// </description></item>
+            /// <item><description><b>5m</b></description></item>
+            /// <item><description><b>10m</b></description></item>
+            /// <item><description><b>15m</b></description></item>
+            /// <item><description><b>30m</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -456,19 +394,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The configuration item of the specification auto scaling feature.</para>
+        /// <para>The configuration items for the specification elastic scaling feature.</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]
         public ModifyAutoScalingConfigRequestSpec Spec { get; set; }
         public class ModifyAutoScalingConfigRequestSpec : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to apply the <b>Spec</b> configuration of the specification auto scaling feature. Valid values:</para>
+            /// <para>Specifies whether to apply the configurations under the <b>Spec</b> configuration item for the specification elastic scaling feature:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -479,12 +415,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Apply { get; set; }
 
             /// <summary>
-            /// <para>The quiescent period. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute, the <b>h</b> time unit suffix specifies the hour, and the <b>d</b> time unit suffix specifies the day.</para>
+            /// <para>The cool-down period. The parameter value consists of a number and a time unit suffix. The supported database instances and valid values are as follows. The time suffix <b>m</b> indicates minutes, <b>h</b> indicates hours, and <b>d</b> indicates days:</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values for PolarDB for MySQL Cluster Edition instances: <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</para>
-            /// </description></item>
-            /// <item><description><para>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or Enterprise SSDs (ESSDs): <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</para>
-            /// </description></item>
+            /// <item><description>PolarDB for MySQL Cluster Edition: <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</description></item>
+            /// <item><description>ApsaraDB RDS for MySQL high availability series cloud disk edition: <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -498,21 +432,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string CoolDownTime { get; set; }
 
             /// <summary>
-            /// <para>The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %. Valid values:</para>
+            /// <para>The threshold of average CPU utilization that triggers automatic specification scale-up. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>50</b></para>
-            /// </description></item>
-            /// <item><description><para><b>60</b></para>
-            /// </description></item>
-            /// <item><description><para><b>70</b></para>
-            /// </description></item>
-            /// <item><description><para><b>80</b></para>
-            /// </description></item>
-            /// <item><description><para><b>90</b></para>
-            /// </description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>60</b></description></item>
+            /// <item><description><b>70</b></description></item>
+            /// <item><description><b>80</b></description></item>
+            /// <item><description><b>90</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</para>
+            /// <para>Notice: You must set this parameter when the target database instance is PolarDB for MySQL Cluster Edition or ApsaraDB RDS for MySQL high availability series cloud disk edition.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -526,15 +455,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? CpuUsageUpperThreshold { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic specification scale-down. Valid values:</para>
+            /// <para>Specifies whether automatic specification scale-down is enabled:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</para>
+            /// <para>Notice: You must set this parameter when the target database instance is PolarDB for MySQL Cluster Edition or ApsaraDB RDS for MySQL high availability series cloud disk edition.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -548,9 +475,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Downgrade { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of read-only nodes of the instance.</para>
+            /// <para>The maximum number of read-only nodes for the instance.</para>
             /// <remarks>
-            /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</para>
+            /// <para>Notice: You must set this parameter when the target database instance is PolarDB for MySQL Cluster Edition.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -564,12 +491,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MaxReadOnlyNodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:</para>
+            /// <para>The upper limit of the specification for automatic scale-up. You can only scale up to a higher specification within the same series of the database instance. For more details, see the specification documentation for each database instance:
+            /// &lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description><para>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></para>
-            /// </description></item>
-            /// <item><description><para>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></para>
-            /// </description></item>
+            /// <item><description>For PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</description></item>
+            /// <item><description>For ApsaraDB RDS for MySQL high availability series cloud disk edition, see <a href="https://help.aliyun.com/document_detail/276974.html">Product specifications</a>.</description></item>
+            /// <item><description>For Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) open-source edition, see <a href="https://help.aliyun.com/document_detail/144986.html">Instance specifications</a>.</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description>For PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</description></item>
+            /// <item><description>For ApsaraDB RDS for MySQL high availability series cloud disk edition, see <a href="https://help.aliyun.com/document_detail/276974.html">Product specifications</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -583,21 +515,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string MaxSpec { get; set; }
 
             /// <summary>
-            /// <para>The average memory usage threshold that triggers automatic specification scale-up. Unit: %. Valid values:</para>
+            /// <para>The threshold of average memory utilization that triggers automatic specification scale-up. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>50</b></para>
-            /// </description></item>
-            /// <item><description><para><b>60</b></para>
-            /// </description></item>
-            /// <item><description><para><b>70</b></para>
-            /// </description></item>
-            /// <item><description><para><b>80</b></para>
-            /// </description></item>
-            /// <item><description><para><b>90</b></para>
-            /// </description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>60</b></description></item>
+            /// <item><description><b>70</b></description></item>
+            /// <item><description><b>80</b></description></item>
+            /// <item><description><b>90</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter must be specified if the database instance is a Tair (Redis OSS-compatible) Community Edition cloud-native instance on the China site (aliyun.com).</para>
+            /// <para>Notice: You must set this parameter when the target database instance is Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) open-source edition on the China site.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -611,14 +538,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MemUsageUpperThreshold { get; set; }
 
             /// <summary>
-            /// <para>The observation window. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute and the <b>h</b> time unit suffix specifies the hour.</para>
+            /// <para>The observation window. The parameter value consists of a number and a time unit suffix. The supported database instances and valid values are as follows. The time suffix <b>m</b> indicates minutes, and <b>h</b> indicates hours:</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values for PolarDB for MySQL Cluster Edition instances: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</para>
-            /// </description></item>
-            /// <item><description><para>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <b>5m</b>, <b>20m</b>, <b>30m</b>, <b>40m</b>, and <b>1h</b>.</para>
-            /// </description></item>
-            /// <item><description><para>Valid values for Tair (Redis OSS-compatible) Community Edition cloud-native instances: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</para>
-            /// </description></item>
+            /// <item><description>PolarDB for MySQL Cluster Edition: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</description></item>
+            /// <item><description>ApsaraDB RDS for MySQL high availability series cloud disk edition: <b>5m</b>, <b>20m</b>, <b>30m</b>, <b>40m</b>, and <b>1h</b>.</description></item>
+            /// <item><description>Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) open-source edition: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -632,12 +556,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ObservationWindowSize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic specification scale-up. Valid values:</para>
+            /// <para>Specifies whether to enable automatic specification scale-up:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -653,19 +575,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The configuration item of the automatic storage expansion feature.</para>
+        /// <para>The configuration items for the automatic storage expansion feature.</para>
         /// </summary>
         [NameInMap("Storage")]
         [Validation(Required=false)]
         public ModifyAutoScalingConfigRequestStorage Storage { get; set; }
         public class ModifyAutoScalingConfigRequestStorage : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to apply the <b>Storage</b> configuration of the automatic storage expansion feature. Valid values:</para>
+            /// <para>Specifies whether to apply the configurations under the <b>Storage</b> configuration item for the automatic storage expansion feature:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -676,18 +596,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Apply { get; set; }
 
             /// <summary>
-            /// <para>The average storage usage threshold that triggers automatic storage expansion. Unit: %. Valid values:</para>
+            /// <para>The threshold of average storage space utilization that triggers automatic storage expansion. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>50</b></para>
-            /// </description></item>
-            /// <item><description><para><b>60</b></para>
-            /// </description></item>
-            /// <item><description><para><b>70</b></para>
-            /// </description></item>
-            /// <item><description><para><b>80</b></para>
-            /// </description></item>
-            /// <item><description><para><b>90</b></para>
-            /// </description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>60</b></description></item>
+            /// <item><description><b>70</b></description></item>
+            /// <item><description><b>80</b></description></item>
+            /// <item><description><b>90</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -701,15 +616,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? DiskUsageUpperThreshold { get; set; }
 
             /// <summary>
-            /// <para>The maximum storage size of the database instance. Unit: GB. The value must be greater than or equal to the total storage size of the instance.</para>
+            /// <para>The upper limit of the storage space. The value must be greater than or equal to the current total storage space of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If the instance uses ESSDs, the maximum value of this parameter can be 32000.</para>
-            /// </description></item>
-            /// <item><description><para>If the instance uses standard SSDs, the maximum value of this parameter can be 6000.</para>
-            /// </description></item>
+            /// <item><description>ESSD cloud disk upper limit: 32,000 GB.</description></item>
+            /// <item><description>Standard SSD upper limit: 6,000 GB.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The standard SSD storage type is phased out. We recommend that you <a href="https://help.aliyun.com/document_detail/314678.html">upgrade the storage type of your instance from standard SSDs to ESSDs</a>.</para>
+            /// <para>Standard SSDs are retired. <a href="https://help.aliyun.com/document_detail/314678.html">Upgrade to ESSD cloud disks</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -723,12 +636,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MaxStorage { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic storage expansion. Valid values:</para>
+            /// <para>Specifies whether to enable automatic storage expansion:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

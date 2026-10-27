@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetPfsSqlSampleRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the query. The time is a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</para>
+        /// <para>The end time must be later than the start time. You can query data for up to seven days within the last month.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported</para>
+        /// <para>Only ApsaraDB RDS for MySQL and PolarDB for MySQL instances are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</para>
+        /// <para>For an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster, you must specify the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query. The time is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

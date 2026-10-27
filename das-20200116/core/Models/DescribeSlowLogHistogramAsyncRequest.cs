@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSlowLogHistogramAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query. Specify a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the query. Specify the time as a UNIX timestamp in milliseconds.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The node ID.</para>
+        /// <para>The ID of the node.</para>
         /// <remarks>
-        /// <para>For PolarDB for MySQL instances, specify the node ID.</para>
+        /// <para>For a PolarDB for MySQL instance, you must specify the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the query task. Specify the time as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

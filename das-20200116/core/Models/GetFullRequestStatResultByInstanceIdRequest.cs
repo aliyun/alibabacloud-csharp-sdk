@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetFullRequestStatResultByInstanceIdRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort the results in ascending order. By default, the results are not sorted in ascending order.</para>
+        /// <para>Specifies whether to sort the results in ascending order. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the query. The time is a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time. The interval cannot exceed one day.</para>
+        /// <para>The end time must be later than the start time, and the interval between the start time and the end time cannot exceed one day.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The keywords that are used for query.</para>
+        /// <para>The query keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbtest01</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</para>
+        /// <para>For PolarDB for MySQL instances, the node ID is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,13 +78,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the returned entries. Default value: <b>count</b>. Valid values:</para>
+        /// <para>The field by which to sort the results. Default value: <b>count</b>.</para>
         /// <list type="bullet">
         /// <item><description><para><b>count</b>: the number of executions.</para>
         /// </description></item>
-        /// <item><description><para><b>avgRt</b>: the average execution duration.</para>
+        /// <item><description><para><b>avgRt</b>: the average execution time.</para>
         /// </description></item>
-        /// <item><description><para><b>rtRate</b>: the execution duration percentage.</para>
+        /// <item><description><para><b>rtRate</b>: the execution time proportion.</para>
         /// </description></item>
         /// <item><description><para><b>rowsExamined</b>: the total number of scanned rows.</para>
         /// </description></item>
@@ -102,9 +102,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client that executes the SQL statement.</para>
+        /// <para>The IP address of the client that executed the SQL statement.</para>
         /// <remarks>
-        /// <para>This parameter is optional. If this parameter is specified, the full request statistics of the specified IP address are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</para>
+        /// <para>This parameter is optional. If you specify a client IP address, the full request data of the specified client IP address is aggregated. If you leave this parameter empty, the full request data of the entire database instance is aggregated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OriginHost { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number for the paged query. The paging starts from 1. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The data volume per page for paging in a paged query. Default value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The role of the node in the PolarDB-X 2.0 instance. Valid values:</para>
+        /// <para>The node information of the PolarDB-X 2.0 database instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>polarx_cn</b>: compute node.</para>
         /// </description></item>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The SQL ID.</para>
         /// <remarks>
-        /// <para>If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</para>
+        /// <para>If you specify an SQL ID, the full request data of the specified SQL ID is aggregated. If you leave this parameter empty, the full request data of the entire database instance is aggregated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The type of the SQL statement. Valid values: <b>SELECT</b>, <b>INSERT</b>, <b>UPDATE</b>, <b>DELETE</b>, <b>LOGIN</b>, <b>LOGOUT</b>, <b>MERGE</b>, <b>ALTER</b>, <b>CREATEINDEX</b>, <b>DROPINDEX</b>, <b>CREATE</b>, <b>DROP</b>, <b>SET</b>, <b>DESC</b>, <b>REPLACE</b>, <b>CALL</b>, <b>BEGIN</b>, <b>DESCRIBE</b>, <b>ROLLBACK</b>, <b>FLUSH</b>, <b>USE</b>, <b>SHOW</b>, <b>START</b>, <b>COMMIT</b>, and <b>RENAME</b>.</para>
         /// <remarks>
-        /// <para>If your database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, or a PolarDB-X 2.0 instance, the statistics can be collected based on the SQL statement type.</para>
+        /// <para>If the database instance is an ApsaraDB RDS for MySQL, PolarDB for MySQL, or PolarDB-X 2.0 instance, you can aggregate data by SQL statement type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -179,9 +179,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query. The format is a UNIX timestamp, in milliseconds.</para>
         /// <remarks>
-        /// <para>The start time can be up to 90 days earlier than the current time.</para>
+        /// <para>The start time must be within the SQL Explorer storage duration for the database instance and cannot be more than 90 days earlier than the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -193,9 +193,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Start { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that was used to create the database instance.</para>
+        /// <para>The instance ID, which is the ID of the Alibaba Cloud account that created the database instance.</para>
         /// <remarks>
-        /// <para>This parameter is optional. The system can automatically obtain the Alibaba Cloud account ID based on the value of InstanceId when you call the GetFullRequestOriginStatByInstanceId operation.</para>
+        /// <para>This parameter is optional. After you enter the ID of the target database instance, the system automatically obtains the instance ID when you call the API operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

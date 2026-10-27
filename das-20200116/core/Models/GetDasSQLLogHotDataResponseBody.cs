@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDasSQLLogHotDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The returned HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public GetDasSQLLogHotDataResponseBodyData Data { get; set; }
         public class GetDasSQLLogHotDataResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>The reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public object Extra { get; set; }
 
             /// <summary>
-            /// <para>A list of the returned data.</para>
+            /// <para>The list of returned information.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// <para>The database name.</para>
+                /// <para>The name of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testDB</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// <para>The UTC time when the execution was recorded, formatted as <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+                /// <para>The execution time. The time is in the UTC format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-23 T12:11:20Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ExecuteTime { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter.</para>
+                /// <para>The extended information field. This is a reserved parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Ext { get; set; }
 
                 /// <summary>
-                /// <para>The client IP address.</para>
+                /// <para>The IP address of the client.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.100.XX.XX</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// <para>The latency, in microseconds.</para>
+                /// <para>The execution duration. Unit: microseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Latancy { get; set; }
 
                 /// <summary>
-                /// <para>The lock wait time, in microseconds.</para>
+                /// <para>The lock wait duration. Unit: microseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? LockTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of logical reads.</para>
+                /// <para>The logical reads.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The precise UTC time when the execution was recorded, formatted as <c>yyyy-MM-ddTHH:mm:ss.SSSZ</c>.</para>
+                /// <para>The execution time. The time is in the UTC format: <c>yyyy-MM-ddTHH:mm:ss.SSSZ</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-23 T12:11:20.999Z</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ReturnRows { get; set; }
 
                 /// <summary>
-                /// <para>The SQL statement.</para>
+                /// <para>The details of the SQL statement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select 1</para>
@@ -194,14 +194,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ScanRows { get; set; }
 
                 /// <summary>
-                /// <para>The SQL type. Valid values:</para>
+                /// <para>The type of the SQL statement. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>select</b></para>
-                /// </description></item>
-                /// <item><description><para><b>update</b></para>
-                /// </description></item>
-                /// <item><description><para><b>delete</b></para>
-                /// </description></item>
+                /// <item><description><b>select</b></description></item>
+                /// <item><description><b>update</b></description></item>
+                /// <item><description><b>delete</b></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +209,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string SqlType { get; set; }
 
                 /// <summary>
-                /// <para>The execution status. A value of <b>0</b> indicates success. Any other value is an error code.</para>
+                /// <para>The status. A value of <b>0</b> indicates that the execution is successful. Otherwise, an error code is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -232,7 +229,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ThreadID { get; set; }
 
                 /// <summary>
-                /// <para>The transaction ID.</para>
+                /// <para>The ID of the started transaction.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -264,7 +261,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -274,7 +271,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of returned records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -286,9 +283,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request succeeds, <b>Successful</b> is returned. If the request fails, an error message is returned, which may include an error code.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message, such as an error code, is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -299,7 +296,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID generated by Alibaba Cloud.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A74B755-98B7-59DB-8724-1321B394****</para>
@@ -309,12 +306,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

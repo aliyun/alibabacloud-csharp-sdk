@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetQueryOptimizeShareUrlRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort the returned entries in ascending order. Default value: <b>true</b>. Valid values:</para>
+        /// <para>Specifies whether to sort the results in ascending order. Default value: <b>true</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Asc { get; set; }
 
         /// <summary>
-        /// <para>The name of the database to be queried.</para>
+        /// <para>The names of the databases to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb01</para>
@@ -38,12 +36,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b>: ApsaraDB RDS for MySQL</para>
-        /// </description></item>
-        /// <item><description><para><b>PolarDBMySQL</b>: PolarDB for MySQL</para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b>: ApsaraDB RDS for PostgreSQL</para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b>: RDS MySQL</description></item>
+        /// <item><description><b>PolarDBMySQL</b>: PolarDB for MySQL</description></item>
+        /// <item><description><b>PostgreSQL</b>: RDS PostgreSQL</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,7 +50,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The instance IDs. Separate multiple instance IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1jdv45i7l6****</para>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The keywords of the SQL template. Separate multiple keywords with spaces.</para>
+        /// <para>The keywords in the SQL text. Separate multiple keywords with spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>select update</para>
@@ -75,12 +70,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship between multiple keywords. Valid values:</para>
+        /// <para>The logical relationship between multiple keywords in the SQL text. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>or</b></para>
-        /// </description></item>
-        /// <item><description><para><b>and</b></para>
-        /// </description></item>
+        /// <item><description><b>or</b>: The OR logical relationship.</description></item>
+        /// <item><description><b>and</b>: The AND logical relationship.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,12 +84,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string LogicalOperator { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only SQL templates that need to be optimized. Default value: <b>false</b>. Valid values:</para>
+        /// <para>Specifies whether to query only the SQL statements that need to be optimized. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,26 +98,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? OnlyOptimizedSql { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the returned entries. Default value: <b>count</b>. Valid values:</para>
+        /// <para>The field by which to sort the results. Default value: <b>count</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>count</b>: the number of executions.</para>
-        /// </description></item>
-        /// <item><description><para><b>maxQueryTime</b>: the longest execution duration.</para>
-        /// </description></item>
-        /// <item><description><para><b>avgQueryTime</b>: the average execution duration.</para>
-        /// </description></item>
-        /// <item><description><para><b>maxLockTime</b>: the longest lock wait duration.</para>
-        /// </description></item>
-        /// <item><description><para><b>avgLockTime</b>: the average lock wait duration.</para>
-        /// </description></item>
-        /// <item><description><para><b>maxRowsExamined</b>: the largest number of scanned rows.</para>
-        /// </description></item>
-        /// <item><description><para><b>avgRowsExamined</b>: the average number of scanned rows.</para>
-        /// </description></item>
-        /// <item><description><para><b>maxRowsSent</b>: the largest number of returned rows.</para>
-        /// </description></item>
-        /// <item><description><para><b>avgRowsSent</b>: the average number of returned rows.</para>
-        /// </description></item>
+        /// <item><description><b>count</b>: The number of executions.</description></item>
+        /// <item><description><b>maxQueryTime</b>: The maximum execution time.</description></item>
+        /// <item><description><b>avgQueryTime</b>: The average execution time.</description></item>
+        /// <item><description><b>maxLockTime</b>: The maximum lock wait time.</description></item>
+        /// <item><description><b>avgLockTime</b>: The average lock wait time.</description></item>
+        /// <item><description><b>maxRowsExamined</b>: The maximum number of scanned rows.</description></item>
+        /// <item><description><b>avgRowsExamined</b>: The average number of scanned rows.</description></item>
+        /// <item><description><b>maxRowsSent</b>: The maximum number of returned rows.</description></item>
+        /// <item><description><b>avgRowsSent</b>: The average number of returned rows.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +119,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the paging query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,7 +129,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The maximum number of records per page in a paging query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -157,18 +139,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides. Valid values:</para>
+        /// <para>The region where the instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-china</b>: Chinese mainland</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong)</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Singapore</para>
-        /// </description></item>
+        /// <item><description><b>cn-china</b>: The Chinese mainland.</description></item>
+        /// <item><description><b>cn-hongkong</b>: Hong Kong (China).</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
         /// </list>
-        /// <para>This parameter takes effect only if <b>InstanceIds</b> is left empty. If you leave <b>InstanceIds</b> empty, the system obtains data from the region set by <b>Region</b>. By default, Region is set to <b>cn-china</b>. If you specify <b>InstanceIds</b>, <b>Region</b> does not take effect and the system obtains data from the region in which the first specified instance resides.\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter is valid only when the <b>InstanceIds</b> request parameter is empty. If the <b>InstanceIds</b> request parameter is empty, data is retrieved based on the region specified by the <b>Region</b> parameter, and the default region is <b>cn-china</b>. If the <b>InstanceIds</b> request parameter is not empty, data is retrieved based on the region of the first instance specified in <b>InstanceIds</b>, regardless of the value of the <b>Region</b> parameter.</para>
         /// <remarks>
-        /// <para>If your instances reside in the regions in the Chinese mainland, set this parameter to <b>cn-china</b>.</para>
+        /// <para>For instances created in regions in the Chinese mainland, set this parameter to <b>cn-china</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -179,7 +158,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query governance</a>.</para>
+        /// <para>The rules to be filtered. Separate multiple rules with commas. For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query Governance</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAS_NOT_IMPORTANT</para>
@@ -189,7 +168,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Rules { get; set; }
 
         /// <summary>
-        /// <para>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeExecErrorStats</a> operation to obtain the SQL template IDs.</para>
+        /// <para>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0****</para>
@@ -199,7 +178,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlIds { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -209,7 +188,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string TagNames { get; set; }
 
         /// <summary>
-        /// <para>The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The date when the data is queried. The value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -220,7 +199,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>The account of the database to be queried.</para>
+        /// <para>The database account to be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testUser</para>

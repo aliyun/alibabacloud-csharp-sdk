@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public ModifyForwardSqlLogConfigResponseBodyData Data { get; set; }
         public class ModifyForwardSqlLogConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The LogStore name for real-time delivery to Simple Log Service.</para>
+            /// <para>The name of the Simple Log Service Logstore for real-time log delivery.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cdn222</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request is successful.</description></item>
-        /// <item><description>false: The request fails.</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

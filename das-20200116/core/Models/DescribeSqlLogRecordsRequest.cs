@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. This is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>A list of filter conditions.</para>
+        /// <para>The list of filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeSqlLogRecordsRequestFilters> Filters { get; set; }
         public class DescribeSqlLogRecordsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter key.</para>
+            /// <para>The filter parameter.</para>
             /// <remarks>
-            /// <para>For details on supported filter keys and their values, see <b>Additional information about request parameters</b>.</para>
+            /// <para>For supported filter parameters and their valid values, refer to <b>Supplementary request parameter descriptions</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value.</para>
+            /// <para>The value of the filter parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select</para>
@@ -66,10 +66,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is applicable only to ApsaraDB RDS for MySQL and PolarDB for MySQL cluster instances. If this parameter is omitted, the log details of the primary node are returned by default.</para>
-        /// </description></item>
-        /// <item><description><para>For PolarDB-X 2.0, set this parameter to <b>polarx_cn</b> (compute node) or <b>polarx_dn</b> (data node).</para>
-        /// </description></item>
+        /// <item><description>For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter applies only to Cluster Edition instances. If you do not specify this parameter, the log details of the primary node are queried by default.</description></item>
+        /// <item><description>For PolarDB-X 2.0, set this parameter to <b>polarx_cn</b> (compute node) or <b>polarx_dn</b> (data node).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number for paging. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +88,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
+        /// <para>The maximum number of entries per page. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -100,12 +98,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The role of the node in the PolarDB-X 2.0 database instance.</para>
+        /// <para>The role of the node in the PolarDB-X 2.0 instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>polarx_cn</b>: compute node.</para>
-        /// </description></item>
-        /// <item><description><para><b>polarx_dn</b>: data node.</para>
-        /// </description></item>
+        /// <item><description><b>polarx_cn</b>: compute node.</description></item>
+        /// <item><description><b>polarx_dn</b>: data node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,7 +112,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

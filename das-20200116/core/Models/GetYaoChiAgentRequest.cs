@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetYaoChiAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The additional information in JSON string format. This parameter is optional.</para>
+        /// <para>Optional. The additional information, which is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ImageKeys { get; set; }
 
         /// <summary>
-        /// <para>The natural language description of the question.</para>
+        /// <para>The natural language description of the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The session ID in UUID string format. This parameter is optional. If you do not specify this parameter, a new session is created. To maintain context across a conversation, use the same session ID.</para>
+        /// <para>Optional. The session ID, which is a UUID string. If this parameter is not specified, a new session is created. To maintain context in a conversation, use the same session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The cloud service source that specifies which cloud service the question belongs to. This parameter is optional. Default value: yaochi.</para>
+        /// <para>Optional. The source cloud service. Specifies the cloud service to which the Q&amp;A belongs. Default value: yaochi.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yaochi</para>

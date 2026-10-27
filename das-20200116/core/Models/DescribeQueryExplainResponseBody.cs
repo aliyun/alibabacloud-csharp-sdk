@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeQueryExplainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. A value of 200 indicates success.</para>
+        /// <para>The returned status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,94 +20,94 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>List of execution plans.</para>
+        /// <para>List<ExplainedSqlDO></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeQueryExplainResponseBodyData> Data { get; set; }
         public class DescribeQueryExplainResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Argument")]
             [Validation(Required=false)]
             public string Argument { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("AvgRowSize")]
             [Validation(Required=false)]
             public string AvgRowSize { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("DefinedValues")]
             [Validation(Required=false)]
             public string DefinedValues { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("EstimateCPU")]
             [Validation(Required=false)]
             public string EstimateCPU { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("EstimateExecutions")]
             [Validation(Required=false)]
             public string EstimateExecutions { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("EstimateIO")]
             [Validation(Required=false)]
             public string EstimateIO { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("EstimateRows")]
             [Validation(Required=false)]
             public string EstimateRows { get; set; }
 
             /// <summary>
-            /// <para>Additional information.</para>
+            /// <para>The additional information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public string Extra { get; set; }
 
             /// <summary>
-            /// <para>The ID of the query.</para>
+            /// <para>The query ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the PostgreSQL engine.</para>
+            /// <para>The reserved field for the PostgreSQL engine.</para>
             /// </summary>
             [NameInMap("IndexList")]
             [Validation(Required=false)]
             public List<string> IndexList { get; set; }
 
             /// <summary>
-            /// <para>The index actually used in the execution plan.</para>
+            /// <para>The index that is actually used in the execution plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIMARY</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The length of the index actually used.</para>
+            /// <para>The length of the used index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -144,74 +144,74 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string KeyLen { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("LogicalOp")]
             [Validation(Required=false)]
             public string LogicalOp { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the PolarDB X engine.</para>
+            /// <para>The reserved field for the PolarDB-X engine.</para>
             /// </summary>
             [NameInMap("LogicalPlanList")]
             [Validation(Required=false)]
             public List<string> LogicalPlanList { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("OutputList")]
             [Validation(Required=false)]
             public string OutputList { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Parallel")]
             [Validation(Required=false)]
             public string Parallel { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Parent")]
             [Validation(Required=false)]
             public string Parent { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("PhysicalOp")]
             [Validation(Required=false)]
             public string PhysicalOp { get; set; }
 
             /// <summary>
-            /// <para>The indexes that might be used.</para>
+            /// <para>The possible indexes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_idx</para>
@@ -221,17 +221,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string PossibleKeys { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the PostgreSQL engine.</para>
+            /// <para>The reserved field for the PostgreSQL engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("QueryPlan")]
             [Validation(Required=false)]
             public string QueryPlan { get; set; }
 
             /// <summary>
-            /// <para>The column used by the index.</para>
+            /// <para>The columns used with the index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_column</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Rows { get; set; }
 
             /// <summary>
-            /// <para>The type of the query.</para>
+            /// <para>The select type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -261,27 +261,27 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string SelectType { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("StmtId")]
             [Validation(Required=false)]
             public string StmtId { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("StmtText")]
             [Validation(Required=false)]
             public string StmtText { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -291,17 +291,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Table { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the PostgreSQL engine.</para>
+            /// <para>The reserved field for the PostgreSQL engine.</para>
             /// </summary>
             [NameInMap("TableList")]
             [Validation(Required=false)]
             public List<string> TableList { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("TotalSubtreeCost")]
             [Validation(Required=false)]
@@ -318,10 +318,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>A reserved field for the SQL Server engine.</para>
+            /// <para>The reserved field for the SQL Server engine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Warnings")]
             [Validation(Required=false)]
@@ -330,9 +330,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request succeeds, this parameter returns Successful. If the request fails, this parameter returns error details such as an error code.</para>
+        /// <para>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
@@ -353,12 +353,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

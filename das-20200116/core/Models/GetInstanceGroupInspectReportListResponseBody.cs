@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<GetInstanceGroupInspectReportListResponseBodyData> Data { get; set; }
         public class GetInstanceGroupInspectReportListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
+            /// <para>The time when the task was created, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11 00:39:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The diagnosis date in the YYYY-MM-DD format.</para>
+            /// <para>The date of diagnosis, in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ReportDate { get; set; }
 
             /// <summary>
-            /// <para>The report ID.</para>
+            /// <para>The ID of the report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13f52040-5a6e-42c3-bb84-051f5d6d****</para>
@@ -57,15 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ReportId { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: WAITING_UNREADY.</description></item>
-            /// <item><description>1: WAITING_READY.</description></item>
-            /// <item><description>2: PROCESSING.</description></item>
-            /// <item><description>3: FINISHED.</description></item>
-            /// <item><description>4: ERROR.</description></item>
-            /// <item><description>-1: STOPPED.</description></item>
-            /// </list>
+            /// <para>The status of the task. Valid values: WAITING_UNREADY = 0, WAITING_READY = 1, PROCESSING = 2, FINISHED = 3, ERROR = 4, and STOPPED = -1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -79,7 +71,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an exception message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,7 +82,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>

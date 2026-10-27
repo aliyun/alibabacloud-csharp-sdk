@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The returned HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public DescribeSqlLogRecordsResponseBodyData Data { get; set; }
         public class DescribeSqlLogRecordsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The end time of the query. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1608888296000</para>
@@ -37,15 +37,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is complete. Valid values:</para>
+            /// <para>Indicates whether the task is completed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: The task is in progress.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: The task is complete.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Not completed.</description></item>
+            /// <item><description><b>1</b>: Completed.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If this parameter is <b>0</b> and the <b>JobId</b> parameter is returned, the current request is an asynchronous request and you cannot obtain the returned results. You must use the value of <b>JobId</b> to initiate another request. Set the <b>Filters</b> parameter to the value of <b>JobId</b>. Example: <c>Filters=[{&quot;Key&quot;: &quot;JobId&quot;, &quot;Value&quot;: &quot;******&quot;}]</c>.</para>
+            /// <para>If <b>Finish</b> is 0 and the <b>JobId</b> field is included, the current request is an asynchronous request and the result cannot be directly obtained. You must query the result based on <b>JobId</b>. When you query the result, use <b>JobId</b> as the input value for <b>Filters</b>. Example: <c>Filters=[{&quot;Key&quot;: &quot;JobId&quot;, &quot;Value&quot;: &quot;******&quot;}]</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Finish { get; set; }
 
             /// <summary>
-            /// <para>The details of the SQL logs.</para>
+            /// <para>The list data.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -90,7 +88,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string AffectColumns { get; set; }
 
                     /// <summary>
-                    /// <para>The client IP address.</para>
+                    /// <para>The client IP address in the SQL log record.
+                    /// The IP address of the client in the SQL log record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10.0.0.1xx</para>
@@ -100,7 +99,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ClientIp { get; set; }
 
                     /// <summary>
-                    /// <para>The client port.</para>
+                    /// <para>The port number of the client.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3306</para>
@@ -110,7 +109,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ClientPort { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is reserved.</para>
+                    /// <para>The reserved parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>None</para>
@@ -120,7 +119,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Collection { get; set; }
 
                     /// <summary>
-                    /// <para>The connection ID.</para>
+                    /// <para>The connection ID of the SQL log record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ld-******</para>
@@ -130,7 +129,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ConnectionId { get; set; }
 
                     /// <summary>
-                    /// <para>The execution duration. Unit: microseconds (μs).</para>
+                    /// <para>The execution duration in microseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>58</para>
@@ -140,7 +139,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Consume { get; set; }
 
                     /// <summary>
-                    /// <para>The CPU execution time. Unit: microseconds (μs).</para>
+                    /// <para>The CPU execution time in microseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -150,7 +149,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? CpuTime { get; set; }
 
                     /// <summary>
-                    /// <para>The database name.</para>
+                    /// <para>The name of the database.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>testdb</para>
@@ -160,7 +159,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string DBName { get; set; }
 
                     /// <summary>
-                    /// <para>The execution time. The time is in UTC. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+                    /// <para>The execution time in the UTC format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2023-12-07T02:15:32Z</para>
@@ -170,7 +169,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ExecuteTime { get; set; }
 
                     /// <summary>
-                    /// <para>The extended information. This parameter is reserved.</para>
+                    /// <para>The extended information field. This is a reserved parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>None</para>
@@ -180,7 +179,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Ext { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows fetched by the compute node (CN) in a PolarDB-X 2.0 instance.</para>
+                    /// <para>The number of rows pulled by the compute node (CN) in PolarDB-X 2.0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -190,7 +189,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Frows { get; set; }
 
                     /// <summary>
-                    /// <para>The client IP address.</para>
+                    /// <para>The IP address of the client.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>11.197.XX.XX</para>
@@ -200,7 +199,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string HostAddress { get; set; }
 
                     /// <summary>
-                    /// <para>The lock wait time. Unit: milliseconds.</para>
+                    /// <para>The lock wait time in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -230,7 +229,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string NodeId { get; set; }
 
                     /// <summary>
-                    /// <para>The execution time. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                    /// <para>The execution timestamp. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1701886532000</para>
@@ -240,7 +239,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? OriginTime { get; set; }
 
                     /// <summary>
-                    /// <para>The degree of parallelism (DOP) for the PolarDB for MySQL instance.</para>
+                    /// <para>The parallel queue time of the PolarDB for MySQL instance in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -250,7 +249,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ParallelDegree { get; set; }
 
                     /// <summary>
-                    /// <para>The parallel queue time for the PolarDB for MySQL instance. Unit: milliseconds.</para>
+                    /// <para>The degree of parallelism of the PolarDB for MySQL instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -260,7 +259,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ParallelQueueTime { get; set; }
 
                     /// <summary>
-                    /// <para>The SQL parameters.</para>
+                    /// <para>The parameters of the SQL log record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[1, &quot;das&quot;]</para>
@@ -270,7 +269,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Params { get; set; }
 
                     /// <summary>
-                    /// <para>The number of asynchronous physical reads.</para>
+                    /// <para>The number of physical asynchronous reads.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -290,7 +289,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? PhysicRead { get; set; }
 
                     /// <summary>
-                    /// <para>The number of synchronous physical reads.</para>
+                    /// <para>The number of physical synchronous reads.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -300,7 +299,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? PhysicSyncRead { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol type.</para>
+                    /// <para>The protocol type of the SQL log record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MySQL</para>
@@ -330,7 +329,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string RowKey { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows updated or returned by the compute node (CN) of a PolarDB-X 2.0 instance.</para>
+                    /// <para>The total number of rows updated or returned by the compute node of the PolarDB-X 2.0 instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -350,7 +349,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ScanRows { get; set; }
 
                     /// <summary>
-                    /// <para>The number of requests sent from a compute node (CN) to data nodes (DNs) in a PolarDB-X 2.0 instance.</para>
+                    /// <para>The number of requests from the compute node (CN) to the data node (DN) in PolarDB-X 2.0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -392,10 +391,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The execution status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>0</b>: The execution was successful.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>1</b>: The execution failed.</para>
-                    /// </description></item>
+                    /// <item><description><b>0</b>: The execution was successful.</description></item>
+                    /// <item><description><b>1</b>: The execution failed.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -406,7 +403,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string State { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the table that the SQL statement references.</para>
+                    /// <para>The table name in the SQL log record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>das</para>
@@ -426,7 +423,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ThreadId { get; set; }
 
                     /// <summary>
-                    /// <para>The trace ID for a PolarDB-X 2.0 instance. This is the ID of the SQL statement that was executed on a data node (DN).</para>
+                    /// <para>The trace ID in PolarDB-X 2.0, which is the execution ID of the SQL statement on the data node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>14c93b7c7bf00000</para>
@@ -456,12 +453,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? UpdateRows { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether an In-Memory Column Index (IMCI) is used for the PolarDB for MySQL instance.</para>
+                    /// <para>Indicates whether the PolarDB for MySQL instance uses IMCI. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>true</b></para>
-                    /// </description></item>
-                    /// <item><description><para><b>false</b></para>
-                    /// </description></item>
+                    /// <item><description><b>true</b>: Yes.</description></item>
+                    /// <item><description><b>false</b>: No.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -472,7 +467,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string UseImciEngine { get; set; }
 
                     /// <summary>
-                    /// <para>The endpoint that is resolved from the query connection string.</para>
+                    /// <para>The resolved endpoint address of the query connection.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100.115.XX.XX</para>
@@ -482,7 +477,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Vip { get; set; }
 
                     /// <summary>
-                    /// <para>The number of write operations on an ApsaraDB RDS for SQL Server instance.</para>
+                    /// <para>The number of writes for the ApsaraDB RDS for SQL Server engine.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -496,7 +491,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>The asynchronous task ID.</para>
+            /// <para>The ID of the asynchronous task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MzI4NTZfUUlOR0RBT19DTTlfTlUyMF9NWVNRTF9PREJTX0xWU18zMjg1Nl9teXNxbF9XZWQgTWFyIDA2IDE0OjUwOjQ3IENTVCAyMDI0XzBfMzBfRXhlY3V0ZVRpbWVfREVTQ19XZWQgTWFyIDA2IDE0OjM1OjQ3IENTVCAyMDI0Xw==_1709708406465</para>
@@ -506,7 +501,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1596177993000</para>
@@ -516,7 +511,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -530,7 +525,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -553,10 +548,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

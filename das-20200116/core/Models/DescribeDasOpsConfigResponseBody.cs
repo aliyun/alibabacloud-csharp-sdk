@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The payment method.</para>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://prodpopscanGGfYbZif.302prod.xaliyun.com">http://prodpopscanGGfYbZif.302prod.xaliyun.com</a></para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Managed Services instance ID.</para>
+            /// <para>The instance ID of Alibaba Cloud Managed Services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-2zelo5v5u0678jx04</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? EcoEnable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Alibaba Cloud Managed Services is enabled.</para>
+            /// <para>Indicates whether Alibaba Cloud Managed Services is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The end time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The end time. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1608888296000</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Alibaba Cloud Managed Services is enabled.</para>
+            /// <para>Indicates whether Alibaba Cloud Managed Services is enabled.</para>
             /// </summary>
             [NameInMap("OpsEnable")]
             [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>The start time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The start time. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672531200000</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

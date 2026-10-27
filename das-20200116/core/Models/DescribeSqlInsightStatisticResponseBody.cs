@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The envelope for asynchronous query results. The first call returns <b>ResultId</b> and <b>State</b>. Poll with the exact same request parameters until <b>State</b> is <b>SUCCESS</b>, then retrieve the statistical details from <b>List</b>.</para>
+        /// <para>The envelope for the asynchronous query result. The first call returns <b>ResultId</b> and <b>State</b>. You must poll the API with the exact same request parameters until <b>State</b> is <b>SUCCESS</b>, and then retrieve the statistical details from <b>List</b>.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSqlInsightStatisticResponseBodyData Data { get; set; }
         public class DescribeSqlInsightStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The SQL Explorer statistical query results.</para>
+            /// <para>The SQL Explorer statistical query result.</para>
             /// <remarks>
             /// <para>Returned only when <b>State</b> is <b>SUCCESS</b>.</para>
             /// </remarks>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The extended information.</para>
                 /// <remarks>
-                /// <para>This field is not returned by this operation.</para>
+                /// <para>This operation does not return this field.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -70,11 +70,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? AffectRows { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the aggregation dimension for this statistical entry, which varies based on the <b>Type</b> request parameter. Valid values:</para>
+                    /// <para>The value of the aggregation dimension for the current statistics. This value varies based on the <b>Type</b> request parameter. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>When aggregated by SQL template: the SQL template ID, which is the same as <b>SqlId</b>.</description></item>
-                    /// <item><description>When <b>Type</b> is set to <b>FullRequestOrigin</b>: the access source address.</description></item>
-                    /// <item><description>When <b>Type</b> is set to <b>FullRequestUser</b>: the database username.</description></item>
+                    /// <item><description>When <b>Type</b> is <b>FullRequestOrigin</b>: the source access address.</description></item>
+                    /// <item><description>When <b>Type</b> is <b>FullRequestUser</b>: the database username.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of affected rows.</para>
                     /// <remarks>
-                    /// <para>Returned only for Lindorm instances. The value is null for other database engines.</para>
+                    /// <para>Returned only for Lindorm instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average CPU time consumed by SQL execution, in microseconds.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -111,9 +111,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgCpuTime { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows fetched by the PolarDB-X compute node from data nodes.</para>
+                    /// <para>The average number of rows fetched by PolarDB-X compute nodes from data nodes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</para>
+                    /// <para>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average lock wait time per execution, in milliseconds.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of logical reads per execution.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of physical asynchronous reads per execution.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of physical reads.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of physical synchronous reads per execution.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -189,9 +189,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgPhysicalSyncRead { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of updated rows and returned rows for the PolarDB-X compute node.</para>
+                    /// <para>The average number of updated and returned rows for PolarDB-X compute nodes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</para>
+                    /// <para>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgRows { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows scanned per execution.</para>
+                    /// <para>The average number of scanned rows per execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>53421.0</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgRowsExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows returned per execution.</para>
+                    /// <para>The average number of returned rows per execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>14</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgRowsReturned { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows updated per execution.</para>
+                    /// <para>The average number of updated rows per execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30.2</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of scanned rows.</para>
                     /// <remarks>
-                    /// <para>This field is not returned by this operation. Use <b>AvgRowsExamined</b> for the average number of scanned rows.</para>
+                    /// <para>This operation does not return this field. To obtain the average number of scanned rows, use <b>AvgRowsExamined</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -255,9 +255,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgScanRows { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of requests sent by the PolarDB-X compute node to data nodes.</para>
+                    /// <para>The average number of requests sent from PolarDB-X compute nodes to data nodes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</para>
+                    /// <para>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of logical writes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgWrites { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of executions of the SQL template within the statistical interval.</para>
+                    /// <para>The total number of executions for the SQL template within the statistical period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>127</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Count { get; set; }
 
                     /// <summary>
-                    /// <para>The ratio of the number of executions of this statistical entry to the total number of executions of all SQL statements on the instance. The value ranges from 0 to 1.</para>
+                    /// <para>The ratio of the number of times the SQL template in this entry is executed to the total number of times SQL statements execute on the instance. Valid values: 0 to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0586</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total CPU time consumed by SQL execution, in microseconds.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -324,9 +324,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Database { get; set; }
 
                     /// <summary>
-                    /// <para>The error code returned by SQL execution.</para>
+                    /// <para>The error code returned by the SQL execution.</para>
                     /// <remarks>
-                    /// <para>The error code is a detail of a single SQL statement. This operation returns template-level aggregated statistics and does not return this field. Use <b>ErrorCount</b> for error information.</para>
+                    /// <para>Error codes belong to the details of a single SQL statement. This operation returns aggregated statistics at the template level and does not return this field. To check error occurrences, use <b>ErrorCount</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// <para>The number of execution errors for the SQL template within the statistical interval.</para>
+                    /// <para>The number of execution errors for the SQL template within the statistical period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -347,9 +347,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ErrorCount { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the SQL template first appeared.</para>
+                    /// <para>The time when the SQL template first appeared. The time is a UNIX timestamp in milliseconds.</para>
                     /// <remarks>
-                    /// <para>This field is not returned by this operation.</para>
+                    /// <para>This operation does not return this field.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -360,9 +360,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? FirstTime { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows fetched by the PolarDB-X compute node from data nodes.</para>
+                    /// <para>The total number of rows fetched by PolarDB-X compute nodes from data nodes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</para>
+                    /// <para>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The hash value of the SQL template, returned together with the SQL template.</para>
                     /// <remarks>
-                    /// <para>This value is generated by the PolarDB-X compute node kernel. The value is empty for non-PolarDB-X compute node instances.</para>
+                    /// <para>This value is generated by the kernel of PolarDB-X compute nodes. For instances that are not PolarDB-X compute nodes, the value is empty.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The endpoint of the instance to which the statistical data belongs.</para>
                     /// <remarks>
-                    /// <para>Whether this field is returned depends on the aggregated storage link of the instance. The value is null for some links.</para>
+                    /// <para>Whether this field is returned depends on the converged storage link of the instance. For some links, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total lock wait time, in milliseconds.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total number of logical reads.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -425,9 +425,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? LogicalRead { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum CPU time in a single execution, in microseconds.</para>
+                    /// <para>The maximum CPU time consumed in a single execution, in microseconds.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of logical reads in a single execution.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of physical reads in a single execution.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -464,9 +464,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxPhysicalRead { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows scanned in a single execution.</para>
+                    /// <para>The maximum number of scanned rows in a single execution.</para>
                     /// <remarks>
-                    /// <para>This field is not returned by this operation. Use <b>RowsExamined</b> and <b>AvgRowsExamined</b> for scanned row counts.</para>
+                    /// <para>This operation does not return this field. To obtain the number of scanned rows, use <b>RowsExamined</b> and <b>AvgRowsExamined</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -477,7 +477,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxRowsExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows returned in a single execution.</para>
+                    /// <para>The maximum number of returned rows in a single execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -499,7 +499,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of logical writes in a single execution.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -510,9 +510,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxWrites { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum CPU time in a single execution, in microseconds.</para>
+                    /// <para>The minimum CPU time consumed in a single execution, in microseconds.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The minimum number of logical reads in a single execution.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The minimum number of physical reads in a single execution.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -549,7 +549,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MinPhysicalRead { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of rows returned in a single execution.</para>
+                    /// <para>The minimum number of returned rows in a single execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -571,7 +571,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The minimum number of logical writes in a single execution.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -582,9 +582,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MinWrites { get; set; }
 
                     /// <summary>
-                    /// <para>The display alias configured for the access source address.</para>
+                    /// <para>The display alias configured for the source access address.</para>
                     /// <remarks>
-                    /// <para>Returned only when aggregated by access source (when <b>Type</b> is set to <b>FullRequestOrigin</b>). The value is null in other scenarios.</para>
+                    /// <para>Returned only when aggregated by access source (when <b>Type</b> is <b>FullRequestOrigin</b>). In other scenarios, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -597,7 +597,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The source address of the client that initiated the SQL statement.</para>
                     /// <remarks>
-                    /// <para>When <b>Type</b> is set to <b>FullRequestOrigin</b>, this field serves as the aggregation dimension for the statistical entry.</para>
+                    /// <para>When <b>Type</b> is <b>FullRequestOrigin</b>, this field is the aggregation dimension for the statistics.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -610,7 +610,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The parameter content of the SQL sample.</para>
                     /// <remarks>
-                    /// <para>This operation returns template-level aggregated statistics and does not return this field.</para>
+                    /// <para>This operation returns aggregated statistics at the template level and does not return this field.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -623,7 +623,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total number of physical asynchronous reads.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -636,7 +636,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total number of physical reads.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other database engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -649,7 +649,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total number of physical synchronous reads.</para>
                     /// <remarks>
-                    /// <para>Data is available only when <b>Version</b> is set to <b>1</b>.</para>
+                    /// <para>Data is available only when <b>Version</b> is <b>1</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -660,9 +660,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? PhysicalSyncRead { get; set; }
 
                     /// <summary>
-                    /// <para>The port of the instance to which the statistical data belongs.</para>
+                    /// <para>The connection port of the instance to which the statistical data belongs.</para>
                     /// <remarks>
-                    /// <para>Whether this field is returned depends on the aggregated storage link of the instance. The value is null for some links.</para>
+                    /// <para>Whether this field is returned depends on the converged storage link of the instance. For some links, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -683,9 +683,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Psql { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of updated rows and returned rows for the PolarDB-X compute node.</para>
+                    /// <para>The total number of updated and returned rows for PolarDB-X compute nodes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other engines.</para>
+                    /// <para>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -696,7 +696,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Rows { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows examined by the SQL template within the statistical interval.</para>
+                    /// <para>The total number of scanned rows for the SQL template within the statistical period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2048576</para>
@@ -706,7 +706,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? RowsExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows returned by the SQL template within the statistical interval.</para>
+                    /// <para>The total number of returned rows for the SQL template within the statistical period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>14</para>
@@ -716,9 +716,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? RowsReturned { get; set; }
 
                     /// <summary>
-                    /// <para>The total execution duration of the SQL template within the statistical interval. Unit: milliseconds.</para>
+                    /// <para>The total execution time of the SQL template within the statistical period, in milliseconds.</para>
                     /// <remarks>
-                    /// <para>For PolarDB-X compute nodes (where <b>Role</b> is <b>polarx_cn</b>) with kernel versions earlier than 5.4.13, this value is converted from microseconds to milliseconds.</para>
+                    /// <para>For PolarDB-X compute nodes (where <b>Role</b> is <b>polarx_cn</b>) with a kernel version earlier than 5.4.13, this value is converted from microseconds to milliseconds.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -729,9 +729,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? Rt { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times the execution duration exceeds 1 second.</para>
+                    /// <para>The number of times the execution duration exceeded 1 second.</para>
                     /// <remarks>
-                    /// <para>Whether this field is returned depends on the aggregation storage link of the instance. The value is null for certain links.</para>
+                    /// <para>Whether this field is returned depends on the aggregated storage link of the instance. For some links, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -742,7 +742,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? RtGreaterThanOneSecondCount { get; set; }
 
                     /// <summary>
-                    /// <para>The ratio of the total execution duration of this entry to the total execution duration of all SQL statements on the instance. Valid values: 0 to 1.</para>
+                    /// <para>The ratio of the total execution time of this statistic to the total execution time of all SQL statements for the instance. Valid values: 0 to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.1384</para>
@@ -765,9 +765,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string SampleType { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows scanned by a single SQL statement.</para>
+                    /// <para>The number of scanned rows for a single SQL statement.</para>
                     /// <remarks>
-                    /// <para>This operation returns template-level aggregated statistics and does not return this field. Use the aggregated metrics <b>RowsExamined</b> and <b>AvgRowsExamined</b> instead.</para>
+                    /// <para>This operation returns aggregated statistics at the template dimension and does not return this field. Use the aggregated metrics <b>RowsExamined</b> and <b>AvgRowsExamined</b> instead.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -778,9 +778,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ScanRows { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of requests sent from the PolarDB-X compute node to data nodes.</para>
+                    /// <para>The total number of requests sent from PolarDB-X compute nodes to data nodes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other engines.</para>
+                    /// <para>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -804,7 +804,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Sql { get; set; }
 
                     /// <summary>
-                    /// <para>The SQL template ID that uniquely identifies a type of parameterized SQL statement. Multiple executions under the same template are aggregated into a single statistical entry. You can use this ID to correlate the same type of SQL across multi-dimensional queries.</para>
+                    /// <para>The SQL template ID, which uniquely identifies a category of parameterized SQL statements. Multiple executions under the same template are aggregated into a single statistic. You can use this ID to associate the same category of SQL statements across multi-dimensional queries.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>651b56fe9418d48edb8fdf0980ec****</para>
@@ -814,7 +814,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string SqlId { get; set; }
 
                     /// <summary>
-                    /// <para>The SQL text with parameter values uniformly processed, used in sample data scenarios.</para>
+                    /// <para>The SQL text after unified processing of parameter values, used in sample data scenarios.</para>
                     /// <remarks>
                     /// <para>This operation does not return this field.</para>
                     /// </remarks>
@@ -857,7 +857,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string SqlType { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows updated by the SQL template within the statistical interval.</para>
+                    /// <para>The total number of updated rows for the SQL template within the statistical period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3810</para>
@@ -876,7 +876,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The database thread ID that executed the SQL statement.</para>
                     /// <remarks>
-                    /// <para>The thread ID is a detail of a single SQL statement. This operation returns template-level aggregated statistics and does not return this field.</para>
+                    /// <para>The thread ID belongs to the details of a single SQL statement. This operation returns aggregated statistics at the template dimension and does not return this field.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -887,9 +887,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ThreadId { get; set; }
 
                     /// <summary>
-                    /// <para>The execution duration ratio.</para>
+                    /// <para>The execution time proportion.</para>
                     /// <remarks>
-                    /// <para>This operation returns the execution duration ratio through <b>RtRate</b> and does not return this field.</para>
+                    /// <para>This operation returns the execution time proportion through <b>RtRate</b> and does not return this field.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -900,9 +900,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? TimeRate { get; set; }
 
                     /// <summary>
-                    /// <para>The data timestamp. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                    /// <para>The data timestamp, which is a UNIX timestamp in milliseconds.</para>
                     /// <remarks>
-                    /// <para>The statistical results are aggregated at the SQL template level and do not return this field.</para>
+                    /// <para>The statistical results are aggregated at the SQL template dimension and do not return this field.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -915,7 +915,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total number of affected rows.</para>
                     /// <remarks>
-                    /// <para>This field is returned only for Lindorm instances. The value is null for other engines.</para>
+                    /// <para>This field is returned only for Lindorm instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -926,9 +926,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? TotalAffectRows { get; set; }
 
                     /// <summary>
-                    /// <para>The total SQL execution duration.</para>
+                    /// <para>The total execution time of the SQL statement.</para>
                     /// <remarks>
-                    /// <para>This operation does not return this field. Use <b>Rt</b> for the total execution duration.</para>
+                    /// <para>This operation does not return this field. Use <b>Rt</b> for the total execution time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -939,9 +939,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? TotalRt { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows scanned.</para>
+                    /// <para>The total number of scanned rows.</para>
                     /// <remarks>
-                    /// <para>This operation does not return this field. Use <b>RowsExamined</b> for the total number of rows scanned.</para>
+                    /// <para>This operation does not return this field. Use <b>RowsExamined</b> for the total number of scanned rows.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -952,9 +952,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? TotalScanRows { get; set; }
 
                     /// <summary>
-                    /// <para>The execution count trend sequence of the SQL template, divided into time slices within the query time window.</para>
+                    /// <para>The trend sequence of execution counts for the SQL template, divided by time slices within the query time window.</para>
                     /// <remarks>
-                    /// <para>This field is returned only when the request parameter <b>DoFillTrend</b> is set to <b>true</b> and the trend padding capability is enabled for the instance. The time slice interval is automatically determined by the query span. Time slices with no data may be padded with zeros.</para>
+                    /// <para>This field is returned only when the request parameter <b>DoFillTrend</b> is set to <b>true</b> and the trend padding feature is enabled for the instance. The time slice interval is automatically determined by the query span. Time slices with no data may be padded with zeros.</para>
                     /// </remarks>
                     /// </summary>
                     [NameInMap("Trend")]
@@ -962,7 +962,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public List<DescribeSqlInsightStatisticResponseBodyDataDataListTrend> Trend { get; set; }
                     public class DescribeSqlInsightStatisticResponseBodyDataDataListTrend : TeaModel {
                         /// <summary>
-                        /// <para>The timestamp of the trend data point. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                        /// <para>The timestamp of the trend point, which is a UNIX timestamp in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1718000000000</para>
@@ -984,9 +984,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     }
 
                     /// <summary>
-                    /// <para>The number of rows updated by a single SQL statement.</para>
+                    /// <para>The number of updated rows for a single SQL statement.</para>
                     /// <remarks>
-                    /// <para>This operation returns template-level aggregated statistics and does not return this field. Use the aggregated metrics <b>SumRowsUpdated</b> and <b>AvgRowsUpdated</b> instead.</para>
+                    /// <para>This operation returns aggregated statistics at the template dimension and does not return this field. Use the aggregated metrics <b>SumRowsUpdated</b> and <b>AvgRowsUpdated</b> instead.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -999,7 +999,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The database username that executed the SQL statement.</para>
                     /// <remarks>
-                    /// <para>When <b>Type</b> is set to <b>FullRequestUser</b>, this field serves as the aggregation dimension for the statistical entry.</para>
+                    /// <para>When <b>Type</b> is <b>FullRequestUser</b>, this field is the aggregation dimension for this statistic.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1010,13 +1010,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string User { get; set; }
 
                     /// <summary>
-                    /// <para>The SQL Explorer data collection link version. The value <b>1</b> is returned when the instance collects logical read or lock wait data. Otherwise, the value <b>0</b> is returned. Valid values:</para>
+                    /// <para>The version of the SQL Explorer data collection link. If the instance collects logical read or lock wait data, the value is <b>1</b>. Otherwise, the value is <b>0</b>. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>0</b>: V0 basic collection link.</description></item>
-                    /// <item><description><b>1</b>: V1 collection link, which additionally collects four metrics (<b>LockWaitTime</b>, <b>LogicalRead</b>, <b>PhysicalSyncRead</b>, and <b>PhysicalAsyncRead</b>) on top of V0.</description></item>
+                    /// <item><description><b>1</b>: V1 collection link, which collects four additional metrics based on V0: <b>LockWaitTime</b>, <b>LogicalRead</b>, <b>PhysicalSyncRead</b>, and <b>PhysicalAsyncRead</b>.</description></item>
                     /// </list>
                     /// <remarks>
-                    /// <para>When the value is <b>0</b>, the extended metrics contain no data.</para>
+                    /// <para>When <b>0</b> is returned, the preceding extended metrics have no data.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1029,7 +1029,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The VPC ID of the instance to which the statistical data belongs.</para>
                     /// <remarks>
-                    /// <para>Whether this field is returned depends on the aggregation storage link of the instance. The value is null for certain links.</para>
+                    /// <para>Whether this field is returned depends on the aggregated storage link of the instance. For some links, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1042,7 +1042,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total number of logical writes.</para>
                     /// <remarks>
-                    /// <para>This metric is exclusive to SQL Server instances. The value is null for other engines.</para>
+                    /// <para>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1055,7 +1055,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// <para>The current page number, corresponding to the request parameter <b>PageNo</b>.</para>
+                /// <para>The current page number, which corresponds to the request parameter <b>PageNo</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1065,7 +1065,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? PageNo { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page, corresponding to the request parameter <b>PageSize</b>.</para>
+                /// <para>The number of entries returned per page, which corresponds to the request parameter <b>PageSize</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -1075,7 +1075,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of statistical entries that match the query conditions. You can use this value for pagination calculation.</para>
+                /// <para>The total number of statistical entries that meet the query conditions, which can be used for pagination.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -1087,7 +1087,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>The error code of the asynchronous query failure.</para>
+            /// <para>The error code for the failed asynchronous query.</para>
             /// <remarks>
             /// <para>This field is returned only when the query fails.</para>
             /// </remarks>
@@ -1100,7 +1100,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asynchronous query has completed. Valid values:</para>
+            /// <para>Indicates whether the asynchronous query has finished. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: <b>State</b> is <b>SUCCESS</b> or <b>FAIL</b>.</description></item>
             /// <item><description><b>false</b>: <b>State</b> is <b>RUNNING</b>.</description></item>
@@ -1111,7 +1111,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? IsFinish { get; set; }
 
             /// <summary>
-            /// <para>The error description of the asynchronous query failure.</para>
+            /// <para>The error description for the failed asynchronous query.</para>
             /// <remarks>
             /// <para>This field is returned only when the query fails.</para>
             /// </remarks>
@@ -1137,9 +1137,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string RequestKey { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous query result ID, in the format of an async_ prefix followed by a hash value computed from all business parameters of the request.</para>
+            /// <para>The asynchronous query result ID, which is in the format of an async_ prefix followed by a hash value. It is calculated based on all business parameters of the current request.</para>
             /// <remarks>
-            /// <para>Repeated calls with the same parameters return the same query result. Therefore, when polling, you must use exactly the same request parameters as the initial call. Any change in parameters generates a different <b>ResultId</b> and triggers a new query.</para>
+            /// <para>Repeated calls with the same parameters hit the same query result. Therefore, you must carry the exact same request parameters as the first call when polling. Any parameter change generates a different <b>ResultId</b> and triggers a new query.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1150,14 +1150,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ResultId { get; set; }
 
             /// <summary>
-            /// <para>The current status of the asynchronous query. Valid values:</para>
+            /// <para>The current state of the asynchronous query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RUNNING</b>: The query is in progress. Continue polling.</description></item>
-            /// <item><description><b>SUCCESS</b>: The query succeeded. The <b>Data</b> field contains data only in this state.</description></item>
+            /// <item><description><b>RUNNING</b>: The query is running. Continue polling.</description></item>
+            /// <item><description><b>SUCCESS</b>: The query is successful. The <b>Data</b> field has a value.</description></item>
             /// <item><description><b>FAIL</b>: The query failed.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>When the query fails, the operation directly returns an error code and error message instead of a normal response body with <b>State</b> set to <b>FAIL</b>.</para>
+            /// <para>When the query fails, the operation directly returns an error code and an error message, instead of a normal response body with <b>State</b> set to <b>FAIL</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1168,9 +1168,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The time when the asynchronous query was submitted. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the asynchronous query was submitted, which is a UNIX timestamp in milliseconds.</para>
             /// <remarks>
-            /// <para>When the query fails, this value indicates the time when the failure occurred.</para>
+            /// <para>When the query fails, this value is the time when the failure occurred.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1183,7 +1183,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -1193,7 +1193,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request, which can be used for troubleshooting.</para>
+        /// <para>The unique identifier of the request, which can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
@@ -1206,7 +1206,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed. Check the <b>Code</b> and <b>Message</b> fields to determine the cause.</description></item>
+        /// <item><description><b>false</b>: The request failed. Check the cause based on <b>Code</b> and <b>Message</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

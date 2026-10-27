@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSlowLogStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string DbInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the query task, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The end time of the query task. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
                 /// <remarks>
                 /// <para>The end time of the query task must be later than the start time.</para>
                 /// </remarks>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string AccountName { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgCPUTime { get; set; }
 
                     /// <summary>
-                    /// <para>The average CPU query time. Unit: seconds.</para>
+                    /// <para>The average CPU query time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>456</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of documents scanned.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgDocExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows fetched.</para>
+                    /// <para>The average number of pulled rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of I/O writes.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -152,9 +152,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgIOWrites { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows scanned by the index.</para>
+                    /// <para>The average number of index entries scanned.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of rows affected by the last statement.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgLastRowsCountAffected { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of logical reads.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of physical reads.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgPhysicalIOReads { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgQueryTime { get; set; }
 
                     /// <summary>
-                    /// <para>The average query execution duration. Unit: seconds.</para>
+                    /// <para>The average query duration, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>6.211</para>
@@ -248,23 +248,29 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgQueryTimeSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The average size of the request, in bytes. This parameter is valid only for Redis.</para>
+                    /// <para>The average size of the request, in bytes (valid only for Redis).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("AvgRequestSize")]
                     [Validation(Required=false)]
                     public double? AvgRequestSize { get; set; }
 
                     /// <summary>
-                    /// <para>The average response size, in bytes. This parameter is valid only for Redis.</para>
+                    /// <para>The average response size, in bytes (valid only for Redis).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("AvgResponseSize")]
                     [Validation(Required=false)]
                     public double? AvgResponseSize { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows returned.</para>
+                    /// <para>The average number of returned rows.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -285,9 +291,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgRows { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows affected.</para>
+                    /// <para>The average number of affected rows.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -298,7 +304,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgRowsCountAffected { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows examined.</para>
+                    /// <para>The average number of scanned rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>53421.0</para>
@@ -308,7 +314,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgRowsExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows returned.</para>
+                    /// <para>The average number of returned rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2.0</para>
@@ -319,6 +325,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                     /// <summary>
                     /// <para>The average execution duration.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("AvgRt")]
                     [Validation(Required=false)]
@@ -335,7 +344,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgScnt { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -347,9 +356,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? CPUTime { get; set; }
 
                     /// <summary>
-                    /// <para>The CPU query time. Unit: seconds.</para>
+                    /// <para>The CPU query time, in seconds.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -370,7 +379,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ClientIp { get; set; }
 
                     /// <summary>
-                    /// <para>The command that was executed. This parameter is valid only for Redis.</para>
+                    /// <para>The executed command (valid only for Redis).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>systemctl restart nginx.service</para>
@@ -382,7 +391,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The slow query statement.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for Tair (Redis OSS-Compatible) database instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -413,7 +422,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? CountRate { get; set; }
 
                     /// <summary>
-                    /// <para>The database name.</para>
+                    /// <para>The name of the database.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>member_score</para>
@@ -433,7 +442,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Database { get; set; }
 
                     /// <summary>
-                    /// <para>The database ID. This parameter is valid only for Redis.</para>
+                    /// <para>The database ID (valid only for Redis).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -455,7 +464,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The number of documents scanned.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -466,7 +475,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? DocExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The number of documents scanned during the MongoDB operation.</para>
+                    /// <para>The number of documents scanned when the MongoDB operation is executed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -476,9 +485,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? DocsExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows fetched by the compute node (CN) of the ApsaraDB for PolarDB-X 2.0 database instance.</para>
+                    /// <para>The number of rows pulled by the compute node (CN) of the PolarDB-X 2.0 instance.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for PolarDB-X 2.0 database instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -503,14 +512,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         public List<double?> AvgLockTime { get; set; }
 
                         /// <summary>
-                        /// <para>The average number of rows examined.</para>
+                        /// <para>The average number of scanned rows.</para>
                         /// </summary>
                         [NameInMap("AvgRowsExamined")]
                         [Validation(Required=false)]
                         public List<double?> AvgRowsExamined { get; set; }
 
                         /// <summary>
-                        /// <para>The average number of rows returned.</para>
+                        /// <para>The average number of returned rows.</para>
                         /// </summary>
                         [NameInMap("AvgRowsSent")]
                         [Validation(Required=false)]
@@ -524,21 +533,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         public List<double?> AvgRt { get; set; }
 
                         /// <summary>
-                        /// <para>The number of slow logs.</para>
+                        /// <para>The number of slow query logs.</para>
                         /// </summary>
                         [NameInMap("Count")]
                         [Validation(Required=false)]
                         public List<long?> Count { get; set; }
 
                         /// <summary>
-                        /// <para>The task status.</para>
+                        /// <para>The task state.</para>
                         /// </summary>
                         [NameInMap("Item")]
                         [Validation(Required=false)]
                         public List<DescribeSlowLogStatisticResponseBodyDataDataLogsHistogramItem> Item { get; set; }
                         public class DescribeSlowLogStatisticResponseBodyDataDataLogsHistogramItem : TeaModel {
                             /// <summary>
-                            /// <para>The number of slow logs.</para>
+                            /// <para>The number of slow query logs.</para>
                             /// </summary>
                             [NameInMap("Count")]
                             [Validation(Required=false)]
@@ -571,30 +580,30 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         public List<double?> MaxLockTime { get; set; }
 
                         /// <summary>
-                        /// <para>The maximum number of rows examined.</para>
+                        /// <para>The maximum number of scanned rows.</para>
                         /// </summary>
                         [NameInMap("MaxRowsExamined")]
                         [Validation(Required=false)]
                         public List<long?> MaxRowsExamined { get; set; }
 
                         /// <summary>
-                        /// <para>The maximum number of rows returned.</para>
+                        /// <para>The maximum number of returned rows.</para>
                         /// </summary>
                         [NameInMap("MaxRowsSent")]
                         [Validation(Required=false)]
                         public List<long?> MaxRowsSent { get; set; }
 
                         /// <summary>
-                        /// <para>The maximum response time. Unit: ms.</para>
+                        /// <para>The maximum RT. Unit: milliseconds.</para>
                         /// </summary>
                         [NameInMap("MaxRt")]
                         [Validation(Required=false)]
                         public List<double?> MaxRt { get; set; }
 
                         /// <summary>
-                        /// <para>The total number of rows examined.</para>
+                        /// <para>The total number of scanned rows.</para>
                         /// <remarks>
-                        /// <para>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</para>
+                        /// <para>Databases that support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</para>
                         /// </remarks>
                         /// </summary>
                         [NameInMap("RowsExamined")]
@@ -602,7 +611,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         public List<long?> RowsExamined { get; set; }
 
                         /// <summary>
-                        /// <para>The number of rows returned.</para>
+                        /// <para>The number of returned rows.</para>
                         /// </summary>
                         [NameInMap("RowsSent")]
                         [Validation(Required=false)]
@@ -633,7 +642,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         public List<long?> Ts { get; set; }
 
                         /// <summary>
-                        /// <para>Deprecated.</para>
+                        /// <para><b>[Deprecated]</b></para>
                         /// </summary>
                         [NameInMap("TsEnd")]
                         [Validation(Required=false)]
@@ -652,9 +661,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string HostAddress { get; set; }
 
                     /// <summary>
-                    /// <para>The host instance ID.</para>
+                    /// <para>The ID of the host instance.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -667,7 +676,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The number of I/O writes.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -678,7 +687,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? IOWrites { get; set; }
 
                     /// <summary>
-                    /// <para>The shard name.</para>
+                    /// <para>The name of the shard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rm-uf6zix1z2jh1y6fe5</para>
@@ -688,9 +697,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string InsName { get; set; }
 
                     /// <summary>
-                    /// <para>The instance role.</para>
+                    /// <para>The role of the instance.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -701,7 +710,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string InsRole { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows scanned by the MongoDB index.</para>
+                    /// <para>The number of index entries scanned in MongoDB.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20000</para>
@@ -713,7 +722,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The number of rows affected by the last statement.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -724,7 +733,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? LastRowsCountAffected { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -736,7 +745,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? LockTime { get; set; }
 
                     /// <summary>
-                    /// <para>The lock wait time. Unit: seconds.</para>
+                    /// <para>The lock wait time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0</para>
@@ -748,7 +757,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The number of logical reads.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -759,7 +768,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? LogicalIOReads { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -771,7 +780,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? MaxCPUTime { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum CPU query time. Unit: seconds.</para>
+                    /// <para>The maximum CPU query time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>456</para>
@@ -783,7 +792,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of documents scanned.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -794,7 +803,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxDocExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows fetched.</para>
+                    /// <para>The maximum number of pulled rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -806,7 +815,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of I/O writes.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -817,9 +826,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxIOWrites { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows scanned by the index.</para>
+                    /// <para>The maximum number of index entries scanned.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -832,7 +841,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of rows affected by the last statement.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -843,7 +852,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxLastRowsCountAffected { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -867,7 +876,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of logical reads.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -880,7 +889,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The maximum number of physical reads.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -891,7 +900,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxPhysicalIOReads { get; set; }
 
                     /// <summary>
-                    /// <para>Deprecated.</para>
+                    /// <para><b>[Deprecated]</b></para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -903,7 +912,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? MaxQueryTime { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum query execution duration. Unit: seconds.</para>
+                    /// <para>The maximum query duration, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>14.402</para>
@@ -913,23 +922,29 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? MaxQueryTimeSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum size of the request, in bytes. This parameter is valid only for Redis.</para>
+                    /// <para>The maximum size of the request, in bytes (valid only for Redis).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("MaxRequestSize")]
                     [Validation(Required=false)]
                     public double? MaxRequestSize { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum response size, in bytes. This parameter is valid only for Redis.</para>
+                    /// <para>The maximum response size, in bytes (valid only for Redis).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("MaxResponseSize")]
                     [Validation(Required=false)]
                     public double? MaxResponseSize { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows returned.</para>
+                    /// <para>The maximum number of returned rows.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -950,9 +965,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxRows { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows affected.</para>
+                    /// <para>The maximum number of affected rows.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -963,7 +978,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxRowsCountAffected { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows examined.</para>
+                    /// <para>The maximum number of scanned rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>318613</para>
@@ -973,7 +988,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? MaxRowsExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of rows returned.</para>
+                    /// <para>The maximum number of returned rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>256</para>
@@ -984,6 +999,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                     /// <summary>
                     /// <para>The maximum execution duration, in seconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("MaxRt")]
                     [Validation(Required=false)]
@@ -1002,7 +1020,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The namespace.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1015,7 +1033,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The node type.</para>
                     /// <remarks>
-                    /// <para>Databases that support this field: ApsaraDB for MongoDB and Tair (Redis® OSS-Compatible).</para>
+                    /// <para>This field is currently supported by ApsaraDB for MongoDB and Tair (Redis OSS-Compatible).</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1028,7 +1046,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The operation type.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1051,7 +1069,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The number of physical reads.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1074,7 +1092,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The query ID.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1085,7 +1103,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string QueryId { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the query started. Format: yyyy-MM-dd hh:mm:ss (UTC).</para>
+                    /// <para>The start time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2024-12-25T03:00:00Z</para>
@@ -1095,7 +1113,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string QueryStartTime { get; set; }
 
                     /// <summary>
-                    /// <para>The query execution time threshold. Unit: milliseconds (ms).</para>
+                    /// <para>The execution time threshold of the query, in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>272.444</para>
@@ -1115,7 +1133,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? QueryTimeRate { get; set; }
 
                     /// <summary>
-                    /// <para>The query execution duration. Unit: seconds.</para>
+                    /// <para>The query duration, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>25.472</para>
@@ -1125,19 +1143,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? QueryTimeSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The return item numbers.</para>
+                    /// <para>The number of returned items.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>暂无</para>
+                    /// <para>None</para>
                     /// </summary>
                     [NameInMap("ReturnItemNumbers")]
                     [Validation(Required=false)]
                     public string ReturnItemNumbers { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows returned.</para>
+                    /// <para>The number of returned rows.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for MongoDB instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for MongoDB instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1148,9 +1166,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ReturnNum { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows updated or returned by the compute nodes of the ApsaraDB for PolarDB-X 2.0 database instance.</para>
+                    /// <para>The total number of rows updated or returned by the compute node of the PolarDB-X 2.0 database instance.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for PolarDB-X 2.0 database instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1161,9 +1179,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Rows { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows affected.</para>
+                    /// <para>The number of affected rows.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB RDS for SQL Server instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB RDS for SQL Server instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1174,9 +1192,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? RowsCountAffected { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows examined.</para>
+                    /// <para>The total number of scanned rows.</para>
                     /// <remarks>
-                    /// <para>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</para>
+                    /// <para>Databases that support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1187,7 +1205,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? RowsExamined { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows returned.</para>
+                    /// <para>The number of returned rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>772</para>
@@ -1217,7 +1235,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string SQLText { get; set; }
 
                     /// <summary>
-                    /// <para>HTTP or HTTPS.</para>
+                    /// <para>The scheme, such as HTTP or HTTPS.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTTP</para>
@@ -1227,9 +1245,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Scheme { get; set; }
 
                     /// <summary>
-                    /// <para>The number of DN requests from the compute node (CN) of the ApsaraDB for PolarDB-X 2.0 database instance.</para>
+                    /// <para>The number of data node (DN) requests made by the compute node (CN) of the PolarDB-X 2.0 instance.</para>
                     /// <remarks>
-                    /// <para>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</para>
+                    /// <para>This parameter is supported only by ApsaraDB for PolarDB-X 2.0 database instances.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1240,7 +1258,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Scnt { get; set; }
 
                     /// <summary>
-                    /// <para>SQL ID。</para>
+                    /// <para>The SQL ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2dca88762ec6b3812504ab8a4b******</para>
@@ -1257,18 +1275,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public DescribeSlowLogStatisticResponseBodyDataDataLogsSqlTag SqlTag { get; set; }
                     public class DescribeSlowLogStatisticResponseBodyDataDataLogsSqlTag : TeaModel {
                         /// <summary>
-                        /// <para>The remarks.</para>
-                        /// <para>The value must be 1 to 300 characters in length.</para>
+                        /// <para>The remarks.
+                        /// The remarks must be 1 to 300 characters in length.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>dba archiving</para>
+                        /// <para>DBA archiving</para>
                         /// </summary>
                         [NameInMap("Comments")]
                         [Validation(Required=false)]
                         public string Comments { get; set; }
 
                         /// <summary>
-                        /// <para>SQL ID。</para>
+                        /// <para>The SQL ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>a3931d8c3a9315dd5ed016d71cf*****</para>
@@ -1278,7 +1296,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         public string SqlId { get; set; }
 
                         /// <summary>
-                        /// <para>Multiple tags separated by commas.</para>
+                        /// <para>The comma-separated tags.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>DAS_IN_PLAN</para>
@@ -1310,7 +1328,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string SubInstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>users\nifconfig\n</para>
@@ -1320,7 +1338,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string TableName { get; set; }
 
                     /// <summary>
-                    /// <para>The thread_id. This field is available only for PolarDB for MySQL.</para>
+                    /// <para>The thread ID. This parameter is available only for PolarDB for MySQL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -1330,7 +1348,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string ThreadId { get; set; }
 
                     /// <summary>
-                    /// <para>The execution time, in UNIX timestamp format. Unit: milliseconds (ms).</para>
+                    /// <para>The execution time. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1708568930</para>
@@ -1340,7 +1358,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Timestamp { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of records. This parameter is valid only for the Redis engine.</para>
+                    /// <para>The total number of records (valid only for the Redis engine).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1357,7 +1375,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public List<DescribeSlowLogStatisticResponseBodyDataDataLogsTrend> Trend { get; set; }
                     public class DescribeSlowLogStatisticResponseBodyDataDataLogsTrend : TeaModel {
                         /// <summary>
-                        /// <para>The execution time, in UNIX timestamp format. Unit: milliseconds (ms).</para>
+                        /// <para>The execution time. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1723775362</para>
@@ -1367,7 +1385,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         public long? Timestamp { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the filter parameter.</para>
+                        /// <para>The value of the filter key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>tf-testacc-oos-parameter</para>
@@ -1391,7 +1409,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// <para>The maximum number of records per page for the paged query. Valid values: 5 to 100.</para>
+                /// <para>The maximum number of records per page for paging. Valid values: 5 to 100.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -1401,15 +1419,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public int? MaxRecordsPerPage { get; set; }
 
                 /// <summary>
-                /// <para>The node ID.</para>
-                /// <para>For MongoDB instances, specify a node for storage analysis by using this parameter. Call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to query the details of each node in a MongoDB instance.</para>
+                /// <para>The node ID.
+                /// For an ApsaraDB for MongoDB instance, you can specify a node for storage analysis by using this parameter. You can call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to query the details of each node in the ApsaraDB for MongoDB instance.</para>
                 /// <list type="bullet">
-                /// <item><description>If you specify the <b>InsName</b> (node ID) of the target node, such as <c>d-bp1872fa24d5****</c>, this operation analyzes the corresponding Hidden node.</description></item>
-                /// <item><description>If you specify the <c>InsName#RoleId</c> of the target node, such as <c>d-bp1872fa24d5****#299****5</c>, this operation analyzes the specified node.</description></item>
-                /// </list>
-                /// <remarks>
-                /// <para>Notice: For MongoDB replica set instances, if you do not specify this parameter, this operation analyzes the only Hidden node by default. For MongoDB sharded cluster instances, specify this parameter to designate the target node.</notice></para>
+                /// <item><description>If you specify the <b>InsName</b> (node ID) of the target node, such as <c>d-bp1872fa24d5****</c>, the operation analyzes the corresponding hidden node.</description></item>
+                /// <item><description>If you specify the <c>InsName#RoleId</c> of the target node, such as <c>d-bp1872fa24d5****#299****5</c>, the operation analyzes the specified node.<remarks>
+                /// <para>Notice: If you do not specify this parameter for an ApsaraDB for MongoDB replica set instance, the operation analyzes the only hidden node by default. For an ApsaraDB for MongoDB sharded cluster instance, we recommend that you specify this parameter to identify the target node.</notice></para>
                 /// </remarks>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pi-wz99g5rn7w1x8h0sf</para>
@@ -1419,7 +1437,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The page number for the paged query. The value starts from 1. Default value: 1.</para>
+                /// <para>The page number for paging. Pages start from 1. Default value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1429,7 +1447,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public int? PageNumbers { get; set; }
 
                 /// <summary>
-                /// <para>The start time, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The start time. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-08T02:01:00Z</para>
@@ -1461,7 +1479,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is finished.</para>
+            /// <para>Indicates whether the task is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1501,11 +1519,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ResultId { get; set; }
 
             /// <summary>
-            /// <para>The current status. Valid values:</para>
+            /// <para>The current state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RUNNING</b>: running.</description></item>
-            /// <item><description><b>SUCCESS</b>: succeeded.</description></item>
-            /// <item><description><b>FAIL</b>: failed.</description></item>
+            /// <item><description><b>RUNNING</b>: Running.</description></item>
+            /// <item><description><b>SUCCESS</b>: Successful.</description></item>
+            /// <item><description><b>FAIL</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1516,7 +1534,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The request time.</para>
+            /// <para>The request time, in the format of a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735104224250</para>
@@ -1528,9 +1546,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, exception information (such as an error code) is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1551,10 +1569,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

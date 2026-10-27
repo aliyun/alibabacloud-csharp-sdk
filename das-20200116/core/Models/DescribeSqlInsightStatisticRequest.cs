@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlInsightStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The sort direction. Default value: <b>false</b> (descending). Valid values:</para>
+        /// <para>The sort order. Default value: <b>false</b> (descending order). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: ascending.</description></item>
-        /// <item><description><b>false</b>: descending.</description></item>
+        /// <item><description><b>true</b>: ascending order.</description></item>
+        /// <item><description><b>false</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Asc { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ConsoleContext { get; set; }
 
         /// <summary>
-        /// <para>The database name used for filtering.</para>
+        /// <para>The name of the database used to filter the results.</para>
         /// <remarks>
-        /// <para>In certain aggregation storage pipelines, you can specify multiple database names separated by commas. In other pipelines, only a single database name is supported.</para>
+        /// <para>In the aggregation storage links of some instances, you can specify multiple database names separated by commas. In other links, you can specify only a single database name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to populate time series trend data for each statistical entry, which corresponds to the <b>Trend</b> field in the response. Default value: <b>true</b>. Valid values:</para>
+        /// <para>Specifies whether to populate time series trend data for each statistical result, which corresponds to the <b>Trend</b> field in the response. Default value: <b>true</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Populates trend data.</description></item>
-        /// <item><description><b>false</b>: Does not populate trend data.</description></item>
+        /// <item><description><b>true</b>: populates trend data.</description></item>
+        /// <item><description><b>false</b>: does not populate trend data.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Enabling this option triggers additional queries for each time slice per entry, which significantly increases query overhead. If the trend filling capability is not enabled for the instance, this parameter does not take effect.</para>
+        /// <para>If this parameter is set to true, the system additionally queries data for each time slice for each result, which significantly increases the query overhead. If the trend filling capability is not enabled for the instance, this parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,12 +64,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? DoFillTrend { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify a UNIX timestamp in milliseconds. The system rounds up to the nearest minute.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in milliseconds. The system rounds up the value to the nearest minute.</para>
         /// <remarks>
-        /// <para>The span between this value and <b>StartTime</b> must not exceed 7 days. If <b>EndTime</b> is earlier than the time when SQL Explorer was enabled for the instance, an error indicating that the query time is earlier than the available time is returned.</para>
+        /// <para>The time span between <b>EndTime</b> and <b>StartTime</b> cannot exceed 7 days. If <b>EndTime</b> is earlier than the time when the SQL Explorer feature was enabled for the instance, an error indicating that the query time is earlier than the available time is returned.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Because data aggregation involves latency, the actual effective value is trimmed to a few minutes before the current time. Data from the most recent minutes may not be available.</para>
+        /// <para>Due to delays in data aggregation, the actual effective value is truncated to a few minutes before the current time. Therefore, data from the most recent few minutes may not be queried.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,21 +81,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of structured filter conditions, specified as Key/Value pairs. The POP format is <b>Filters.N.Key</b> and <b>Filters.N.Value</b>, with a maximum of 100 pairs. <b>Key</b> is case-insensitive. Entries with an empty <b>Value</b> are ignored. Valid values of <b>Key</b> for this operation:</para>
+        /// <para>The list of structured filter conditions. The conditions are passed as key-value pairs. The POP format is <b>Filters.N.Key</b> and <b>Filters.N.Value</b>. A maximum of 100 pairs can be specified. <b>Key</b> is not case-sensitive. Entries with an empty <b>Value</b> are ignored. Valid values of <b>Key</b> that take effect in this operation:</para>
         /// <list type="bullet">
-        /// <item><description><b>keyWord</b>: the keyword. The value is split by whitespace into multiple words and takes effect together with the <b>Keyword</b> parameter.</description></item>
-        /// <item><description><b>hostAddress</b>: the access source address. Separate multiple values with commas. This takes effect together with <b>TemplateId</b> when <b>Type</b> is set to <b>OriginHost</b>.</description></item>
-        /// <item><description><b>accountName</b>: the database username. Separate multiple values with commas.</description></item>
-        /// <item><description><b>dbName</b>: the database name. Separate multiple values with commas. This takes effect together with the <b>DbName</b> parameter.</description></item>
-        /// <item><description><b>sqlType</b>: the SQL type. Separate multiple values with commas. This takes effect together with the <b>SqlType</b> parameter.</description></item>
-        /// <item><description><b>sqlId</b>: the SQL template ID. Separate multiple values with commas. This takes effect together with <b>TemplateId</b> when <b>Type</b> is set to <b>SQL</b>.</description></item>
-        /// <item><description><b>insRole</b>: the primary/secondary role. Valid values: <b>master</b> and <b>slave</b>. These values are case-sensitive.</description></item>
+        /// <item><description><b>keyWord</b>: the keywords. The keywords are split into multiple words by whitespace characters and take effect together with the <b>Keyword</b> parameter.</description></item>
+        /// <item><description><b>hostAddress</b>: the access source addresses. Separate multiple addresses with commas. This key takes effect together with <b>TemplateId</b> when <b>Type</b> is set to <b>OriginHost</b>.</description></item>
+        /// <item><description><b>accountName</b>: the database usernames. Separate multiple usernames with commas.</description></item>
+        /// <item><description><b>dbName</b>: the database names. Separate multiple names with commas. This key takes effect together with the <b>DbName</b> parameter.</description></item>
+        /// <item><description><b>sqlType</b>: the SQL statement types. Separate multiple types with commas. This key takes effect together with the <b>SqlType</b> parameter.</description></item>
+        /// <item><description><b>sqlId</b>: the SQL template IDs. Separate multiple IDs with commas. This key takes effect together with <b>TemplateId</b> when <b>Type</b> is set to <b>SQL</b>.</description></item>
+        /// <item><description><b>insRole</b>: the primary/secondary role. Valid values are <b>master</b> and <b>slave</b>. This value is case-sensitive.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Any <b>Key</b> value other than the preceding values is ignored.</para>
+        /// <para>If you specify a <b>Key</b> other than the preceding values, the key is ignored.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>This parameter takes effect only in certain aggregation storage pipelines. In other pipelines, this parameter is entirely ignored.</para>
+        /// <para>This parameter takes effect only in the aggregation storage links of some instances. In other links, this parameter is completely ignored.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Filters")]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<DescribeSqlInsightStatisticRequestFilters> Filters { get; set; }
         public class DescribeSqlInsightStatisticRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The key of the filter condition. The value is case-insensitive. For valid values, see the description of the <b>Filters</b> parameter.</para>
+            /// <para>The key of the conditional filter. The key is not case-sensitive. For active values, see the metric description of the <b>Filters</b> parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sqlType</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database instance ID.</para>
         /// <remarks>
-        /// <para>This operation supports RDS for MySQL, PolarDB for MySQL, PolarDB-X, RDS for PostgreSQL, PolarDB for PostgreSQL, RDS for SQL Server, and Lindorm instances that have SQL Explorer enabled. MongoDB and Redis instances are not supported. Calling this operation for unsupported instances returns an error indicating that the operation is not supported.</para>
+        /// <para>This operation supports ApsaraDB RDS for MySQL, PolarDB for MySQL, PolarDB-X, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, ApsaraDB RDS for SQL Server, and Lindorm instances that have the SQL Explorer feature enabled. MongoDB and Redis instances are not supported. If you invoke this operation for unsupported instances, a fault indicating that the operation is not supported is returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The idempotency ID for the SQL Explorer data query. This parameter is not required for regular queries.</para>
+        /// <para>The idempotent ID for querying SQL Explorer data. You do not need to specify this parameter for common queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9a4f5c4494dbd6713185d87a97aa53e8</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy retrieve on SQL template content. Separate multiple keywords with spaces. The system first performs keyword match to find the corresponding SQL templates (up to 1,000 templates), and then performs aggregation statistics based on these templates. If no templates match, an empty list is returned.</para>
+        /// <para>The keywords used to retrieve SQL templates by fuzzy match based on the SQL template content. Separate multiple keywords with spaces. The system first performs keyword match to retrieve up to 1,000 corresponding SQL templates, and then performs aggregation statistics based on these templates. If no matching templates are found, an empty list is returned.</para>
         /// <remarks>
         /// <para>This parameter does not take effect when <b>Type</b> is set to <b>SQL</b> and <b>TemplateId</b> is specified.</para>
         /// </remarks>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The node ID of the instance. This parameter narrows the statistical scope to the specified node. Only a single node ID is supported. You cannot specify multiple node IDs separated by commas.</para>
+        /// <para>The ID of the node in the instance. This parameter is used to narrow the statistics scope to the specified node. Only a single node ID is supported. Multiple node IDs separated by commas are not supported.</para>
         /// <remarks>
         /// <para>This parameter is required only for instances that consist of multiple nodes, such as PolarDB-X and Lindorm instances. You can ignore this parameter for single-node instances.</para>
         /// </remarks>
@@ -175,24 +175,24 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. If this parameter is not specified or an unsupported value is specified, the results are sorted by <b>rt</b> (total response time). Valid values:</para>
+        /// <para>The field by which to sort the results. If this parameter is not specified or an unsupported value is specified, the results are sorted by <b>rt</b> (total response time). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Response time: <b>rt</b>, <b>avgRt</b>, <b>maxRt</b>, <b>minRt</b>, <b>rtRate</b>.</description></item>
-        /// <item><description>Executions: <b>count</b>, <b>countRate</b>, <b>timestamp</b>.</description></item>
-        /// <item><description>Scan rows: <b>rowsExamined</b>, <b>avgRowsExamined</b>.</description></item>
-        /// <item><description>Returned rows: <b>rowsReturned</b>, <b>totalRowsReturned</b>, <b>avgRowsReturned</b>, <b>maxRowsReturned</b>, <b>minRowsReturned</b>, <b>maxRowReturned</b>, <b>minRowReturned</b>.</description></item>
-        /// <item><description>Logical reads: <b>logicalRead</b>, <b>totalLogicalRead</b>, <b>avgLogicalRead</b>, <b>maxLogicalRead</b>, <b>minLogicalRead</b>.</description></item>
-        /// <item><description>Physical reads: <b>physicalRead</b>, <b>totalPhysicalRead</b>, <b>avgPhysicalRead</b>, <b>maxPhysicalRead</b>, <b>minPhysicalRead</b>.</description></item>
-        /// <item><description>Logical writes (valid only for SQL Server instances): <b>writes</b>, <b>totalWrites</b>, <b>avgWrites</b>, <b>maxWrites</b>, <b>minWrites</b>.</description></item>
-        /// <item><description>CPU time (valid only for SQL Server instances): <b>totalCpuTime</b>, <b>avgCpuTime</b>, <b>maxCpuTime</b>, <b>minCpuTime</b>.</description></item>
-        /// <item><description>PolarDB-X compute node metrics (valid only when <b>Role</b> is set to <b>polarx_cn</b>): <b>scnt</b>, <b>avgScnt</b>, <b>rows</b>, <b>avgRows</b>, <b>frows</b>, <b>avgFrows</b>.</description></item>
-        /// <item><description>Affected rows (valid only for Lindorm instances): <b>totalAffectRows</b>, <b>avgAffectRows</b>.</description></item>
+        /// <item><description>Response time: <b>rt</b>, <b>avgRt</b>, <b>maxRt</b>, <b>minRt</b>, and <b>rtRate</b>.</description></item>
+        /// <item><description>Executions: <b>count</b>, <b>countRate</b>, and <b>timestamp</b>.</description></item>
+        /// <item><description>Scanned rows: <b>rowsExamined</b> and <b>avgRowsExamined</b>.</description></item>
+        /// <item><description>Returned rows: <b>rowsReturned</b>, <b>totalRowsReturned</b>, <b>avgRowsReturned</b>, <b>maxRowsReturned</b>, <b>minRowsReturned</b>, <b>maxRowReturned</b>, and <b>minRowReturned</b>.</description></item>
+        /// <item><description>Logical reads: <b>logicalRead</b>, <b>totalLogicalRead</b>, <b>avgLogicalRead</b>, <b>maxLogicalRead</b>, and <b>minLogicalRead</b>.</description></item>
+        /// <item><description>Physical reads: <b>physicalRead</b>, <b>totalPhysicalRead</b>, <b>avgPhysicalRead</b>, <b>maxPhysicalRead</b>, and <b>minPhysicalRead</b>.</description></item>
+        /// <item><description>Logical writes (valid only for SQL Server instances): <b>writes</b>, <b>totalWrites</b>, <b>avgWrites</b>, <b>maxWrites</b>, and <b>minWrites</b>.</description></item>
+        /// <item><description>CPU time (valid only for SQL Server instances): <b>totalCpuTime</b>, <b>avgCpuTime</b>, <b>maxCpuTime</b>, and <b>minCpuTime</b>.</description></item>
+        /// <item><description>PolarDB-X compute nodes (valid only when <b>Role</b> is set to <b>polarx_cn</b>): <b>scnt</b>, <b>avgScnt</b>, <b>rows</b>, <b>avgRows</b>, <b>frows</b>, and <b>avgFrows</b>.</description></item>
+        /// <item><description>Affected rows (valid only for Lindorm instances): <b>totalAffectRows</b> and <b>avgAffectRows</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para><b>timestamp</b> sorts by the data timestamp, which is a millisecond-level UNIX timestamp.</para>
+        /// <para><b>timestamp</b> indicates that the results are sorted by data timestamp. The timestamp is a UNIX timestamp in milliseconds.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Only the first letter is case-insensitive. The remaining characters must exactly match the preceding values. For example, <b>AvgRt</b> is valid but <b>avgrt</b> is not.</para>
+        /// <para>Only the first letter is case-insensitive. The remaining characters must exactly match the preceding values. For example, <b>AvgRt</b> is valid, but <b>avgrt</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from page 1. If this parameter is not specified, the default value 1 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -213,12 +213,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of statistical entries per page. Default value: 10. Maximum value: 2000.</para>
+        /// <para>The number of statistical entries to return on each page. If this parameter is not specified, the default value 10 is used. The maximum value is 2000.</para>
         /// <remarks>
-        /// <para>A value greater than 2000 returns an InvalidParams error instead of being trimmed.</para>
+        /// <para>If the value exceeds 2000, an InvalidParams error is returned instead of being truncated.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>When aggregating by access source or database user (<b>Type</b> is set to <b>FullRequestOrigin</b> or <b>FullRequestUser</b>), a value greater than 100 may be reset to 10 in certain aggregation storage pipelines.</para>
+        /// <para>When statistics are aggregated by access source or database user (when <b>Type</b> is set to <b>FullRequestOrigin</b> or <b>FullRequestUser</b>), a value greater than 100 is reset to 10 in some aggregation storage links.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The role of the instance node. The value is case-insensitive. If this parameter is not specified, the role is automatically resolved from <b>InstanceId</b>. Valid values:</para>
+        /// <para>The role of the instance node. The value is not case-sensitive. If this parameter is not specified, the role is automatically parsed based on <b>InstanceId</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>polarx_cn</b>: PolarDB-X compute node.</description></item>
         /// <item><description><b>polarx_dn</b>: PolarDB-X storage node.</description></item>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The SQL type used for filtering. Valid values:</para>
+        /// <para>The SQL statement type used to filter the results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>select</b></description></item>
         /// <item><description><b>insert</b></description></item>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <item><description><b>delete</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>Values are lowercase. In certain aggregation storage pipelines, you can specify multiple values separated by commas. In other pipelines, only a single value is supported.</para>
+        /// <para>The values must be in lowercase. In the aggregation storage links of some instances, you can specify multiple values separated by commas. In other links, you can specify only a single value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -265,9 +265,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify a UNIX timestamp in milliseconds. The system rounds down to the nearest minute.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in milliseconds. The system rounds down the value to the nearest minute.</para>
         /// <remarks>
-        /// <para>The value must be within the last 30 days. If the value is earlier than the time when SQL Explorer was enabled for the instance, it is automatically adjusted to the time when SQL Explorer was enabled.</para>
+        /// <para>The start time cannot be more than 30 days before the current time. If the specified start time is earlier than the time when the SQL Explorer feature was enabled for the instance, the start time is automatically adjusted to the enabling time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -279,17 +279,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the statistical object. The meaning varies depending on the value of <b>Type</b>. Valid values:</para>
+        /// <para>The identifier of the statistics object. The meaning varies based on the value of <b>Type</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <b>Type</b> is set to <b>SQL</b>: the SQL template ID, which corresponds to <b>SqlId</b> in the response.</description></item>
-        /// <item><description>When <b>Type</b> is set to <b>OriginHost</b>: the access source address.</description></item>
-        /// <item><description>When <b>Type</b> is set to <b>User</b>: the database username.</description></item>
+        /// <item><description>When <b>Type</b> is set to <b>SQL</b>: specify the SQL template ID, which is the <b>SqlId</b> in the response.</description></item>
+        /// <item><description>When <b>Type</b> is set to <b>OriginHost</b>: specify the access source address.</description></item>
+        /// <item><description>When <b>Type</b> is set to <b>User</b>: specify the database username.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter does not take effect when <b>Type</b> is not specified, or is set to <b>FullRequestOrigin</b> or <b>FullRequestUser</b>.</para>
+        /// <para>This parameter does not take effect when <b>Type</b> is empty, <b>FullRequestOrigin</b>, or <b>FullRequestUser</b>.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>When <b>Type</b> is set to <b>SQL</b>, you can specify multiple template IDs separated by commas. In this case, the <b>Keyword</b> parameter does not take effect.</para>
+        /// <para>When <b>Type</b> is set to <b>SQL</b>, you can specify multiple template IDs separated by commas. In this case, <b>Keyword</b> does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -300,16 +300,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The aggregation or filter dimension for statistics. The value is case-insensitive. If this parameter is not specified, statistics are aggregated by SQL template by default. Valid values:</para>
+        /// <para>The aggregation or filter dimension for statistics. The value is not case-sensitive. If this parameter is not specified, the statistics are aggregated by SQL template by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FullRequestOrigin</b>: Aggregates by access source address.</description></item>
-        /// <item><description><b>FullRequestUser</b>: Aggregates by database user.</description></item>
-        /// <item><description><b>SQL</b>: Filters by SQL template. You must also specify <b>TemplateId</b> as the SQL template ID.</description></item>
-        /// <item><description><b>OriginHost</b>: Filters by access source. You must also specify <b>TemplateId</b> as the source address.</description></item>
-        /// <item><description><b>User</b>: Filters by database user. You must also specify <b>TemplateId</b> as the username.</description></item>
+        /// <item><description><b>FullRequestOrigin</b>: aggregates statistics by access source address.</description></item>
+        /// <item><description><b>FullRequestUser</b>: aggregates statistics by database user.</description></item>
+        /// <item><description><b>SQL</b>: filters statistics by SQL template. You must also specify <b>TemplateId</b> as the SQL template ID.</description></item>
+        /// <item><description><b>OriginHost</b>: filters statistics by access source. You must also specify <b>TemplateId</b> as the source address.</description></item>
+        /// <item><description><b>User</b>: filters statistics by database user. You must also specify <b>TemplateId</b> as the username.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Specifying a value other than the preceding values returns an InvalidParams error.</para>
+        /// <para>If you specify a value other than the preceding values, an InvalidParams error is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>direct_skill_rejected</para>
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
         /// <para>The response content.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +76,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[HdmApiClient] instance is not managed by the agent</para>
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         /// <summary>
         /// <para>The message ID.</para>

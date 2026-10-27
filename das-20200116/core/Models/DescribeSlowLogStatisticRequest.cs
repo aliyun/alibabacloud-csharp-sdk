@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSlowLogStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort results in ascending order. This feature is disabled by default.</para>
+        /// <para>Specifies whether to sort the results in ascending order. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Asc { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</para>
+        /// <para>The end time of the query. The time is a UNIX timestamp in UTC. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<DescribeSlowLogStatisticRequestFilters> Filters { get; set; }
         public class DescribeSlowLogStatisticRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter parameter.</para>
+            /// <para>The filter key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyWords</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter parameter.</para>
+            /// <para>The value of the filter key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <list type="bullet">
-        /// <item><description>For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is applicable only to cluster instances. If you do not specify this parameter, the log details of the primary node are queried by default.</description></item>
-        /// <item><description>For PolarDB-X 2.0, set this parameter to <b>polarx_cn</b> (compute node) or <b>polarx_dn</b> (data node).</description></item>
+        /// <item><description>For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter applies only to Cluster Edition instances. If you do not specify this parameter, the slow query logs of the primary node are queried by default.</description></item>
+        /// <item><description>For PolarDB-X 2.0, set this parameter to <b>polarx_cn</b> for compute nodes or <b>polarx_dn</b> for data nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</para>
+        /// <para>The start time of the query task. The time is a UNIX timestamp in UTC. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -142,19 +142,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// <para>The task type.</para>
-        /// <para>SQL engine-specific:</para>
+        /// <para>Specific to SQL engines:</para>
         /// <para><b>SlowLogRequestOrigin</b>: aggregates logs by source IP address.</para>
         /// <para><b>SlowLogRequestUser</b>: aggregates logs by source user.</para>
         /// <para><b>SQL</b>: aggregates logs by SQL ID.</para>
-        /// <para>MongoDB engine-specific:</para>
+        /// <para>Specific to MongoDB engines:</para>
         /// <para><b>SlowLogRequestOrigin</b>: aggregates logs by source IP address.</para>
         /// <para><b>SlowLogRequestUser</b>: aggregates logs by source user.</para>
-        /// <para><b>SQL</b>: aggregates logs by Query ID.</para>
+        /// <para><b>SQL</b>: aggregates logs by query ID.</para>
         /// <para><b>SlowLogRequestOpType</b>: aggregates logs by operation type.</para>
         /// <para><b>SlowLogRequestNamespace</b>: aggregates logs by namespace.</para>
-        /// <para>Redis engine-specific:</para>
+        /// <para>Specific to Redis engines:</para>
         /// <para><b>SlowLogRequestNodeId</b>: aggregates logs by node ID.</para>
-        /// <para><b>SlowLogRequestHostInsId</b>: aggregates logs by HostInsId.</para>
+        /// <para><b>SlowLogRequestHostInsId</b>: aggregates logs by host instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL</para>

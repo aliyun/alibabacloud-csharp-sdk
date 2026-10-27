@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetFullRequestStatResultByInstanceIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public GetFullRequestStatResultByInstanceIdResponseBodyData Data { get; set; }
         public class GetFullRequestStatResultByInstanceIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the asynchronous request failed. Valid values:</para>
+            /// <para>Indicates whether the request failed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
+            /// <item><description><para><b>true</b>: yes.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b></para>
+            /// <item><description><para><b>false</b>: no.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Fail { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asynchronous request was complete. Valid values:</para>
+            /// <para>Indicates whether the asynchronous request is completed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
+            /// <item><description><para><b>true</b>: yes.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b></para>
+            /// <item><description><para><b>false</b>: no.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public GetFullRequestStatResultByInstanceIdResponseBodyDataResult Result { get; set; }
             public class GetFullRequestStatResultByInstanceIdResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The full request data.</para>
+                /// <para>The list of full request data.</para>
                 /// </summary>
                 [NameInMap("List")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of scanned rows.</para>
                     /// <remarks>
-                    /// <para>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</para>
+                    /// <para>This field is supported by the following databases: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgExaminedRows { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</para>
+                    /// <para>The average number of rows pulled by the compute node from the data node in the PolarDB-X 2.0 database instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? AvgFetchRows { get; set; }
 
                     /// <summary>
-                    /// <para>The average lock wait latency. Unit: seconds.</para>
+                    /// <para>The average lock wait time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.00009589874265269765</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgReturnedRows { get; set; }
 
                     /// <summary>
-                    /// <para>The average execution duration.</para>
+                    /// <para>The average time to execute.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2.499</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public double? AvgRt { get; set; }
 
                     /// <summary>
-                    /// <para>The average number of SQL statements.</para>
+                    /// <para>The average SQL count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10000</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The average number of updated rows.</para>
                     /// <remarks>
-                    /// <para>This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.</para>
+                    /// <para>This field is supported by the following databases: ApsaraDB RDS for MySQL and PolarDB-X 2.0.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Count { get; set; }
 
                     /// <summary>
-                    /// <para>The percentage of the total number of executions.</para>
+                    /// <para>The proportion of times the statements execute.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0586</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Database { get; set; }
 
                     /// <summary>
-                    /// <para>The number of failed executions.</para>
+                    /// <para>The number of execution errors.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The total number of scanned rows.</para>
                     /// <remarks>
-                    /// <para>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</para>
+                    /// <para>This field is supported by the following databases: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? ExaminedRows { get; set; }
 
                     /// <summary>
-                    /// <para>The number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</para>
+                    /// <para>The number of rows pulled by the compute node from the data node in the PolarDB-X 2.0 database instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? FetchRows { get; set; }
 
                     /// <summary>
-                    /// <para>The IP address of the database instance.</para>
+                    /// <para>The network address of the instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rm-uf6dyi58dm6****.mysql.rds.aliy****.com</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Ip { get; set; }
 
                     /// <summary>
-                    /// <para>The lock wait latency. Unit: seconds.</para>
+                    /// <para>The lock wait time, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1089.4177720290281</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? PhysicalSyncRead { get; set; }
 
                     /// <summary>
-                    /// <para>The port number that is used to connect to the database instance.</para>
+                    /// <para>The port number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3306</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string Psql { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</para>
+                    /// <para>The total number of rows updated or returned by the compute node in the PolarDB-X 2.0 database instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Rows { get; set; }
 
                     /// <summary>
-                    /// <para>The number of SQL statements that take longer than 1 second to execute.</para>
+                    /// <para>The number of SQL statements whose execution time is greater than 1 second.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? RtGreaterThanOneSecondCount { get; set; }
 
                     /// <summary>
-                    /// <para>The execution duration percentage.</para>
+                    /// <para>The execution time proportion.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2.499</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string SqlId { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of updated rows.</para>
+                    /// <para>The total number of changed rows.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -372,14 +372,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? SumUpdatedRows { get; set; }
 
                     /// <summary>
-                    /// <para>The names of tables in the database.</para>
+                    /// <para>The name of the database table.</para>
                     /// </summary>
                     [NameInMap("Tables")]
                     [Validation(Required=false)]
                     public List<string> Tables { get; set; }
 
                     /// <summary>
-                    /// <para>The version number.</para>
+                    /// <para>The version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public long? Version { get; set; }
 
                     /// <summary>
-                    /// <para>The virtual private cloud (VPC) ID.</para>
+                    /// <para>The VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-2zentqj1sk4qmolci****</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// <para>The total number of entries returned.</para>
+                /// <para>The total amount of data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>The request ID.</para>
+            /// <para>The ID of the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9CB97BC4-6479-55D0-B9D0-EA925AFE****</para>
@@ -423,13 +423,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ResultId { get; set; }
 
             /// <summary>
-            /// <para>The state of the asynchronous request. Valid values:</para>
+            /// <para>The execution status of the asynchronous request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>RUNNING</b></para>
+            /// <item><description><para><b>RUNNING</b>: running.</para>
             /// </description></item>
-            /// <item><description><para><b>SUCCESS</b></para>
+            /// <item><description><para><b>SUCCESS</b>: successful.</para>
             /// </description></item>
-            /// <item><description><para><b>FAIL</b></para>
+            /// <item><description><para><b>FAIL</b>: failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The time when the asynchronous request was sent. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The execution time. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1645668213000</para>
@@ -453,9 +453,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message that contains information such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -478,10 +478,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
