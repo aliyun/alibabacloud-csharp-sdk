@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class DeleteCloneVoiceRequest : TeaModel {
         /// <summary>
+        /// <para>The cloned voice ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e48e45dd-e47a-4744-a063-f08cbebb1c5b</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string CloneVoiceId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e48e45dd-e47a-4744-a063-f08cbebb1c5a</para>
         /// </summary>

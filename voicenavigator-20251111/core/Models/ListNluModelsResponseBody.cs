@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class ListNluModelsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>A list of the NLU models.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListNluModelsResponseBodyData> Data { get; set; }
         public class ListNluModelsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The model ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
             /// </summary>
@@ -29,6 +36,12 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>The model name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>千问-Plus</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -36,6 +49,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -44,6 +59,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance af81a389-91f0-4157-8d82-720edd02b66a
         ///  does not exist.</para>
@@ -52,11 +69,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The dynamic parameters for the error.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7401D698-0AAC-5909-B68E-88C68805FFB8</para>
         /// </summary>

@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class CreateCloneVoiceRequest : TeaModel {
+        /// <summary>
+        /// <para>The path of the uploaded file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>voice_clone/VoiceCloneUnitTest.wav</para>
+        /// </summary>
         [NameInMap("FileKey")]
         [Validation(Required=false)]
         public string FileKey { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>da37319b-6c83-4268-9f19-814aed62e401</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The voice cloning model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CosyVoice</para>
         /// </summary>

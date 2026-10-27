@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetRealtimeInstanceStatsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12f407b22cbe4890ac595f09985848d5</para>
         /// </summary>

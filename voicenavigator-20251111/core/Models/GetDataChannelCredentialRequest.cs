@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetDataChannelCredentialRequest : TeaModel {
         /// <summary>
+        /// <para>The device ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d4c38420-<b><b>-43bc-b001-56bfc274</b></b></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</para>
         /// </summary>

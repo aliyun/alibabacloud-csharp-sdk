@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class ListBackgroundMusicsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,10 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The paginated result of the background music list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListBackgroundMusicsResponseBodyData Data { get; set; }
         public class ListBackgroundMusicsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of background music tracks.</para>
+            /// </summary>
             [NameInMap("BackgroundMusics")]
             [Validation(Required=false)]
             public List<ListBackgroundMusicsResponseBodyDataBackgroundMusics> BackgroundMusics { get; set; }
@@ -35,6 +43,12 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <para>The name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Office ambiance</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -42,6 +56,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -58,6 +76,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -68,6 +88,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -76,6 +98,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance af81a389-91f0-4157-8d82-720edd02b66a
         ///  does not exist.</para>
@@ -84,11 +108,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of dynamic error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7401D698-0AAC-5909-B68E-88C68805FFB8</para>
         /// </summary>

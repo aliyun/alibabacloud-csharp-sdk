@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class CreateLlmAccessProfileShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66a</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The parameter settings.</para>
+        /// </summary>
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public string ProfileShrink { get; set; }

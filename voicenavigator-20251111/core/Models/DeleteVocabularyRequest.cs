@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class DeleteVocabularyRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Voice Navigator instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66a</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vocabulary to delete.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66b</para>
         /// </summary>

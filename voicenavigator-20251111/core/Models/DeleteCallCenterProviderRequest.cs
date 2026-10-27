@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class DeleteCallCenterProviderRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the human service provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx</para>
         /// </summary>

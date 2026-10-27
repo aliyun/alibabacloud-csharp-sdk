@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class ListCallCenterProvidersRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the call center provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx</para>
         /// </summary>

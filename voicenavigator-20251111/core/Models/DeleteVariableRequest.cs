@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class DeleteVariableRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The variable ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0099b75d-60fd-4c63-8541-7fbba0ae6bb1</para>
         /// </summary>

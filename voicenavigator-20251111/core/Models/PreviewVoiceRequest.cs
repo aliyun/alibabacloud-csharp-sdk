@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class PreviewVoiceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>da37319b-6c83-4268-9f19-814aed62e401</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The TTS model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Qwen</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string Model { get; set; }
 
         /// <summary>
+        /// <para>The TTS invocation method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MANAGED</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string NlsAccessType { get; set; }
 
         /// <summary>
+        /// <para>The TTS engine.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BAILIAN</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string NlsEngine { get; set; }
 
+        /// <summary>
+        /// <para>The synthesis parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public PreviewVoiceRequestParams Params { get; set; }
         public class PreviewVoiceRequestParams : TeaModel {
             /// <summary>
+            /// <para>The pitch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public float? PitchRate { get; set; }
 
             /// <summary>
+            /// <para>The speech rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public float? SpeechRate { get; set; }
 
             /// <summary>
+            /// <para>The volume.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>
@@ -71,11 +88,19 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 
         }
 
+        /// <summary>
+        /// <para>The preview text.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hello, nice to meet you</para>
+        /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>The voice.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Cherry</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class DeleteInstructionRequest : TeaModel {
         /// <summary>
+        /// <para>The instruction code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Transfer00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</para>
         /// </summary>

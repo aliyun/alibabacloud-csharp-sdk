@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetScriptRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8a503680-815d-473e-a9b0-e010f47a64d2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Scenario ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac6db76a-bbe7-4a2c-b7cc-7f62da7bb4c6</para>
         /// </summary>

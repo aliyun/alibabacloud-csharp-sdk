@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class BridgeWebCallResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The call record.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BridgeWebCallResponseBodyData Data { get; set; }
         public class BridgeWebCallResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The channel ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1515602866088888___5ec8446df1e2495a97969e887ab9e748</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string ChannelId { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1774794266093</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</para>
             /// </summary>
@@ -45,11 +56,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The server URL.</para>
+            /// </summary>
             [NameInMap("ServerUrl")]
             [Validation(Required=false)]
             public string ServerUrl { get; set; }
 
             /// <summary>
+            /// <para>The session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>f814f3ae-b2a7-44fb-883c-771221274673</para>
             /// </summary>
@@ -70,6 +86,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -78,6 +96,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -85,11 +105,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetRealtimeScriptStatsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The script ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GenerateFileUploadParamsRequest : TeaModel {
         /// <summary>
+        /// <para>The file type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CloneVoice</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string BusinessType { get; set; }
 
         /// <summary>
+        /// <para>The file name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test.wav</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66a</para>
         /// </summary>

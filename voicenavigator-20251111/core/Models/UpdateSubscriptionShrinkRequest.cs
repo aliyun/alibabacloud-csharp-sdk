@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class UpdateSubscriptionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The endpoint. This parameter is required when ROCKET_MQ_4 or ROCKET_MQ_5 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-l4p89zajz67.cn-hangzhou.rmq.aliyuncs.com:8080</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
+        /// <summary>
+        /// <para>The list of subscribed events.</para>
+        /// </summary>
         [NameInMap("EventSubscriptions")]
         [Validation(Required=false)]
         public string EventSubscriptionsShrink { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66a</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The MQ instance ID. This parameter is required when ROCKET_MQ_5 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-l4p89zajz67.cn</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string MqInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The message push type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ROCKET_MQ_4</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string MqType { get; set; }
 
         /// <summary>
+        /// <para>The password. This parameter is required when ROCKET_MQ_5 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pwd</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The producer ID. This parameter is required when ROCKET_MQ_4 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user1</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string ProducerId { get; set; }
 
         /// <summary>
+        /// <para>The queue topic. This parameter is required when ROCKET_MQ_4 or ROCKET_MQ_5 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string Topic { get; set; }
 
         /// <summary>
+        /// <para>The username. This parameter is required when ROCKET_MQ_5 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>username</para>
         /// </summary>

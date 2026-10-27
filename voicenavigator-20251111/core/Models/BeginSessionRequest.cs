@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class BeginSessionRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the draft version is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public bool? DraftVersion { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0a88e269-01f5-49ac-97af-5830f0ccb271</para>
         /// </summary>
@@ -34,6 +40,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The vendor parameters.</para>
+        /// <remarks>
+        /// <para>JSON format: {&quot;key1&quot;:&quot;value1&quot;}</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
         /// </summary>

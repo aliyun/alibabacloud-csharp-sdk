@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetVocabularyRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d74d6290-7cbe-4436-b5d7-014ebb0f4060</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The vocabulary ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d74d6290-7cbe-4436-b5d7-014ebb0f4061</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetRecordingRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>868eef14-7515-4856-8a50-5c9a22abdbcc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>89ab28c2-eb94-4010-a539-f0eee922e371</para>
         /// </summary>

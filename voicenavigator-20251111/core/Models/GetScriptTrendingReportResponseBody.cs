@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetScriptTrendingReportResponseBody : TeaModel {
         /// <summary>
+        /// <para>The service-specific error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>An array of scenario template objects.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetScriptTrendingReportResponseBodyData> Data { get; set; }
         public class GetScriptTrendingReportResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of handled calls.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? CallsHandled { get; set; }
 
             /// <summary>
+            /// <para>The number of offered calls.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? CallsOffered { get; set; }
 
             /// <summary>
+            /// <para>The number of rejected calls.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? CallsRejected { get; set; }
 
             /// <summary>
+            /// <para>The number of resolved calls, based on the large model\&quot;s evaluation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? CallsResolved { get; set; }
 
             /// <summary>
+            /// <para>The configured concurrency limit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>13</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? ConfiguredConcurrency { get; set; }
 
             /// <summary>
+            /// <para>A JSON string that provides a breakdown of label distribution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;label1&quot;:{ 
@@ -75,6 +92,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string LabelBreakDown { get; set; }
 
             /// <summary>
+            /// <para>The maximum talk time, in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -83,6 +102,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? MaxTalkTime { get; set; }
 
             /// <summary>
+            /// <para>A JSON string that provides a breakdown of rejection reasons.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;ConcurrentLimitExceeded&quot;:3
@@ -93,6 +114,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string RejectionBreakdown { get; set; }
 
             /// <summary>
+            /// <para>A JSON string that provides a breakdown of call disconnection reasons.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;SilenceTimeout&quot;:1,
@@ -107,6 +130,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string ReleaseReasonBreakdown { get; set; }
 
             /// <summary>
+            /// <para>The start time of the interval. The value is a Unix timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1774881208361</para>
             /// </summary>
@@ -115,6 +140,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? StatsTime { get; set; }
 
             /// <summary>
+            /// <para>A JSON string that provides a breakdown of conversation turn distribution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;1&quot;:2,
@@ -126,6 +153,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string TalkTurnsDistribution { get; set; }
 
             /// <summary>
+            /// <para>This parameter is reserved for future use.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -134,6 +163,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? TotalInputTokens { get; set; }
 
             /// <summary>
+            /// <para>This parameter is reserved for future use.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -142,6 +173,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? TotalOutputTokens { get; set; }
 
             /// <summary>
+            /// <para>The total talk time, in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -150,6 +183,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? TotalTalkTime { get; set; }
 
             /// <summary>
+            /// <para>This parameter is reserved for future use.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -158,6 +193,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? TotalTokens { get; set; }
 
             /// <summary>
+            /// <para>The peak concurrency for the interval.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -168,6 +205,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -176,6 +215,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>get upload tool url success</para>
         /// </summary>
@@ -183,12 +224,15 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>An array of error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</para>

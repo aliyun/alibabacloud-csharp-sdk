@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class EndSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the script.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0a88e269-01f5-49ac-97af-5830f0ccb271</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

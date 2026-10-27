@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class ListScriptProfileTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</para>
         /// </summary>

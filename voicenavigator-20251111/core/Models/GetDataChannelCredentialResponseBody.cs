@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class GetDataChannelCredentialResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data channel credential.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataChannelCredentialResponseBodyData Data { get; set; }
         public class GetDataChannelCredentialResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The client ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GID_rtc-datachannel@@@*******</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string ClientId { get; set; }
 
             /// <summary>
+            /// <para>The device ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>d4c38420-<b><b>-43bc-b001-56bfc274</b></b></para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>The endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mqtt.***.aliyuncs.com</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string Endpoint { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the credential.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1774794266093</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The password.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string Password { get; set; }
 
             /// <summary>
+            /// <para>The topic for the data channel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>datachannel-hz/****</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public string Topic { get; set; }
 
             /// <summary>
+            /// <para>The username.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Token|LTAI****|mqtt-***</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -95,11 +118,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The dynamic error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A8AED3C8-F57B-5D71-9A34-4A170287533F</para>
         /// </summary>

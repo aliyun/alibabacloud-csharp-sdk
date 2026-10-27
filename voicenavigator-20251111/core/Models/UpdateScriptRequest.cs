@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class UpdateScriptRequest : TeaModel {
         /// <summary>
+        /// <para>The concurrency.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public int? Concurrency { get; set; }
 
+        /// <summary>
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>For testing</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19ac2375-53e3-477f-abe9-6cd334227981</para>
         /// </summary>
@@ -29,11 +39,19 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The scenario name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Navigation test scenario</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>64241e64-190c-45d1-af66-06f51c07b090</para>
         /// </summary>

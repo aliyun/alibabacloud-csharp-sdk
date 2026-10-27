@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class UpdateCloneVoiceRequest : TeaModel {
         /// <summary>
+        /// <para>The cloned voice ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8ee1160a-6999-478f-8df6-f33ef21f27d5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string CloneVoiceId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</para>
         /// </summary>
@@ -25,6 +29,12 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the cloned voice.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test cloned voice</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class ListRealtimeInstanceStatsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The call records.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListRealtimeInstanceStatsResponseBodyData Data { get; set; }
         public class ListRealtimeInstanceStatsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of real-time statistics for instances.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListRealtimeInstanceStatsResponseBodyDataList> List { get; set; }
             public class ListRealtimeInstanceStatsResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>The configured concurrency.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
                 public long? ConfiguredConcurrency { get; set; }
 
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>88b64330a8d34e63b60c9d272f8b3950</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The time of the statistics.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1776837256000</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
                 public long? StatsTime { get; set; }
 
                 /// <summary>
+                /// <para>The used concurrency.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance af81a389-91f0-4157-8d82-720edd02b66a
         ///  does not exist.</para>
@@ -102,6 +128,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class PublishScriptRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19ac2375-53e3-477f-abe9-6cd334227981</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>64241e64-190c-45d1-af66-06f51c07b090</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The version ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>64241e64-190c-45d1-af66-06f51c07b091</para>
         /// </summary>

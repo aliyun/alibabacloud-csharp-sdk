@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Initiates a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Initiates a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Initiates a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Initiates a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起呼叫</para>
+        /// <para>Initiates a web call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起呼叫</para>
+        /// <para>Initiates a web call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起呼叫</para>
+        /// <para>Initiates a web call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起呼叫</para>
+        /// <para>Initiates a web call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务提供商</para>
+        /// <para>Creates a human agent service provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务提供商</para>
+        /// <para>Creates a human agent service provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -527,7 +527,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务提供商</para>
+        /// <para>Creates a human agent service provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -545,7 +545,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务提供商</para>
+        /// <para>Creates a human agent service provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -563,7 +563,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -613,7 +613,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -663,7 +663,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -681,7 +681,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -699,7 +699,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指令</para>
+        /// <para>Adds an instruction to the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -757,7 +757,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指令</para>
+        /// <para>Adds an instruction to the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -815,7 +815,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指令</para>
+        /// <para>Adds an instruction to the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -833,7 +833,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指令</para>
+        /// <para>Adds an instruction to the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -851,7 +851,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语言模型配置信息</para>
+        /// <para>Creates the configuration information for a language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -903,7 +903,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语言模型配置信息</para>
+        /// <para>Creates the configuration information for a language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -955,7 +955,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语言模型配置信息</para>
+        /// <para>Creates the configuration information for a language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -973,7 +973,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语言模型配置信息</para>
+        /// <para>Creates the configuration information for a language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -991,7 +991,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1049,7 +1049,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1107,7 +1107,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1125,7 +1125,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1143,7 +1143,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1235,7 +1235,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1327,7 +1327,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1345,7 +1345,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1363,7 +1363,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1417,7 +1417,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1471,7 +1471,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1489,7 +1489,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1507,7 +1507,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1567,7 +1567,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1627,7 +1627,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1645,7 +1645,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1663,7 +1663,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1719,7 +1719,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1775,7 +1775,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1793,7 +1793,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1811,7 +1811,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务提供商</para>
+        /// <para>Deletes a human service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1857,7 +1857,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务提供商</para>
+        /// <para>Deletes a human service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1903,7 +1903,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务提供商</para>
+        /// <para>Deletes a human service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1921,7 +1921,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务提供商</para>
+        /// <para>Deletes a human service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1939,7 +1939,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1985,7 +1985,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2031,7 +2031,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2049,7 +2049,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2067,7 +2067,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指令</para>
+        /// <para>Deletes an instruction from the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2113,7 +2113,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指令</para>
+        /// <para>Deletes an instruction from the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2159,7 +2159,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指令</para>
+        /// <para>Deletes an instruction from the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2177,7 +2177,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指令</para>
+        /// <para>Deletes an instruction from the global configuration of a digital employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2195,7 +2195,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语言模型配置信息</para>
+        /// <para>Deletes the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2241,7 +2241,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语言模型配置信息</para>
+        /// <para>Deletes the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2287,7 +2287,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语言模型配置信息</para>
+        /// <para>Deletes the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2305,7 +2305,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语言模型配置信息</para>
+        /// <para>Deletes the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2323,7 +2323,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2369,7 +2369,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2415,7 +2415,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2433,7 +2433,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2451,7 +2451,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2497,7 +2497,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2543,7 +2543,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2561,7 +2561,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2579,7 +2579,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a vocabulary from a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2625,7 +2625,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a vocabulary from a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2671,7 +2671,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a vocabulary from a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2689,7 +2689,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a vocabulary from a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2707,7 +2707,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a Voice Access Profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2753,7 +2753,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a Voice Access Profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2799,7 +2799,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a Voice Access Profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2817,7 +2817,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a Voice Access Profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2835,7 +2835,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Process a single conversational turn.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2893,7 +2893,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Process a single conversational turn.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2951,7 +2951,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Process a single conversational turn.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2969,7 +2969,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启会话</para>
+        /// <para>Process a single conversational turn.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2987,7 +2987,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables the subscription for a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +3029,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables the subscription for a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3071,7 +3071,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables the subscription for a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3089,7 +3089,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables the subscription for a Voice Navigator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,7 +3107,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会话</para>
+        /// <para>Ends a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3157,7 +3157,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会话</para>
+        /// <para>Ends a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3207,7 +3207,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会话</para>
+        /// <para>Ends a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3225,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会话</para>
+        /// <para>Ends a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3243,7 +3243,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Exports a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3289,7 +3289,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Exports a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3335,7 +3335,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Exports a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3353,7 +3353,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Exports a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3371,7 +3371,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports vocabularies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3423,7 +3423,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports vocabularies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3475,7 +3475,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports vocabularies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3493,7 +3493,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports vocabularies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3511,7 +3511,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Generates temporary credentials and parameters to upload a file to Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3561,7 +3561,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Generates temporary credentials and parameters to upload a file to Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3611,7 +3611,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Generates temporary credentials and parameters to upload a file to Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3629,7 +3629,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Generates temporary credentials and parameters to upload a file to Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3647,7 +3647,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>Get call details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3693,7 +3693,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>Get call details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3739,7 +3739,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>Get call details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3757,7 +3757,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>Get call details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3775,7 +3775,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音对话参数</para>
+        /// <para>Retrieves a data channel credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3821,7 +3821,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音对话参数</para>
+        /// <para>Retrieves a data channel credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3867,7 +3867,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音对话参数</para>
+        /// <para>Retrieves a data channel credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3885,7 +3885,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音对话参数</para>
+        /// <para>Retrieves a data channel credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3903,8 +3903,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标趋势详情</para>
+        /// <para>Retrieves the metric trends chart for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the script configuration details for a specific scenario, including settings for ASR, TTS, and dialog capabilities.</description></item>
+        /// <item><description>No additional parameters are required in the request. The response contains configuration data for both the draft version and the published version.</description></item>
+        /// <item><description>Check the <c>Data</c> field in the response to obtain detailed configuration information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
@@ -3957,8 +3967,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标趋势详情</para>
+        /// <para>Retrieves the metric trends chart for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the script configuration details for a specific scenario, including settings for ASR, TTS, and dialog capabilities.</description></item>
+        /// <item><description>No additional parameters are required in the request. The response contains configuration data for both the draft version and the published version.</description></item>
+        /// <item><description>Check the <c>Data</c> field in the response to obtain detailed configuration information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
@@ -4011,8 +4031,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标趋势详情</para>
+        /// <para>Retrieves the metric trends chart for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the script configuration details for a specific scenario, including settings for ASR, TTS, and dialog capabilities.</description></item>
+        /// <item><description>No additional parameters are required in the request. The response contains configuration data for both the draft version and the published version.</description></item>
+        /// <item><description>Check the <c>Data</c> field in the response to obtain detailed configuration information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
@@ -4029,8 +4059,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标趋势详情</para>
+        /// <para>Retrieves the metric trends chart for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the script configuration details for a specific scenario, including settings for ASR, TTS, and dialog capabilities.</description></item>
+        /// <item><description>No additional parameters are required in the request. The response contains configuration data for both the draft version and the published version.</description></item>
+        /// <item><description>Check the <c>Data</c> field in the response to obtain detailed configuration information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
@@ -4047,7 +4087,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time stats for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4089,7 +4129,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time stats for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4131,7 +4171,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time stats for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4149,7 +4189,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time stats for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4167,7 +4207,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景实时指标</para>
+        /// <para>Queries the real-time statistics for a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4213,7 +4253,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景实时指标</para>
+        /// <para>Queries the real-time statistics for a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4259,7 +4299,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景实时指标</para>
+        /// <para>Queries the real-time statistics for a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4277,7 +4317,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景实时指标</para>
+        /// <para>Queries the real-time statistics for a specified script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4295,7 +4335,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音</para>
+        /// <para>Retrieves the download URL for a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4341,7 +4381,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音</para>
+        /// <para>Retrieves the download URL for a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4387,7 +4427,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音</para>
+        /// <para>Retrieves the download URL for a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4405,7 +4445,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音</para>
+        /// <para>Retrieves the download URL for a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4423,8 +4463,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the detailed configuration information for the draft and published versions of a specified scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the detailed script configuration for a specific scenario. The configuration includes settings for Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and dialogue capabilities.</description></item>
+        /// <item><description>No additional parameters are required for the request. The response contains the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The detailed configuration information is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptRequest
@@ -4469,8 +4519,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the detailed configuration information for the draft and published versions of a specified scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the detailed script configuration for a specific scenario. The configuration includes settings for Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and dialogue capabilities.</description></item>
+        /// <item><description>No additional parameters are required for the request. The response contains the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The detailed configuration information is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptRequest
@@ -4515,8 +4575,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the detailed configuration information for the draft and published versions of a specified scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the detailed script configuration for a specific scenario. The configuration includes settings for Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and dialogue capabilities.</description></item>
+        /// <item><description>No additional parameters are required for the request. The response contains the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The detailed configuration information is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptRequest
@@ -4533,8 +4603,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the detailed configuration information for the draft and published versions of a specified scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the detailed script configuration for a specific scenario. The configuration includes settings for Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and dialogue capabilities.</description></item>
+        /// <item><description>No additional parameters are required for the request. The response contains the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The detailed configuration information is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptRequest
@@ -4551,8 +4631,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标趋势详情</para>
+        /// <para>View the scenario metric trend chart</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API returns the script configuration for a specific scenario, including settings for ASR, TTS, and conversational capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes configuration data for both the draft and published versions.</description></item>
+        /// <item><description>Check the <c>Data</c> field for configuration details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptTrendingReportRequest
@@ -4609,8 +4699,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标趋势详情</para>
+        /// <para>View the scenario metric trend chart</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API returns the script configuration for a specific scenario, including settings for ASR, TTS, and conversational capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes configuration data for both the draft and published versions.</description></item>
+        /// <item><description>Check the <c>Data</c> field for configuration details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptTrendingReportRequest
@@ -4667,8 +4767,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标趋势详情</para>
+        /// <para>View the scenario metric trend chart</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API returns the script configuration for a specific scenario, including settings for ASR, TTS, and conversational capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes configuration data for both the draft and published versions.</description></item>
+        /// <item><description>Check the <c>Data</c> field for configuration details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptTrendingReportRequest
@@ -4685,8 +4795,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标趋势详情</para>
+        /// <para>View the scenario metric trend chart</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API returns the script configuration for a specific scenario, including settings for ASR, TTS, and conversational capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes configuration data for both the draft and published versions.</description></item>
+        /// <item><description>Check the <c>Data</c> field for configuration details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScriptTrendingReportRequest
@@ -4703,7 +4823,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the details of a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4745,7 +4865,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the details of a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4787,7 +4907,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the details of a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4805,7 +4925,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the details of a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4823,7 +4943,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the details of a specified vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4869,7 +4989,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the details of a specified vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4915,7 +5035,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the details of a specified vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4933,7 +5053,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the details of a specified vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4951,7 +5071,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports a custom vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4997,7 +5117,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports a custom vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5043,7 +5163,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports a custom vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5061,7 +5181,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports a custom vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5079,7 +5199,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves a list of background music tracks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5129,7 +5249,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves a list of background music tracks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5179,7 +5299,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves a list of background music tracks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5197,7 +5317,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves a list of background music tracks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5215,7 +5335,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务提供商</para>
+        /// <para>System Management &gt; Manual Service Provider Management &gt; Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5269,7 +5389,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务提供商</para>
+        /// <para>System Management &gt; Manual Service Provider Management &gt; Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5323,7 +5443,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务提供商</para>
+        /// <para>System Management &gt; Manual Service Provider Management &gt; Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5341,7 +5461,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务提供商</para>
+        /// <para>System Management &gt; Manual Service Provider Management &gt; Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5359,7 +5479,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the call list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5481,7 +5601,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the call list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5603,7 +5723,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the call list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5621,7 +5741,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Gets the call list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5639,7 +5759,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Lists the cloned voices in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5693,7 +5813,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Lists the cloned voices in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5747,7 +5867,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Lists the cloned voices in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5765,7 +5885,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Lists the cloned voices in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5783,7 +5903,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Lists the available clone voice models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5829,7 +5949,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Lists the available clone voice models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5875,7 +5995,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Lists the available clone voice models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5893,7 +6013,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Lists the available clone voice models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5911,8 +6031,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标汇总数据</para>
+        /// <para>Retrieve aggregated instance metrics</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the script configuration for a specific scenario, including settings for ASR, TTS, and dialogue capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The configuration data is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListHistoricalInstanceReportRequest
@@ -5975,8 +6105,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标汇总数据</para>
+        /// <para>Retrieve aggregated instance metrics</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the script configuration for a specific scenario, including settings for ASR, TTS, and dialogue capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The configuration data is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListHistoricalInstanceReportRequest
@@ -6039,8 +6179,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标汇总数据</para>
+        /// <para>Retrieve aggregated instance metrics</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the script configuration for a specific scenario, including settings for ASR, TTS, and dialogue capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The configuration data is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHistoricalInstanceReportRequest
@@ -6057,8 +6207,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例指标汇总数据</para>
+        /// <para>Retrieve aggregated instance metrics</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the script configuration for a specific scenario, including settings for ASR, TTS, and dialogue capability.</description></item>
+        /// <item><description>This request requires no parameters. The response includes the configuration data for both the draft and published versions.</description></item>
+        /// <item><description>The configuration data is returned in the <c>Data</c> field of the response.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHistoricalInstanceReportRequest
@@ -6075,7 +6235,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标汇总数据</para>
+        /// <para>Get scene metric summary data</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6143,7 +6303,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标汇总数据</para>
+        /// <para>Get scene metric summary data</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6211,7 +6371,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标汇总数据</para>
+        /// <para>Get scene metric summary data</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6229,7 +6389,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景指标汇总数据</para>
+        /// <para>Get scene metric summary data</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6247,7 +6407,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指令</para>
+        /// <para>Lists the instructions that are configured for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6301,7 +6461,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指令</para>
+        /// <para>Lists the instructions that are configured for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6355,7 +6515,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指令</para>
+        /// <para>Lists the instructions that are configured for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6373,7 +6533,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指令</para>
+        /// <para>Lists the instructions that are configured for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6391,7 +6551,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语言模型配置信息</para>
+        /// <para>Get the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6441,7 +6601,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语言模型配置信息</para>
+        /// <para>Get the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6491,7 +6651,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语言模型配置信息</para>
+        /// <para>Get the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6509,7 +6669,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语言模型配置信息</para>
+        /// <para>Get the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6527,7 +6687,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Lists the available NLU models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6569,7 +6729,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Lists the available NLU models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6611,7 +6771,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Lists the available NLU models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6629,7 +6789,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Lists the available NLU models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6647,7 +6807,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time statistics for instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6703,7 +6863,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time statistics for instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6759,7 +6919,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time statistics for instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6777,7 +6937,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例实时指标</para>
+        /// <para>Retrieves real-time statistics for instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6795,7 +6955,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves a list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6837,7 +6997,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves a list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6879,7 +7039,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves a list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6897,7 +7057,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves a list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6915,7 +7075,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6987,7 +7147,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7059,7 +7219,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7077,7 +7237,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7095,7 +7255,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7149,7 +7309,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7203,7 +7363,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7221,7 +7381,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7239,7 +7399,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of vocabularies for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7293,7 +7453,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of vocabularies for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7347,7 +7507,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of vocabularies for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7365,7 +7525,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of vocabularies for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7383,7 +7543,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7433,7 +7593,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7483,7 +7643,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7501,7 +7661,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7519,7 +7679,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a list of engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7565,7 +7725,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a list of engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7611,7 +7771,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a list of engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7629,7 +7789,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a list of engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7647,7 +7807,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of available voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7705,7 +7865,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of available voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7763,7 +7923,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of available voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7781,7 +7941,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves a list of available voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7799,7 +7959,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7871,7 +8031,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7943,7 +8103,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7961,7 +8121,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7979,7 +8139,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8029,7 +8189,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8079,7 +8239,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8097,7 +8257,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8115,7 +8275,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务提供商</para>
+        /// <para>Updates an agent service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8195,7 +8355,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务提供商</para>
+        /// <para>Updates an agent service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8275,7 +8435,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务提供商</para>
+        /// <para>Updates an agent service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8293,7 +8453,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务提供商</para>
+        /// <para>Updates an agent service provider in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8311,7 +8471,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8361,7 +8521,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8411,7 +8571,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8429,7 +8589,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8447,7 +8607,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改指令</para>
+        /// <para>Updates the global configuration of a specific instruction for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8505,7 +8665,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改指令</para>
+        /// <para>Updates the global configuration of a specific instruction for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8563,7 +8723,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改指令</para>
+        /// <para>Updates the global configuration of a specific instruction for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8581,7 +8741,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改指令</para>
+        /// <para>Updates the global configuration of a specific instruction for a Digital Employee.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8599,7 +8759,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语言模型配置信息</para>
+        /// <para>Updates the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8655,7 +8815,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语言模型配置信息</para>
+        /// <para>Updates the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8711,7 +8871,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语言模型配置信息</para>
+        /// <para>Updates the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8729,7 +8889,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语言模型配置信息</para>
+        /// <para>Updates the language model configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8747,7 +8907,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8805,7 +8965,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8863,7 +9023,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8881,7 +9041,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8899,7 +9059,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates the Message Queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8979,7 +9139,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates the Message Queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9059,7 +9219,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates the Message Queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9077,7 +9237,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates the Message Queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9095,7 +9255,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9149,7 +9309,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9203,7 +9363,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9221,7 +9381,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9239,7 +9399,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9303,7 +9463,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9367,7 +9527,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9385,7 +9545,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9403,7 +9563,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a voice access profile.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9463,7 +9623,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a voice access profile.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9523,7 +9683,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a voice access profile.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9541,7 +9701,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a voice access profile.</para>
         /// </summary>
         /// 
         /// <param name="request">

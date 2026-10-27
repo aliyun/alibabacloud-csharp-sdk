@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
 {
     public class ListHistoricalScriptReportRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the query time range, which is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1582103299434</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Voice Bot instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12f407b22cbe4890ac595f09985848d5</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number to retrieve.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>A list of up to 100 script IDs.</para>
+        /// </summary>
         [NameInMap("ScriptIds")]
         [Validation(Required=false)]
         public List<string> ScriptIds { get; set; }
 
         /// <summary>
+        /// <para>The start of the query time range, which is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1582267398628</para>
         /// </summary>
