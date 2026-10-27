@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public string StorageMode { get; set; }
 
+            [NameInMap("storageModes")]
+            [Validation(Required=false)]
+            public List<string> StorageModes { get; set; }
+
             /// <summary>
             /// <para>The time when the context store was last updated, in ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>

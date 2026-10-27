@@ -151,6 +151,68 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 [Validation(Required=false)]
                 public string Preset { get; set; }
 
+                [NameInMap("storagePolicy")]
+                [Validation(Required=false)]
+                public GetContextStoreResponseBodyConfigExtractionPoliciesStoragePolicy StoragePolicy { get; set; }
+                public class GetContextStoreResponseBodyConfigExtractionPoliciesStoragePolicy : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</para>
+                    /// </summary>
+                    [NameInMap("allowedActions")]
+                    [Validation(Required=false)]
+                    public List<string> AllowedActions { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("dedupe")]
+                    [Validation(Required=false)]
+                    public bool? Dedupe { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("humanEditProtection")]
+                    [Validation(Required=false)]
+                    public bool? HumanEditProtection { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>semantic</para>
+                    /// </summary>
+                    [NameInMap("mergeKey")]
+                    [Validation(Required=false)]
+                    public string MergeKey { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>upsert</para>
+                    /// </summary>
+                    [NameInMap("mode")]
+                    [Validation(Required=false)]
+                    public string Mode { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0.4</para>
+                    /// </summary>
+                    [NameInMap("similarityThreshold")]
+                    [Validation(Required=false)]
+                    public double? SimilarityThreshold { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
+                    [NameInMap("ttlDays")]
+                    [Validation(Required=false)]
+                    public int? TtlDays { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The stable ID of the extraction policy. The ID must start with a letter and can contain only letters, digits, underscores, and hyphens. It can be up to 64 characters in length. The ID must be unique within the same context library. Modifying the name or instructions does not change this ID.</para>
                 /// <para>This parameter is required.</para>
@@ -893,6 +955,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string State { get; set; }
 
             }
+
+            [NameInMap("storageModes")]
+            [Validation(Required=false)]
+            public List<string> StorageModes { get; set; }
 
             /// <summary>
             /// <para>The storage policy for the memory type.</para>

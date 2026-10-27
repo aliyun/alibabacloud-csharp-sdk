@@ -1,3 +1,11 @@
+2026-10-27 Version: 2.4.3
+- Update API CreateContextStore: add request parameters body.config.extractionPolicies.$.storagePolicy.
+- Update API GetContextStore: add response parameters Body.config.storageModes.
+- Update API GetContextStore: add response parameters Body.config.extractionPolicies.$.storagePolicy.
+- Update API ListContextStores: add response parameters Body.results.$.storageModes.
+- Update API UpdateContextStore: add request parameters body.config.extractionPolicies.$.storagePolicy.
+
+
 2026-10-22 Version: 2.4.2
 - Update API CreateContextStore: add request parameters body.config.extractionPolicies.
 - Update API GetContextStore: add response parameters Body.config.extractionPolicies.
