@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The Agent instance access key used for QICloud Customer API authentication.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public string XQIAgentApiKey { get; set; }
 
         /// <summary>
+        /// <para>The published Mobile Planner Agent instance ID. Must correspond to the X-QI-Agent-Api-Key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public string XQIInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The optional session identifier. Can be omitted for the first turn, in which case the server generates one. Pass it back in subsequent turns to continue the Mobile Planner Agent session.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>session-xxx</para>
         /// </summary>

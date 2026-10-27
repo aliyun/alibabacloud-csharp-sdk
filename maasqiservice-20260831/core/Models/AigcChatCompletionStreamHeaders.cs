@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The instance access key. The key must belong to the Creative Agent instance being called. This key is different from the AccessKey Secret used for OpenAPI signing. Do not expose it publicly.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public string XQIAgentApiKey { get; set; }
 
         /// <summary>
+        /// <para>The published Creative Agent instance ID. Must correspond to the X-QI-Agent-Api-Key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.MaasQIService20260831.Models
         public string XQIInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The session identifier. Can be omitted for the first turn. Obtain it from the qi_session_id field in the SSE response and pass it back in subsequent turns. Use no more than 128 characters consisting of letters, digits, periods, underscores, colons, or hyphens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>session-xxx</para>
         /// </summary>
