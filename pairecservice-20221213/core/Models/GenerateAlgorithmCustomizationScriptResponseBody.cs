@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GenerateAlgorithmCustomizationScriptResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log ID.</para>
+        /// <para>The ID of the generated log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

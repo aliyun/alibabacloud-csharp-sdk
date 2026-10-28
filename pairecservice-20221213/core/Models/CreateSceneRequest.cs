@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateSceneRequest : TeaModel {
         /// <summary>
-        /// <para>The scene description.</para>
+        /// <para>The scenario description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The flows.</para>
+        /// <para>The traffic list.</para>
         /// </summary>
         [NameInMap("Flows")]
         [Validation(Required=false)]
         public List<CreateSceneRequestFlows> Flows { get; set; }
         public class CreateSceneRequestFlows : TeaModel {
             /// <summary>
-            /// <para>The flow code.</para>
+            /// <para>The traffic code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liuliang1</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FlowCode { get; set; }
 
             /// <summary>
-            /// <para>The flow name.</para>
+            /// <para>The traffic name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>流量1</para>
+            /// <para>Traffic 1</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scene1</para>

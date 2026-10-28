@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The environment to which the parameter belongs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Daily: daily environment</description></item>
-            /// <item><description>Prepub: pre-release environment</description></item>
+            /// <item><description>Prepub: staging environment</description></item>
             /// <item><description>Product: production environment</description></item>
             /// </list>
             /// 
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Environment { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time is formatted in ISO 8601 and includes the time zone offset.</para>
+            /// <para>The update time. The time follows the ISO 8601 standard and includes the time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The parameter name.</para>
+            /// <para>The name of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>home</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ParamId { get; set; }
 
             /// <summary>
-            /// <para>The parameter value.</para>
+            /// <para>The value of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>house</para>

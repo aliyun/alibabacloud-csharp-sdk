@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The ID of the crowd for crowd targeting. You can obtain this ID by calling the ListCrowds operation.</para>
+        /// <para>The ID of the specified crowd for crowd targeting. You can call the ListCrowds operation to obtain the crowd ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,16 +30,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CrowdId { get; set; }
 
         /// <summary>
-        /// <para>The crowd targeting type for the experiment group. Valid values:</para>
+        /// <para>The type of traffic targeting for the experiment group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>All</c>: All traffic</para>
-        /// </description></item>
-        /// <item><description><para><c>Filter</c>: Traffic that matches the filter condition</para>
-        /// </description></item>
-        /// <item><description><para><c>CrowdId</c>: Traffic from a specific crowd</para>
-        /// </description></item>
-        /// <item><description><para><c>Random</c>: A random percentage of traffic</para>
-        /// </description></item>
+        /// <item><description>All: All traffic.</description></item>
+        /// <item><description>Filter: Traffic that uses filter conditions.</description></item>
+        /// <item><description>CrowdId: Traffic specified by a crowd ID.</description></item>
+        /// <item><description>Random: Random traffic based on a percentage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +46,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CrowdTargetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the debug crowd. You can obtain this ID by calling the ListCrowds operation.</para>
+        /// <para>The ID of the debug crowd. You can call the ListCrowds operation to obtain the crowd ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugCrowdId { get; set; }
 
         /// <summary>
-        /// <para>The UIDs of the debug users. The value must be the UID of an Alibaba Cloud account or a RAM user. Separate multiple UIDs with a comma.</para>
+        /// <para>The debug users. The users must be the UIDs of Alibaba Cloud accounts or RAM users. Separate multiple UIDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1124512470******,1124512471******,1124512472******</para>
@@ -80,7 +76,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time duration for traffic distribution.</para>
+        /// <para>The time period for traffic distribution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -90,7 +86,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? DistributionTimeDuration { get; set; }
 
         /// <summary>
-        /// <para>The distribution type. Valid values: <c>UserId</c> (by user ID) and <c>TimeDuration</c> (by time duration).</para>
+        /// <para>The traffic distribution method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>UserId: User ID.</description></item>
+        /// <item><description>TimeDuration: Time period.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>UserId</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DistributionType { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for crowd targeting.</para>
+        /// <para>The filter conditions for crowd targeting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gender=male</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can obtain this ID by calling the ListInstances operation.</para>
+        /// <para>The ID of the instance. You can call the ListInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the layer. You can obtain this ID by calling the ListLayers operation.</para>
+        /// <para>The ID of the layer. You can call the ListLayers operation to obtain the layer ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create an A/A experiment group.</para>
+        /// <para>Specifies whether an AA experiment group is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? NeedAA { get; set; }
 
         /// <summary>
-        /// <para>The percentage of traffic to randomly allocate to this experiment group. This parameter is used only when <c>CrowdTargetType</c> is set to <c>Random</c>. Valid values: 0 to 100.</para>
+        /// <para>The percentage of random traffic used to match the experiment group when the traffic targeting type is Random. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? RandomFlow { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of reserved bucket numbers.</para>
+        /// <para>The reserved bucket numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CheckTrafficControlTaskExpressionRequest : TeaModel {
         /// <summary>
-        /// <para>The expression to validate.</para>
+        /// <para>The expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Expression { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table.</para>
+        /// <para>The data table ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

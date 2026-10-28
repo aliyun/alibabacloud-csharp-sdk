@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The resource category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DataManagement</para>
-        /// </description></item>
-        /// <item><description><para>Engine</para>
-        /// </description></item>
-        /// <item><description><para>Monitor</para>
-        /// </description></item>
+        /// <item><description>DataManagement</description></item>
+        /// <item><description>Engine</description></item>
+        /// <item><description>Monitor</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         /// <summary>
         /// <para>The resource group.</para>
-        /// <para>If the resource category is DataManagement, valid values are:</para>
+        /// <para>If the resource category is DataManagement, valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>storage</para>
         /// </description></item>
@@ -41,7 +38,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <item><description><para>modeltrain</para>
         /// </description></item>
         /// </list>
-        /// <para>If the resource category is Engine, valid values are:</para>
+        /// <para>If the resource category is Engine, valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>feature</para>
         /// </description></item>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <item><description><para>recengine</para>
         /// </description></item>
         /// </list>
-        /// <para>If the resource category is Monitor, valid values are:</para>
+        /// <para>If the resource category is Monitor, valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>logs</para>
         /// </description></item>
@@ -89,9 +86,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// </description></item>
         /// <item><description><para>DataHub</para>
         /// </description></item>
-        /// <item><description><para>ApsaraMQ for Kafka</para>
+        /// <item><description><para>Kafka</para>
         /// </description></item>
-        /// <item><description><para>Realtime Compute for Apache Flink</para>
+        /// <item><description><para>Flinkvvp</para>
         /// </description></item>
         /// <item><description><para>ACR</para>
         /// </description></item>
@@ -103,9 +100,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// </description></item>
         /// <item><description><para>MaxCompute</para>
         /// </description></item>
-        /// <item><description><para>Graph Compute</para>
+        /// <item><description><para>GraphCompute</para>
         /// </description></item>
-        /// <item><description><para>ApsaraDB for Redis</para>
+        /// <item><description><para>Redis</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

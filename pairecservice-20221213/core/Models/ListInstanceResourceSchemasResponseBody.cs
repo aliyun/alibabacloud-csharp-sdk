@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The total count of schemas.</para>
+        /// <para>The total number of schemas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

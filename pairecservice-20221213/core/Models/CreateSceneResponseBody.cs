@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateSceneResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FCF741D8-9C30-578E-807F-B935487DB34A</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scene ID.</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

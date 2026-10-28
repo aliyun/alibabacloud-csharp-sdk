@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class StartTrafficControlTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The target environment. Valid values:</para>
+        /// <para>The environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Daily: the daily environment.</description></item>
+        /// <item><description>Pre: the staging environment.</description></item>
+        /// <item><description>Prod: the production environment.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Pre</para>

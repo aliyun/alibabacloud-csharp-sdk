@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The ID of the debug crowd. Call the ListCrowds operation to obtain this ID.</para>
+        /// <para>The debug crowd ID. You can call the ListCrowds operation to obtain the debug crowd ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugCrowdId { get; set; }
 
         /// <summary>
-        /// <para>The UIDs of Alibaba Cloud accounts or RAM users for debugging. Separate multiple UIDs with a comma.</para>
+        /// <para>The debug users. The value must be the UID of an Alibaba Cloud account or RAM user. Separate multiple UIDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1124512470******,1124512471******,1124512472******</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugUsers { get; set; }
 
         /// <summary>
-        /// <para>The experiment description.</para>
+        /// <para>The description of the experiment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the experiment group. Call the ListExperimentGroups operation to obtain this ID.</para>
+        /// <para>The experiment group ID. You can call the ListExperimentGroups operation to obtain the experiment group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
-        /// <para>The traffic distribution percentage.</para>
+        /// <para>The traffic allocation percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? FlowPercent { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Call the ListInstances operation to obtain this ID.</para>
+        /// <para>The instance ID. You can call the ListInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The experiment name.</para>
+        /// <para>The name of the experiment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The experiment type. Valid values:<br>● <c>Baseline</c>: Indicates a baseline experiment.<br>● <c>Normal</c>: Indicates a normal experiment.<br><br></para>
+        /// <para>The type of the experiment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Baseline: baseline experiment.</description></item>
+        /// <item><description>Normal: normal experiment.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

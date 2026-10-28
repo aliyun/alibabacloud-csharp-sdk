@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
                 /// <summary>
                 /// <para>The metadata.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
                 /// </summary>
                 [NameInMap("Meta")]
                 [Validation(Required=false)]
@@ -127,6 +130,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
                 /// <summary>
                 /// <para>The metadata.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
                 /// </summary>
                 [NameInMap("Meta")]
                 [Validation(Required=false)]
@@ -147,7 +153,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The time when the instance expires. The time is displayed in UTC and follows the ISO 8601 standard.</para>
+        /// <para>The time when the instance expires. The time follows the ISO 8601 standard and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-14T00:00:00Z</para>
@@ -165,6 +171,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public class GetInstanceResponseBodyFeatureStoreInfo : TeaModel {
             /// <summary>
             /// <para>The status of FeatureDB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("FeatureDBStatus")]
             [Validation(Required=false)]
@@ -172,6 +181,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             /// <summary>
             /// <para>The ID of the Feature Store instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>learn-pairec-xxx</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -180,7 +192,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard.</para>
+        /// <para>The time when the instance was created. The time follows the ISO 8601 standard and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-13T04:55:12Z</para>
@@ -190,7 +202,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was updated. The time is displayed in UTC and follows the ISO 8601 standard.</para>
+        /// <para>The time when the instance was updated. The time follows the ISO 8601 standard and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-05T09:02:30Z</para>
@@ -210,7 +222,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the operations tool.</para>
+        /// <para>The configurations related to the operations tool.</para>
         /// </summary>
         [NameInMap("OperatingTool")]
         [Validation(Required=false)]
@@ -241,6 +253,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public class GetInstanceResponseBodyRecommendCustomization : TeaModel {
             /// <summary>
             /// <para>Specifies whether recommendation customization is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("IsEnable")]
             [Validation(Required=false)]
@@ -251,10 +266,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The region ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-shenzhen: Shenzhen.</description></item>
-        /// <item><description>cn-hangzhou: Hangzhou.</description></item>
-        /// <item><description>cn-beijing: Beijing.</description></item>
-        /// <item><description>cn-shanghai: Shanghai.</description></item>
+        /// <item><description>cn-shenzhen: Shenzhen</description></item>
+        /// <item><description>cn-hangzhou: Hangzhou</description></item>
+        /// <item><description>cn-beijing: Beijing</description></item>
+        /// <item><description>cn-shanghai: Shanghai</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -277,9 +292,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Initializing: Initializing.</description></item>
-        /// <item><description>Stopped: Stopped.</description></item>
-        /// <item><description>Running: Running.</description></item>
+        /// <item><description>Initializing: Initialization.</description></item>
+        /// <item><description>Stopped: The service is stopped.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -290,7 +305,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values:</para>
+        /// <para>The type of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>basic: Basic Edition.</description></item>
         /// <item><description>highleve: Upgraded Edition.</description></item>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetSceneRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can get this ID by calling the ListInstances operation.</para>
+        /// <para>The instance ID. You can obtain this ID by calling the ListInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-abcdefg1234</para>

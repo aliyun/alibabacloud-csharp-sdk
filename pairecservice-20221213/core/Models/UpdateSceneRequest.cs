@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateSceneRequest : TeaModel {
         /// <summary>
-        /// <para>The scene description.</para>
+        /// <para>The description of the scene.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The flows.</para>
+        /// <para>The list of flows.</para>
         /// </summary>
         [NameInMap("Flows")]
         [Validation(Required=false)]
         public List<UpdateSceneRequestFlows> Flows { get; set; }
         public class UpdateSceneRequestFlows : TeaModel {
             /// <summary>
-            /// <para>The flow code.</para>
+            /// <para>The code of the flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liuliang1</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FlowCode { get; set; }
 
             /// <summary>
-            /// <para>The flow name.</para>
+            /// <para>The name of the flow.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>流量1</para>
+            /// <para>Flow 1</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The instance ID. To obtain the ID, call the <c>ListInstances</c> API.</para>
+        /// <para>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-abcdefg1234</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The name of the scene.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scene1</para>

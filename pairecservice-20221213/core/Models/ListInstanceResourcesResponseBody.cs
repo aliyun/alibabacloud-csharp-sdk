@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of resource objects.</para>
+        /// <para>The list of resource objects.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<ListInstanceResourcesResponseBodyResources> Resources { get; set; }
         public class ListInstanceResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The category of the resource. Valid values:</para>
+            /// <para>The resource category. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>DataManagement</para>
             /// </description></item>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the resource.</para>
+            /// <para>The configuration information of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedAt { get; set; }
 
             /// <summary>
-            /// <para>The group of the resource.</para>
-            /// <para>If <c>Category</c> is <c>DataManagement</c>, valid values are:</para>
+            /// <para>The resource group.</para>
+            /// <para>If the resource category is DataManagement, valid values are:</para>
             /// <list type="bullet">
             /// <item><description><para>storage</para>
             /// </description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <item><description><para>modeltrain</para>
             /// </description></item>
             /// </list>
-            /// <para>If <c>Category</c> is <c>Engine</c>, valid values are:</para>
+            /// <para>If the resource category is Engine, valid values are:</para>
             /// <list type="bullet">
             /// <item><description><para>feature</para>
             /// </description></item>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <item><description><para>recengine</para>
             /// </description></item>
             /// </list>
-            /// <para>If <c>Category</c> is <c>Monitor</c>, valid values are:</para>
+            /// <para>If the resource category is Monitor, valid values are:</para>
             /// <list type="bullet">
             /// <item><description><para>logs</para>
             /// </description></item>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
+            /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>Hologres</para>
             /// </description></item>
@@ -144,9 +144,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// </description></item>
             /// <item><description><para>DataHub</para>
             /// </description></item>
-            /// <item><description><para>ApsaraMQ for Kafka</para>
+            /// <item><description><para>Kafka</para>
             /// </description></item>
-            /// <item><description><para>Realtime Compute for Apache Flink</para>
+            /// <item><description><para>Flinkvvp</para>
             /// </description></item>
             /// <item><description><para>ACR</para>
             /// </description></item>
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// </description></item>
             /// <item><description><para>MaxCompute</para>
             /// </description></item>
-            /// <item><description><para>Graph Compute Service</para>
+            /// <item><description><para>GraphCompute</para>
             /// </description></item>
-            /// <item><description><para>ApsaraDB for Redis</para>
+            /// <item><description><para>Redis</para>
             /// </description></item>
             /// </list>
             /// 
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The resource URI.</para>
+            /// <para>The URI of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bucket-test-123</para>

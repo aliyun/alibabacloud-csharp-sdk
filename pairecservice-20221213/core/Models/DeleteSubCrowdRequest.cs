@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteSubCrowdRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can obtain this ID by calling the <c>ListInstances</c> operation.</para>
+        /// <para>The instance ID. You can obtain the ID by calling the ListInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

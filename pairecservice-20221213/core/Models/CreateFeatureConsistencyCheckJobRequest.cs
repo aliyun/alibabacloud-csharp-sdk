@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateFeatureConsistencyCheckJobRequest : TeaModel {
         /// <summary>
-        /// <para>The environment where the job runs. Valid values:</para>
+        /// <para>The runtime environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily: the daily environment</para>
-        /// </description></item>
-        /// <item><description><para>Pre: the pre-production environment</para>
-        /// </description></item>
-        /// <item><description><para>Prod: the production environment</para>
-        /// </description></item>
+        /// <item><description>Daily: daily environment</description></item>
+        /// <item><description>Pre: staging environment</description></item>
+        /// <item><description>Prod: production environment</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,7 +26,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The feature consistency check job configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a> operation to obtain this ID.</para>
+        /// <para>The feature consistency check job configuration ID. For information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureConsistencyCheckJobConfigId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can obtain the instance ID on the <a href="https://help.aliyun.com/document_detail/2411819.html">Instances</a> page.</para>
+        /// <para>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +48,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sampling duration, in minutes.</para>
+        /// <para>The sampling duration in minutes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

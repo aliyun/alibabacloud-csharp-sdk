@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The recall management service version ID.</para>
+        /// <para>The version ID of the recall management service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an engine configuration.</para>
+        /// <para>Publishes an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an engine configuration.</para>
+        /// <para>Publishes an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an engine configuration.</para>
+        /// <para>Publishes an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an engine configuration.</para>
+        /// <para>Publishes an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -379,18 +379,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API changes the version of a recall management service.</para>
+        /// <para>Updates the version of a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to change the version of a recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid, and that you have the required permissions for these resources.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this API to change the version of a specific recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid and that you have the required permissions to manage these resources.</para>
         /// <list type="bullet">
-        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service.</description></item>
-        /// <item><description><b>InstanceId</b>: The instance ID associated with the recall management service.</description></item>
-        /// <item><description><b>RecallManagementServiceVersionId</b>: The target version ID to switch to.
-        /// Note: Before changing the version, confirm that the new version is fully tested and ready for production.</description></item>
+        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service whose version you want to change.</description></item>
+        /// <item><description><b>InstanceId</b>: Instance ID of the instance associated with the recall management service.</description></item>
+        /// <item><description><b>RecallManagementServiceVersionId</b>: Instance ID of the target version to switch to.
+        /// Note: Before you change the version, ensure that the new version has been fully tested and is ready to go live.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -441,18 +441,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API changes the version of a recall management service.</para>
+        /// <para>Updates the version of a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to change the version of a recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid, and that you have the required permissions for these resources.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this API to change the version of a specific recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid and that you have the required permissions to manage these resources.</para>
         /// <list type="bullet">
-        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service.</description></item>
-        /// <item><description><b>InstanceId</b>: The instance ID associated with the recall management service.</description></item>
-        /// <item><description><b>RecallManagementServiceVersionId</b>: The target version ID to switch to.
-        /// Note: Before changing the version, confirm that the new version is fully tested and ready for production.</description></item>
+        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service whose version you want to change.</description></item>
+        /// <item><description><b>InstanceId</b>: Instance ID of the instance associated with the recall management service.</description></item>
+        /// <item><description><b>RecallManagementServiceVersionId</b>: Instance ID of the target version to switch to.
+        /// Note: Before you change the version, ensure that the new version has been fully tested and is ready to go live.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -503,18 +503,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API changes the version of a recall management service.</para>
+        /// <para>Updates the version of a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to change the version of a recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid, and that you have the required permissions for these resources.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this API to change the version of a specific recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid and that you have the required permissions to manage these resources.</para>
         /// <list type="bullet">
-        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service.</description></item>
-        /// <item><description><b>InstanceId</b>: The instance ID associated with the recall management service.</description></item>
-        /// <item><description><b>RecallManagementServiceVersionId</b>: The target version ID to switch to.
-        /// Note: Before changing the version, confirm that the new version is fully tested and ready for production.</description></item>
+        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service whose version you want to change.</description></item>
+        /// <item><description><b>InstanceId</b>: Instance ID of the instance associated with the recall management service.</description></item>
+        /// <item><description><b>RecallManagementServiceVersionId</b>: Instance ID of the target version to switch to.
+        /// Note: Before you change the version, ensure that the new version has been fully tested and is ready to go live.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -534,18 +534,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API changes the version of a recall management service.</para>
+        /// <para>Updates the version of a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to change the version of a recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid, and that you have the required permissions for these resources.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this API to change the version of a specific recall management service. Ensure that the provided <c>RecallManagementServiceId</c>, <c>InstanceId</c>, and target <c>RecallManagementServiceVersionId</c> are valid and that you have the required permissions to manage these resources.</para>
         /// <list type="bullet">
-        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service.</description></item>
-        /// <item><description><b>InstanceId</b>: The instance ID associated with the recall management service.</description></item>
-        /// <item><description><b>RecallManagementServiceVersionId</b>: The target version ID to switch to.
-        /// Note: Before changing the version, confirm that the new version is fully tested and ready for production.</description></item>
+        /// <item><description><b>RecallManagementServiceId</b>: The unique identifier of the recall management service whose version you want to change.</description></item>
+        /// <item><description><b>InstanceId</b>: Instance ID of the instance associated with the recall management service.</description></item>
+        /// <item><description><b>RecallManagementServiceVersionId</b>: Instance ID of the target version to switch to.
+        /// Note: Before you change the version, ensure that the new version has been fully tested and is ready to go live.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -909,13 +909,215 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a traffic control task expression.</para>
+        /// <para>Checks whether a specified recall management service is working properly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecallManagementServiceResponse
+        /// </returns>
+        public CheckRecallManagementServiceResponse CheckRecallManagementServiceWithOptions(string RecallManagementServiceId, CheckRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextParams))
+            {
+                body["ContextParams"] = request.ContextParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExposureList))
+            {
+                body["ExposureList"] = request.ExposureList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallManagementServiceVersionId))
+            {
+                body["RecallManagementServiceVersionId"] = request.RecallManagementServiceVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recalls))
+            {
+                body["Recalls"] = request.Recalls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainFields))
+            {
+                body["RetainFields"] = request.RetainFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                body["Uid"] = request.Uid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/check",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckRecallManagementServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a specified recall management service is working properly.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecallManagementServiceResponse
+        /// </returns>
+        public async Task<CheckRecallManagementServiceResponse> CheckRecallManagementServiceWithOptionsAsync(string RecallManagementServiceId, CheckRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextParams))
+            {
+                body["ContextParams"] = request.ContextParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExposureList))
+            {
+                body["ExposureList"] = request.ExposureList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallManagementServiceVersionId))
+            {
+                body["RecallManagementServiceVersionId"] = request.RecallManagementServiceVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recalls))
+            {
+                body["Recalls"] = request.Recalls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainFields))
+            {
+                body["RetainFields"] = request.RetainFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                body["Uid"] = request.Uid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/check",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckRecallManagementServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a specified recall management service is working properly.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecallManagementServiceResponse
+        /// </returns>
+        public CheckRecallManagementServiceResponse CheckRecallManagementService(string RecallManagementServiceId, CheckRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CheckRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a specified recall management service is working properly.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckRecallManagementServiceResponse
+        /// </returns>
+        public async Task<CheckRecallManagementServiceResponse> CheckRecallManagementServiceAsync(string RecallManagementServiceId, CheckRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CheckRecallManagementServiceWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates whether a specified traffic control task expression is valid.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API operation checks the validity of a traffic control task expression for a specified instance and data table. Make sure that the <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters are accurate to correctly perform the validation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -969,13 +1171,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a traffic control task expression.</para>
+        /// <para>Validates whether a specified traffic control task expression is valid.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation checks the validity of a traffic control task expression for a specified instance and data table. Make sure that the <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters are accurate to correctly perform the validation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1029,13 +1231,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a traffic control task expression.</para>
+        /// <para>Validates whether a specified traffic control task expression is valid.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation checks the validity of a traffic control task expression for a specified instance and data table. Make sure that the <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters are accurate to correctly perform the validation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1054,13 +1256,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a traffic control task expression.</para>
+        /// <para>Validates whether a specified traffic control task expression is valid.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation checks the validity of a traffic control task expression for a specified instance and data table. Make sure that the <c>InstanceId</c>, <c>TableMetaId</c>, and <c>Expression</c> parameters are accurate to correctly perform the validation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1517,7 +1719,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a feature consistency check job configuration.</para>
+        /// <para>Clones the feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1563,7 +1765,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a feature consistency check job configuration.</para>
+        /// <para>Clones the feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1609,7 +1811,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a feature consistency check job configuration.</para>
+        /// <para>Clones the feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1628,7 +1830,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a feature consistency check job configuration.</para>
+        /// <para>Clones the feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1647,7 +1849,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</para>
+        /// <para>Clones a specified laboratory to a specified environment and specifies whether to clone the experiment groups under the laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1701,7 +1903,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</para>
+        /// <para>Clones a specified laboratory to a specified environment and specifies whether to clone the experiment groups under the laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1755,7 +1957,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</para>
+        /// <para>Clones a specified laboratory to a specified environment and specifies whether to clone the experiment groups under the laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1774,7 +1976,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</para>
+        /// <para>Clones a specified laboratory to a specified environment and specifies whether to clone the experiment groups under the laboratory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1793,13 +1995,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified traffic control task to a new instance.</para>
+        /// <para>Clones a specified traffic shaping task to a new instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API clones an existing traffic control task to another specified instance. Ensure that the <c>InstanceId</c> you provide is valid and that you have the required permissions for the target instance.
+        /// <para>You can use this API to clone an existing traffic shaping task to another specified instance. Make sure that the <c>InstanceId</c> you provide is valid and that you have the required permissions to perform operations on the instance.
         /// Note: The cloning process does not affect the status or configuration of the original task.</para>
         /// </description>
         /// 
@@ -1846,13 +2048,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified traffic control task to a new instance.</para>
+        /// <para>Clones a specified traffic shaping task to a new instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API clones an existing traffic control task to another specified instance. Ensure that the <c>InstanceId</c> you provide is valid and that you have the required permissions for the target instance.
+        /// <para>You can use this API to clone an existing traffic shaping task to another specified instance. Make sure that the <c>InstanceId</c> you provide is valid and that you have the required permissions to perform operations on the instance.
         /// Note: The cloning process does not affect the status or configuration of the original task.</para>
         /// </description>
         /// 
@@ -1899,13 +2101,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified traffic control task to a new instance.</para>
+        /// <para>Clones a specified traffic shaping task to a new instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API clones an existing traffic control task to another specified instance. Ensure that the <c>InstanceId</c> you provide is valid and that you have the required permissions for the target instance.
+        /// <para>You can use this API to clone an existing traffic shaping task to another specified instance. Make sure that the <c>InstanceId</c> you provide is valid and that you have the required permissions to perform operations on the instance.
         /// Note: The cloning process does not affect the status or configuration of the original task.</para>
         /// </description>
         /// 
@@ -1925,13 +2127,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a specified traffic control task to a new instance.</para>
+        /// <para>Clones a specified traffic shaping task to a new instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API clones an existing traffic control task to another specified instance. Ensure that the <c>InstanceId</c> you provide is valid and that you have the required permissions for the target instance.
+        /// <para>You can use this API to clone an existing traffic shaping task to another specified instance. Make sure that the <c>InstanceId</c> you provide is valid and that you have the required permissions to perform operations on the instance.
         /// Note: The cloning process does not affect the status or configuration of the original task.</para>
         /// </description>
         /// 
@@ -2081,7 +2283,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AB metric.</para>
+        /// <para>Creates an AB test metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2195,7 +2397,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AB metric.</para>
+        /// <para>Creates an AB test metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2309,7 +2511,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AB metric.</para>
+        /// <para>Creates an AB test metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2328,7 +2530,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AB metric.</para>
+        /// <para>Creates an AB test metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2347,7 +2549,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an A/B metric group.</para>
+        /// <para>Creates an AB test metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2413,7 +2615,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an A/B metric group.</para>
+        /// <para>Creates an AB test metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2479,7 +2681,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an A/B metric group.</para>
+        /// <para>Creates an AB test metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2498,7 +2700,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an A/B metric group.</para>
+        /// <para>Creates an AB test metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2671,7 +2873,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a crowd that represents a group of users.</para>
+        /// <para>Creates a crowd to represent a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2737,7 +2939,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a crowd that represents a group of users.</para>
+        /// <para>Creates a crowd to represent a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2803,7 +3005,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a crowd that represents a group of users.</para>
+        /// <para>Creates a crowd to represent a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2822,7 +3024,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a crowd that represents a group of users.</para>
+        /// <para>Creates a crowd to represent a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3653,7 +3855,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</para>
+        /// <para>Creates an experiment group under a specified layer. You can categorize experiment groups by experiment type to observe the overall performance of experiments by group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3755,7 +3957,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</para>
+        /// <para>Creates an experiment group under a specified layer. You can categorize experiment groups by experiment type to observe the overall performance of experiments by group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3857,7 +4059,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</para>
+        /// <para>Creates an experiment group under a specified layer. You can categorize experiment groups by experiment type to observe the overall performance of experiments by group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3876,7 +4078,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</para>
+        /// <para>Creates an experiment group under a specified layer. You can categorize experiment groups by experiment type to observe the overall performance of experiments by group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4547,7 +4749,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration resource for a specified instance.</para>
+        /// <para>Creates a configuration resource for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4605,7 +4807,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration resource for a specified instance.</para>
+        /// <para>Creates a configuration resource for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4663,7 +4865,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration resource for a specified instance.</para>
+        /// <para>Creates a configuration resource for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4682,7 +4884,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration resource for a specified instance.</para>
+        /// <para>Creates a configuration resource for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5612,14 +5814,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new version of a recall management service.</description></item>
-        /// <item><description>To create a new version from an existing one, specify the source recall management service version ID.</description></item>
-        /// <item><description>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</description></item>
-        /// <item><description>Configure operators such as filter, trigger, feature extraction, and join.</description></item>
-        /// <item><description>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</description></item>
-        /// <item><description>All configuration items are optional.</description></item>
+        /// <item><description>This operation allows you to create a new version for a specific recall management service.</description></item>
+        /// <item><description>You can create a new version based on an existing version by specifying the source recall management service version ID.</description></item>
+        /// <item><description>You can configure detailed recall rules, including but not limited to the recall name, description, priority, and recall type.</description></item>
+        /// <item><description>The operation provides flexible operator configuration options, such as filtering, triggering, feature extraction, and join operations, to meet various business requirements.</description></item>
+        /// <item><description>The merge configuration allows you to specify how to merge multiple recall results. Two merge methods are supported: weight and alternate.</description></item>
+        /// <item><description>All configuration items are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5679,14 +5881,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new version of a recall management service.</description></item>
-        /// <item><description>To create a new version from an existing one, specify the source recall management service version ID.</description></item>
-        /// <item><description>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</description></item>
-        /// <item><description>Configure operators such as filter, trigger, feature extraction, and join.</description></item>
-        /// <item><description>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</description></item>
-        /// <item><description>All configuration items are optional.</description></item>
+        /// <item><description>This operation allows you to create a new version for a specific recall management service.</description></item>
+        /// <item><description>You can create a new version based on an existing version by specifying the source recall management service version ID.</description></item>
+        /// <item><description>You can configure detailed recall rules, including but not limited to the recall name, description, priority, and recall type.</description></item>
+        /// <item><description>The operation provides flexible operator configuration options, such as filtering, triggering, feature extraction, and join operations, to meet various business requirements.</description></item>
+        /// <item><description>The merge configuration allows you to specify how to merge multiple recall results. Two merge methods are supported: weight and alternate.</description></item>
+        /// <item><description>All configuration items are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5746,14 +5948,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new version of a recall management service.</description></item>
-        /// <item><description>To create a new version from an existing one, specify the source recall management service version ID.</description></item>
-        /// <item><description>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</description></item>
-        /// <item><description>Configure operators such as filter, trigger, feature extraction, and join.</description></item>
-        /// <item><description>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</description></item>
-        /// <item><description>All configuration items are optional.</description></item>
+        /// <item><description>This operation allows you to create a new version for a specific recall management service.</description></item>
+        /// <item><description>You can create a new version based on an existing version by specifying the source recall management service version ID.</description></item>
+        /// <item><description>You can configure detailed recall rules, including but not limited to the recall name, description, priority, and recall type.</description></item>
+        /// <item><description>The operation provides flexible operator configuration options, such as filtering, triggering, feature extraction, and join operations, to meet various business requirements.</description></item>
+        /// <item><description>The merge configuration allows you to specify how to merge multiple recall results. Two merge methods are supported: weight and alternate.</description></item>
+        /// <item><description>All configuration items are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5778,14 +5980,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to create a new version of a recall management service.</description></item>
-        /// <item><description>To create a new version from an existing one, specify the source recall management service version ID.</description></item>
-        /// <item><description>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</description></item>
-        /// <item><description>Configure operators such as filter, trigger, feature extraction, and join.</description></item>
-        /// <item><description>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</description></item>
-        /// <item><description>All configuration items are optional.</description></item>
+        /// <item><description>This operation allows you to create a new version for a specific recall management service.</description></item>
+        /// <item><description>You can create a new version based on an existing version by specifying the source recall management service version ID.</description></item>
+        /// <item><description>You can configure detailed recall rules, including but not limited to the recall name, description, priority, and recall type.</description></item>
+        /// <item><description>The operation provides flexible operator configuration options, such as filtering, triggering, feature extraction, and join operations, to meet various business requirements.</description></item>
+        /// <item><description>The merge configuration allows you to specify how to merge multiple recall results. Two merge methods are supported: weight and alternate.</description></item>
+        /// <item><description>All configuration items are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6903,7 +7105,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scene for metric and experiment analysis.</para>
+        /// <para>Creates a scenario for metric and experiment analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6961,7 +7163,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scene for metric and experiment analysis.</para>
+        /// <para>Creates a scenario for metric and experiment analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7019,7 +7221,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scene for metric and experiment analysis.</para>
+        /// <para>Creates a scenario for metric and experiment analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7038,7 +7240,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scene for metric and experiment analysis.</para>
+        /// <para>Creates a scenario for metric and experiment analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9433,7 +9635,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified layer.</para>
+        /// <para>Deletes a specified layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9479,7 +9681,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified layer.</para>
+        /// <para>Deletes a specified layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9525,7 +9727,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified layer.</para>
+        /// <para>Deletes a specified layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9544,7 +9746,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified layer.</para>
+        /// <para>Deletes a specified layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9693,13 +9895,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a recall management service.</para>
+        /// <para>Deletes a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</para>
+        /// <para>This API operation deletes a specific recall management service based on the provided recall management service ID and instance ID. Make sure that you have obtained the information about the service to be deleted before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9745,13 +9947,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a recall management service.</para>
+        /// <para>Deletes a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</para>
+        /// <para>This API operation deletes a specific recall management service based on the provided recall management service ID and instance ID. Make sure that you have obtained the information about the service to be deleted before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9797,13 +9999,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a recall management service.</para>
+        /// <para>Deletes a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</para>
+        /// <para>This API operation deletes a specific recall management service based on the provided recall management service ID and instance ID. Make sure that you have obtained the information about the service to be deleted before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9822,13 +10024,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a recall management service.</para>
+        /// <para>Deletes a specified recall management service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</para>
+        /// <para>This API operation deletes a specific recall management service based on the provided recall management service ID and instance ID. Make sure that you have obtained the information about the service to be deleted before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9847,13 +10049,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified version of a recall management service.</para>
+        /// <para>Deletes a specified recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to delete a specific version of a recall management service by providing the recall management service ID, recall management service version ID, and instance ID. Back up important data before calling this operation because the deletion is irreversible.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9899,13 +10101,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified version of a recall management service.</para>
+        /// <para>Deletes a specified recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to delete a specific version of a recall management service by providing the recall management service ID, recall management service version ID, and instance ID. Back up important data before calling this operation because the deletion is irreversible.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9951,13 +10153,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified version of a recall management service.</para>
+        /// <para>Deletes a specified recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to delete a specific version of a recall management service by providing the recall management service ID, recall management service version ID, and instance ID. Back up important data before calling this operation because the deletion is irreversible.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9976,13 +10178,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified version of a recall management service.</para>
+        /// <para>Deletes a specified recall management service version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to delete a specific version of a recall management service by providing the recall management service ID, recall management service version ID, and instance ID. Back up important data before calling this operation because the deletion is irreversible.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10171,16 +10373,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API deletes a recall management table using the specified recall management table ID and instance ID.</para>
+        /// <para>Deletes a recall management data table based on the specified data table ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The required <b>path parameter</b> <c>RecallManagementTableId</c> specifies the ID of the recall management table to delete.</description></item>
-        /// <item><description>The required <b>query parameter</b> <c>InstanceId</c> specifies the ID of the instance.</description></item>
-        /// <item><description>A successful operation returns a <c>RequestId</c> in the response body for request tracking.</description></item>
+        /// <item><description>The <b>path parameter</b> <c>RecallManagementTableId</c> is required and specifies instance ID of the data table to delete.</description></item>
+        /// <item><description>The <b>query parameter</b> <c>InstanceId</c> is also required and specifies instance ID of the instance on which the operation is performed.</description></item>
+        /// <item><description>After a successful execution, a response body containing the request ID (<c>RequestId</c>) is returned, which can be used to track the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10227,16 +10429,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API deletes a recall management table using the specified recall management table ID and instance ID.</para>
+        /// <para>Deletes a recall management data table based on the specified data table ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The required <b>path parameter</b> <c>RecallManagementTableId</c> specifies the ID of the recall management table to delete.</description></item>
-        /// <item><description>The required <b>query parameter</b> <c>InstanceId</c> specifies the ID of the instance.</description></item>
-        /// <item><description>A successful operation returns a <c>RequestId</c> in the response body for request tracking.</description></item>
+        /// <item><description>The <b>path parameter</b> <c>RecallManagementTableId</c> is required and specifies instance ID of the data table to delete.</description></item>
+        /// <item><description>The <b>query parameter</b> <c>InstanceId</c> is also required and specifies instance ID of the instance on which the operation is performed.</description></item>
+        /// <item><description>After a successful execution, a response body containing the request ID (<c>RequestId</c>) is returned, which can be used to track the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10283,16 +10485,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API deletes a recall management table using the specified recall management table ID and instance ID.</para>
+        /// <para>Deletes a recall management data table based on the specified data table ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The required <b>path parameter</b> <c>RecallManagementTableId</c> specifies the ID of the recall management table to delete.</description></item>
-        /// <item><description>The required <b>query parameter</b> <c>InstanceId</c> specifies the ID of the instance.</description></item>
-        /// <item><description>A successful operation returns a <c>RequestId</c> in the response body for request tracking.</description></item>
+        /// <item><description>The <b>path parameter</b> <c>RecallManagementTableId</c> is required and specifies instance ID of the data table to delete.</description></item>
+        /// <item><description>The <b>query parameter</b> <c>InstanceId</c> is also required and specifies instance ID of the instance on which the operation is performed.</description></item>
+        /// <item><description>After a successful execution, a response body containing the request ID (<c>RequestId</c>) is returned, which can be used to track the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10312,16 +10514,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API deletes a recall management table using the specified recall management table ID and instance ID.</para>
+        /// <para>Deletes a recall management data table based on the specified data table ID and instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The required <b>path parameter</b> <c>RecallManagementTableId</c> specifies the ID of the recall management table to delete.</description></item>
-        /// <item><description>The required <b>query parameter</b> <c>InstanceId</c> specifies the ID of the instance.</description></item>
-        /// <item><description>A successful operation returns a <c>RequestId</c> in the response body for request tracking.</description></item>
+        /// <item><description>The <b>path parameter</b> <c>RecallManagementTableId</c> is required and specifies instance ID of the data table to delete.</description></item>
+        /// <item><description>The <b>query parameter</b> <c>InstanceId</c> is also required and specifies instance ID of the instance on which the operation is performed.</description></item>
+        /// <item><description>After a successful execution, a response body containing the request ID (<c>RequestId</c>) is returned, which can be used to track the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10731,7 +10933,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified scenario.</para>
+        /// <para>Deletes a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10777,7 +10979,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified scenario.</para>
+        /// <para>Deletes a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10823,7 +11025,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified scenario.</para>
+        /// <para>Deletes a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10842,7 +11044,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified scenario.</para>
+        /// <para>Deletes a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10861,7 +11063,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified subcrowd.</para>
+        /// <para>Deletes a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10907,7 +11109,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified subcrowd.</para>
+        /// <para>Deletes a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10953,7 +11155,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified subcrowd.</para>
+        /// <para>Deletes a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10972,7 +11174,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified subcrowd.</para>
+        /// <para>Deletes a specified sub-crowd.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11121,16 +11323,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified traffic control target.</para>
+        /// <para>Deletes a specified traffic control target by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter that specifies the traffic control target to delete.</description></item>
-        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID for this operation.</description></item>
-        /// <item><description>A successful response includes a <c>RequestId</c> field to track the request.</description></item>
+        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter used as the identity of the specific traffic control target to delete.</description></item>
+        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID to execute the operation.</description></item>
+        /// <item><description>A successful response returns a <c>RequestId</c> field for tracking the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11177,16 +11379,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified traffic control target.</para>
+        /// <para>Deletes a specified traffic control target by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter that specifies the traffic control target to delete.</description></item>
-        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID for this operation.</description></item>
-        /// <item><description>A successful response includes a <c>RequestId</c> field to track the request.</description></item>
+        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter used as the identity of the specific traffic control target to delete.</description></item>
+        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID to execute the operation.</description></item>
+        /// <item><description>A successful response returns a <c>RequestId</c> field for tracking the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11233,16 +11435,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified traffic control target.</para>
+        /// <para>Deletes a specified traffic control target by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter that specifies the traffic control target to delete.</description></item>
-        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID for this operation.</description></item>
-        /// <item><description>A successful response includes a <c>RequestId</c> field to track the request.</description></item>
+        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter used as the identity of the specific traffic control target to delete.</description></item>
+        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID to execute the operation.</description></item>
+        /// <item><description>A successful response returns a <c>RequestId</c> field for tracking the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11262,16 +11464,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified traffic control target.</para>
+        /// <para>Deletes a specified traffic control target by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter that specifies the traffic control target to delete.</description></item>
-        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID for this operation.</description></item>
-        /// <item><description>A successful response includes a <c>RequestId</c> field to track the request.</description></item>
+        /// <item><description><b>TrafficControlTargetId</b> is a required path parameter used as the identity of the specific traffic control target to delete.</description></item>
+        /// <item><description><b>InstanceId</b> is a required query parameter that specifies the instance ID to execute the operation.</description></item>
+        /// <item><description>A successful response returns a <c>RequestId</c> field for tracking the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11296,11 +11498,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API uses <c>TrafficControlTaskId</c> and <c>InstanceId</c> to delete a traffic control task.</description></item>
-        /// <item><description>Ensure the <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct, or the operation may fail.</description></item>
-        /// <item><description>This operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>This API locates and deletes a specific traffic control task by providing the <c>TrafficControlTaskId</c> and <c>InstanceId</c>.</description></item>
+        /// <item><description>Ensure that the provided <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct. Otherwise, the deletion may fail.</description></item>
+        /// <item><description>Once the deletion is complete, the related data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11352,11 +11554,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API uses <c>TrafficControlTaskId</c> and <c>InstanceId</c> to delete a traffic control task.</description></item>
-        /// <item><description>Ensure the <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct, or the operation may fail.</description></item>
-        /// <item><description>This operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>This API locates and deletes a specific traffic control task by providing the <c>TrafficControlTaskId</c> and <c>InstanceId</c>.</description></item>
+        /// <item><description>Ensure that the provided <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct. Otherwise, the deletion may fail.</description></item>
+        /// <item><description>Once the deletion is complete, the related data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11408,11 +11610,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API uses <c>TrafficControlTaskId</c> and <c>InstanceId</c> to delete a traffic control task.</description></item>
-        /// <item><description>Ensure the <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct, or the operation may fail.</description></item>
-        /// <item><description>This operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>This API locates and deletes a specific traffic control task by providing the <c>TrafficControlTaskId</c> and <c>InstanceId</c>.</description></item>
+        /// <item><description>Ensure that the provided <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct. Otherwise, the deletion may fail.</description></item>
+        /// <item><description>Once the deletion is complete, the related data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11437,11 +11639,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API uses <c>TrafficControlTaskId</c> and <c>InstanceId</c> to delete a traffic control task.</description></item>
-        /// <item><description>Ensure the <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct, or the operation may fail.</description></item>
-        /// <item><description>This operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>This API locates and deletes a specific traffic control task by providing the <c>TrafficControlTaskId</c> and <c>InstanceId</c>.</description></item>
+        /// <item><description>Ensure that the provided <c>TrafficControlTaskId</c> and <c>InstanceId</c> are correct. Otherwise, the deletion may fail.</description></item>
+        /// <item><description>Once the deletion is complete, the related data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12019,16 +12221,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates Flink code for a specified traffic control task ID and instance information.</para>
+        /// <para>Generates the corresponding Flink code based on the specified traffic control task ID and instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</description></item>
-        /// <item><description>The <c>Environment</c> parameter accepts three values: <c>Daily</c> for the daily environment, <c>Pre</c> for the pre-release environment, and <c>Prod</c> for the production environment.</description></item>
-        /// <item><description>Check the <c>PreNeedConfig</c> field in the response. A <c>true</c> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</description></item>
+        /// <item><description>This API operation generates the corresponding Flink code based on the specified traffic control task ID, instance ID, and environment type.</description></item>
+        /// <item><description>The Environment parameter supports three values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment). Make sure to select the correct value to meet your requirements.</description></item>
+        /// <item><description>Check the PreNeedConfig field in the response. If the value is true, it indicates that required configuration information may be missing in the pre-release environment. Adjust or supplement the relevant settings as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12079,16 +12281,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates Flink code for a specified traffic control task ID and instance information.</para>
+        /// <para>Generates the corresponding Flink code based on the specified traffic control task ID and instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</description></item>
-        /// <item><description>The <c>Environment</c> parameter accepts three values: <c>Daily</c> for the daily environment, <c>Pre</c> for the pre-release environment, and <c>Prod</c> for the production environment.</description></item>
-        /// <item><description>Check the <c>PreNeedConfig</c> field in the response. A <c>true</c> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</description></item>
+        /// <item><description>This API operation generates the corresponding Flink code based on the specified traffic control task ID, instance ID, and environment type.</description></item>
+        /// <item><description>The Environment parameter supports three values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment). Make sure to select the correct value to meet your requirements.</description></item>
+        /// <item><description>Check the PreNeedConfig field in the response. If the value is true, it indicates that required configuration information may be missing in the pre-release environment. Adjust or supplement the relevant settings as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12139,16 +12341,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates Flink code for a specified traffic control task ID and instance information.</para>
+        /// <para>Generates the corresponding Flink code based on the specified traffic control task ID and instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</description></item>
-        /// <item><description>The <c>Environment</c> parameter accepts three values: <c>Daily</c> for the daily environment, <c>Pre</c> for the pre-release environment, and <c>Prod</c> for the production environment.</description></item>
-        /// <item><description>Check the <c>PreNeedConfig</c> field in the response. A <c>true</c> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</description></item>
+        /// <item><description>This API operation generates the corresponding Flink code based on the specified traffic control task ID, instance ID, and environment type.</description></item>
+        /// <item><description>The Environment parameter supports three values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment). Make sure to select the correct value to meet your requirements.</description></item>
+        /// <item><description>Check the PreNeedConfig field in the response. If the value is true, it indicates that required configuration information may be missing in the pre-release environment. Adjust or supplement the relevant settings as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12168,16 +12370,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates Flink code for a specified traffic control task ID and instance information.</para>
+        /// <para>Generates the corresponding Flink code based on the specified traffic control task ID and instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</description></item>
-        /// <item><description>The <c>Environment</c> parameter accepts three values: <c>Daily</c> for the daily environment, <c>Pre</c> for the pre-release environment, and <c>Prod</c> for the production environment.</description></item>
-        /// <item><description>Check the <c>PreNeedConfig</c> field in the response. A <c>true</c> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</description></item>
+        /// <item><description>This API operation generates the corresponding Flink code based on the specified traffic control task ID, instance ID, and environment type.</description></item>
+        /// <item><description>The Environment parameter supports three values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment). Make sure to select the correct value to meet your requirements.</description></item>
+        /// <item><description>Check the PreNeedConfig field in the response. If the value is true, it indicates that required configuration information may be missing in the pre-release environment. Adjust or supplement the relevant settings as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12457,7 +12659,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an A/B testing metric group.</para>
+        /// <para>Retrieves the details of an ABTest metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12503,7 +12705,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an A/B testing metric group.</para>
+        /// <para>Retrieves the details of an ABTest metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12549,7 +12751,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an A/B testing metric group.</para>
+        /// <para>Retrieves the details of an ABTest metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12568,7 +12770,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an A/B testing metric group.</para>
+        /// <para>Retrieves the details of an ABTest metric group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13151,7 +13353,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified experiment group.</para>
+        /// <para>Retrieves the details of a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13197,7 +13399,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified experiment group.</para>
+        /// <para>Retrieves the details of a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13243,7 +13445,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified experiment group.</para>
+        /// <para>Retrieves the details of a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13262,7 +13464,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified experiment group.</para>
+        /// <para>Retrieves the details of a specified experiment group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15323,7 +15525,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified scene.</para>
+        /// <para>Retrieves the details of a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15369,7 +15571,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified scene.</para>
+        /// <para>Retrieves the details of a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15415,7 +15617,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified scene.</para>
+        /// <para>Retrieves the details of a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15434,7 +15636,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified scene.</para>
+        /// <para>Retrieves the details of a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18643,7 +18845,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the score difference reports for a feature consistency check job.</para>
+        /// <para>Retrieves the score report for a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18699,7 +18901,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the score difference reports for a feature consistency check job.</para>
+        /// <para>Retrieves the score report for a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18755,7 +18957,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the score difference reports for a feature consistency check job.</para>
+        /// <para>Retrieves the score report for a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18774,7 +18976,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the score difference reports for a feature consistency check job.</para>
+        /// <para>Retrieves the score report for a feature consistency check task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18963,13 +19165,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all schemas for a specified resource in an instance.</para>
+        /// <para>Queries all schemas for a specified instance and resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and resource ID (ResourceId) to retrieve a list of all schemas for the instance resource. You can use the optional SchemaName parameter to filter results by name prefix and locate the required schemas more precisely.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19015,13 +19217,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all schemas for a specified resource in an instance.</para>
+        /// <para>Queries all schemas for a specified instance and resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and resource ID (ResourceId) to retrieve a list of all schemas for the instance resource. You can use the optional SchemaName parameter to filter results by name prefix and locate the required schemas more precisely.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19067,13 +19269,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all schemas for a specified resource in an instance.</para>
+        /// <para>Queries all schemas for a specified instance and resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and resource ID (ResourceId) to retrieve a list of all schemas for the instance resource. You can use the optional SchemaName parameter to filter results by name prefix and locate the required schemas more precisely.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19092,13 +19294,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all schemas for a specified resource in an instance.</para>
+        /// <para>Queries all schemas for a specified instance and resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</para>
+        /// <h2>Request description</h2>
+        /// <para>Provide the instance ID (InstanceId) and resource ID (ResourceId) to retrieve a list of all schemas for the instance resource. You can use the optional SchemaName parameter to filter results by name prefix and locate the required schemas more precisely.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19271,7 +19473,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the resources configured for an instance.</para>
+        /// <para>Retrieves the list of resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19325,7 +19527,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the resources configured for an instance.</para>
+        /// <para>Retrieves the list of resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19379,7 +19581,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the resources configured for an instance.</para>
+        /// <para>Retrieves the list of resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19398,7 +19600,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the resources configured for an instance.</para>
+        /// <para>Retrieves the list of resources configured for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19879,7 +20081,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of parameters.</para>
+        /// <para>Retrieves the list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19949,7 +20151,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of parameters.</para>
+        /// <para>Retrieves the list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20019,7 +20221,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of parameters.</para>
+        /// <para>Retrieves the list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20038,7 +20240,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of parameters.</para>
+        /// <para>Retrieves the list of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21539,7 +21741,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of scenes.</para>
+        /// <para>Retrieves the list of scenes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21589,7 +21791,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of scenes.</para>
+        /// <para>Retrieves the list of scenes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21639,7 +21841,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of scenes.</para>
+        /// <para>Retrieves the list of scenes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21658,7 +21860,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of scenes.</para>
+        /// <para>Retrieves the list of scenes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22485,7 +22687,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes an experiment offline.</para>
+        /// <para>Takes the specified experiment offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22531,7 +22733,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes an experiment offline.</para>
+        /// <para>Takes the specified experiment offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22577,7 +22779,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes an experiment offline.</para>
+        /// <para>Takes the specified experiment offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22596,7 +22798,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes an experiment offline.</para>
+        /// <para>Takes the specified experiment offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22615,7 +22817,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes a specified experiment group offline.</para>
+        /// <para>Takes the specified experiment group offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22661,7 +22863,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes a specified experiment group offline.</para>
+        /// <para>Takes the specified experiment group offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22707,7 +22909,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes a specified experiment group offline.</para>
+        /// <para>Takes the specified experiment group offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22726,7 +22928,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Takes a specified experiment group offline.</para>
+        /// <para>Takes the specified experiment group offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23045,7 +23247,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings a specified experiment online.</para>
+        /// <para>Publishes the specified experiment online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23091,7 +23293,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings a specified experiment online.</para>
+        /// <para>Publishes the specified experiment online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23137,7 +23339,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings a specified experiment online.</para>
+        /// <para>Publishes the specified experiment online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23156,7 +23358,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings a specified experiment online.</para>
+        /// <para>Publishes the specified experiment online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24265,13 +24467,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves records from a specified recall management table.</para>
+        /// <para>Retrieves a list of records from a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <c>InstanceId</c> and <c>RecallManagementTableId</c>, and a non-empty <c>PrimaryKeys</c> list. If you specify <c>RecallManagementTableVersionId</c>, the API returns records from that version; otherwise, it uses the currently published version.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves data records from a specific recall management table based on the specified primary keys. Ensure that the provided <c>InstanceId</c> and <c>RecallManagementTableId</c> are valid and that the <c>PrimaryKeys</c> list is not empty. If <c>RecallManagementTableVersionId</c> is specified, data of that version is returned. Otherwise, the current published version is used by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24325,13 +24527,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves records from a specified recall management table.</para>
+        /// <para>Retrieves a list of records from a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <c>InstanceId</c> and <c>RecallManagementTableId</c>, and a non-empty <c>PrimaryKeys</c> list. If you specify <c>RecallManagementTableVersionId</c>, the API returns records from that version; otherwise, it uses the currently published version.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves data records from a specific recall management table based on the specified primary keys. Ensure that the provided <c>InstanceId</c> and <c>RecallManagementTableId</c> are valid and that the <c>PrimaryKeys</c> list is not empty. If <c>RecallManagementTableVersionId</c> is specified, data of that version is returned. Otherwise, the current published version is used by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24385,13 +24587,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves records from a specified recall management table.</para>
+        /// <para>Retrieves a list of records from a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <c>InstanceId</c> and <c>RecallManagementTableId</c>, and a non-empty <c>PrimaryKeys</c> list. If you specify <c>RecallManagementTableVersionId</c>, the API returns records from that version; otherwise, it uses the currently published version.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves data records from a specific recall management table based on the specified primary keys. Ensure that the provided <c>InstanceId</c> and <c>RecallManagementTableId</c> are valid and that the <c>PrimaryKeys</c> list is not empty. If <c>RecallManagementTableVersionId</c> is specified, data of that version is returned. Otherwise, the current published version is used by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24410,13 +24612,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves records from a specified recall management table.</para>
+        /// <para>Retrieves a list of records from a specified recall management table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <c>InstanceId</c> and <c>RecallManagementTableId</c>, and a non-empty <c>PrimaryKeys</c> list. If you specify <c>RecallManagementTableVersionId</c>, the API returns records from that version; otherwise, it uses the currently published version.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves data records from a specific recall management table based on the specified primary keys. Ensure that the provided <c>InstanceId</c> and <c>RecallManagementTableId</c> are valid and that the <c>PrimaryKeys</c> list is not empty. If <c>RecallManagementTableVersionId</c> is specified, data of that version is returned. Otherwise, the current published version is used by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24756,8 +24958,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to query the deployment results of a traffic control task with a specific TrafficControlTaskId for a given instance ID and environment. Make sure that the provided InstanceId is associated with your account and the Environment parameter value meets your expectations (Daily: daily environment, Pre: staging environment, Prod: production environment). All request parameters are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24812,8 +25014,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to query the deployment results of a traffic control task with a specific TrafficControlTaskId for a given instance ID and environment. Make sure that the provided InstanceId is associated with your account and the Environment parameter value meets your expectations (Daily: daily environment, Pre: staging environment, Prod: production environment). All request parameters are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24868,8 +25070,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to query the deployment results of a traffic control task with a specific TrafficControlTaskId for a given instance ID and environment. Make sure that the provided InstanceId is associated with your account and the Environment parameter value meets your expectations (Daily: daily environment, Pre: staging environment, Prod: production environment). All request parameters are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24893,8 +25095,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can use this API to query the deployment results of a traffic control task with a specific TrafficControlTaskId for a given instance ID and environment. Make sure that the provided InstanceId is associated with your account and the Environment parameter value meets your expectations (Daily: daily environment, Pre: staging environment, Prod: production environment). All request parameters are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25119,18 +25321,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a traffic control task for the specified instance and environment.</para>
+        /// <para>Publishes a traffic control task for a specified instance and environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to publish a traffic control task for a specific instance ID and environment (daily, staging, or production). Make sure to correctly specify the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><c>TrafficControlTaskId</c>: The unique ID of the traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c>: The ID of the target instance.</description></item>
-        /// <item><description><c>Environment</c>: The execution environment for the traffic control task. Valid values: <c>Daily</c>, <c>Pre</c>, and <c>Prod</c>.
-        /// The request succeeds only if all required parameters are provided correctly. A successful response includes a <c>RequestId</c>.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c>: the unique identifier of the traffic control task to be published.</description></item>
+        /// <item><description><c>InstanceId</c>: the ID of the target instance to which the traffic control settings will be applied.</description></item>
+        /// <item><description><c>Environment</c>: the environment in which the traffic control task is executed. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment). Select an environment based on your business requirements.
+        /// Note: The request is processed and a RequestId is returned in the response only when all required fields are correctly provided.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25181,18 +25383,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a traffic control task for the specified instance and environment.</para>
+        /// <para>Publishes a traffic control task for a specified instance and environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to publish a traffic control task for a specific instance ID and environment (daily, staging, or production). Make sure to correctly specify the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><c>TrafficControlTaskId</c>: The unique ID of the traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c>: The ID of the target instance.</description></item>
-        /// <item><description><c>Environment</c>: The execution environment for the traffic control task. Valid values: <c>Daily</c>, <c>Pre</c>, and <c>Prod</c>.
-        /// The request succeeds only if all required parameters are provided correctly. A successful response includes a <c>RequestId</c>.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c>: the unique identifier of the traffic control task to be published.</description></item>
+        /// <item><description><c>InstanceId</c>: the ID of the target instance to which the traffic control settings will be applied.</description></item>
+        /// <item><description><c>Environment</c>: the environment in which the traffic control task is executed. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment). Select an environment based on your business requirements.
+        /// Note: The request is processed and a RequestId is returned in the response only when all required fields are correctly provided.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25243,18 +25445,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a traffic control task for the specified instance and environment.</para>
+        /// <para>Publishes a traffic control task for a specified instance and environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to publish a traffic control task for a specific instance ID and environment (daily, staging, or production). Make sure to correctly specify the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><c>TrafficControlTaskId</c>: The unique ID of the traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c>: The ID of the target instance.</description></item>
-        /// <item><description><c>Environment</c>: The execution environment for the traffic control task. Valid values: <c>Daily</c>, <c>Pre</c>, and <c>Prod</c>.
-        /// The request succeeds only if all required parameters are provided correctly. A successful response includes a <c>RequestId</c>.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c>: the unique identifier of the traffic control task to be published.</description></item>
+        /// <item><description><c>InstanceId</c>: the ID of the target instance to which the traffic control settings will be applied.</description></item>
+        /// <item><description><c>Environment</c>: the environment in which the traffic control task is executed. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment). Select an environment based on your business requirements.
+        /// Note: The request is processed and a RequestId is returned in the response only when all required fields are correctly provided.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25274,18 +25476,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a traffic control task for the specified instance and environment.</para>
+        /// <para>Publishes a traffic control task for a specified instance and environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to publish a traffic control task for a specific instance ID and environment (daily, staging, or production). Make sure to correctly specify the <c>TrafficControlTaskId</c>, <c>InstanceId</c>, and <c>Environment</c> parameters in the request.</para>
         /// <list type="bullet">
-        /// <item><description><c>TrafficControlTaskId</c>: The unique ID of the traffic control task.</description></item>
-        /// <item><description><c>InstanceId</c>: The ID of the target instance.</description></item>
-        /// <item><description><c>Environment</c>: The execution environment for the traffic control task. Valid values: <c>Daily</c>, <c>Pre</c>, and <c>Prod</c>.
-        /// The request succeeds only if all required parameters are provided correctly. A successful response includes a <c>RequestId</c>.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c>: the unique identifier of the traffic control task to be published.</description></item>
+        /// <item><description><c>InstanceId</c>: the ID of the target instance to which the traffic control settings will be applied.</description></item>
+        /// <item><description><c>Environment</c>: the environment in which the traffic control task is executed. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment). Select an environment based on your business requirements.
+        /// Note: The request is processed and a RequestId is returned in the response only when all required fields are correctly provided.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26231,17 +26433,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task with a specified ID for instances in different environments.</para>
+        /// <para>Starts the traffic shaping task with the specified ID for instances in different environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation starts the traffic control task identified by <c>TrafficControlTaskId</c>.</description></item>
+        /// <item><description>This API operation starts the traffic shaping task identified by the specified <c>TrafficControlTaskId</c>.</description></item>
         /// <item><description><c>InstanceId</c> specifies the target instance.</description></item>
-        /// <item><description><c>Environment</c> specifies the target environment. Valid values: Daily, Pre, and Prod.</description></item>
-        /// <item><description>Ensure that all required parameters are set correctly before you call this operation. The specified <c>TrafficControlTaskId</c> must exist in the system.</description></item>
+        /// <item><description>The <c>Environment</c> parameter defines the target environment for this operation (daily, staging, or production).</description></item>
+        /// <item><description>Ensure that all required parameters are correctly configured before you call this operation. Specifically, the <c>TrafficControlTaskId</c> must exist in the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26292,17 +26494,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task with a specified ID for instances in different environments.</para>
+        /// <para>Starts the traffic shaping task with the specified ID for instances in different environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation starts the traffic control task identified by <c>TrafficControlTaskId</c>.</description></item>
+        /// <item><description>This API operation starts the traffic shaping task identified by the specified <c>TrafficControlTaskId</c>.</description></item>
         /// <item><description><c>InstanceId</c> specifies the target instance.</description></item>
-        /// <item><description><c>Environment</c> specifies the target environment. Valid values: Daily, Pre, and Prod.</description></item>
-        /// <item><description>Ensure that all required parameters are set correctly before you call this operation. The specified <c>TrafficControlTaskId</c> must exist in the system.</description></item>
+        /// <item><description>The <c>Environment</c> parameter defines the target environment for this operation (daily, staging, or production).</description></item>
+        /// <item><description>Ensure that all required parameters are correctly configured before you call this operation. Specifically, the <c>TrafficControlTaskId</c> must exist in the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26353,17 +26555,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task with a specified ID for instances in different environments.</para>
+        /// <para>Starts the traffic shaping task with the specified ID for instances in different environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation starts the traffic control task identified by <c>TrafficControlTaskId</c>.</description></item>
+        /// <item><description>This API operation starts the traffic shaping task identified by the specified <c>TrafficControlTaskId</c>.</description></item>
         /// <item><description><c>InstanceId</c> specifies the target instance.</description></item>
-        /// <item><description><c>Environment</c> specifies the target environment. Valid values: Daily, Pre, and Prod.</description></item>
-        /// <item><description>Ensure that all required parameters are set correctly before you call this operation. The specified <c>TrafficControlTaskId</c> must exist in the system.</description></item>
+        /// <item><description>The <c>Environment</c> parameter defines the target environment for this operation (daily, staging, or production).</description></item>
+        /// <item><description>Ensure that all required parameters are correctly configured before you call this operation. Specifically, the <c>TrafficControlTaskId</c> must exist in the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26383,17 +26585,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task with a specified ID for instances in different environments.</para>
+        /// <para>Starts the traffic shaping task with the specified ID for instances in different environments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation starts the traffic control task identified by <c>TrafficControlTaskId</c>.</description></item>
+        /// <item><description>This API operation starts the traffic shaping task identified by the specified <c>TrafficControlTaskId</c>.</description></item>
         /// <item><description><c>InstanceId</c> specifies the target instance.</description></item>
-        /// <item><description><c>Environment</c> specifies the target environment. Valid values: Daily, Pre, and Prod.</description></item>
-        /// <item><description>Ensure that all required parameters are set correctly before you call this operation. The specified <c>TrafficControlTaskId</c> must exist in the system.</description></item>
+        /// <item><description>The <c>Environment</c> parameter defines the target environment for this operation (daily, staging, or production).</description></item>
+        /// <item><description>Ensure that all required parameters are correctly configured before you call this operation. Specifically, the <c>TrafficControlTaskId</c> must exist in the system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27381,18 +27583,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metric configuration of an existing ABTest experiment.</para>
+        /// <para>Updates the metric configuration of an existing AB test.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the properties of a specified AB test metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
         /// <list type="bullet">
         /// <item><description><c>NeedSignificance</c>: Specifies whether to perform significance analysis on the current metric. Default value: <c>false</c>.</description></item>
-        /// <item><description><c>AggregationByUser</c>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
-        /// <item><description><c>Numerator</c> and <c>Denominator</c>: The specific definitions of the numerator and denominator used in significance calculation.</description></item>
-        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+        /// <item><description><c>AggregationByUser</c>: When significance calculation is selected, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
+        /// <item><description><c>Numerator</c> and <c>Denominator</c>: Represent the specific definitions of the numerator and denominator when performing significance calculation.</description></item>
+        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Indicates whether the metric follows a binomial distribution, which affects subsequent data processing logic.
         /// Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</description></item>
         /// </list>
         /// </description>
@@ -27508,18 +27710,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metric configuration of an existing ABTest experiment.</para>
+        /// <para>Updates the metric configuration of an existing AB test.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the properties of a specified AB test metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
         /// <list type="bullet">
         /// <item><description><c>NeedSignificance</c>: Specifies whether to perform significance analysis on the current metric. Default value: <c>false</c>.</description></item>
-        /// <item><description><c>AggregationByUser</c>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
-        /// <item><description><c>Numerator</c> and <c>Denominator</c>: The specific definitions of the numerator and denominator used in significance calculation.</description></item>
-        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+        /// <item><description><c>AggregationByUser</c>: When significance calculation is selected, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
+        /// <item><description><c>Numerator</c> and <c>Denominator</c>: Represent the specific definitions of the numerator and denominator when performing significance calculation.</description></item>
+        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Indicates whether the metric follows a binomial distribution, which affects subsequent data processing logic.
         /// Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</description></item>
         /// </list>
         /// </description>
@@ -27635,18 +27837,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metric configuration of an existing ABTest experiment.</para>
+        /// <para>Updates the metric configuration of an existing AB test.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the properties of a specified AB test metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
         /// <list type="bullet">
         /// <item><description><c>NeedSignificance</c>: Specifies whether to perform significance analysis on the current metric. Default value: <c>false</c>.</description></item>
-        /// <item><description><c>AggregationByUser</c>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
-        /// <item><description><c>Numerator</c> and <c>Denominator</c>: The specific definitions of the numerator and denominator used in significance calculation.</description></item>
-        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+        /// <item><description><c>AggregationByUser</c>: When significance calculation is selected, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
+        /// <item><description><c>Numerator</c> and <c>Denominator</c>: Represent the specific definitions of the numerator and denominator when performing significance calculation.</description></item>
+        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Indicates whether the metric follows a binomial distribution, which affects subsequent data processing logic.
         /// Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</description></item>
         /// </list>
         /// </description>
@@ -27667,18 +27869,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metric configuration of an existing ABTest experiment.</para>
+        /// <para>Updates the metric configuration of an existing AB test.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation allows you to update the properties of a specified AB test metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <c>ABMetricId</c> before calling this operation.</para>
         /// <list type="bullet">
         /// <item><description><c>NeedSignificance</c>: Specifies whether to perform significance analysis on the current metric. Default value: <c>false</c>.</description></item>
-        /// <item><description><c>AggregationByUser</c>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
-        /// <item><description><c>Numerator</c> and <c>Denominator</c>: The specific definitions of the numerator and denominator used in significance calculation.</description></item>
-        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+        /// <item><description><c>AggregationByUser</c>: When significance calculation is selected, specifies whether to aggregate data by user or by sample. Default value: <c>false</c> (by sample).</description></item>
+        /// <item><description><c>Numerator</c> and <c>Denominator</c>: Represent the specific definitions of the numerator and denominator when performing significance calculation.</description></item>
+        /// <item><description><c>IsBinomialDistribution</c>: Valid only for derived metrics. Indicates whether the metric follows a binomial distribution, which affects subsequent data processing logic.
         /// Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</description></item>
         /// </list>
         /// </description>
@@ -28653,7 +28855,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a specified experiment group, such as its name and description.</para>
+        /// <para>Updates the information of a specified experiment group, such as the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28755,7 +28957,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a specified experiment group, such as its name and description.</para>
+        /// <para>Updates the information of a specified experiment group, such as the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28857,7 +29059,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a specified experiment group, such as its name and description.</para>
+        /// <para>Updates the information of a specified experiment group, such as the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28876,7 +29078,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a specified experiment group, such as its name and description.</para>
+        /// <para>Updates the information of a specified experiment group, such as the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31225,7 +31427,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a scene, such as its name and description.</para>
+        /// <para>Updates scene information, such as the name and description of a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31283,7 +31485,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a scene, such as its name and description.</para>
+        /// <para>Updates scene information, such as the name and description of a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31341,7 +31543,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a scene, such as its name and description.</para>
+        /// <para>Updates scene information, such as the name and description of a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31360,7 +31562,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a scene, such as its name and description.</para>
+        /// <para>Updates scene information, such as the name and description of a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">

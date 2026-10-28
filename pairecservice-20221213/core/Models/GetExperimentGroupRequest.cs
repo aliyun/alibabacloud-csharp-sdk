@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetExperimentGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <c>ListInstances</c> operation to obtain this ID.</para>
+        /// <para>Instance ID of the instance. You can obtain instance ID by calling the ListInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

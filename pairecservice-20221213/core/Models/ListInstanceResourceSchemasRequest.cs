@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListInstanceResourceSchemasRequest : TeaModel {
         /// <summary>
-        /// <para>Filters schemas by a name prefix.</para>
+        /// <para>The prefix used to filter schema names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

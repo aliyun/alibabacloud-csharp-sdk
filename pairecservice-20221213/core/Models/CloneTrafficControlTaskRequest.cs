@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CloneTrafficControlTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec_123****</para>

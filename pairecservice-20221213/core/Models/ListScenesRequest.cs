@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListScenesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can obtain this ID by calling the <c>ListInstances</c> operation.</para>
+        /// <para>The instance ID. You can call the ListInstances operation to obtain the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-abcdefg1234</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the scene to use as a filter.</para>
+        /// <para>The scene name filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scene1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetABMetricGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>A comma-separated list of A/B testing metric IDs.</para>
+        /// <para>The IDs of the ABTest metrics, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ABMetricIds { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of A/B testing metric names.</para>
+        /// <para>The names of the ABTest metrics, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pv,uv</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ABMetricNames { get; set; }
 
         /// <summary>
-        /// <para>The metric group description.</para>
+        /// <para>The description of the metric group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>访问量相关指标</para>
+        /// <para>Traffic-related metrics</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The metric group name.</para>
+        /// <para>The name of the metric group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>visits</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>Whether the metric group is a real-time metric group.</para>
+        /// <para>Indicates whether the metric group is real-time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? Realtime { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01D22D08-BA20-5F35-8302-99115F288220</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scene ID. You can get this ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1%5C&m=16768%5C&n=4298955">ListScenes</a> operation.</para>
+        /// <para>The ID of the scene. You can obtain the ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1&m=16768&n=4298955">ListScenes</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

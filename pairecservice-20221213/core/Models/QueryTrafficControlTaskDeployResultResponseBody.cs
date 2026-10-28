@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryTrafficControlTaskDeployResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message returned for the Flink platform deployment operation.</para>
+        /// <para>The message about the deployment operation on the Flink platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deploy job draft success</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The status of deploying the draft. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Failed: failed.</description></item>
-        /// <item><description>Running: running.</description></item>
-        /// <item><description>Success: succeeded.</description></item>
+        /// <item><description><c>Failed</c>: Failed.</description></item>
+        /// <item><description><c>Running</c>: Running.</description></item>
+        /// <item><description><c>Success</c>: Successful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DeployStatus { get; set; }
 
         /// <summary>
-        /// <para>The message returned for pushing the draft to Flink.</para>
+        /// <para>The message about pushing the draft to Flink.</para>
         /// 
         /// <b>Example:</b>
         /// <para>push draft success</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The status of pushing the draft to Flink. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Failed: failed.</description></item>
-        /// <item><description>Running: running.</description></item>
-        /// <item><description>Success: succeeded.</description></item>
+        /// <item><description><c>Failed</c>: Failed.</description></item>
+        /// <item><description><c>Running</c>: Running.</description></item>
+        /// <item><description><c>Success</c>: Successful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DraftStatus { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the preparation phase.</para>
+        /// <para>The message about the preparation phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -72,9 +72,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The status of the preparation phase. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Failed: failed.</description></item>
-        /// <item><description>Running: running.</description></item>
-        /// <item><description>Success: succeeded.</description></item>
+        /// <item><description><c>Failed</c>: Failed.</description></item>
+        /// <item><description><c>Running</c>: Running.</description></item>
+        /// <item><description><c>Success</c>: Successful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The message returned for starting the Flink task.</para>
+        /// <para>The message about starting the Flink task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>start job success</para>
@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The status of starting the Flink task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Failed: failed.</description></item>
-        /// <item><description>Running: running.</description></item>
-        /// <item><description>Success: succeeded.</description></item>
+        /// <item><description><c>Failed</c>: Failed.</description></item>
+        /// <item><description><c>Running</c>: Running.</description></item>
+        /// <item><description><c>Success</c>: Successful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

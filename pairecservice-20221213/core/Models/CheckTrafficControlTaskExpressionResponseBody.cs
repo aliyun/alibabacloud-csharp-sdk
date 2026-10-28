@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? IsValie { get; set; }
 
         /// <summary>
-        /// <para>If <c>IsValid</c> is <c>false</c>, this field provides the reason for the failure.</para>
+        /// <para>This field is meaningful only when <c>IsValid</c> is <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

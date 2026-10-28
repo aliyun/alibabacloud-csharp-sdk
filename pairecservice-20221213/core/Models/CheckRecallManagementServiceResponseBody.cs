@@ -1,0 +1,31 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.PaiRecService20221213.Models
+{
+    public class CheckRecallManagementServiceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The result details.</para>
+        /// </summary>
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Result { get; set; }
+
+    }
+
+}

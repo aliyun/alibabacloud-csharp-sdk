@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the engine configuration for the pre-release environment is incomplete.</para>
+        /// <para>Indicates whether configuration information is missing for the engine configuration in the pre-release environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>

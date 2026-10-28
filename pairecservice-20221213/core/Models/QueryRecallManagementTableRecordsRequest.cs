@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The primary keys of the records to retrieve.</para>
+        /// <para>The primary keys for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;1001&quot;,&quot;1002&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public byte[] PrimaryKeys { get; set; }
 
         /// <summary>
-        /// <para>The recall management table version ID. If you omit this parameter, the API uses the currently published version.</para>
+        /// <para>The version ID of the recall management table. Default value: the current published version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

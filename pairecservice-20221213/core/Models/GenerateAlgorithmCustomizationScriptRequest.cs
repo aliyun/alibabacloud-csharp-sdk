@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GenerateAlgorithmCustomizationScriptRequest : TeaModel {
         /// <summary>
-        /// <para>The deployment mode. Valid values:</para>
+        /// <para>Specifies whether to generate a deployment script or perform one-click deployment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>EasyDeploy</b>: Performs a one-click deployment.</para>
-        /// </description></item>
-        /// <item><description><para><b>GenerateScript</b>: Generates a deployment script.</para>
-        /// </description></item>
+        /// <item><description>EasyDeploy: one-click deployment</description></item>
+        /// <item><description>GenerateScript: script generation</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DeployMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
+        /// <para>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-test-xxx</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The data types of fields in the JSON configuration.</para>
+        /// <para>The types of fields in the JSON configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;item_table&quot;:&quot;array&quot;}</para>

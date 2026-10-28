@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateTableMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the data table.</para>
+        /// <para>The description of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test table</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The fields of the data table.</para>
+        /// <para>The list of table fields.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Fields")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field is a dimension field.</para>
+            /// <para>Specifies whether the field is a dimension field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public bool? IsDimensionField { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field is a partition field.</para>
+            /// <para>Specifies whether the field is a partition field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,18 +60,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string IsPartitionField { get; set; }
 
             /// <summary>
-            /// <para>The business meaning of the field.</para>
+            /// <para>The meaning of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>名称字段</para>
+            /// <para>Name field</para>
             /// </summary>
             [NameInMap("Meaning")]
             [Validation(Required=false)]
             public string Meaning { get; set; }
 
             /// <summary>
-            /// <para>The field name.</para>
+            /// <para>The name of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The data type of the field.</para>
+            /// <para>The type of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -106,13 +106,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The module to which the data table belongs.</para>
+        /// <para>The module of the data table.</para>
         /// <list type="bullet">
-        /// <item><description><para>ABTest: a data table for A/B testing.</para>
+        /// <item><description><para>ABTest: experiment data table.</para>
         /// </description></item>
-        /// <item><description><para>ExperimentTool: a data table for experiment tools.</para>
+        /// <item><description><para>ExperimentTool: experiment tool table.</para>
         /// </description></item>
-        /// <item><description><para>DataDiagnosis: a data table for data diagnosis.</para>
+        /// <item><description><para>DataDiagnosis: data diagnosis.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<GetRecallManagementConfigResponseBodyNetworkConfigs> NetworkConfigs { get; set; }
         public class GetRecallManagementConfigResponseBodyNetworkConfigs : TeaModel {
             /// <summary>
-            /// <para>The private endpoint.</para>
+            /// <para>The private network endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx">http://xxx</a></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PrivateLinkAddress { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint.</para>
+            /// <para>The public network connection endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -39,15 +39,15 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The network connectivity status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Connecting: connecting.</para>
+            /// <item><description><para>Connecting: Connecting.</para>
             /// </description></item>
-            /// <item><description><para>Connected: connected.</para>
+            /// <item><description><para>Connected: Connected.</para>
             /// </description></item>
-            /// <item><description><para>ConnectionFailed: connection failed.</para>
+            /// <item><description><para>ConnectionFailed: Connection failed.</para>
             /// </description></item>
-            /// <item><description><para>Updating: updating.</para>
+            /// <item><description><para>Updating: Updating.</para>
             /// </description></item>
-            /// <item><description><para>UpdateFailed: update failed.</para>
+            /// <item><description><para>UpdateFailed: Update failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The ID of the virtual private cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-xxx</para>

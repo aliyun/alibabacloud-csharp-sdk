@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryRecallManagementTableRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of the retrieved records.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]

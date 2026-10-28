@@ -30,16 +30,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CrowdId { get; set; }
 
         /// <summary>
-        /// <para>The method for targeting traffic to the experiment group. Valid values:</para>
+        /// <para>The type of traffic targeting for the experiment group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>All</c>: all traffic</para>
-        /// </description></item>
-        /// <item><description><para><c>Filter</c>: traffic that matches the filter</para>
-        /// </description></item>
-        /// <item><description><para><c>CrowdId</c>: traffic from the specified crowd</para>
-        /// </description></item>
-        /// <item><description><para><c>Random</c>: a random percentage of traffic</para>
-        /// </description></item>
+        /// <item><description>All: All traffic.</description></item>
+        /// <item><description>Filter: Traffic that uses filter conditions.</description></item>
+        /// <item><description>CrowdId: Traffic targeted by a specified crowd ID.</description></item>
+        /// <item><description>Random: Random traffic based on a percentage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugCrowdId { get; set; }
 
         /// <summary>
-        /// <para>The user IDs for debugging, separated by commas.</para>
+        /// <para>The debug users. Separate multiple users with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1124512470******,1124512471******,1124512472******</para>
@@ -80,7 +76,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The distribution duration.</para>
+        /// <para>The time period for traffic distribution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -90,9 +86,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? DistributionTimeDuration { get; set; }
 
         /// <summary>
-        /// <para>The traffic distribution method.
-        /// ● <c>UserId</c>: Distributes traffic by user ID.
-        /// ● <c>TimeDuration</c>: Distributes traffic by time period.</para>
+        /// <para>The traffic distribution method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>UserId: User ID.</description></item>
+        /// <item><description>TimeDuration: Time period.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>UserId</para>
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DistributionType { get; set; }
 
         /// <summary>
-        /// <para>The filter.</para>
+        /// <para>The filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gender=female</para>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The bucket IDs that correspond to the <c>RandomFlow</c> percentage. This parameter is returned only when <c>CrowdTargetType</c> is set to <c>Random</c>.</para>
+        /// <para>The specific bucket numbers returned based on the RandomFlow value when the traffic targeting type is Random.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3,4</para>
@@ -152,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an A/B test is required.</para>
+        /// <para>Indicates whether an AB experiment group is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -162,7 +160,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? NeedAA { get; set; }
 
         /// <summary>
-        /// <para>The owner of the experiment group.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1124512470******</para>
@@ -172,7 +170,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The percentage of traffic from 0 to 100 that is randomly allocated to this experiment group. This parameter is returned only when <c>CrowdTargetType</c> is set to <c>Random</c>.</para>
+        /// <para>The percentage of random traffic used to match the experiment group when the traffic targeting type is Random. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -182,7 +180,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? RandomFlow { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BDB621CB-A81E-5D39-8793-39A365CBCC74</para>
@@ -192,7 +190,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The reserved bucket IDs.</para>
+        /// <para>The reserved bucket numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3,4</para>
@@ -212,10 +210,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The status of the experiment group. Valid values:
-        /// ● <c>Offline</c>: The experiment group is not launched.
-        /// ● <c>Online</c>: The experiment group is launched.
-        /// ● <c>Pushed</c>: The experiment group is fully launched.</para>
+        /// <para>The status of the experiment group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Offline: Not online.</description></item>
+        /// <item><description>Online: Online.</description></item>
+        /// <item><description>Pushed: Fully rolled out.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Offline</para>

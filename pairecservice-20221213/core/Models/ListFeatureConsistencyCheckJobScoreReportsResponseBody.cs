@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string OssPath { get; set; }
 
         /// <summary>
-        /// <para>A list of score difference reports.</para>
+        /// <para>The score comparison report.</para>
         /// </summary>
         [NameInMap("ReportsOfScoreDiff")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LogItemId { get; set; }
 
             /// <summary>
-            /// <para>The request ID recorded in the log.</para>
+            /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>323</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ScoreDiff { get; set; }
 
             /// <summary>
-            /// <para>The score difference details.</para>
+            /// <para>The score comparison details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0AB6527-093F-5C44-B3BD-42C8C210C619</para>

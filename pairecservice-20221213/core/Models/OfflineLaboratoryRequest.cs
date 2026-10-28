@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class OfflineLaboratoryRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. Call the <c>ListInstances</c> operation to obtain this ID.</para>
+        /// <para>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

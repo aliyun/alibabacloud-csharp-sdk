@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GenerateTrafficControlTaskCodeRequest : TeaModel {
         /// <summary>
-        /// <para>The environment type. Valid values: <c>Daily</c> (daily environment), <c>Pre</c> (pre-release environment), and <c>Prod</c> (production environment).</para>
+        /// <para>The environment to which the parameter belongs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. To get this ID, call the ListInstances operation.</para>
+        /// <para>The ID of the instance. You can call the ListInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The crowd label.</para>
+        /// <para>The label of the crowd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>os=android</para>
@@ -42,18 +42,22 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The crowd name.</para>
+        /// <para>The name of the crowd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx人群</para>
+        /// <para>SampleCrowd</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The source of the user data. Valid values: ● ManualInput: Users are provided in the Users parameter. ● UploadFile: Users are provided from an uploaded file.</para>
+        /// <para>The source of the crowd. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ManualInput: Manual input.</description></item>
+        /// <item><description>UploadFile: File upload.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ManualInput</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The users to include in the crowd. Separate multiple users with commas (,).</para>
+        /// <para>The users included in the crowd. Separate multiple users with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1,user2,user3</para>

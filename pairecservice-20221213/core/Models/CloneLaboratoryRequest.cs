@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? CloneExperimentGroup { get; set; }
 
         /// <summary>
-        /// <para>The destination environment. Valid values: Daily, Pre (pre-release), and Prod (production).</para>
+        /// <para>The runtime environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Daily: daily environment.</description></item>
+        /// <item><description>Pre: pre-release environment.</description></item>
+        /// <item><description>Prod: production environment.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. To obtain this ID, call the <c>ListInstances</c> operation.</para>
+        /// <para>Instance ID of the instance. You can call the ListInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

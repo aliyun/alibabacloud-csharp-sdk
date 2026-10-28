@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetSceneResponseBody : TeaModel {
         /// <summary>
-        /// <para>The scene description.</para>
+        /// <para>The description of the scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>A list of flows.</para>
+        /// <para>The list of flows.</para>
         /// </summary>
         [NameInMap("Flows")]
         [Validation(Required=false)]
         public List<GetSceneResponseBodyFlows> Flows { get; set; }
         public class GetSceneResponseBodyFlows : TeaModel {
             /// <summary>
-            /// <para>The flow code.</para>
+            /// <para>The code of the flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liuliang1</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FlowCode { get; set; }
 
             /// <summary>
-            /// <para>The flow name.</para>
+            /// <para>The name of the flow.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>流量1</para>
+            /// <para>Flow 1</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The name of the scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scene1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>B8987BF7-6028-5B17-80E0-251B7BD67BBA</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateCrowdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The crowd ID.</para>
+        /// <para>The ID of the crowd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CrowdId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>59CE7EC6-F268-5D71-9215-32922CC50D72</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetExperimentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alias of the experiment.</para>
+        /// <para>The alias of the experiment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>L1#EG1#E1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string AliasExperimentId { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of bucket numbers.</para>
+        /// <para>The allocated bucket numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Buckets { get; set; }
 
         /// <summary>
-        /// <para>The experiment configuration, in JSON format.</para>
+        /// <para>The configuration of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;RankBy&quot;: &quot;Score&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The debug crowd ID.</para>
+        /// <para>The ID of the debug crowd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugCrowdId { get; set; }
 
         /// <summary>
-        /// <para>The UIDs of debug users, which can be the UIDs of an Alibaba Cloud main account or a RAM user. Separate multiple UIDs with a comma (,).</para>
+        /// <para>The debug users. The value must be the UIDs of Alibaba Cloud accounts or RAM users. Separate multiple UIDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1124512470******,1124512471******,1124512472******</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugUsers { get; set; }
 
         /// <summary>
-        /// <para>The experiment description.</para>
+        /// <para>The description of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The experiment group ID.</para>
+        /// <para>The ID of the experiment group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
-        /// <para>The traffic percentage.</para>
+        /// <para>The traffic allocation percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? FlowPercent { get; set; }
 
         /// <summary>
-        /// <para>The creation time, in ISO 8601 format.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The modification time, in ISO 8601 format.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The laboratory ID.</para>
+        /// <para>The ID of the laboratory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LaboratoryId { get; set; }
 
         /// <summary>
-        /// <para>The layer ID.</para>
+        /// <para>The ID of the layer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LayerId { get; set; }
 
         /// <summary>
-        /// <para>The experiment name.</para>
+        /// <para>The name of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>experiment_test1</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>74D958EF-3598-56FA-8296-FF1575CE43DF</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scene ID.</para>
+        /// <para>The ID of the scene.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -160,7 +160,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The status of the experiment. Valid values:<br>● Offline<br>● Online<br><br></para>
+        /// <para>The status filter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Offline: offline</description></item>
+        /// <item><description>Online: online</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Offline</para>
@@ -170,7 +174,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the experiment. Valid values:<br>● Baseline: a baseline experiment.<br>● Normal: a normal experiment.<br><br></para>
+        /// <para>The type of the experiment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Baseline: baseline experiment</description></item>
+        /// <item><description>Normal: normal experiment</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Baseline</para>

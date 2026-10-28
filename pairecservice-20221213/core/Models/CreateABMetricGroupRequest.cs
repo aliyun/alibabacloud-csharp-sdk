@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateABMetricGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The A/B metric IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the AB test metrics, separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>访问量相关指标</para>
+        /// <para>Traffic-related metrics</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the metric group is a real-time metric group.</para>
+        /// <para>Specifies whether the metric group is real-time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? Realtime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain this ID.</para>
+        /// <para>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

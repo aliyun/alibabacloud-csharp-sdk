@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteSceneRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID, which can be obtained by calling the ListInstances API.</para>
+        /// <para>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-abcdefg1234</para>

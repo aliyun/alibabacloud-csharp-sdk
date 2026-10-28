@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListParamsRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether the parameter is encrypted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Encrypted")]
         [Validation(Required=false)]
         public bool? Encrypted { get; set; }
@@ -17,7 +23,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>The environment to which the parameter belongs. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Daily: daily environment</description></item>
-        /// <item><description>Pre: pre-release environment</description></item>
+        /// <item><description>Pre: staging environment</description></item>
         /// <item><description>Prod: production environment</description></item>
         /// </list>
         /// 
@@ -29,7 +35,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the ListInstances operation to obtain the instance ID.</para>
+        /// <para>The instance ID. You can obtain this ID by calling the ListInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The parameter name.</para>
+        /// <para>The name of the parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>home</para>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scene ID. You can call the ListScenes operation to obtain the scene ID.</para>
+        /// <para>The scene ID. You can obtain this ID by calling the ListScenes operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

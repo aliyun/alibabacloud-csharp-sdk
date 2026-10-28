@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         /// <summary>
         /// <para>The bucketing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Uid: UID bucketing (default).</description></item>
+        /// <item><description>UidHash: UID hashing.</description></item>
+        /// <item><description>Filter: Filter condition bucketing.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Filter</para>
@@ -30,7 +35,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string BucketType { get; set; }
 
         /// <summary>
-        /// <para>The assigned buckets.</para>
+        /// <para>The assigned bucket numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3,10-20</para>
@@ -40,7 +45,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Buckets { get; set; }
 
         /// <summary>
-        /// <para>The crowd ID.</para>
+        /// <para>The ID of the crowd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CrowdId { get; set; }
 
         /// <summary>
-        /// <para>The debug crowd ID.</para>
+        /// <para>The ID of the debug crowd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -70,7 +75,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugUsers { get; set; }
 
         /// <summary>
-        /// <para>The laboratory description.</para>
+        /// <para>The description of the laboratory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
@@ -80,7 +85,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The environment. Valid values:</para>
+        /// <para>The runtime environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Daily: Daily environment.</description></item>
+        /// <item><description>Pre: Staging environment.</description></item>
+        /// <item><description>Prod: Production environment.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The filter.</para>
+        /// <para>The filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>filter=xxx</para>
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The laboratory name.</para>
+        /// <para>The name of the laboratory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>laboratory1</para>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1C0898E5-9220-5443-B2D9-445FF0688215</para>
@@ -130,7 +140,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>The status of the laboratory. Valid values:</para>
+        /// <para>The status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Offline: Not online.</description></item>
+        /// <item><description>Online: Online.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Offline</para>
@@ -140,7 +154,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The laboratory type. Valid values:</para>
+        /// <para>The type of the laboratory. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Base</description></item>
+        /// <item><description>NonBase</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Base</para>

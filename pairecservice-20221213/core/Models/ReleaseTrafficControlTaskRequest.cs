@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ReleaseTrafficControlTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The execution environment for the traffic control task. Valid values: <c>Daily</c>, <c>Pre</c>, and <c>Prod</c>.</para>
+        /// <para>The environment. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
