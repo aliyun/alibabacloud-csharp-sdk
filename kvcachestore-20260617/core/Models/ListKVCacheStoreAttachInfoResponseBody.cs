@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAttachInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of mount information.</para>
+        /// <para>The list of mount records.</para>
         /// </summary>
         [NameInMap("AttachInfos")]
         [Validation(Required=false)]
         public List<ListKVCacheStoreAttachInfoResponseBodyAttachInfos> AttachInfos { get; set; }
         public class ListKVCacheStoreAttachInfoResponseBodyAttachInfos : TeaModel {
             /// <summary>
-            /// <para>The time of the most recent attach operation, in ISO 8601 format. This value is null if the instance has not been attached.</para>
+            /// <para>The time of the last attach operation in ISO 8601 format. If the instance is not attached, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-20T08:30:00Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string AttachedAt { get; set; }
 
             /// <summary>
-            /// <para>The file system capacity, in GiB.</para>
+            /// <para>The capacity of the file system in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -35,6 +35,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             [NameInMap("Capacity")]
             [Validation(Required=false)]
             public long? Capacity { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the compute resource, which is the ECS instance ID or the Lingjun compute node ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-hdsagtg61h2hf21</para>
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
 
             /// <summary>
             /// <para>KVCacheStore KvcsId</para>
@@ -47,7 +57,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The file system-level mount point ID.</para>
+            /// <para>The ID of the file system-level mount point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mp-xxxxx</para>
@@ -67,23 +77,17 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The attach status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Attaching: The instance is being mounted.</description></item>
-            /// <item><description>Attached: The instance is mounted.</description></item>
-            /// <item><description>Detaching: The instance is being unmounted.</description></item>
-            /// </list>
-            /// <para>After unmounting is complete, the record is deleted and not returned.</para>
+            /// <para>The attach status. Valid values: Attaching, Attached, and Detaching. After the instance is detached, the record is deleted and not returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ATTACHED</para>
+            /// <para>Attached</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The instance type. Valid values: kvcs (KVCacheStore, CPFS).</para>
+            /// <para>The instance type. Valid value: kvcs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>preview</para>
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The VSC ID on the compute side.</para>
+            /// <para>The ID of the compute-side VSC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-001</para>
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. Used to query the next batch of data.</para>
+        /// <para>The query token, which is used to query the next batch of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3NUkN7qf+fcWj7joK8M6tU</para>
@@ -145,7 +149,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID. A request ID is returned regardless of whether the call is successful.</para>
+        /// <para>The request ID. This ID is returned regardless of whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</para>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned for the paged query.</para>
+        /// <para>The total number of entries returned for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

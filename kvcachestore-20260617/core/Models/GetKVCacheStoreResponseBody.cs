@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public GetKVCacheStoreResponseBodyKvCacheStore KvCacheStore { get; set; }
         public class GetKVCacheStoreResponseBodyKvCacheStore : TeaModel {
             /// <summary>
-            /// <para>The storage capacity, in GiB.</para>
+            /// <para>The storage capacity in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             /// <summary>
             /// <para>The extra status information. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CapacityExpanding</description></item>
-            /// <item><description>CapacityExpandSuccess</description></item>
-            /// <item><description>CapacityExpandFail</description></item>
+            /// <item><description>CapacityExpanding: The capacity is being expanded.</description></item>
+            /// <item><description>CapacityExpandSuccess: The capacity expansion succeeded.</description></item>
+            /// <item><description>CapacityExpandFail: The capacity expansion failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string ExtraStatus { get; set; }
 
             /// <summary>
-            /// <para>The cluster number.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -104,8 +104,8 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             /// <summary>
             /// <para>The payment type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PREPAY</description></item>
-            /// <item><description>POSTPAY</description></item>
+            /// <item><description>PREPAY: subscription.</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,12 +138,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating</description></item>
-            /// <item><description>Available</description></item>
-            /// <item><description>InUse</description></item>
-            /// <item><description>Stopping</description></item>
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Deleting</description></item>
+            /// <item><description>Creating: The instance is being created.</description></item>
+            /// <item><description>Available: The instance is available.</description></item>
+            /// <item><description>InUse: The instance is in use.</description></item>
+            /// <item><description>Stopping: The instance is being stopped.</description></item>
+            /// <item><description>Stopped: The instance is stopped.</description></item>
+            /// <item><description>Deleting: The instance is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

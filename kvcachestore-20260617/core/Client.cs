@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -134,6 +138,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -163,7 +171,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -189,7 +197,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -220,10 +228,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore becomes available when its status changes to Available.</para>
+        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore is available after the status changes to Available.</para>
         /// <list type="bullet">
-        /// <item><description>To ensure idempotence in case of network exceptions, use ClientToken. If you call the operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
-        /// <item><description>Creating a KVCacheStore generates an order. The response includes OrderId, which you can view in the Expenses and Costs console. For more information, refer to View and manage orders.</description></item>
+        /// <item><description>To ensure idempotency in case of network exceptions, use ClientToken. If you call this operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
+        /// <item><description>When a KVCacheStore is created, an order is generated at the same time. The OrderId is returned in the response. You can view the order in the Expenses and Costs console. For more information, see View and manage orders.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -307,10 +315,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore becomes available when its status changes to Available.</para>
+        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore is available after the status changes to Available.</para>
         /// <list type="bullet">
-        /// <item><description>To ensure idempotence in case of network exceptions, use ClientToken. If you call the operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
-        /// <item><description>Creating a KVCacheStore generates an order. The response includes OrderId, which you can view in the Expenses and Costs console. For more information, refer to View and manage orders.</description></item>
+        /// <item><description>To ensure idempotency in case of network exceptions, use ClientToken. If you call this operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
+        /// <item><description>When a KVCacheStore is created, an order is generated at the same time. The OrderId is returned in the response. You can view the order in the Expenses and Costs console. For more information, see View and manage orders.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -394,10 +402,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore becomes available when its status changes to Available.</para>
+        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore is available after the status changes to Available.</para>
         /// <list type="bullet">
-        /// <item><description>To ensure idempotence in case of network exceptions, use ClientToken. If you call the operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
-        /// <item><description>Creating a KVCacheStore generates an order. The response includes OrderId, which you can view in the Expenses and Costs console. For more information, refer to View and manage orders.</description></item>
+        /// <item><description>To ensure idempotency in case of network exceptions, use ClientToken. If you call this operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
+        /// <item><description>When a KVCacheStore is created, an order is generated at the same time. The OrderId is returned in the response. You can view the order in the Expenses and Costs console. For more information, see View and manage orders.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -421,10 +429,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore becomes available when its status changes to Available.</para>
+        /// <para>This is an asynchronous operation. After the request is successful, the KVCacheStore enters the Creating state. You can call GetKVCacheStore or ListKVCacheStores to query the KVCacheStore status. The KVCacheStore is available after the status changes to Available.</para>
         /// <list type="bullet">
-        /// <item><description>To ensure idempotence in case of network exceptions, use ClientToken. If you call the operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
-        /// <item><description>Creating a KVCacheStore generates an order. The response includes OrderId, which you can view in the Expenses and Costs console. For more information, refer to View and manage orders.</description></item>
+        /// <item><description>To ensure idempotency in case of network exceptions, use ClientToken. If you call this operation with the same ClientToken and the same request parameters, the same KVCacheStore ID and order ID are returned. If the request parameters change, an IdempotentParameterMismatch error is returned.</description></item>
+        /// <item><description>When a KVCacheStore is created, an order is generated at the same time. The OrderId is returned in the response. You can view the order in the Expenses and Costs console. For more information, see View and manage orders.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -731,7 +739,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zones for KVCacheStore in a specified region.</para>
+        /// <para>Queries the available zones for KVCacheStore in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -773,7 +781,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zones for KVCacheStore in a specified region.</para>
+        /// <para>Queries the available zones for KVCacheStore in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -815,7 +823,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zones for KVCacheStore in a specified region.</para>
+        /// <para>Queries the available zones for KVCacheStore in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -833,7 +841,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zones for KVCacheStore in a specified region.</para>
+        /// <para>Queries the available zones for KVCacheStore in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -851,12 +859,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts KVCacheInstance resources from the virtualization side in batches.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. A return status of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query mount records. When no record corresponding to the specified KvcsId and VscId is found, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query attachment records. If no record is found for the specified KvcsId and VscId, the detachment is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -906,12 +914,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts KVCacheInstance resources from the virtualization side in batches.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. A return status of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query mount records. When no record corresponding to the specified KvcsId and VscId is found, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query attachment records. If no record is found for the specified KvcsId and VscId, the detachment is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -961,12 +969,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts KVCacheInstance resources from the virtualization side in batches.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. A return status of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query mount records. When no record corresponding to the specified KvcsId and VscId is found, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query attachment records. If no record is found for the specified KvcsId and VscId, the detachment is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -984,12 +992,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts KVCacheInstance resources from the virtualization side in batches.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. A return status of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query mount records. When no record corresponding to the specified KvcsId and VscId is found, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request has been accepted. Call ListKVCacheStoreAttachInfo to query attachment records. If no record is found for the specified KvcsId and VscId, the detachment is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1135,16 +1143,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mount information of KVCacheInstances in batches.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1186,6 +1194,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VscId))
+            {
+                query["VscId"] = request.VscId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1207,16 +1219,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mount information of KVCacheInstances in batches.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1258,6 +1270,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VscId))
+            {
+                query["VscId"] = request.VscId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1279,16 +1295,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mount information of KVCacheInstances in batches.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1307,16 +1323,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mount information of KVCacheInstances in batches.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1335,12 +1351,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
+        /// <para>Queries the available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// <para>This operation queries available HpnZones by KVCacheStore instance. It is used to query optional HPN cluster IDs before scaling or migrating a KVCacheStore instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1386,12 +1402,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
+        /// <para>Queries the available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// <para>This operation queries available HpnZones by KVCacheStore instance. It is used to query optional HPN cluster IDs before scaling or migrating a KVCacheStore instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1437,12 +1453,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
+        /// <para>Queries the available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// <para>This operation queries available HpnZones by KVCacheStore instance. It is used to query optional HPN cluster IDs before scaling or migrating a KVCacheStore instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1460,12 +1476,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
+        /// <para>Queries the available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// <para>This operation queries available HpnZones by KVCacheStore instance. It is used to query optional HPN cluster IDs before scaling or migrating a KVCacheStore instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1635,7 +1651,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of KVCacheInstance instances.</para>
+        /// <para>Queries a list of KVCacheInstance instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1714,7 +1730,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of KVCacheInstance instances.</para>
+        /// <para>Queries a list of KVCacheInstance instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1793,7 +1809,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of KVCacheInstance instances.</para>
+        /// <para>Queries a list of KVCacheInstance instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1816,7 +1832,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of KVCacheInstance instances.</para>
+        /// <para>Queries a list of KVCacheInstance instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

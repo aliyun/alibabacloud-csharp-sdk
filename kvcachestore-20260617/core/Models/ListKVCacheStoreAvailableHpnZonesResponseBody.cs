@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAvailableHpnZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of available HpnZone information for instances.</para>
+        /// <para>The list of available HpnZones for instances.</para>
         /// </summary>
         [NameInMap("InstanceHpnZones")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             }
 
             /// <summary>
-            /// <para>The KVCacheStore instance ID.</para>
+            /// <para>The ID of the KVCacheStore instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kvcs-xxxxx</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the instance.</para>
+            /// <para>The ID of the zone where the instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-a</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The request ID. A request ID is returned regardless of whether the call is successful.</para>
+        /// <para>The request ID. This ID is returned regardless of whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FB5E9-F9E8-52F5-9C56-2CDF479CBEB2</para>

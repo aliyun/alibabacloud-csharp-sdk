@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoresResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of KVCacheStore instances. Each element contains the following fields: KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</para>
+        /// <para>The list of KVCacheStore instances. Each element contains the following parameters: KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</para>
         /// </summary>
         [NameInMap("KVCacheStores")]
         [Validation(Required=false)]
         public List<ListKVCacheStoresResponseBodyKVCacheStores> KVCacheStores { get; set; }
         public class ListKVCacheStoresResponseBodyKVCacheStores : TeaModel {
             /// <summary>
-            /// <para>The storage capacity. Unit: GiB.</para>
+            /// <para>The storage capacity, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, call ListKVCacheInstanceAttachInfo.</para>
+            /// <para>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, use the ListKVCacheInstanceAttachInfo operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mp-xxxxx</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per pagination request.</para>
+        /// <para>The maximum number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages. This value is returned only for page number-based pagination.</para>
+        /// <para>The total number of pages. This parameter is returned only for page number-based pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageTotal { get; set; }
 
         /// <summary>
-        /// <para>The request ID. A request ID is returned regardless of whether the API call succeeds.</para>
+        /// <para>The request ID. A request ID is returned regardless of whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56AC37CD-388E-5D21-951B-C50D16D8E812</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances. This value is returned only for page number-based pagination. For cursor-based pagination, the value is -1.</para>
+        /// <para>The total number of instances. This parameter is returned only for page number-based pagination. For cursor-based pagination, the value is -1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

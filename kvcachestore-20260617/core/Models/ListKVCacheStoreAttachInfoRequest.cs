@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAttachInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The list of KVCacheStore KvcsIds to query. You can specify up to 100 IDs.</para>
+        /// <para>The list of KvcsIds of the KVCacheStores to query. You can specify up to 100 KvcsIds.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KvcsIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public List<string> KvcsIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per query. Valid values: 1 to 500.</para>
+        /// <para>The maximum number of entries to return in a single call. Valid values: 1 to 500.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters become ineffective, and TotalCount in the response is invalid.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the last call to this operation. You do not need to specify this parameter for the first call. If NextToken is specified, the PageSize and PageNumber request parameters become invalid, and the TotalCount value in the response is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>your-client-token</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paged query. Used together with PageSize. If the specified page number exceeds the total number of pages, the last page of data is returned.</para>
+        /// <para>The page number for a paging query. This parameter is used together with PageSize. If the specified page number exceeds the total number of pages, the last page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the compute-side VSC. If you specify this parameter, the mount records are filtered by the specified VSC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsc-dhag651dsda</para>
+        /// </summary>
+        [NameInMap("VscId")]
+        [Validation(Required=false)]
+        public string VscId { get; set; }
 
     }
 

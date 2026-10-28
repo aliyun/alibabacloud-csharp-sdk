@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. The request ID is returned regardless of whether the API call is successful.</para>
+        /// <para>The request ID. This ID is returned regardless of whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6AA27F1A-A62C-59C3-BCC7-D1DFA4E7EEA0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of zones.</para>
+        /// <para>The list of available zones.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]

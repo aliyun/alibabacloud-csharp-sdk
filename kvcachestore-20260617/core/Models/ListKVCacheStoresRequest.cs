@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoresRequest : TeaModel {
         /// <summary>
-        /// <para>The list of KvcsId values. Separate multiple IDs with commas. A maximum of 100 IDs are supported.</para>
+        /// <para>The list of KvcsId values. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kvcs-87djda131</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The instance name filter. Prefix matching is used.</para>
+        /// <para>The instance name used for filtering. Prefix matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>obj-detect</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response. This parameter is mutually exclusive with PageNumber.</para>
+        /// <para>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response. This parameter and PageNumber are mutually exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a24c3a9cc8e6da77b10cffc4c93c7922e0b5e8707e68181f</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. This parameter takes precedence over NextToken if both are specified.</para>
+        /// <para>The page number. Default value: 1. This parameter and NextToken are mutually exclusive. If both are specified, PageNumber takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instance status filter. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</para>
+        /// <para>The instance status used for filtering. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>

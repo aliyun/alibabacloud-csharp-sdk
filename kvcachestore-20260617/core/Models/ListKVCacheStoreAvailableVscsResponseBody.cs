@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public List<ListKVCacheStoreAvailableVscsResponseBodyVscs> Vscs { get; set; }
         public class ListKVCacheStoreAvailableVscsResponseBodyVscs : TeaModel {
             /// <summary>
-            /// <para>The ID of the VSC device.</para>
+            /// <para>The VSC device ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-xxxxx</para>

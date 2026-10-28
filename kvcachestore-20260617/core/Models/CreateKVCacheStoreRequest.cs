@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class CreateKVCacheStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The storage capacity in GiB. The minimum capacity is 300 TiB (307200 GiB), and the capacity is scaled in increments of 300 TiB.</para>
+        /// <para>The storage capacity in GiB. The minimum capacity is 300 TiB (307200 GiB), and the capacity is scaled out in increments of 300 TiB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure idempotence of the request. The token can be up to 64 characters in length. Use a UUID.</para>
+        /// <para>The client token that is used to ensure the idempotency of the request. The token can be up to 64 characters in length. We recommend that you use a UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YOUR_CLIENT_TOKEN</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The KVCacheStore description. The description must be 2 to 256 characters in length and cannot start with http:// or https://. Default value: empty.</para>
+        /// <para>The KVCacheStore description. The description must be 2 to 256 characters in length and can contain English and Chinese characters. The description cannot start with http:// or https://. Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No description</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource tag key-value pairs. A maximum of 20 tags are supported. This overrides the parent TagDTO type and uses the same Tag type as the Get/List response.</para>
+        /// <para>The list of resource tag key-value pairs. A maximum of 20 tags are supported. This overrides the parent TagDTO type and uses the same Tag type as returned by Get/List operations.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

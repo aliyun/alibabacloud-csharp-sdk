@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAvailableVscsRequest : TeaModel {
         /// <summary>
-        /// <para>The cross-account authorization role chain, used for cross-account VSC queries in ecs or eflo scenarios.</para>
+        /// <para>The cross-account authorization role chain, used for cross-account VSC queries in ECS or EFLO scenarios.</para>
         /// </summary>
         [NameInMap("Arns")]
         [Validation(Required=false)]
         public List<ListKVCacheStoreAvailableVscsRequestArns> Arns { get; set; }
         public class ListKVCacheStoreAvailableVscsRequestArns : TeaModel {
             /// <summary>
-            /// <para>The UID of the target account for role assumption.</para>
+            /// <para>The target UID for role assumption.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string AssumeRoleFor { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
+            /// <para>The ARN of the RAM role.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The type of the role. Valid values:</para>
+            /// <para>The role type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>service</description></item>
             /// <item><description>user</description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The ID of the compute instance.</para>
+        /// <para>The compute instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,11 +67,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the compute instance. Valid values:</para>
+        /// <para>The compute instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ecs</description></item>
-        /// <item><description>eflo</description></item>
-        /// <item><description>innerECS</description></item>
+        /// <item><description>ECS</description></item>
+        /// <item><description>EFLO</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,7 +82,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the KVCacheStore instance.</para>
+        /// <para>The KVCacheStore instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

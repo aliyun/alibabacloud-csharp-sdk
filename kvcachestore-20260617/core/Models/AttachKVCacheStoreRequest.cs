@@ -38,11 +38,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The role type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>service</description></item>
-            /// <item><description>user</description></item>
-            /// </list>
+            /// <para>The role type. Valid values: service and user.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -63,6 +59,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The VSC instance type. Valid values: EFLO, ECS, and INNER_ECS. Default value: EFLO.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS</para>
+        /// </summary>
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
 
         /// <summary>
         /// <para>The region ID, such as cn-hangzhou.</para>
