@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateModelProviderTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The Agent platform.</para>
+        /// <para>The agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The Agent provider name.</para>
+        /// <para>The name of the agent provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The model provider configuration in JSON format, which contains connection information such as baseUrl, apiKey, and api. The apiKey is encrypted after creation. When ProviderType is set to WuyingCredit, this parameter is not required because the configuration is copied from the system template.</para>
+        /// <para>The JSON configuration of the model provider, which includes connection information such as baseUrl, apiKey, and api. The apiKey is encrypted and stored after creation. When ProviderType is WuyingCredit, this parameter is not required and will be copied from the system template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The description of the model provider template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里云百炼服务商</para>
+        /// <para>Alibaba Cloud Bailian provider</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the WUYING secure proxy. This parameter must be set to true when ProviderType is set to WuyingCredit.</para>
+        /// <para>Specifies whether to enable the Wuying secure proxy. This parameter must be set to true when ProviderType is WuyingCredit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? EnableWuyingProxy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated model template.</para>
+        /// <para>The ID of the associated model group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The name of the model provider template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里云百炼</para>
+        /// <para>Alibaba Cloud Bailian</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The model provider name. The name must be unique within the same model template. The naming rules vary based on the value of ProviderType. For more information, see the description of ProviderType.</para>
+        /// <para>The name of the model provider. The name must be unique within the same model template. The naming conventions vary based on the ProviderType. For more information, see the description of ProviderType.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,11 +109,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProviderName { get; set; }
 
         /// <summary>
-        /// <para>The model provider type. Different types impose different constraints on ProviderName and Config. Valid values:</para>
+        /// <para>The type of the model provider. Different types have different constraints on ProviderName and Config:</para>
         /// <list type="bullet">
-        /// <item><description>WuyingCredit: WUYING credit plan. ProviderName must be set to wuying-credit. The template is created by copying from a system template, and Config is not required.</description></item>
-        /// <item><description>Managed: managed provider. System-reserved names such as wuying-credit cannot be used. Config is required.</description></item>
-        /// <item><description>Custom: user-defined provider. ProviderName must start with the prefix provider-. Config is required.</description></item>
+        /// <item><description>WuyingCredit: Wuying credit package. The ProviderName must be wuying-credit. The template is created by copying from a system template, and Config is not required.</description></item>
+        /// <item><description>Managed: Managed provider. System-reserved names such as wuying-credit cannot be used, and Config is required.</description></item>
+        /// <item><description>Custom: Custom provider. The ProviderName must start with the provider- prefix, and Config is required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>200</c>: Succeeded.</description></item>
-        /// <item><description><c>400</c>: Failed.</description></item>
+        /// <item><description><c>200</c>: Success.</description></item>
+        /// <item><description><c>400</c>: Error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

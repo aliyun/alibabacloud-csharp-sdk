@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public GetRuntimeModelConfigResponseBodyData Data { get; set; }
         public class GetRuntimeModelConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The default model (format: providerName/llmCode).</para>
+            /// <para>The default model, in the format of providerName/llmCode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bailian/qwen3.6-plus</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public List<GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList> LlmInfoList { get; set; }
                 public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The credit consumption multiplier. A null value indicates that the model does not participate in credit-based billing.</para>
+                    /// <para>The credit consumption multiplier. If this parameter is empty, it indicates that the model does not participate in credit billing.</para>
                     /// </summary>
                     [NameInMap("CreditMultiplier")]
                     [Validation(Required=false)]
                     public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier CreditMultiplier { get; set; }
                     public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier : TeaModel {
                         /// <summary>
-                        /// <para>The maximum multiplier. A null value indicates no upper limit. For example, Min=1 with a null Max is displayed as 1x and above.</para>
+                        /// <para>The upper limit of the multiplier. If this parameter is empty, it indicates that there is no upper limit. For example, if Min is 1 and Max is empty, it is displayed as 1x and above.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                         public float? Max { get; set; }
 
                         /// <summary>
-                        /// <para>The minimum multiplier. When equal to Max, the multiplier is fixed. For example, Min=Max=2 is displayed as 2x.</para>
+                        /// <para>The lower limit of the multiplier. When it is equal to Max, it is a fixed multiplier. For example, if Min and Max are both 2, it is displayed as 2x.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -73,35 +73,35 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     /// <para>The model description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The Qwen3.6 native vision-language series Plus model demonstrates outstanding performance comparable to current top frontier models, with significant improvements over the 3.5 series. The model features significantly enhanced capabilities in agentic coding, frontend programming, vibe coding, multimodal universal recognition, OCR, and object localization</para>
+                    /// <para>The Qwen3.6 native vision-language Plus model series demonstrates exceptional performance comparable to current top-tier frontier models, with significantly improved model effects compared to the 3.5 series. The model shows significant enhancements in coding capabilities such as agentic coding, front-end programming, and vibe coding, as well as in multimodal universal recognition, OCR, and object localization</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The list of model features (such as function-calling, web-search, and structured-outputs).</para>
+                    /// <para>The list of model features, such as function-calling, web-search, and structured-outputs.</para>
                     /// </summary>
                     [NameInMap("Features")]
                     [Validation(Required=false)]
                     public List<string> Features { get; set; }
 
                     /// <summary>
-                    /// <para>The inference metadata (request and response modalities).</para>
+                    /// <para>The inference metadata, including request and response modalities.</para>
                     /// </summary>
                     [NameInMap("InferenceMetadata")]
                     [Validation(Required=false)]
                     public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata InferenceMetadata { get; set; }
                     public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata : TeaModel {
                         /// <summary>
-                        /// <para>The list of request modalities (such as Text, Image, and Audio).</para>
+                        /// <para>The list of request modalities, such as Text, Image, and Audio.</para>
                         /// </summary>
                         [NameInMap("RequestModality")]
                         [Validation(Required=false)]
                         public List<string> RequestModality { get; set; }
 
                         /// <summary>
-                        /// <para>The list of response modalities (such as Text, Image, and Audio).</para>
+                        /// <para>The list of response modalities, such as Text, Image, and Audio.</para>
                         /// </summary>
                         [NameInMap("ResponseModality")]
                         [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The publish time (ISO 8601 format).</para>
+                    /// <para>The published time in ISO 8601 format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-04T06:25:17.000+00:00</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string PublishedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The model risk type (returned only when the request parameter IncludeRiskInfo is set to true).</para>
+                    /// <para>The model risk type. This parameter is returned only when the IncludeRiskInfo request parameter is set to true.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The model provider template ID.</para>
+                /// <para>The ID of the model provider template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mpt-xxxx</para>
@@ -162,17 +162,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ModelProviderTemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The model provider template name.</para>
+                /// <para>The name of the model provider template.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>百炼</para>
+                /// <para>Model Studio</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The model provider name.</para>
+                /// <para>The name of the model provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bailian</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The configured model group ID.</para>
+            /// <para>The ID of the configured model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mt-xxxx</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The model group name.</para>
+            /// <para>The name of the model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-template-001</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The model template association type (only when present).</para>
+            /// <para>The model template association type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Runtime</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateRefType { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID to which the runtime belongs (null if not assigned to a resource group).</para>
+            /// <para>The ID of the resource group to which the runtime belongs. If the runtime does not belong to any resource group, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-xxxxx</para>

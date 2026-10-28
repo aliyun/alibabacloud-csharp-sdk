@@ -20,7 +20,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The model code used for filtering. Fuzzy match is supported.</para>
+        /// <para>The display language of the model. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Simplified Chinese.</description></item>
+        /// <item><description>en-US: English.</description></item>
+        /// <item><description>ja-JP: Japanese.</description></item>
+        /// <item><description>zh-TW: Traditional Chinese.
+        /// Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not included in Alibaba Cloud Model Studio or the English text is missing, the original source text is retained without automatic translation.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en-US</para>
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
+        /// <summary>
+        /// <para>The model code for filtering. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3.6-plus</para>
@@ -30,14 +47,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string LlmCode { get; set; }
 
         /// <summary>
-        /// <para>The model template IDs used for filtering.</para>
+        /// <para>The model template IDs for filtering.</para>
         /// </summary>
         [NameInMap("LlmTemplateIds")]
         [Validation(Required=false)]
         public string LlmTemplateIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated model group.</para>
+        /// <para>The associated model group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mt-xxxx</para>
@@ -47,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Both 0 and 1 return the same result.</para>
+        /// <para>The page number. Pages start from 1. A value of 0 returns the same result as 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,7 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model provider template.</para>
+        /// <para>The model provider template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mpt-xxxx</para>
@@ -79,10 +96,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>Specifies whether to query smart models. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Only LLMs under system preset smart models are returned. In this case, BizType is required.</description></item>
-        /// <item><description>false: Smart model filtering is not applied.</description></item>
+        /// <item><description>true: Only LLMs under system-preset smart models are returned. In this case, BizType is required.</description></item>
+        /// <item><description>false: Smart models are not specifically filtered.
+        /// Default value: false.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BrowserConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud browser to modify.</para>
+        /// <para>The ID of the cloud browser.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
-        /// <para>The maximum resource count. This parameter takes effect for monthly active pay-as-you-go billing.</para>
+        /// <para>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxAmount { get; set; }
 
         /// <summary>
-        /// <para>The network configuration.</para>
+        /// <para>The network configurations.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StoragePolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The timers.</para>
+        /// <para>The timer.</para>
         /// </summary>
         [NameInMap("Timers")]
         [Validation(Required=false)]

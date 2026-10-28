@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteAppInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID. You can call <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> to obtain this parameter.</para>
+        /// <para>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of application instance IDs.</para>
+        /// <para>The application instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>if can be null:</b>

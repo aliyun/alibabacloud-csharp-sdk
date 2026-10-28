@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class BatchCreateLlmTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of model configurations to create.</para>
+        /// <para>The list of model configurations to be created.</para>
         /// </summary>
         [NameInMap("LlmTemplateItems")]
         [Validation(Required=false)]
         public List<BatchCreateLlmTemplatesRequestLlmTemplateItems> LlmTemplateItems { get; set; }
         public class BatchCreateLlmTemplatesRequestLlmTemplateItems : TeaModel {
             /// <summary>
-            /// <para>The model configuration JSON object.</para>
+            /// <para>The JSON object for model configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The model description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>千问Plus系列模型</para>
+            /// <para>Qwen Plus series models</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to set the model as the default model. A model group can have at most one default model.</para>
+            /// <para>Specifies whether to set the model as the default model. Each model group can have at most one default model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? IsDefaultModel { get; set; }
 
             /// <summary>
-            /// <para>The model code, which must be unique within the same provider.</para>
+            /// <para>The model code. It must be unique under the same provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3.6-plus</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model provider template to which the models belong.</para>
+        /// <para>The ID of the model provider template to which the model templates belong.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

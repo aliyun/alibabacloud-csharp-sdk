@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ConfigRuntimeChannelRequest : TeaModel {
         /// <summary>
-        /// <para>The Agent platform.</para>
+        /// <para>The agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The Agent provider.</para>
+        /// <para>The agent provider.</para>
         /// <list type="bullet">
-        /// <item><description>JVS Computer: set to OpenClaw.</description></item>
-        /// <item><description>OpenClaw: set to OpenClaw.</description></item>
-        /// <item><description>Hermes Agent: set to HermesAgent.</description></item>
+        /// <item><description>JVS Computer: Set to OpenClaw.</description></item>
+        /// <item><description>OpenClaw: Set to OpenClaw.</description></item>
+        /// <item><description>Hermes Agent: Set to HermesAgent.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The channel configuration JSON string.</para>
+        /// <para>The JSON string for channel configuration.</para>
         /// <list type="bullet">
-        /// <item><description>Simple configuration mode example:</description></item>
+        /// <item><description>Example of the simple configuration mode:</description></item>
         /// </list>
         /// <pre><code class="language-json">{
         ///     &quot;appKey&quot;: &quot;abc&quot;,
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// }
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Custom configuration mode example:</description></item>
+        /// <item><description>Example of the custom configuration mode:</description></item>
         /// </list>
         /// <pre><code class="language-json">{
         ///   &quot;enabled&quot;: true,
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The channel name.</para>
-        /// <para>If you leave this parameter empty, the system automatically uses the value of Code as the name.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the value of Code as the name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>钉钉</para>
+        /// <para>DingTalk</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> RuntimeIds { get; set; }
 
         /// <summary>
-        /// <para>The Agent runtime type.</para>
+        /// <para>The agent runtime type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

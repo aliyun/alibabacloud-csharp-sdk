@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteModelTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The model group ID.</para>
+        /// <para>The ID of the model group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

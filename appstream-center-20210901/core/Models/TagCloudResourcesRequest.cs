@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class TagCloudResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of resource IDs. A maximum of 50 IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
+        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The list of tags. System tags and custom tags are supported.</para>
         /// <list type="bullet">
-        /// <item><description><para>System tag enumeration values:</para>
+        /// <item><description><para>Valid values for system tags:</para>
         /// <list type="bullet">
         /// <item><description><c>System/Scheduler/GRAYSCALE</c>: canary release tag</description></item>
-        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents newly bound users in a delivery group from establishing connections</description></item>
+        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents newly bound users from connecting to the app instance group</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Custom tags: A maximum of 20 custom tags can be created.</para>
+        /// <item><description><para>Custom tags: You can create up to 20 custom tags.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Each tag key on the same resource can have only one tag value. If you add a tag key that already exists, the corresponding tag value is updated to the new value.</para>
+        /// <para>A tag key on a resource can map to only one tag value. If you add a tag with an existing key, the tag value is updated to the new value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<TagCloudResourcesRequestTags> Tags { get; set; }
         public class TagCloudResourcesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key. Tags are case-sensitive. The key must be 1 to 128 characters in length.</para>
+            /// <para>The tag key. It is case-sensitive and must be 1 to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Tags are case-sensitive. The value must be 1 to 128 characters in length.</para>
+            /// <para>The tag value. It is case-sensitive and must be 1 to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

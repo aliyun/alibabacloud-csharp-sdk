@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string BookmarkFolder { get; set; }
 
                 /// <summary>
-                /// <para>The bookmark ID. This parameter is required only for update operations.</para>
+                /// <para>The bookmark ID. This parameter is required only for modification scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bm-12345</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The bookmark list file path.</para>
+            /// <para>The file path of the bookmark list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/BrowserBookmarkTemplate.csv</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string BrowserParam { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable cookies synchronization.</para>
+            /// <para>Specifies whether to enable cookie synchronization.</para>
             /// </summary>
             [NameInMap("CookiesSync")]
             [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Homepage { get; set; }
 
             /// <summary>
-            /// <para>The list of bookmarks to remove.</para>
+            /// <para>The list of bookmarks to be removed.</para>
             /// </summary>
             [NameInMap("RemoveBookmarks")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The ID of the cloud browser to modify.</para>
+        /// <para>The ID of the cloud browser.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
-        /// <para>The maximum resource count. This parameter takes effect for monthly active pay-as-you-go billing.</para>
+        /// <para>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -155,14 +155,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxAmount { get; set; }
 
         /// <summary>
-        /// <para>The network configuration.</para>
+        /// <para>The network configurations.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
         public ModifyBrowserInstanceGroupRequestNetwork Network { get; set; }
         public class ModifyBrowserInstanceGroupRequestNetwork : TeaModel {
             /// <summary>
-            /// <para>The access restriction type.</para>
+            /// <para>The type of access restriction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALLOW_LIST</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<ModifyBrowserInstanceGroupRequestNetworkRestrictedURLs> RestrictedURLs { get; set; }
             public class ModifyBrowserInstanceGroupRequestNetworkRestrictedURLs : TeaModel {
                 /// <summary>
-                /// <para>The domain name configuration ID. This parameter is required only when you modify an existing configuration.</para>
+                /// <para>The ID of the domain name configuration. This parameter is required only when you modify the configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ru-12345</para>
@@ -208,10 +208,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The file path of the restricted URLs.</para>
+            /// <para>The file path for network-restricted URLs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL白名单模版.csv</para>
+            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_whitelist_template.csv</para>
             /// </summary>
             [NameInMap("RestrictedURLsFilePath")]
             [Validation(Required=false)]
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyBrowserInstanceGroupRequestPolicy Policy { get; set; }
         public class ModifyBrowserInstanceGroupRequestPolicy : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable screenshot protection.</para>
+            /// <para>Specifies whether to enable screen capture prevention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The client type access control settings.</para>
+            /// <para>The logon client type control.</para>
             /// </summary>
             [NameInMap("ClientTypes")]
             [Validation(Required=false)]
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The clipboard-related policy.</para>
+            /// <para>The clipboard policies.</para>
             /// </summary>
             [NameInMap("ClipboardPolicy")]
             [Validation(Required=false)]
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size limit for rich text clipboard data transferred from the cloud.</para>
+                /// <para>The rich text clipboard read size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for rich text clipboard data transferred from the cloud.</para>
+                /// <para>The rich text clipboard read size unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RichTextClipboardSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The size limit for rich text clipboard data transferred to the cloud.</para>
+                /// <para>The rich text clipboard write size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for rich text clipboard data transferred to the cloud.</para>
+                /// <para>The rich text clipboard write size unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboard { get; set; }
 
                 /// <summary>
-                /// <para>The size limit for text clipboard data transferred from the cloud.</para>
+                /// <para>The text clipboard read size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for text clipboard data transferred from the cloud.</para>
+                /// <para>The text clipboard read size unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboardReadSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The size limit for text clipboard data transferred to the cloud.</para>
+                /// <para>The text clipboard write size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -472,7 +472,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for text clipboard data transferred to the cloud.</para>
+                /// <para>The text clipboard write size unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -484,7 +484,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The data retention policy after disconnection.</para>
+            /// <para>The data retention policy upon disconnection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customTime</para>
@@ -494,7 +494,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DisconnectKeepSession { get; set; }
 
             /// <summary>
-            /// <para>The session retention duration after disconnection.</para>
+            /// <para>The session retention duration upon disconnection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -504,7 +504,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? DisconnectKeepSessionTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the floating ball file manager.</para>
+            /// <para>The floating ball file manager switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -524,7 +524,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Html5FileTransfer { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to disconnect the session when no operation is performed.</para>
+            /// <para>The cloud browser dual-screen switch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("MultiScreen")]
+            [Validation(Required=false)]
+            public string MultiScreen { get; set; }
+
+            /// <summary>
+            /// <para>The no-operation disconnect policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -534,7 +544,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NoOperationDisconnect { get; set; }
 
             /// <summary>
-            /// <para>The idle timeout period before the session is disconnected, in seconds.</para>
+            /// <para>The no-operation disconnect time in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -564,14 +574,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PolicyVersion { get; set; }
 
             /// <summary>
-            /// <para>The server access IP address whitelist rules to revoke.</para>
+            /// <para>The server access IP address whitelist to be revoked.</para>
             /// </summary>
             [NameInMap("RevokeAccessPolicyRules")]
             [Validation(Required=false)]
             public List<ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules> RevokeAccessPolicyRules { get; set; }
             public class ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules : TeaModel {
                 /// <summary>
-                /// <para>The IPv4 address or CIDR block to revoke.</para>
+                /// <para>The IPv4 address or CIDR block to be revoked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.0/24</para>
@@ -581,7 +591,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string CidrIp { get; set; }
 
                 /// <summary>
-                /// <para>The description of the access IP address whitelist rule to revoke.</para>
+                /// <para>The description of the access IP address whitelist rule to be revoked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>office network</para>
@@ -647,7 +657,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyBrowserInstanceGroupRequestStoragePolicy StoragePolicy { get; set; }
         public class ModifyBrowserInstanceGroupRequestStoragePolicy : TeaModel {
             /// <summary>
-            /// <para>The user roaming policy.</para>
+            /// <para>The user roaming-related policy.</para>
             /// </summary>
             [NameInMap("UserProfile")]
             [Validation(Required=false)]
@@ -665,7 +675,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The timers.</para>
+        /// <para>The timer.</para>
         /// </summary>
         [NameInMap("Timers")]
         [Validation(Required=false)]

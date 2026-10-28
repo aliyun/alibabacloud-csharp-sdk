@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The error description.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Duplicate tag keys exist.</para>
