@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The value of the metric.</para>
+            /// <para>The metric value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.97</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total count.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>194</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

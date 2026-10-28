@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListAlgorithmsRequest : TeaModel {
         /// <summary>
-        /// <para>Algorithm ID.</para>
+        /// <para>The algorithm ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>algo-xsldfvu1334</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmId { get; set; }
 
         /// <summary>
-        /// <para>Algorithm name.</para>
+        /// <para>The algorithm name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm_training</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmName { get; set; }
 
         /// <summary>
-        /// <para>Algorithm provider.</para>
+        /// <para>The algorithm provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pai</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmProvider { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

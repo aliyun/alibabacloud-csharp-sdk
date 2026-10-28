@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListResourceGroupMachineGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user who created the machine group.</para>
+        /// <para>The user ID of the machine group creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1612285282502326</para>
@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CreatorID { get; set; }
 
+        /// <summary>
+        /// <para>The cloud disk performance level for filtering.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PL2</para>
+        /// </summary>
         [NameInMap("DiskPL")]
         [Validation(Required=false)]
         public string DiskPL { get; set; }
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EcsSpec { get; set; }
 
         /// <summary>
-        /// <para>The machine group IDs. Separate multiple IDs with a comma (,).</para>
+        /// <para>The IDs of the machine groups. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mg105ecqwfe49hwb</para>
@@ -54,12 +60,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort order.</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Asc</c>: Sorts the results in ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><c>Desc</c>: Sorts the results in descending order.</para>
-        /// </description></item>
+        /// <item><description>Asc: Ascending order.</description></item>
+        /// <item><description>Desc: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The ID of the purchase order.</para>
+        /// <para>The purchased instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>236553689400333</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The payment duration. If <c>PaymentDurationUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
+        /// <para>The billing duration. If PaymentDurationUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
-        /// <para>The payment type.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreatedTime</para>
@@ -140,7 +144,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The instance status. <c>Creating</c>: The instance is being created. <c>Ready</c>: The instance is running. <c>Expiring</c>: The instance is expiring. <c>Expired</c>: The instance has expired. <c>Stopping</c>: The instance is being stopped. <c>Stopped</c>: The instance is stopped.</para>
+        /// <para>The instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Creating: The instance is being created.</description></item>
+        /// <item><description>Ready: The instance is running.</description></item>
+        /// <item><description>Expiring: The instance is about to expire.</description></item>
+        /// <item><description>Expired: The instance has expired.</description></item>
+        /// <item><description>Stopping: The instance is being stopped.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Ready</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<QuotaUser> QuotaUserUsage { get; set; }
 
         /// <summary>
-        /// <para>The user usage information.</para>
+        /// <para>The list of user resource usage details.</para>
         /// </summary>
         [NameInMap("QuotaUserUsages")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTrainingJobInstanceMetricsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of all monitoring metrics that match the filter condition.</para>
+        /// <para>The list of all monitoring metrics that match the filter conditions.</para>
         /// </summary>
         [NameInMap("InstanceMetrics")]
         [Validation(Required=false)]
         public List<ListTrainingJobInstanceMetricsResponseBodyInstanceMetrics> InstanceMetrics { get; set; }
         public class ListTrainingJobInstanceMetricsResponseBodyInstanceMetrics : TeaModel {
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trainkxen7qjyg6y-master-0</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>List of instance monitoring metrics.</para>
+            /// <para>The list of instance monitoring metrics.</para>
             /// </summary>
             [NameInMap("Metrics")]
             [Validation(Required=false)]
             public List<ListTrainingJobInstanceMetricsResponseBodyInstanceMetricsMetrics> Metrics { get; set; }
             public class ListTrainingJobInstanceMetricsResponseBodyInstanceMetricsMetrics : TeaModel {
                 /// <summary>
-                /// <para>UTC time in ISO 8601 format.</para>
+                /// <para>The UTC time in ISO 8601 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-08T16:00:00Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
                 public string Time { get; set; }
 
                 /// <summary>
-                /// <para>Metric value.</para>
+                /// <para>The metric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             }
 
             /// <summary>
-            /// <para>Node name.</para>
+            /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trains930928remn-master-0</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</para>

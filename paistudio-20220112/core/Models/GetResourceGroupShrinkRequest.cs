@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. Defaults to <c>true</c>.</para>
+        /// <para>Specifies whether to enable AI workspace data. This parameter is optional. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? IsAIWorkspaceDataEnabled { get; set; }
 
         /// <summary>
-        /// <para>A list of up to 20 tags to add to the instance.</para>
+        /// <para>The list of tags to be added. A maximum of 20 tags can be added.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ResourceAmount : TeaModel {
         /// <summary>
-        /// <para>Total CPU</para>
+        /// <para>The total CPU amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CPU { get; set; }
 
         /// <summary>
-        /// <para>Total GPU cards</para>
+        /// <para>The total number of GPU cards.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPU { get; set; }
 
         /// <summary>
+        /// <para>The GPU memory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80G</para>
         /// </summary>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPUMemory { get; set; }
 
         /// <summary>
+        /// <para>The GPU memory, in bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>85899345920</para>
         /// </summary>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? GPUMemoryBytes { get; set; }
 
         /// <summary>
-        /// <para>GPU card type</para>
+        /// <para>The GPU card type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GPU</para>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPUType { get; set; }
 
         /// <summary>
-        /// <para>Total memory</para>
+        /// <para>The total memory amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100Gi</para>

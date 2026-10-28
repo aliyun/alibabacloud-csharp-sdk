@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetAlgorithmResponseBody : TeaModel {
         /// <summary>
-        /// <para>Algorithm description.</para>
+        /// <para>The algorithm description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Large language model training.</para>
+        /// <para>Large language model training</para>
         /// </summary>
         [NameInMap("AlgorithmDescription")]
         [Validation(Required=false)]
         public string AlgorithmDescription { get; set; }
 
         /// <summary>
-        /// <para>Algorithm ID.</para>
+        /// <para>The algorithm ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>algo-xsldfvu1334</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmId { get; set; }
 
         /// <summary>
-        /// <para>Algorithm name.</para>
+        /// <para>The algorithm name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm_training</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmName { get; set; }
 
         /// <summary>
-        /// <para>Algorithm provider.</para>
+        /// <para>The algorithm provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pai</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmProvider { get; set; }
 
         /// <summary>
-        /// <para>Display name of the algorithm.</para>
+        /// <para>The display name of the algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm_training</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Time when the algorithm was created.</para>
+        /// <para>The time when the algorithm was created. The time follows the ISO 8601 standard in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T11:49:47Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>Time when the algorithm was last updated.</para>
+        /// <para>The time when the algorithm was last updated. The time follows the ISO 8601 standard in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T11:49:47Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID of the algorithm owner.</para>
+        /// <para>The ID of the tenant to whom the algorithm belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>User ID of the algorithm owner.</para>
+        /// <para>The ID of the user to whom the algorithm belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

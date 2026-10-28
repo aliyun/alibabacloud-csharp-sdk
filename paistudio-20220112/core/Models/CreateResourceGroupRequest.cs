@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Compute resource type for the resource group.</para>
+        /// <para>The compute resource type of the ResourceGroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ecs</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ComputingResourceProvider { get; set; }
 
         /// <summary>
-        /// <para>Resource group description.</para>
+        /// <para>The description of the ResourceGroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_api_report</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Resource group name.</para>
+        /// <para>The name of the ResourceGroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testResourceGroup</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Resource type. Valid values:</para>
+        /// <para>The resource type list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Ecs: general computing resources</para>
-        /// </description></item>
-        /// <item><description><para>Lingjun: Lingjun resources</para>
-        /// </description></item>
+        /// <item><description>Ecs: general computing resources</description></item>
+        /// <item><description>Lingjun: Lingjun AI Compute resources</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,14 +54,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>List of tags to add. Maximum 20 items.</para>
+        /// <para>The list of tags to add, containing up to 20 entries.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateResourceGroupRequestTag> Tag { get; set; }
         public class CreateResourceGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the instance. N ranges from 1 to 20.</para>
+            /// <para>The tag key of the instance. The value of N ranges from 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag value for the resource group. N ranges from 1 to 20.</para>
+            /// <para>The tag value of the instance. The value of N ranges from 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -85,14 +83,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>VPC connectivity information for the resource group.</para>
+        /// <para>The VPC peering information of the ResourceGroup.</para>
         /// </summary>
         [NameInMap("UserVpc")]
         [Validation(Required=false)]
         public UserVpc UserVpc { get; set; }
 
         /// <summary>
-        /// <para>Resource group version. This parameter takes effect only when the resource type is ECS.</para>
+        /// <para>The resource group version. This parameter only takes effect when the resource type is ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>

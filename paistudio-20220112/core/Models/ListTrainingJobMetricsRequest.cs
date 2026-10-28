@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTrainingJobMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time in UTC, in ISO 8601 format. If you omit this parameter, the current time is used.</para>
+        /// <para>The end time in UTC. The time must be in ISO 8601 format. If this parameter is left empty, the current time is used.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort order of returned metrics. Valid values: ASC or DESC.</para>
+        /// <para>The time order of the returned metrics. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time in UTC, in ISO 8601 format. If you omit this parameter, the task start time is used.</para>
+        /// <para>The start time in UTC. The time must be in ISO 8601 format. If this parameter is left empty, the start time of the job is used.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>

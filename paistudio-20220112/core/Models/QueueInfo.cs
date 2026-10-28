@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class QueueInfo : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>roleMaximumResource</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ConfigRule</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CodeType { get; set; }
 
+        /// <summary>
+        /// <para>The task creation time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-06-22T00:00:00Z</para>
+        /// </summary>
         [NameInMap("GmtCreatedTime")]
         [Validation(Required=false)]
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The dequeue time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;2023-06-22T00:00:00Z&quot;</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtDequeuedTime { get; set; }
 
         /// <summary>
+        /// <para>The enqueue time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“2023-06-22T00:00:00Z”</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtEnqueuedTime { get; set; }
 
         /// <summary>
+        /// <para>The queue position change time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;2023-06-22T00:00:00Z&quot;</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtPositionModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the underlying QueueUnit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-label-79f5498dd-9qrzs</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The queue position.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? Position { get; set; }
 
         /// <summary>
+        /// <para>The task priority.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -78,6 +100,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? Priority { get; set; }
 
         /// <summary>
+        /// <para>The dequeue strategy of the queue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PaiStrategyIntelligent</para>
         /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QueueStrategy { get; set; }
 
         /// <summary>
+        /// <para>The quota used by the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“quotamtl37ge7gkvdz”</para>
         /// </summary>
@@ -94,6 +120,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QuotaId { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Current GPU Limit is 5, limited by Role PAI.AlgoDeveloper</para>
         /// </summary>
@@ -101,11 +129,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// <para>The resource usage.</para>
+        /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public ResourceAmount Resource { get; set; }
 
         /// <summary>
+        /// <para>The status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Enqueued</para>
         /// </summary>
@@ -113,19 +146,40 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the task uses idle resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Used.</description></item>
+        /// <item><description>false: Not used.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("UseOversoldResource")]
         [Validation(Required=false)]
         public bool? UseOversoldResource { get; set; }
 
+        /// <summary>
+        /// <para>The creator information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1612285282502324</para>
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
+        /// <summary>
+        /// <para>The username.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlcxxxx</para>
         /// </summary>
@@ -133,11 +187,19 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string WorkloadId { get; set; }
 
+        /// <summary>
+        /// <para>The task name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-job</para>
+        /// </summary>
         [NameInMap("WorkloadName")]
         [Validation(Required=false)]
         public string WorkloadName { get; set; }
 
         /// <summary>
+        /// <para>The specific status of DLC, DSW, or EAS.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PreAllocation</para>
         /// </summary>
@@ -146,6 +208,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string WorkloadStatus { get; set; }
 
         /// <summary>
+        /// <para>The task type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc</para>
         /// </summary>
@@ -154,6 +218,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string WorkloadType { get; set; }
 
         /// <summary>
+        /// <para>The workspace of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“432524”</para>
         /// </summary>
@@ -161,6 +227,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the workspace where the task resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pai_dlc</para>
+        /// </summary>
         [NameInMap("WorkspaceName")]
         [Validation(Required=false)]
         public string WorkspaceName { get; set; }

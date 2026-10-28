@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class SpotPriceItem : TeaModel {
         /// <summary>
+        /// <para>The spot instance type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ml.gu8xf.8xlarge-gu108</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>The spot instance discount.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public float? SpotDiscount { get; set; }
 
         /// <summary>
+        /// <para>The timestamp of the current spot instance price.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-17T06:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Timestamp { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-wulanchabu-a</para>
         /// </summary>

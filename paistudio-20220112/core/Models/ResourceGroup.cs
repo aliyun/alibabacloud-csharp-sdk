@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <para>The user ID of the creator.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1612285282502324</para>
+        /// <para>161228528250****</para>
         /// </summary>
         [NameInMap("CreatorID")]
         [Validation(Required=false)]
         public string CreatorID { get; set; }
 
         /// <summary>
-        /// <para>The time the PAI resource group was created.</para>
+        /// <para>The time when the PAI resource group was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time the PAI resource group was last modified.</para>
+        /// <para>The time when the PAI resource group was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -63,16 +63,28 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <para>The ID of the PAI resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg17tmvwiokhzaxg</para>
+        /// <para>rg17tmvwiokh****</para>
         /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
 
+        /// <summary>
+        /// <para>The type of compute resources in the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ecs</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The status of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ready</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -84,12 +96,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public UserVpc UserVpc { get; set; }
 
+        /// <summary>
+        /// <para>The version of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23000</para>

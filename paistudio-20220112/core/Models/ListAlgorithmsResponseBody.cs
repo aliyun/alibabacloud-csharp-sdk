@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListAlgorithmsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Algorithm list.</para>
+        /// <para>The algorithm list.</para>
         /// </summary>
         [NameInMap("Algorithms")]
         [Validation(Required=false)]
         public List<ListAlgorithmsResponseBodyAlgorithms> Algorithms { get; set; }
         public class ListAlgorithmsResponseBodyAlgorithms : TeaModel {
             /// <summary>
-            /// <para>Algorithm description.</para>
+            /// <para>The algorithm description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Large language model training.</para>
+            /// <para>Large language model training</para>
             /// </summary>
             [NameInMap("AlgorithmDescription")]
             [Validation(Required=false)]
             public string AlgorithmDescription { get; set; }
 
             /// <summary>
-            /// <para>Algorithm ID.</para>
+            /// <para>The algorithm ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>algo-sidjc8134hv</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string AlgorithmId { get; set; }
 
             /// <summary>
-            /// <para>Algorithm name.</para>
+            /// <para>The algorithm name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>llm_train</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string AlgorithmName { get; set; }
 
             /// <summary>
-            /// <para>Algorithm provider.</para>
+            /// <para>The algorithm provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pai</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string AlgorithmProvider { get; set; }
 
             /// <summary>
-            /// <para>Algorithm display name.</para>
+            /// <para>The display name of the algorithm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LLM Train</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Algorithm creation time.</para>
+            /// <para>The time when the algorithm was created, in ISO 8601 format, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-21T03:35:24Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>Algorithm update time.</para>
+            /// <para>The time when the algorithm was last updated, in ISO 8601 format, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-25T02:15:40Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Algorithm owner ID.</para>
+            /// <para>The ID of the user to whom the algorithm belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>Workspace ID.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total algorithms.</para>
+        /// <para>The total number of algorithms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

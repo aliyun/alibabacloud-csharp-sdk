@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of historical spot instance price details</para>
+        /// <para>The list of historical price details of spot instances.</para>
         /// </summary>
         [NameInMap("SpotPriceHistory")]
         [Validation(Required=false)]
         public List<SpotPriceItem> SpotPriceHistory { get; set; }
 
         /// <summary>
-        /// <para>The total number of historical spot instance prices</para>
+        /// <para>The total number of historical prices of spot instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>194</para>

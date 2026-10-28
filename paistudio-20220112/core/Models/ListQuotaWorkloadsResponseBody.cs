@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of instances that match the filter conditions.</para>
+        /// <para>The number of instances that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23</para>

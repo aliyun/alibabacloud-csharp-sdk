@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTrainingJobsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The algorithm name.</para>
+        /// <para>The name of the algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm_train</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmProvider { get; set; }
 
         /// <summary>
-        /// <para>The end time of the job creation time range for the query. Default value: current time.</para>
+        /// <para>The end time of the creation time range used to query jobs. Default value: the current time. The time is in ISO 8601 format and the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-27T02:10:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the algorithm is a temporary algorithm.</para>
+        /// <para>Specifies whether the algorithm is temporary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: Ascending order.</description></item>
+        /// <item><description>DESC: Descending order.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number for paging.</para>
+        /// <para>The page number for the paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The start time of the job creation time range for the query. Default value: 7 days ago.</para>
+        /// <para>The start time of the creation time range used to query jobs. Default value: 7 days ago. The time is in ISO 8601 format and the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-22T01:00:00Z</para>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The training job ID.</para>
+        /// <para>The ID of the training job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trains930928remn</para>

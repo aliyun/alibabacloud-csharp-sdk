@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<ResourceGroup> ResourceGroups { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching resource groups.</para>
+        /// <para>The total number of resource groups returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

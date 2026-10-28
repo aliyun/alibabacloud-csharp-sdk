@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. Defaults to <c>true</c>.</para>
+        /// <para>Specifies whether to enable AI workspace data. This parameter is optional. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? IsAIWorkspaceDataEnabled { get; set; }
 
         /// <summary>
-        /// <para>A list of up to 20 tags to add to the instance.</para>
+        /// <para>The list of tags to be added. A maximum of 20 tags can be added.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<GetResourceGroupRequestTag> Tag { get; set; }
         public class GetResourceGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the instance. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the instance. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

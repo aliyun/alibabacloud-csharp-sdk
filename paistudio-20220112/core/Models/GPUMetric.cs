@@ -9,15 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GPUMetric : TeaModel {
+        /// <summary>
+        /// <para>The GPU index.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("Index")]
         [Validation(Required=false)]
         public long? Index { get; set; }
 
+        /// <summary>
+        /// <para>The GPU model.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NVIDIA V100</para>
+        /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]
         public string Model { get; set; }
 
         /// <summary>
+        /// <para>The card status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0：异常；1：正常</para>
         /// </summary>
@@ -25,6 +39,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? Status { get; set; }
 
+        /// <summary>
+        /// <para>The GPU utilization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("UsageRate")]
         [Validation(Required=false)]
         public float? UsageRate { get; set; }

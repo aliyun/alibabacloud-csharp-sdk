@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupMachineGroupRequest : TeaModel {
         /// <summary>
-        /// <para>A list of up to 20 tags.</para>
+        /// <para>The list of tags to add. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<GetResourceGroupMachineGroupRequestTag> Tag { get; set; }
         public class GetResourceGroupMachineGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

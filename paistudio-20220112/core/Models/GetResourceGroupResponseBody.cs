@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ClusterID { get; set; }
 
         /// <summary>
-        /// <para>The provider of computing resources for the resource group.</para>
+        /// <para>The type of compute resources for the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ComputingResourceProvider { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who created the resource group.</para>
+        /// <para>The user ID of the creator of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1612285282502324</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource group was created.</para>
+        /// <para>The time when the resource group was created. The time follows the ISO 8601 standard in the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource group was last modified.</para>
+        /// <para>The time when the resource group was updated. The time follows the ISO 8601 standard in the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of computing resource for the resource group.</para>
+        /// <para>The type of compute resources for the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ecs</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? SupportRDMA { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetResourceGroupResponseBodyTags> Tags { get; set; }
         public class GetResourceGroupResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the instance. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testKey</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the instance. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
@@ -155,12 +155,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public UserVpc UserVpc { get; set; }
 
+        /// <summary>
+        /// <para>The version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35201</para>

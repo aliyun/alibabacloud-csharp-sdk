@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetSpotPriceHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for querying historical spot instance prices. Specify the time in ISO 8601 format using UTC+0, as yyyy-MM-ddTHH:mm:ssZ. Default value: empty. An empty value means the current time.</para>
+        /// <para>The end time for querying the historical prices of spot instances. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Default value: null, which indicates the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-30T09:36:46Z</para>
@@ -22,12 +22,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <summary>
         /// <para>The sort order. Default value: asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>desc: descending order.</para>
-        /// </description></item>
-        /// <item><description><para>asc: ascending order.</para>
-        /// </description></item>
+        /// <item><description>desc: descending order.</description></item>
+        /// <item><description>asc: ascending order.</description></item>
         /// </list>
-        /// <para>This parameter applies only when you query historical prices for Lingjun instance types.</para>
+        /// <para>This parameter takes effect only when you query the historical prices of Lingjun instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page. Default value: <em><b>1</b></em>. This parameter applies only when you query historical prices for Lingjun instance types.</para>
+        /// <para>The page number. Default value: <em><b>1</b></em>. This parameter takes effect only when you query the historical prices of Lingjun instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>. This parameter applies only when you query historical prices for Lingjun instance types.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>. This parameter takes effect only when you query the historical prices of Lingjun instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,11 +55,11 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by. Default value: GmtCreatedTime. Valid values:</para>
+        /// <para>The field used for sorting. Default value: GmtCreatedTime. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>GmtCreatedTime</description></item>
         /// </list>
-        /// <para>This parameter applies only when you query historical prices for Lingjun instance types.</para>
+        /// <para>This parameter takes effect only when you query the historical prices of Lingjun instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreatedTime</para>
@@ -71,12 +69,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The retention period for the spot instance, in hours. Note that only ECS instance types support this parameter. Default value: 0. Valid values:</para>
+        /// <para>The protection period of the spot instance. Unit: hours. Note that only ECS instance types support Settings for the protection period of spot instances. Default value: 0. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: Alibaba Cloud guarantees that the instance runs for at least one hour after creation. After one hour, the system compares your bid price with the current market price and checks resource inventory to decide whether to retain or revoke the instance.</para>
-        /// </description></item>
-        /// <item><description><para>0: Alibaba Cloud does not guarantee one-hour runtime. The system compares your bid price with the current market price and checks resource inventory to decide whether to retain or revoke the instance.</para>
-        /// </description></item>
+        /// <item><description>1: After the spot instance is created, Alibaba Cloud ensures that the instance runs for 1 hour without automatic release. After 1 hour, the system automatically compares the bid price with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</description></item>
+        /// <item><description>0: After the spot instance is created, Alibaba Cloud does not guarantee that the instance runs for 1 hour. The system automatically compares the bid price with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +83,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying historical spot instance prices. This time must be no more than seven days before the end time. Specify the time in ISO 8601 format using UTC+0, as yyyy-MM-ddTHH:mm:ssZ. Default value: empty. An empty value means three days before the end time.</para>
+        /// <para>The start time for querying the historical prices of spot instances. The maximum value cannot exceed 7 days before the specified end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Default value: null, which indicates 3 days before the end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-26T09:36:46Z</para>

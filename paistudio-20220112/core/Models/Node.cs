@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Node : TeaModel {
         /// <summary>
-        /// <para>The accelerator type of the resource node specifications (CPU/GPU).</para>
+        /// <para>The accelerator type of the node specifications (CPU/GPU).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPU</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AcceleratorType { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores that can be allocated to users.</para>
+        /// <para>The number of allocatable CPU cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AllocatableCPU { get; set; }
 
         /// <summary>
-        /// <para>The memory size that can be allocated to users.</para>
+        /// <para>The allocatable memory size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AllocatableMemory { get; set; }
 
+        /// <summary>
+        /// <para>The number of workloads that use the ancestor quota.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("AncestorQuotaWorkloadNum")]
         [Validation(Required=false)]
         public long? AncestorQuotaWorkloadNum { get; set; }
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CPU { get; set; }
 
         /// <summary>
-        /// <para>The creator of the resource node.</para>
+        /// <para>The ID of the creator of the resource node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>281044699048527748</para>
@@ -80,14 +86,32 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CreatorId { get; set; }
 
+        /// <summary>
+        /// <para>The number of workloads that use the descendant quota.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("DescendantQuotaWorkloadNum")]
         [Validation(Required=false)]
         public long? DescendantQuotaWorkloadNum { get; set; }
 
+        /// <summary>
+        /// <para>The data cloud disk capacity.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("DiskCapacity")]
         [Validation(Required=false)]
         public long? DiskCapacity { get; set; }
 
+        /// <summary>
+        /// <para>The data cloud disk performance level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PL2</para>
+        /// </summary>
         [NameInMap("DiskPL")]
         [Validation(Required=false)]
         public string DiskPL { get; set; }
@@ -137,6 +161,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>The creation time of the resource node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>
         [NameInMap("GmtCreatedTime")]
         [Validation(Required=false)]
@@ -173,7 +200,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string HyperZone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the resource node is bound to a quota.</para>
+        /// <para>Indicates whether a quota is bound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -183,7 +210,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? IsBound { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of CPU cores.</para>
+        /// <para>The limit on the number of CPU cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -193,7 +220,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LimitCPU { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of GPUs.</para>
+        /// <para>The limit on the number of GPU cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -203,7 +230,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LimitGPU { get; set; }
 
         /// <summary>
-        /// <para>The maximum memory size.</para>
+        /// <para>The limit on the memory size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -273,7 +300,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeStatus { get; set; }
 
         /// <summary>
-        /// <para>The node specifications type of the resource node.</para>
+        /// <para>The type of node specifications of the resource node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c8i.xlarge</para>
@@ -333,7 +360,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestCPU { get; set; }
 
         /// <summary>
-        /// <para>The number of requested GPUs.</para>
+        /// <para>The number of requested GPU cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -372,6 +399,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
 
+        /// <summary>
+        /// <para>The number of workloads that use this quota.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("SelfQuotaWorkloadNum")]
         [Validation(Required=false)]
         public long? SelfQuotaWorkloadNum { get; set; }
@@ -394,7 +427,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SystemReservedCPU { get; set; }
 
         /// <summary>
-        /// <para>The system-reserved memory size.</para>
+        /// <para>The size of the system reserved memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupMachineGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of up to 20 tags.</para>
+        /// <para>The list of tags to add. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateTrainingJobRequest : TeaModel {
         /// <summary>
-        /// <para>The algorithm name.</para>
+        /// <para>The name of the algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ev_classification</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmName { get; set; }
 
         /// <summary>
-        /// <para>The algorithm provider.</para>
+        /// <para>The provider of the algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pai</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public AlgorithmSpec AlgorithmSpec { get; set; }
 
         /// <summary>
-        /// <para>The algorithm version.</para>
+        /// <para>The version of the algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1.0.0</para>
@@ -46,12 +46,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AlgorithmVersion { get; set; }
 
+        /// <summary>
+        /// <para>The specified node configuration.</para>
+        /// </summary>
         [NameInMap("AssignNodeSpec")]
         [Validation(Required=false)]
         public AssignNodeSpec AssignNodeSpec { get; set; }
 
         /// <summary>
-        /// <para>The code directory for the training job.</para>
+        /// <para>The code configuration for the training job.</para>
         /// </summary>
         [NameInMap("CodeDir")]
         [Validation(Required=false)]
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string EcsSpec { get; set; }
 
             /// <summary>
-            /// <para>The number of instances used from the resource quota.</para>
+            /// <para>The number of instances used in the resource quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public long? InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The instance specification for the resource quota.</para>
+            /// <para>The instance configuration for the resource quota.</para>
             /// </summary>
             [NameInMap("InstanceSpec")]
             [Validation(Required=false)]
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
                 public string GPU { get; set; }
 
                 /// <summary>
-                /// <para>The GPU type for the instance.</para>
+                /// <para>The GPU type of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>V100</para>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
                 public string GPUType { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of the instance. Unit: GiB.</para>
+                /// <para>The memory size of the instance, in GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
                 public string Memory { get; set; }
 
                 /// <summary>
-                /// <para>The shared memory size of the instance. Unit: GB.</para>
+                /// <para>The shared memory size of the instance, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             }
 
             /// <summary>
-            /// <para>The resource quota ID.</para>
+            /// <para>The ID of the resource quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quotam670lixikcs</para>
@@ -171,7 +174,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public CreateTrainingJobRequestComputeResourceSpotSpec SpotSpec { get; set; }
             public class CreateTrainingJobRequestComputeResourceSpotSpec : TeaModel {
                 /// <summary>
-                /// <para>The maximum hourly price discount for the instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</para>
+                /// <para>Sets the maximum hourly price discount for the instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9</para>
@@ -181,10 +184,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
                 public float? SpotDiscountLimit { get; set; }
 
                 /// <summary>
-                /// <para>The bidding strategy for the spot instance. Valid values:</para>
+                /// <para>The preemption policy for the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SpotWithPriceLimit: a spot instance with a maximum price limit.</description></item>
-                /// <item><description>SpotAsPriceGo: the system automatically bids at the current market price.</description></item>
+                /// <item><description>SpotWithPriceLimit: Sets a maximum price for the spot instance.</description></item>
+                /// <item><description>SpotAsPriceGo: The system automatically bids and follows the actual market price.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -208,6 +211,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         }
 
+        /// <summary>
+        /// <para>The credential configuration.</para>
+        /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
@@ -220,14 +226,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public Dictionary<string, string> Environments { get; set; }
 
         /// <summary>
-        /// <para>The experiment configuration associated with the training job.</para>
+        /// <para>The associated experiment configuration for the training job.</para>
         /// </summary>
         [NameInMap("ExperimentConfig")]
         [Validation(Required=false)]
         public CreateTrainingJobRequestExperimentConfig ExperimentConfig { get; set; }
         public class CreateTrainingJobRequestExperimentConfig : TeaModel {
             /// <summary>
-            /// <para>The experiment ID associated with the training job.</para>
+            /// <para>The ID of the experiment associated with the training job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exp-ds9aefia90v</para>
@@ -246,7 +252,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<CreateTrainingJobRequestHyperParameters> HyperParameters { get; set; }
         public class CreateTrainingJobRequestHyperParameters : TeaModel {
             /// <summary>
-            /// <para>The parameter name.</para>
+            /// <para>The name of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>learning_rate</para>
@@ -256,7 +262,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter value.</para>
+            /// <para>The value of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0001</para>
@@ -268,14 +274,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>The training input data configuration.</para>
+        /// <para>The input data configuration for training.</para>
         /// </summary>
         [NameInMap("InputChannels")]
         [Validation(Required=false)]
         public List<CreateTrainingJobRequestInputChannels> InputChannels { get; set; }
         public class CreateTrainingJobRequestInputChannels : TeaModel {
             /// <summary>
-            /// <para>The dataset ID.</para>
+            /// <para>The ID of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-475megosidivjfgfq6</para>
@@ -285,7 +291,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string DatasetId { get; set; }
 
             /// <summary>
-            /// <para>The input data URI.</para>
+            /// <para>The URI of the input data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/modelscope/models/qwen2-0.5b/main/</para>
@@ -295,7 +301,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string InputUri { get; set; }
 
             /// <summary>
-            /// <para>The input data name.</para>
+            /// <para>The name of the input data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model</para>
@@ -305,7 +311,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The input data parameter settings.</para>
+            /// <para>The parameter settings for the input data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;appendable&quot;: true}</para>
@@ -314,10 +320,22 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string Options { get; set; }
 
+            /// <summary>
+            /// <para>The ARN of the RAM role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</para>
+            /// </summary>
             [NameInMap("RoleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
+            /// <summary>
+            /// <para>The name of the data version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
             [NameInMap("VersionName")]
             [Validation(Required=false)]
             public string VersionName { get; set; }
@@ -325,7 +343,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>The training job labels.</para>
+        /// <para>The labels of the training job.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -354,14 +372,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>The training output data configuration.</para>
+        /// <para>The output data configuration for training.</para>
         /// </summary>
         [NameInMap("OutputChannels")]
         [Validation(Required=false)]
         public List<CreateTrainingJobRequestOutputChannels> OutputChannels { get; set; }
         public class CreateTrainingJobRequestOutputChannels : TeaModel {
             /// <summary>
-            /// <para>The dataset ID.</para>
+            /// <para>The ID of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-475megosidivjfgfq6</para>
@@ -371,7 +389,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string DatasetId { get; set; }
 
             /// <summary>
-            /// <para>The output data name.</para>
+            /// <para>The name of the output data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model</para>
@@ -381,7 +399,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The output data URI.</para>
+            /// <para>The output data configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/modelscope/models/qwen2-0.5b/main/</para>
@@ -390,10 +408,22 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string OutputUri { get; set; }
 
+            /// <summary>
+            /// <para>The ARN of the RAM role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</para>
+            /// </summary>
             [NameInMap("RoleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
+            /// <summary>
+            /// <para>The name of the data version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
             [NameInMap("VersionName")]
             [Validation(Required=false)]
             public string VersionName { get; set; }
@@ -418,7 +448,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<string> PythonRequirements { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. Format: acs:ram::$accountID:role/$roleName.</para>
+        /// <para>The ARN of the specified role. Format: acs:ram::$accountID:role/$roleName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</para>
@@ -428,14 +458,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The training job scheduling configuration.</para>
+        /// <para>The scheduling configuration for the training job.</para>
         /// </summary>
         [NameInMap("Scheduler")]
         [Validation(Required=false)]
         public CreateTrainingJobRequestScheduler Scheduler { get; set; }
         public class CreateTrainingJobRequestScheduler : TeaModel {
             /// <summary>
-            /// <para>The maximum training runtime in minutes. A value of 0 indicates no limit on the maximum runtime.</para>
+            /// <para>The maximum training duration, in minutes. A value of 0 indicates that the maximum duration is not limited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -445,7 +475,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public long? MaxRunningTimeInMinutes { get; set; }
 
             /// <summary>
-            /// <para>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</para>
+            /// <para>The maximum training duration, in seconds. A value of 0 indicates that the maximum duration is not limited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -492,7 +522,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public CreateTrainingJobRequestUserVpc UserVpc { get; set; }
         public class CreateTrainingJobRequestUserVpc : TeaModel {
             /// <summary>
-            /// <para>The default route interface. eth0 indicates that the default route uses the PAI VPC. eth1 indicates that the default route uses the user VPC. Default value: eth0.</para>
+            /// <para>The default route interface. A value of eth0 indicates that the default route uses the PAI VPC. A value of eth1 indicates that the default route uses the user VPC. Default value: eth0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eth0</para>
@@ -509,7 +539,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public List<string> ExtendedCIDRs { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The ID of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-qdfasd13sdasf</para>
@@ -519,7 +549,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vs-icrc813vdsfol</para>
@@ -529,7 +559,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string SwitchId { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-dxiflssjx978sl</para>
@@ -541,7 +571,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

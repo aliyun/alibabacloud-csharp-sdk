@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListResourceGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The provider of the compute resources.</para>
+        /// <para>The compute resource type of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ecs</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ComputingResourceProvider { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the resource group contains resources.</para>
+        /// </summary>
         [NameInMap("HasResource")]
         [Validation(Required=false)]
         public bool? HasResource { get; set; }
@@ -36,10 +39,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>desc</c>: descending.</para>
-        /// </description></item>
-        /// <item><description><para><c>asc</c>: ascending.</para>
-        /// </description></item>
+        /// <item><description>desc: descending order.</description></item>
+        /// <item><description>asc: ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +61,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -69,17 +70,21 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The list of resource group IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg123,rg456</para>
+        /// </summary>
         [NameInMap("ResourceGroupIDs")]
         [Validation(Required=false)]
         public string ResourceGroupIDs { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The list of resource types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ECS</c>: ECS.</para>
-        /// </description></item>
-        /// <item><description><para><c>Lingjun</c>: Lingjun intelligent computing resources.</para>
-        /// </description></item>
+        /// <item><description>ECS: general compute resources.</description></item>
+        /// <item><description>Lingjun: Lingjun AI compute resources.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +105,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? ShowAll { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by. Valid values include: <c>DisplayName</c>, <c>GmtCreated</c>, <c>GmtModified</c>, <c>RegionID</c>, <c>Duration</c>, <c>PricingCycle</c>, and <c>PayType</c>.</para>
+        /// <para>The name of the field used for sorting. Valid values: DisplayName, GmtCreated, GmtModified, RegionID, Duration, PricingCycle, and PayType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DisplayName</para>
@@ -120,7 +125,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The version to filter by.</para>
+        /// <para>The version to search for.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>

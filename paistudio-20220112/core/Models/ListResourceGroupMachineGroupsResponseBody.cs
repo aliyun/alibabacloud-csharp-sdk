@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListResourceGroupMachineGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of machine groups.</para>
+        /// <para>The list of machine groups.</para>
         /// </summary>
         [NameInMap("MachineGroups")]
         [Validation(Required=false)]

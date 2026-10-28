@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListAlgorithmVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of algorithm version details.</para>
+        /// <para>The list of algorithm version details.</para>
         /// </summary>
         [NameInMap("AlgorithmVersions")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string AlgorithmVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the algorithm was created.</para>
+            /// <para>The time when the algorithm was created, in ISO 8601 format, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-19T02:00:26Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the algorithm was last updated.</para>
+            /// <para>The time when the algorithm was last updated, in ISO 8601 format, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-22T02:00:59Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The tenant ID that owns the algorithm.</para>
+            /// <para>The ID of the tenant to which the algorithm belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The user ID that owns the algorithm.</para>
+            /// <para>The ID of the user to which the algorithm belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789</para>

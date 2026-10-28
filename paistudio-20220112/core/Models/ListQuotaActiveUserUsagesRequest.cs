@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order.</description></item>
-        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description>desc: Descending order.</description></item>
+        /// <item><description>asc: Ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>999</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? SelfOnly { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the returned results. Valid values:</para>
+        /// <para>The name of the field by which to sort the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>QuotaId</description></item>
         /// <item><description>SubmittedCPU</description></item>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The user ID for which to query resource usage.</para>
+        /// <para>The ID of the user whose resource usage you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200xxxxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The username for which to query resource usage.</para>
+        /// <para>The username of the user whose resource usage you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -93,6 +93,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Username { get; set; }
 
+        /// <summary>
+        /// <para>The number of workloads.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("WorkloadCount")]
         [Validation(Required=false)]
         public int? WorkloadCount { get; set; }

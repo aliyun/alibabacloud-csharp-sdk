@@ -11,20 +11,26 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
     public class SpotStockItem : TeaModel {
         /// <summary>
         /// <para>The instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ml.gp7vf.16.40xlarge</para>
         /// </summary>
         [NameInMap("instanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Internal information about the stock of the spot instance type.</para>
+        /// <para>The inventory details.</para>
         /// </summary>
         [NameInMap("internalInfo")]
         [Validation(Required=false)]
         public List<SpotStockInternalInfo> InternalInfo { get; set; }
 
         /// <summary>
-        /// <para>The stock status of the instance type. Valid values are <c>Available</c> and <c>SoldOut</c>.</para>
+        /// <para>The inventory status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>High</para>
         /// </summary>
         [NameInMap("stockStatus")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ResizeDiskParameters : TeaModel {
         /// <summary>
-        /// <para>The target disk capacity after the change.</para>
+        /// <para>The target disk capacity.</para>
         /// </summary>
         [NameInMap("NewDiskSize")]
         [Validation(Required=false)]

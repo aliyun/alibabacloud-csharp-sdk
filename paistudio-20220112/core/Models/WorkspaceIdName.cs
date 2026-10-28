@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace to which the task belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>myshellprod</para>
         /// </summary>
         [NameInMap("WorkspaceName")]
         [Validation(Required=false)]

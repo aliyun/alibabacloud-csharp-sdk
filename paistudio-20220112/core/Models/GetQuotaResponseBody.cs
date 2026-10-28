@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AllocateStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the quota creator.</para>
+        /// <para>The ID of the user who created the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1884692****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPUType { get; set; }
 
         /// <summary>
-        /// <para>The time when the quota was created.</para>
+        /// <para>The time when the quota was created, in ISO 8601 format and UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the quota was last modified.</para>
+        /// <para>The time when the quota was last modified, in ISO 8601 format and UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The ID of the latest quota operation.</para>
+        /// <para>The ID of the latest operation on the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation****</para>
@@ -121,14 +121,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QueueStrategy { get; set; }
 
         /// <summary>
-        /// <para>The cluster specifications and status composed of resources in the quota.</para>
+        /// <para>The specifications and status of the cluster composed of resources in the quota.</para>
         /// </summary>
         [NameInMap("QuotaCluster")]
         [Validation(Required=false)]
         public QuotaCluster QuotaCluster { get; set; }
 
         /// <summary>
-        /// <para>The quota configuration:</para>
+        /// <para>The configuration of the quota:</para>
         /// <list type="bullet">
         /// <item><description><para>VPC information</para>
         /// </description></item>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public QuotaDetails QuotaDetails { get; set; }
 
         /// <summary>
-        /// <para>The resource quota ID.</para>
+        /// <para>The ID of the resource quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotajradxh4****</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ReasonCode { get; set; }
 
         /// <summary>
-        /// <para>The error reason.</para>
+        /// <para>The cause of the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>“”</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group information associated with the resource quota.</para>
+        /// <para>The resource group information corresponding to the resource quota.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
@@ -227,14 +227,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of sub-quotas under the quota.</para>
+        /// <para>The list of sub-quotas of the quota.</para>
         /// </summary>
         [NameInMap("SubQuotas")]
         [Validation(Required=false)]
         public List<QuotaIdName> SubQuotas { get; set; }
 
         /// <summary>
-        /// <para>The version information. Takes effect when the resource type is ECS.</para>
+        /// <para>The version information. This parameter takes effect when the resource type is ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>

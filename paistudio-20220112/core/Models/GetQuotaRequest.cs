@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the node metadata bound to the quota.</para>
+        /// <para>Specifies whether to return the metadata of nodes bound to the quota.</para>
         /// </summary>
         [NameInMap("WithNodeMeta")]
         [Validation(Required=false)]

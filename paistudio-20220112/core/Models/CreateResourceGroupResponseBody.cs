@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>ResourceGroup ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>rgf0zhfqn1d4ity2</para>

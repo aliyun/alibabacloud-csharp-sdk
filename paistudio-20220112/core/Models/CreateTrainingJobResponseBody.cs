@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateTrainingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7C42CC7-2E85-508A-84F4-923B605FD10F</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The training job ID.</para>
+        /// <para>The ID of the training job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>traineyfz0m2hsfv</para>

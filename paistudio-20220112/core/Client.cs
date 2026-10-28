@@ -804,7 +804,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the CreateResourceGroup operation to create a resource group.</para>
+        /// <para>Creates a ResourceGroup using CreateResourceGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -874,7 +874,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the CreateResourceGroup operation to create a resource group.</para>
+        /// <para>Creates a ResourceGroup using CreateResourceGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -944,7 +944,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the CreateResourceGroup operation to create a resource group.</para>
+        /// <para>Creates a ResourceGroup using CreateResourceGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -963,7 +963,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the CreateResourceGroup operation to create a resource group.</para>
+        /// <para>Creates a ResourceGroup using CreateResourceGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1826,7 +1826,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a machine group.</para>
+        /// <para>Deletes a machine group from a resource group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1868,7 +1868,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a machine group.</para>
+        /// <para>Deletes a machine group from a resource group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1910,7 +1910,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a machine group.</para>
+        /// <para>Deletes a machine group from a resource group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1931,7 +1931,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a machine group.</para>
+        /// <para>Deletes a machine group from a resource group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2180,7 +2180,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves algorithm details.</para>
+        /// <para>Retrieves the details of an algorithm.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2216,7 +2216,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves algorithm details.</para>
+        /// <para>Retrieves the details of an algorithm.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2252,7 +2252,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves algorithm details.</para>
+        /// <para>Retrieves the details of an algorithm.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2267,7 +2267,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves algorithm details.</para>
+        /// <para>Retrieves the details of an algorithm.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2282,7 +2282,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details about an algorithm version.</para>
+        /// <para>Retrieves the details of an algorithm version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2318,7 +2318,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details about an algorithm version.</para>
+        /// <para>Retrieves the details of an algorithm version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2354,7 +2354,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details about an algorithm version.</para>
+        /// <para>Retrieves the details of an algorithm version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2369,7 +2369,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details about an algorithm version.</para>
+        /// <para>Retrieves the details of an algorithm version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2388,7 +2388,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2430,7 +2430,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2472,7 +2472,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2493,7 +2493,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2514,7 +2514,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metric information for resource group nodes.</para>
+        /// <para>Retrieves the metrics of nodes in a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2582,7 +2582,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metric information for resource group nodes.</para>
+        /// <para>Retrieves the metrics of nodes in a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2650,7 +2650,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metric information for resource group nodes.</para>
+        /// <para>Retrieves the metrics of nodes in a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2675,7 +2675,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metric information for resource group nodes.</para>
+        /// <para>Retrieves the metrics of nodes in a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2696,7 +2696,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a resource quota to help you understand the current resource usage and facilitate resource management and planning.</para>
+        /// <para>Retrieves the details of a resource quota to understand current resource usage and facilitate resource management and planning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2746,7 +2746,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a resource quota to help you understand the current resource usage and facilitate resource management and planning.</para>
+        /// <para>Retrieves the details of a resource quota to understand current resource usage and facilitate resource management and planning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2796,7 +2796,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a resource quota to help you understand the current resource usage and facilitate resource management and planning.</para>
+        /// <para>Retrieves the details of a resource quota to understand current resource usage and facilitate resource management and planning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2815,7 +2815,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a resource quota to help you understand the current resource usage and facilitate resource management and planning.</para>
+        /// <para>Retrieves the details of a resource quota to understand current resource usage and facilitate resource management and planning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2834,7 +2834,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>GetResourceGroup</c> retrieves details for a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2890,7 +2890,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>GetResourceGroup</c> retrieves details for a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2946,7 +2946,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>GetResourceGroup</c> retrieves details for a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2965,7 +2965,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>GetResourceGroup</c> retrieves details for a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2984,7 +2984,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call GetResourceGroupMachineGroup to retrieve the details of a machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3036,7 +3036,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call GetResourceGroupMachineGroup to retrieve the details of a machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3088,7 +3088,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call GetResourceGroupMachineGroup to retrieve the details of a machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,7 +3107,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call GetResourceGroupMachineGroup to retrieve the details of a machine group.</para>
+        /// <para>Retrieves the details of a machine group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3596,7 +3596,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a share token for a training task.</para>
+        /// <para>Retrieves the sharing token for a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3646,7 +3646,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a share token for a training task.</para>
+        /// <para>Retrieves the sharing token for a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3696,7 +3696,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a share token for a training task.</para>
+        /// <para>Retrieves the sharing token for a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3715,7 +3715,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a share token for a training task.</para>
+        /// <para>Retrieves the sharing token for a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4270,7 +4270,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of algorithm version details.</para>
+        /// <para>Retrieves a list of algorithm version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4320,7 +4320,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of algorithm version details.</para>
+        /// <para>Retrieves a list of algorithm version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4370,7 +4370,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of algorithm version details.</para>
+        /// <para>Retrieves a list of algorithm version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4389,7 +4389,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of algorithm version details.</para>
+        /// <para>Retrieves a list of algorithm version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4408,7 +4408,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists algorithm details.</para>
+        /// <para>Retrieves a list of algorithm details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4474,7 +4474,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists algorithm details.</para>
+        /// <para>Retrieves a list of algorithm details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4540,7 +4540,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists algorithm details.</para>
+        /// <para>Retrieves a list of algorithm details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4559,7 +4559,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists algorithm details.</para>
+        /// <para>Retrieves a list of algorithm details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4970,12 +4970,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of resource nodes.</para>
+        /// <para>Queries a list of resource nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</para>
+        /// <para>You can call ListNodes to retrieve resource nodes that meet specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5151,12 +5151,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of resource nodes.</para>
+        /// <para>Queries a list of resource nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</para>
+        /// <para>You can call ListNodes to retrieve resource nodes that meet specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5332,12 +5332,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of resource nodes.</para>
+        /// <para>Queries a list of resource nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</para>
+        /// <para>You can call ListNodes to retrieve resource nodes that meet specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5356,12 +5356,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of resource nodes.</para>
+        /// <para>Queries a list of resource nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call ListNodes to retrieve resource nodes that match specified filter conditions.</para>
+        /// <para>You can call ListNodes to retrieve resource nodes that meet specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5380,12 +5380,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users under the current resource quota and their resource usage.</para>
+        /// <para>Retrieves the list of users in the current resource quota and the resources that they use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the resource usage of users for a specified QuotaId.</para>
+        /// <para>Retrieves the resource usage of users for the specified QuotaId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5463,12 +5463,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users under the current resource quota and their resource usage.</para>
+        /// <para>Retrieves the list of users in the current resource quota and the resources that they use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the resource usage of users for a specified QuotaId.</para>
+        /// <para>Retrieves the resource usage of users for the specified QuotaId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5546,12 +5546,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users under the current resource quota and their resource usage.</para>
+        /// <para>Retrieves the list of users in the current resource quota and the resources that they use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the resource usage of users for a specified QuotaId.</para>
+        /// <para>Retrieves the resource usage of users for the specified QuotaId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5570,12 +5570,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users under the current resource quota and their resource usage.</para>
+        /// <para>Retrieves the list of users in the current resource quota and the resources that they use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the resource usage of users for a specified QuotaId.</para>
+        /// <para>Retrieves the resource usage of users for the specified QuotaId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5594,7 +5594,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of node information on a resource quota.</para>
+        /// <para>Retrieves a list of workloads for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5732,7 +5732,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of node information on a resource quota.</para>
+        /// <para>Retrieves a list of workloads for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5870,7 +5870,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of node information on a resource quota.</para>
+        /// <para>Retrieves a list of workloads for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5889,7 +5889,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of node information on a resource quota.</para>
+        /// <para>Retrieves a list of workloads for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6174,7 +6174,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of machine groups in a specified resource group.</para>
+        /// <para>Queries the machine groups in a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6272,7 +6272,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of machine groups in a specified resource group.</para>
+        /// <para>Queries the machine groups in a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6370,7 +6370,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of machine groups in a specified resource group.</para>
+        /// <para>Queries the machine groups in a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6389,7 +6389,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of machine groups in a specified resource group.</para>
+        /// <para>Queries the machine groups in a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6408,12 +6408,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to list resource groups for ECS or Lingjun intelligent computing resources.</para>
+        /// <para>Retrieves a list of resource groups for general compute resources or Lingjun AI compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</para>
+        /// <para>Currently, AI compute resource groups, including general compute resources and Lingjun AI compute resources, are available only in specific regions. For the list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI compute resource management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6503,12 +6503,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to list resource groups for ECS or Lingjun intelligent computing resources.</para>
+        /// <para>Retrieves a list of resource groups for general compute resources or Lingjun AI compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</para>
+        /// <para>Currently, AI compute resource groups, including general compute resources and Lingjun AI compute resources, are available only in specific regions. For the list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI compute resource management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6598,12 +6598,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to list resource groups for ECS or Lingjun intelligent computing resources.</para>
+        /// <para>Retrieves a list of resource groups for general compute resources or Lingjun AI compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</para>
+        /// <para>Currently, AI compute resource groups, including general compute resources and Lingjun AI compute resources, are available only in specific regions. For the list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI compute resource management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6622,12 +6622,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to list resource groups for ECS or Lingjun intelligent computing resources.</para>
+        /// <para>Retrieves a list of resource groups for general compute resources or Lingjun AI compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</para>
+        /// <para>Currently, AI compute resource groups, including general compute resources and Lingjun AI compute resources, are available only in specific regions. For the list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI compute resource management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7180,7 +7180,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring metrics for training job instances.</para>
+        /// <para>Retrieves the monitoring metrics of a training job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7242,7 +7242,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring metrics for training job instances.</para>
+        /// <para>Retrieves the monitoring metrics of a training job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7304,7 +7304,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring metrics for training job instances.</para>
+        /// <para>Retrieves the monitoring metrics of a training job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7323,7 +7323,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring metrics for training job instances.</para>
+        /// <para>Retrieves the monitoring metrics of a training job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7512,7 +7512,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring data for a training task.</para>
+        /// <para>Retrieves the monitoring data of a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7578,7 +7578,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring data for a training task.</para>
+        /// <para>Retrieves the monitoring data of a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7644,7 +7644,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring data for a training task.</para>
+        /// <para>Retrieves the monitoring data of a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7663,7 +7663,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve monitoring data for a training task.</para>
+        /// <para>Retrieves the monitoring data of a training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8030,12 +8030,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on a specified node.</para>
+        /// <para>Performs operations on a node using OperateNode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</para>
+        /// <para>Uses OperateNode to perform operations on a specified resource node, including disabling scheduling, enabling scheduling, and other operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8089,12 +8089,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on a specified node.</para>
+        /// <para>Performs operations on a node using OperateNode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</para>
+        /// <para>Uses OperateNode to perform operations on a specified resource node, including disabling scheduling, enabling scheduling, and other operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8148,12 +8148,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on a specified node.</para>
+        /// <para>Performs operations on a node using OperateNode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</para>
+        /// <para>Uses OperateNode to perform operations on a specified resource node, including disabling scheduling, enabling scheduling, and other operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8172,12 +8172,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates on a specified node.</para>
+        /// <para>Performs operations on a node using OperateNode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call OperateNode to operate on a specified resource node, including operations such as disabling scheduling and enabling scheduling.</para>
+        /// <para>Uses OperateNode to perform operations on a specified resource node, including disabling scheduling, enabling scheduling, and other operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9092,9 +9092,21 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                body["ClusterSpec"] = request.ClusterSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGracefulUpgrade))
+            {
+                body["EnableGracefulUpgrade"] = request.EnableGracefulUpgrade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulUpgradeConfig))
+            {
+                body["GracefulUpgradeConfig"] = request.GracefulUpgradeConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
@@ -9158,9 +9170,21 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                body["ClusterSpec"] = request.ClusterSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGracefulUpgrade))
+            {
+                body["EnableGracefulUpgrade"] = request.EnableGracefulUpgrade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulUpgradeConfig))
+            {
+                body["GracefulUpgradeConfig"] = request.GracefulUpgradeConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {

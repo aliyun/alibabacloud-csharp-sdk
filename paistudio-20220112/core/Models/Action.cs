@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Action : TeaModel {
+        /// <summary>
+        /// <para>The operation type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Defrag</para>
+        /// </summary>
         [NameInMap("ActionType")]
         [Validation(Required=false)]
         public string ActionType { get; set; }

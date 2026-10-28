@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ResourceGroupMetric : TeaModel {
+        /// <summary>
+        /// <para>The GPU type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A100</para>
+        /// </summary>
         [NameInMap("GpuType")]
         [Validation(Required=false)]
         public string GpuType { get; set; }
 
         /// <summary>
+        /// <para>The performance metrics.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23000</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<Metric> Metrics { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg17tmvwiokhzaxg</para>
         /// </summary>

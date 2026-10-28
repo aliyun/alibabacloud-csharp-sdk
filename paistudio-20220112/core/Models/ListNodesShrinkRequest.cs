@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <item><description>CPU</description></item>
         /// <item><description>GPU</description></item>
         /// </list>
-        /// <para>Default value: empty, which indicates all types.</para>
+        /// <para>If this parameter is left empty, all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPU</para>
@@ -24,20 +24,35 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        /// <summary>
+        /// <para>The zone where the nodes reside.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C0</para>
+        /// </summary>
         [NameInMap("AvailabilityZone")]
         [Validation(Required=false)]
         public string AvailabilityZone { get; set; }
 
+        /// <summary>
+        /// <para>The clique ID.</para>
+        /// </summary>
         [NameInMap("CliqueID")]
         [Validation(Required=false)]
         public string CliqueID { get; set; }
 
+        /// <summary>
+        /// <para>The performance level (PL) of the cloud disk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PL2</para>
+        /// </summary>
         [NameInMap("DiskPL")]
         [Validation(Required=false)]
         public string DiskPL { get; set; }
 
         /// <summary>
-        /// <para>Used together with ResourceGroupIds to display nodes in the resource groups that are bound to the specified quotas.</para>
+        /// <para>Used together with ResourceGroupIds to display nodes in the resource group that are bound to specific quotas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
@@ -47,7 +62,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string FilterByQuotaId { get; set; }
 
         /// <summary>
-        /// <para>Used together with QuotaId to display nodes in the quota that belong to the specified resource groups.</para>
+        /// <para>Used together with QuotaId to display nodes in the quota that belong to specific resource groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg69rj0leslwdnbe</para>
@@ -57,7 +72,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string FilterByResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The GPU type. Fuzzy match is supported.</para>
+        /// <para>The GPU card type. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T4</para>
@@ -74,33 +89,51 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string HealthCountShrink { get; set; }
 
         /// <summary>
-        /// <para>The health rate of nodes (the proportion of healthy nodes).</para>
+        /// <para>The health rate of the nodes, which is the proportion of healthy nodes.</para>
         /// </summary>
         [NameInMap("HealthRate")]
         [Validation(Required=false)]
         public string HealthRateShrink { get; set; }
 
+        /// <summary>
+        /// <para>The name of the hypernode.</para>
+        /// </summary>
         [NameInMap("HyperNode")]
         [Validation(Required=false)]
         public string HyperNode { get; set; }
 
+        /// <summary>
+        /// <para>The hyperzone where the nodes reside.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A0</para>
+        /// </summary>
         [NameInMap("HyperZone")]
         [Validation(Required=false)]
         public string HyperZone { get; set; }
 
         /// <summary>
         /// <para>The layout mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Tree</para>
         /// </summary>
         [NameInMap("LayoutMode")]
         [Validation(Required=false)]
         public string LayoutMode { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the machine groups to which the nodes belong.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mg124</para>
+        /// </summary>
         [NameInMap("MachineGroupIds")]
         [Validation(Required=false)]
         public string MachineGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The node names to display, separated by commas.</para>
+        /// <para>The names of the nodes to display. Separate multiple names with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lingjxxxx</para>
@@ -110,7 +143,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The node statuses, separated by commas. If this parameter is not specified, nodes in all statuses are returned.</para>
+        /// <para>The status of the node. Separate multiple statuses with commas. If you do not specify this parameter, the system returns a list of nodes in all statuses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
@@ -120,7 +153,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeStatuses { get; set; }
 
         /// <summary>
-        /// <para>The resource node specifications, separated by commas. If this parameter is not configured, nodes of all node specifications are returned.</para>
+        /// <para>The list of resource node specifications. Separate multiple specifications with commas. If you do not specify this parameter, the system returns a list of machines of all resource node specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.xlarge</para>
@@ -132,8 +165,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: Descending order.</description></item>
-        /// <item><description>asc: Ascending order.</description></item>
+        /// <item><description>desc: descending order.</description></item>
+        /// <item><description>asc: ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,7 +187,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string OrderInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The order statuses of the nodes.</para>
+        /// <para>The order status of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
@@ -164,7 +197,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string OrderStatuses { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -174,7 +207,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paged query. This parameter is used for paging.</para>
+        /// <para>The number of entries to return on each page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -183,16 +216,28 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The billing method of the node order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PREPAY</para>
+        /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        /// <summary>
+        /// <para>The number of pods on the node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PodNum")]
         [Validation(Required=false)]
         public int? PodNum { get; set; }
 
         /// <summary>
-        /// <para>The resource quota ID to which the node belongs.</para>
+        /// <para>The ID of the resource quota to which the node belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
@@ -201,17 +246,23 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
+        /// <summary>
+        /// <para>The reason codes for the current status of the nodes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CordonByUser</para>
+        /// </summary>
         [NameInMap("ReasonCodes")]
         [Validation(Required=false)]
         public string ReasonCodes { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resource groups, separated by commas. Either this parameter or QuotaId is required.</para>
-        /// <para>Constraints:</para>
+        /// <para>The list of resource group IDs. Separate multiple IDs with commas. You must specify either this parameter or QuotaId.
+        /// Constraints:</para>
         /// <ol>
-        /// <item><description>The UserId of the specified ResourceGroupId must match the UserId of the request.</description></item>
-        /// <item><description>The specified resource groups must be of the same type.</description></item>
-        /// <item><description>The specified resource groups must be associated with the same VPC at this stage.</description></item>
+        /// <item><description>The user ID of the specified resource group must match the user ID of the request.</description></item>
+        /// <item><description>The resource groups in the list must be of the same type.</description></item>
+        /// <item><description>The VPCs associated with the resource groups in the list must be the same.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -223,13 +274,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>The name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-dlc</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting.</para>
+        /// <para>The field based on which the results are sorted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -248,10 +302,22 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? Verbose { get; set; }
 
+        /// <summary>
+        /// <para>The number of workloads on the node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("WorkloadNum")]
         [Validation(Required=false)]
         public int? WorkloadNum { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the workspace to which the nodes belong.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

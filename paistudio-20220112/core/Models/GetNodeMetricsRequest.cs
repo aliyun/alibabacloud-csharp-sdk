@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetNodeMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T10:17:06</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPUType { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time in ISO 8601 format. The time zone is UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-08T02:23:30.292Z</para>
@@ -49,11 +49,11 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <summary>
         /// <para>The time step. Default value: 5m. Valid values for the time unit:</para>
         /// <list type="bullet">
-        /// <item><description><para>h: hours.</para>
+        /// <item><description><para>h: Hours.</para>
         /// </description></item>
-        /// <item><description><para>m: minutes.</para>
+        /// <item><description><para>m: Minutes.</para>
         /// </description></item>
-        /// <item><description><para>s: seconds.</para>
+        /// <item><description><para>s: Seconds.</para>
         /// </description></item>
         /// </list>
         /// <para>If no unit is specified, the default unit is s (seconds).</para>
@@ -66,9 +66,11 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string TimeStep { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</para>
-        /// <para>false: does not display non-essential information (default).
-        /// true: displays non-essential information.</para>
+        /// <para>Specifies whether to display non-essential information. Non-essential information currently includes labels. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: Does not display non-essential information. This is the default value.</description></item>
+        /// <item><description>true: Displays non-essential information.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

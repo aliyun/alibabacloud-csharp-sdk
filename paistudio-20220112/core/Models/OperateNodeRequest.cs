@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class OperateNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The operation. Valid values:	</para>
+        /// <para>The operation to perform. Valid values:	</para>
         /// <list type="bullet">
         /// <item><description>Cordon: disables scheduling</description></item>
         /// <item><description>Uncordon: enables scheduling</description></item>

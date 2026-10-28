@@ -9,16 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupMachineGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The number of allocatable CPU cores on each machine in the machine group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("AllocatableCpu")]
         [Validation(Required=false)]
         public string AllocatableCpu { get; set; }
 
+        /// <summary>
+        /// <para>The allocatable memory size on each machine in the machine group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>55</para>
+        /// </summary>
         [NameInMap("AllocatableMemory")]
         [Validation(Required=false)]
         public string AllocatableMemory { get; set; }
 
         /// <summary>
-        /// <para>The total number of CPU cores per machine in the machine group.</para>
+        /// <para>The total number of CPU cores on each machine in the machine group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -28,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Cpu { get; set; }
 
         /// <summary>
-        /// <para>The default GPU driver version per machine in the machine group.</para>
+        /// <para>The default GPU driver version of each machine in the machine group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>535</para>
@@ -48,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? EcsCount { get; set; }
 
         /// <summary>
-        /// <para>The ECS spec.</para>
+        /// <para>The ECS instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -58,7 +70,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EcsSpec { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the machine group.</para>
+        /// <para>The time when the machine group was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -78,7 +90,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The last modification time of the machine group.</para>
+        /// <para>The time when the machine group was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -88,7 +100,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the machine group.</para>
+        /// <para>The time when the machine group was started.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -98,7 +110,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtStartedTime { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs per machine in the machine group.</para>
+        /// <para>The number of GPU cores on each machine in the machine group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -108,7 +120,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Gpu { get; set; }
 
         /// <summary>
-        /// <para>The GPU type per machine in the machine group.</para>
+        /// <para>The GPU type of each machine in the machine group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A100</para>
@@ -128,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string MachineGroupID { get; set; }
 
         /// <summary>
-        /// <para>The amount of memory per machine in the machine group.</para>
+        /// <para>The memory size of each machine in the machine group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -148,7 +160,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The payment duration. When PaymentDurationUnit is set to Month, valid values are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
+        /// <para>The billing duration. If PaymentDurationUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -158,7 +170,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentDuration { get; set; }
 
         /// <summary>
-        /// <para>The unit of the billing cycle for the machine group.</para>
+        /// <para>The billing duration unit of the machine group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -168,7 +180,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
-        /// <para>The payment type.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
@@ -178,7 +190,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</para>
@@ -188,7 +200,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. This ID is globally unique and can be used to retrieve information about the resource group.</para>
+        /// <para>The ID of the resource group. Each resource group has a globally unique ID. You can use the resource group ID to retrieve the information about the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rgf0zhfqn1d4ity2</para>
@@ -198,14 +210,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
-        /// <para>The status of the machine group.
-        /// Valid values:
-        /// Creating: The machine group is being created.
-        /// Ready: The machine group is running.
-        /// Expiring: The machine group is about to expire.
-        /// Expired: The machine group has expired.
-        /// Stopping: The machine group is being stopped.
-        /// Stopped: The machine group has been stopped.</para>
+        /// <para>The instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Creating: The instance is being created.</description></item>
+        /// <item><description>Ready: The instance is running.</description></item>
+        /// <item><description>Expiring: The instance is about to expire.</description></item>
+        /// <item><description>Expired: The instance has expired.</description></item>
+        /// <item><description>Stopping: The instance is being stopped.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
@@ -215,29 +228,41 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The GPU driver versions supported by the machines in the machine group.</para>
+        /// <para>The GPU driver versions supported by nodes in the machine group.</para>
         /// </summary>
         [NameInMap("SupportedDrivers")]
         [Validation(Required=false)]
         public List<string> SupportedDrivers { get; set; }
 
+        /// <summary>
+        /// <para>The number of system-reserved CPU cores on each machine in the machine group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("SystemReservedCpu")]
         [Validation(Required=false)]
         public string SystemReservedCpu { get; set; }
 
+        /// <summary>
+        /// <para>The size of system-reserved memory on each machine in the machine group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9</para>
+        /// </summary>
         [NameInMap("SystemReservedMemory")]
         [Validation(Required=false)]
         public string SystemReservedMemory { get; set; }
 
         /// <summary>
-        /// <para>The list of tags attached to the machine group.</para>
+        /// <para>The list of tags to query. The value is a JSON string that contains up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetResourceGroupMachineGroupResponseBodyTags> Tags { get; set; }
         public class GetResourceGroupMachineGroupResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -247,7 +272,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

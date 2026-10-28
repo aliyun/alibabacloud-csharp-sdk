@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The resource quota description.</para>
+        /// <para>The description of the resource quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test quota</para>
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>The GPU type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>L20</para>
         /// </summary>
         [NameInMap("GPUType")]
         [Validation(Required=false)]
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource quota was last modified.</para>
+        /// <para>The time when the resource quota was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -66,12 +69,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of high-performance network zones.</para>
+        /// </summary>
         [NameInMap("HyperZones")]
         [Validation(Required=false)]
         public List<string> HyperZones { get; set; }
 
         /// <summary>
-        /// <para>The resource quota labels.</para>
+        /// <para>The labels of the resource quota.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public ResourceSpec Min { get; set; }
 
         /// <summary>
-        /// <para>The parent resource quota ID.</para>
+        /// <para>The ID of the parent resource quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -107,10 +113,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <summary>
         /// <para>The queue policy for the quota. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PaiStrategyIntelligent: intelligent policies.</description></item>
-        /// <item><description>PaiStrategyBalance: balanced policy.</description></item>
-        /// <item><description>PaiStrategyRoundRobin: resource-priority policy.</description></item>
-        /// <item><description>PaiStrategyStrictFIFO: FIFO policy.</description></item>
+        /// <item><description>PaiStrategyIntelligent: intelligent policies</description></item>
+        /// <item><description>PaiStrategyBalance: balanced policy</description></item>
+        /// <item><description>PaiStrategyRoundRobin: resource priority policy</description></item>
+        /// <item><description>PaiStrategyStrictFIFO: FIFO policy</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,26 +126,29 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string QueueStrategy { get; set; }
 
+        /// <summary>
+        /// <para>The specifications and status of the cluster composed of resources in the quota.</para>
+        /// </summary>
         [NameInMap("QuotaCluster")]
         [Validation(Required=false)]
         public QuotaCluster QuotaCluster { get; set; }
 
         /// <summary>
-        /// <para>The resource quota configuration.</para>
+        /// <para>The configuration of the resource quota.</para>
         /// </summary>
         [NameInMap("QuotaConfig")]
         [Validation(Required=false)]
         public QuotaConfig QuotaConfig { get; set; }
 
         /// <summary>
-        /// <para>The resource quota details.</para>
+        /// <para>The details of the resource quota.</para>
         /// </summary>
         [NameInMap("QuotaDetails")]
         [Validation(Required=false)]
         public QuotaDetails QuotaDetails { get; set; }
 
         /// <summary>
-        /// <para>The resource quota ID.</para>
+        /// <para>The ID of the resource quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota12345</para>
@@ -149,7 +158,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// <para>The resource quota name.</para>
+        /// <para>The name of the resource quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-quota</para>
@@ -169,7 +178,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ReasonCode { get; set; }
 
         /// <summary>
-        /// <para>The error reason.</para>
+        /// <para>The cause of the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>“”</para>
@@ -201,7 +210,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The resource quota status.</para>
+        /// <para>The status of the resource quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
@@ -211,7 +220,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of sub-quotas under the resource quota.</para>
+        /// <para>The list of sub-quotas of the resource quota.</para>
         /// </summary>
         [NameInMap("SubQuotas")]
         [Validation(Required=false)]
@@ -219,6 +228,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>The version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0</para>
         /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]

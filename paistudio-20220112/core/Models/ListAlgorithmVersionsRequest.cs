@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size for paging.</para>
+        /// <para>The page size for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

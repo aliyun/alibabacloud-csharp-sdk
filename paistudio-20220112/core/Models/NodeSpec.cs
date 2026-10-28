@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class NodeSpec : TeaModel {
         /// <summary>
-        /// <para>Rule for attaching resource nodes.</para>
+        /// <para>The resource node binding policy.</para>
         /// </summary>
         [NameInMap("BindingPolicy")]
         [Validation(Required=false)]
         public BindingPolicy BindingPolicy { get; set; }
 
         /// <summary>
-        /// <para>Number of resource nodes with this specification.</para>
+        /// <para>The number of resource node specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -27,14 +27,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>Type of supernode to use. You cannot specify both a node specification and a supernode type.</para>
+        /// <para>The supernode specifications in use. When you specify a specification, you cannot specify both the node specifications and the supernode at the same time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>efg3.GN9A.ch72</para>
         /// </summary>
         [NameInMap("HyperType")]
         [Validation(Required=false)]
         public string HyperType { get; set; }
 
         /// <summary>
-        /// <para>Type of the resource node specification.</para>
+        /// <para>The resource node specifications type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.4xlarge</para>
