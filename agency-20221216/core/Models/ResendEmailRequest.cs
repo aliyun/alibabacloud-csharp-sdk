@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ResendEmailRequest : TeaModel {
         /// <summary>
-        /// <para>Invitation ID, from interface InviteSubAccount </br>
-        /// Note: This field type is Long, which may result in precision loss in serialization/deserialization process. Please ensure the value does not exceed 9007199254740991.</para>
+        /// <para>The invitation ID, obtained from the InviteSbuAccount operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

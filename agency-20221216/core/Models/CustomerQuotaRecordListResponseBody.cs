@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class CustomerQuotaRecordListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code of returning result, 200 means success.</para>
+        /// <para>The status code of the returned result. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Listed data of returning result</para>
+        /// <para>The list of returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<CustomerQuotaRecordListResponseBodyData> Data { get; set; }
         public class CustomerQuotaRecordListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The way to submit the quota adjustment operation. API/ACPN</para>
+            /// <para>The method used to submit the operation, such as API or ACPN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACPN</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationSubmitType { get; set; }
 
             /// <summary>
-            /// <para>The time of submit the quota adjustment operation.</para>
+            /// <para>The time when the operation was performed. Format: YYYY-MM-DD HH:mm:ss UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-15 10:34:36 UTC+8</para>
@@ -47,10 +47,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationTime { get; set; }
 
             /// <summary>
-            /// <para>Operation Type Enum</br>
-            /// all All types</br>
-            /// quota_create Create quota</br>
-            /// quota_amount_adjust Adjust the amount of quota</br></para>
+            /// <para>The code of the change type. Valid values: all: All, quota_create: Create, quota_amount_adjust: Quota adjustment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quota_amount_adjust</para>
@@ -60,7 +57,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The description of submitted quota adjustment operation.</para>
+            /// <para>The description of the change type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Quota Adjustment</para>
@@ -70,7 +67,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationTypeDesc { get; set; }
 
             /// <summary>
-            /// <para>The UID of operator(Partner\&quot;s UID).</para>
+            /// <para>The UID of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5113766248601929</para>
@@ -80,7 +77,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationUid { get; set; }
 
             /// <summary>
-            /// <para>Updated quota amount</para>
+            /// <para>The amount after the update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>121.00</para>
@@ -90,7 +87,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string UpdateAfterAmount { get; set; }
 
             /// <summary>
-            /// <para>The difference amount between updated quota and original quota.</para>
+            /// <para>The changed amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-100.00</para>
@@ -100,7 +97,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string UpdateAmount { get; set; }
 
             /// <summary>
-            /// <para>Original quota amount</para>
+            /// <para>The amount before the update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>221.00</para>
@@ -112,7 +109,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Description of returning data</para>
+        /// <para>The description of the returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -122,7 +119,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -132,7 +129,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Record number on each page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -142,7 +139,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2103a0ae16849855284594613d874e</para>
@@ -152,7 +149,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total volume</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

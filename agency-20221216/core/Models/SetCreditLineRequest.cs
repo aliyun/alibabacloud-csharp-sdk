@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class SetCreditLineRequest : TeaModel {
         /// <summary>
-        /// <para>New Credit Line</para>
+        /// <para>The new credit limit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string CreditLine { get; set; }
 
         /// <summary>
-        /// <para>The UID of Sub Account.</para>
+        /// <para>The UID of the sub-account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

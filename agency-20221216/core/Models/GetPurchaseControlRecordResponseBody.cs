@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetPurchaseControlRecordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>200: OK.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +22,20 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetPurchaseControlRecordResponseBodyData> Data { get; set; }
         public class GetPurchaseControlRecordResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The change type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ban: new purchases are prohibited.</description></item>
+            /// <item><description>cancelBan: the purchase prohibition is canceled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ban</para>
             /// </summary>
@@ -30,6 +44,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string ChangedType { get; set; }
 
             /// <summary>
+            /// <para>The method by which the operation was initiated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ACPN</para>
             /// </summary>
@@ -38,6 +54,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationPath { get; set; }
 
             /// <summary>
+            /// <para>The operation time (UTC+8).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-12-15 10:34:36</para>
             /// </summary>
@@ -46,6 +64,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OperationTime { get; set; }
 
             /// <summary>
+            /// <para>The operator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>292828565558721922</para>
             /// </summary>
@@ -56,6 +76,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +86,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -82,6 +106,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -90,6 +116,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

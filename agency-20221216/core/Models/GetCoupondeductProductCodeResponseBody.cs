@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCoupondeductProductCodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code. Valid values:
+        /// 200: OK.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>code</para>
         /// </summary>
@@ -17,11 +20,16 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetCoupondeductProductCodeResponseBodyData> Data { get; set; }
         public class GetCoupondeductProductCodeResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The product code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>code1</para>
             /// </summary>
@@ -31,6 +39,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         }
 
+        /// <summary>
+        /// <para>The message information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCustomerOrdersRequest : TeaModel {
         /// <summary>
+        /// <para>The customer account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string CustomerAccount { get; set; }
 
         /// <summary>
+        /// <para>The account manager.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myBd</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string CustomerManager { get; set; }
 
         /// <summary>
+        /// <para>The customer UID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? CustomerUid { get; set; }
 
         /// <summary>
+        /// <para>The end time. This parameter is used in combination with TimeType. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>209335720330622</para>
         /// </summary>
@@ -52,6 +61,13 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The order source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Regular customer.</description></item>
+        /// <item><description>1: Enterprise customer.</description></item>
+        /// <item><description>2: Tier-2 distributor.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -60,6 +76,13 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? OrderSource { get; set; }
 
         /// <summary>
+        /// <para>The order status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Unpaid.</description></item>
+        /// <item><description>2: Canceled.</description></item>
+        /// <item><description>3: Paid.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -68,6 +91,16 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? OrderStatus { get; set; }
 
         /// <summary>
+        /// <para>The order type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BUY: New purchase.</description></item>
+        /// <item><description>UPGRADE: Upgrade.</description></item>
+        /// <item><description>DOWNGRADE: Downgrade.</description></item>
+        /// <item><description>RENEW: Renewal.</description></item>
+        /// <item><description>REFUND: Refund.</description></item>
+        /// <item><description>OTHERS: Others.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>RENEW</para>
         /// </summary>
@@ -76,6 +109,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string OrderType { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,6 +120,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,6 +131,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The product detail code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vm_intl</para>
         /// </summary>
@@ -104,6 +141,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string ProductType { get; set; }
 
         /// <summary>
+        /// <para>The start time. This parameter is used in combination with TimeType. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,6 +152,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string StartDate { get; set; }
 
         /// <summary>
+        /// <para>The time type used as the basis for the query. This is not a date or time value. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Payment time.</description></item>
+        /// <item><description>2: Order placement time.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

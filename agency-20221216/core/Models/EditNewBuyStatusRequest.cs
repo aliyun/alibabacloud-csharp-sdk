@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class EditNewBuyStatusRequest : TeaModel {
         /// <summary>
-        /// <para>New Purchase Status</br></para>
+        /// <para>The new purchase status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cancelBan: Cancel the restriction for New Purchase request</br></para>
-        /// </description></item>
-        /// <item><description><para>ban: ban the New Purchase request</br></para>
-        /// </description></item>
+        /// <item><description>cancelBan: allows new purchases</description></item>
+        /// <item><description>ban: prohibits new purchases.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string NewBuyStatus { get; set; }
 
         /// <summary>
-        /// <para>Customer UID</para>
+        /// <para>The UID of the customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1133166938931507</para>

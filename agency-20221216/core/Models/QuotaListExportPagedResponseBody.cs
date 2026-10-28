@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class QuotaListExportPagedResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code of returning result, 200 means success.</para>
+        /// <para>The status code of the returned result. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Listed data of returning result</para>
+        /// <para>The list of returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QuotaListExportPagedResponseBodyData> Data { get; set; }
         public class QuotaListExportPagedResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Create Time</para>
+            /// <para>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format in the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-21 21:31:57 UTC+8</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>File Name</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>Notification Message</para>
+            /// <para>The prompt message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Display of Task Status</para>
+            /// <para>The display status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Task Status Enum</br>
-            /// 2: Exporting</br>
-            /// 3: Export Success</br>
-            /// -1: Export Fail</br></para>
+            /// <para>The status code of the task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>2: Exporting.</description></item>
+            /// <item><description>3: Export succeeded.</description></item>
+            /// <item><description>-1: Export failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Export Success</para>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string StatusCode { get; set; }
 
             /// <summary>
-            /// <para>The link to download exported file.</para>
+            /// <para>The download URL of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>//aliyun-eco-market-servic-singapore.oss-ap-southeast-1.aliyuncs.com/5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</para>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Description of returning result</para>
+        /// <para>The description of the returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Record number on each page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of the Request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210e876f16704666020714468dab35</para>
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total volume</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

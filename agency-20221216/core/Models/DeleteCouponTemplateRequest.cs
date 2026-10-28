@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class DeleteCouponTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The coupon template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

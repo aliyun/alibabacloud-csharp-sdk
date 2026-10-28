@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class QuotaListExportPagedRequest : TeaModel {
         /// <summary>
-        /// <para>Pagination, current page number, starting from 1.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Multilingual Parameters, the default language is English.</br>
-        /// en: English</br>
-        /// zh: Chinese</br>
-        /// ja: Japanese </br></para>
+        /// <para>The language. Default value: en. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>Pagination, record number on each page, maximum 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

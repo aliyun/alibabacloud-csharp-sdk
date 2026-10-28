@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ExportCustomerQuotaRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>Code</para>
+        /// <para>code</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExportCustomerQuotaRecordResponseBodyData Data { get; set; }
         public class ExportCustomerQuotaRecordResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Estimated duration, in minutes.</para>
+            /// <para>The estimated time required, in minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? Cost { get; set; }
 
             /// <summary>
-            /// <para>ID of Export task</para>
+            /// <para>The ID of the export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1231</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Description</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>ID of the Request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>210bc4b416874189683843905d9f9a</para>

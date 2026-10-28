@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ProcessApprovalRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application form.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string ApplicationSheetId { get; set; }
 
         /// <summary>
+        /// <para>The approval action. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Approve: approved.</description></item>
+        /// <item><description>Reject: rejected.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +36,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string ApprovalAction { get; set; }
 
         /// <summary>
+        /// <para>The approval comments.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>同意</para>
         /// </summary>
         [NameInMap("ApprovalComments")]
         [Validation(Required=false)]

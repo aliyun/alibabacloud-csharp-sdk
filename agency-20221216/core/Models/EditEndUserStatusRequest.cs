@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class EditEndUserStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Shutdown Status</br></para>
+        /// <h3>Shutdown status</h3>
         /// <list type="bullet">
-        /// <item><description><para>postPayFreeze, the account have been blocked</br></para>
-        /// </description></item>
-        /// <item><description><para>postPayThaw, the account have been unlocked</br></para>
-        /// </description></item>
+        /// <item><description>postPayFreeze: pay-as-you-go resource suspension</description></item>
+        /// <item><description>postPayThaw: pay-as-you-go resource resumption.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string CreditStatus { get; set; }
 
         /// <summary>
-        /// <para>UID</para>
+        /// <para>The UID of the customer to be processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1792155717328010</para>

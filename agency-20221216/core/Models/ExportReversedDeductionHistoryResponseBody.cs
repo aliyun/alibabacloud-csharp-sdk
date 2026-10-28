@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ExportReversedDeductionHistoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code of the response. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response object.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExportReversedDeductionHistoryResponseBodyData Data { get; set; }
         public class ExportReversedDeductionHistoryResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The estimated duration, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? Cost { get; set; }
 
             /// <summary>
+            /// <para>The ID of the export task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2131</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
+        /// <para>The description of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asfasd123</para>
         /// </summary>

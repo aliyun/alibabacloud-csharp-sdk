@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetUnassociatedCustomerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error Code, Candidate Value：</para>
-        /// <list type="bullet">
-        /// <item><description>200: OK</description></item>
-        /// <item><description>1109: System error</description></item>
-        /// </list>
+        /// <para>The error code. Valid values:
+        /// 200: OK.
+        /// 1109: System error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -56,24 +54,24 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Message information</para>
+        /// <para>The message information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Pagination Information</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public GetUnassociatedCustomerResponseBodyPageInfo PageInfo { get; set; }
         public class GetUnassociatedCustomerResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>Pagination, current page.</para>
+            /// <para>The current page number for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>Pagination, record number on each page.</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Pagination, page volume in total.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Request ID, Alibaba Cloud will track errors with this.</para>
+        /// <para>The request ID. Alibaba Cloud uses this ID for error tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23309219-4A34-589D-A3E0-9B2A3BFFD24F</para>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</para>
+        /// <para>Indicates whether the current API call itself is successful. Valid values: True and False. This does not indicate the success of subsequent business operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

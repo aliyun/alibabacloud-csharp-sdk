@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ExportReversedDeductionHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>The end date. Format: yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The UID for which the reversed deduction details are exported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,13 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? ExportUid { get; set; }
 
         /// <summary>
+        /// <para>The language of the exported content. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -38,6 +47,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The start date. Format: yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

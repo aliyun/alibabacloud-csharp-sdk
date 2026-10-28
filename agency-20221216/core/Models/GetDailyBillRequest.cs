@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetDailyBillRequest : TeaModel {
         /// <summary>
-        /// <para>Bill Owner type. Value Range:</br>
-        /// 1: Master account</br>
-        /// 2: Sub account</br></para>
+        /// <para>The type of the bill owner. Valid values:</para>
+        /// <para>1: reseller partner account </para>
+        /// <para>2: reseller customer account</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,16 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string BillOwner { get; set; }
 
         /// <summary>
-        /// <para>BillType. Value Range:</br></para>
+        /// <para>The bill type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DailyOrder(Deprecated)</description></item>
-        /// <item><description>DailyBill (Deprecated)</description></item>
-        /// <item><description>DailyInstanceBill (Deprecated)</description></item>
-        /// <item><description>DailyInstanceBillV2</description></item>
+        /// <item><description><para>DailyOrder (deprecated)</para>
+        /// </description></item>
+        /// <item><description><para>DailyBill (deprecated)</para>
+        /// </description></item>
+        /// <item><description><para>DailyInstanceBill (deprecated) </para>
+        /// </description></item>
+        /// <item><description><para>DailyInstanceBillV2</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

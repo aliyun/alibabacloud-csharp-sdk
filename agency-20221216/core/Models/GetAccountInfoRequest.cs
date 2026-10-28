@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetAccountInfoRequest : TeaModel {
         /// <summary>
-        /// <para>Pagination, current page.</para>
+        /// <para>The current page number for pagination.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Pagination, record number on each page, maximum 20.</para>
+        /// <para>The number of entries per page for pagination. Maximum value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.</para>
+        /// <para>The UID of the distribution customer account. Either this parameter or the UserType parameter must be specified. If this parameter is empty, all distribution customer accounts of the specified UserType are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1215848086704806</para>
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? Uid { get; set; }
 
         /// <summary>
-        /// <para>Distribution Customer\&quot;s Account Type:</para>
+        /// <para>The type of the distribution customer account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1 End User</description></item>
-        /// <item><description>2 Enterprise</description></item>
-        /// <item><description>3 T2 Partner</description></item>
+        /// <item><description>1: End user.</description></item>
+        /// <item><description>2: Enterprise customer. </description></item>
+        /// <item><description>3: T2 partner.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

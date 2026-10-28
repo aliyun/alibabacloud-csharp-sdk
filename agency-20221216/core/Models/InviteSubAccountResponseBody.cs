@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class InviteSubAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error Code: </br>
-        /// • 200 OK</br>
-        /// • 1109 System Error</br></para>
+        /// <para>The fault code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>200: OK.</description></item>
+        /// <item><description>1109: System Error.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -22,17 +24,17 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Message</br></para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, Alibaba Cloud will track errors with this ID.</para>
+        /// <para>The request ID. Alibaba Cloud uses this ID for fault tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Candidate Values: True/False, this value states if the current API calling action is successful. It does not guarantee the success of subsequent business operations.</para>
+        /// <para>Indicates whether the current API invocation is successful. Valid values: True and False. This does not indicate whether the subsequent business operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

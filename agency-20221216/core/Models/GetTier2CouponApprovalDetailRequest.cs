@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetTier2CouponApprovalDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application form.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d54ca949-9b88-4514-add3-c6029c4027f4</para>
         /// </summary>

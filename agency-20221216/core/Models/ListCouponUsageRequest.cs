@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ListCouponUsageRequest : TeaModel {
         /// <summary>
-        /// <para>阿里云客户账号</para>
+        /// <para>The Alibaba Cloud customer account.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:oqevfbveuadcrduzmf@ttirv.net">oqevfbveuadcrduzmf@ttirv.net</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>优惠券模版id</para>
+        /// <para>The ID of the coupon template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5075915</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? CouponTemplateId { get; set; }
 
         /// <summary>
-        /// <para>页码</br> 
-        ///  默认值为1 最小值1</para>
+        /// <para>The page number.</br> 
+        /// Default value: 1. Minimum value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>分页行数 </br>
-        ///   默认值20 最大值50 最小值1</para>
+        /// <para>The number of entries per page.</br>
+        /// Default value: 20. Maximum value: 50. Minimum value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>优惠券状态 </br>
-        /// AVAILABLE 正常 </br>
-        /// EXHAUSTED 已用完 </br>
-        /// EXPIRED 已过期 </br>
-        /// ABANDONED 已作废 </br></para>
+        /// <para>The coupon status. Valid values:</br>
+        /// AVAILABLE: Normal.</br>
+        /// EXHAUSTED: Used up.</br>
+        /// EXPIRED: Expired.</br>
+        /// ABANDONED: Voided.</br></para>
         /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>
@@ -66,8 +66,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>T2伙伴uid
-        /// 如：123456789</para>
+        /// <para>The UID of the T2 partner. Example: 123456789.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456768</para>
@@ -77,7 +76,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? T2PartnerUid { get; set; }
 
         /// <summary>
-        /// <para>阿里云账号uid</para>
+        /// <para>The UID of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1133166938931507</para>

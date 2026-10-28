@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class CreateCustomerRequest : TeaModel {
         /// <summary>
-        /// <para>Customer\&quot;s name.</para>
+        /// <para>The customer name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string CustomerName { get; set; }
 
         /// <summary>
-        /// <para>The source/channel that allow client to connected with us. Please enumerate with Customer Source.</para>
+        /// <para>The customer source.
+        /// Use the Customer Source enumeration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,28 +33,30 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string CustomerSource { get; set; }
 
         /// <summary>
-        /// <para>The sub-industry that Customer\&quot;s business belongs to. Please enumerate with Customer Trade.</para>
+        /// <para>The customer sub-industry.
+        /// Use the Customer Sub Trade enumeration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0101</para>
+        /// <para>020501</para>
         /// </summary>
         [NameInMap("CustomerSubTrade")]
         [Validation(Required=false)]
         public string CustomerSubTrade { get; set; }
 
         /// <summary>
-        /// <para>The industry that Customer\&quot;s business belongs to. Please enumerate with Customer Trade.</para>
+        /// <para>The customer industry name.
+        /// Use the Customer Trade enumeration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>01</para>
+        /// <para>0205</para>
         /// </summary>
         [NameInMap("CustomerTrade")]
         [Validation(Required=false)]
         public string CustomerTrade { get; set; }
 
         /// <summary>
-        /// <para>The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.</para>
+        /// <para>The region to which the customer belongs. Call ListCountries to obtain the list of available regions for the current UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

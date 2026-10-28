@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetInviteStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status Code. Error Code:</para>
-        /// <list type="bullet">
-        /// <item><description>3057 InviteId is empty</description></item>
-        /// </list>
+        /// <para>The status code. Error code: 3057: InviteId is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -81,17 +78,17 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, Alibaba Cloud will track errors with this.</para>
+        /// <para>The request ID. Alibaba Cloud uses this ID for error tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
@@ -101,7 +98,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</para>
+        /// <para>Indicates whether the API call is successful. Valid values: true and false. This parameter does not indicate whether subsequent business operations are successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

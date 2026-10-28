@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class IssueCouponForCustomerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>code</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -43,11 +49,16 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public IssueCouponForCustomerResponseBodyData Data { get; set; }
         public class IssueCouponForCustomerResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the coupon template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5075915</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public long? CouponTemplateId { get; set; }
 
             /// <summary>
+            /// <para>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-03-05 18:24:07</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The UIDs to which the coupons are issued.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111,2222</para>
             /// </summary>

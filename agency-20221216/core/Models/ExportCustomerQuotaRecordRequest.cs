@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ExportCustomerQuotaRecordRequest : TeaModel {
         /// <summary>
-        /// <para>End Date Format:  yyyy-MM-dd</para>
+        /// <para>The end date. Format: yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Customer UID</para>
+        /// <para>The UID of the customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? EndUserPk { get; set; }
 
         /// <summary>
-        /// <para>Multilingual Parameters, the default language is English.</br>
-        /// en: English</br>
-        /// zh: Chinese</br>
-        /// ja: Japanese </br></para>
+        /// <para>The language parameter. Default value: en. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -45,10 +47,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>Operation Type Enum</br>
-        /// all All types</br>
-        /// quota_create Create quota</br>
-        /// quota_amount_adjust Adjust the amount of quota</br></para>
+        /// <para>The operation type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>all: All operations.</description></item>
+        /// <item><description>quota_create: Creation.</description></item>
+        /// <item><description>quota_amount_adjust: Quota amount adjustment.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string OperationType { get; set; }
 
         /// <summary>
-        /// <para>Start Date Format:  yyyy-MM-dd</para>
+        /// <para>The start date. Format: yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

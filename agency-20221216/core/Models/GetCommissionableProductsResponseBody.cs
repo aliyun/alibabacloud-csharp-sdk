@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCommissionableProductsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code of the response. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetCommissionableProductsResponseBodyData> Data { get; set; }
         public class GetCommissionableProductsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The actual start month in the yyyymm format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“202502”</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string ActualStartMonth { get; set; }
 
             /// <summary>
+            /// <para>The commodity code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“oceanbase_obpre_public_intl”</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
+            /// <para>The commodity name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“ApsaraDB for OceanBase Pre”</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CommodityName { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the commodity is eligible for commission.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Yes</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string EligibleForCommission { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the commodity is eligible for discounts.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Yes</para>
             /// </summary>
@@ -62,6 +77,18 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string EligibleForDiscount { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the commodity is counted towards performance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Yes</para>
+            /// </summary>
+            [NameInMap("EligibleForPerformance")]
+            [Validation(Required=false)]
+            public string EligibleForPerformance { get; set; }
+
+            /// <summary>
+            /// <para>The actual end month in the yyyymm format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“202509”</para>
             /// </summary>
@@ -70,6 +97,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string EndMonth { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the commodity is a product line incentive commodity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Yes</para>
             /// </summary>
@@ -78,6 +107,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string ProductCampaign { get; set; }
 
             /// <summary>
+            /// <para>The product code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“oceanbase”</para>
             /// </summary>
@@ -86,6 +117,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string ProductCode { get; set; }
 
             /// <summary>
+            /// <para>The product name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“ApsaraDB for OceanBase”</para>
             /// </summary>
@@ -94,6 +127,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string ProductName { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the product is a core product.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Yes</para>
             /// </summary>
@@ -102,6 +137,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string SevenCoreProducts { get; set; }
 
             /// <summary>
+            /// <para>The display status of the product.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“ONLINE”</para>
             /// </summary>
@@ -112,6 +149,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -120,6 +159,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -128,6 +169,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2103a30617045934095083027d88c5</para>
         /// </summary>
@@ -136,6 +179,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call is successful. Valid values: True and False. This parameter indicates only the success of the API call and does not indicate the success of subsequent business operations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -144,6 +189,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

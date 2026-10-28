@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetMonthlyBillResponseBody : TeaModel {
         /// <summary>
-        /// <para>Result Code:</para>
+        /// <para>The result code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>200 OK</description></item>
-        /// <item><description>1109 System error</description></item>
-        /// <item><description>3030 Sub Account Nickname exceeds maximum length, maximum length 150 bytes.</description></item>
-        /// <item><description>3031 Remark exceeds maximum length, maximum length 3000 bytes.</description></item>
+        /// <item><description>200: OK.</description></item>
+        /// <item><description>1109: A system error occurred.</description></item>
+        /// <item><description>3030: The account nickname exceeds the maximum length of 150 bytes.</description></item>
+        /// <item><description>3031: The remark exceeds the maximum length of 3,000 bytes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public GetMonthlyBillResponseBodyData Data { get; set; }
         public class GetMonthlyBillResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The link to download CSV file, please use HTTP Protocol.</para>
+            /// <para>The URL used to download the CSV file. Use the HTTP protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>intl-reseller-month-bill.oss-ap-southeast-1.aliyuncs.com/statements/month/dts/1064252248461886/202104/Month%20Billing%20Invoice%20202104.pdf?Expires=1671160973&amp;OSSAccessKeyId=TMP.3KhvoD9pW264cPv8sYe8E2zJ5HLWmrijNHgKiKpXcy8yS472BcrvemgTfNrrXKu5fCCdbLr2XhmYAyYPmbCe8zJyEkmYzL&amp;Signature=hns1PgiiYl1WdI%2FdiOqbEdsgmfI%3D</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string BillLinkCSV { get; set; }
 
             /// <summary>
-            /// <para>The link to download XLSX file, please use HTTP Protocol.</para>
+            /// <para>The URL used to download the XLSX file. Use the HTTP protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>intl-reseller-month-bill.oss-ap-southeast-1.aliyuncs.com/statements/month/dts/1064252248461886/202104/Month%20Billing%20Invoice%20202104.pdf?Expires=1671160973&amp;OSSAccessKeyId=TMP.3KhvoD9pW264cPv8sYe8E2zJ5HLWmrijNHgKiKpXcy8yS472BcrvemgTfNrrXKu5fCCdbLr2XhmYAyYPmbCe8zJyEkmYzL&amp;Signature=hns1PgiiYl1WdI%2FdiOqbEdsgmfI%3D</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string BillLinkXLSX { get; set; }
 
             /// <summary>
-            /// <para>Same as inserted parameter BillOwner.</para>
+            /// <para>The bill owner, which is the same as the value of the BillOwner request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string BillOwner { get; set; }
 
             /// <summary>
-            /// <para>Same as inserted parameter BillType.</para>
+            /// <para>The bill type, which is the same as the value of the BillType request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MonthlyInvoice</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string BillType { get; set; }
 
             /// <summary>
-            /// <para>The URL to download invoice.</para>
+            /// <para>The URL used to download the invoice.</para>
             /// 
             /// <b>Example:</b>
             /// <para>intl-reseller-month-bill.oss-ap-southeast-1.aliyuncs.com/statements/month/dts/1064252248461886/202104/Month%20Billing%20Invoice%20202104.pdf?Expires=1671160973&amp;OSSAccessKeyId=TMP.3KhvoD9pW264cPv8sYe8E2zJ5HLWmrijNHgKiKpXcy8yS472BcrvemgTfNrrXKu5fCCdbLr2XhmYAyYPmbCe8zJyEkmYzL&amp;Signature=hns1PgiiYl1WdI%2FdiOqbEdsgmfI%3D</para>
@@ -83,8 +83,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string InvoiceLink { get; set; }
 
             /// <summary>
-            /// <para>It states the existence of refund invoice. </br>
-            /// Candidate Values: True/False</para>
+            /// <para>Specifies whether a refund invoice exists. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>True: A refund invoice exists.</description></item>
+            /// <item><description>False: No refund invoice exists.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public bool? RefundInvoiceFlag { get; set; }
 
             /// <summary>
-            /// <para>The URL to download refund invoice.</para>
+            /// <para>The URL used to download the refund invoice.</para>
             /// 
             /// <b>Example:</b>
             /// <para>intl-reseller-month-bill.oss-ap-southeast-1.aliyuncs.com/statements/month/dts/1064252248461886/202104/Month%20Billing%20Invoice%20202104.pdf?Expires=1671160973&amp;OSSAccessKeyId=TMP.3KhvoD9pW264cPv8sYe8E2zJ5HLWmrijNHgKiKpXcy8yS472BcrvemgTfNrrXKu5fCCdbLr2XhmYAyYPmbCe8zJyEkmYzL&amp;Signature=hns1PgiiYl1WdI%2FdiOqbEdsgmfI%3D</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string RefundInvoiceLink { get; set; }
 
             /// <summary>
-            /// <para>Spending Time, refer to the exact time of costuming.</para>
+            /// <para>The consumption time in the YYYYMMDD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20221201</para>
@@ -116,7 +119,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Same as Code parameters.</para>
+        /// <para>The message corresponding to the value of the Code parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -126,7 +129,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, the unique request identifier generated by Alibaba Cloud.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210e876f16704666020714468dab35</para>
@@ -136,7 +139,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</para>
+        /// <para>Specifies whether the current API call is successful. This indicates only the success of the API call itself, not the success of subsequent business operations. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True: The API call is successful.</description></item>
+        /// <item><description>False: The API call fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

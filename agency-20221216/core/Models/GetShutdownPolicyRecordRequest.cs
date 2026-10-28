@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetShutdownPolicyRecordRequest : TeaModel {
         /// <summary>
+        /// <para>The customer UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? CustomerUID { get; set; }
 
         /// <summary>
+        /// <para>The start time. If left empty, data from the last six months is returned. The time format is yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-12-15 10:34:36</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string OperationTime { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

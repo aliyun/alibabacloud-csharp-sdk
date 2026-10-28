@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the configuration is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -27,11 +29,19 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
+        /// <summary>
+        /// <para>The message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6fc1309b17543600398356606d0096</para>
         /// </summary>

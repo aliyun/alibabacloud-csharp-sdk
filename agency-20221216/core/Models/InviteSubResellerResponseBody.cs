@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class InviteSubResellerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Result code.</para>
+        /// <para>The result code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Message.</para>
+        /// <para>message</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>邀请结果信息</para>
+        /// <para>The invitation result information.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<InviteSubResellerResponseBodyResults> Results { get; set; }
         public class InviteSubResellerResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>Error code, 200 OK</para>
+            /// <para>The error code. A value of 200 indicates success.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Prompt message, explanation of the code</para>
+            /// <para>The prompt message that describes the code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>成功</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Returned invitation result information</para>
+            /// <para>The invitation result details.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public InviteSubResellerResponseBodyResultsResult Result { get; set; }
             public class InviteSubResellerResponseBodyResultsResult : TeaModel {
                 /// <summary>
-                /// <para>Validity period of the registration URL, in days</para>
+                /// <para>The validity period of the registration URL, in days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public int? Days { get; set; }
 
                 /// <summary>
-                /// <para>Invitation ID, used for querying the invitation status</para>
+                /// <para>The invitation ID, which is used to query the invitation status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public long? InviteId { get; set; }
 
                 /// <summary>
-                /// <para>T2 Reseller registration URL</para>
+                /// <para>The registration URL of the T2 Reseller.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://agency-intl.console.aliyun.com/customer/register?intl=true&fxinfo=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">http://agency-intl.console.aliyun.com/customer/register?intl=true&amp;fxinfo=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             }
 
             /// <summary>
-            /// <para>Always true</para>
+            /// <para>Always true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class InviteSubResellerRequest : TeaModel {
         /// <summary>
-        /// <para>List of invited account information, up to 5 at a time.</para>
+        /// <para>The list of account information for the invitation. A maximum of five accounts can be specified at a time.</para>
         /// </summary>
         [NameInMap("AccountInfoList")]
         [Validation(Required=false)]
         public List<InviteSubResellerRequestAccountInfoList> AccountInfoList { get; set; }
         public class InviteSubResellerRequestAccountInfoList : TeaModel {
             /// <summary>
-            /// <para>Name of the distribution customer:</para>
+            /// <para>The name of the distribution customer.</para>
             /// <list type="bullet">
-            /// <item><description>If the distribution customer is a company, this is the company name.</description></item>
-            /// <item><description>If the distribution customer is a T2 reseller partner, this is the partner name.</description></item>
+            /// <item><description>If the distribution customer is an enterprise, this is the company name.</description></item>
+            /// <item><description>If the distribution customer is a T2 Reseller partner, this is the partner name.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string AccountNickname { get; set; }
 
             /// <summary>
-            /// <para>Total budget quota allocated by the partner to the distribution customer (quota).</para>
+            /// <para>The total budget quota that the partner allocates to the distribution customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CreditLine { get; set; }
 
             /// <summary>
-            /// <para>Reason for applying for cross-regional association.</para>
+            /// <para>The reason for applying for a cross-region association.</para>
             /// 
             /// <b>Example:</b>
             /// <para>XXX</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CrossScopeRemark { get; set; }
 
             /// <summary>
-            /// <para>Customer Business Manager (limited to 50 characters).</para>
+            /// <para>The customer account manager. The value can be up to 50 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>张三</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CustomerBd { get; set; }
 
             /// <summary>
-            /// <para>The email address to which the invitation email will be sent.</para>
+            /// <para>The email address to which the invitation email is sent.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:nejatox206@getasail.com">nejatox206@getasail.com</a></para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string EmailAddress { get; set; }
 
             /// <summary>
-            /// <para>Initial order status:</para>
+            /// <para>The initial order placement status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ban: Purchase Ban - The customer cannot place orders immediately after successful registration and association. The \&quot;Order Control\&quot; must be set to \&quot;Normal\&quot; before placing orders.</description></item>
-            /// <item><description>normal: Normal - The customer can place orders immediately after successful registration and association.</description></item>
+            /// <item><description>ban: Purchase is prohibited. After the customer is registered and associated, the customer cannot place orders to purchase cloud resources immediately. You must set the order control to Normal before the customer can place orders.</description></item>
+            /// <item><description>normal: Normal. After the customer is registered and associated, the customer can place orders to purchase cloud resources immediately.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,11 +85,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string NewBuyStatus { get; set; }
 
             /// <summary>
-            /// <para>Country or region of the invited T2 Reseller. The parameter should comply with the ISO 3166-1 two-letter code (Alpha-2). You can use the ListCountries API to get the current UID contract coverage area list.</para>
-            /// <para>The system will automatically determine if the invitation is cross-regional based on whether the <c>registerNation</c> parameter is within the T1 contract coverage area:</para>
+            /// <para>The country or region of the invited T2 Reseller. The value must comply with the ISO 3166-1 alpha-2 code. You can call the ListCountries operation to query the contract coverage area list of the current UID.</para>
+            /// <para>The system automatically determines whether the invitation is cross-region based on whether this parameter falls within the T1 contract coverage area.</para>
             /// <list type="bullet">
-            /// <item><description>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</description></item>
-            /// <item><description>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</description></item>
+            /// <item><description>If the invitation is cross-region, a cross-region invitation approval process is initiated. After the approval is granted, an invitation registration email is sent to the specified email address.</description></item>
+            /// <item><description>If the invitation is not cross-region, an invitation registration email is sent directly.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string RegisterNation { get; set; }
 
             /// <summary>
-            /// <para>Description of the distribution customer.</para>
+            /// <para>The description of the distribution customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>发展xx为客户的邀请</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>Do not fill in, deprecated parameter.</para>
+            /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -120,11 +120,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string SubAccountType { get; set; }
 
             /// <summary>
-            /// <para>Management of the shutdown policy for the distribution customer by the partner.</para>
+            /// <para>The shutdown policy that the partner sets for the distribution customer.</para>
             /// <list type="bullet">
-            /// <item><description>1: delayStop - Enjoy delayed shutdown with a grace period: Alibaba Cloud takes over the resources, and when the grace period quota is exhausted, the instance will be shut down. If payment is not made within 15 days, the storage resources will be released.</description></item>
-            /// <item><description>2: noStop - Manual management of overdue without stopping: The system does not manage the lifecycle of the sub-account\&quot;s resources. The partner needs to manually manage the shutdown status of the customer\&quot;s instances.</description></item>
-            /// <item><description>3: immediatelyStop - Immediate shutdown upon overdue: When the available quota of the customer\&quot;s account is less than 0, the account enters an overdue state, triggering the shutdown of the instance.</description></item>
+            /// <item><description>1: delayStop. The account uses the delayed shutdown quota for deferred instance shutdown. Alibaba Cloud takes over the resources. When the delayed shutdown quota is exhausted, instance shutdown is triggered. If the payment is not made within 15 days, storage resources are released.</description></item>
+            /// <item><description>2: noStop. Manual management with no shutdown on overdue payment. The system does not manage the resource lifecycle of the non-trusteeship linked account. The partner must manually manage the instance shutdown status of the customer.</description></item>
+            /// <item><description>3: immediatelyStop. Immediate shutdown on overdue payment. When the active quota of the customer account is less than 0, the account enters the overdue payment status and instance shutdown is triggered.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

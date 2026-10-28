@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCouponTemplateDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the coupon template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class SubscriptionBillRequest : TeaModel {
         /// <summary>
-        /// <para>The start month from which the bills are pushed. Specify the value in the yyyy-MM format.</para>
-        /// <para>After the subscription is generated, the system automatically pushes the bill data that is generated from the month that you specified to the current point in time. Data of up to six months can be pushed. The current month is included. If you subscribe to the bills for more than six months, the subscription is invalid.</para>
+        /// <para>The billing month from which to start pushing bills. Format: yyyy-MM.</para>
+        /// <para>After a successful subscription, the system automatically pushes data from the start billing cycle to the current time. Data for up to the last six months (including the current month) can be pushed. If the specified month exceeds this range, the subscription is invalid.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +22,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string BeginBillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The file format of the bill. Valid values: csv and parquet.</para>
-        /// <para>If you subscribe to the bills of multiple file formats, we recommend that you store the bills in different OSS buckets to prevent file overwriting.</para>
+        /// <para>The bill file format. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>csv</description></item>
+        /// <item><description>parquet</description></item>
+        /// </list>
+        /// <para>If you subscribe to multiple file types, use separate buckets to avoid file overwriting.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,9 +38,9 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string BillFormat { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user to which the OSS bucket belongs.</para>
-        /// <para>If you are an eco-partner of Alibaba Cloud and you need to push the bills to the OSS bucket of a subordinate partner account, you must set this parameter to the ID of the subordinate partner account and grant the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission to the subordinate partner account.</para>
-        /// <para>If you are an eco-partner of Alibaba Cloud and you need to push the bills to the OSS bucket of your own account, your account must be granted the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</para>
+        /// <para>The UID of the account that owns the OSS bucket for storing files.</para>
+        /// <para>If a partner subscribes and needs to push files to the OSS bucket of a subordinate partner account, this account must be a subordinate partner account of the partner account. Grant the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission to the subordinate partner account. </para>
+        /// <para>If a partner subscribes and pushes files to the partner account\&quot;s own OSS bucket, grant the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission to the partner account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? BucketOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Object Storage Service (OSS) bucket in which you want to store the bills.</para>
+        /// <para>The name of the OSS bucket for storing bill files.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,8 +62,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string SubscribeBucket { get; set; }
 
         /// <summary>
-        /// <para>The maximum rows in a single bill file. If the number of bill rows exceed the upper limit, the bill is automatically split into multiple files. The name of each split file is in the <c>uid_billType_billCycle_SquenceNo_fileNo</c> format.</para>
-        /// <para>Files whose names are the same except for the fileNo field are of the same type and belong to the same billing cycle.</para>
+        /// <para>The row count threshold for a single bill file. If the number of rows exceeds this threshold, the file is automatically split into multiple files. The naming convention for split files is <c>uid_billType_billCycle_SquenceNo_fileNo</c>.</para>
+        /// <para>All information in the file names is identical except for fileNo. These files belong to the same billing cycle and the same file type but are split into multiple files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -69,7 +73,13 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? SubscribeSegmentSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the bill to which you want to subscribe. Valid values: PartnerBillingItemDetailForBillingPeriod, PartnerBillingItemDetailMonthly, PartnerInstanceDetailForBillingPeriod, and PartnerInstanceDetailMonthly.</para>
+        /// <para>The subscription type. Valid values: </para>
+        /// <list type="bullet">
+        /// <item><description>PartnerBillingItemDetailForBillingPeriod: billing item detail.</description></item>
+        /// <item><description>PartnerBillingItemDetailMonthly: billing item monthly bill.</description></item>
+        /// <item><description>PartnerInstanceDetailForBillingPeriod: instance bill detail.</description></item>
+        /// <item><description>PartnerInstanceDetailMonthly: instance monthly bill.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

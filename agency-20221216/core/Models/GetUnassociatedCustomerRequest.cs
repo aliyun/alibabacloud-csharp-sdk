@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetUnassociatedCustomerRequest : TeaModel {
         /// <summary>
-        /// <para>Pagination, current page.</para>
+        /// <para>The current page number for pagination.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Pagination, record number on each page.</para>
+        /// <para>The number of records per page for pagination.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

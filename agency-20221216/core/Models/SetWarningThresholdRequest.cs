@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class SetWarningThresholdRequest : TeaModel {
         /// <summary>
-        /// <para>The UID of the partner‘s customer.</para>
+        /// <para>The UID of the reseller customer account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? Uid { get; set; }
 
         /// <summary>
-        /// <para>Percentage, 1 to 100. When the available credit limit is lower than the credit limit percentage, an email is sent to the main account.</para>
+        /// <para>The percentage value. Valid values: 1 to 100. When the available credit drops below this percentage of the total credit limit, an alert email is sent to the reseller partner account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

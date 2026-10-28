@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class QueryAutomaticWriteOffChangeRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The customer UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,9 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? CustomerUid { get; set; }
 
         /// <summary>
+        /// <para>The end date.
+        /// Format: yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-05-20</para>
         /// </summary>
@@ -28,6 +32,13 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The language. If you do not specify this parameter, English is used by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -36,6 +47,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +58,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +69,9 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start date.
+        /// Format: yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-06-20</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ListCouponUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>接口状态码</para>
+        /// <para>The status code of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCouponUsageResponseBodyData> Data { get; set; }
         public class ListCouponUsageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>阿里云账号</para>
+            /// <para>The Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:oqevfbveuadcrduzmf@ttirv.net">oqevfbveuadcrduzmf@ttirv.net</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>优惠券面额</para>
+            /// <para>The face value of the coupon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public double? Amount { get; set; }
 
             /// <summary>
-            /// <para>余额</para>
+            /// <para>The remaining balance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.01</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public double? Balance { get; set; }
 
             /// <summary>
-            /// <para>优惠券id</para>
+            /// <para>The ID of the coupon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>59226280</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CouponId { get; set; }
 
             /// <summary>
-            /// <para>优惠券模版id</para>
+            /// <para>The ID of the coupon template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>503802</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public long? CouponTemplateId { get; set; }
 
             /// <summary>
-            /// <para>优惠券有效期</para>
+            /// <para>The validity period of the coupon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-06 00:00:00 ~ 2023-04-07 00:00:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string EffDate { get; set; }
 
             /// <summary>
-            /// <para>优惠券发放时间</para>
+            /// <para>The time when the coupon was issued. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-06 19:32:10</para>
@@ -97,11 +97,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string PublishDate { get; set; }
 
             /// <summary>
-            /// <para>优惠券状态 </br>
-            /// AVAILABLE 正常 </br>
-            /// EXHAUSTED 已用完 </br>
-            /// EXPIRED 已过期 </br>
-            /// ABANDONED 已作废 </br></para>
+            /// <para>The coupon status. Valid values:</br>
+            /// AVAILABLE: Normal.</br>
+            /// EXHAUSTED: Used up.</br>
+            /// EXPIRED: Expired.</br>
+            /// ABANDONED: Voided.</br></para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>二级分销商Uid</para>
+            /// <para>The UID of the T2 partner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5248516956402795</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string T2PartnerUid { get; set; }
 
             /// <summary>
-            /// <para>阿里云uid</para>
+            /// <para>The UID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1647668856741998</para>
@@ -133,24 +133,24 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>接口返回提示信息</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>分页信息</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListCouponUsageResponseBodyPageInfo PageInfo { get; set; }
         public class ListCouponUsageResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>分页，当前页</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>分页，每页数量</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>分页，总量</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>接口请求id返回问题提供查询使用</para>
+        /// <para>The request ID. You can provide this ID for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>

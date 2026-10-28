@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class ListExportTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the export task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12343</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -26,6 +35,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The current page number. Pages start from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +46,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +57,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The export scenario code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>intlCustomerQuotaRecord: Customer management, quota transaction export.</description></item>
+        /// <item><description>intlExportUsageDeductHistory: Customer management, deduction detail export.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

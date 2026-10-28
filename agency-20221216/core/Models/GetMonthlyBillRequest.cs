@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetMonthlyBillRequest : TeaModel {
         /// <summary>
-        /// <para>Bill Owner type. Value Range:</br>
-        /// 1: Master account</br>
-        /// 2: Sub account</br></para>
+        /// <para>Bill Owner type.</para>
+        /// <para> Value range:</para>
+        /// <para>1: Master account </para>
+        /// <para>2: Sub account</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,17 +25,15 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// <para>Value Range:</para>
-        /// <list type="bullet">
-        /// <item><description>MonthlyInvoice</description></item>
-        /// <item><description>MonthRefundInvoice</description></item>
-        /// <item><description>MonthlySummary (Deprecated)</description></item>
-        /// <item><description>MonthlyInstanceAddAdjustBill </description></item>
-        /// <item><description>MonthlyInstanceRefundBill</description></item>
-        /// <item><description>MonthlyAddAdjustInvoce</description></item>
-        /// <item><description>MonthlyRefundAdjustInvoce </description></item>
-        /// <item><description>MonthlyInstanceConsumeV2 </description></item>
-        /// <item><description>MarginReportV2</description></item>
-        /// </list>
+        /// <para>MonthlyInvoice</para>
+        /// <para>MonthRefundInvoice</para>
+        /// <para>MonthlySummary (Deprecated)</para>
+        /// <para>MonthlyInstanceAddAdjustBill </para>
+        /// <para>MonthlyInstanceRefundBill</para>
+        /// <para>MonthlyAddAdjustInvoce</para>
+        /// <para>MonthlyRefundAdjustInvoce </para>
+        /// <para>MonthlyInstanceConsumeV2 </para>
+        /// <para>MarginReportV2</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

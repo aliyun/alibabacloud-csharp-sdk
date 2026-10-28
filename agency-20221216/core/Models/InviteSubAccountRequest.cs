@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class InviteSubAccountRequest : TeaModel {
         /// <summary>
-        /// <para>List of invited account information,  less than 5 accounts at a time.</br>
-        /// <c>Sub-levels &lt;= 5</c></para>
+        /// <para>The list of account information for the invitation. A maximum of five accounts can be invited at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccountInfoList")]
@@ -19,22 +18,22 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public List<InviteSubAccountRequestAccountInfoList> AccountInfoList { get; set; }
         public class InviteSubAccountRequestAccountInfoList : TeaModel {
             /// <summary>
-            /// <para>The name of Sub Account:</br></para>
-            /// <ol>
-            /// <item><description>Use the official name of Company, if Sub Account is an enterprise.</br></description></item>
-            /// <item><description>Use the official name of Partner, if Sub Account is a T2 reseller.</br></description></item>
-            /// </ol>
+            /// <para>The name of the distribution customer. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If the distribution customer is an enterprise, this is the company name.</description></item>
+            /// <item><description>If the distribution customer is a T2 reseller partner, this is the partner name.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>XXX Technology LTD.</para>
+            /// <para>XXX技术有限公司</para>
             /// </summary>
             [NameInMap("AccountNickname")]
             [Validation(Required=false)]
             public string AccountNickname { get; set; }
 
             /// <summary>
-            /// <para>The total budget Credit of Sub Account that distributed by Partner.</para>
+            /// <para>The total budget quota that the partner allocates to the distribution customer.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,12 +43,18 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             [Validation(Required=false)]
             public string CreditLine { get; set; }
 
+            /// <summary>
+            /// <para>The account manager of the customer. Maximum length: 50 characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>张三</para>
+            /// </summary>
             [NameInMap("CustomerBd")]
             [Validation(Required=false)]
             public string CustomerBd { get; set; }
 
             /// <summary>
-            /// <para>Customer ID, Returning ID from CreateCustomer API.</para>
+            /// <para>The customer ID returned by the CreateCustomer API.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,7 +65,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CustomerId { get; set; }
 
             /// <summary>
-            /// <para>The email address of End User,  which will receive the invitation email.</para>
+            /// <para>The email address of the distribution customer account. The invitation email is sent to this address.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -71,11 +76,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string EmailAddress { get; set; }
 
             /// <summary>
-            /// <para>Initial Order Status</br></para>
-            /// <ol>
-            /// <item><description>ban：Ban the new purchase action--After End User finish registration and authorization, they can\&quot;t issue Cloud Resource order immediately. Partner should manually update the &quot;Order Control&quot; settings as &quot;Normal&quot; to enable new order.</br></description></item>
-            /// <item><description>normal：Normal--After End User finished registration and authorization, they can issue Cloud Resource order immediately.</br></description></item>
-            /// </ol>
+            /// <para>The initial order placement status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ban: Purchase is prohibited. After the customer is registered and associated, the customer cannot immediately place orders to purchase cloud resources. You must set the order control to normal before the customer can place orders.</description></item>
+            /// <item><description>normal: Normal. After the customer is registered and associated, the customer can immediately place orders to purchase cloud resources.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -86,20 +91,22 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string NewBuyStatus { get; set; }
 
             /// <summary>
-            /// <para>Description of Sub Account.</para>
+            /// <para>The description of the distribution customer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The invitation to develop XX as a Sub Account</para>
+            /// <para>发展xx为客户的邀请</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The type of Sub Account</br></para>
-            /// <para>1 Agency\&quot;s End User</br>
-            /// 2 Reseller\&quot;s End user</br>
-            /// 5 Reseller\&quot;s T2 Partner</br></para>
+            /// <para>The type of the sub-account. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: end user of Agency.</description></item>
+            /// <item><description>2: end user of Reseller. </description></item>
+            /// <item><description>5: T2 partner of Reseller.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -110,10 +117,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string SubAccountType { get; set; }
 
             /// <summary>
-            /// <para>Partner\&quot;s Shutdown Policy Management for Sub Account.</br>
-            /// 1: delayStop. The account have Shutdown-delay Privilege,  After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</br>
-            /// 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\&quot;s life-circle of Sub Account.</br>
-            /// 3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br></para>
+            /// <para>The shutdown policy that the partner manages for the distribution customer. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: delayStop. Alibaba Cloud takes over the resources and the customer enjoys a delayed shutdown quota. When the delayed shutdown quota is exhausted, instance shutdown is triggered. If payment is not made within 15 days, storage resources are released.</description></item>
+            /// <item><description>2: noStop. Manual management with no shutdown on overdue payment. The system does not manage the resource lifecycle of the non-trusteeship linked account. The partner must manually manage the instance shutdown status of the customer.</description></item>
+            /// <item><description>3: immediatelyStop. Instances are immediately shut down on overdue payment. When the available quota of the customer account is less than 0, the account enters the overdue payment status and instance shutdown is triggered.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

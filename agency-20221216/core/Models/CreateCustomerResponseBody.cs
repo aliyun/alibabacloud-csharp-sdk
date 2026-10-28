@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class CreateCustomerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Code indicating whether the call was successful.</para>
+        /// <para>The code that indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data indicating whether a customer was successfully created. If it\&quot;s &quot;true&quot;, the Message contains CID.</para>
+        /// <para>Indicates whether the customer is created. If the value is true, the Message contains the CID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>Massage indicating whether the call was successful.</para>
+        /// <para>The same as the Code parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, Alibaba Cloud will track errors with this.</para>
+        /// <para>The request ID. Alibaba Cloud uses this ID for error tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A9B725C7-3DBD-576B-AC91-F6F22AB99A77</para>
@@ -50,7 +50,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Candidate Value: True/False, which indicates whether the current API call it self was successful. It does not guarantee the success of subsequent business operations.</para>
+        /// <para>Indicates whether the current API call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True</description></item>
+        /// <item><description>False</description></item>
+        /// </list>
+        /// <para>This does not indicate whether the subsequent business operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetInviteStatusRequest : TeaModel {
         /// <summary>
-        /// <para>inviteId list</br>
-        /// <c>Sub-levels &lt;= 5</c></para>
+        /// <para>inviteId list</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InviteStatusList")]
@@ -19,7 +18,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public List<GetInviteStatusRequestInviteStatusList> InviteStatusList { get; set; }
         public class GetInviteStatusRequestInviteStatusList : TeaModel {
             /// <summary>
-            /// <para>Invitation ID, From interface InviteSubAccount</para>
+            /// <para>The invitation ID, which is obtained from the InviteSubAccount operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>

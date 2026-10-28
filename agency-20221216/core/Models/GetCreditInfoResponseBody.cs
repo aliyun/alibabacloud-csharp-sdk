@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetCreditInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>success</para>
+        /// <para>The result code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>200: OK.</description></item>
+        /// <item><description>1109: System error.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +24,19 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The Credit Line of Sub Account</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCreditInfoResponseBodyData Data { get; set; }
         public class GetCreditInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Percentage value, when the available credit limit is lower than this credit limit percentage, a notification E-mail will be sent to the main account.</para>
+            /// <para>The credit control status of the sub-account. Valid values:</para>
+            /// <ol>
+            /// <item><description>normal: Normal.</description></item>
+            /// <item><description>arrearsNotShutdown: The account has an overdue payment but is not shut down.</description></item>
+            /// <item><description>shutdown: Shut down.</description></item>
+            /// </ol>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -37,11 +46,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string AccountStatus { get; set; }
 
             /// <summary>
-            /// <para>Manage order operation.</para>
-            /// <list type="bullet">
-            /// <item><description>ban：Ban the new purchase action.</description></item>
-            /// <item><description>normal：The account could raise new purchase order as usual.</description></item>
-            /// </list>
+            /// <para>The percentage value. When the available credit drops below this percentage of the credit limit, an email notification is sent to the main account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -51,12 +56,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string AlarmThreshold { get; set; }
 
             /// <summary>
-            /// <para>The systematic controlling policy for resource management, specifically when the available Credit of Sub Account falls to 0 or less.</br></para>
-            /// <list type="bullet">
-            /// <item><description>1: delayStop. The account have Shutdown-delay Privilege,  After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</br></description></item>
-            /// <item><description>2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\&quot;s life-circle of Sub Account.</br></description></item>
-            /// <item><description>3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br></description></item>
-            /// </list>
+            /// <para>The available credit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string AvailableCredit { get; set; }
 
             /// <summary>
-            /// <para>Consumed &amp; Undeducted Value（Amount consumption at the current point in time and for which the quota has not been deducted）</para>
+            /// <para>The total outstanding amount of virtual bills before simulated deduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.000000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string ConsumedUndeductedValue { get; set; }
 
             /// <summary>
-            /// <para>The Credit available to consume.</para>
+            /// <para>The credit limit of the sub-account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -86,12 +86,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string CreditLine { get; set; }
 
             /// <summary>
-            /// <para>The Credit Control status, Value Range:</br></para>
-            /// <ol>
-            /// <item><description>normal - Sub Account status is running as usual.</description></item>
-            /// <item><description>arrearsNotShutdown - Sub Account status is running as usual, but have outstanding bill(s).</description></item>
-            /// <item><description>shutdown -  Sub Account status is down.</description></item>
-            /// </ol>
+            /// <para>The credit amount consumed by the sub-account that has not yet been paid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -101,9 +96,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string OutstandingBalance { get; set; }
 
             /// <summary>
-            /// <para>PAYG Freeze Status</para>
-            /// <para>freeze：freeze</para>
-            /// <para>normal：normal</para>
+            /// <para>The freeze status of pay-as-you-go. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>freeze: Frozen.</description></item>
+            /// <item><description>normal: Normal.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -113,7 +110,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string PAYGFreezeStatus { get; set; }
 
             /// <summary>
-            /// <para>Obtain total unpaid amount on demo bill before simulated deduction.</para>
+            /// <para>The policy that the system uses to manage resources when the active credit is 0 or less. Valid values:</para>
+            /// <para>1: delayStop. Alibaba Cloud takes over the resources. Instances are shut down after the credit is exhausted with a delay epoch. If payment is not made within 15 days, storage resources are released.</para>
+            /// <para>2: noStop. The system does not manage the resource lifecycle of the non-trusteeship linked account. The partner must manage it manually.</para>
+            /// <para>3: immediatelyStop. Instances are shut down immediately when the account enters the overdue payment state, which triggers instance shutdown.</para>
             /// 
             /// <b>Example:</b>
             /// <para>delayStop</para>
@@ -123,7 +123,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public string ZeroCreditShutdownPolicy { get; set; }
 
             /// <summary>
-            /// <para>Request ID, Alibaba Cloud will track errors with this.</para>
+            /// <para>The status that manages the purchase actions of the customer. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ban: New purchases are prohibited.</description></item>
+            /// <item><description>cancelBan: Normal status.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ban</para>
@@ -135,16 +139,18 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</para>
+        /// <para>The message information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The data returned.</para>
+        /// <para>成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID. Alibaba Cloud uses this ID for error tracking.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
         /// </summary>
@@ -153,7 +159,12 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Credit have been consumed by Sub Account, and haven\&quot;t be paid.</para>
+        /// <para>Indicates whether the current API call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True: Successful.</description></item>
+        /// <item><description>False: Failed.</description></item>
+        /// </list>
+        /// <para>This does not indicate whether the subsequent business operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
