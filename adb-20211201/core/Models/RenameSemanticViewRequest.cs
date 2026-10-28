@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class RenameSemanticViewRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The ID of the ADB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The new schema name in which the semantic view resides.</para>
+        /// <para>The new schema name of the semantic view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string NewViewName { get; set; }
 
         /// <summary>
-        /// <para>The original schema name in which the semantic view resides.</para>
+        /// <para>The original schema name of the semantic view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

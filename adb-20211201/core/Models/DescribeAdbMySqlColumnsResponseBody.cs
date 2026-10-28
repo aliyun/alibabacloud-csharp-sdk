@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The column name.</para>
+            /// <para>The name of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>id</para>
@@ -61,8 +61,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>Success</b> is returned. </description></item>
-        /// <item><description>If the request failed, a specific error code is returned.</description></item>
+        /// <item><description>If the request is successful, <b>Success</b> is returned.</description></item>
+        /// <item><description>If the request fails, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A9F013CD-0222-595E-8157-445969B97F03</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The table name.</para>
+        /// <para>The name of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

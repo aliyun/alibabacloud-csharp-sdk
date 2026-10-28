@@ -21,10 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// </remarks>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the specified cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

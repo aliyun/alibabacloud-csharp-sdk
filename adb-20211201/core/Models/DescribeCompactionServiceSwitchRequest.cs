@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the instance resides. The value must be the same as the region of the instance specified by DBClusterId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
     }
 
 }

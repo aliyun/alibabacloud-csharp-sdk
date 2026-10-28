@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster can be an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
         /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
-        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+        /// <item><description><b>Clickhouse</b>: the wide-table engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,6 +64,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <para>The name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_group</para>
+        /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }

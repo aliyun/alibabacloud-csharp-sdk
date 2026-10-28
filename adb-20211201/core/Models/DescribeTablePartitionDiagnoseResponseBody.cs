@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The detection result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>检测到表存在分区不合理的情况</para>
+            /// <para>Multiple oversized non-partitioned tables are detected.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>表分区合理性检测</para>
+            /// <para>Improper partition field diagnostics</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

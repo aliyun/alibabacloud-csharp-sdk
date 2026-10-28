@@ -17,12 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public DescribeCompactionServiceSwitchResponseBodyData Data { get; set; }
         public class DescribeCompactionServiceSwitchResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the remote build feature is enabled.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>Indicates whether the remote build service is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

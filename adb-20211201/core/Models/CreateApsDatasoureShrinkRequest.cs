@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service (SLS) information for the data source to be created.</para>
+        /// <para>The Simple Log Service (SLS) information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

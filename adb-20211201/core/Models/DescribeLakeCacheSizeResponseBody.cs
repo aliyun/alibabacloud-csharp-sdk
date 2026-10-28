@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeLakeCacheSizeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The value 200 indicates that the request is successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public DescribeLakeCacheSizeResponseBodyData Data { get; set; }
         public class DescribeLakeCacheSizeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The size of the lake cache space. Unit: GB.</para>
+            /// <para>The size of the lake storage acceleration cache space, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The size of the data that occupies the lake cache space. Unit: GB.</para>
+            /// <para>The used capacity of the lake storage cache space, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? DataSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the lake cache feature is enabled.</para>
+            /// <para>Indicates whether lake storage acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? EnableLakeCache { get; set; }
 
             /// <summary>
-            /// <para>The clusters that share the lake cache space.</para>
+            /// <para>The list of instances that share the lake storage cache space.</para>
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]

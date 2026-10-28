@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetViewObjectsResponseBodyData Data { get; set; }
         public class GetViewObjectsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number. The value is a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+            /// <para>The page number. The value must be a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The number of entries per page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>30</b> (default).</description></item>
-            /// <item><description><b>50</b>.</description></item>
-            /// <item><description><b>100</b>.</description></item>
+            /// <item><description><b>30</b> (default)</description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>100</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<TableSummaryModel> TableSummaryModels { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The page number. The value is a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default).</description></item>
-        /// <item><description><b>50</b>.</description></item>
-        /// <item><description><b>100</b>.</description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

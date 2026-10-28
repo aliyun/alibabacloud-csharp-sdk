@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsHiveWorkloadResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried job.</para>
+        /// <para>The workload information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AdvancedConfig { get; set; }
 
             /// <summary>
-            /// <para>The policy to handle tables with the same name in the destination cluster.</para>
+            /// <para>The handling strategy when a database or table with the same name exists at the destination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Intercept</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ConflictStrategy { get; set; }
 
             /// <summary>
-            /// <para>The time when the workload was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? DatasourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data source.</para>
+            /// <para>The data source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sls-******</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DatasourceName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the E-MapReduce (EMR) cluster.</para>
+            /// <para>The EMR cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EmrClusterId { get; set; }
 
             /// <summary>
-            /// <para>The number of AnalyticDB compute units (ACUs) required for migration.</para>
+            /// <para>The number of ACUs required for migration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FullComputeUnit { get; set; }
 
             /// <summary>
-            /// <para>The URL of the Hive Metastore.</para>
+            /// <para>The Hive metastore URL.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MetaStoreUri { get; set; }
 
             /// <summary>
-            /// <para>The Object Storage Service (OSS) URL of the AnalyticDB for MySQL cluster data.</para>
+            /// <para>The OSS address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://******</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OssLocation { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks that are allowed in parallel.</para>
+            /// <para>The degree of parallelism.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group to which the SQL statement belongs.</para>
+            /// <para>The resource pool to which the SQL statement belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroup { get; set; }
 
             /// <summary>
-            /// <para>The status of the workload.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The expression that manually matches the source database table whitelist.</para>
+            /// <para>The whitelist expression for manually matching source databases and tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SyncAllowExpression { get; set; }
 
             /// <summary>
-            /// <para>Manually match the blacklist expressions for source database tables.</para>
+            /// <para>The blacklist expression for manually matching source databases and tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>def</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The name of the vSwitch.</para>
+            /// <para>The vSwitch name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-******</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Vswitch { get; set; }
 
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The data link task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aps-******</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string WorkloadId { get; set; }
 
             /// <summary>
-            /// <para>The name of the workload.</para>
+            /// <para>The workload name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string WorkloadName { get; set; }
 
             /// <summary>
-            /// <para>The name of the workload.</para>
+            /// <para>The workload name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

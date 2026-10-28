@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the destination region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable prefix mode. Valid values:</para>
+        /// <para>Specifies whether to enable the prefix mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enable prefix mode.</description></item>
-        /// <item><description>false: Disable prefix mode.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>schema 。</para>
+        /// <para>The schema.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

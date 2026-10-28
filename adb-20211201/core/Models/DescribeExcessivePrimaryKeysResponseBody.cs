@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The queried primary key fields.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>id,date</para>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("PrimaryKeyColumns")]
             [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The number of primary key fields.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("PrimaryKeyCount")]
             [Validation(Required=false)]

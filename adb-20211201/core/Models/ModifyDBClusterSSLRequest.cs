@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyDBClusterSSLRequest : TeaModel {
         /// <summary>
-        /// <para>The private or public endpoint for which the server certificate needs to be created or updated.</para>
+        /// <para>The internal or public endpoint for which to create or update a server certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-***********.ads.aliyuncs.com</para>
@@ -31,12 +31,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable SSL encryption. Valid values:</para>
+        /// <para>Specifies whether to enable SSL connection encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled</description></item>
-        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,6 +53,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The SSL operation. This parameter and EnableSSL are mutually exclusive. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enable: Enables SSL.</description></item>
+        /// <item><description>Disable: Disables SSL.</description></item>
+        /// <item><description>Update: Updates the validity period of an enabled SSL certificate and retains the current endpoint bound to the certificate. When you set this parameter to Update, do not specify ConnectionString, or specify an endpoint that is the same as the current endpoint bound to the certificate.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Update</para>
+        /// </summary>
+        [NameInMap("SSLEnabled")]
+        [Validation(Required=false)]
+        public string SSLEnabled { get; set; }
 
     }
 

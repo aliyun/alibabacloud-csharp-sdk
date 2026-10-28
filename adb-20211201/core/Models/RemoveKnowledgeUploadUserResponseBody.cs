@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public RemoveKnowledgeUploadUserResponseBodyData Data { get; set; }
         public class RemoveKnowledgeUploadUserResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The location of the knowledge base file.</para>
+            /// <para>The address of the knowledge base file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://bucketName/path/to/file.pdf</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FileLocation { get; set; }
 
             /// <summary>
-            /// <para>The prompt message.</para>
+            /// <para>The message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The number of users that were successfully deleted.</para>
+            /// <para>The number of successfully deleted users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? Removed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <para>Indicates whether the request is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The request was successful.</description></item>
-            /// <item><description><b>false</b>: The request failed.</description></item>
+            /// <item><description><b>true</b>: Successful.</description></item>
+            /// <item><description><b>false</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

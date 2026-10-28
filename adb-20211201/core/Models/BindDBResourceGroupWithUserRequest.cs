@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account. It can be a standard account or a privileged account.</para>
+        /// <para>The database account to be associated. You can associate a standard database account or a privileged database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

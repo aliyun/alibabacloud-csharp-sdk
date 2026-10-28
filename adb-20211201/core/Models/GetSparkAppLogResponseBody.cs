@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried log.</para>
+        /// <para>The log details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSparkAppLogResponseBodyData Data { get; set; }
         public class GetSparkAppLogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+            /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-clusterxxx</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The content of the log.</para>
+            /// <para>The log content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22/04/22 15:30:49 INFO Utils: Start the dump task because s202206061441hz22a35ab000****-0001 app end, the interval is 238141ms;22/04/22 15:30:49 INFO AbstractConnector: Stopped Spark@5e774d9d{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string LogContent { get; set; }
 
             /// <summary>
-            /// <para>The number of log entries. A value of 0 indicates that no valid logs are returned.</para>
+            /// <para>The number of log lines. A value of 0 indicates that no valid logs exist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3517972480</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? LogSize { get; set; }
 
             /// <summary>
-            /// <para>The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</para>
+            /// <para>The alert information, such as task execution failure or insufficient resources. If no alerts are triggered, an empty value is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WARNING:  log file maybe deleted, please check oss path: oss://TestBucketName/applog/</para>

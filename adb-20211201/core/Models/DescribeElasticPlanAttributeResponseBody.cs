@@ -10,17 +10,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried scaling plan.</para>
+        /// <para>The elastic plan.</para>
         /// </summary>
         [NameInMap("ElasticPlan")]
         [Validation(Required=false)]
         public DescribeElasticPlanAttributeResponseBodyElasticPlan ElasticPlan { get; set; }
         public class DescribeElasticPlanAttributeResponseBodyElasticPlan : TeaModel {
             /// <summary>
-            /// <para>Indicates whether <b>Default Proportional Scaling for EIUs</b> is enabled. Valid values: true: Default Proportional Scaling for EIUs is enabled. If you set this parameter to true, storage resources are scaled along with computing resources. false: Default Proportional Scaling for EIUs is not enabled.</para>
-            /// <remarks>
-            /// <para> You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster. After you enable a scaling plan of the Default Proportional Scaling for EIUs type, you cannot enable scaling plans of other types.</para>
+            /// <para>Indicates whether <b>proportional default elastic scaling for the storage acceleration service (EIU)</b> is enabled.
+            /// Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled. After this feature is enabled, storage resources scale in or out along with the elastic scaling of compute resources.</description></item>
+            /// <item><description>false: Disabled.<remarks>
+            /// <para>Only one storage elastic plan with proportional default elastic scaling for the storage acceleration service (EIU) can be enabled for the entire cluster. After this type of elastic plan is enabled, no other storage elastic plans can be enabled.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -30,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? AutoScale { get; set; }
 
             /// <summary>
-            /// <para>A CORN expression that indicates the scaling cycle and time for the scaling plan.</para>
+            /// <para>The cron expression, which indicates the scaling cycle and scaling time of the elastic plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 20 14 * * ?</para>
@@ -40,7 +45,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>The name of the scaling plan.</para>
+            /// <para>The name of the elastic plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ElasticPlanName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the scaling plan is enabled.</para>
+            /// <para>Indicates whether the elastic plan is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -60,9 +65,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The end time of the scaling plan.</para>
+            /// <para>The end time.</para>
             /// <remarks>
-            /// <para> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -73,7 +78,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group used by the scaling plan.</para>
+            /// <para>The name of the resource group to which the elastic plan belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -83,9 +88,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The start time of the scaling plan.</para>
+            /// <para>The start time.</para>
             /// <remarks>
-            /// <para> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -96,7 +101,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The amount of elastic resources after scaling.</para>
+            /// <para>The target specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32ACU</para>
@@ -106,7 +111,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TargetSize { get; set; }
 
             /// <summary>
-            /// <para>The type of the scaling plan.</para>
+            /// <para>The type of the elastic plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EXECUTOR</para>
@@ -118,7 +123,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A5C433C2-001F-58E3-99F5-3274C14DF8BD</para>

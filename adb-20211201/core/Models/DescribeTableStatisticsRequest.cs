@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to query information by table name.</para>
+        /// <para>The search keyword. Fuzzy search by table name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>you_table_name</para>
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort query results. Specify the parameter value in the JSON format.</para>
-        /// <para>Example:</para>
+        /// <para>The sorting rule for a specified field. The value is a JSON array. The array is ordered. Specify the fields to be sorted and the sorting order in sequence:</para>
+        /// <para>For example:</para>
         /// <pre><c>[
         /// 
         ///     {
@@ -48,8 +48,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// ]
         /// </c></pre>
-        /// <para>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</para>
-        /// <para>Field and Type are case-insensitive.</para>
+        /// <para>Field specifies the name of the field to be sorted. Only the Name field is supported.
+        /// Type specifies the sorting order. Desc indicates descending order, and Asc indicates ascending order.</para>
+        /// <para>Both parameters are case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</para>
@@ -79,9 +80,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

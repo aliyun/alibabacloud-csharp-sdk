@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetSparkAppMetricsResponseBodyData Data { get; set; }
         public class GetSparkAppMetricsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Spark application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s202302051515shfa865f8000****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The attempt ID of the Spark application.</para>
+            /// <para>The retry ID of the Spark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s202301061000hz57d797b0000201-****</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EventLogPath { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether parsing is complete. Valid values:</para>
+            /// <para>Indicates whether the parsing is completed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><b>true</b>: Completed.</description></item>
+            /// <item><description><b>false</b>: Not completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Finished { get; set; }
 
             /// <summary>
-            /// <para>The metrics.</para>
+            /// <para>The metric data.</para>
             /// </summary>
             [NameInMap("ScanMetrics")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? OutputRowsCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of scanned bytes.</para>
+                /// <para>The size of the scanned data in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

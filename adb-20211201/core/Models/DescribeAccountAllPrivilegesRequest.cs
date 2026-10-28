@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountAllPrivilegesRequest : TeaModel {
         /// <summary>
-        /// <para>The database account name for the cluster.</para>
+        /// <para>The name of the database account in the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID for the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
-        /// &lt;props=&quot;intl&quot;&gt;The cluster ID for the Data Lakehouse Edition.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>If the response is truncated, use the <c>Marker</c> value from the response in this field to retrieve the next set of results.</para>
+        /// <para>If the returned results are truncated, you can set this parameter to the <c>Marker</c> value from the response to retrieve the subsequent entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>

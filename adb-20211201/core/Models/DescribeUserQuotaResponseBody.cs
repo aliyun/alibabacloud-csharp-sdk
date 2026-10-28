@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeUserQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available elastic AnalyticDB compute units (ACUs).</para>
+        /// <para>The available elastic ACUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512 ACU</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The available reserved computing resources.</para>
+        /// <para>The available reserved compute resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>48 ACU</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ReserverdCompteACU { get; set; }
 
         /// <summary>
-        /// <para>The available reserved storage resources.</para>
+        /// <para>The available storage compute resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24 ACU</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetSparkAppStateResponseBodyData Data { get; set; }
         public class GetSparkAppStateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Spark application ID.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s202204191546hzpread6a896000****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</para>
+            /// <para>The alert message returned, such as task execution failure or insufficient resources. This parameter is empty if no alerts are generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Insufficient resources.</para>
@@ -57,19 +57,19 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The execution state of the application. Valid values:</para>
+            /// <para>The execution status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SUBMITTED</b></description></item>
-            /// <item><description><b>STARTING</b></description></item>
-            /// <item><description><b>RUNNING</b></description></item>
-            /// <item><description><b>FAILING</b></description></item>
-            /// <item><description><b>FAILED</b></description></item>
-            /// <item><description><b>KILLING</b></description></item>
-            /// <item><description><b>KILLED</b></description></item>
-            /// <item><description><b>SUCCEEDING</b></description></item>
-            /// <item><description><b>COMPLETED</b></description></item>
-            /// <item><description><b>FATAL</b></description></item>
-            /// <item><description><b>UNKNOWN</b></description></item>
+            /// <item><description><b>SUBMITTED</b>: Submitted.</description></item>
+            /// <item><description><b>STARTING</b>: Starting.</description></item>
+            /// <item><description><b>RUNNING</b>: Running.</description></item>
+            /// <item><description><b>FAILING</b>: Failing. The task failed and the environment is being cleaned up.</description></item>
+            /// <item><description><b>FAILED</b>: Failed.</description></item>
+            /// <item><description><b>KILLING</b>: Killing. The task is being terminated and the environment is being cleaned up.</description></item>
+            /// <item><description><b>KILLED</b>: Killed.</description></item>
+            /// <item><description><b>SUCCEEDING</b>: Succeeding. The task execution is complete and the environment is being cleaned up.</description></item>
+            /// <item><description><b>COMPLETED</b>: Completed.</description></item>
+            /// <item><description><b>FATAL</b>: Fatal error.</description></item>
+            /// <item><description><b>UNKNOWN</b>: Unknown error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

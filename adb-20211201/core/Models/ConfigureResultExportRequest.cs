@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the cluster IDs of all AnalyticDB for MySQL clusters in the destination region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The export type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: Specifies that the export destination is SLS.</description></item>
-        /// <item><description>OSS: Specifies that the export destination is OSS.</description></item>
+        /// <item><description>SLS: Exports data to SLS.</description></item>
+        /// <item><description>OSS: Exports data to OSS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ExportType { get; set; }
 
         /// <summary>
-        /// <para>The OSS configuration details if the destination is of the OSS type.</para>
+        /// <para>The OSS configuration information when the export destination is OSS.</para>
         /// </summary>
         [NameInMap("OssInfo")]
         [Validation(Required=false)]
         public ConfigureResultExportRequestOssInfo OssInfo { get; set; }
         public class ConfigureResultExportRequestOssInfo : TeaModel {
             /// <summary>
-            /// <para>The OSS path where the result sets are stored.</para>
+            /// <para>The OSS path where the export results are stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://testBucketName/data_result</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExportBasePath { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group that runs the job.</para>
+            /// <para>The name of the resource group in which the export SQL statement is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aps</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroup { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the OSS file. Unit: days. Minimum: 1 day, maximum: 30 days. Values outside this range will result in an error.</para>
+            /// <para>The expiration time of the OSS file. Unit: days. The minimum value is 1 day and the maximum value is 30 days. An error is returned if the value is out of range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The SLS configuration details if the destination is of the SLS type.</para>
+        /// <para>The SLS configuration information when the export destination is SLS.</para>
         /// </summary>
         [NameInMap("SlsInfo")]
         [Validation(Required=false)]
         public ConfigureResultExportRequestSlsInfo SlsInfo { get; set; }
         public class ConfigureResultExportRequestSlsInfo : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the Logstore temporarily generated during the result set export. Unit: days. The Logstore is automatically deleted after it expires. Minimum value: 1 day, maximum: 30 days. Values outside this range will result in an error.</para>
+            /// <para>The expiration time of the temporary Logstore generated for result set export. Unit: days. The Logstore is automatically deleted after expiration. The minimum value is 1 day and the maximum value is 30 days. An error is returned if the value is out of range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? LogstoreTtl { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group that runs the job.</para>
+            /// <para>The name of the resource group in which the export SQL statement is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aps</para>

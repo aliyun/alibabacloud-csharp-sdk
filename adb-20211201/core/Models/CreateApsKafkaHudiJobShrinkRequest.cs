@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsKafkaHudiJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The RAM role of a trusted entity that is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account.
-        /// The Alibaba Cloud account that owns the AnalyticDB for MySQL cluster must be added as a trusted account to the RAM role.</para>
+        /// <para>The RAM role whose trusted entity is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account.
+        /// In the RAM role, the Alibaba Cloud account to which AnalyticDB for MySQL belongs must be configured as a trusted account for the Alibaba Cloud account to which the Kafka instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aps</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AcrossUid { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration.</para>
+        /// <para>The advanced configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the cluster IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in the destination region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,9 +75,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DataFormatType { get; set; }
 
         /// <summary>
-        /// <para>The valid values and their descriptions are as follows:
-        /// Single: The source is a single-line JSON record.
-        /// Multi: The source is a JSON array. A single JSON record is returned as the output.</para>
+        /// <para>The data output format. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Single: The source is a single-line JSON record.</description></item>
+        /// <item><description>Multi: The source is a JSON array. A single JSON record must be output.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Single</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
-        /// <para>The user-defined name of the database.</para>
+        /// <para>The custom database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The configuration for full synchronization.</para>
+        /// <para>The full synchronization configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ACU</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FullComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>The Hudi configuration for the destination.</para>
+        /// <para>The destination Hudi configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hoodie.keep.min.commits=20</para>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string HudiAdvancedConfig { get; set; }
 
         /// <summary>
-        /// <para>The configuration for incremental synchronization.</para>
+        /// <para>The incremental synchronization configurations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -139,13 +141,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string IncrementalComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>The number of nested JSON layers to parse. Valid values:
-        /// 0: No parsing is performed.
-        /// 1: One layer is parsed.
-        /// 2: Two layers are parsed.
-        /// 3: Three layers are parsed.
-        /// 4: Four layers are parsed.
-        /// By default, one layer is parsed. For more information about the JSON parsing policy for nested data, see JSON parsing levels and schema field inference examples.</para>
+        /// <para>The nesting parse level for JSON. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: No parsing.</description></item>
+        /// <item><description>1: Parse one level.</description></item>
+        /// <item><description>2: Parse two levels.</description></item>
+        /// <item><description>3: Parse three levels.</description></item>
+        /// <item><description>4: Parse four levels.
+        /// Default value: 1. For more information about the JSON nesting parse strategy, see JSON parse levels and schema field inference examples.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? JsonParseLevel { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Kafka instance. Obtain the ID from the Kafka console.</para>
+        /// <para>Instance ID of the Kafka instance. You can obtain instance ID in the Kafka console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -165,7 +169,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string KafkaClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Kafka topic. Obtain the ID from the Kafka console.</para>
+        /// <para>The ID of the Kafka topic. You can obtain the ID in the Kafka console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -185,7 +189,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? LakehouseId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to consume in a single batch.</para>
+        /// <para>The maximum number of messages to consume per trigger.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000</para>
@@ -195,7 +199,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? MaxOffsetsPerTrigger { get; set; }
 
         /// <summary>
-        /// <para>The destination lakehouse address. This must be a complete OSS path.</para>
+        /// <para>The destination lakehouse address, which is a complete OSS path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-xx-zzz/yyy/</para>
@@ -225,16 +229,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PartitionSpecsShrink { get; set; }
 
         /// <summary>
-        /// <para>The primary key settings. This parameter supports the UUID policy and the mapping policy. The policies are described as follows.
-        /// UUID policy: &quot;Strategy&quot;: &quot;uuid&quot;.
-        /// Mapping policy:
+        /// <para>The primary key settings, including the UUID strategy and the mapping strategy. Details:
+        /// UUID strategy: &quot;Strategy&quot;: &quot;uuid&quot;.
+        /// Mapping strategy:
         /// &quot;Strategy&quot;: &quot;mapping&quot;,
         /// &quot;Values&quot;:[
-        /// &quot;f1&quot;,
-        /// &quot;f2&quot;
+        ///  &quot;f1&quot;,
+        ///  &quot;f2&quot;
         /// ],
         /// &quot;RecordVersionField&quot;,&quot;xxx&quot;
-        /// \<c>RecordVersionField\\</c> specifies the Hudi record version.</para>
+        /// RecordVersionField specifies the Hudi record version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;Strategy&quot;: &quot;mapping&quot;</para>
@@ -276,10 +280,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The initial consumer offset for Kafka.
-        /// Valid values:
-        /// begin_cursor, end_cursor, and timestamp.
-        /// These values correspond to the earliest offset, the latest offset, and a specified time.</para>
+        /// <para>The starting consumption offset for Kafka. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>begin_cursor: The earliest offset.</description></item>
+        /// <item><description>end_cursor: The latest offset.</description></item>
+        /// <item><description>timestamp: A specified time.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -290,7 +296,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartingOffsets { get; set; }
 
         /// <summary>
-        /// <para>The user-defined name of the table.</para>
+        /// <para>The custom table name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -301,7 +307,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The generation rule for the destination.</para>
+        /// <para>The destination generation rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -311,7 +317,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TargetGenerateRule { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination.</para>
+        /// <para>The destination type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>

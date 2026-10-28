@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DatabaseSummaryModel : TeaModel {
         /// <summary>
-        /// <para>Creation time.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>
@@ -19,20 +19,29 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The creation source of the database.</para>
+        /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
         public string CreatedBySource { get; set; }
 
+        /// <summary>
+        /// <para>The user who created the database.</para>
+        /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]
         public string CreatedByUser { get; set; }
 
+        /// <summary>
+        /// <para>The database type.</para>
+        /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -41,12 +50,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The data storage location of the database.</para>
+        /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>Owner.</para>
+        /// <para>The owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -56,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>logical database name.</para>
+        /// <para>The logical database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSchema</para>
@@ -66,7 +78,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>Update time.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class TableDetailModel : TeaModel {
         /// <summary>
-        /// <para>External data source.</para>
+        /// <para>The external data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>Column information.</para>
+        /// <para>The column information.</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<ColDetailModel> Columns { get; set; }
 
         /// <summary>
-        /// <para>Creation time.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>
@@ -36,16 +36,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The creation source of the table.</para>
+        /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
         public string CreatedBySource { get; set; }
 
+        /// <summary>
+        /// <para>The user who created the table.</para>
+        /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]
         public string CreatedByUser { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Description</para>
@@ -54,12 +60,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The storage location of the table data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://**************</para>
+        /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>Owner.</para>
+        /// <para>The owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -68,12 +80,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        /// <summary>
+        /// <para>The table property parameters.</para>
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, string> Parameters { get; set; }
 
         /// <summary>
-        /// <para>Logical database name.</para>
+        /// <para>The logical database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schemaName</para>
@@ -83,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>Logical table name.</para>
+        /// <para>The logical table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tableName</para>
@@ -93,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>Table type.</para>
+        /// <para>The table type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PHYSICAL_SCHEMA_NAME</para>
@@ -103,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableType { get; set; }
 
         /// <summary>
-        /// <para>Update time.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>

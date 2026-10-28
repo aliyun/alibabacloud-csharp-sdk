@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The queried detection items and detection results.</para>
+        /// <para>The list of detection items and results.</para>
         /// </summary>
         [NameInMap("DetectionItems")]
         [Validation(Required=false)]
         public List<DescribeControllerDetectionResponseBodyDetectionItems> DetectionItems { get; set; }
         public class DescribeControllerDetectionResponseBodyDetectionItems : TeaModel {
             /// <summary>
-            /// <para>The information about the detection result.</para>
+            /// <para>The detection result message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A CPU increase is detected on the access node.</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU增高检测</para>
+            /// <para>CPU usage spike detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the detection result. Valid values:</para>
+            /// <para>The status of the detection result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NORMAL</description></item>
             /// <item><description>WARNING</description></item>

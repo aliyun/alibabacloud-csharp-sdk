@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeMvRecommendTasksRequest : TeaModel {
         /// <summary>
-        /// <para>A static field. This parameter cannot be modified.</para>
+        /// <para>A fixed value. This parameter cannot be modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Modification is not supported.</para>
+        /// <para>Not modifiable</para>
         /// </summary>
         [NameInMap("ActionInner")]
         [Validation(Required=false)]
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>A static field. This parameter cannot be modified.</para>
+        /// <para>A fixed value. This parameter cannot be modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Modification is not supported.</para>
+        /// <para>Not modifiable</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]

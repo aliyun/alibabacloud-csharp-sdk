@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? BlockSize { get; set; }
 
         /// <summary>
-        /// <para>The bucket ID.</para>
+        /// <para>The bucket number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Compression { get; set; }
 
         /// <summary>
-        /// <para>The time when the table was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>
@@ -86,10 +86,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The creation source of the table.</para>
+        /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
         public string CreatedBySource { get; set; }
 
+        /// <summary>
+        /// <para>The user who created the table.</para>
+        /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]
         public string CreatedByUser { get; set; }
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? CurrentVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the logical database.</para>
+        /// <para>The logical database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the dictionary is encrypted.</para>
+        /// <para>Indicates whether encryption is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DistributeType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether DFS is allowed.</para>
+        /// <para>Indicates whether DFS is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -169,7 +175,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<CstoreIndexModel> Indexes { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the index is a full index.</para>
+        /// <para>Indicates whether full indexing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? IsAllIndex { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the table is a full-text index dictionary.</para>
+        /// <para>Indicates whether it is a full-text index dictionary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -206,7 +212,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public Dictionary<string, string> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The information about the partition key column.</para>
+        /// <para>The partition column information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>colName</para>
@@ -243,7 +249,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PartitionType { get; set; }
 
         /// <summary>
-        /// <para>The name of the physical database.</para>
+        /// <para>The physical database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>physicalDatabaseName</para>
@@ -253,7 +259,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PhysicalDatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The name of the physical table.</para>
+        /// <para>The physical table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>physicalTableName</para>
@@ -273,7 +279,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PreviousVersion { get; set; }
 
         /// <summary>
-        /// <para>The raw table name.</para>
+        /// <para>The original table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RawTableName</para>
@@ -317,7 +323,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RtEngineType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to route all indexes.</para>
+        /// <para>Indicates whether all indexes are routed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -337,7 +343,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RtModeType { get; set; }
 
         /// <summary>
-        /// <para>The description of the storage.</para>
+        /// <para>The storage description.</para>
         /// </summary>
         [NameInMap("Sd")]
         [Validation(Required=false)]
@@ -354,7 +360,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StoragePolicy { get; set; }
 
         /// <summary>
-        /// <para>The information about the subpartition column.</para>
+        /// <para>The subpartition column information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SubpartitionColumn</para>
@@ -384,7 +390,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SubpartitionType { get; set; }
 
         /// <summary>
-        /// <para>The name of the table engine.</para>
+        /// <para>The table engine name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hive</para>
@@ -394,7 +400,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableEngineName { get; set; }
 
         /// <summary>
-        /// <para>The name of the logical table.</para>
+        /// <para>The logical table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tableName</para>
@@ -434,7 +440,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Temporary { get; set; }
 
         /// <summary>
-        /// <para>The time when the table was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>
@@ -444,7 +450,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The normalized SQL statement that is used to create the view.</para>
+        /// <para>The normalized result of the SQL statement used to create the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ViewExpandedText</para>
@@ -454,7 +460,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ViewExpandedText { get; set; }
 
         /// <summary>
-        /// <para>The SQL statement used to create the view.</para>
+        /// <para>The SQL statement entered when creating the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ViewOriginalText</para>
@@ -464,7 +470,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ViewOriginalText { get; set; }
 
         /// <summary>
-        /// <para>The security mode of the view.</para>
+        /// <para>The view safe mode pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ViewSecurityMode</para>

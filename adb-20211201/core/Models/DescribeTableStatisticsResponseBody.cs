@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The names of databases.</para>
+        /// <para>The list of database names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;adb_platform\&quot;, \&quot;adb_ai\&quot;, \&quot;adb_data\&quot;]</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaNames { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>693</para>

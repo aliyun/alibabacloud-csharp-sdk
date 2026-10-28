@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanSpecificationsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>To query the specifications supported by the elastic plan of an Interactive resource group (compute resource type), you must specify the resource group name. To query the specifications supported by the elastic plan of the storage acceleration service (EIU), you do not need to specify the resource group name.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</para>
-        /// </description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name of a specific cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The type of the scaling plan. Valid values:</para>
+        /// <para>The type of the elastic plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EXECUTOR: the interactive resource group type, which specifies the computing resource type.</description></item>
-        /// <item><description>WORKER: the elastic I/O unit (EIU) type.</description></item>
+        /// <item><description>EXECUTOR: Interactive resource group, which is the compute resource type.</description></item>
+        /// <item><description>WORKER: storage acceleration service (EIU).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<QueryFormationInstsByTaskIDResponseBodyData> Data { get; set; }
         public class QueryFormationInstsByTaskIDResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-15T07:24:58Z</para>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The task source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>system</b>: system.</description></item>
-            /// <item><description><b>custom</b>: custom.</description></item>
+            /// <item><description><b>system</b>: System.</description></item>
+            /// <item><description><b>custom</b>: Custom.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<Dictionary<string, object>> Items { get; set; }
 
         /// <summary>
-        /// <para>The response message. OK is returned if the request was successful.</para>
+        /// <para>The message. The value is OK when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

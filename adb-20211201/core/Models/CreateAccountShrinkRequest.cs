@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateAccountShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the account.</para>
+        /// <para>The description of the account. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>Cannot exceed 256 characters in length.</description></item>
+        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>It can be up to 256 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The name of the database account. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Starts with a lowercase letter and ends with a lowercase letter or digit.</description></item>
-        /// <item><description>Contains only lowercase letters, digits, or underscores (_).</description></item>
+        /// <item><description>It must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>It can contain only lowercase letters, digits, and underscores (_).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account.</para>
+        /// <para>The password of the database account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
         /// <item><description>Special characters include: <c>!@#$%^&amp;*()_+-=</c></description></item>
-        /// <item><description>Must be 8 to 32 characters in length.</description></item>
+        /// <item><description>It must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
-        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+        /// <item><description><b>AnalyticDB</b> (default): AnalyticDB for MySQL engine.</description></item>
+        /// <item><description><b>Clickhouse</b>: wide table engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,25 +95,43 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <para>The list of PromQL write permissions.</para>
+        /// </summary>
         [NameInMap("PromqlInsertPrivileges")]
         [Validation(Required=false)]
         public string PromqlInsertPrivilegesShrink { get; set; }
 
+        /// <summary>
+        /// <para>The percentage of PromQL query nodes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.6</para>
+        /// </summary>
         [NameInMap("PromqlSelectNodePercentage")]
         [Validation(Required=false)]
         public double? PromqlSelectNodePercentage { get; set; }
 
+        /// <summary>
+        /// <para>The list of PromQL query permissions.</para>
+        /// </summary>
         [NameInMap("PromqlSelectPrivileges")]
         [Validation(Required=false)]
         public string PromqlSelectPrivilegesShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of Alibaba Cloud RAM user IDs to bind. Currently, only one RAM user can be bound.</para>
+        /// <para>The IDs of the Alibaba Cloud Resource Access Management (RAM) users to bind. Currently, only one RAM user can be bound.</para>
         /// </summary>
         [NameInMap("RamUserList")]
         [Validation(Required=false)]
         public string RamUserListShrink { get; set; }
 
+        /// <summary>
+        /// <para>The name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_group</para>
+        /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }

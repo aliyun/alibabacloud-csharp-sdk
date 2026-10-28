@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppLogRequest : TeaModel {
         /// <summary>
-        /// <para>The Spark application ID.</para>
+        /// <para>The application ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the Spark application ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the ID of the Spark application.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the target region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of log entries to return. Valid values: 1 to 500. Default value: 300.</para>
+        /// <para>The number of log lines. Valid values: 1 to 500. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? LogLength { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number for reading logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of data rows per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>

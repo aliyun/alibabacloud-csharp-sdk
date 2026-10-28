@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class UpdateFormationCrawlerRequest : TeaModel {
         /// <summary>
-        /// <para>The JSON string that contains the complete configuration of the crawler. This is the most important parameter. For more information about the internal JSON structure, see the CrawlerInfo structure definition section.</para>
+        /// <para>The JSON string that contains the complete configuration information of the crawler. This is the core parameter. For more information about the internal JSON structure, see the CrawlerInfo structure definition section.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CrawlerInfo")]

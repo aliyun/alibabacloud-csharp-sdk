@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetLakeStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code or the error code.</para>
+        /// <para>The status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The queried lake storage.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetLakeStorageResponseBodyData Data { get; set; }
         public class GetLakeStorageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the lake storage was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-15T07:24:58Z</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The creator UID.</para>
+            /// <para>The UID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreatorUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+            /// <para>The ADB instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-*******</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string LakeStorageId { get; set; }
 
             /// <summary>
-            /// <para>The operator UID.</para>
+            /// <para>The UID of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OperatorUid { get; set; }
 
             /// <summary>
-            /// <para>The owner UID.</para>
+            /// <para>The UID of the owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionCount { get; set; }
 
             /// <summary>
-            /// <para>The permissions on the lake storage.</para>
+            /// <para>The permissions of the lake storage.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Account { get; set; }
 
                 /// <summary>
-                /// <para>The read permissions.</para>
+                /// <para>The read permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The write permissions.</para>
+                /// <para>The write permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of data rows.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? RowCount { get; set; }
 
             /// <summary>
-            /// <para>The number of the tables.</para>
+            /// <para>The number of databases and tables.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? TableCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the lake storage was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-14T02:28:41Z</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -238,10 +238,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a success message is returned.****</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description>If the request is normal, <b>Ok</b> is returned.                                </description></item>
+        /// <item><description>If the request is abnormal, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -262,10 +262,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

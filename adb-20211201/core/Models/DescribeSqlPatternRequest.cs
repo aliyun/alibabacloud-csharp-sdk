@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSqlPatternRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>You can call the DescribeDBClusters operation to query the IDs of all clusters in a specified region.
+        /// <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,40 +25,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <c>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Parameters:</para>
+        /// <para>Specifies the sorting of query results by a specified field. The format is a JSON character string, such as <c>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Parameters:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field by which to sort the query results. Valid values:</para>
+        /// <item><description><para>Field: the sorting field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>Pattern</c>: the SQL pattern.</description></item>
-        /// <item><description><c>AccessIP</c>: the IP address of the client.</description></item>
-        /// <item><description><c>User</c>: the username.</description></item>
-        /// <item><description><c>QueryCount</c>: the number of queries performed in association with the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>AvgPeakMemory</c>: the average peak memory usage of the SQL pattern within the time range to query. Unit: KB.</description></item>
-        /// <item><description><c>MaxPeakMemory</c>: the maximum peak memory usage of the SQL pattern within the time range to query. Unit: KB.</description></item>
-        /// <item><description><c>AvgCpuTime</c>: the average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</description></item>
-        /// <item><description><c>MaxCpuTime</c>: the maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</description></item>
-        /// <item><description><c>AvgStageCount</c>: the average number of stages.</description></item>
-        /// <item><description><c>MaxStageCount</c>: the maximum number of stages.</description></item>
-        /// <item><description><c>AvgTaskCount</c>: the average number of tasks.</description></item>
-        /// <item><description><c>MaxTaskCount</c>: the maximum number of tasks.</description></item>
-        /// <item><description><c>AvgScanSize</c>: the average amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.</description></item>
-        /// <item><description><c>MaxScanSize</c>: the maximum amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.</description></item>
+        /// <item><description>Pattern: SQL pattern.</description></item>
+        /// <item><description>AccessIP: client IP address.</description></item>
+        /// <item><description>User: username.</description></item>
+        /// <item><description>QueryCount: total number of queries.</description></item>
+        /// <item><description>AvgPeakMemory: average peak memory. Unit: KB.</description></item>
+        /// <item><description>MaxPeakMemory: Peak Volume memory. Unit: KB.</description></item>
+        /// <item><description>AvgCpuTime: average computing duration. Unit: milliseconds.</description></item>
+        /// <item><description>MaxCpuTime: maximum computing duration. Unit: milliseconds.</description></item>
+        /// <item><description>AvgStageCount: average number of stages.</description></item>
+        /// <item><description>MaxStageCount: maximum number of stages.</description></item>
+        /// <item><description>AvgTaskCount: average number of tasks.</description></item>
+        /// <item><description>MaxTaskCount: maximum number of tasks.</description></item>
+        /// <item><description>AvgScanSize: average scan size. Unit: KB.</description></item>
+        /// <item><description>MaxScanSize: maximum scan size. Unit: KB.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values:</para>
+        /// <item><description><para>Type: the sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>Asc</c>: ascending order.</description></item>
-        /// <item><description><c>Desc</c>: descending order.</description></item>
+        /// <item><description>Asc: ascending sorting.</description></item>
+        /// <item><description>Desc: descending sorting.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If no Settings are specified for this parameter, the results are sorted in ascending order by the Pattern field by default.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, query results are sorted in ascending order of <c>Pattern</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If you want to sort query results by <c>AccessIP</c>, you must set the <c>Type</c> parameter to <c>accessip</c>. If you want to sort query results by <c>User</c>, you must leave the <c>Type</c> parameter empty or set it to <c>user</c>.</para>
-        /// </description></item>
+        /// <item><description>To perform sorting by the AccessIP field, you must set the Type parameter to accessip. To perform sorting by the User field, you must leave the Type parameter empty or set it to user.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +69,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Valid values: integers greater than 0 and no greater than the maximum value of the Integer type.
+        /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,9 +107,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for the query.</para>
+        /// <para>The keyword that the SQL pattern must contain.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, all SQL patterns of the AnalyticDB for MySQL cluster within the time period specified by <c>StartTime</c> are returned.</para>
+        /// <para>If this parameter is not specified, the details of all SQL patterns for the cluster on the date specified by the StartTime parameter are returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,9 +120,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SqlPattern { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd format. The time must be in UTC.</para>
+        /// <para>The start date of the query. The time is in UTC and formatted as yyyy-MM-dd.</para>
         /// <remarks>
-        /// <para>Only data within the last 30 days can be queried.</para>
+        /// <para>You can only query data within the last 30 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -131,13 +133,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The dimension by which to aggregate the SQL patterns. Valid values:</para>
+        /// <para>Aggregates SQL patterns by a specified dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>user</c>: aggregates the SQL patterns by user.</description></item>
-        /// <item><description><c>accessip</c>: aggregates the SQL patterns by client IP address.</description></item>
+        /// <item><description>user: aggregates by user.</description></item>
+        /// <item><description>accessip: aggregates by access IP address.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the SQL patterns are aggregated by <c>user</c>.</para>
+        /// <para>If this parameter is not specified, SQL patterns are aggregated by user by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

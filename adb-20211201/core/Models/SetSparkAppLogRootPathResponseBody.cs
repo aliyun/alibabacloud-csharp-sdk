@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SetSparkAppLogRootPathResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SetSparkAppLogRootPathResponseBodyData Data { get; set; }
         public class SetSparkAppLogRootPathResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The default log path.</para>
+            /// <para>The recommended default path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://testBucketname/to/log</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DefaultLogPath { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a log path exists.</para>
+            /// <para>Indicates whether the log path exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ModifiedTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The modifier ID.</para>
+            /// <para>The ID of the modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11111111</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D65A809F-34CE-4550-9BC1-0ED21ETG380</para>

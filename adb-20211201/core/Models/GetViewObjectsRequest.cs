@@ -41,13 +41,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewName { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>VIRTUAL_VIEW</description></item>
         /// <item><description>MATERIALIZED_VIEW</description></item>
         /// </list>
-        /// <para>Default value: null.</para>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VIRTUAL_VIEW</para>
@@ -57,13 +56,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewType { get; set; }
 
         /// <summary>
-        /// <para>The sorting field.</para>
-        /// <para>Valid values for Type:</para>
+        /// <para>The sort field.
+        /// Valid values for the sort type:</para>
         /// <list type="bullet">
         /// <item><description>Asc</description></item>
         /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for Field:</para>
+        /// <para>Valid values for the sort field:</para>
         /// <list type="bullet">
         /// <item><description>ViewName</description></item>
         /// <item><description>CreateTime</description></item>
@@ -91,9 +90,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default).</description></item>
-        /// <item><description><b>50</b>.</description></item>
-        /// <item><description><b>100</b>.</description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

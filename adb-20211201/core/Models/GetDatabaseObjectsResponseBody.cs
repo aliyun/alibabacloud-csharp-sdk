@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetDatabaseObjectsResponseBodyData Data { get; set; }
         public class GetDatabaseObjectsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The queried databases.</para>
+            /// <para>The result array.</para>
             /// </summary>
             [NameInMap("DatabaseSummaryModels")]
             [Validation(Required=false)]
             public List<DatabaseSummaryModel> DatabaseSummaryModels { get; set; }
 
             /// <summary>
-            /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+            /// <para>The page number. The value must be greater than 0 and no greater than the maximum value of the Integer data type. Default value: <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value is a positive integer. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

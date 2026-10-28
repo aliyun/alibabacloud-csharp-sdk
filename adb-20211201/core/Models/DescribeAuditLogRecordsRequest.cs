@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAuditLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of an Enterprise Edition, Basic Edition, or Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of a Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database on which the SQL statement is executed.</para>
+        /// <para>The name of the database on which the target SQL statement is executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</para>
+        /// <para>The end time of the query. The time is displayed in UTC and in the yyyy-MM-ddTHH:mmZ format.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>The end time must be later than the start time.</description></item>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The IP address and port number of the client that executes the SQL statement.</para>
+        /// <para>The IP address and port number of the client that executes the target SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100.104.XX.XX:43908</para>
@@ -76,24 +76,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string HostAddress { get; set; }
 
         /// <summary>
-        /// <para>The sorting order based on specified fields. The value is in JSON format and is an ordered JSON array. Compound sorting is performed in the order of the input array. The array contains the <c>Field</c> and <c>Type</c> fields. Example: <c>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>.</para>
+        /// <para>The sort configuration in JSON format. The value is an ordered JSON array that specifies composite sorting based on the input array order. Each element contains the <c>Field</c> and <c>Type</c> parameters. Example: <c>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Details:</para>
         /// <list type="bullet">
         /// <item><description><para><c>Field</c> specifies the field name for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HostAddress</b>: the address of the client that connects to the database.</description></item>
+        /// <item><description><b>HostAddress</b>: the client address used to connect to the database.</description></item>
         /// <item><description><b>UserName</b>: the username.</description></item>
-        /// <item><description><b>ExecutionStartTime</b>: the execution start time of the SQL statement.</description></item>
-        /// <item><description><b>QueryTime</b>: the execution duration of the SQL statement.</description></item>
-        /// <item><description><b>PeakMemoryUsage</b>: the peak memory usage during the execution of the SQL statement.</description></item>
-        /// <item><description><b>ScanRows</b>: the number of rows scanned by tasks with data sources.</description></item>
-        /// <item><description><b>ScanSize</b>: the amount of scanned data.</description></item>
-        /// <item><description><b>ScanTime</b>: the total time consumed for scanning data.</description></item>
-        /// <item><description><b>PlanningTime</b>: the time consumed for generating the execution plan.</description></item>
-        /// <item><description><b>WallTime</b>: the cumulative CPU time of all operators across all nodes in the query.</description></item>
+        /// <item><description><b>ExecutionStartTime</b>: the start time of the target SQL statement execution.</description></item>
+        /// <item><description><b>QueryTime</b>: the execution duration of the target SQL statement.</description></item>
+        /// <item><description><b>PeakMemoryUsage</b>: the peak memory usage during the execution of the target SQL statement.</description></item>
+        /// <item><description><b>ScanRows</b>: the number of scanned rows for tasks with a data source.</description></item>
+        /// <item><description><b>ScanSize</b>: the volume of scanned data.</description></item>
+        /// <item><description><b>ScanTime</b>: the total time consumed by data scanning.</description></item>
+        /// <item><description><b>PlanningTime</b>: the time consumed by execution plan generation.</description></item>
+        /// <item><description><b>WallTime</b>: the cumulative CPU time of all operators in the query across all nodes.</description></item>
         /// <item><description><b>ProcessID</b>: the process ID.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting type. Valid values:</para>
+        /// <item><description><para><c>Type</c> specifies the sort order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Desc</b>: descending order.</description></item>
         /// <item><description><b>Asc</b>: ascending order.</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The order in which the results are sorted by SQL execution time. Valid values:</para>
+        /// <para>The sort order of SQL statements by execution time. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asc</b>: ascending order.</description></item>
         /// <item><description><b>desc</b>: descending order.</description></item>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -156,12 +156,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The process ID of the SQL query, used to filter audit logs of a specified process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20210608175202172016166249034536****</para>
+        /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]
         public string ProcessId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>Reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProxyUser { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to search the returned results.</para>
+        /// <para>A string value that is used as a keyword to filter the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb</para>
@@ -203,7 +209,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the SQL statement. Valid values:</para>
+        /// <para>The SQL statement type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>DELETE</b></description></item>
         /// <item><description><b>SELECT</b></description></item>
@@ -214,7 +220,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <item><description><b>CREATE</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only one type can be specified per request. If this parameter is not specified, all types are queried by default.</para>
+        /// <para>Only one type can be specified at a time. If this parameter is left empty, all types are queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -225,9 +231,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</para>
+        /// <para>The start time of the query. The time is displayed in UTC and in the yyyy-MM-ddTHH:mmZ format.</para>
         /// <remarks>
-        /// <para>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is disabled and then re-enabled, only logs generated after re-enabling can be queried.</para>
+        /// <para>SQL audit logs can be queried only when SQL Audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL Audit is disabled and then re-enabled, only SQL audit logs generated after the re-enablement can be queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -238,10 +244,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the SQL statement is executed successfully. Valid values:</para>
+        /// <para>Indicates whether the target SQL statement is executed successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Executed successfully.</description></item>
-        /// <item><description><b>false</b>: Execution failed.</description></item>
+        /// <item><description><b>true</b>: The SQL statement is executed successfully.</description></item>
+        /// <item><description><b>false</b>: The SQL statement fails to be executed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -252,7 +258,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Succeed { get; set; }
 
         /// <summary>
-        /// <para>The username that executes the SQL statement.</para>
+        /// <para>The username that executes the target SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

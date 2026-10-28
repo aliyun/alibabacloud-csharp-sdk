@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The database account.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the database account information of a specified cluster, including the database account.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the database account information of a specified cluster, including the database accounts.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The password of the database account.</para>
         /// <list type="bullet">
         /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The following special characters are supported: <c>!@#$%^&amp;*()_+-=</c></description></item>
+        /// <item><description>Special characters include: <c>!@#$%^&amp;*()_+-=</c></description></item>
         /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster can be an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
         /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
-        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+        /// <item><description><b>AnalyticDB</b> (default): AnalyticDB for MySQL engine.</description></item>
+        /// <item><description><b>Clickhouse</b>: wide table engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,6 +79,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <para>The name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_group</para>
+        /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }

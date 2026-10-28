@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. The specified time range must be less than seven days.</para>
+        /// <para>The end time must be later than the start time. The interval between the start time and the end time must be less than 7 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,12 +34,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of file titles and error messages. Valid values:</para>
+        /// <para>The language of the title for the downloaded file and specific error messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh (default)</b>: simplified Chinese.</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Simplified Chinese. This is the default value.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// <item><description><b>ja</b>: Japanese.</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// <item><description><b>zh-tw</b>: Traditional Chinese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,8 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort query results. Specify the parameter value in the JSON format.</para>
-        /// <para>Example:</para>
+        /// <para>The sorting rule for a specified field. The value is a JSON array. You must specify the fields to be sorted and the sorting order in sequence. Example:</para>
         /// <pre><c>[
         /// 
         ///     {
@@ -64,8 +63,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// ]
         /// </c></pre>
-        /// <para>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</para>
-        /// <para>Field and Type are case-insensitive.</para>
+        /// <para>Field: the name of the field to be sorted. Only the Name field is supported.
+        /// Type: the sorting order. Valid values: Desc for descending order, and Asc for ascending order.</para>
+        /// <para>The values are not case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -131,8 +131,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The start time of the query. The time is in UTC and follows the yyyy-MM-ddTHH:mmZ format.</para>
         /// <remarks>
+        /// <para>SQL audit logs can be queried only when SQL audit is enabled. You can query SQL audit logs generated within the last 30 days. If SQL audit is disabled and then re-enabled, you can query only the SQL audit logs generated after it is re-enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

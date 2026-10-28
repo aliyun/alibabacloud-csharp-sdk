@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The array of images to retrieve during image retrieval. Currently, only one image is supported.</para>
+        /// <para>The array of images to search for image retrieval. Currently, only one image is supported. The image must be Base64-encoded and passed in JSON format. Set the base64 key to the encoded image and the mime_type key to the image format. For more information, see the examples.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[     {       &quot;base64&quot;: &quot;/9j/4AAQSkZJRgABAQ...&quot;,       &quot;mime_type&quot;: &quot;image/jpeg&quot;     }   ]</para>
+        /// <para>[{&quot;base64&quot;: &quot;/9j/4AAQSkZJRgABAQ...&quot;, &quot;mime_type&quot;: &quot;image/jpeg&quot;}]</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]

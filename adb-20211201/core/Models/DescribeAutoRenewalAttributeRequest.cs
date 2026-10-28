@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAutoRenewalAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster IDs.</para>
+        /// <para>The list of cluster IDs.</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. A positive integer greater than 0 and not exceeding the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b>(Default)</description></item>
+        /// <item><description><b>30</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>

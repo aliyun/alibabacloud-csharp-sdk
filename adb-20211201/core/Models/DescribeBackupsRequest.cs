@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID.</para>
+        /// <para>The ID of the backup set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1679758862</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
         /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specific region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the \<c>yyyy-MM-ddTHH:mmZ\\</c> format.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the integer data type. Default value: 1.</para>
+        /// <para>The page number. Valid values: positive integers that are greater than 0 and do not exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,14 +64,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>30</para>
-        /// </description></item>
-        /// <item><description><para>50</para>
-        /// </description></item>
-        /// <item><description><para>100</para>
-        /// </description></item>
+        /// <item><description>30</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -83,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only cross-region backups. Set the value to true to query only cross-region backups. Set the value to false to query only local backups.</para>
+        /// <para>Specifies whether to query only cross-region backups. If you set this parameter to true, only cross-region backups are queried. If you set this parameter to false, only local backups are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -101,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the \<c>yyyy-MM-ddTHH:mmZ\\</c> format.</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

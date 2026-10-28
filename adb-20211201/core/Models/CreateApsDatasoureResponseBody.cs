@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsDatasoureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status or POP error code.</para>
+        /// <para>The API status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The detailed resource usage of the cluster.</para>
+        /// <para>The detailed usage of cluster resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned by the request. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information of the call result. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>Success</b> is returned. </description></item>
-        /// <item><description>If the request failed, a specific error code is returned.</description></item>
+        /// <item><description>If the request is normal, <b>Success</b> is returned. </description></item>
+        /// <item><description>If the request is abnormal, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

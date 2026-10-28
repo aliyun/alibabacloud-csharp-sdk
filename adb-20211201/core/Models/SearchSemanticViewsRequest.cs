@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SearchSemanticViewsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The ADB cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The search query.</para>
+        /// <para>The text content to search.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>销售额</para>
+        /// <para>Sales revenue</para>
         /// </summary>
         [NameInMap("QueryText")]
         [Validation(Required=false)]
         public string QueryText { get; set; }
 
         /// <summary>
-        /// <para>The number of the most relevant semantic views to return.</para>
+        /// <para>The number of most relevant documents to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

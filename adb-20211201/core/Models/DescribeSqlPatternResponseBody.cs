@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSqlPatternResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried SQL pattern.</para>
+        /// <para>The list details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSqlPatternResponseBodyItems> Items { get; set; }
         public class DescribeSqlPatternResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The IP address of the client.</para>
+            /// <para>The client IP address.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when <b>Type</b> is set to <b>accessip</b>.</para>
+            /// <para>This parameter is returned only when the Type parameter is set to accessip.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AccessIP { get; set; }
 
             /// <summary>
-            /// <para>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// <para>The average execution time. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0625</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AvgCpuTime { get; set; }
 
             /// <summary>
-            /// <para>The average peak memory usage of the SQL pattern within the query time range. Unit: KB.</para>
+            /// <para>The average peak memory. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>240048</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AvgPeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</para>
+            /// <para>The average scan size. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>244</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AvgTaskCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-bp1ej1nq9n6****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// <para>The maximum execution time of the SQL statement. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxCpuTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.</para>
+            /// <para>The Peak Volume memory. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>480096</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxPeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</para>
+            /// <para>The maximum scan size. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Pattern { get; set; }
 
             /// <summary>
-            /// <para>The number of queries performed in association with the SQL pattern within the query time range.</para>
+            /// <para>The total number of queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string QueryCount { get; set; }
 
             /// <summary>
-            /// <para>The start date of the query.</para>
+            /// <para>The query date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-30</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The username.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when <b>Type</b> is left empty or set to <b>user</b>.</para>
+            /// <para>This parameter is returned only when the Type parameter is left empty or set to user.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

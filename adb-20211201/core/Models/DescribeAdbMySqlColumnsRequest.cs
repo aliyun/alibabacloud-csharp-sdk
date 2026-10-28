@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlColumnsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -21,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
         /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the target region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +52,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -57,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>The table name.</para>
+        /// <para>The name of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

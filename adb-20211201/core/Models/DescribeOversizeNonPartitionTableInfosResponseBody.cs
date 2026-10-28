@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The queried detection items and detection results.</para>
+        /// <para>The list of check items and check results.</para>
         /// </summary>
         [NameInMap("DetectionItems")]
         [Validation(Required=false)]
         public List<DescribeOversizeNonPartitionTableInfosResponseBodyDetectionItems> DetectionItems { get; set; }
         public class DescribeOversizeNonPartitionTableInfosResponseBodyDetectionItems : TeaModel {
             /// <summary>
-            /// <para>The information about the detection result.</para>
+            /// <para>The check result message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Multiple oversized non-partitioned tables are detected.</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The name of the detection item.</para>
+            /// <para>The name of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Oversized non-partitioned table</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the detection result.</para>
+            /// <para>The status of the check result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried oversized non-partitioned tables.</para>
+        /// <para>The information about unreasonable non-partitioned tables.</para>
         /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]
         public List<DescribeOversizeNonPartitionTableInfosResponseBodyTables> Tables { get; set; }
         public class DescribeOversizeNonPartitionTableInfosResponseBodyTables : TeaModel {
             /// <summary>
-            /// <para>The data size of the table. Unit: bytes.</para>
+            /// <para>The size of table data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2921132457984</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? DataSize { get; set; }
 
             /// <summary>
-            /// <para>The data size of regular indexes. Unit: bytes.</para>
+            /// <para>The size of normal index data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? LocalDataSize { get; set; }
 
             /// <summary>
-            /// <para>The data size of the primary key index. Unit: bytes.</para>
+            /// <para>The size of the primary key index. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -173,9 +173,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// <para>The percentage of the table size. Unit: %.</para>
+            /// <para>The tablespace proportion. Unit: %.</para>
             /// <remarks>
-            /// <para> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</para>
+            /// <para>Calculation formula: Tablespace proportion = (Total data size of the table / Total data size of the instance) × 100.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

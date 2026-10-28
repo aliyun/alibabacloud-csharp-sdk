@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class TableSummaryModel : TeaModel {
         /// <summary>
-        /// <para>Creation time.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>
@@ -19,16 +19,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The creation source of the table or view.</para>
+        /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
         public string CreatedBySource { get; set; }
 
+        /// <summary>
+        /// <para>The user who created the table or view.</para>
+        /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]
         public string CreatedByUser { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>descrtiption</para>
@@ -37,12 +43,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The materialized view details.</para>
+        /// </summary>
         [NameInMap("MvDetailModel")]
         [Validation(Required=false)]
         public OpenStructMvDetailModel MvDetailModel { get; set; }
 
         /// <summary>
-        /// <para>Owner.</para>
+        /// <para>The owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -52,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>SQL for creating the table or view.</para>
+        /// <para>The SQL statement used to create the table or view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create table(a varchar)</para>
@@ -62,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SQL { get; set; }
 
         /// <summary>
-        /// <para>Logical database name.</para>
+        /// <para>The logical database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schemaName</para>
@@ -72,7 +81,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>Logical table name or logical view name.</para>
+        /// <para>The logical table name or logical view name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tableName</para>
@@ -82,7 +91,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>Table size in bytes.</para>
+        /// <para>The table size in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -92,7 +101,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? TableSize { get; set; }
 
         /// <summary>
-        /// <para>Table or view type.</para>
+        /// <para>The table or view type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PHYSICAL_SCHEMA_NAME</para>
@@ -102,7 +111,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableType { get; set; }
 
         /// <summary>
-        /// <para>Update time.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-05 13:17:55</para>

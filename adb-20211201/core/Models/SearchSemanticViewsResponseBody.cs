@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SearchSemanticViewsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of semantic view objects.</para>
+        /// <para>The response data body.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<SemanticViewModel> Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

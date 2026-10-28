@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateAPSJobRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the synchronization job.</para>
+        /// <para>The name of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ApsJobName { get; set; }
 
         /// <summary>
-        /// <para>The objects to be synchronized.</para>
+        /// <para>The list of synchronization objects.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbList { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account of the destination cluster.</para>
+        /// <para>The instance ID of the destination database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DestinationEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account of the destination cluster.</para>
+        /// <para>The password of the destination instance.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DestinationEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account of the destination cluster.</para>
+        /// <para>The username of the destination instance.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DestinationEndpointUserName { get; set; }
 
         /// <summary>
-        /// <para>The partitions.</para>
+        /// <para>The list of partitions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance or cluster.</para>
+        /// <para>The instance ID of the source database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account of the source instance.</para>
+        /// <para>The password of the source endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source instance.</para>
+        /// <para>The region of the source database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceEndpointRegion { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account of the source instance.</para>
+        /// <para>The username of the source endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceEndpointUserName { get; set; }
 
         /// <summary>
-        /// <para>The mode of the destination table.</para>
+        /// <para>The destination table mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

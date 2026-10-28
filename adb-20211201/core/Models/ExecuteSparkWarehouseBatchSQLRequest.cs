@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The name of the client.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Dataworks。</para>
+        /// <para>DataWorks</para>
         /// </summary>
         [NameInMap("Agency")]
         [Validation(Required=false)]

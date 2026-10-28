@@ -21,8 +21,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>21321</para>
+        /// </summary>
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public string FileId { get; set; }
+
+        /// <summary>
         /// <para>The location of the knowledge base document.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucketName/path/to/file.pdf</para>

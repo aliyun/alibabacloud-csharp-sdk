@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public DescribeMvRecommendSubTasksResponseBodyData Data { get; set; }
         public class DescribeMvRecommendSubTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of materialized view recommendation task executions.</para>
+            /// <para>The execution list of the materialized view recommendation task.</para>
             /// </summary>
             [NameInMap("MvRecommendSubTaskModels")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

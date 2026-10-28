@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeApsProgressResponseBodyApsHiveProgress> ApsHiveProgress { get; set; }
         public class DescribeApsProgressResponseBodyApsHiveProgress : TeaModel {
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DbName { get; set; }
 
             /// <summary>
-            /// <para>The migration progress.</para>
+            /// <para>The progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>95</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Speed { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The success rate.</para>
+        /// <para>The success percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? SuccessPercentage { get; set; }
 
         /// <summary>
-        /// <para>The total number of migrated tables returned.</para>
+        /// <para>The total number of successfully migrated tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? SuccessTableCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of tables to be migrated.</para>
+        /// <para>The total number of tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

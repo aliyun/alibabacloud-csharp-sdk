@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyDBClusterVipRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint of the cluster.</para>
+        /// <para>The connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster ID of an AnalyticDB for MySQL Data Lakehouse Edition cluster in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The VPC ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The new <b>VPC</b> must reside in the same region as the cluster.</description></item>
+        /// <item><description>The <b>VPC</b> must be in the same region as the cluster.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The new vSwitch must reside in the same zone as the cluster.</description></item>
+        /// <item><description>The new vSwitch must be in the same zone as the cluster.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

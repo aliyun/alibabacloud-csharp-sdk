@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The path where the result sets are stored.</para>
+        /// <para>The configured result set export information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The export type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SLS: Indicates that the export destination is SLS.</description></item>
-            /// <item><description>OSS: Indicates that the export destination is OSS.</description></item>
+            /// <item><description>SLS: Exports data to SLS.</description></item>
+            /// <item><description>OSS: Exports data to OSS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExportType { get; set; }
 
             /// <summary>
-            /// <para>The OSS configuration if the destination is of the OSS type.</para>
+            /// <para>The OSS export information configured when the export destination is OSS.</para>
             /// </summary>
             [NameInMap("OssInfo")]
             [Validation(Required=false)]
             public ConfigureResultExportResponseBodyDataOssInfo OssInfo { get; set; }
             public class ConfigureResultExportResponseBodyDataOssInfo : TeaModel {
                 /// <summary>
-                /// <para>The OSS path where the result sets are stored.</para>
+                /// <para>The OSS path where the export results are stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss://testBucketName/data_result</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ExportBasePath { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group that runs the job.</para>
+                /// <para>The name of the resource group in which the export SQL statement is executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aps</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ResourceGroup { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the OSS file. Unit: days. Minimum: 1 day, maximum: 30 days.</para>
+                /// <para>The expiration time of the OSS file. Unit: days. The minimum value is 1 day and the maximum value is 30 days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The SLS configuration if the destination is of the SLS type.</para>
+            /// <para>The SLS configuration information when the export destination is SLS.</para>
             /// </summary>
             [NameInMap("SlsInfo")]
             [Validation(Required=false)]
             public ConfigureResultExportResponseBodyDataSlsInfo SlsInfo { get; set; }
             public class ConfigureResultExportResponseBodyDataSlsInfo : TeaModel {
                 /// <summary>
-                /// <para>The expiration time of the Logstore temporarily generated during the result set export. Unit: days. The Logstore is automatically deleted after it expires. Minimum value: 1 day. Maximum value: 30 days.</para>
+                /// <para>The expiration time of the temporary Logstore generated for result set export. Unit: days. The Logstore is automatically deleted after expiration. The minimum value is 1 day and the maximum value is 30 days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? LogstoreTtl { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group that runs the job.</para>
+                /// <para>The name of the resource group in which the export SQL statement is executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aps</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates that the request is successful.</para>
+        /// <para>The HTTP status code. A status code of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -131,10 +131,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Description:</para>
         /// <list type="bullet">
-        /// <item><description>OK is returned if the request is normal.</description></item>
-        /// <item><description>The specific error code is returned if the request is abnormal,</description></item>
+        /// <item><description>If the request is normal, OK is returned.</description></item>
+        /// <item><description>If the request is abnormal, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -155,10 +155,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

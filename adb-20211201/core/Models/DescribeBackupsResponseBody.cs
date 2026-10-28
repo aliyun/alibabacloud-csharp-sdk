@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The free backup space. Unit: bytes.</para>
+        /// <para>The free quota for backup sets. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE17270B-F8F8-5A31-9DB4-DADDFDAD7940</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total size of the backup sets. Unit: bytes.</para>
+        /// <para>The total size of backup sets. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64953700</para>

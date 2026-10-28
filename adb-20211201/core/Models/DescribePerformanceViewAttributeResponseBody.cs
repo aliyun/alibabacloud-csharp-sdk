@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribePerformanceViewAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
-        /// <remarks>
-        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
-        /// </remarks>
+        /// <para>The details of the access denial. This field is returned only when RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -31,7 +28,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The type of the source for the original chart. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Basic</b>: basic view</description></item>
+        /// <item><description><b>Advanced</b>: advanced view</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Basic</para>
@@ -42,9 +43,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The cluster ID.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>amv-bp198m028ih55xxxx</para>
@@ -54,10 +52,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</para>
+        /// <para>Indicates whether the keys completed in the original monitoring view are populated when you view the monitoring view. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,14 +76,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the monitoring view.</para>
+        /// <para>The details of the monitoring view.</para>
         /// </summary>
         [NameInMap("ViewDetail")]
         [Validation(Required=false)]
         public DescribePerformanceViewAttributeResponseBodyViewDetail ViewDetail { get; set; }
         public class DescribePerformanceViewAttributeResponseBodyViewDetail : TeaModel {
             /// <summary>
-            /// <para>The metric category.</para>
+            /// <para>The list of metric categories.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
@@ -94,10 +92,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>The name of the metric category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Node</b></description></item>
-                /// <item><description><b>DiskData</b></description></item>
-                /// <item><description><b>WorkLoad</b></description></item>
-                /// <item><description><b>ResourceGroup</b></description></item>
+                /// <item><description><b>Node</b>: node resource metrics</description></item>
+                /// <item><description><b>DiskData</b>: disk metrics</description></item>
+                /// <item><description><b>WorkLoad</b>: workload metrics</description></item>
+                /// <item><description><b>ResourceGroup</b>: resource group metrics</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,54 +106,32 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The metrics.</para>
+                /// <para>The list of metrics.</para>
                 /// </summary>
                 [NameInMap("Keys")]
                 [Validation(Required=false)]
                 public List<DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys> Keys { get; set; }
                 public class DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys : TeaModel {
-                    /// <summary>
-                    /// <para>Indicates whether the multi-cluster feature is enabled. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><para>true</para>
-                    /// </description></item>
-                    /// <item><description><para>false</para>
-                    /// </description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("EnableAutoMc")]
                     [Validation(Required=false)]
                     public bool? EnableAutoMc { get; set; }
 
                     /// <summary>
-                    /// <para>The database engine of the cluster. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>AnalyticDB</description></item>
-                    /// </list>
+                    /// <para>The list of applicable cluster engines.</para>
                     /// </summary>
                     [NameInMap("Engine")]
                     [Validation(Required=false)]
                     public List<string> Engine { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the resource group. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>Interactive</b></description></item>
-                    /// <item><description><b>Job</b></description></item>
-                    /// </list>
-                    /// <remarks>
-                    /// <para> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</para>
-                    /// </remarks>
+                    /// <para>The list of applicable resource group types.</para>
                     /// </summary>
                     [NameInMap("GroupType")]
                     [Validation(Required=false)]
                     public List<string> GroupType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the metric.</para>
+                    /// <para>The key of the metric.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AnalyticDB_CPU</para>
@@ -165,10 +141,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string KeyName { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to select the metric. Valid values:</para>
+                    /// <para>Indicates whether the metric is selected. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b></description></item>
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -183,10 +159,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the filter interaction feature. Valid values:</para>
+            /// <para>Indicates whether it is a linkage chart. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -197,7 +173,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? ChartLinked { get; set; }
 
             /// <summary>
-            /// <para>The number of charts to display in each row.</para>
+            /// <para>The number of charts displayed in each row.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -209,7 +185,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The name of the view.</para>
+        /// <para>The name of the monitoring view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom-All metrics-2 columns-Linked</para>

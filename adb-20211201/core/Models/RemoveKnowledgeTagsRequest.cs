@@ -21,8 +21,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The location of the knowledge base document.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The file ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2131234</para>
+        /// </summary>
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public string FileId { get; set; }
+
+        /// <summary>
+        /// <para>The knowledge base document location.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/doc.pdf</para>
@@ -32,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileLocation { get; set; }
 
         /// <summary>
-        /// <para>The JSON string of the tag array to delete.</para>
+        /// <para>The JSON string of the tag array to be deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;tag_key&quot;:&quot;biz.scene&quot;,&quot;tag_value&quot;:&quot;test&quot;}]</para>

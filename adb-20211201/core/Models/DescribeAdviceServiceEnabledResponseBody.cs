@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdviceServiceEnabledResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The message about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a <b>Success</b> message is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description><b>Success</b>: The request is successful. </description></item>
+        /// <item><description>Specific error message: Returned when an exception occurs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the suggestion feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the advisory service is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b></description></item>
-        /// <item><description><b>False</b></description></item>
+        /// <item><description><b>True</b>: The advisory service is enabled. </description></item>
+        /// <item><description><b>False</b>: The advisory service is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

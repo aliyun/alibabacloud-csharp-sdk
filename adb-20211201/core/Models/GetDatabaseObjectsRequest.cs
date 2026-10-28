@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The owner of the database.</para>
+        /// <para>The owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterOwner { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_db</para>
@@ -40,12 +40,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterSchemaName { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the query results. Valid values:</para>
+        /// <para>The sort field.
+        /// Valid values for Type:</para>
         /// <list type="bullet">
         /// <item><description>Asc</description></item>
         /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for Field: DatabaseName, CreateTime, and UpdateTime. -CreateTime; -UpdateTime;</para>
+        /// <para>Valid values for Field:</para>
+        /// <list type="bullet">
+        /// <item><description>DatabseName</description></item>
+        /// <item><description>CreateTime</description></item>
+        /// <item><description>UpdateTime</description></item>
+        /// </list>
         /// <para>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DatabaseName&quot;}.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and no greater than the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the database.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

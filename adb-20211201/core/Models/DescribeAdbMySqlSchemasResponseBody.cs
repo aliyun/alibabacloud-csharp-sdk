@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>Success</b> is returned. </description></item>
-        /// <item><description>If the request failed, a specific error code is returned.</description></item>
+        /// <item><description><b>Success</b>: The request is successful. </description></item>
+        /// <item><description>Specific error code: An exception occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> API to query the details of all clusters in your account, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The application module name.</para>
+        /// <para>The name of the application module.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>SQLWebSocket</c>: The module for SQL development.</para>
+        /// <item><description><para>SQLWebSocket: SQL development.</para>
         /// </description></item>
-        /// <item><description><para><c>Assistant</c>: The module for the intelligent assistant.</para>
+        /// <item><description><para>Assistant: intelligent assistant.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> API to query the region IDs supported by AnalyticDB for MySQL.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region IDs supported by AnalyticDB for MySQL Data Warehouse Edition.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

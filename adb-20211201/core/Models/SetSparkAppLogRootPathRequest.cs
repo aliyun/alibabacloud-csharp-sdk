@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The path of Object Storage Service (OSS) logs.</para>
+        /// <para>The OSS log path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://testBucketname/to/log</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OssLogPath { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the default OSS log path.</para>
+        /// <para>Specifies whether to use the default OSS path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

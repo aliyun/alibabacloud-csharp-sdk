@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. OK is returned if the request was successful.</para>
+        /// <para>The returned message. OK is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

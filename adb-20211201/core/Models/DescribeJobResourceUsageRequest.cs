@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,12 +58,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The name of the Spark application, which is used to filter job resource usage.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SparkTest</para>
+        /// </summary>
         [NameInMap("SparkAppName")]
         [Validation(Required=false)]
         public string SparkAppName { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</para>
+        /// <para>The start time of the query. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>Enable the refresh delay alert. Valid values:</para>
+        /// <para>Specifies whether to enable alerting for refresh latency. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enables alert.</description></item>
-        /// <item><description>false: Disables alert.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? EnableDelayAlert { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to send alerts when the refresh task fails. Valid values:</para>
+        /// <para>Specifies whether to enable alerting for refresh task failures. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Send alerts.</description></item>
-        /// <item><description>false: Alerts disabled.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? EnableFailureAlert { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource group to which the materialized view is bound.</para>
+        /// <para>The name of the resource group bound to the materialized view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>res_1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Refresh delay tolerance (in minutes).</para>
+        /// <para>The refresh latency tolerance in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable query rewrite. Valid values:</para>
+        /// <para>Specifies whether to enable the rewrite feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enables query rewrite.</description></item>
-        /// <item><description>false: Disables query rewrite.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

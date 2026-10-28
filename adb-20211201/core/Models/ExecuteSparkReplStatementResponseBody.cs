@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ExecuteSparkReplStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExecuteSparkReplStatementResponseBodyData Data { get; set; }
         public class ExecuteSparkReplStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the cluster.</para>
+            /// <para>The Alibaba Cloud account to which the cluster belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17108278707****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? AliyunUid { get; set; }
 
             /// <summary>
-            /// <para>The code that is executed.</para>
+            /// <para>The executed code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>print(1+1)</para>
@@ -37,12 +37,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The code execution status. Valid values:</para>
+            /// <para>The execution status of the code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CANCELLED</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>SUCCEEDED</description></item>
-            /// <item><description>ERROR</description></item>
+            /// <item><description>CANCELLED: The execution is canceled.</description></item>
+            /// <item><description>RUNNING: The execution is in progress.</description></item>
+            /// <item><description>SUCCEEDED: The execution is successful.</description></item>
+            /// <item><description>ERROR: The execution failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CodeState { get; set; }
 
             /// <summary>
-            /// <para>The code type. Valid values:</para>
+            /// <para>The type of the code. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SCALA</description></item>
             /// <item><description>PYTHON</description></item>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// <para>The column names.</para>
+            /// <para>The array of column names.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
             /// <summary>
-            /// <para>The end time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The end time. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730968125000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The code execution result, which is a JSON string that conforms to Apache Livy.</para>
+            /// <para>The code execution result. It is a JSON-formatted string that follows the Apache Livy output standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;text/plain&quot;: 2}</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Output { get; set; }
 
             /// <summary>
-            /// <para>The execution result type, which is in the JSON format. Valid values:</para>
+            /// <para>The serialization format of the execution result. The structure is a JSON object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TEXT: the text content that conforms to Apache Livy.</description></item>
-            /// <item><description>TABLE: the table content that conforms to Apache Livy.</description></item>
+            /// <item><description>TEXT: The output is text content that follows the Apache Livy standard.</description></item>
+            /// <item><description>TABLE: The output is table content that follows the Apache Livy standard.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OutputType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The start time. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730968125000</para>

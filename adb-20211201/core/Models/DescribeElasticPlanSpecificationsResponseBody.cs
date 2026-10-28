@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeElasticPlanSpecificationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A5C433C2-001F-58E3-99F5-3274C14DF8BD</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried resource specifications.</para>
+        /// <para>The list of supported specifications.</para>
         /// </summary>
         [NameInMap("Specifications")]
         [Validation(Required=false)]
         public List<string> Specifications { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

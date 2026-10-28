@@ -472,14 +472,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<CreateDBResourceGroupRequestRayConfigStorageMounts> StorageMounts { get; set; }
             public class CreateDBResourceGroupRequestRayConfigStorageMounts : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>/mnt/data01</para>
+                /// </summary>
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("StorageId")]
                 [Validation(Required=false)]
                 public long? StorageId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>training-data</para>
+                /// </summary>
                 [NameInMap("StorageName")]
                 [Validation(Required=false)]
                 public string StorageName { get; set; }

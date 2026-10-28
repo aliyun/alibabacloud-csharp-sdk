@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>zh</para>
+        /// <para>PYTHON</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]

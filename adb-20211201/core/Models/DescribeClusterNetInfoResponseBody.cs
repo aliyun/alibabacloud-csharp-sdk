@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeClusterNetInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The network type of the cluster. The value is always <b>VPC</b>, as this is the only supported network type.</para>
+        /// <para>The network type of the cluster. Only VPCs are supported. The value is fixed as <b>VPC</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>

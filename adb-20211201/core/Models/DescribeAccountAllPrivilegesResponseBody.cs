@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountAllPrivilegesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Permission details.</para>
+        /// <para>The permission details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAccountAllPrivilegesResponseBodyData Data { get; set; }
         public class DescribeAccountAllPrivilegesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>If the <c>Truncated</c> field in the response is <c>true</c>, pass this value in subsequent calls to retrieve the next set of results.</para>
+            /// <para>If the <c>Truncated</c> field in the response is <c>true</c>, specify the value of this field in the next call to retrieve the subsequent entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0573e74fd1ccb01739993a691e876074db6e1b6ad79f54115f0e98528432ba6a523cfec5780ade5189299cc3396f6ff7</para>
@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Marker { get; set; }
 
             /// <summary>
-            /// <para>List of permissions.</para>
+            /// <para>The list of permissions.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<DescribeAccountAllPrivilegesResponseBodyDataResult> Result { get; set; }
             public class DescribeAccountAllPrivilegesResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The permission object, represented as a trituple of database, table, and column. All fields are empty for Global-level permissions.</para>
+                /// <para>The permission object, which is a triplet of the database, table, and column. All fields are empty when the permission level is Global.</para>
                 /// </summary>
                 [NameInMap("PrivilegeObject")]
                 [Validation(Required=false)]
                 public DescribeAccountAllPrivilegesResponseBodyDataResultPrivilegeObject PrivilegeObject { get; set; }
                 public class DescribeAccountAllPrivilegesResponseBodyDataResultPrivilegeObject : TeaModel {
                     /// <summary>
-                    /// <para>The column name.</para>
+                    /// <para>The name of the column.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>id</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string Column { get; set; }
 
                     /// <summary>
-                    /// <para>The database name.</para>
+                    /// <para>The name of the database.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tdb1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string Database { get; set; }
 
                     /// <summary>
-                    /// <para>Description of the permission object.</para>
+                    /// <para>The description of the permission object.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>id of table</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>table1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The permission level, returned by the <c>DescribeEnabledPrivileges</c> operation.</para>
+                /// <para>The permission level, which is obtained from the <c>DescribeEnabledPrivileges</c> operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Global</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string PrivilegeType { get; set; }
 
                 /// <summary>
-                /// <para>List of permissions.</para>
+                /// <para>The list of permissions.</para>
                 /// </summary>
                 [NameInMap("Privileges")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>If the response is truncated, this field is <c>true</c>. Continue calling this operation until this field becomes <c>false</c>.</para>
+            /// <para>Indicates whether the returned content is truncated. If the value is <c>true</c>, the returned content is truncated, and you must continue to call this operation to retrieve the remaining entries until the value is <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

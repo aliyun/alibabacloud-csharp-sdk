@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public AddKnowledgeUploadUserResponseBodyData Data { get; set; }
         public class AddKnowledgeUploadUserResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The location of the knowledge base file.</para>
+            /// <para>The path of the knowledge base file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://bucketName/path/to/file.pfg</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FileLocation { get; set; }
 
             /// <summary>
-            /// <para>The prompt message.</para>
+            /// <para>The message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<AddKnowledgeUploadUserResponseBodyDataSkipped> Skipped { get; set; }
             public class AddKnowledgeUploadUserResponseBodyDataSkipped : TeaModel {
                 /// <summary>
-                /// <para>The reason why the user was skipped.</para>
+                /// <para>The reason for skipping.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>conflicts error</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <para>Indicates whether the request is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The request was successful.</description></item>
-            /// <item><description><b>false</b>: The request failed.</description></item>
+            /// <item><description><b>true</b>: The request is successful.</description></item>
+            /// <item><description><b>false</b>: The request fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The number of users that were successfully added.</para>
+            /// <para>The number of successfully added users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

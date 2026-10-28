@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SubmitSparkLogAnalyzeTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the Spark log analysis task.</para>
+        /// <para>The details of the Spark log analysis task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SparkAnalyzeLogTask Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1DF5AF5B-C803-1861-A0FF-63666A557709</para>

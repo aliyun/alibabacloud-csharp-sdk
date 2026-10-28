@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class BatchApplyAdviceByIdListRequest : TeaModel {
         /// <summary>
-        /// <para>The date when the suggestions were generated. Format: yyyyMMdd.</para>
+        /// <para>The date when the suggestion was generated. Format: yyyyMMdd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20221115</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? AdviceDate { get; set; }
 
         /// <summary>
-        /// <para>The list of suggestion IDs to apply in batches. Separate multiple suggestion IDs with commas (,).</para>
+        /// <para>The list of suggestion IDs to be applied in batches. Separate multiple suggestion IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2589ff3-e86c-4f19-80c8-2aeb7dd9****,53414470-ebf4-4a53-a312-8a1ad8fd****,6e8dce84-fec8-4b0b-9c04-b0cea12c****,b3b9703d-55ca-47e0-96dd-6a4a9dbf****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ApplyType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately start a build task.</para>
+        /// <para>Specifies whether to immediately start the build task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

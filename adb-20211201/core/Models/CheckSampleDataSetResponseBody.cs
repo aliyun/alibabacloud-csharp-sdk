@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CheckSampleDataSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CE655C3-C211-513D-A42F-D4AE2D1A867C</para>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The status of the built-in dataset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>SUCCEED</b>: The dataset loaded successfully.</para>
+        /// <item><description><para><b>SUCCEED</b>: Loaded successfully.</para>
         /// </description></item>
-        /// <item><description><para><b>INIT</b>: Loading in progress.</para>
+        /// <item><description><para><b>INIT</b>: Loading.</para>
         /// </description></item>
-        /// <item><description><para><b>FAILED</b>: Failed to load the dataset.</para>
+        /// <item><description><para><b>FAILED</b>: Load failed.</para>
         /// </description></item>
         /// <item><description><para><b>UNINITIALIZED</b>: Not loaded.</para>
         /// </description></item>

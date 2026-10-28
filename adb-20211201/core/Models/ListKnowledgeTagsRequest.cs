@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListKnowledgeTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL instance.</para>
+        /// <para>The ADB instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The file ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2112314</para>
+        /// </summary>
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public string FileId { get; set; }
+
+        /// <summary>
         /// <para>The location of the knowledge base document.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/doc.pdf</para>

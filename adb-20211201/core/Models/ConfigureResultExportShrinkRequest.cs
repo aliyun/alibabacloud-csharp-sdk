@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the cluster IDs of all AnalyticDB for MySQL clusters in the destination region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The export type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: Specifies that the export destination is SLS.</description></item>
-        /// <item><description>OSS: Specifies that the export destination is OSS.</description></item>
+        /// <item><description>SLS: Exports data to SLS.</description></item>
+        /// <item><description>OSS: Exports data to OSS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ExportType { get; set; }
 
         /// <summary>
-        /// <para>The OSS configuration details if the destination is of the OSS type.</para>
+        /// <para>The OSS configuration information when the export destination is OSS.</para>
         /// </summary>
         [NameInMap("OssInfo")]
         [Validation(Required=false)]
         public string OssInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The SLS configuration details if the destination is of the SLS type.</para>
+        /// <para>The SLS configuration information when the export destination is SLS.</para>
         /// </summary>
         [NameInMap("SlsInfo")]
         [Validation(Required=false)]

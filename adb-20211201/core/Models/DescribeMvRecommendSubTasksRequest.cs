@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeMvRecommendSubTasksRequest : TeaModel {
         /// <summary>
-        /// <para>A static value. This parameter cannot be modified.</para>
+        /// <para>A fixed value. This value cannot be modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Modification is not supported.</para>
+        /// <para>Not modifiable</para>
         /// </summary>
         [NameInMap("ActionInner")]
         [Validation(Required=false)]
@@ -30,30 +30,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>A static value. This parameter cannot be modified.</para>
+        /// <para>A fixed value. This value cannot be modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Modification is not supported.</para>
+        /// <para>Not modifiable</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The sorting criteria.
-        /// Valid values for \<c>Type\\</c>:</para>
+        /// <para>The sort field.
+        /// Valid values for the sort order:</para>
         /// <list type="bullet">
-        /// <item><description><para>Asc</para>
-        /// </description></item>
-        /// <item><description><para>Desc</para>
-        /// </description></item>
+        /// <item><description>Asc</description></item>
+        /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for \<c>Field\\</c>:</para>
+        /// <para>Valid values for the sort field:</para>
         /// <list type="bullet">
-        /// <item><description><para>StartTime</para>
-        /// </description></item>
-        /// <item><description><para>EndTime</para>
-        /// </description></item>
+        /// <item><description>StartTime</description></item>
+        /// <item><description>EndTime</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The subtask ID.</para>
+        /// <para>The ID of the subtask.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

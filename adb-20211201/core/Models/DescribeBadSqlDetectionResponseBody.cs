@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeBadSqlDetectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the request denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The queried detection items and detection results.</para>
+        /// <para>The list of detection items and detection results.</para>
         /// </summary>
         [NameInMap("DetectionItems")]
         [Validation(Required=false)]
         public List<DescribeBadSqlDetectionResponseBodyDetectionItems> DetectionItems { get; set; }
         public class DescribeBadSqlDetectionResponseBodyDetectionItems : TeaModel {
             /// <summary>
-            /// <para>The information about the detection result.</para>
+            /// <para>The detection result message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL statements that result in high peak memory are detected.</para>
@@ -65,16 +65,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The detection result items.</para>
+            /// <para>The collection of detection results.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<DescribeBadSqlDetectionResponseBodyDetectionItemsResults> Results { get; set; }
             public class DescribeBadSqlDetectionResponseBodyDetectionItemsResults : TeaModel {
                 /// <summary>
-                /// <para>The total execution duration. Unit: milliseconds.</para>
+                /// <para>The total time consumed by the query. Unit: milliseconds.</para>
                 /// <remarks>
-                /// <para> This value is the cumulative value of the <c>QueuedTime</c>, <c>TotalPlanningTime</c>, and <c>ExecutionTime</c> parameters.</para>
+                /// <para>This time metric is the sum of the <c>QueuedTime</c>, <c>TotalPlanningTime</c>, and <c>ExecutionTime</c> metrics.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -85,14 +85,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? Cost { get; set; }
 
                 /// <summary>
-                /// <para>The diagnostic result items.</para>
+                /// <para>The collection of self-diagnosis results for the query.</para>
                 /// </summary>
                 [NameInMap("DiagnosisResults")]
                 [Validation(Required=false)]
                 public List<DescribeBadSqlDetectionResponseBodyDetectionItemsResultsDiagnosisResults> DiagnosisResults { get; set; }
                 public class DescribeBadSqlDetectionResponseBodyDetectionItemsResultsDiagnosisResults : TeaModel {
                     /// <summary>
-                    /// <para>The diagnostic code.</para>
+                    /// <para>The diagnosis code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Large amounts of data are returned to the client.</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The information about the diagnostic result.</para>
+                    /// <para>The details of the diagnosis result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Large amounts of data are returned to the client. Import the data to OSS.</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</para>
+                /// <para>The total time consumed by operators within the stage, which is equivalent to the CPU time of the stage. This metric plays an active role in determining which parts of the query consume more compute resource. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2345</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? OutputDataSize { get; set; }
 
                 /// <summary>
-                /// <para>The SQL pattern ID.</para>
+                /// <para>The ID of the SQL pattern.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3467484070025860498</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string PatternId { get; set; }
 
                 /// <summary>
-                /// <para>The peak memory. Unit: bytes.</para>
+                /// <para>The peak memory usage of the query. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>234</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? PeakMemory { get; set; }
 
                 /// <summary>
-                /// <para>The query ID.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202410161002191720161451770345363xxxx</para>
@@ -184,9 +184,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The SQL statement.</para>
+                /// <para>The details of the SQL statement.</para>
                 /// <remarks>
-                /// <para> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster, including the complete SQL statements.</para>
+                /// <para>For performance reasons, a maximum of 5,120 characters of an SQL statement can be displayed. SQL statements that exceed this limit are truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the summary information of SQL statements that meet specified conditions, including the complete SQL statements.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? ScanSize { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+                /// <para>The start time of the query. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-06T02:11:00Z</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The total number of stages generated.</para>
+                /// <para>The total number of stages generated by the query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The severity level of the detection result. Valid values:</para>
+            /// <para>The status of the detection result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NORMAL</description></item>
             /// <item><description>WARNING</description></item>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

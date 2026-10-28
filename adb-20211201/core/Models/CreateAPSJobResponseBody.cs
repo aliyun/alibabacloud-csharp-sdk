@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateAPSJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aps-bj1xxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ApsJobId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code or the error code.</para>
+        /// <para>The operation status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidInput</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned. A value of 200 indicates that the request was sent successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a success message is returned.****</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description>If the request is normal, <b>OK</b> is returned.                                </description></item>
+        /// <item><description>If the request is abnormal, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D1B8ED33-5E9B-512D-B188-1579ED6xxx</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
