@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListSubscriptionsRequest : TeaModel {
         /// <summary>
+        /// <para>The UUID of the AI agent. This parameter is used to filter subscriptions of a specified AI agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent-rca-001</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentUuid { get; set; }
 
         /// <summary>
+        /// <para>The sort order of the returned versions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>asc: Ascending order. </description></item>
+        /// <item><description>desc: Descending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the subscription is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2-3408-4595-9d80-****</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the notification policy. This parameter is used to filter subscriptions that are bound to a specified notification policy. The value is a 32-character string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d</para>
         /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyUuid { get; set; }
 
         /// <summary>
+        /// <para>The field by which to sort the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>id</para>
         /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// <para>The ID of the subscription.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123123123123</para>
         /// </summary>
@@ -74,14 +94,22 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SubscriptionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the subscription.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>测试订阅</para>
+        /// <para>Test subscription</para>
         /// </summary>
         [NameInMap("subscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
         /// <summary>
+        /// <para>The type of the subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NORMAL: Standard subscription.</description></item>
+        /// <item><description>AI_AGENT: AI agent subscription.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
         /// </summary>
@@ -92,6 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para><b>[Deprecated]</b> This is an internal reserved parameter. Do not use it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -102,6 +131,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Unbound { get; set; }
 
         /// <summary>
+        /// <para>The name of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>
         /// </summary>

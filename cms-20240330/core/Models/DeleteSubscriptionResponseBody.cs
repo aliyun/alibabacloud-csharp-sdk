@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the subscription.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123123123123</para>
         /// </summary>

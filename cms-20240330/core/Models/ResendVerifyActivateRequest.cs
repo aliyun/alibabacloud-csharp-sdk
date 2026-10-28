@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ResendVerifyActivateRequest : TeaModel {
         /// <summary>
+        /// <para>The channel type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PHONE</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListOncallContactsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the contacts.</para>
+        /// </summary>
         [NameInMap("contactIds")]
         [Validation(Required=false)]
         public List<string> ContactIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteAlertNotifyTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the notification templates.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("alertNotifyTemplateIds")]

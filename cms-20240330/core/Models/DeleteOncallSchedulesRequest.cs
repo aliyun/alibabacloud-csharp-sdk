@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteOncallSchedulesRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the on-call schedules.</para>
+        /// </summary>
         [NameInMap("oncallScheduleIds")]
         [Validation(Required=false)]
         public List<string> OncallScheduleIds { get; set; }

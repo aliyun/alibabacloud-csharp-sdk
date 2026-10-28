@@ -9,19 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertNotifyTemplatesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of notification template IDs.</para>
+        /// </summary>
         [NameInMap("alertNotifyTemplateIds")]
         [Validation(Required=false)]
         public string AlertNotifyTemplateIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The notification template name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>告警通知模板</para>
+        /// <para>Alert notification template</para>
         /// </summary>
         [NameInMap("alertNotifyTemplateName")]
         [Validation(Required=false)]
         public string AlertNotifyTemplateName { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The template locale.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GO</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ProgramLang { get; set; }
 
         /// <summary>
+        /// <para>The type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DING</para>
         /// </summary>

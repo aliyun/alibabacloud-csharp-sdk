@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateOncallScheduleRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the on-call schedule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testName</para>
         /// </summary>
@@ -17,11 +19,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string OncallScheduleName { get; set; }
 
+        /// <summary>
+        /// <para>The list of rotations.</para>
+        /// </summary>
         [NameInMap("rotations")]
         [Validation(Required=false)]
         public List<UpdateOncallScheduleRequestRotations> Rotations { get; set; }
         public class UpdateOncallScheduleRequestRotations : TeaModel {
             /// <summary>
+            /// <para>The days of the week when the rotation takes effect.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("activeDays")]
@@ -29,6 +35,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<int?> ActiveDays { get; set; }
 
             /// <summary>
+            /// <para>The IDs of the contacts.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("contacts")]
@@ -36,6 +43,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> Contacts { get; set; }
 
             /// <summary>
+            /// <para>The end time of the rotation. Format: HH:mm.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RotationEndTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the rotation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,6 +65,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RotationName { get; set; }
 
             /// <summary>
+            /// <para>The start time of the rotation. Format: HH:mm.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -66,6 +76,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RotationStartTime { get; set; }
 
             /// <summary>
+            /// <para>The length of the shift cycle. Used in conjunction with shiftRecurrenceFrequency, such as switching to the next on-call person every 3 days.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -74,6 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? ShiftLength { get; set; }
 
             /// <summary>
+            /// <para>The unit of the shift cycle. Used in conjunction with shiftRecurrenceFrequency, such as switching to the next on-call person every week.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,6 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ShiftRecurrenceFrequency { get; set; }
 
             /// <summary>
+            /// <para>The start date of the rotation. Format: yyyy-MM-dd.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -94,6 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string StartDate { get; set; }
 
             /// <summary>
+            /// <para>The time zone name. Uses the IANA Time Zone Database standard, such as Asia/Shanghai.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -106,6 +121,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The ID of the shift reminder chatbot.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testId</para>
         /// </summary>
@@ -113,11 +130,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string ShiftRobotId { get; set; }
 
+        /// <summary>
+        /// <para>The list of substitution rules.</para>
+        /// </summary>
         [NameInMap("substitudes")]
         [Validation(Required=false)]
         public List<UpdateOncallScheduleRequestSubstitudes> Substitudes { get; set; }
         public class UpdateOncallScheduleRequestSubstitudes : TeaModel {
             /// <summary>
+            /// <para>The contact ID of the substitute.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testId</para>
             /// </summary>
@@ -126,6 +148,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContactId { get; set; }
 
             /// <summary>
+            /// <para>The end time of the substitution. Format: YYYY-MM-DD HH:mm.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-15 18:00</para>
             /// </summary>
@@ -134,6 +158,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>The contact ID of the replaced person.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testId</para>
             /// </summary>
@@ -142,6 +168,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ReplacedContactId { get; set; }
 
             /// <summary>
+            /// <para>The start time of the substitution. Format: YYYY-MM-DD HH:mm.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-10 09:00</para>
             /// </summary>

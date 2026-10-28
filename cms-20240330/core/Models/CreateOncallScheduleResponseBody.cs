@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateOncallScheduleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the on-call schedule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testOncallScheduleId</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string OncallScheduleId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3B311FD9-A60B-55E0-A896-A0C73*********</para>
         /// </summary>

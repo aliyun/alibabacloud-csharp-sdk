@@ -10,18 +10,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentForView : TeaModel {
         /// <summary>
+        /// <para>The expiration time of the notification block.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>-1 表示未屏蔽</para>
+        /// <para>-1 indicates that notifications are not blocked</para>
         /// </summary>
         [NameInMap("blockingExpireTimestamp")]
         [Validation(Required=false)]
         public long? BlockingExpireTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The details of the incident.</para>
+        /// <para>The detailed content of the incident.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;{&quot;description&quot;:&quot;ECS实例CPU过高&quot;,&quot;impact&quot;:&quot;支付服务延迟&quot;}&quot;</para>
+        /// <para>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service delay&quot;}&quot;</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GroupUuid { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs for grouping.</para>
+        /// <para>The grouping key-value pairs.</para>
         /// </summary>
         [NameInMap("groupingKeys")]
         [Validation(Required=false)]
@@ -62,17 +64,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>The name of the notification policy.</para>
+        /// <para>The notification policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;张三&quot; }</para>
+        /// <para>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;Zhang San&quot; }</para>
         /// </summary>
         [NameInMap("notifyStrategyName")]
         [Validation(Required=false)]
         public string NotifyStrategyName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the associated notification policy, which is used to trigger notifications.</para>
+        /// <para>The UUID of the associated notification policy used to trigger notifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;notify-strategy-789&quot;</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyUuid { get; set; }
 
         /// <summary>
-        /// <para>The information about the operator.</para>
+        /// <para>The operator information.</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
@@ -137,10 +139,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The description of the solution.</para>
+        /// <para>The solution description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;重启ECS实例后恢复正常&quot;</para>
+        /// <para>&quot;Recovered to normal after restarting the ECS instance&quot;</para>
         /// </summary>
         [NameInMap("solution")]
         [Validation(Required=false)]
@@ -157,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The name of the subscription policy.</para>
+        /// <para>The subscription policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;P1-Alert-Notification&quot;</para>
@@ -176,6 +178,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string SubscriptionUuid { get; set; }
 
+        /// <summary>
+        /// <para>The array of tags.</para>
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
@@ -194,7 +199,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The title of the incident.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;支付服务不可用&quot;</para>
+        /// <para>&quot;Payment service unavailable&quot;</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ViewOncallScheduleRequest : TeaModel {
         /// <summary>
+        /// <para>The end date of the query. Format: yyyy-MM-dd. This parameter must be specified together with startDate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-07-05</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The start date of the query. Format: yyyy-MM-dd. This parameter must be specified together with endDate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-04</para>
         /// </summary>

@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活验证码</para>
+        /// <para>Activates the contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活验证码</para>
+        /// <para>Activates the contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活验证码</para>
+        /// <para>Activates the contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活验证码</para>
+        /// <para>Activates the contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1206,7 +1206,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建告警动作</para>
+        /// <para>Creates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1292,7 +1292,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建告警动作</para>
+        /// <para>Creates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1378,7 +1378,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建告警动作</para>
+        /// <para>Creates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1397,7 +1397,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建告警动作</para>
+        /// <para>Creates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1416,7 +1416,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建通知模板</para>
+        /// <para>Creates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1478,7 +1478,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建通知模板</para>
+        /// <para>Creates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1540,7 +1540,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建通知模板</para>
+        /// <para>Creates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1559,7 +1559,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建通知模板</para>
+        /// <para>Creates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2234,7 +2234,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人</para>
+        /// <para>Creates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2304,7 +2304,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人</para>
+        /// <para>Creates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2374,7 +2374,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人</para>
+        /// <para>Creates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2393,7 +2393,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人</para>
+        /// <para>Creates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2412,7 +2412,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人组</para>
+        /// <para>Creates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2470,7 +2470,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人组</para>
+        /// <para>Creates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2528,7 +2528,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人组</para>
+        /// <para>Creates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2547,7 +2547,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建联系人组</para>
+        /// <para>Creates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4194,8 +4194,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OncallSchedule</para>
+        /// <para>Creates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOncallScheduleRequest
@@ -4262,8 +4267,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OncallSchedule</para>
+        /// <para>Creates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOncallScheduleRequest
@@ -4330,8 +4340,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OncallSchedule</para>
+        /// <para>Creates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOncallScheduleRequest
@@ -4349,8 +4364,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OncallSchedule</para>
+        /// <para>Creates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOncallScheduleRequest
@@ -6476,7 +6496,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除告警动作</para>
+        /// <para>Deletes an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6528,7 +6548,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除告警动作</para>
+        /// <para>Deletes an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6580,7 +6600,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除告警动作</para>
+        /// <para>Deletes an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6599,7 +6619,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除告警动作</para>
+        /// <para>Deletes an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6618,7 +6638,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除报警通知模板</para>
+        /// <para>Deletes notification templates.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6670,7 +6690,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除报警通知模板</para>
+        /// <para>Deletes notification templates.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6722,7 +6742,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除报警通知模板</para>
+        /// <para>Deletes notification templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6741,7 +6761,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除报警通知模板</para>
+        /// <para>Deletes notification templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7272,7 +7292,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人组</para>
+        /// <para>Deletes contact groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7324,7 +7344,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人组</para>
+        /// <para>Deletes contact groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7376,7 +7396,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人组</para>
+        /// <para>Deletes contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7395,7 +7415,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人组</para>
+        /// <para>Deletes contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7414,7 +7434,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7466,7 +7486,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7518,7 +7538,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7537,7 +7557,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除联系人</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9368,8 +9388,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OncallSchedule</para>
+        /// <para>Deletes an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteOncallSchedulesRequest
@@ -9420,8 +9445,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OncallSchedule</para>
+        /// <para>Deletes an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteOncallSchedulesRequest
@@ -9472,8 +9502,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OncallSchedule</para>
+        /// <para>Deletes an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteOncallSchedulesRequest
@@ -9491,8 +9526,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OncallSchedule</para>
+        /// <para>Deletes an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteOncallSchedulesRequest
@@ -10448,7 +10488,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Deletes a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10494,7 +10534,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Deletes a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10540,7 +10580,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Deletes a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10559,7 +10599,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Deletes a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11786,7 +11826,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停订阅</para>
+        /// <para>Disables a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11832,7 +11872,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停订阅</para>
+        /// <para>Disables a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11878,7 +11918,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停订阅</para>
+        /// <para>Disables a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11897,7 +11937,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停订阅</para>
+        /// <para>Disables a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12216,7 +12256,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动订阅</para>
+        /// <para>Activates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12262,7 +12302,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动订阅</para>
+        /// <para>Activates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12308,7 +12348,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动订阅</para>
+        /// <para>Activates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12327,7 +12367,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动订阅</para>
+        /// <para>Activates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13218,7 +13258,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警动作</para>
+        /// <para>Retrieves alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13258,7 +13298,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警动作</para>
+        /// <para>Retrieves alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13298,7 +13338,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警动作</para>
+        /// <para>Retrieves alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13317,7 +13357,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警动作</para>
+        /// <para>Retrieves alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15976,8 +16016,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OncallSchedule</para>
+        /// <para>Retrieves the on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOncallScheduleRequest
@@ -16016,8 +16061,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OncallSchedule</para>
+        /// <para>Retrieves the on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOncallScheduleRequest
@@ -16056,8 +16106,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OncallSchedule</para>
+        /// <para>Retrieves the on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOncallScheduleRequest
@@ -16075,8 +16130,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OncallSchedule</para>
+        /// <para>Retrieves the on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOncallScheduleRequest
@@ -17198,7 +17258,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17244,7 +17304,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17290,7 +17350,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17309,7 +17369,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18592,7 +18652,377 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通知模板</para>
+        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAlertHistoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertHistoriesResponse
+        /// </returns>
+        public ListAlertHistoriesResponse ListAlertHistoriesWithOptions(ListAlertHistoriesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAlertHistoriesShrinkRequest request = new ListAlertHistoriesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelFilter))
+            {
+                request.LabelFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelFilter, "labelFilter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationFilter))
+            {
+                request.NotificationFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationFilter, "notificationFilter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertHistoryId))
+            {
+                query["alertHistoryId"] = request.AlertHistoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertRuleId))
+            {
+                query["alertRuleId"] = request.AlertRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizSource))
+            {
+                query["bizSource"] = request.BizSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsNamespace))
+            {
+                query["cmsNamespace"] = request.CmsNamespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsProductCategory))
+            {
+                query["cmsProductCategory"] = request.CmsProductCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayNameKeyWord))
+            {
+                query["displayNameKeyWord"] = request.DisplayNameKeyWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceKey))
+            {
+                query["instanceKey"] = request.InstanceKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelFilterShrink))
+            {
+                query["labelFilter"] = request.LabelFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestLevel))
+            {
+                query["latestLevel"] = request.LatestLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLevel))
+            {
+                query["maxLevel"] = request.MaxLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationStatus))
+            {
+                query["migrationStatus"] = request.MigrationStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationFilterShrink))
+            {
+                query["notificationFilter"] = request.NotificationFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveRelationType))
+            {
+                query["observeRelationType"] = request.ObserveRelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceDomain))
+            {
+                query["observeResourceDomain"] = request.ObserveResourceDomain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceGlobalScope))
+            {
+                query["observeResourceGlobalScope"] = request.ObserveResourceGlobalScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceInstanceId))
+            {
+                query["observeResourceInstanceId"] = request.ObserveResourceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceType))
+            {
+                query["observeResourceType"] = request.ObserveResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionKey))
+            {
+                query["partitionKey"] = request.PartitionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeFrom))
+            {
+                query["startTimeFrom"] = request.StartTimeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeTo))
+            {
+                query["startTimeTo"] = request.StartTimeTo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlertHistories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/alertHistories",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertHistoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAlertHistoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertHistoriesResponse
+        /// </returns>
+        public async Task<ListAlertHistoriesResponse> ListAlertHistoriesWithOptionsAsync(ListAlertHistoriesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAlertHistoriesShrinkRequest request = new ListAlertHistoriesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelFilter))
+            {
+                request.LabelFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelFilter, "labelFilter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationFilter))
+            {
+                request.NotificationFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationFilter, "notificationFilter", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertHistoryId))
+            {
+                query["alertHistoryId"] = request.AlertHistoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertRuleId))
+            {
+                query["alertRuleId"] = request.AlertRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizSource))
+            {
+                query["bizSource"] = request.BizSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsNamespace))
+            {
+                query["cmsNamespace"] = request.CmsNamespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsProductCategory))
+            {
+                query["cmsProductCategory"] = request.CmsProductCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayNameKeyWord))
+            {
+                query["displayNameKeyWord"] = request.DisplayNameKeyWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceKey))
+            {
+                query["instanceKey"] = request.InstanceKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelFilterShrink))
+            {
+                query["labelFilter"] = request.LabelFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestLevel))
+            {
+                query["latestLevel"] = request.LatestLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLevel))
+            {
+                query["maxLevel"] = request.MaxLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationStatus))
+            {
+                query["migrationStatus"] = request.MigrationStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationFilterShrink))
+            {
+                query["notificationFilter"] = request.NotificationFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveRelationType))
+            {
+                query["observeRelationType"] = request.ObserveRelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceDomain))
+            {
+                query["observeResourceDomain"] = request.ObserveResourceDomain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceGlobalScope))
+            {
+                query["observeResourceGlobalScope"] = request.ObserveResourceGlobalScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceInstanceId))
+            {
+                query["observeResourceInstanceId"] = request.ObserveResourceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserveResourceType))
+            {
+                query["observeResourceType"] = request.ObserveResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionKey))
+            {
+                query["partitionKey"] = request.PartitionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeFrom))
+            {
+                query["startTimeFrom"] = request.StartTimeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeTo))
+            {
+                query["startTimeTo"] = request.StartTimeTo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlertHistories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/alertHistories",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertHistoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAlertHistoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertHistoriesResponse
+        /// </returns>
+        public ListAlertHistoriesResponse ListAlertHistories(ListAlertHistoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAlertHistoriesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAlertHistoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertHistoriesResponse
+        /// </returns>
+        public async Task<ListAlertHistoriesResponse> ListAlertHistoriesAsync(ListAlertHistoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAlertHistoriesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries notification templates.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18664,7 +19094,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通知模板</para>
+        /// <para>Queries notification templates.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18736,7 +19166,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通知模板</para>
+        /// <para>Queries notification templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18755,7 +19185,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通知模板</para>
+        /// <para>Queries notification templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22408,8 +22838,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询值班人</para>
+        /// <para>Queries the on-call contacts at a specified time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOncallContactsRequest
@@ -22454,8 +22889,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询值班人</para>
+        /// <para>Queries the on-call contacts at a specified time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOncallContactsRequest
@@ -22500,8 +22940,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询值班人</para>
+        /// <para>Queries the on-call contacts at a specified time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOncallContactsRequest
@@ -22519,8 +22964,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询值班人</para>
+        /// <para>Queries the on-call contacts at a specified time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOncallContactsRequest
@@ -22538,7 +22988,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前账号下所有值班排班的配置信息</para>
+        /// <para>Queries on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22606,7 +23056,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前账号下所有值班排班的配置信息</para>
+        /// <para>Queries on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22674,7 +23124,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前账号下所有值班排班的配置信息</para>
+        /// <para>Queries on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22693,7 +23143,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前账号下所有值班排班的配置信息</para>
+        /// <para>Queries on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24192,7 +24642,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅规则列表</para>
+        /// <para>Queries subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24282,7 +24732,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅规则列表</para>
+        /// <para>Queries subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24372,7 +24822,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅规则列表</para>
+        /// <para>Queries subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24391,7 +24841,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅规则列表</para>
+        /// <para>Queries subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24592,7 +25042,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List History name</para>
+        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24730,7 +25180,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List History name</para>
+        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24868,7 +25318,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List History name</para>
+        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24887,7 +25337,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List History name</para>
+        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25590,12 +26040,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览通知模板渲染结果</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25645,12 +26095,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览通知模板渲染结果</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25700,12 +26150,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览通知模板渲染结果</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25724,12 +26174,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览通知模板渲染结果</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</para>
+        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26108,7 +26558,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送激活链接</para>
+        /// <para>Resends the activation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26154,7 +26604,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送激活链接</para>
+        /// <para>Resends the activation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26200,7 +26650,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送激活链接</para>
+        /// <para>Resends the activation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26219,7 +26669,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送激活链接</para>
+        /// <para>Resends the activation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27504,7 +27954,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改告警动作</para>
+        /// <para>Updates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27586,7 +28036,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改告警动作</para>
+        /// <para>Updates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27668,7 +28118,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改告警动作</para>
+        /// <para>Updates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27687,7 +28137,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改告警动作</para>
+        /// <para>Updates an alert action integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27706,7 +28156,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知模板内容。</para>
+        /// <para>Updates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27756,7 +28206,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知模板内容。</para>
+        /// <para>Updates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27806,7 +28256,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知模板内容。</para>
+        /// <para>Updates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27825,7 +28275,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知模板内容。</para>
+        /// <para>Updates a notification template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28338,7 +28788,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人的详细信息</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28400,7 +28850,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人的详细信息</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28462,7 +28912,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人的详细信息</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28481,7 +28931,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人的详细信息</para>
+        /// <para>Updates a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28500,7 +28950,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人组信息。</para>
+        /// <para>Updates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28550,7 +29000,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人组信息。</para>
+        /// <para>Updates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28600,7 +29050,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人组信息。</para>
+        /// <para>Updates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28619,7 +29069,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的联系人组信息。</para>
+        /// <para>Updates a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30386,8 +30836,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateOncallSchedule</para>
+        /// <para>Updates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateOncallScheduleRequest
@@ -30444,8 +30899,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateOncallSchedule</para>
+        /// <para>Updates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateOncallScheduleRequest
@@ -30502,8 +30962,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateOncallSchedule</para>
+        /// <para>Updates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateOncallScheduleRequest
@@ -30521,8 +30986,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateOncallSchedule</para>
+        /// <para>Updates an on-call schedule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an on-call schedule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateOncallScheduleRequest
@@ -32142,8 +32612,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看值班日历</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ViewOncallScheduleRequest
@@ -32192,8 +32667,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看值班日历</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ViewOncallScheduleRequest
@@ -32242,8 +32722,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看值班日历</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ViewOncallScheduleRequest
@@ -32261,8 +32746,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看值班日历</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ViewOncallScheduleRequest

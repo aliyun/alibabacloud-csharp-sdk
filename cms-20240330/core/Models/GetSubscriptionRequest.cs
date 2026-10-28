@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetSubscriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>
         /// </summary>

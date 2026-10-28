@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ScheduleValue : TeaModel {
         /// <summary>
+        /// <para>The ID of the on-call contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testId</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContactId { get; set; }
 
         /// <summary>
+        /// <para>The name of the on-call contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testName</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContactName { get; set; }
 
         /// <summary>
+        /// <para>The end time. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-10-01 02:00:00</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string End { get; set; }
 
         /// <summary>
+        /// <para>The start time. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-10-01 22:00:00</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListOncallSchedulesRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the on-call schedules.</para>
+        /// </summary>
         [NameInMap("oncallScheduleIds")]
         [Validation(Required=false)]
         public List<string> OncallScheduleIds { get; set; }
 
         /// <summary>
+        /// <para>The name of the on-call schedule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testOncallScheduleName</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string OncallScheduleName { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The name of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default-cms-5884500827389836-cn-hangzhou</para>
         /// </summary>

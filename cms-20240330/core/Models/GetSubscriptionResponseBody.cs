@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The subscription object.</para>
+        /// </summary>
         [NameInMap("subscription")]
         [Validation(Required=false)]
         public SubscriptionForView Subscription { get; set; }
