@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetProductQuotaDimensionResponseBody : TeaModel {
+    public class GetProductQuotaDimensionResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The details of the quota dimension.</para>
         /// </summary>
         [NameInMap("QuotaDimension")]
         [Validation(Required=false)]
         public GetProductQuotaDimensionResponseBodyQuotaDimension QuotaDimension { get; set; }
-        public class GetProductQuotaDimensionResponseBodyQuotaDimension : TeaModel {
+        public class GetProductQuotaDimensionResponseBodyQuotaDimension : Darabonba.Model {
             /// <summary>
-            /// <para>The quota dimensions on which the quota dimension that you want to query is dependent.</para>
+            /// <para>The quota dimensions of the cloud service on which the target quota depends.</para>
             /// </summary>
             [NameInMap("DependentDimensions")]
             [Validation(Required=false)]
@@ -26,14 +27,20 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The key of the quota dimension. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>regionId: the region ID.</description></item>
-            /// <item><description>zoneId: the zone ID.</description></item>
-            /// <item><description>chargeType: the billing method.</description></item>
-            /// <item><description>networkType: the network type.</description></item>
+            /// <item><description><para>regionId: region</para>
+            /// </description></item>
+            /// <item><description><para>zoneId: zone</para>
+            /// </description></item>
+            /// <item><description><para>chargeType: billing method</para>
+            /// </description></item>
+            /// <item><description><para>networkType: network type</para>
+            /// </description></item>
+            /// <item><description><para>resourceType: resource type</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>regionId</para>
+            /// <para>zoneId</para>
             /// </summary>
             [NameInMap("DimensionKey")]
             [Validation(Required=false)]
@@ -45,12 +52,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("DimensionValueDetail")]
             [Validation(Required=false)]
             public List<GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail> DimensionValueDetail { get; set; }
-            public class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail : TeaModel {
+            public class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail : Darabonba.Model {
                 /// <summary>
-                /// <para>The name of the quota dimension.</para>
+                /// <para>The name of the quota dimension value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// <para>cn-hangzhou-b</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -60,7 +67,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 /// <para>The value of the quota dimension.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// <para>cn-hangzhou-b</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -69,7 +76,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// <para>The values of the quota dimension.</para>
+            /// <para>The list of quota dimension values.</para>
             /// </summary>
             [NameInMap("DimensionValues")]
             [Validation(Required=false)]
@@ -79,7 +86,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <para>The name of the quota dimension.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>region</para>
+            /// <para>Zone</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -88,7 +95,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1FA5F0E2-368E-4BA4-A8D0-6060FC6BB8F3</para>
@@ -100,3 +107,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

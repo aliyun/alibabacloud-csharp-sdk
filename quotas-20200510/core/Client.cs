@@ -1,22 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
-
-using Tea;
-using Tea.Utils;
-
+using Darabonba.Utils;
+using _OpenApiClient = AlibabaCloud.OpenApiClient.Client;
+using AlibabaCloud.OpenApiClient.Models;
+using AlibabaCloud.OpenApiClient;
 using AlibabaCloud.SDK.Quotas20200510.Models;
+using Darabonba;
 
 namespace AlibabaCloud.SDK.Quotas20200510
 {
-    public class Client : AlibabaCloud.OpenApiClient.Client
+    public class Client : _OpenApiClient
     {
 
-        public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
+        public Client(Config config): base(config)
         {
             this._endpointRule = "central";
             CheckConfig(config);
@@ -26,25 +27,26 @@ namespace AlibabaCloud.SDK.Quotas20200510
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
         {
-            if (!AlibabaCloud.TeaUtil.Common.Empty(endpoint))
+            if (!endpoint.IsNull())
             {
                 return endpoint;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(endpointMap) && !AlibabaCloud.TeaUtil.Common.Empty(endpointMap.Get(regionId)))
+            if (!endpointMap.IsNull() && !endpointMap.Get(regionId).IsNull())
             {
                 return endpointMap.Get(regionId);
             }
-            return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
+            return Utils.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota alert.</para>
+        /// <para>Creates an alert rule for a quota item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to create a quota alert of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
+        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. Use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a> to create alert rules for the new version of quota alerting.
+        /// For more information about how to use API operations to manage the new version of quota alerting, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57,51 +59,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaAlarmResponse
         /// </returns>
-        public CreateQuotaAlarmResponse CreateQuotaAlarmWithOptions(CreateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateQuotaAlarmResponse CreateQuotaAlarmWithOptions(CreateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
+            if (!request.AlarmName.IsNull())
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalContext))
+            if (!request.OriginalContext.IsNull())
             {
                 body["OriginalContext"] = request.OriginalContext;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
+            if (!request.QuotaDimensions.IsNull())
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.Threshold.IsNull())
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
+            if (!request.ThresholdPercent.IsNull())
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
+            if (!request.ThresholdType.IsNull())
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
+            if (!request.WebHook.IsNull())
             {
                 body["WebHook"] = request.WebHook;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateQuotaAlarm",
                 Version = "2020-05-10",
@@ -113,17 +115,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota alert.</para>
+        /// <para>Creates an alert rule for a quota item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to create a quota alert of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
+        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. Use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a> to create alert rules for the new version of quota alerting.
+        /// For more information about how to use API operations to manage the new version of quota alerting, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -136,51 +139,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaAlarmResponse
         /// </returns>
-        public async Task<CreateQuotaAlarmResponse> CreateQuotaAlarmWithOptionsAsync(CreateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateQuotaAlarmResponse> CreateQuotaAlarmWithOptionsAsync(CreateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
+            if (!request.AlarmName.IsNull())
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalContext))
+            if (!request.OriginalContext.IsNull())
             {
                 body["OriginalContext"] = request.OriginalContext;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
+            if (!request.QuotaDimensions.IsNull())
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.Threshold.IsNull())
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
+            if (!request.ThresholdPercent.IsNull())
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
+            if (!request.ThresholdType.IsNull())
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
+            if (!request.WebHook.IsNull())
             {
                 body["WebHook"] = request.WebHook;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateQuotaAlarm",
                 Version = "2020-05-10",
@@ -192,17 +195,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota alert.</para>
+        /// <para>Creates an alert rule for a quota item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to create a quota alert of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
+        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. Use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a> to create alert rules for the new version of quota alerting.
+        /// For more information about how to use API operations to manage the new version of quota alerting, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -214,18 +218,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateQuotaAlarmResponse CreateQuotaAlarm(CreateQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return CreateQuotaAlarmWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota alert.</para>
+        /// <para>Creates an alert rule for a quota item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to create a quota alert of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
+        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. Use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a> to create alert rules for the new version of quota alerting.
+        /// For more information about how to use API operations to manage the new version of quota alerting, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -237,18 +242,20 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateQuotaAlarmResponse> CreateQuotaAlarmAsync(CreateQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await CreateQuotaAlarmWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an application to increase a quota.</para>
+        /// <para>Creates a quota increase request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the operation is called to submit an application to increase the value of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. The quota belongs to Elastic Compute Service (ECS). The expected value of the quota is <c>804</c>, the application reason is <c>Scale Out</c>, and the ID of the region to which the quota belongs is <c>cn-hangzhou</c>.</para>
+        /// <remarks>
+        /// <para>After you create a quota increase request, you can call the <a href="https://help.aliyun.com/document_detail/440568.html">ListQuotaApplications</a> operation to view the approval result. If the value of <c>Status</c> is <c>Agree</c>, the request is approved.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -261,59 +268,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationResponse
         /// </returns>
-        public CreateQuotaApplicationResponse CreateQuotaApplicationWithOptions(CreateQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateQuotaApplicationResponse CreateQuotaApplicationWithOptions(CreateQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditMode))
+            if (!request.AuditMode.IsNull())
             {
                 body["AuditMode"] = request.AuditMode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            if (!request.Reason.IsNull())
             {
                 body["Reason"] = request.Reason;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateQuotaApplication",
                 Version = "2020-05-10",
@@ -325,17 +332,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateQuotaApplicationResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateQuotaApplicationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an application to increase a quota.</para>
+        /// <para>Creates a quota increase request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the operation is called to submit an application to increase the value of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. The quota belongs to Elastic Compute Service (ECS). The expected value of the quota is <c>804</c>, the application reason is <c>Scale Out</c>, and the ID of the region to which the quota belongs is <c>cn-hangzhou</c>.</para>
+        /// <remarks>
+        /// <para>After you create a quota increase request, you can call the <a href="https://help.aliyun.com/document_detail/440568.html">ListQuotaApplications</a> operation to view the approval result. If the value of <c>Status</c> is <c>Agree</c>, the request is approved.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -348,59 +357,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationResponse
         /// </returns>
-        public async Task<CreateQuotaApplicationResponse> CreateQuotaApplicationWithOptionsAsync(CreateQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateQuotaApplicationResponse> CreateQuotaApplicationWithOptionsAsync(CreateQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditMode))
+            if (!request.AuditMode.IsNull())
             {
                 body["AuditMode"] = request.AuditMode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            if (!request.Reason.IsNull())
             {
                 body["Reason"] = request.Reason;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateQuotaApplication",
                 Version = "2020-05-10",
@@ -412,17 +421,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an application to increase a quota.</para>
+        /// <para>Creates a quota increase request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the operation is called to submit an application to increase the value of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. The quota belongs to Elastic Compute Service (ECS). The expected value of the quota is <c>804</c>, the application reason is <c>Scale Out</c>, and the ID of the region to which the quota belongs is <c>cn-hangzhou</c>.</para>
+        /// <remarks>
+        /// <para>After you create a quota increase request, you can call the <a href="https://help.aliyun.com/document_detail/440568.html">ListQuotaApplications</a> operation to view the approval result. If the value of <c>Status</c> is <c>Agree</c>, the request is approved.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -434,18 +445,20 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateQuotaApplicationResponse CreateQuotaApplication(CreateQuotaApplicationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return CreateQuotaApplicationWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an application to increase a quota.</para>
+        /// <para>Creates a quota increase request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the operation is called to submit an application to increase the value of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. The quota belongs to Elastic Compute Service (ECS). The expected value of the quota is <c>804</c>, the application reason is <c>Scale Out</c>, and the ID of the region to which the quota belongs is <c>cn-hangzhou</c>.</para>
+        /// <remarks>
+        /// <para>After you create a quota increase request, you can call the <a href="https://help.aliyun.com/document_detail/440568.html">ListQuotaApplications</a> operation to view the approval result. If the value of <c>Status</c> is <c>Agree</c>, the request is approved.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -457,19 +470,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateQuotaApplicationResponse> CreateQuotaApplicationAsync(CreateQuotaApplicationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await CreateQuotaApplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members of the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members. Only the management account of a resource directory can create multiple quota applications at a time.</para>
+        /// <para>Creates batch quota increase applications for members in a resource folder. When you add a quota item to a quota template, only new members in the resource folder autocommit quota increase applications, and existing members remain unchanged. To increase quotas for existing members by using a quota template, you can select the quota template to commit batch quota increase applications for multiple members in the resource folder. Only the administrator account of the resource folder can create batch quota applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>QPS limit</h3>
-        /// <para>You can add a maximum of 10 quota items to a quota template at a time.</para>
+        /// <h3>Limits</h3>
+        /// <para>A single application can include a maximum of 10 quota items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -482,59 +495,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationsForTemplateResponse
         /// </returns>
-        public CreateQuotaApplicationsForTemplateResponse CreateQuotaApplicationsForTemplateWithOptions(CreateQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateQuotaApplicationsForTemplateResponse CreateQuotaApplicationsForTemplateWithOptions(CreateQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUids))
+            if (!request.AliyunUids.IsNull())
             {
                 body["AliyunUids"] = request.AliyunUids;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            if (!request.Reason.IsNull())
             {
                 body["Reason"] = request.Reason;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -546,18 +559,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members of the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members. Only the management account of a resource directory can create multiple quota applications at a time.</para>
+        /// <para>Creates batch quota increase applications for members in a resource folder. When you add a quota item to a quota template, only new members in the resource folder autocommit quota increase applications, and existing members remain unchanged. To increase quotas for existing members by using a quota template, you can select the quota template to commit batch quota increase applications for multiple members in the resource folder. Only the administrator account of the resource folder can create batch quota applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>QPS limit</h3>
-        /// <para>You can add a maximum of 10 quota items to a quota template at a time.</para>
+        /// <h3>Limits</h3>
+        /// <para>A single application can include a maximum of 10 quota items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -570,59 +583,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationsForTemplateResponse
         /// </returns>
-        public async Task<CreateQuotaApplicationsForTemplateResponse> CreateQuotaApplicationsForTemplateWithOptionsAsync(CreateQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateQuotaApplicationsForTemplateResponse> CreateQuotaApplicationsForTemplateWithOptionsAsync(CreateQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUids))
+            if (!request.AliyunUids.IsNull())
             {
                 body["AliyunUids"] = request.AliyunUids;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            if (!request.Reason.IsNull())
             {
                 body["Reason"] = request.Reason;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -634,18 +647,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members of the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members. Only the management account of a resource directory can create multiple quota applications at a time.</para>
+        /// <para>Creates batch quota increase applications for members in a resource folder. When you add a quota item to a quota template, only new members in the resource folder autocommit quota increase applications, and existing members remain unchanged. To increase quotas for existing members by using a quota template, you can select the quota template to commit batch quota increase applications for multiple members in the resource folder. Only the administrator account of the resource folder can create batch quota applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>QPS limit</h3>
-        /// <para>You can add a maximum of 10 quota items to a quota template at a time.</para>
+        /// <h3>Limits</h3>
+        /// <para>A single application can include a maximum of 10 quota items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -657,19 +670,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateQuotaApplicationsForTemplateResponse CreateQuotaApplicationsForTemplate(CreateQuotaApplicationsForTemplateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return CreateQuotaApplicationsForTemplateWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members of the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members. Only the management account of a resource directory can create multiple quota applications at a time.</para>
+        /// <para>Creates batch quota increase applications for members in a resource folder. When you add a quota item to a quota template, only new members in the resource folder autocommit quota increase applications, and existing members remain unchanged. To increase quotas for existing members by using a quota template, you can select the quota template to commit batch quota increase applications for multiple members in the resource folder. Only the administrator account of the resource folder can create batch quota applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>QPS limit</h3>
-        /// <para>You can add a maximum of 10 quota items to a quota template at a time.</para>
+        /// <h3>Limits</h3>
+        /// <para>A single application can include a maximum of 10 quota items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -681,22 +694,22 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateQuotaApplicationsForTemplateResponse> CreateQuotaApplicationsForTemplateAsync(CreateQuotaApplicationsForTemplateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await CreateQuotaApplicationsForTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization. Only the management account of a resource directory can create quota templates.</para>
+        /// <para>Creates a quota template. After the management account creates a quota template, the template automatically submits quota increase applications for new members added to the resource directory. Existing members remain unaffected. You can use a quota template to apply for increases to multiple quota items at a time, improving the efficiency and automation of quota management across the organization. Only the management account of a resource directory can create a quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>You must set the <c>ServiceStatus</c> parameter to <c>1</c>. This ensures that the quota template is enabled.
-        /// You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the value of the <c>ServiceStatus</c> parameter in the response is <c>0</c> or <c>-1</c>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to modify the value to <c>1</c>. A value of 0 indicates that the quota template is not configured. A value of -1 indicates that the quota template is disabled. A value of 1 indicates that the quota template is enabled.</para>
-        /// <h3><a href="#"></a></h3>
-        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If the value of the <c>Status</c> parameter in the response is <c>Agree</c>, the quota template is approved.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the status of the quota template is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).
+        /// Call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of the quota template. If the <c>ServiceStatus</c> of the quota template is <c>0</c> (not configured) or <c>-1</c> (disabled), call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to change the status to <c>1</c> (enabled).</para>
+        /// <h3>Usage notes</h3>
+        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If <c>Status</c> is displayed as <c>Agree</c>, the application is approved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -709,51 +722,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateTemplateQuotaItemResponse
         /// </returns>
-        public CreateTemplateQuotaItemResponse CreateTemplateQuotaItemWithOptions(CreateTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateTemplateQuotaItemResponse CreateTemplateQuotaItemWithOptions(CreateTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -765,21 +778,21 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization. Only the management account of a resource directory can create quota templates.</para>
+        /// <para>Creates a quota template. After the management account creates a quota template, the template automatically submits quota increase applications for new members added to the resource directory. Existing members remain unaffected. You can use a quota template to apply for increases to multiple quota items at a time, improving the efficiency and automation of quota management across the organization. Only the management account of a resource directory can create a quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>You must set the <c>ServiceStatus</c> parameter to <c>1</c>. This ensures that the quota template is enabled.
-        /// You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the value of the <c>ServiceStatus</c> parameter in the response is <c>0</c> or <c>-1</c>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to modify the value to <c>1</c>. A value of 0 indicates that the quota template is not configured. A value of -1 indicates that the quota template is disabled. A value of 1 indicates that the quota template is enabled.</para>
-        /// <h3><a href="#"></a></h3>
-        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If the value of the <c>Status</c> parameter in the response is <c>Agree</c>, the quota template is approved.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the status of the quota template is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).
+        /// Call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of the quota template. If the <c>ServiceStatus</c> of the quota template is <c>0</c> (not configured) or <c>-1</c> (disabled), call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to change the status to <c>1</c> (enabled).</para>
+        /// <h3>Usage notes</h3>
+        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If <c>Status</c> is displayed as <c>Agree</c>, the application is approved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -792,51 +805,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateTemplateQuotaItemResponse
         /// </returns>
-        public async Task<CreateTemplateQuotaItemResponse> CreateTemplateQuotaItemWithOptionsAsync(CreateTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateTemplateQuotaItemResponse> CreateTemplateQuotaItemWithOptionsAsync(CreateTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CreateTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -848,21 +861,21 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<CreateTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization. Only the management account of a resource directory can create quota templates.</para>
+        /// <para>Creates a quota template. After the management account creates a quota template, the template automatically submits quota increase applications for new members added to the resource directory. Existing members remain unaffected. You can use a quota template to apply for increases to multiple quota items at a time, improving the efficiency and automation of quota management across the organization. Only the management account of a resource directory can create a quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>You must set the <c>ServiceStatus</c> parameter to <c>1</c>. This ensures that the quota template is enabled.
-        /// You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the value of the <c>ServiceStatus</c> parameter in the response is <c>0</c> or <c>-1</c>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to modify the value to <c>1</c>. A value of 0 indicates that the quota template is not configured. A value of -1 indicates that the quota template is disabled. A value of 1 indicates that the quota template is enabled.</para>
-        /// <h3><a href="#"></a></h3>
-        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If the value of the <c>Status</c> parameter in the response is <c>Agree</c>, the quota template is approved.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the status of the quota template is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).
+        /// Call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of the quota template. If the <c>ServiceStatus</c> of the quota template is <c>0</c> (not configured) or <c>-1</c> (disabled), call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to change the status to <c>1</c> (enabled).</para>
+        /// <h3>Usage notes</h3>
+        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If <c>Status</c> is displayed as <c>Agree</c>, the application is approved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -874,22 +887,22 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateTemplateQuotaItemResponse CreateTemplateQuotaItem(CreateTemplateQuotaItemRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return CreateTemplateQuotaItemWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization. Only the management account of a resource directory can create quota templates.</para>
+        /// <para>Creates a quota template. After the management account creates a quota template, the template automatically submits quota increase applications for new members added to the resource directory. Existing members remain unaffected. You can use a quota template to apply for increases to multiple quota items at a time, improving the efficiency and automation of quota management across the organization. Only the management account of a resource directory can create a quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>You must set the <c>ServiceStatus</c> parameter to <c>1</c>. This ensures that the quota template is enabled.
-        /// You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the value of the <c>ServiceStatus</c> parameter in the response is <c>0</c> or <c>-1</c>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to modify the value to <c>1</c>. A value of 0 indicates that the quota template is not configured. A value of -1 indicates that the quota template is disabled. A value of 1 indicates that the quota template is enabled.</para>
-        /// <h3><a href="#"></a></h3>
-        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If the value of the <c>Status</c> parameter in the response is <c>Agree</c>, the quota template is approved.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the status of the quota template is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).
+        /// Call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of the quota template. If the <c>ServiceStatus</c> of the quota template is <c>0</c> (not configured) or <c>-1</c> (disabled), call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to change the status to <c>1</c> (enabled).</para>
+        /// <h3>Usage notes</h3>
+        /// <para>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If <c>Status</c> is displayed as <c>Agree</c>, the application is approved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -901,21 +914,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateTemplateQuotaItemResponse> CreateTemplateQuotaItemAsync(CreateTemplateQuotaItemRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await CreateTemplateQuotaItemWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota alert.</para>
+        /// <para>Deletes a quota usage alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to delete a quota alert rule of the old version. If you want to delete a quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to delete a quota alert rule whose ID is <c>6b512ab7-da3a-4142-b529-2b2a9294****</c>.</description></item>
-        /// </list>
+        /// <para>The quota alerting feature has been upgraded, and this API operation will be deprecated soon. This API operation can only delete legacy quota usage alerts. To delete new-version quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>.
+        /// For more information about managing new-version quota alerts by using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new-version quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -928,19 +939,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteQuotaAlarmResponse
         /// </returns>
-        public DeleteQuotaAlarmResponse DeleteQuotaAlarmWithOptions(DeleteQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteQuotaAlarmResponse DeleteQuotaAlarmWithOptions(DeleteQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DeleteQuotaAlarm",
                 Version = "2020-05-10",
@@ -952,20 +963,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<DeleteQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota alert.</para>
+        /// <para>Deletes a quota usage alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to delete a quota alert rule of the old version. If you want to delete a quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to delete a quota alert rule whose ID is <c>6b512ab7-da3a-4142-b529-2b2a9294****</c>.</description></item>
-        /// </list>
+        /// <para>The quota alerting feature has been upgraded, and this API operation will be deprecated soon. This API operation can only delete legacy quota usage alerts. To delete new-version quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>.
+        /// For more information about managing new-version quota alerts by using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new-version quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -978,19 +987,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteQuotaAlarmResponse
         /// </returns>
-        public async Task<DeleteQuotaAlarmResponse> DeleteQuotaAlarmWithOptionsAsync(DeleteQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteQuotaAlarmResponse> DeleteQuotaAlarmWithOptionsAsync(DeleteQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DeleteQuotaAlarm",
                 Version = "2020-05-10",
@@ -1002,20 +1011,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<DeleteQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota alert.</para>
+        /// <para>Deletes a quota usage alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to delete a quota alert rule of the old version. If you want to delete a quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to delete a quota alert rule whose ID is <c>6b512ab7-da3a-4142-b529-2b2a9294****</c>.</description></item>
-        /// </list>
+        /// <para>The quota alerting feature has been upgraded, and this API operation will be deprecated soon. This API operation can only delete legacy quota usage alerts. To delete new-version quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>.
+        /// For more information about managing new-version quota alerts by using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new-version quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1027,21 +1034,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public DeleteQuotaAlarmResponse DeleteQuotaAlarm(DeleteQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return DeleteQuotaAlarmWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota alert.</para>
+        /// <para>Deletes a quota usage alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to delete a quota alert rule of the old version. If you want to delete a quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to delete a quota alert rule whose ID is <c>6b512ab7-da3a-4142-b529-2b2a9294****</c>.</description></item>
-        /// </list>
+        /// <para>The quota alerting feature has been upgraded, and this API operation will be deprecated soon. This API operation can only delete legacy quota usage alerts. To delete new-version quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>.
+        /// For more information about managing new-version quota alerts by using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage new-version quota alerts by using API operations</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1053,13 +1058,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<DeleteQuotaAlarmResponse> DeleteQuotaAlarmAsync(DeleteQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await DeleteQuotaAlarmWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member. Only the management account of a resource directory can delete quota templates.</para>
+        /// <para>Deletes a quota template. After the management account deletes a quota template, the template no longer automatically submits quota increase requests for new members added to the resource directory. Only the management account of the resource directory can delete quota templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1072,19 +1077,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteTemplateQuotaItemResponse
         /// </returns>
-        public DeleteTemplateQuotaItemResponse DeleteTemplateQuotaItemWithOptions(DeleteTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteTemplateQuotaItemResponse DeleteTemplateQuotaItemWithOptions(DeleteTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            if (!request.Id.IsNull())
             {
                 body["Id"] = request.Id;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DeleteTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -1096,12 +1101,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<DeleteTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member. Only the management account of a resource directory can delete quota templates.</para>
+        /// <para>Deletes a quota template. After the management account deletes a quota template, the template no longer automatically submits quota increase requests for new members added to the resource directory. Only the management account of the resource directory can delete quota templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1114,19 +1119,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteTemplateQuotaItemResponse
         /// </returns>
-        public async Task<DeleteTemplateQuotaItemResponse> DeleteTemplateQuotaItemWithOptionsAsync(DeleteTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteTemplateQuotaItemResponse> DeleteTemplateQuotaItemWithOptionsAsync(DeleteTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            if (!request.Id.IsNull())
             {
                 body["Id"] = request.Id;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DeleteTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -1138,12 +1143,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<DeleteTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member. Only the management account of a resource directory can delete quota templates.</para>
+        /// <para>Deletes a quota template. After the management account deletes a quota template, the template no longer automatically submits quota increase requests for new members added to the resource directory. Only the management account of the resource directory can delete quota templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1155,13 +1160,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public DeleteTemplateQuotaItemResponse DeleteTemplateQuotaItem(DeleteTemplateQuotaItemRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return DeleteTemplateQuotaItemWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member. Only the management account of a resource directory can delete quota templates.</para>
+        /// <para>Deletes a quota template. After the management account deletes a quota template, the template no longer automatically submits quota increase requests for new members added to the resource directory. Only the management account of the resource directory can delete quota templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1173,19 +1178,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<DeleteTemplateQuotaItemResponse> DeleteTemplateQuotaItemAsync(DeleteTemplateQuotaItemRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await DeleteTemplateQuotaItemWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota of a cloud service.</para>
+        /// <para>Queries the quota details of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is <c>Maximum Number of Security Groups</c>. The quota ID is <c>q_security-groups</c>. The description is <c>The maximum number of security groups that can be created for the current account</c>. The quota value is <c>801</c>. The used quota is <c>26</c>. The quota unit is <c>Number of security groups</c>. The quota dimension is <c>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaRequest
@@ -1197,27 +1197,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaResponse
         /// </returns>
-        public GetProductQuotaResponse GetProductQuotaWithOptions(GetProductQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetProductQuotaResponse GetProductQuotaWithOptions(GetProductQuotaRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetProductQuota",
                 Version = "2020-05-10",
@@ -1229,18 +1229,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetProductQuotaResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetProductQuotaResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota of a cloud service.</para>
+        /// <para>Queries the quota details of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is <c>Maximum Number of Security Groups</c>. The quota ID is <c>q_security-groups</c>. The description is <c>The maximum number of security groups that can be created for the current account</c>. The quota value is <c>801</c>. The used quota is <c>26</c>. The quota unit is <c>Number of security groups</c>. The quota dimension is <c>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaRequest
@@ -1252,27 +1247,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaResponse
         /// </returns>
-        public async Task<GetProductQuotaResponse> GetProductQuotaWithOptionsAsync(GetProductQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetProductQuotaResponse> GetProductQuotaWithOptionsAsync(GetProductQuotaRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetProductQuota",
                 Version = "2020-05-10",
@@ -1284,18 +1279,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetProductQuotaResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetProductQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota of a cloud service.</para>
+        /// <para>Queries the quota details of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is <c>Maximum Number of Security Groups</c>. The quota ID is <c>q_security-groups</c>. The description is <c>The maximum number of security groups that can be created for the current account</c>. The quota value is <c>801</c>. The used quota is <c>26</c>. The quota unit is <c>Number of security groups</c>. The quota dimension is <c>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaRequest
@@ -1306,19 +1296,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetProductQuotaResponse GetProductQuota(GetProductQuotaRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return GetProductQuotaWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota of a cloud service.</para>
+        /// <para>Queries the quota details of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota whose ID is <c>q_security-groups</c> and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is <c>Maximum Number of Security Groups</c>. The quota ID is <c>q_security-groups</c>. The description is <c>The maximum number of security groups that can be created for the current account</c>. The quota value is <c>801</c>. The used quota is <c>26</c>. The quota unit is <c>Number of security groups</c>. The quota dimension is <c>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaRequest
@@ -1329,23 +1314,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetProductQuotaResponse> GetProductQuotaAsync(GetProductQuotaRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await GetProductQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota dimension that is supported by an Alibaba Cloud service.</para>
+        /// <para>Queries the details of the quota dimensions supported by the target cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota dimension whose key is <c>regionId</c>. The quota dimension belongs to Elastic Compute Service (ECS) Quotas by Instance Type whose service code is ecs-spec. The following query results are returned:</para>
-        /// <list type="bullet">
-        /// <item><description>The values of the quota dimension include <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>The name of the quota dimension is <c>region</c>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaDimensionRequest
@@ -1357,27 +1333,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaDimensionResponse
         /// </returns>
-        public GetProductQuotaDimensionResponse GetProductQuotaDimensionWithOptions(GetProductQuotaDimensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetProductQuotaDimensionResponse GetProductQuotaDimensionWithOptions(GetProductQuotaDimensionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependentDimensions))
+            if (!request.DependentDimensions.IsNull())
             {
                 body["DependentDimensions"] = request.DependentDimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionKey))
+            if (!request.DimensionKey.IsNull())
             {
                 body["DimensionKey"] = request.DimensionKey;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetProductQuotaDimension",
                 Version = "2020-05-10",
@@ -1389,22 +1365,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetProductQuotaDimensionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetProductQuotaDimensionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota dimension that is supported by an Alibaba Cloud service.</para>
+        /// <para>Queries the details of the quota dimensions supported by the target cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota dimension whose key is <c>regionId</c>. The quota dimension belongs to Elastic Compute Service (ECS) Quotas by Instance Type whose service code is ecs-spec. The following query results are returned:</para>
-        /// <list type="bullet">
-        /// <item><description>The values of the quota dimension include <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>The name of the quota dimension is <c>region</c>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaDimensionRequest
@@ -1416,27 +1383,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaDimensionResponse
         /// </returns>
-        public async Task<GetProductQuotaDimensionResponse> GetProductQuotaDimensionWithOptionsAsync(GetProductQuotaDimensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetProductQuotaDimensionResponse> GetProductQuotaDimensionWithOptionsAsync(GetProductQuotaDimensionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependentDimensions))
+            if (!request.DependentDimensions.IsNull())
             {
                 body["DependentDimensions"] = request.DependentDimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionKey))
+            if (!request.DimensionKey.IsNull())
             {
                 body["DimensionKey"] = request.DimensionKey;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetProductQuotaDimension",
                 Version = "2020-05-10",
@@ -1448,22 +1415,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetProductQuotaDimensionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetProductQuotaDimensionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota dimension that is supported by an Alibaba Cloud service.</para>
+        /// <para>Queries the details of the quota dimensions supported by the target cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota dimension whose key is <c>regionId</c>. The quota dimension belongs to Elastic Compute Service (ECS) Quotas by Instance Type whose service code is ecs-spec. The following query results are returned:</para>
-        /// <list type="bullet">
-        /// <item><description>The values of the quota dimension include <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>The name of the quota dimension is <c>region</c>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaDimensionRequest
@@ -1474,23 +1432,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetProductQuotaDimensionResponse GetProductQuotaDimension(GetProductQuotaDimensionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return GetProductQuotaDimensionWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota dimension that is supported by an Alibaba Cloud service.</para>
+        /// <para>Queries the details of the quota dimensions supported by the target cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of a quota dimension whose key is <c>regionId</c>. The quota dimension belongs to Elastic Compute Service (ECS) Quotas by Instance Type whose service code is ecs-spec. The following query results are returned:</para>
-        /// <list type="bullet">
-        /// <item><description>The values of the quota dimension include <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>The name of the quota dimension is <c>region</c>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetProductQuotaDimensionRequest
@@ -1501,21 +1450,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetProductQuotaDimensionResponse> GetProductQuotaDimensionAsync(GetProductQuotaDimensionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await GetProductQuotaDimensionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the operation is called to query the details of a quota alert. The details of the alert are returned. The query results include the alert ID, alert name, alert contact, and time when the quota alert was created.</para>
+        /// <para>Queries the details of a specified quota alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the details about the quota alert rules of the old version. If you want to query the details about the quota alert rules of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the operation is called to query the details of a quota alert rule whose ID is <c>78d7e436-4b25-4897-84b5-d7b656bb****</c>. The details of the alert rule are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert rule was created.</description></item>
-        /// </list>
+        /// <para>The quota alert feature has been upgraded. This API operation will be deprecated soon. This API operation can only query the details of legacy quota usage alerts. To query the details of new-version quota usage alerts, use the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to use API operations to manage new-version quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1528,19 +1474,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaAlarmResponse
         /// </returns>
-        public GetQuotaAlarmResponse GetQuotaAlarmWithOptions(GetQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetQuotaAlarmResponse GetQuotaAlarmWithOptions(GetQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaAlarm",
                 Version = "2020-05-10",
@@ -1552,20 +1498,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the operation is called to query the details of a quota alert. The details of the alert are returned. The query results include the alert ID, alert name, alert contact, and time when the quota alert was created.</para>
+        /// <para>Queries the details of a specified quota alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the details about the quota alert rules of the old version. If you want to query the details about the quota alert rules of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the operation is called to query the details of a quota alert rule whose ID is <c>78d7e436-4b25-4897-84b5-d7b656bb****</c>. The details of the alert rule are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert rule was created.</description></item>
-        /// </list>
+        /// <para>The quota alert feature has been upgraded. This API operation will be deprecated soon. This API operation can only query the details of legacy quota usage alerts. To query the details of new-version quota usage alerts, use the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to use API operations to manage new-version quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1578,19 +1521,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaAlarmResponse
         /// </returns>
-        public async Task<GetQuotaAlarmResponse> GetQuotaAlarmWithOptionsAsync(GetQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaAlarmResponse> GetQuotaAlarmWithOptionsAsync(GetQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaAlarm",
                 Version = "2020-05-10",
@@ -1602,20 +1545,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the operation is called to query the details of a quota alert. The details of the alert are returned. The query results include the alert ID, alert name, alert contact, and time when the quota alert was created.</para>
+        /// <para>Queries the details of a specified quota alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the details about the quota alert rules of the old version. If you want to query the details about the quota alert rules of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the operation is called to query the details of a quota alert rule whose ID is <c>78d7e436-4b25-4897-84b5-d7b656bb****</c>. The details of the alert rule are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert rule was created.</description></item>
-        /// </list>
+        /// <para>The quota alert feature has been upgraded. This API operation will be deprecated soon. This API operation can only query the details of legacy quota usage alerts. To query the details of new-version quota usage alerts, use the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to use API operations to manage new-version quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1627,21 +1567,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaAlarmResponse GetQuotaAlarm(GetQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return GetQuotaAlarmWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the operation is called to query the details of a quota alert. The details of the alert are returned. The query results include the alert ID, alert name, alert contact, and time when the quota alert was created.</para>
+        /// <para>Queries the details of a specified quota alert.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the details about the quota alert rules of the old version. If you want to query the details about the quota alert rules of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the operation is called to query the details of a quota alert rule whose ID is <c>78d7e436-4b25-4897-84b5-d7b656bb****</c>. The details of the alert rule are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert rule was created.</description></item>
-        /// </list>
+        /// <para>The quota alert feature has been upgraded. This API operation will be deprecated soon. This API operation can only query the details of legacy quota usage alerts. To query the details of new-version quota usage alerts, use the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to use API operations to manage new-version quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1653,19 +1590,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaAlarmResponse> GetQuotaAlarmAsync(GetQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await GetQuotaAlarmWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application that is submitted to increase a quota.</para>
+        /// <para>Queries the details of a quota increase application.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details about an application whose ID is <c>d314d6ae-867d-484c-9009-3d421a80****</c>. The query result shows the details about the application. The details include the application ID, application time, expected quota value, and application result.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetQuotaApplicationRequest
@@ -1677,19 +1609,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationResponse
         /// </returns>
-        public GetQuotaApplicationResponse GetQuotaApplicationWithOptions(GetQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetQuotaApplicationResponse GetQuotaApplicationWithOptions(GetQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            if (!request.ApplicationId.IsNull())
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaApplication",
                 Version = "2020-05-10",
@@ -1701,18 +1633,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaApplicationResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaApplicationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application that is submitted to increase a quota.</para>
+        /// <para>Queries the details of a quota increase application.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details about an application whose ID is <c>d314d6ae-867d-484c-9009-3d421a80****</c>. The query result shows the details about the application. The details include the application ID, application time, expected quota value, and application result.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetQuotaApplicationRequest
@@ -1724,19 +1651,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationResponse
         /// </returns>
-        public async Task<GetQuotaApplicationResponse> GetQuotaApplicationWithOptionsAsync(GetQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaApplicationResponse> GetQuotaApplicationWithOptionsAsync(GetQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            if (!request.ApplicationId.IsNull())
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaApplication",
                 Version = "2020-05-10",
@@ -1748,18 +1675,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application that is submitted to increase a quota.</para>
+        /// <para>Queries the details of a quota increase application.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details about an application whose ID is <c>d314d6ae-867d-484c-9009-3d421a80****</c>. The query result shows the details about the application. The details include the application ID, application time, expected quota value, and application result.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetQuotaApplicationRequest
@@ -1770,19 +1692,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaApplicationResponse GetQuotaApplication(GetQuotaApplicationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return GetQuotaApplicationWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a specified application that is submitted to increase a quota.</para>
+        /// <para>Queries the details of a quota increase application.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details about an application whose ID is <c>d314d6ae-867d-484c-9009-3d421a80****</c>. The query result shows the details about the application. The details include the application ID, application time, expected quota value, and application result.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetQuotaApplicationRequest
@@ -1793,19 +1710,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaApplicationResponse> GetQuotaApplicationAsync(GetQuotaApplicationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await GetQuotaApplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about quota application approval, such as the average amount of time required for approval, whether approval reminders are supported, and the interval between two consecutive approval reminders.</para>
+        /// <para>Queries the approval information of a quota application, including the average approval time, whether approval reminders are supported, and the approval reminder interval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Make sure that you have created an application for quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have created a quota increase application. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1818,19 +1735,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationApprovalResponse
         /// </returns>
-        public GetQuotaApplicationApprovalResponse GetQuotaApplicationApprovalWithOptions(GetQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetQuotaApplicationApprovalResponse GetQuotaApplicationApprovalWithOptions(GetQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            if (!request.ApplicationId.IsNull())
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -1842,18 +1759,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about quota application approval, such as the average amount of time required for approval, whether approval reminders are supported, and the interval between two consecutive approval reminders.</para>
+        /// <para>Queries the approval information of a quota application, including the average approval time, whether approval reminders are supported, and the approval reminder interval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Make sure that you have created an application for quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have created a quota increase application. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1866,19 +1783,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationApprovalResponse
         /// </returns>
-        public async Task<GetQuotaApplicationApprovalResponse> GetQuotaApplicationApprovalWithOptionsAsync(GetQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaApplicationApprovalResponse> GetQuotaApplicationApprovalWithOptionsAsync(GetQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            if (!request.ApplicationId.IsNull())
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -1890,18 +1807,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about quota application approval, such as the average amount of time required for approval, whether approval reminders are supported, and the interval between two consecutive approval reminders.</para>
+        /// <para>Queries the approval information of a quota application, including the average approval time, whether approval reminders are supported, and the approval reminder interval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Make sure that you have created an application for quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have created a quota increase application. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1913,19 +1830,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaApplicationApprovalResponse GetQuotaApplicationApproval(GetQuotaApplicationApprovalRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return GetQuotaApplicationApprovalWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about quota application approval, such as the average amount of time required for approval, whether approval reminders are supported, and the interval between two consecutive approval reminders.</para>
+        /// <para>Queries the approval information of a quota application, including the average approval time, whether approval reminders are supported, and the approval reminder interval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Make sure that you have created an application for quota increase. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have created a quota increase application. For more information, see <a href="https://help.aliyun.com/document_detail/440566.html">CreateQuotaApplication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1937,18 +1854,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaApplicationApprovalResponse> GetQuotaApplicationApprovalAsync(GetQuotaApplicationApprovalRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await GetQuotaApplicationApprovalWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a quota template.</para>
+        /// <para>Queries the status of the quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the value of <c>ServiceStatus</c> is <c>0</c>, which indicates that no quota template is specified. If you want to use a quota template, make sure that the quota template is enabled. In this case, the value of <c>ServiceStatus</c> is <c>1</c>.</para>
+        /// <para>The default status of a quota template is unset (that is, <c>ServiceStatus</c> is <c>0</c>). You can use the features of the quota template only when its status is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1961,19 +1878,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaTemplateServiceStatusResponse
         /// </returns>
-        public GetQuotaTemplateServiceStatusResponse GetQuotaTemplateServiceStatusWithOptions(GetQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetQuotaTemplateServiceStatusResponse GetQuotaTemplateServiceStatusWithOptions(GetQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryId))
+            if (!request.ResourceDirectoryId.IsNull())
             {
                 body["ResourceDirectoryId"] = request.ResourceDirectoryId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaTemplateServiceStatus",
                 Version = "2020-05-10",
@@ -1985,17 +1902,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a quota template.</para>
+        /// <para>Queries the status of the quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the value of <c>ServiceStatus</c> is <c>0</c>, which indicates that no quota template is specified. If you want to use a quota template, make sure that the quota template is enabled. In this case, the value of <c>ServiceStatus</c> is <c>1</c>.</para>
+        /// <para>The default status of a quota template is unset (that is, <c>ServiceStatus</c> is <c>0</c>). You can use the features of the quota template only when its status is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2008,19 +1925,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaTemplateServiceStatusResponse
         /// </returns>
-        public async Task<GetQuotaTemplateServiceStatusResponse> GetQuotaTemplateServiceStatusWithOptionsAsync(GetQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaTemplateServiceStatusResponse> GetQuotaTemplateServiceStatusWithOptionsAsync(GetQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryId))
+            if (!request.ResourceDirectoryId.IsNull())
             {
                 body["ResourceDirectoryId"] = request.ResourceDirectoryId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GetQuotaTemplateServiceStatus",
                 Version = "2020-05-10",
@@ -2032,17 +1949,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<GetQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a quota template.</para>
+        /// <para>Queries the status of the quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the value of <c>ServiceStatus</c> is <c>0</c>, which indicates that no quota template is specified. If you want to use a quota template, make sure that the quota template is enabled. In this case, the value of <c>ServiceStatus</c> is <c>1</c>.</para>
+        /// <para>The default status of a quota template is unset (that is, <c>ServiceStatus</c> is <c>0</c>). You can use the features of the quota template only when its status is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2054,18 +1971,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaTemplateServiceStatusResponse GetQuotaTemplateServiceStatus(GetQuotaTemplateServiceStatusRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return GetQuotaTemplateServiceStatusWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a quota template.</para>
+        /// <para>Queries the status of the quota template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the value of <c>ServiceStatus</c> is <c>0</c>, which indicates that no quota template is specified. If you want to use a quota template, make sure that the quota template is enabled. In this case, the value of <c>ServiceStatus</c> is <c>1</c>.</para>
+        /// <para>The default status of a quota template is unset (that is, <c>ServiceStatus</c> is <c>0</c>). You can use the features of the quota template only when its status is enabled (that is, <c>ServiceStatus</c> is <c>1</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2077,18 +1994,138 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaTemplateServiceStatusResponse> GetQuotaTemplateServiceStatusAsync(GetQuotaTemplateServiceStatusRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await GetQuotaTemplateServiceStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert records.</para>
+        /// <para>获取配额使用率概览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaUtilizationOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaUtilizationOverviewResponse
+        /// </returns>
+        public GetQuotaUtilizationOverviewResponse GetQuotaUtilizationOverviewWithOptions(GetQuotaUtilizationOverviewRequest request, Darabonba.Models.RuntimeOptions runtime)
+        {
+            request.Validate();
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!request.QuotaCategory.IsNull())
+            {
+                body["QuotaCategory"] = request.QuotaCategory;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Body = Utils.ParseToMap(body),
+            };
+            Params params_ = new Params
+            {
+                Action = "GetQuotaUtilizationOverview",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<GetQuotaUtilizationOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配额使用率概览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaUtilizationOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaUtilizationOverviewResponse
+        /// </returns>
+        public async Task<GetQuotaUtilizationOverviewResponse> GetQuotaUtilizationOverviewWithOptionsAsync(GetQuotaUtilizationOverviewRequest request, Darabonba.Models.RuntimeOptions runtime)
+        {
+            request.Validate();
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!request.QuotaCategory.IsNull())
+            {
+                body["QuotaCategory"] = request.QuotaCategory;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Body = Utils.ParseToMap(body),
+            };
+            Params params_ = new Params
+            {
+                Action = "GetQuotaUtilizationOverview",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<GetQuotaUtilizationOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配额使用率概览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaUtilizationOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaUtilizationOverviewResponse
+        /// </returns>
+        public GetQuotaUtilizationOverviewResponse GetQuotaUtilizationOverview(GetQuotaUtilizationOverviewRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return GetQuotaUtilizationOverviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配额使用率概览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQuotaUtilizationOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQuotaUtilizationOverviewResponse
+        /// </returns>
+        public async Task<GetQuotaUtilizationOverviewResponse> GetQuotaUtilizationOverviewAsync(GetQuotaUtilizationOverviewRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return await GetQuotaUtilizationOverviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the history of quota alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the historical records of quota alert rules of the old version. If you want to query the historical records of quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> or <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded and this API operation will be deprecated. This API operation can only query the history of legacy quota usage alerts. To query the history of new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> and <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to use API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2101,43 +2138,43 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListAlarmHistoriesResponse
         /// </returns>
-        public ListAlarmHistoriesResponse ListAlarmHistoriesWithOptions(ListAlarmHistoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListAlarmHistoriesResponse ListAlarmHistoriesWithOptions(ListAlarmHistoriesRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            if (!request.EndTime.IsNull())
             {
                 body["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            if (!request.Keyword.IsNull())
             {
                 body["Keyword"] = request.Keyword;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            if (!request.StartTime.IsNull())
             {
                 body["StartTime"] = request.StartTime;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListAlarmHistories",
                 Version = "2020-05-10",
@@ -2149,17 +2186,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAlarmHistoriesResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListAlarmHistoriesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert records.</para>
+        /// <para>Queries the history of quota alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the historical records of quota alert rules of the old version. If you want to query the historical records of quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> or <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded and this API operation will be deprecated. This API operation can only query the history of legacy quota usage alerts. To query the history of new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> and <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to use API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2172,43 +2209,43 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListAlarmHistoriesResponse
         /// </returns>
-        public async Task<ListAlarmHistoriesResponse> ListAlarmHistoriesWithOptionsAsync(ListAlarmHistoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListAlarmHistoriesResponse> ListAlarmHistoriesWithOptionsAsync(ListAlarmHistoriesRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            if (!request.EndTime.IsNull())
             {
                 body["EndTime"] = request.EndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            if (!request.Keyword.IsNull())
             {
                 body["Keyword"] = request.Keyword;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            if (!request.StartTime.IsNull())
             {
                 body["StartTime"] = request.StartTime;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListAlarmHistories",
                 Version = "2020-05-10",
@@ -2220,17 +2257,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAlarmHistoriesResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListAlarmHistoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert records.</para>
+        /// <para>Queries the history of quota alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the historical records of quota alert rules of the old version. If you want to query the historical records of quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> or <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded and this API operation will be deprecated. This API operation can only query the history of legacy quota usage alerts. To query the history of new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> and <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to use API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2242,18 +2279,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListAlarmHistoriesResponse ListAlarmHistories(ListAlarmHistoriesRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListAlarmHistoriesWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert records.</para>
+        /// <para>Queries the history of quota alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the historical records of quota alert rules of the old version. If you want to query the historical records of quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> or <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded and this API operation will be deprecated. This API operation can only query the history of legacy quota usage alerts. To query the history of new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> and <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to use API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2265,24 +2302,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListAlarmHistoriesResponse> ListAlarmHistoriesAsync(ListAlarmHistoriesRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListAlarmHistoriesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas on which a specified quota depends.</para>
+        /// <para>Queries the list of quotas associated with a specific quota. Some quotas are interdependent and should be increased simultaneously.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas on which a Container Service for Kubernetes (ACK) quota whose ID is <c>q_i5uzm3</c> depends. This quota is the maximum number of nodes that can be created in an ACK cluster. The query result indicates that the specified quota depends on the following three quotas:</para>
-        /// <list type="bullet">
-        /// <item><description>An Elastic Compute Service (ECS) quota whose ID is <c>q_elastic-network-interfaces</c>. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by an Alibaba Cloud account. The quota is available in the following regions: <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>A Server Load Balancer (SLB) quota whose ID is <c>q_fh20b0</c>. This quota is the number of servers that can be attached to the backend of an SLB instance.</description></item>
-        /// <item><description>An SLB quota whose ID is <c>q_3mmbsp</c>. This quota is the number of SLB instances that can be owned by an Alibaba Cloud account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDependentQuotasRequest
@@ -2294,23 +2321,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListDependentQuotasResponse
         /// </returns>
-        public ListDependentQuotasResponse ListDependentQuotasWithOptions(ListDependentQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListDependentQuotasResponse ListDependentQuotasWithOptions(ListDependentQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListDependentQuotas",
                 Version = "2020-05-10",
@@ -2322,23 +2349,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDependentQuotasResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListDependentQuotasResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas on which a specified quota depends.</para>
+        /// <para>Queries the list of quotas associated with a specific quota. Some quotas are interdependent and should be increased simultaneously.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas on which a Container Service for Kubernetes (ACK) quota whose ID is <c>q_i5uzm3</c> depends. This quota is the maximum number of nodes that can be created in an ACK cluster. The query result indicates that the specified quota depends on the following three quotas:</para>
-        /// <list type="bullet">
-        /// <item><description>An Elastic Compute Service (ECS) quota whose ID is <c>q_elastic-network-interfaces</c>. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by an Alibaba Cloud account. The quota is available in the following regions: <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>A Server Load Balancer (SLB) quota whose ID is <c>q_fh20b0</c>. This quota is the number of servers that can be attached to the backend of an SLB instance.</description></item>
-        /// <item><description>An SLB quota whose ID is <c>q_3mmbsp</c>. This quota is the number of SLB instances that can be owned by an Alibaba Cloud account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDependentQuotasRequest
@@ -2350,23 +2367,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListDependentQuotasResponse
         /// </returns>
-        public async Task<ListDependentQuotasResponse> ListDependentQuotasWithOptionsAsync(ListDependentQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListDependentQuotasResponse> ListDependentQuotasWithOptionsAsync(ListDependentQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListDependentQuotas",
                 Version = "2020-05-10",
@@ -2378,23 +2395,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDependentQuotasResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListDependentQuotasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas on which a specified quota depends.</para>
+        /// <para>Queries the list of quotas associated with a specific quota. Some quotas are interdependent and should be increased simultaneously.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas on which a Container Service for Kubernetes (ACK) quota whose ID is <c>q_i5uzm3</c> depends. This quota is the maximum number of nodes that can be created in an ACK cluster. The query result indicates that the specified quota depends on the following three quotas:</para>
-        /// <list type="bullet">
-        /// <item><description>An Elastic Compute Service (ECS) quota whose ID is <c>q_elastic-network-interfaces</c>. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by an Alibaba Cloud account. The quota is available in the following regions: <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>A Server Load Balancer (SLB) quota whose ID is <c>q_fh20b0</c>. This quota is the number of servers that can be attached to the backend of an SLB instance.</description></item>
-        /// <item><description>An SLB quota whose ID is <c>q_3mmbsp</c>. This quota is the number of SLB instances that can be owned by an Alibaba Cloud account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDependentQuotasRequest
@@ -2405,24 +2412,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListDependentQuotasResponse ListDependentQuotas(ListDependentQuotasRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListDependentQuotasWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas on which a specified quota depends.</para>
+        /// <para>Queries the list of quotas associated with a specific quota. Some quotas are interdependent and should be increased simultaneously.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas on which a Container Service for Kubernetes (ACK) quota whose ID is <c>q_i5uzm3</c> depends. This quota is the maximum number of nodes that can be created in an ACK cluster. The query result indicates that the specified quota depends on the following three quotas:</para>
-        /// <list type="bullet">
-        /// <item><description>An Elastic Compute Service (ECS) quota whose ID is <c>q_elastic-network-interfaces</c>. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by an Alibaba Cloud account. The quota is available in the following regions: <c>cn-shenzhen</c>, <c>cn-beijing</c>, and <c>cn-hangzhou</c>.</description></item>
-        /// <item><description>A Server Load Balancer (SLB) quota whose ID is <c>q_fh20b0</c>. This quota is the number of servers that can be attached to the backend of an SLB instance.</description></item>
-        /// <item><description>An SLB quota whose ID is <c>q_3mmbsp</c>. This quota is the number of SLB instances that can be owned by an Alibaba Cloud account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDependentQuotasRequest
@@ -2433,19 +2430,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListDependentQuotasResponse> ListDependentQuotasAsync(ListDependentQuotasRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListDependentQuotasWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension groups of an Alibaba Cloud service.</para>
+        /// <para>This operation queries the dimension groups of a specified Alibaba Cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the ListProductDimensionGroups operation to query the dimension groups of Object Storage Service (OSS). In this example, a dimension group is returned. The group name is <c>OSS_Group</c>, the group code is <c>oss_wf1ngqmd7q</c>, and the group key is <c>chargeType</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductDimensionGroupsRequest
@@ -2457,27 +2449,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductDimensionGroupsResponse
         /// </returns>
-        public ListProductDimensionGroupsResponse ListProductDimensionGroupsWithOptions(ListProductDimensionGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListProductDimensionGroupsResponse ListProductDimensionGroupsWithOptions(ListProductDimensionGroupsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 query["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 query["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 query["ProductCode"] = request.ProductCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProductDimensionGroups",
                 Version = "2020-05-10",
@@ -2489,18 +2481,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductDimensionGroupsResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductDimensionGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension groups of an Alibaba Cloud service.</para>
+        /// <para>This operation queries the dimension groups of a specified Alibaba Cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the ListProductDimensionGroups operation to query the dimension groups of Object Storage Service (OSS). In this example, a dimension group is returned. The group name is <c>OSS_Group</c>, the group code is <c>oss_wf1ngqmd7q</c>, and the group key is <c>chargeType</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductDimensionGroupsRequest
@@ -2512,27 +2499,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductDimensionGroupsResponse
         /// </returns>
-        public async Task<ListProductDimensionGroupsResponse> ListProductDimensionGroupsWithOptionsAsync(ListProductDimensionGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListProductDimensionGroupsResponse> ListProductDimensionGroupsWithOptionsAsync(ListProductDimensionGroupsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 query["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 query["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 query["ProductCode"] = request.ProductCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProductDimensionGroups",
                 Version = "2020-05-10",
@@ -2544,18 +2531,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductDimensionGroupsResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductDimensionGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension groups of an Alibaba Cloud service.</para>
+        /// <para>This operation queries the dimension groups of a specified Alibaba Cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the ListProductDimensionGroups operation to query the dimension groups of Object Storage Service (OSS). In this example, a dimension group is returned. The group name is <c>OSS_Group</c>, the group code is <c>oss_wf1ngqmd7q</c>, and the group key is <c>chargeType</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductDimensionGroupsRequest
@@ -2566,19 +2548,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductDimensionGroupsResponse ListProductDimensionGroups(ListProductDimensionGroupsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListProductDimensionGroupsWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dimension groups of an Alibaba Cloud service.</para>
+        /// <para>This operation queries the dimension groups of a specified Alibaba Cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the ListProductDimensionGroups operation to query the dimension groups of Object Storage Service (OSS). In this example, a dimension group is returned. The group name is <c>OSS_Group</c>, the group code is <c>oss_wf1ngqmd7q</c>, and the group key is <c>chargeType</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductDimensionGroupsRequest
@@ -2589,19 +2566,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductDimensionGroupsResponse> ListProductDimensionGroupsAsync(ListProductDimensionGroupsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListProductDimensionGroupsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota dimensions that are supported by the specified Alibaba Cloud service.</para>
+        /// <para>Queries the quota dimensions supported by the specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query results show all the quota dimensions that are supported by ECS.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotaDimensionsRequest
@@ -2613,31 +2585,31 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotaDimensionsResponse
         /// </returns>
-        public ListProductQuotaDimensionsResponse ListProductQuotaDimensionsWithOptions(ListProductQuotaDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListProductQuotaDimensionsResponse ListProductQuotaDimensionsWithOptions(ListProductQuotaDimensionsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProductQuotaDimensions",
                 Version = "2020-05-10",
@@ -2649,18 +2621,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductQuotaDimensionsResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductQuotaDimensionsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota dimensions that are supported by the specified Alibaba Cloud service.</para>
+        /// <para>Queries the quota dimensions supported by the specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query results show all the quota dimensions that are supported by ECS.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotaDimensionsRequest
@@ -2672,31 +2639,31 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotaDimensionsResponse
         /// </returns>
-        public async Task<ListProductQuotaDimensionsResponse> ListProductQuotaDimensionsWithOptionsAsync(ListProductQuotaDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListProductQuotaDimensionsResponse> ListProductQuotaDimensionsWithOptionsAsync(ListProductQuotaDimensionsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProductQuotaDimensions",
                 Version = "2020-05-10",
@@ -2708,18 +2675,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductQuotaDimensionsResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductQuotaDimensionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota dimensions that are supported by the specified Alibaba Cloud service.</para>
+        /// <para>Queries the quota dimensions supported by the specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query results show all the quota dimensions that are supported by ECS.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotaDimensionsRequest
@@ -2730,19 +2692,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductQuotaDimensionsResponse ListProductQuotaDimensions(ListProductQuotaDimensionsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListProductQuotaDimensionsWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota dimensions that are supported by the specified Alibaba Cloud service.</para>
+        /// <para>Queries the quota dimensions supported by the specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query results show all the quota dimensions that are supported by ECS.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotaDimensionsRequest
@@ -2753,19 +2710,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductQuotaDimensionsResponse> ListProductQuotaDimensionsAsync(ListProductQuotaDimensionsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListProductQuotaDimensionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specific Alibaba Cloud service.</para>
+        /// <para>Queries the quotas of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas whose instance type is <c>ecs.g5.2xlarge</c>. The quotas belong to Elastic Compute Service (ECS) Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotasRequest
@@ -2777,55 +2729,55 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotasResponse
         /// </returns>
-        public ListProductQuotasResponse ListProductQuotasWithOptions(ListProductQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListProductQuotasResponse ListProductQuotasWithOptions(ListProductQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            if (!request.GroupCode.IsNull())
             {
                 body["GroupCode"] = request.GroupCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            if (!request.KeyWord.IsNull())
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            if (!request.SortField.IsNull())
             {
                 body["SortField"] = request.SortField;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            if (!request.SortOrder.IsNull())
             {
                 body["SortOrder"] = request.SortOrder;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProductQuotas",
                 Version = "2020-05-10",
@@ -2837,18 +2789,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductQuotasResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductQuotasResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specific Alibaba Cloud service.</para>
+        /// <para>Queries the quotas of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas whose instance type is <c>ecs.g5.2xlarge</c>. The quotas belong to Elastic Compute Service (ECS) Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotasRequest
@@ -2860,55 +2807,55 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotasResponse
         /// </returns>
-        public async Task<ListProductQuotasResponse> ListProductQuotasWithOptionsAsync(ListProductQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListProductQuotasResponse> ListProductQuotasWithOptionsAsync(ListProductQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            if (!request.GroupCode.IsNull())
             {
                 body["GroupCode"] = request.GroupCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            if (!request.KeyWord.IsNull())
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            if (!request.SortField.IsNull())
             {
                 body["SortField"] = request.SortField;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            if (!request.SortOrder.IsNull())
             {
                 body["SortOrder"] = request.SortOrder;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProductQuotas",
                 Version = "2020-05-10",
@@ -2920,18 +2867,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductQuotasResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductQuotasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specific Alibaba Cloud service.</para>
+        /// <para>Queries the quotas of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas whose instance type is <c>ecs.g5.2xlarge</c>. The quotas belong to Elastic Compute Service (ECS) Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotasRequest
@@ -2942,19 +2884,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductQuotasResponse ListProductQuotas(ListProductQuotasRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListProductQuotasWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specific Alibaba Cloud service.</para>
+        /// <para>Queries the quotas of a specified cloud service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the quotas whose instance type is <c>ecs.g5.2xlarge</c>. The quotas belong to Elastic Compute Service (ECS) Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListProductQuotasRequest
@@ -2965,18 +2902,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductQuotasResponse> ListProductQuotasAsync(ListProductQuotasRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListProductQuotasWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud services that support Quota Center.</para>
+        /// <para>Queries the list of Alibaba Cloud services supported by Quota Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The services in the query result are the same as the services listed in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// <para>The query results are the same as those in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services supported by Quota Center</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2989,23 +2926,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductsResponse
         /// </returns>
-        public ListProductsResponse ListProductsWithOptions(ListProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListProductsResponse ListProductsWithOptions(ListProductsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProducts",
                 Version = "2020-05-10",
@@ -3017,17 +2954,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductsResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud services that support Quota Center.</para>
+        /// <para>Queries the list of Alibaba Cloud services supported by Quota Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The services in the query result are the same as the services listed in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// <para>The query results are the same as those in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services supported by Quota Center</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3040,23 +2977,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductsResponse
         /// </returns>
-        public async Task<ListProductsResponse> ListProductsWithOptionsAsync(ListProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListProductsResponse> ListProductsWithOptionsAsync(ListProductsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListProducts",
                 Version = "2020-05-10",
@@ -3068,17 +3005,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListProductsResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListProductsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud services that support Quota Center.</para>
+        /// <para>Queries the list of Alibaba Cloud services supported by Quota Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The services in the query result are the same as the services listed in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// <para>The query results are the same as those in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services supported by Quota Center</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3090,18 +3027,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductsResponse ListProducts(ListProductsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListProductsWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud services that support Quota Center.</para>
+        /// <para>Queries the list of Alibaba Cloud services supported by Quota Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The services in the query result are the same as the services listed in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// <para>The query results are the same as those in <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services supported by Quota Center</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3113,18 +3050,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductsResponse> ListProductsAsync(ListProductsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListProductsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quota alerts.</para>
+        /// <para>Queries quota usage alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query quota alert rules of the old version. If you want to query quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded. This API operation is scheduled for deprecation and queries only earlier-version quota usage alerts. To query new-version quota usage alerts, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to manage new-version quota alerts using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3137,39 +3074,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaAlarmsResponse
         /// </returns>
-        public ListQuotaAlarmsResponse ListQuotaAlarmsWithOptions(ListQuotaAlarmsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListQuotaAlarmsResponse ListQuotaAlarmsWithOptions(ListQuotaAlarmsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
+            if (!request.AlarmName.IsNull())
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
+            if (!request.QuotaDimensions.IsNull())
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaAlarms",
                 Version = "2020-05-10",
@@ -3181,17 +3118,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaAlarmsResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaAlarmsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quota alerts.</para>
+        /// <para>Queries quota usage alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query quota alert rules of the old version. If you want to query quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded. This API operation is scheduled for deprecation and queries only earlier-version quota usage alerts. To query new-version quota usage alerts, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to manage new-version quota alerts using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3204,39 +3141,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaAlarmsResponse
         /// </returns>
-        public async Task<ListQuotaAlarmsResponse> ListQuotaAlarmsWithOptionsAsync(ListQuotaAlarmsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaAlarmsResponse> ListQuotaAlarmsWithOptionsAsync(ListQuotaAlarmsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
+            if (!request.AlarmName.IsNull())
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
+            if (!request.QuotaDimensions.IsNull())
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaAlarms",
                 Version = "2020-05-10",
@@ -3248,17 +3185,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaAlarmsResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaAlarmsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quota alerts.</para>
+        /// <para>Queries quota usage alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query quota alert rules of the old version. If you want to query quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded. This API operation is scheduled for deprecation and queries only earlier-version quota usage alerts. To query new-version quota usage alerts, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to manage new-version quota alerts using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3270,18 +3207,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaAlarmsResponse ListQuotaAlarms(ListQuotaAlarmsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListQuotaAlarmsWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quota alerts.</para>
+        /// <para>Queries quota usage alerts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query quota alert rules of the old version. If you want to query quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
+        /// <para>The quota alert feature has been upgraded. This API operation is scheduled for deprecation and queries only earlier-version quota usage alerts. To query new-version quota usage alerts, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to manage new-version quota alerts using API operations, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new-version quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3293,7 +3230,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaAlarmsResponse> ListQuotaAlarmsAsync(ListQuotaAlarmsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListQuotaAlarmsWithOptionsAsync(request, runtime);
         }
 
@@ -3312,45 +3249,45 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationTemplatesResponse
         /// </returns>
-        public ListQuotaApplicationTemplatesResponse ListQuotaApplicationTemplatesWithOptions(ListQuotaApplicationTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationTemplatesResponse ListQuotaApplicationTemplatesWithOptions(ListQuotaApplicationTemplatesRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 query["NextToken"] = request.NextToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            if (!request.Id.IsNull())
             {
                 body["Id"] = request.Id;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = Utils.Query(query),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplicationTemplates",
                 Version = "2020-05-10",
@@ -3362,7 +3299,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationTemplatesResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3380,45 +3317,45 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationTemplatesResponse
         /// </returns>
-        public async Task<ListQuotaApplicationTemplatesResponse> ListQuotaApplicationTemplatesWithOptionsAsync(ListQuotaApplicationTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationTemplatesResponse> ListQuotaApplicationTemplatesWithOptionsAsync(ListQuotaApplicationTemplatesRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 query["NextToken"] = request.NextToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            if (!request.Id.IsNull())
             {
                 body["Id"] = request.Id;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = Utils.Query(query),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplicationTemplates",
                 Version = "2020-05-10",
@@ -3430,7 +3367,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3447,7 +3384,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationTemplatesResponse ListQuotaApplicationTemplates(ListQuotaApplicationTemplatesRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListQuotaApplicationTemplatesWithOptions(request, runtime);
         }
 
@@ -3465,19 +3402,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationTemplatesResponse> ListQuotaApplicationTemplatesAsync(ListQuotaApplicationTemplatesRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListQuotaApplicationTemplatesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application that is submitted to increase a quota.</para>
+        /// <para>Queries the list of quota increase applications.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of an application that is submitted to increase a quota whose ID is <c>q_i5uzm3</c> and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details of the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is <c>b926571d-cc09-4711-b547-58a615f0****</c>. The application time is <c>2021-01-15T09:13:53Z</c>. The expected quota value is <c>101</c>. The application result is <c>Agree</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListQuotaApplicationsRequest
@@ -3489,47 +3421,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsResponse
         /// </returns>
-        public ListQuotaApplicationsResponse ListQuotaApplicationsWithOptions(ListQuotaApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationsResponse ListQuotaApplicationsWithOptions(ListQuotaApplicationsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            if (!request.KeyWord.IsNull())
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            if (!request.Status.IsNull())
             {
                 body["Status"] = request.Status;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplications",
                 Version = "2020-05-10",
@@ -3541,18 +3473,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationsResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application that is submitted to increase a quota.</para>
+        /// <para>Queries the list of quota increase applications.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of an application that is submitted to increase a quota whose ID is <c>q_i5uzm3</c> and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details of the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is <c>b926571d-cc09-4711-b547-58a615f0****</c>. The application time is <c>2021-01-15T09:13:53Z</c>. The expected quota value is <c>101</c>. The application result is <c>Agree</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListQuotaApplicationsRequest
@@ -3564,47 +3491,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsResponse
         /// </returns>
-        public async Task<ListQuotaApplicationsResponse> ListQuotaApplicationsWithOptionsAsync(ListQuotaApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationsResponse> ListQuotaApplicationsWithOptionsAsync(ListQuotaApplicationsRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            if (!request.KeyWord.IsNull())
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            if (!request.Status.IsNull())
             {
                 body["Status"] = request.Status;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplications",
                 Version = "2020-05-10",
@@ -3616,18 +3543,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application that is submitted to increase a quota.</para>
+        /// <para>Queries the list of quota increase applications.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of an application that is submitted to increase a quota whose ID is <c>q_i5uzm3</c> and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details of the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is <c>b926571d-cc09-4711-b547-58a615f0****</c>. The application time is <c>2021-01-15T09:13:53Z</c>. The expected quota value is <c>101</c>. The application result is <c>Agree</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListQuotaApplicationsRequest
@@ -3638,19 +3560,14 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationsResponse ListQuotaApplications(ListQuotaApplicationsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListQuotaApplicationsWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an application that is submitted to increase a quota.</para>
+        /// <para>Queries the list of quota increase applications.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the operation is called to query the details of an application that is submitted to increase a quota whose ID is <c>q_i5uzm3</c> and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details of the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is <c>b926571d-cc09-4711-b547-58a615f0****</c>. The application time is <c>2021-01-15T09:13:53Z</c>. The expected quota value is <c>101</c>. The application result is <c>Agree</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListQuotaApplicationsRequest
@@ -3661,13 +3578,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationsResponse> ListQuotaApplicationsAsync(ListQuotaApplicationsRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListQuotaApplicationsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota increase application for member accounts in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3680,47 +3597,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsDetailForTemplateResponse
         /// </returns>
-        public ListQuotaApplicationsDetailForTemplateResponse ListQuotaApplicationsDetailForTemplateWithOptions(ListQuotaApplicationsDetailForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationsDetailForTemplateResponse ListQuotaApplicationsDetailForTemplateWithOptions(ListQuotaApplicationsDetailForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
+            if (!request.AliyunUid.IsNull())
             {
                 body["AliyunUid"] = request.AliyunUid;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
+            if (!request.BatchQuotaApplicationId.IsNull())
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            if (!request.Status.IsNull())
             {
                 body["Status"] = request.Status;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplicationsDetailForTemplate",
                 Version = "2020-05-10",
@@ -3732,12 +3649,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota increase application for member accounts in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3750,47 +3667,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsDetailForTemplateResponse
         /// </returns>
-        public async Task<ListQuotaApplicationsDetailForTemplateResponse> ListQuotaApplicationsDetailForTemplateWithOptionsAsync(ListQuotaApplicationsDetailForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationsDetailForTemplateResponse> ListQuotaApplicationsDetailForTemplateWithOptionsAsync(ListQuotaApplicationsDetailForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
+            if (!request.AliyunUid.IsNull())
             {
                 body["AliyunUid"] = request.AliyunUid;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
+            if (!request.BatchQuotaApplicationId.IsNull())
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            if (!request.Status.IsNull())
             {
                 body["Status"] = request.Status;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplicationsDetailForTemplate",
                 Version = "2020-05-10",
@@ -3802,12 +3719,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota increase application for member accounts in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3819,13 +3736,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationsDetailForTemplateResponse ListQuotaApplicationsDetailForTemplate(ListQuotaApplicationsDetailForTemplateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListQuotaApplicationsDetailForTemplateWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a quota increase application for member accounts in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3837,13 +3754,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationsDetailForTemplateResponse> ListQuotaApplicationsDetailForTemplateAsync(ListQuotaApplicationsDetailForTemplateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListQuotaApplicationsDetailForTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application records of a quota template that is used to apply for quotas for member accounts.</para>
+        /// <para>Queries the history of batch requests for member quotas submitted using a quota template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3856,47 +3773,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsForTemplateResponse
         /// </returns>
-        public ListQuotaApplicationsForTemplateResponse ListQuotaApplicationsForTemplateWithOptions(ListQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationsForTemplateResponse ListQuotaApplicationsForTemplateWithOptions(ListQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyEndTime))
+            if (!request.ApplyEndTime.IsNull())
             {
                 body["ApplyEndTime"] = request.ApplyEndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyStartTime))
+            if (!request.ApplyStartTime.IsNull())
             {
                 body["ApplyStartTime"] = request.ApplyStartTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
+            if (!request.BatchQuotaApplicationId.IsNull())
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -3908,12 +3825,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application records of a quota template that is used to apply for quotas for member accounts.</para>
+        /// <para>Queries the history of batch requests for member quotas submitted using a quota template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3926,47 +3843,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsForTemplateResponse
         /// </returns>
-        public async Task<ListQuotaApplicationsForTemplateResponse> ListQuotaApplicationsForTemplateWithOptionsAsync(ListQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationsForTemplateResponse> ListQuotaApplicationsForTemplateWithOptionsAsync(ListQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyEndTime))
+            if (!request.ApplyEndTime.IsNull())
             {
                 body["ApplyEndTime"] = request.ApplyEndTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyStartTime))
+            if (!request.ApplyStartTime.IsNull())
             {
                 body["ApplyStartTime"] = request.ApplyStartTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
+            if (!request.BatchQuotaApplicationId.IsNull())
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            if (!request.MaxResults.IsNull())
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            if (!request.NextToken.IsNull())
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ListQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -3978,12 +3895,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application records of a quota template that is used to apply for quotas for member accounts.</para>
+        /// <para>Queries the history of batch requests for member quotas submitted using a quota template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3995,13 +3912,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationsForTemplateResponse ListQuotaApplicationsForTemplate(ListQuotaApplicationsForTemplateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ListQuotaApplicationsForTemplateWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application records of a quota template that is used to apply for quotas for member accounts.</para>
+        /// <para>Queries the history of batch requests for member quotas submitted using a quota template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4013,48 +3930,68 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationsForTemplateResponse> ListQuotaApplicationsForTemplateAsync(ListQuotaApplicationsForTemplateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ListQuotaApplicationsForTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a quota template. By default, the quota template is not configured. If the management account of a resource directory uses a quota template for the first time, you must enable the quota template. Only the management account of a resource directory can change the status of quota templates.</para>
+        /// <para>列举配额使用率报告</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>A resource directory is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/604185.html">EnableResourceDirectory</a>.</para>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para>If the <c>ServiceStatus</c> parameter is set to <c>0</c> or <c>-1</c>, you can call this operation to set the parameter to <c>1</c>. Then, you can call the <a href="https://help.aliyun.com/document_detail/450615.html">CreateTemplateQuotaItem</a> operation to create a quota template.</para>
-        /// </description>
-        /// 
         /// <param name="request">
-        /// ModifyQuotaTemplateServiceStatusRequest
+        /// ListQuotaUtilizationReportRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// ModifyQuotaTemplateServiceStatusResponse
+        /// ListQuotaUtilizationReportResponse
         /// </returns>
-        public ModifyQuotaTemplateServiceStatusResponse ModifyQuotaTemplateServiceStatusWithOptions(ModifyQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListQuotaUtilizationReportResponse ListQuotaUtilizationReportWithOptions(ListQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceStatus))
+            if (!request.Adjustable.IsNull())
             {
-                body["ServiceStatus"] = request.ServiceStatus;
+                body["Adjustable"] = request.Adjustable;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            if (!request.KeyWords.IsNull())
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                body["KeyWords"] = request.KeyWords;
+            }
+            if (!request.MaxResults.IsNull())
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!request.NextToken.IsNull())
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!request.ProductCode.IsNull())
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!request.QuotaCategory.IsNull())
+            {
+                body["QuotaCategory"] = request.QuotaCategory;
+            }
+            if (!request.QuotaRegionId.IsNull())
+            {
+                body["QuotaRegionId"] = request.QuotaRegionId;
+            }
+            if (!request.UtilizationStatuses.IsNull())
+            {
+                body["UtilizationStatuses"] = request.UtilizationStatuses;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
-                Action = "ModifyQuotaTemplateServiceStatus",
+                Action = "ListQuotaUtilizationReport",
                 Version = "2020-05-10",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -4064,7 +4001,113 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ListQuotaUtilizationReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举配额使用率报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListQuotaUtilizationReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQuotaUtilizationReportResponse
+        /// </returns>
+        public async Task<ListQuotaUtilizationReportResponse> ListQuotaUtilizationReportWithOptionsAsync(ListQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
+        {
+            request.Validate();
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!request.Adjustable.IsNull())
+            {
+                body["Adjustable"] = request.Adjustable;
+            }
+            if (!request.KeyWords.IsNull())
+            {
+                body["KeyWords"] = request.KeyWords;
+            }
+            if (!request.MaxResults.IsNull())
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!request.NextToken.IsNull())
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!request.ProductCode.IsNull())
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!request.QuotaCategory.IsNull())
+            {
+                body["QuotaCategory"] = request.QuotaCategory;
+            }
+            if (!request.QuotaRegionId.IsNull())
+            {
+                body["QuotaRegionId"] = request.QuotaRegionId;
+            }
+            if (!request.UtilizationStatuses.IsNull())
+            {
+                body["UtilizationStatuses"] = request.UtilizationStatuses;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Body = Utils.ParseToMap(body),
+            };
+            Params params_ = new Params
+            {
+                Action = "ListQuotaUtilizationReport",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<ListQuotaUtilizationReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举配额使用率报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListQuotaUtilizationReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQuotaUtilizationReportResponse
+        /// </returns>
+        public ListQuotaUtilizationReportResponse ListQuotaUtilizationReport(ListQuotaUtilizationReportRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return ListQuotaUtilizationReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举配额使用率报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListQuotaUtilizationReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQuotaUtilizationReportResponse
+        /// </returns>
+        public async Task<ListQuotaUtilizationReportResponse> ListQuotaUtilizationReportAsync(ListQuotaUtilizationReportRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return await ListQuotaUtilizationReportWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4090,19 +4133,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ModifyQuotaTemplateServiceStatusResponse
         /// </returns>
-        public async Task<ModifyQuotaTemplateServiceStatusResponse> ModifyQuotaTemplateServiceStatusWithOptionsAsync(ModifyQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyQuotaTemplateServiceStatusResponse ModifyQuotaTemplateServiceStatusWithOptions(ModifyQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceStatus))
+            if (!request.ServiceStatus.IsNull())
             {
                 body["ServiceStatus"] = request.ServiceStatus;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ModifyQuotaTemplateServiceStatus",
                 Version = "2020-05-10",
@@ -4114,7 +4157,57 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ModifyQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of a quota template. By default, the quota template is not configured. If the management account of a resource directory uses a quota template for the first time, you must enable the quota template. Only the management account of a resource directory can change the status of quota templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>A resource directory is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/604185.html">EnableResourceDirectory</a>.</para>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>If the <c>ServiceStatus</c> parameter is set to <c>0</c> or <c>-1</c>, you can call this operation to set the parameter to <c>1</c>. Then, you can call the <a href="https://help.aliyun.com/document_detail/450615.html">CreateTemplateQuotaItem</a> operation to create a quota template.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyQuotaTemplateServiceStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQuotaTemplateServiceStatusResponse
+        /// </returns>
+        public async Task<ModifyQuotaTemplateServiceStatusResponse> ModifyQuotaTemplateServiceStatusWithOptionsAsync(ModifyQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
+        {
+            request.Validate();
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!request.ServiceStatus.IsNull())
+            {
+                body["ServiceStatus"] = request.ServiceStatus;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Body = Utils.ParseToMap(body),
+            };
+            Params params_ = new Params
+            {
+                Action = "ModifyQuotaTemplateServiceStatus",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<ModifyQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4139,7 +4232,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ModifyQuotaTemplateServiceStatusResponse ModifyQuotaTemplateServiceStatus(ModifyQuotaTemplateServiceStatusRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ModifyQuotaTemplateServiceStatusWithOptions(request, runtime);
         }
 
@@ -4165,13 +4258,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ModifyQuotaTemplateServiceStatusResponse> ModifyQuotaTemplateServiceStatusAsync(ModifyQuotaTemplateServiceStatusRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ModifyQuotaTemplateServiceStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the quota template.</para>
+        /// <para>Only the administrator account of a resource directory can modify a quota template. Modifications to a quota template apply only to new members that are added to the resource directory and do not affect existing members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4184,57 +4277,57 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ModifyTemplateQuotaItemResponse
         /// </returns>
-        public ModifyTemplateQuotaItemResponse ModifyTemplateQuotaItemWithOptions(ModifyTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyTemplateQuotaItemResponse ModifyTemplateQuotaItemWithOptions(ModifyTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 query["QuotaCategory"] = request.QuotaCategory;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            if (!request.Id.IsNull())
             {
                 body["Id"] = request.Id;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = Utils.Query(query),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ModifyTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -4246,12 +4339,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ModifyTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the quota template.</para>
+        /// <para>Only the administrator account of a resource directory can modify a quota template. Modifications to a quota template apply only to new members that are added to the resource directory and do not affect existing members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4264,57 +4357,57 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ModifyTemplateQuotaItemResponse
         /// </returns>
-        public async Task<ModifyTemplateQuotaItemResponse> ModifyTemplateQuotaItemWithOptionsAsync(ModifyTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyTemplateQuotaItemResponse> ModifyTemplateQuotaItemWithOptionsAsync(ModifyTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
+            if (!request.QuotaCategory.IsNull())
             {
                 query["QuotaCategory"] = request.QuotaCategory;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
+            if (!request.DesireValue.IsNull())
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            if (!request.Dimensions.IsNull())
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            if (!request.EffectiveTime.IsNull())
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
+            if (!request.EnvLanguage.IsNull())
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            if (!request.ExpireTime.IsNull())
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            if (!request.Id.IsNull())
             {
                 body["Id"] = request.Id;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            if (!request.NoticeType.IsNull())
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            if (!request.ProductCode.IsNull())
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
+            if (!request.QuotaActionCode.IsNull())
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = Utils.Query(query),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ModifyTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -4326,12 +4419,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ModifyTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the quota template.</para>
+        /// <para>Only the administrator account of a resource directory can modify a quota template. Modifications to a quota template apply only to new members that are added to the resource directory and do not affect existing members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4343,13 +4436,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ModifyTemplateQuotaItemResponse ModifyTemplateQuotaItem(ModifyTemplateQuotaItemRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ModifyTemplateQuotaItemWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the quota template.</para>
+        /// <para>Only the administrator account of a resource directory can modify a quota template. Modifications to a quota template apply only to new members that are added to the resource directory and do not affect existing members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4361,19 +4454,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ModifyTemplateQuotaItemResponse> ModifyTemplateQuotaItemAsync(ModifyTemplateQuotaItemRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ModifyTemplateQuotaItemWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reminds the approver of a quota application to review the application. This operation is applicable to quota applications that support the approval reminding feature.</para>
+        /// <para>Sends a reminder for a quota application that is pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can call this operation to enable the approval reminder feature for quota applications that support this feature. To check whether this feature is supported, you can view the value of <c>SupportReminder</c> in the GetQuotaApplicationApproval operation. If the value of SupportReminder is <c>true</c>, this feature is supported.</para>
+        /// <para>This operation applies only to quota applications that support reminders. In the GetQuotaApplicationApproval response, the <c>SupportReminder</c> parameter for these applications is <c>true</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4387,19 +4480,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// RemindQuotaApplicationApprovalResponse
         /// </returns>
-        public RemindQuotaApplicationApprovalResponse RemindQuotaApplicationApprovalWithOptions(RemindQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RemindQuotaApplicationApprovalResponse RemindQuotaApplicationApprovalWithOptions(RemindQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            if (!request.ApplicationId.IsNull())
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "RemindQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -4411,18 +4504,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RemindQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<RemindQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reminds the approver of a quota application to review the application. This operation is applicable to quota applications that support the approval reminding feature.</para>
+        /// <para>Sends a reminder for a quota application that is pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can call this operation to enable the approval reminder feature for quota applications that support this feature. To check whether this feature is supported, you can view the value of <c>SupportReminder</c> in the GetQuotaApplicationApproval operation. If the value of SupportReminder is <c>true</c>, this feature is supported.</para>
+        /// <para>This operation applies only to quota applications that support reminders. In the GetQuotaApplicationApproval response, the <c>SupportReminder</c> parameter for these applications is <c>true</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4436,19 +4529,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// RemindQuotaApplicationApprovalResponse
         /// </returns>
-        public async Task<RemindQuotaApplicationApprovalResponse> RemindQuotaApplicationApprovalWithOptionsAsync(RemindQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RemindQuotaApplicationApprovalResponse> RemindQuotaApplicationApprovalWithOptionsAsync(RemindQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            if (!request.ApplicationId.IsNull())
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "RemindQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -4460,18 +4553,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RemindQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<RemindQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reminds the approver of a quota application to review the application. This operation is applicable to quota applications that support the approval reminding feature.</para>
+        /// <para>Sends a reminder for a quota application that is pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can call this operation to enable the approval reminder feature for quota applications that support this feature. To check whether this feature is supported, you can view the value of <c>SupportReminder</c> in the GetQuotaApplicationApproval operation. If the value of SupportReminder is <c>true</c>, this feature is supported.</para>
+        /// <para>This operation applies only to quota applications that support reminders. In the GetQuotaApplicationApproval response, the <c>SupportReminder</c> parameter for these applications is <c>true</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4484,19 +4577,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public RemindQuotaApplicationApprovalResponse RemindQuotaApplicationApproval(RemindQuotaApplicationApprovalRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return RemindQuotaApplicationApprovalWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reminds the approver of a quota application to review the application. This operation is applicable to quota applications that support the approval reminding feature.</para>
+        /// <para>Sends a reminder for a quota application that is pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can call this operation to enable the approval reminder feature for quota applications that support this feature. To check whether this feature is supported, you can view the value of <c>SupportReminder</c> in the GetQuotaApplicationApproval operation. If the value of SupportReminder is <c>true</c>, this feature is supported.</para>
+        /// <para>This operation applies only to quota applications that support reminders. In the GetQuotaApplicationApproval response, the <c>SupportReminder</c> parameter for these applications is <c>true</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4509,21 +4602,122 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<RemindQuotaApplicationApprovalResponse> RemindQuotaApplicationApprovalAsync(RemindQuotaApplicationApprovalRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await RemindQuotaApplicationApprovalWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quota alert rule.</para>
+        /// <para>发起配额使用率报告查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartQuotaUtilizationReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartQuotaUtilizationReportResponse
+        /// </returns>
+        public StartQuotaUtilizationReportResponse StartQuotaUtilizationReportWithOptions(StartQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
+        {
+            request.Validate();
+            OpenApiRequest req = new OpenApiRequest();
+            Params params_ = new Params
+            {
+                Action = "StartQuotaUtilizationReport",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<StartQuotaUtilizationReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起配额使用率报告查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartQuotaUtilizationReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartQuotaUtilizationReportResponse
+        /// </returns>
+        public async Task<StartQuotaUtilizationReportResponse> StartQuotaUtilizationReportWithOptionsAsync(StartQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
+        {
+            request.Validate();
+            OpenApiRequest req = new OpenApiRequest();
+            Params params_ = new Params
+            {
+                Action = "StartQuotaUtilizationReport",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<StartQuotaUtilizationReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起配额使用率报告查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartQuotaUtilizationReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartQuotaUtilizationReportResponse
+        /// </returns>
+        public StartQuotaUtilizationReportResponse StartQuotaUtilizationReport(StartQuotaUtilizationReportRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return StartQuotaUtilizationReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起配额使用率报告查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartQuotaUtilizationReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartQuotaUtilizationReportResponse
+        /// </returns>
+        public async Task<StartQuotaUtilizationReportResponse> StartQuotaUtilizationReportAsync(StartQuotaUtilizationReportRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return await StartQuotaUtilizationReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies quota alert information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to modify the information about a specific quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to modify the information about a quota alert rule whose ID is <c>a2efa7fc-832f-47bb-8054-39e28012****</c> and whose name is <c>rules</c>. The alert threshold is changed from <c>150</c> to <c>160</c>.</description></item>
-        /// </list>
+        /// <para>This API operation is deprecated because the quota alert feature has been upgraded. To modify information about new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about using API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4536,39 +4730,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// UpdateQuotaAlarmResponse
         /// </returns>
-        public UpdateQuotaAlarmResponse UpdateQuotaAlarmWithOptions(UpdateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateQuotaAlarmResponse UpdateQuotaAlarmWithOptions(UpdateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
+            if (!request.AlarmName.IsNull())
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.Threshold.IsNull())
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
+            if (!request.ThresholdPercent.IsNull())
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
+            if (!request.ThresholdType.IsNull())
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
+            if (!request.WebHook.IsNull())
             {
                 body["WebHook"] = request.WebHook;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "UpdateQuotaAlarm",
                 Version = "2020-05-10",
@@ -4580,20 +4774,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<UpdateQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quota alert rule.</para>
+        /// <para>Modifies quota alert information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to modify the information about a specific quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to modify the information about a quota alert rule whose ID is <c>a2efa7fc-832f-47bb-8054-39e28012****</c> and whose name is <c>rules</c>. The alert threshold is changed from <c>150</c> to <c>160</c>.</description></item>
-        /// </list>
+        /// <para>This API operation is deprecated because the quota alert feature has been upgraded. To modify information about new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about using API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4606,39 +4797,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// UpdateQuotaAlarmResponse
         /// </returns>
-        public async Task<UpdateQuotaAlarmResponse> UpdateQuotaAlarmWithOptionsAsync(UpdateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateQuotaAlarmResponse> UpdateQuotaAlarmWithOptionsAsync(UpdateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
+            if (!request.AlarmId.IsNull())
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
+            if (!request.AlarmName.IsNull())
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.Threshold.IsNull())
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
+            if (!request.ThresholdPercent.IsNull())
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
+            if (!request.ThresholdType.IsNull())
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
+            if (!request.WebHook.IsNull())
             {
                 body["WebHook"] = request.WebHook;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "UpdateQuotaAlarm",
                 Version = "2020-05-10",
@@ -4650,20 +4841,17 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<UpdateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quota alert rule.</para>
+        /// <para>Modifies quota alert information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to modify the information about a specific quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to modify the information about a quota alert rule whose ID is <c>a2efa7fc-832f-47bb-8054-39e28012****</c> and whose name is <c>rules</c>. The alert threshold is changed from <c>150</c> to <c>160</c>.</description></item>
-        /// </list>
+        /// <para>This API operation is deprecated because the quota alert feature has been upgraded. To modify information about new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about using API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4675,21 +4863,18 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public UpdateQuotaAlarmResponse UpdateQuotaAlarm(UpdateQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return UpdateQuotaAlarmWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quota alert rule.</para>
+        /// <para>Modifies quota alert information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to modify the information about a specific quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>In this example, the API operation is called to modify the information about a quota alert rule whose ID is <c>a2efa7fc-832f-47bb-8054-39e28012****</c> and whose name is <c>rules</c>. The alert threshold is changed from <c>150</c> to <c>160</c>.</description></item>
-        /// </list>
+        /// <para>This API operation is deprecated because the quota alert feature has been upgraded. To modify information about new quota usage alerts, use the CloudMonitor API operations <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> and <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about using API operations to manage new quota alerts, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alerts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4701,9 +4886,10 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<UpdateQuotaAlarmResponse> UpdateQuotaAlarmAsync(UpdateQuotaAlarmRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await UpdateQuotaAlarmWithOptionsAsync(request, runtime);
         }
 
     }
 }
+

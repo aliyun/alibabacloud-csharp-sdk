@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsRequest : TeaModel {
+    public class ListQuotaApplicationsRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The quota dimensions.</para>
+        /// <para>The quota dimensions.
+        /// The dimensions are properties of a quota item. A combination of dimensions (Dimensions) and a quota ID (QuotaActionCode) uniquely identifies a quota item.</para>
+        /// <remarks>
+        /// <para>Some cloud services require dimensions. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The <c>Requisite</c> response parameter indicates whether a dimension is required.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationsRequestDimensions> Dimensions { get; set; }
-        public class ListQuotaApplicationsRequestDimensions : TeaModel {
+        public class ListQuotaApplicationsRequestDimensions : Darabonba.Model {
             /// <summary>
-            /// <para>The key of the dimension.</para>
+            /// <para>The key of the quota dimension.</para>
             /// <remarks>
-            /// <para> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</para>
+            /// <para><c>Dimensions.N.Key</c> and <c>Dimensions.N.Value</c> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,9 +35,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the dimension.</para>
+            /// <para>The value of the quota dimension.</para>
             /// <remarks>
-            /// <para> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</para>
+            /// <para><c>Dimensions.N.Key</c> and <c>Dimensions.N.Value</c> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -45,7 +50,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The keyword that you want to use to search for the application.</para>
+        /// <para>The keyword for searching quota increase applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Cluster</para>
@@ -55,7 +60,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of records to return in this query.</para>
         /// <para>Valid values: 1 to 200. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +71,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// <para>The token that marks the position from which you want to start the query. Leave this parameter empty to query from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +81,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviation of the cloud service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>csk</para>
@@ -86,7 +91,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the quota.</para>
+        /// <para>The quota ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>q_i5uzm3</para>
@@ -96,11 +101,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaActionCode { get; set; }
 
         /// <summary>
-        /// <para>The quota type. Valid values:</para>
+        /// <para>The quota category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CommonQuota: general quota</description></item>
-        /// <item><description>FlowControl: API rate limit</description></item>
-        /// <item><description>WhiteListLabel: whitelist quota</description></item>
+        /// <item><description>CommonQuota: general quota.</description></item>
+        /// <item><description>FlowControl: API rate limit.</description></item>
+        /// <item><description>WhiteListLabel: privilege.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,12 +116,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaCategory { get; set; }
 
         /// <summary>
-        /// <para>The approval state of the quota increase application. Valid values:</para>
+        /// <para>The approval status of the quota increase application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Disagree: The application is rejected.</description></item>
-        /// <item><description>Agree: The application is approved.</description></item>
-        /// <item><description>Process: The application is in review.</description></item>
-        /// <item><description>Cancel: The application is canceled.</description></item>
+        /// <item><description><para>Disagree: Rejected.</para>
+        /// </description></item>
+        /// <item><description><para>Agree: Approved.</para>
+        /// </description></item>
+        /// <item><description><para>Process: Under review.</para>
+        /// </description></item>
+        /// <item><description><para>Cancel: Closed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,3 +138,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

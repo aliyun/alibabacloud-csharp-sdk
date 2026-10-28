@@ -1,18 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class UpdateQuotaAlarmRequest : TeaModel {
+    public class UpdateQuotaAlarmRequest : Darabonba.Model {
         /// <summary>
         /// <para>The ID of the quota alert.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a> operation to obtain the ID of a quota alert.</para>
+        /// <para>For more information about how to obtain the ID of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +27,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The name of the quota alert.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a> operation to obtain the name of a quota alert.</para>
+        /// <para>For more information about how to obtain the name of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,11 +41,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The numeric value of the alert threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <c>ThresholdType</c> parameter to <c>used</c>, you will receive an alert notification when the used quota is greater than or equal to the preset alert threshold. The alert threshold must be greater than the current used quota.</description></item>
-        /// <item><description>If you set the <c>ThresholdType</c> parameter to <c>usable</c>, you will receive an alert notification when the available quota is less than or equal to the preset alert threshold. The alert threshold must be less than the current available quota.</description></item>
+        /// <item><description><para>If you set <c>ThresholdType</c> to <c>used</c>, an alert is triggered when the used quota is greater than or equal to this value. The alert threshold must be greater than the current used quota.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>ThresholdType</c> to <c>usable</c>, an alert is triggered when the usable quota is less than or equal to this value. The alert threshold must be less than the current usable quota.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must set one of the Threshold and ThresholdPercent parameters.</para>
+        /// <para>You must set either Threshold or ThresholdPercent.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,11 +60,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The percentage of the alert threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set <c>ThresholdType</c> to <c>used</c>, you receive an alert notification when the used quota is greater than or equal to the preset percentage of the alert threshold. Value range: (50%, 100%].</description></item>
-        /// <item><description>If you set <c>ThresholdType</c> to <c>usable</c>, you receive an alert notification when the available quota is less than or equal to the preset percentage of the alert threshold. Value range: (0%, 50%].</description></item>
+        /// <item><description><para>If you set <c>ThresholdType</c> to <c>used</c>, an alert is triggered when the percentage of the used quota is greater than or equal to this value. The value must be in the range of (50%, 100%].</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>ThresholdType</c> to <c>usable</c>, an alert is triggered when the percentage of the usable quota is less than or equal to this value. The value must be in the range of (0%, 50%].</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must set one of Threshold and ThresholdPercent.</para>
+        /// <para>You must set either Threshold or ThresholdPercent.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,8 +79,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The type of the quota alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>used (default): The alert is created for the used quota.</description></item>
-        /// <item><description>usable: The alert is created for the available quota.</description></item>
+        /// <item><description><para>used (default): The alert is triggered based on the used quota.</para>
+        /// </description></item>
+        /// <item><description><para>usable: The alert is triggered based on the usable quota.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +93,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ThresholdType { get; set; }
 
         /// <summary>
-        /// <para>The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.</para>
+        /// <para>The webhook URL. Quota Center sends alert notifications to this URL using an HTTP POST request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></para>
@@ -98,3 +105,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

@@ -1,19 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class RemindQuotaApplicationApprovalResponseBody : TeaModel {
+    public class RemindQuotaApplicationApprovalResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>Indicates whether retries are allowed. Valid values:</para>
+        /// <para>Indicates whether the request can be retried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false: The request cannot be retried.</para>
+        /// </description></item>
+        /// <item><description><para>true: The request can be retried.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The parameters whose values are invalid.</para>
+        /// <para>The array of error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The quota application ID.</para>
+        /// <para>The ID of the quota application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>219f1ff6-6205-495f-bda7-90d2fe945e****</para>
@@ -103,8 +106,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,3 +122,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

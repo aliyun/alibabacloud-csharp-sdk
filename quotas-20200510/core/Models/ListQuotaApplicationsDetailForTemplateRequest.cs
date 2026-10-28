@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsDetailForTemplateRequest : TeaModel {
+    public class ListQuotaApplicationsDetailForTemplateRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The Alibaba Cloud account that is used to submit the quota increase application.</para>
+        /// <para>The Alibaba Cloud account for which the quota increase is requested.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135048337611****</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string BatchQuotaApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records that can be returned for the query.</para>
+        /// <para>The maximum number of records to return for the current query.</para>
         /// <para>Valid values: 1 to 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +42,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query.</para>
+        /// <para>The token that marks the position from which the query starts.</para>
         /// <remarks>
-        /// <para> An empty value indicates that the query starts from the beginning.</para>
+        /// <para>If you do not specify this parameter, the query starts from the beginning.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The abbreviation of the Alibaba Cloud service name.</para>
         /// <remarks>
-        /// <para> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <c>ProductCode</c> in the response.</para>
+        /// <para>For more information about how to obtain the abbreviation of an Alibaba Cloud service name, see the <c>ProductCode</c> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,11 +78,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaActionCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the quota. Valid values:</para>
+        /// <para>The quota type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CommonQuota: general quota</description></item>
-        /// <item><description>FlowControl: API rate limit</description></item>
-        /// <item><description>WhiteListLabel: privilege</description></item>
+        /// <item><description><para>CommonQuota: General quota.</para>
+        /// </description></item>
+        /// <item><description><para>FlowControl: API rate limit quota.</para>
+        /// </description></item>
+        /// <item><description><para>WhiteListLabel: Privilege quota.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,12 +96,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaCategory { get; set; }
 
         /// <summary>
-        /// <para>The approval state of the quota increase application. Valid values:</para>
+        /// <para>The approval status of the quota increase request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Disagree: The application is rejected.</description></item>
-        /// <item><description>Agree: The application is approved.</description></item>
-        /// <item><description>Process: The application is in review.</description></item>
-        /// <item><description>Cancel: The application is canceled.</description></item>
+        /// <item><description><para>Disagree: The request is rejected.</para>
+        /// </description></item>
+        /// <item><description><para>Agree: The request is approved.</para>
+        /// </description></item>
+        /// <item><description><para>Process: The request is in review.</para>
+        /// </description></item>
+        /// <item><description><para>Cancel: The request is closed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,3 +118,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

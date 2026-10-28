@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListAlarmHistoriesRequest : TeaModel {
+    public class ListAlarmHistoriesRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The ID of the alert.</para>
+        /// <para>The alert ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18b3be23-b7b0-4d45-91bc-d0c331aa****</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string AlarmId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20201024</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for the query.</para>
+        /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Quantity</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records that can be returned for the query.</para>
+        /// <para>The maximum number of entries to return for the current query.</para>
         /// <para>Valid values: 1 to 200. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +52,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// <para>The token that specifies the starting position of the query. An empty value indicates that the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,9 +62,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviation of the cloud service name.</para>
         /// <remarks>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// <para>For more information about the cloud services that support Quota Center, see <a href="https://help.aliyun.com/document_detail/182368.html">Cloud services that support Quota Center</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20201020</para>
@@ -86,3 +87,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

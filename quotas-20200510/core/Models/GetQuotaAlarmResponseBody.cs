@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaAlarmResponseBody : TeaModel {
+    public class GetQuotaAlarmResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The details of the quota alert.</para>
         /// </summary>
         [NameInMap("QuotaAlarm")]
         [Validation(Required=false)]
         public GetQuotaAlarmResponseBodyQuotaAlarm QuotaAlarm { get; set; }
-        public class GetQuotaAlarmResponseBodyQuotaAlarm : TeaModel {
+        public class GetQuotaAlarmResponseBodyQuotaAlarm : Darabonba.Model {
             /// <summary>
             /// <para>The ID of the quota alert.</para>
             /// 
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <para>The name of the quota alert.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>tf-testacccn-hangzhouquotasquotaalarm81611</para>
+            /// <para>q_security-groups alarm</para>
             /// </summary>
             [NameInMap("AlarmName")]
             [Validation(Required=false)]
@@ -47,14 +48,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The alert notification methods.</para>
+            /// <para>The notification channels for the alert.</para>
             /// </summary>
             [NameInMap("NotifyChannels")]
             [Validation(Required=false)]
             public List<string> NotifyChannels { get; set; }
 
             /// <summary>
-            /// <para>The alert contact.</para>
+            /// <para>The notification recipient of the quota alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accountContact</para>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public Dictionary<string, object> QuotaDimension { get; set; }
 
             /// <summary>
-            /// <para>The used quota.</para>
+            /// <para>The quota usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>28</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public float? QuotaValue { get; set; }
 
             /// <summary>
-            /// <para>The numeric value of the alert threshold.</para>
+            /// <para>The numeric value of the quota alert threshold.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -124,7 +125,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public float? Threshold { get; set; }
 
             /// <summary>
-            /// <para>The percentage of the alert threshold.</para>
+            /// <para>The percentage of the quota alert threshold.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -134,10 +135,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public float? ThresholdPercent { get; set; }
 
             /// <summary>
-            /// <para>The type of the quota alert. Valid values:</para>
+            /// <para>The Alarm Metric of the quota alerting. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>used: The alert is created for the used quota.</description></item>
-            /// <item><description>usable: The alert is created for the available quota.</description></item>
+            /// <item><description>used: Alerting on the used quota usage.</description></item>
+            /// <item><description>usable: Alerting on the remaining active quota.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,7 +149,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ThresholdType { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.</para>
+            /// <para>The public URL to which Quota Center sends alert messages by using HTTP POST requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></para>
@@ -172,3 +173,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

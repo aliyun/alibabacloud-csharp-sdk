@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductsRequest : TeaModel {
+    public class ListProductsRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of entries to return for this query.</para>
         /// <para>Valid values: 1 to 200. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// <para>The token that marks the position from which the query starts. An empty value indicates that the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -33,3 +34,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

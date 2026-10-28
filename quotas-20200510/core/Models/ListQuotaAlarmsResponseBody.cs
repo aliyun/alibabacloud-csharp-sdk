@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaAlarmsResponseBody : TeaModel {
+    public class ListQuotaAlarmsResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The maximum number of records that are returned for the query.</para>
+        /// <para>The maximum number of records returned for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +21,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position at which the query ends.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para>An empty value indicates that all data is returned.</para>
+        /// <para>If this parameter is empty, all results have been returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,14 +34,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The details about the quota alert rules.</para>
+        /// <para>The details of the quota usage alerts.</para>
         /// </summary>
         [NameInMap("QuotaAlarms")]
         [Validation(Required=false)]
         public List<ListQuotaAlarmsResponseBodyQuotaAlarms> QuotaAlarms { get; set; }
-        public class ListQuotaAlarmsResponseBodyQuotaAlarms : TeaModel {
+        public class ListQuotaAlarmsResponseBodyQuotaAlarms : Darabonba.Model {
             /// <summary>
-            /// <para>The ID of the alert.</para>
+            /// <para>The alert ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a2efa7fc-832f-47bb-8054-39e28012****</para>
@@ -50,17 +51,17 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string AlarmId { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert event.</para>
+            /// <para>The alert name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rules</para>
+            /// <para>q_hvnoqv alarm</para>
             /// </summary>
             [NameInMap("AlarmName")]
             [Validation(Required=false)]
             public string AlarmName { get; set; }
 
             /// <summary>
-            /// <para>The time when the quota alert was created.</para>
+            /// <para>The time when the quota usage alert was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-27T07:23:34Z</para>
@@ -70,10 +71,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the alert threshold was reached. Valid values:</para>
+            /// <para>Indicates whether the quota usage exceeds the alert threshold. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false</description></item>
-            /// <item><description>true</description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,16 +87,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? ExceedThreshold { get; set; }
 
             /// <summary>
-            /// <para>The alert notification methods.</para>
+            /// <para>The notification channels of the quota alert.</para>
             /// </summary>
             [NameInMap("NotifyChannels")]
             [Validation(Required=false)]
             public List<string> NotifyChannels { get; set; }
 
             /// <summary>
-            /// <para>The alert contact.</para>
+            /// <para>The notification object of the alert.</para>
             /// <remarks>
-            /// <para> Valid value: accountContact. Only the account contact is supported.</para>
+            /// <para>The value can only be accountContact, which specifies the contacts of the account.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the quota.</para>
+            /// <para>The quota ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>q_hvnoqv</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public float? QuotaUsage { get; set; }
 
             /// <summary>
-            /// <para>The value of the quota.</para>
+            /// <para>The quota value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -176,8 +179,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The type of the quota alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>used: The alert is created for the used quota.</description></item>
-            /// <item><description>usable: The alert is created for the available quota.</description></item>
+            /// <item><description><para>used: an alert for the used quota.</para>
+            /// </description></item>
+            /// <item><description><para>usable: an alert for the available quota.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,7 +205,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>87F3B755-3BD2-4C76-B36A-93247002918C</para>
@@ -210,7 +215,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of quota alerts.</para>
+        /// <para>The total number of quota usage alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -222,3 +227,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

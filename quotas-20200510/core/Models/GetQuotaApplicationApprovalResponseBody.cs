@@ -1,19 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaApplicationApprovalResponseBody : TeaModel {
+    public class GetQuotaApplicationApprovalResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>Indicates whether retries are allowed. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The parameters whose values are invalid.</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -81,14 +82,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The information about quota application approval.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetQuotaApplicationApprovalResponseBodyModule Module { get; set; }
-        public class GetQuotaApplicationApprovalResponseBodyModule : TeaModel {
+        public class GetQuotaApplicationApprovalResponseBodyModule : Darabonba.Model {
             /// <summary>
-            /// <para>The average amount of time required to approve quota applications. Unit: hour.</para>
+            /// <para>The average approval time for the quota application. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -98,7 +99,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public int? ApprovalHours { get; set; }
 
             /// <summary>
-            /// <para>The interval between two consecutive approval reminders. Unit: hour.</para>
+            /// <para>The approval reminder interval for the quota application. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -108,10 +109,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public int? ReminderIntervalHours { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether approval reminders are supported for quota applications. Valid values:</para>
+            /// <para>Specifies whether approval reminders are supported for the quota application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false</description></item>
-            /// <item><description>true</description></item>
+            /// <item><description>false: Not supported.</description></item>
+            /// <item><description>true: Supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +123,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? SupportReminder { get; set; }
 
             /// <summary>
-            /// <para>The reason why approval reminders are not supported for quota applications.</para>
+            /// <para>The reason why approval reminders are not supported for the quota application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>can only be remind once within the interval</para>
@@ -144,10 +145,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Specifies whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,3 +161,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

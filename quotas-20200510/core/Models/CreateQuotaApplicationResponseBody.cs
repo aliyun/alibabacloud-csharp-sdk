@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaApplicationResponseBody : TeaModel {
+    public class CreateQuotaApplicationResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ID of the quota increase request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d314d6ae-867d-484c-9009-3d421a80****</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The time when the application was submitted.</para>
+        /// <para>The time when the quota increase request was submitted. The time is in ISO 8601 format and in UTC. The value ends with Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-19T09:25:56Z</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ApplyTime { get; set; }
 
         /// <summary>
-        /// <para>The quota value that is approved.</para>
+        /// <para>The approved quota value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>804</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public float? ApproveValue { get; set; }
 
         /// <summary>
-        /// <para>The result of the application.</para>
+        /// <para>The review comments on the quota increase request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Agree</para>
@@ -50,17 +51,17 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string AuditReason { get; set; }
 
         /// <summary>
-        /// <para>The requested value of the quota.</para>
+        /// <para>The requested quota value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12</para>
+        /// <para>804</para>
         /// </summary>
         [NameInMap("DesireValue")]
         [Validation(Required=false)]
         public int? DesireValue { get; set; }
 
         /// <summary>
-        /// <para>The quota dimension.</para>
+        /// <para>The quota dimensions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</para>
@@ -70,7 +71,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public Dictionary<string, object> Dimension { get; set; }
 
         /// <summary>
-        /// <para>The time when the new quota value takes effect.</para>
+        /// <para>The effective period of the quota. The time is in ISO 8601 format and in UTC. The value ends with Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-19T09:25:56Z</para>
@@ -80,7 +81,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the new quota expires.</para>
+        /// <para>The time when the quota expires. The time is in ISO 8601 format and in UTC. The value ends with Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-20T09:25:56Z</para>
@@ -90,10 +91,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the notification about the application result is sent. Valid values:</para>
+        /// <para>Indicates whether a notification is sent about the request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The notification is not sent.</description></item>
-        /// <item><description>3: The notification is sent.</description></item>
+        /// <item><description><para>0: no notification is sent.</para>
+        /// </description></item>
+        /// <item><description><para>3: a notification is sent.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,10 +107,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public long? NoticeType { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviation of the cloud service name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs-spec</para>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <para>The quota ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs.c5.large</para>
+        /// <para>q_security-groups</para>
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
@@ -127,7 +130,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <para>The Alibaba Cloud Resource Name (ARN) of the quota.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:quotas:cn-hangzhou:*:quota/ecs/ecs.m2.medium/prepaid/classic/instancetype/cn-hangzhou-b</para>
+        /// <para>acs:quotas::141339776561****:quota/ecs/q_security-groups</para>
         /// </summary>
         [NameInMap("QuotaArn")]
         [Validation(Required=false)]
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <para>The description of the quota.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs.c5.large</para>
+        /// <para>The maximum number of security groups that can be owned by the current account.</para>
         /// </summary>
         [NameInMap("QuotaDescription")]
         [Validation(Required=false)]
@@ -147,7 +150,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <para>The name of the quota.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs.c5.large</para>
+        /// <para>Maximum Number of Security Groups</para>
         /// </summary>
         [NameInMap("QuotaName")]
         [Validation(Required=false)]
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaUnit { get; set; }
 
         /// <summary>
-        /// <para>The reason for the application.</para>
+        /// <para>The reason for the quota increase request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scale Out</para>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</para>
@@ -184,14 +187,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The approval state of the quota increase application.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Cancel: The application is canceled.</description></item>
-        /// <item><description>Agree: The application is approved.</description></item>
-        /// <item><description>Process: The application is in review.</description></item>
-        /// <item><description>Disagree: The application is rejected.</description></item>
-        /// </list>
+        /// <para>The approval status of the quota increase request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Process</para>
@@ -203,3 +199,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

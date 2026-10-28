@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsForTemplateResponseBody : TeaModel {
+    public class ListQuotaApplicationsForTemplateResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The maximum number of records that can be returned for the query.</para>
+        /// <para>The maximum number of records returned for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query.</para>
+        /// <para>The token that marks the start of the data to read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,21 +31,21 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The queried quota application records.</para>
+        /// <para>The list of historical quota applications.</para>
         /// </summary>
         [NameInMap("QuotaBatchApplications")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications> QuotaBatchApplications { get; set; }
-        public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications : TeaModel {
+        public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications : Darabonba.Model {
             /// <summary>
-            /// <para>The Alibaba Cloud accounts that correspond to the resource directory members for which the quotas are applied.</para>
+            /// <para>The list of Alibaba Cloud accounts of the members in a resource directory for which the quota applications are submitted.</para>
             /// </summary>
             [NameInMap("AliyunUids")]
             [Validation(Required=false)]
             public List<string> AliyunUids { get; set; }
 
             /// <summary>
-            /// <para>The time when the quota increase application was submitted. The value is displayed in UTC.</para>
+            /// <para>The UTC time when the quota increase application was submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-23T02:38:18Z</para>
@@ -59,9 +60,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("AuditStatusVos")]
             [Validation(Required=false)]
             public List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos> AuditStatusVos { get; set; }
-            public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos : TeaModel {
+            public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos : Darabonba.Model {
                 /// <summary>
-                /// <para>The number of approval tickets.</para>
+                /// <para>The number of applications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -71,12 +72,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The approval state of the quota increase application. Valid values:</para>
+                /// <para>The approval status of the quota increase application. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Disagree: The application is rejected.</description></item>
-                /// <item><description>Agree: The application is approved.</description></item>
-                /// <item><description>Process: The application is in review.</description></item>
-                /// <item><description>Cancel: The application is canceled.</description></item>
+                /// <item><description><para>Disagree: denied.</para>
+                /// </description></item>
+                /// <item><description><para>Agree: approved.</para>
+                /// </description></item>
+                /// <item><description><para>Process: pending approval.</para>
+                /// </description></item>
+                /// <item><description><para>Cancel: closed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// <para>The ID of the quota application batch.</para>
+            /// <para>The ID of the batch quota application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d314d6ae-867d-484c-9009-3d421a80****</para>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string BatchQuotaApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The requested value of the quota.</para>
+            /// <para>The requested quota value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>105</para>
@@ -110,7 +115,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
             /// <summary>
             /// <para>The quota dimensions.</para>
-            /// <para>Format example: {&quot;regionId&quot;:&quot;cn-hangzhou&quot;}.</para>
+            /// <para>Format: {&quot;regionId&quot;:&quot;cn-hangzhou&quot;}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</para>
@@ -120,7 +125,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public Dictionary<string, object> Dimensions { get; set; }
 
             /// <summary>
-            /// <para>The start time of the validity period of the quota. The value is displayed in UTC.</para>
+            /// <para>The UTC time when the quota takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-22T16:00:00Z</para>
@@ -130,7 +135,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the validity period of the quota. The value is displayed in UTC.</para>
+            /// <para>The UTC time when the quota expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-14T02:08:56Z</para>
@@ -140,7 +145,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+            /// <para>The abbreviation of the Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc</para>
@@ -160,11 +165,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaActionCode { get; set; }
 
             /// <summary>
-            /// <para>The quota type. Valid values:</para>
+            /// <para>The type of the quota. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CommonQuota: general quota</description></item>
-            /// <item><description>FlowControl: API rate limit</description></item>
-            /// <item><description>WhiteListLabel: privilege</description></item>
+            /// <item><description><para>CommonQuota: general quota.</para>
+            /// </description></item>
+            /// <item><description><para>FlowControl: API rate limit.</para>
+            /// </description></item>
+            /// <item><description><para>WhiteListLabel: privilege.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -197,7 +205,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that are returned for the query.</para>
+        /// <para>The total number of records returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67</para>
@@ -209,3 +217,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

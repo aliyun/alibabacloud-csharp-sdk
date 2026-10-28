@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class DeleteTemplateQuotaItemResponseBody : TeaModel {
+    public class DeleteTemplateQuotaItemResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The ID of the quota template.</para>
         /// 
@@ -32,3 +33,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

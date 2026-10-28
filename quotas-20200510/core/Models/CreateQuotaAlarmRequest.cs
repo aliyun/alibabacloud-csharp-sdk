@@ -1,33 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaAlarmRequest : TeaModel {
+    public class CreateQuotaAlarmRequest : Darabonba.Model {
         /// <summary>
-        /// <para>Quota alarm name</para>
+        /// <para>The name of the quota alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>q_344t4 alarm</para>
+        /// <para>q_hvnoqv alarm</para>
         /// </summary>
         [NameInMap("AlarmName")]
         [Validation(Required=false)]
         public string AlarmName { get; set; }
 
+        /// <summary>
+        /// <para>The original context information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("OriginalContext")]
         [Validation(Required=false)]
         public string OriginalContext { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviation of the cloud service.</para>
         /// <remarks>
-        /// <para> To query the abbreviation of an Alibaba Cloud service name, check the <c>ProductCode</c> parameter that is described in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</para>
+        /// <para>For more information about how to obtain the abbreviation of a cloud service, see ProductCode in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +48,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The quota ID.</para>
         /// <remarks>
-        /// <para> To obtain the quota ID of an Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation and check the value of <c>QuotaActionCode</c> in the response.</para>
+        /// <para>For more information about how to obtain the quota ID of a cloud service, see QuotaActionCode in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,19 +60,20 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string QuotaActionCode { get; set; }
 
         /// <summary>
-        /// <para>The quota dimensions. A quota item is uniquely identified by the values of <c>Dimensions</c> and <c>QuotaActionCode</c>.</para>
+        /// <para>The quota dimensions.
+        /// The dimensions are properties of a quota item. A quota item is uniquely identified by Dimensions and QuotaActionCode.</para>
         /// <remarks>
-        /// <para> This parameter is required for specific Alibaba Cloud services. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the quota dimensions that are supported by an Alibaba Cloud service. The value of <c>Requisite</c> in the response indicates whether a dimension is required.</para>
+        /// <para>Some dimensions are required for specific cloud services. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the supported quota dimensions of a cloud service. The Requisite response parameter indicates whether a dimension is required.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("QuotaDimensions")]
         [Validation(Required=false)]
         public List<CreateQuotaAlarmRequestQuotaDimensions> QuotaDimensions { get; set; }
-        public class CreateQuotaAlarmRequestQuotaDimensions : TeaModel {
+        public class CreateQuotaAlarmRequestQuotaDimensions : Darabonba.Model {
             /// <summary>
-            /// <para>The key of the dimension.</para>
+            /// <para>The key of the quota dimension.</para>
             /// <remarks>
-            /// <para> You must configure <c>Dimensions.N.Key</c> and <c>Dimensions.N.Value</c> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of items in the returned array is N.</para>
+            /// <para>You must specify both Dimensions.N.Key and Dimensions.N.Value. The value range of N depends on the number of dimensions supported by the cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the supported quota dimensions. The length of the returned array is the maximum value of N.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -76,9 +84,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the dimension.</para>
+            /// <para>The value of the quota dimension.</para>
             /// <remarks>
-            /// <para> You must configure <c>Dimensions.N.Key</c> and <c>Dimensions.N.Value</c> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of items in the returned array is N.</para>
+            /// <para>You must specify both Dimensions.N.Key and Dimensions.N.Value. The value range of N depends on the number of dimensions supported by the cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the supported quota dimensions. The length of the returned array is the maximum value of N.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -91,14 +99,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The numerical value of the quota alarm threshold. Value settings:</para>
+        /// <para>The numeric value of the quota alert threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <c>ThresholdType</c> is set to <c>used</c>, an alarm notification will be sent if the used amount of the quota is greater than or equal to the preset value. The quota alarm threshold must be greater than the used amount of the quota.</description></item>
-        /// <item><description>When <c>ThresholdType</c> is set to <c>usable</c>, an alarm notification will be sent if the remaining available amount of the quota is less than or equal to the preset value. The quota alarm threshold must be less than the remaining available amount of the quota.<remarks>
-        /// <para>One of this parameter and ThresholdPercent must be set.</para>
-        /// </remarks>
+        /// <item><description><para>If ThresholdType is set to used, you receive an alert notification when the used quota is greater than or equal to the specified value. The quota alert threshold must be greater than the used quota.</para>
+        /// </description></item>
+        /// <item><description><para>If ThresholdType is set to usable, you receive an alert notification when the available quota is less than or equal to the specified value. The quota alert threshold must be less than the available quota.</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>You must specify either this parameter or ThresholdPercent.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>150</para>
@@ -108,14 +118,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public float? Threshold { get; set; }
 
         /// <summary>
-        /// <para>The percentage of the quota alert threshold. Values:</para>
+        /// <para>The percentage of the quota alert threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <c>ThresholdType</c> is set to <c>used</c>, you will receive an alert notification if the used amount of the quota is greater than or equal to the preset percentage. The value range is (50%, 100%].</description></item>
-        /// <item><description>When <c>ThresholdType</c> is set to <c>usable</c>, you will receive an alert notification if the remaining available amount of the quota is less than or equal to the preset percentage. The value range is (0%, 50%].<remarks>
-        /// <para>One of this parameter and Threshold must be set.</para>
-        /// </remarks>
+        /// <item><description><para>If ThresholdType is set to used, you receive an alert notification when the used quota is greater than or equal to the specified percentage. Valid values: (50%, 100%].</para>
+        /// </description></item>
+        /// <item><description><para>If ThresholdType is set to usable, you receive an alert notification when the available quota is less than or equal to the specified percentage. Valid values: (0%, 50%].</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>You must specify either this parameter or Threshold.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -125,10 +137,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public float? ThresholdPercent { get; set; }
 
         /// <summary>
-        /// <para>The type of the quota alert. Valid values:</para>
+        /// <para>The quota alert type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>used (default): The alert is created for the used quota.</description></item>
-        /// <item><description>usable: The alert is created for the available quota.</description></item>
+        /// <item><description>used: alerts on the used quota. This is the default value.</description></item>
+        /// <item><description>usable: alerts on the remaining available quota.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +151,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ThresholdType { get; set; }
 
         /// <summary>
-        /// <para>The quota center sends alert information to the specified public URL address via a POST request using the HTTP protocol.</para>
+        /// <para>The public URL to which Quota Center sends alert notifications by using HTTP POST requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></para>
@@ -151,3 +163,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

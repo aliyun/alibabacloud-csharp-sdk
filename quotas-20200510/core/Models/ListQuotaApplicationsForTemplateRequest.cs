@@ -1,16 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsForTemplateRequest : TeaModel {
+    public class ListQuotaApplicationsForTemplateRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The UTC time when the quota application ends.</para>
+        /// <para>The end of the time range to query. The value is in UTC.</para>
+        /// <remarks>
+        /// <para>The interval between <c>ApplyStartTime</c> and <c>ApplyEndTime</c> must be 7 days or less. If you do not set these two parameters, quota applications submitted within the last 7 days are queried.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2023-05-22T16:00:00Z</para>
@@ -20,7 +24,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ApplyEndTime { get; set; }
 
         /// <summary>
-        /// <para>The UTC time when the quota application starts.</para>
+        /// <para>The beginning of the time range to query. The value is in UTC.</para>
+        /// <remarks>
+        /// <para>The interval between <c>ApplyStartTime</c> and <c>ApplyEndTime</c> must be 7 days or less. If you do not set these two parameters, quota applications submitted within the last 7 days are queried.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2023-05-22T16:00:00Z</para>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ApplyStartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the quota application batch.</para>
+        /// <para>The ID of the batch quota application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d314d6ae-867d-484c-9009-3d421a80****</para>
@@ -40,7 +47,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string BatchQuotaApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request.</para>
+        /// <para>The maximum number of results to return for a single request.</para>
         /// <para>Valid values: 1 to 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
@@ -51,9 +58,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query.</para>
+        /// <para>The token that marks the start of the data to read.</para>
         /// <remarks>
-        /// <para> An empty value indicates that the query starts from the beginning.</para>
+        /// <para>If you do not set this parameter, the query starts from the beginning.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,9 +71,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviation of the Alibaba Cloud service.</para>
         /// <remarks>
-        /// <para> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <c>ProductCode</c> in the response.</para>
+        /// <para>For more information about how to obtain the abbreviation of an Alibaba Cloud service, see the <c>ProductCode</c> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,9 +96,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The type of the quota. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CommonQuota: general quota</description></item>
-        /// <item><description>FlowControl: API rate limit</description></item>
-        /// <item><description>WhiteListLabel: privilege</description></item>
+        /// <item><description><para>CommonQuota: general quota.</para>
+        /// </description></item>
+        /// <item><description><para>FlowControl: API rate limit.</para>
+        /// </description></item>
+        /// <item><description><para>WhiteListLabel: privilege.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,3 +114,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

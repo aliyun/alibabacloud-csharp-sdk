@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationTemplatesRequest : TeaModel {
+    public class ListQuotaApplicationTemplatesRequest : Darabonba.Model {
         /// <summary>
         /// <para>The quota dimensions.</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationTemplatesRequestDimensions> Dimensions { get; set; }
-        public class ListQuotaApplicationTemplatesRequestDimensions : TeaModel {
+        public class ListQuotaApplicationTemplatesRequestDimensions : Darabonba.Model {
             /// <summary>
             /// <para>The key of the dimension.</para>
             /// <remarks>
@@ -90,7 +91,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The abbreviation of the Alibaba Cloud service name.</para>
         /// <remarks>
-        /// <para> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <c>ProductCode</c> in the response.</para>
+        /// <para>To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <c>ProductCode</c> in the response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -113,9 +114,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The quota type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CommonQuota: general quota.</description></item>
-        /// <item><description>WhiteListLabel: whitelist quota.</description></item>
-        /// <item><description>FlowControl: API rate limit.</description></item>
+        /// <item><description><para>CommonQuota: general quota.</para>
+        /// </description></item>
+        /// <item><description><para>WhiteListLabel: whitelist quota.</para>
+        /// </description></item>
+        /// <item><description><para>FlowControl: API rate limit.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,3 +132,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

@@ -1,18 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class DeleteQuotaAlarmRequest : TeaModel {
+    public class DeleteQuotaAlarmRequest : Darabonba.Model {
         /// <summary>
         /// <para>The ID of the quota alert.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a> operation to obtain the ID of a quota alert.</para>
+        /// <para>For more information about how to obtain the ID of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,3 +27,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

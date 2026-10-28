@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductQuotasResponseBody : TeaModel {
+    public class ListProductQuotasResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The number of records that are returned for the query.</para>
+        /// <para>The maximum number of records returned for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,33 +21,28 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>Indicates whether a token for the next query is available.</para>
         /// <list type="bullet">
-        /// <item><description>If NextToken is empty, no next page exists.</description></item>
-        /// <item><description>If a value of NextToken is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If NextToken is empty, it indicates that no subsequent query is available.</description></item>
+        /// <item><description>If NextToken is returned, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>AAAAAd98/tlL5GF2aM7UMKQGM8LZesIPr0CbfxASQvHV/pwcmVKNfdBbW8OPld3NvG9Cy8+dNcyFzyUttQA3IONfBhRGpXFyiVoTgK+dupBsP2mX</para>
+        /// <para>AAAAAd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The details of the quotas.</para>
+        /// <para>The quota details.</para>
         /// </summary>
         [NameInMap("Quotas")]
         [Validation(Required=false)]
         public List<ListProductQuotasResponseBodyQuotas> Quotas { get; set; }
-        public class ListProductQuotasResponseBodyQuotas : TeaModel {
+        public class ListProductQuotasResponseBodyQuotas : Darabonba.Model {
             /// <summary>
             /// <para>Indicates whether the quota is adjustable.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -56,19 +52,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? Adjustable { get; set; }
 
             /// <summary>
-            /// <para>The range of the quota value that can be requested for the quota item.</para>
+            /// <para>The range of quota values that can be applied for the current quota item, which serves as a reference for quota applications.</para>
             /// </summary>
             [NameInMap("ApplicableRange")]
             [Validation(Required=false)]
             public List<float?> ApplicableRange { get; set; }
 
             /// <summary>
-            /// <para>The type of the adjustable value.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>continuous</description></item>
-            /// <item><description>discontinuous</description></item>
-            /// </list>
+            /// <para>The quota adjustment type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>discontinuous</para>
@@ -78,7 +69,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ApplicableType { get; set; }
 
             /// <summary>
-            /// <para>The reason for submitting a quota increase request.</para>
+            /// <para>The sample reasons for applying for a quota adjustment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The business xxx is expected to grow by 50%.</para>
@@ -88,12 +79,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ApplyReasonTips { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the system shows the used value of the quota.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>Indicates whether the used quota is displayed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -103,7 +89,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? Consumable { get; set; }
 
             /// <summary>
-            /// <para>The quota dimension. Format: <c>{&quot;regionId&quot;:&quot;Region&quot;}</c>.</para>
+            /// <para>The quota dimensions. Format: <c>{&quot;regionId&quot;:&quot;region&quot;}</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</para>
@@ -113,7 +99,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public Dictionary<string, object> Dimensions { get; set; }
 
             /// <summary>
-            /// <para>The start time of the validity period of the quota. The value is displayed in UTC.</para>
+            /// <para>The UTC time when the quota takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-28T06:07:00Z</para>
@@ -123,7 +109,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the validity period of the quota. The value is displayed in UTC.</para>
+            /// <para>The UTC time when the quota expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-29T06:07:00Z</para>
@@ -134,11 +120,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
             /// <summary>
             /// <para>Indicates whether the quota is a global quota.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: The quota is shared in all regions.</description></item>
-            /// <item><description>false: The quota is independently used in a region.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -148,22 +129,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? GlobalQuota { get; set; }
 
             /// <summary>
-            /// <para>The calculation cycle of the quota.</para>
+            /// <para>The quota calculation period.</para>
             /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public ListProductQuotasResponseBodyQuotasPeriod Period { get; set; }
-            public class ListProductQuotasResponseBodyQuotasPeriod : TeaModel {
+            public class ListProductQuotasResponseBodyQuotasPeriod : Darabonba.Model {
                 /// <summary>
-                /// <para>The unit of the calculation cycle.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>week</description></item>
-                /// <item><description>hour</description></item>
-                /// <item><description>day</description></item>
-                /// <item><description>second</description></item>
-                /// <item><description>minute</description></item>
-                /// </list>
+                /// <para>The unit of the quota calculation period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>day</para>
@@ -173,10 +146,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string PeriodUnit { get; set; }
 
                 /// <summary>
-                /// <para>The value of the calculation cycle.</para>
+                /// <para>The value of the quota calculation period.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("PeriodValue")]
                 [Validation(Required=false)]
@@ -185,43 +158,37 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+            /// <para>The abbreviation of the cloud service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ecs-spec</para>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The quota ID.</para>
+            /// <para>The ID of the quota.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ecs.g5.2xlarge</para>
+            /// <para>q_security-groups</para>
             /// </summary>
             [NameInMap("QuotaActionCode")]
             [Validation(Required=false)]
             public string QuotaActionCode { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the quota.</para>
+            /// <para>The ARN of the quota.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>acs:quotas:cn-hangzhou:107992689699****:quota/ecs/ecs.g5.2xlarge/postpaid/vpc/cn-hangzhou/instancetype/cn-hangzhou-i</para>
+            /// <para>acs:quotas:cn-hangzhou:120886317861****:quota/ecs/q_security-groups</para>
             /// </summary>
             [NameInMap("QuotaArn")]
             [Validation(Required=false)]
             public string QuotaArn { get; set; }
 
             /// <summary>
-            /// <para>The type of the quota.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>FlowControl: API rate limit</description></item>
-            /// <item><description>WhiteListLabel: whitelist quota</description></item>
-            /// <item><description>CommonQuota: general quota</description></item>
-            /// </list>
+            /// <para>The quota type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CommonQuota</para>
@@ -231,49 +198,44 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaCategory { get; set; }
 
             /// <summary>
-            /// <para>The description of the quota.</para>
+            /// <para>The quota description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ecs.g5.2xlarge</para>
+            /// <para>The maximum number of security groups that can be owned by the current account.</para>
             /// </summary>
             [NameInMap("QuotaDescription")]
             [Validation(Required=false)]
             public string QuotaDescription { get; set; }
 
             /// <summary>
-            /// <para>The details of the quotas.</para>
+            /// <para>The quota details.</para>
             /// </summary>
             [NameInMap("QuotaItems")]
             [Validation(Required=false)]
             public List<ListProductQuotasResponseBodyQuotasQuotaItems> QuotaItems { get; set; }
-            public class ListProductQuotasResponseBodyQuotasQuotaItems : TeaModel {
+            public class ListProductQuotasResponseBodyQuotasQuotaItems : Darabonba.Model {
                 /// <summary>
-                /// <para>The value of the quota.</para>
+                /// <para>The quota value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>10</para>
+                /// <para>1009</para>
                 /// </summary>
                 [NameInMap("Quota")]
                 [Validation(Required=false)]
                 public string Quota { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the quota.</para>
+                /// <para>The quota unit.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>AMOUNT</para>
+                /// <para>Count</para>
                 /// </summary>
                 [NameInMap("QuotaUnit")]
                 [Validation(Required=false)]
                 public string QuotaUnit { get; set; }
 
                 /// <summary>
-                /// <para>The category of the quota.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>BaseQuota: base quota</description></item>
-                /// <item><description>ReservedQuota: reserved quota</description></item>
-                /// </list>
+                /// <para>The quota category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BaseQuota</para>
@@ -286,7 +248,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 /// <para>The quota usage.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>1009</para>
                 /// </summary>
                 [NameInMap("Usage")]
                 [Validation(Required=false)]
@@ -295,7 +257,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// <para>The name of the quota.</para>
+            /// <para>The quota name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g5.2xlarge</para>
@@ -305,12 +267,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaName { get; set; }
 
             /// <summary>
-            /// <para>The type of the quota.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>normal</description></item>
-            /// <item><description>privilege</description></item>
-            /// </list>
+            /// <para>The quota type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>privilege</para>
@@ -320,7 +277,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaType { get; set; }
 
             /// <summary>
-            /// <para>The unit of the quota.</para>
+            /// <para>The quota unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AMOUNT</para>
@@ -330,14 +287,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaUnit { get; set; }
 
             /// <summary>
-            /// <para>The range of the quota value that can be requested for the current quota item. When you configure a quota template, you can use the range as a reference.</para>
+            /// <para>The range of quota values supported by the current quota item, which serves as a reference when you configure a quota template.</para>
             /// </summary>
             [NameInMap("SupportedRange")]
             [Validation(Required=false)]
             public List<float?> SupportedRange { get; set; }
 
             /// <summary>
-            /// <para>The value of the quota.</para>
+            /// <para>The quota value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -350,7 +307,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <para>The quota usage.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>1009</para>
             /// </summary>
             [NameInMap("TotalUsage")]
             [Validation(Required=false)]
@@ -358,12 +315,6 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
             /// <summary>
             /// <para>The reason why the quota is not adjustable.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>limitReached: The quota limit is reached.</description></item>
-            /// <item><description>nonactivated: The service is not activated.</description></item>
-            /// <item><description>applicationProcess: The application is being processed.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>applicationProcess</para>
@@ -373,25 +324,26 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string UnadjustableDetail { get; set; }
 
             /// <summary>
-            /// <para>The monitoring information of the quota in CloudMonitor.</para>
+            /// <para>The monitoring information of the quota usage in CloudMonitor.</para>
             /// <remarks>
-            /// <para> If this parameter is empty, no monitoring data of the quota exists in CloudMonitor.</para>
+            /// <para>An empty value indicates that no monitoring data is available for this quota in CloudMonitor.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("UsageMetric")]
             [Validation(Required=false)]
             public ListProductQuotasResponseBodyQuotasUsageMetric UsageMetric { get; set; }
-            public class ListProductQuotasResponseBodyQuotasUsageMetric : TeaModel {
+            public class ListProductQuotasResponseBodyQuotasUsageMetric : Darabonba.Model {
                 /// <summary>
-                /// <para>The monitoring dimensions.</para>
-                /// <para>The value is a collection of <c>key:value</c> pairs. Example: <c>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</c>.</para>
+                /// <para>The CloudMonitor monitoring dimensions.</para>
+                /// <para>Format: a collection of <c>key:value</c> pairs. Example:
+                /// <c>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</c>.</para>
                 /// </summary>
                 [NameInMap("MetricDimensions")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> MetricDimensions { get; set; }
 
                 /// <summary>
-                /// <para>The monitoring metric.</para>
+                /// <para>The name of the CloudMonitor monitoring metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Usage</para>
@@ -401,7 +353,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// <para>The monitoring namespace.</para>
+                /// <para>The namespace of the CloudMonitor monitoring data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs_quotas_flowcontrol</para>
@@ -425,10 +377,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records returned for the current request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -437,3 +389,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

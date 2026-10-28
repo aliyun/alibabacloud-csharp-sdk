@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductsResponseBody : TeaModel {
+    public class ListProductsResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The maximum number of records that are returned for the query.</para>
+        /// <para>The maximum number of entries returned for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</para>
+        /// <para>The token that marks the position of the returned query data. An empty value indicates that all data has been queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -30,17 +31,19 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the Alibaba Cloud services.</para>
+        /// <para>The information about the Alibaba Cloud service.</para>
         /// </summary>
         [NameInMap("ProductInfo")]
         [Validation(Required=false)]
         public List<ListProductsResponseBodyProductInfo> ProductInfo { get; set; }
-        public class ListProductsResponseBodyProductInfo : TeaModel {
+        public class ListProductsResponseBodyProductInfo : Darabonba.Model {
             /// <summary>
-            /// <para>Indicates whether the Alibaba Cloud service supports general quotas. Valid values:</para>
+            /// <para>Specifies whether general quotas are supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>support: The Alibaba Cloud service supports general quotas.</description></item>
-            /// <item><description>unsupport: The Alibaba Cloud service does not support general quotas.</description></item>
+            /// <item><description><para>support: Supported.</para>
+            /// </description></item>
+            /// <item><description><para>unsupport: Not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,13 +54,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string CommonQuotaSupport { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is discontinued and is not recommended.</para>
-            /// </remarks>
-            /// <para>Indicates whether the Alibaba Cloud service supports dynamic quota adjustment. Valid values:</para>
+            /// <para><notice><b>[Deprecated]</b> We recommend that you do not use this parameter.</notice></para>
+            /// <para>Specifies whether dynamic quota adjustment is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,10 +71,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public bool? Dynamic { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Alibaba Cloud service supports API rate limits. Valid values:</para>
+            /// <para>Specifies whether API rate limits are supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>support: The Alibaba Cloud service supports API rate limits.</description></item>
-            /// <item><description>unsupport: The Alibaba Cloud service does not support API rate limits.</description></item>
+            /// <item><description><para>support: Supported.</para>
+            /// </description></item>
+            /// <item><description><para>unsupport: Not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,10 +147,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string SecondCategoryNameEn { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Alibaba Cloud service supports whitelist quotas. Valid values:</para>
+            /// <para>Specifies whether privileges are supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>support: The Alibaba Cloud service supports whitelist quotas.</description></item>
-            /// <item><description>unsupport: The Alibaba Cloud service does not support whitelist quotas.</description></item>
+            /// <item><description><para>support: Supported.</para>
+            /// </description></item>
+            /// <item><description><para>unsupport: Not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +165,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1DA9C136-11BC-4C39-ADC6-B86276128072</para>
@@ -168,7 +175,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that are returned for the query.</para>
+        /// <para>The total number of entries returned for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -180,3 +187,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

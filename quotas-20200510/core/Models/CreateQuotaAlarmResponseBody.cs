@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaAlarmResponseBody : TeaModel {
+    public class CreateQuotaAlarmResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>Alarm ID.</para>
+        /// <para>The alert ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18b3be23-b7b0-4d45-91bc-d0c331aa****</para>
@@ -32,3 +33,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

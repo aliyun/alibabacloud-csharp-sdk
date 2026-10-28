@@ -1,18 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaApplicationsForTemplateRequest : TeaModel {
+    public class CreateQuotaApplicationsForTemplateRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The Alibaba Cloud accounts that correspond to the resource directory members for which the quotas are applied.</para>
+        /// <para>The list of Alibaba Cloud accounts that belong to the resource directory members for which you want to apply for quotas.</para>
         /// <remarks>
-        /// <para> You can submit a quota increase application for a maximum of 50 members at a time. For more information about the members of a resource directory, see <a href="https://help.aliyun.com/document_detail/604207.html">ListAccounts</a>.</para>
+        /// <para>You can apply for quota increases for a maximum of 50 members at a time. For more information about the members of a resource directory, see <a href="https://help.aliyun.com/document_detail/604207.html">ListAccounts</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -21,15 +22,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public List<string> AliyunUids { get; set; }
 
         /// <summary>
-        /// <para>The requested value of the quota.</para>
+        /// <para>The requested quota value.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can specify DesireValue based on the values of <c>TotalUsage</c> and <c>ApplicableRange</c> in the response to the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation.</para>
-        /// </description></item>
-        /// <item><description><para>Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.</para>
-        /// </description></item>
+        /// <item><description>Set the requested quota value based on the <c>TotalUsage</c> (quota usage) and <c>ApplicableRange</c> (applicable range for quota application) of the target quota in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</description></item>
+        /// <item><description>Quota applications are reviewed and approved by the technical support team of each cloud service. To increase the approval rate, specify a reasonable requested value and provide a detailed reason when you submit a quota application.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,17 +44,15 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<CreateQuotaApplicationsForTemplateRequestDimensions> Dimensions { get; set; }
-        public class CreateQuotaApplicationsForTemplateRequestDimensions : TeaModel {
+        public class CreateQuotaApplicationsForTemplateRequestDimensions : Darabonba.Model {
             /// <summary>
-            /// <para>The key of the dimension.</para>
+            /// <para>The key of the quota dimension.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter is required if you set the <c>ProductCode</c> parameter to <c>ecs</c>, <c>ecs-spec</c>, <c>actiontrail</c>, or <c>ess</c>.</para>
-            /// </description></item>
+            /// <item><description>The value range of N depends on the number of dimensions supported by the cloud service.</description></item>
+            /// <item><description>When <c>ProductCode</c> is set to <c>ecs</c>, <c>ecs-spec</c>, <c>actiontrail</c>, or <c>ess</c>, you must specify both the key and the value of the quota dimension.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>regionId</para>
@@ -65,15 +62,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the dimension.</para>
+            /// <para>The value of the quota dimension.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter is required if you set the <c>ProductCode</c> parameter to <c>ecs</c>, <c>ecs-spec</c>, <c>actiontrail</c>, or <c>ess</c>.</para>
-            /// </description></item>
+            /// <item><description>The value range of N depends on the number of dimensions supported by the cloud service.</description></item>
+            /// <item><description>When <c>ProductCode</c> is set to <c>ecs</c>, <c>ecs-spec</c>, <c>actiontrail</c>, or <c>ess</c>, you must specify both the key and the value of the quota dimension.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -85,9 +80,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</para>
+        /// <para>The UTC time when the quota takes effect. This parameter applies only to privileges (WhiteListLabel).</para>
         /// <remarks>
-        /// <para> If you do not specify a start time, the value is the time when the quota application is submitted.</para>
+        /// <para>If you do not specify an effective period for the current account, the commit time is used by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,10 +93,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the notification about the application result. Valid values:</para>
+        /// <para>The language of the notification for the quota application result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh (default): Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh (default): Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,9 +107,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string EnvLanguage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</para>
+        /// <para>The UTC time when the quota expires. This parameter applies only to privileges (WhiteListLabel). </para>
         /// <remarks>
-        /// <para> If you do not specify an end time, the value is 99 years after the start time of the validity period.</para>
+        /// <para>If you do not specify an expiration time for the current account, the expiration time is set to 99 years after the effective period of the current quota.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,10 +120,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to send a notification about the application result. Valid values:</para>
+        /// <para>Specifies whether to send notifications for quota application results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): no</description></item>
-        /// <item><description>3: yes</description></item>
+        /// <item><description>0 (default): no.</description></item>
+        /// <item><description>3: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,9 +134,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? NoticeType { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviated name of the cloud service.</para>
         /// <remarks>
-        /// <para> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <c>ProductCode</c> in the response.</para>
+        /// <para>For more information about how to obtain the abbreviated name of a cloud service, see <c>ProductCode</c> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -155,7 +150,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The quota ID.</para>
         /// <remarks>
-        /// <para> To query the quota ID of an Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> and check the value of <c>QuotaActionCode</c> in the response.</para>
+        /// <para>For more information about how to obtain the quota ID of a cloud service, see <c>QuotaActionCode</c> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -169,9 +164,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The quota type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CommonQuota: general quota</description></item>
-        /// <item><description>FlowControl: API rate limit</description></item>
-        /// <item><description>WhiteListLabel: privilege</description></item>
+        /// <item><description>CommonQuota: general quota.</description></item>
+        /// <item><description>FlowControl: API rate limit.</description></item>
+        /// <item><description>WhiteListLabel: privilege.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -185,7 +180,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The reason for the quota application.</para>
         /// <remarks>
-        /// <para> Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit the application.</para>
+        /// <para>Quota applications are reviewed and approved by the technical support team of each cloud service. To increase the approval rate, specify a reasonable requested value and provide a detailed reason when you submit a quota application.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -199,3 +194,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaTemplateServiceStatusResponseBody : TeaModel {
+    public class GetQuotaTemplateServiceStatusResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("TemplateServiceStatus")]
         [Validation(Required=false)]
         public GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus TemplateServiceStatus { get; set; }
-        public class GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus : TeaModel {
+        public class GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus : Darabonba.Model {
             /// <summary>
             /// <para>The ID of the resource directory.</para>
             /// 
@@ -39,9 +40,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The status of the quota template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>\-1: The quota template is disabled.</description></item>
-            /// <item><description>1: The quota template is enabled.</description></item>
-            /// <item><description>0: No quota template is specified.</description></item>
+            /// <item><description><para>-1: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>1: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>0: Unset.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,3 +60,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

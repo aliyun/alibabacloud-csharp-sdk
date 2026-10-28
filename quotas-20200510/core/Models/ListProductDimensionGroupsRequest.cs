@@ -1,26 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductDimensionGroupsRequest : TeaModel {
+    public class ListProductDimensionGroupsRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The maximum number of records that can be returned for the query. Valid values: 1 to 200. Default value: 30.</para>
+        /// <para>The maximum number of records to return for the query.
+        /// Valid values: 1 to 200. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// <para>The token that marks the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,14 +32,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The service code.</para>
+        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
         /// <remarks>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// <para>For information about how to obtain the abbreviation of an Alibaba Cloud service name, see the \<c>ProductCode\\</c> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss</para>
+        /// <para>entconsole</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -46,3 +48,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

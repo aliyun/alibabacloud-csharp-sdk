@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaApplicationsForTemplateResponseBody : TeaModel {
+    public class CreateQuotaApplicationsForTemplateResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The Alibaba Cloud accounts for which the quotas are applied.</para>
+        /// <para>The list of Alibaba Cloud accounts that belong to the resource directory members for which quotas are applied.</para>
         /// </summary>
         [NameInMap("AliyunUids")]
         [Validation(Required=false)]
         public List<string> AliyunUids { get; set; }
 
         /// <summary>
-        /// <para>The ID of the quota application batch.</para>
+        /// <para>The batch ID of the quota application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d314d6ae-867d-484c-9009-3d421a80****</para>
@@ -27,14 +28,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string BatchQuotaApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud accounts of the members in a resource directory whose quota increase request is rejected, and the reason for the rejection.</para>
+        /// <para>The list of Alibaba Cloud accounts that belong to the resource directory members for which quota applications failed and the reasons for the failures.</para>
         /// </summary>
         [NameInMap("FailResults")]
         [Validation(Required=false)]
         public List<CreateQuotaApplicationsForTemplateResponseBodyFailResults> FailResults { get; set; }
-        public class CreateQuotaApplicationsForTemplateResponseBodyFailResults : TeaModel {
+        public class CreateQuotaApplicationsForTemplateResponseBodyFailResults : Darabonba.Model {
             /// <summary>
-            /// <para>The Alibaba Cloud account of the members in a resource directory whose quota increase request is rejected.</para>
+            /// <para>The Alibaba Cloud account that belongs to the resource directory member for which the quota application failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>135048337611****</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string AliyunUid { get; set; }
 
             /// <summary>
-            /// <para>The reason for the rejection.</para>
+            /// <para>The reason for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The quota adjustment application is being processed. Please try again later.</para>
@@ -68,3 +69,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

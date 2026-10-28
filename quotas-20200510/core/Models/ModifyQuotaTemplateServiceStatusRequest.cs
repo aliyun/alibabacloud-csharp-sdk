@@ -1,19 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ModifyQuotaTemplateServiceStatusRequest : TeaModel {
+    public class ModifyQuotaTemplateServiceStatusRequest : Darabonba.Model {
         /// <summary>
         /// <para>The status of the quota template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>\-1: The quota template is disabled.</description></item>
-        /// <item><description>1: The quota template is enabled.</description></item>
+        /// <item><description><para>-1: The quota template is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>1: The quota template is enabled.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,3 +30,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

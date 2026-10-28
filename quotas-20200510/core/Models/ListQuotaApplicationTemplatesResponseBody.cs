@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationTemplatesResponseBody : TeaModel {
+    public class ListQuotaApplicationTemplatesResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The maximum number of records returned for the query.</para>
         /// 
@@ -38,7 +39,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaApplicationTemplates")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> QuotaApplicationTemplates { get; set; }
-        public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates : TeaModel {
+        public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates : Darabonba.Model {
             /// <summary>
             /// <para>None.</para>
             /// </summary>
@@ -49,8 +50,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The type of the adjustable value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>continuous</description></item>
-            /// <item><description>discontinuous</description></item>
+            /// <item><description><para>continuous</para>
+            /// </description></item>
+            /// <item><description><para>discontinuous</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,8 +97,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The language of the quota alert notification. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>zh: Chinese</description></item>
-            /// <item><description>en: English</description></item>
+            /// <item><description><para>zh: Chinese</para>
+            /// </description></item>
+            /// <item><description><para>en: English</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,8 +133,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>Indicates whether Quota Center sends a notification about the application result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: no</description></item>
-            /// <item><description>3: yes</description></item>
+            /// <item><description><para>0: no</para>
+            /// </description></item>
+            /// <item><description><para>3: yes</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,15 +152,20 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("Period")]
             [Validation(Required=false)]
             public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod Period { get; set; }
-            public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod : TeaModel {
+            public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod : Darabonba.Model {
                 /// <summary>
                 /// <para>The unit of the calculation cycle. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>second</description></item>
-                /// <item><description>minute</description></item>
-                /// <item><description>hour</description></item>
-                /// <item><description>day</description></item>
-                /// <item><description>week</description></item>
+                /// <item><description><para>second</para>
+                /// </description></item>
+                /// <item><description><para>minute</para>
+                /// </description></item>
+                /// <item><description><para>hour</para>
+                /// </description></item>
+                /// <item><description><para>day</para>
+                /// </description></item>
+                /// <item><description><para>week</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -198,9 +210,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The type of the quota. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CommonQuota: general quota</description></item>
-            /// <item><description>FlowControl: API rate limit</description></item>
-            /// <item><description>WhiteListLabel: privilege</description></item>
+            /// <item><description><para>CommonQuota: general quota</para>
+            /// </description></item>
+            /// <item><description><para>FlowControl: API rate limit</para>
+            /// </description></item>
+            /// <item><description><para>WhiteListLabel: privilege</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,3 +270,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListDependentQuotasRequest : TeaModel {
+    public class ListDependentQuotasRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviated name of the cloud service.</para>
         /// <remarks>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// <para>For more information about how to obtain the abbreviated name of a cloud service, see <c>ProductCode</c> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>csk</para>
+        /// <para>cloudsso</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -25,10 +26,13 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
         /// <summary>
         /// <para>The quota ID.</para>
+        /// <remarks>
+        /// <para>For more information about how to obtain the quota ID of a target cloud service, see <c>QuotaActionCode</c> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>q_i5uzm3</para>
+        /// <para>q_system-policy-per-access-configuration</para>
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
@@ -37,3 +41,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

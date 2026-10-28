@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductDimensionGroupsResponseBody : TeaModel {
+    public class ListProductDimensionGroupsResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The dimension groups.</para>
         /// </summary>
         [NameInMap("DimensionGroups")]
         [Validation(Required=false)]
         public List<ListProductDimensionGroupsResponseBodyDimensionGroups> DimensionGroups { get; set; }
-        public class ListProductDimensionGroupsResponseBodyDimensionGroups : TeaModel {
+        public class ListProductDimensionGroupsResponseBodyDimensionGroups : Darabonba.Model {
             /// <summary>
-            /// <para>The key of the dimension group.</para>
+            /// <para>The keys of the dimension group.</para>
             /// </summary>
             [NameInMap("DimensionKeys")]
             [Validation(Required=false)]
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <para>The code of the dimension group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss_wf1ngqmd7q</para>
+            /// <para>entconsole_zjzp4d****</para>
             /// </summary>
             [NameInMap("GroupCode")]
             [Validation(Required=false)]
@@ -37,17 +38,17 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <para>The name of the dimension group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OSS_Group</para>
+            /// <para>Resource sharing</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The service code.</para>
+            /// <para>The code of the Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss</para>
+            /// <para>entconsole</para>
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
@@ -56,27 +57,27 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records that are returned for the query.</para>
+        /// <para>The maximum number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</para>
+        /// <para>The token that marks the position where the returned query results end. An empty value indicates that all data is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>21</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>057D210F-F2FC-5329-A536-26C16628BB09</para>
@@ -86,10 +87,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that are returned for the query.</para>
+        /// <para>The total number of entries that match the query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -98,3 +99,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

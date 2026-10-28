@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ModifyQuotaTemplateServiceStatusResponseBody : TeaModel {
+    public class ModifyQuotaTemplateServiceStatusResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("TemplateServiceStatus")]
         [Validation(Required=false)]
         public ModifyQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus TemplateServiceStatus { get; set; }
-        public class ModifyQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus : TeaModel {
+        public class ModifyQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus : Darabonba.Model {
             /// <summary>
             /// <para>The ID of the resource directory.</para>
             /// 
@@ -39,8 +40,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The status of the quota template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>\-1: The quota template is disabled.</description></item>
-            /// <item><description>1: The quota template is enabled.</description></item>
+            /// <item><description><para>-1: The quota template is disabled.</para>
+            /// </description></item>
+            /// <item><description><para>1: The quota template is enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,3 +58,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

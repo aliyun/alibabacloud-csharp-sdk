@@ -1,33 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListAlarmHistoriesResponseBody : TeaModel {
+    public class ListAlarmHistoriesResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The details of the quota alert records.</para>
+        /// <para>The details of the quota alert history records.</para>
         /// </summary>
         [NameInMap("AlarmHistories")]
         [Validation(Required=false)]
         public List<ListAlarmHistoriesResponseBodyAlarmHistories> AlarmHistories { get; set; }
-        public class ListAlarmHistoriesResponseBodyAlarmHistories : TeaModel {
+        public class ListAlarmHistoriesResponseBodyAlarmHistories : Darabonba.Model {
             /// <summary>
             /// <para>The name of the quota alert.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>security_groups</para>
+            /// <para>q_security-groups alarm</para>
             /// </summary>
             [NameInMap("AlarmName")]
             [Validation(Required=false)]
             public string AlarmName { get; set; }
 
             /// <summary>
-            /// <para>The time when the quota alert rule was created.</para>
+            /// <para>The time when the quota alert was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-24T09:20:09Z</para>
@@ -37,14 +38,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The notification methods of the quota alert.</para>
+            /// <para>The notification channels for the quota alert.</para>
             /// </summary>
             [NameInMap("NotifyChannels")]
             [Validation(Required=false)]
             public List<string> NotifyChannels { get; set; }
 
             /// <summary>
-            /// <para>The quota alert contact.</para>
+            /// <para>The notification recipients of the quota alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accountContact</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string NotifyTarget { get; set; }
 
             /// <summary>
-            /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+            /// <para>The abbreviation of the cloud service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaActionCode { get; set; }
 
             /// <summary>
-            /// <para>The used quota.</para>
+            /// <para>The quota usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public float? QuotaUsage { get; set; }
 
             /// <summary>
-            /// <para>The threshold to trigger quota alerts.</para>
+            /// <para>The value of the quota alert threshold.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -106,7 +107,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records that are returned for the query.</para>
+        /// <para>The maximum number of entries returned for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</para>
+        /// <para>The token that marks the position of the returned query data. An empty value indicates that all data has been queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -126,7 +127,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB38DDF9-B1E0-48C1-9966-19C443C2841E</para>
@@ -136,7 +137,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that are returned for the query.</para>
+        /// <para>The total number of entries returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -148,3 +149,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+

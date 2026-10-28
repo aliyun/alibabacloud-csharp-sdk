@@ -1,29 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductQuotaDimensionsResponseBody : TeaModel {
+    public class ListProductQuotaDimensionsResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The maximum number of records that are returned for the query.</para>
+        /// <para>The maximum number of entries returned for this query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</para>
+        /// <para>The pagination token that indicates the position of the returned data. If this parameter is not returned, it indicates that all data has been queried.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>84</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -35,9 +36,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaDimensions")]
         [Validation(Required=false)]
         public List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> QuotaDimensions { get; set; }
-        public class ListProductQuotaDimensionsResponseBodyQuotaDimensions : TeaModel {
+        public class ListProductQuotaDimensionsResponseBodyQuotaDimensions : Darabonba.Model {
             /// <summary>
-            /// <para>The quota dimensions on which the quota dimension that you want to query is dependent.</para>
+            /// <para>The quota dimensions on which the target quota dimension depends.</para>
             /// </summary>
             [NameInMap("DependentDimensions")]
             [Validation(Required=false)]
@@ -46,10 +47,16 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The key of the quota dimension. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>regionId: the region ID.</description></item>
-            /// <item><description>zoneId: the zone ID.</description></item>
-            /// <item><description>chargeType: the billing method.</description></item>
-            /// <item><description>networkType: the network type.</description></item>
+            /// <item><description><para>regionId: the region ID.</para>
+            /// </description></item>
+            /// <item><description><para>zoneId: the zone ID.</para>
+            /// </description></item>
+            /// <item><description><para>chargeType: the billing method.</para>
+            /// </description></item>
+            /// <item><description><para>networkType: the network type.</para>
+            /// </description></item>
+            /// <item><description><para>resourceType: the resource type.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,21 +67,21 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string DimensionKey { get; set; }
 
             /// <summary>
-            /// <para>The details about the dimension value.</para>
+            /// <para>The details of the quota dimension value.</para>
             /// </summary>
             [NameInMap("DimensionValueDetail")]
             [Validation(Required=false)]
             public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> DimensionValueDetail { get; set; }
-            public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail : TeaModel {
+            public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail : Darabonba.Model {
                 /// <summary>
-                /// <para>The quota dimensions on which the quota dimension that you want to query is dependent.</para>
+                /// <para>The quota dimensions on which the target quota dimension depends.</para>
                 /// </summary>
                 [NameInMap("DependentDimensions")]
                 [Validation(Required=false)]
                 public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> DependentDimensions { get; set; }
-                public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions : TeaModel {
+                public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions : Darabonba.Model {
                     /// <summary>
-                    /// <para>The key of the quota dimension on which the quota dimension that you want to query is dependent.</para>
+                    /// <para>The key of the quota dimension on which the target quota dimension depends.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>regionId</para>
@@ -84,7 +91,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the quota dimension on which the quota dimension that you want to query is dependent.</para>
+                    /// <para>The value of the quota dimension on which the target quota dimension depends.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
@@ -96,10 +103,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the quota dimension.</para>
+                /// <para>The name of the quota dimension value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// <para>cn-hangzhou-b</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -109,7 +116,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 /// <para>The value of the quota dimension.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// <para>cn-hangzhou-b</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -118,7 +125,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// <para>The dimension values.</para>
+            /// <para>The list of quota dimension values.</para>
             /// </summary>
             [NameInMap("DimensionValues")]
             [Validation(Required=false)]
@@ -135,10 +142,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the quota dimension is required when you query quota dimensions. Valid values:</para>
+            /// <para>Specifies whether the quota dimension is required when you query quota dimensions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The quota dimension is required.</para>
+            /// </description></item>
+            /// <item><description><para>false: The quota dimension is optional.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,7 +160,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7ED584FB-ECBF-4A2A-969D-F54D25EFABF9</para>
@@ -161,10 +170,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that are returned for the query.</para>
+        /// <para>The total number of entries returned for this request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -173,3 +182,4 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
+
