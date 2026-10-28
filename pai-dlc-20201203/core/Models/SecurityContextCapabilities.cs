@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class SecurityContextCapabilities : TeaModel {
+        /// <summary>
+        /// <para>The list of Linux capabilities to add.</para>
+        /// </summary>
         [NameInMap("Add")]
         [Validation(Required=false)]
         public List<string> Add { get; set; }
 
+        /// <summary>
+        /// <para>The list of Linux capabilities to remove.</para>
+        /// </summary>
         [NameInMap("Drop")]
         [Validation(Required=false)]
         public List<string> Drop { get; set; }

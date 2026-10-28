@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetJobMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time (UTC) of the time range for querying monitoring data. Default value: the current time.</para>
+        /// <para>The end time of the time range for querying monitoring data, in UTC. Default value: the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-09T16:00:00Z</para>
@@ -22,22 +22,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The metric type of the monitoring data to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GpuCoreUsage: GPU utilization.</para>
-        /// </description></item>
-        /// <item><description><para>GpuMemoryUsage: GPU memory usage.</para>
-        /// </description></item>
-        /// <item><description><para>CpuCoreUsage: CPU utilization.</para>
-        /// </description></item>
-        /// <item><description><para>MemoryUsage: memory usage.</para>
-        /// </description></item>
-        /// <item><description><para>NetworkInputRate: network input rate.</para>
-        /// </description></item>
-        /// <item><description><para>NetworkOutputRate: network output rate.</para>
-        /// </description></item>
-        /// <item><description><para>DiskReadRate: disk read rate.</para>
-        /// </description></item>
-        /// <item><description><para>DiskWriteRate: disk write rate.</para>
-        /// </description></item>
+        /// <item><description>GpuCoreUsage: the GPU usage</description></item>
+        /// <item><description>GpuMemoryUsage: the GPU memory usage</description></item>
+        /// <item><description>CpuCoreUsage: the CPU usage</description></item>
+        /// <item><description>MemoryUsage: the memory usage</description></item>
+        /// <item><description>NetworkInputRate: the network input rate</description></item>
+        /// <item><description>NetworkOutputRate: the network output rate</description></item>
+        /// <item><description>DiskReadRate: the disk read rate</description></item>
+        /// <item><description>DiskWriteRate: the disk write rate</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// <para>The start time (UTC) of the time range for querying monitoring data. Default value: one hour before the current time.</para>
+        /// <para>The start time of the time range for querying monitoring data, in UTC. Default value: 1 hour ago.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-08T16:00:00Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLProgressProcessed : TeaModel {
         /// <summary>
-        /// <para>已处理条数</para>
+        /// <para>The processed count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Done { get; set; }
 
         /// <summary>
-        /// <para>总条数</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

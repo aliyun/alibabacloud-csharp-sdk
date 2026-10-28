@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<List<SanityCheckResultItem>> SanityCheckResults { get; set; }
 
         /// <summary>
-        /// <para>The total number of check results that match the filter conditions.</para>
+        /// <para>The total number of health check results that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

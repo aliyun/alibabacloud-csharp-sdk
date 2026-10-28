@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class FreeResourceItem : TeaModel {
         /// <summary>
+        /// <para>The resource count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public long? AvailableNumber { get; set; }
 
+        /// <summary>
+        /// <para>The cluster ID.</para>
+        /// </summary>
         [NameInMap("ClusterID")]
         [Validation(Required=false)]
         public string ClusterID { get; set; }
 
+        /// <summary>
+        /// <para>The cluster name.</para>
+        /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <para>The idle resource ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>freeres-whateversth</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string FreeResourceId { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-01-18T12:52:15Z</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The update time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-01-18T12:52:15Z</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>inner</para>
         /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RegionID { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cpu</para>
         /// </summary>

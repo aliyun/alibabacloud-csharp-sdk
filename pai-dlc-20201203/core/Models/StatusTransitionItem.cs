@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class StatusTransitionItem : TeaModel {
         /// <summary>
         /// <para>The end time of this status (UTC).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-11-08T17:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The reason code for this status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>JobStoppedByUser</para>
         /// </summary>
         [NameInMap("ReasonCode")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The detailed message for this status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Job is stopped by user.</para>
         /// </summary>
         [NameInMap("ReasonMessage")]
         [Validation(Required=false)]
@@ -32,6 +41,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The start time of this status (UTC).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-11-08T16:00:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -39,6 +51,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The job status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

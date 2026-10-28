@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLFlowTurns : TeaModel {
         /// <summary>
-        /// <para>平均生成轮数</para>
+        /// <para>The average number of generation rounds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.9</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? Avg { get; set; }
 
         /// <summary>
-        /// <para>参与统计的轨迹数</para>
+        /// <para>The number of traces included in the statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>最大生成轮数</para>
+        /// <para>The maximum number of generation rounds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9.2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Max { get; set; }
 
         /// <summary>
-        /// <para>生成轮数 P50</para>
+        /// <para>The P50 of generation rounds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.8</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? P50 { get; set; }
 
         /// <summary>
-        /// <para>生成轮数 P90</para>
+        /// <para>The P90 of generation rounds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.9</para>

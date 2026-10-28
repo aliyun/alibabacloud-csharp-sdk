@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class UpdateTensorboardRequest : TeaModel {
         /// <summary>
-        /// <para>Visibility of the task. Valid values:</para>
+        /// <para>The visibility of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PUBLIC: Visible to all users in this workspace.</para>
-        /// </description></item>
-        /// <item><description><para>PRIVATE: Visible only to you and administrators in this workspace.</para>
-        /// </description></item>
+        /// <item><description>PUBLIC: The task is visible to all users in the workspace.</description></item>
+        /// <item><description>PRIVATE: The task is visible only to you and administrators in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>Maximum runtime. Unit: minutes.</para>
+        /// <para>The maximum running duration in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -35,12 +33,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public long? MaxRunningTimeMinutes { get; set; }
 
+        /// <summary>
+        /// <para>The scheduling priority of the TensorBoard task. Valid values: 1 to 9. A value of 1 indicates the lowest priority, and a value of 9 indicates the highest priority.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID. For more information about how to get a workspace ID, see <a href="">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>380</para>

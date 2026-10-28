@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLProgressBufferDetail : TeaModel {
         /// <summary>
-        /// <para>已被 trainer 消费的样本数</para>
+        /// <para>The number of samples consumed by the trainer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Consumed { get; set; }
 
         /// <summary>
-        /// <para>已完成样本数</para>
+        /// <para>The number of finished samples.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Finished { get; set; }
 
         /// <summary>
-        /// <para>已就绪样本数</para>
+        /// <para>The number of ready samples.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Ready { get; set; }
 
         /// <summary>
-        /// <para>buffer 标签，即 global batch 序号</para>
+        /// <para>The buffer tag, which is the global batch ordinal number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Tag { get; set; }
 
         /// <summary>
-        /// <para>目标样本数</para>
+        /// <para>The target number of samples.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

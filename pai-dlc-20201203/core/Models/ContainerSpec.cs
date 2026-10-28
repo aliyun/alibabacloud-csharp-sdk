@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ContainerSpec : TeaModel {
         /// <summary>
-        /// <para>The command parameters.</para>
+        /// <para>The command arguments.</para>
         /// </summary>
         [NameInMap("Args")]
         [Validation(Required=false)]
@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public ResourceRequirements Resources { get; set; }
 
+        /// <summary>
+        /// <para>The container security context configuration.</para>
+        /// </summary>
         [NameInMap("SecurityContext")]
         [Validation(Required=false)]
         public SecurityContext SecurityContext { get; set; }

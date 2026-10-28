@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListEcsSpecsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters by accelerator type. Valid values:</para>
+        /// <para>The accelerator type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CPU</description></item>
         /// <item><description>GPU</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string AcceleratorType { get; set; }
 
         /// <summary>
-        /// <para>The list of instance types to query. Separate multiple instance types with commas (,).</para>
+        /// <para>The instance types to query. Separate multiple instance types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large,ecs.g6.xlarge</para>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order.</description></item>
-        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description>desc: Descending order.</description></item>
+        /// <item><description>asc: Ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. The minimum value is 1.</para>
+        /// <para>The page number. Minimum value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page in a paged query. This parameter is used for paging.</para>
+        /// <para>The number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Sorts by return field. Valid values:</para>
+        /// <para>The field by which to sort the returned results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CPU</description></item>
         /// <item><description>GPU</description></item>

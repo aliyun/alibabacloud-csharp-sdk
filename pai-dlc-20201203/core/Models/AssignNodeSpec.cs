@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class AssignNodeSpec : TeaModel {
+        /// <summary>
+        /// <para>The list of hyper nodes to avoid during scheduling.</para>
+        /// </summary>
         [NameInMap("AntiAffinityHyperNodes")]
         [Validation(Required=false)]
         public List<HyperNodeSpec> AntiAffinityHyperNodes { get; set; }
 
         /// <summary>
+        /// <para>AntiAffinityNodeNames</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lingjxxxxxxxx</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string AntiAffinityNodeNames { get; set; }
 
         /// <summary>
+        /// <para>EnableAssignNode</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public bool? EnableAssignNode { get; set; }
 
+        /// <summary>
+        /// <para>The list of hyper nodes to schedule to.</para>
+        /// </summary>
         [NameInMap("HyperNodes")]
         [Validation(Required=false)]
         public List<HyperNodeSpec> HyperNodes { get; set; }
 
         /// <summary>
+        /// <para>NodeNames</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lingjxxxxxxxx</para>
         /// </summary>

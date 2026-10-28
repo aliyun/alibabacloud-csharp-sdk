@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class CredentialConfig : TeaModel {
         /// <summary>
         /// <para>The role identity key injected into environment variables.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("AliyunEnvRoleKey")]
         [Validation(Required=false)]
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<CredentialConfigItem> CredentialConfigItems { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable credential injection.</para>
+        /// <para>Specifies whether credential injection is enabled.</para>
         /// </summary>
         [NameInMap("EnableCredentialInject")]
         [Validation(Required=false)]

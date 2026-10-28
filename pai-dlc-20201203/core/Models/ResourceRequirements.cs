@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ResourceRequirements : TeaModel {
         /// <summary>
-        /// <para>Resource limits</para>
+        /// <para>The resource limits.</para>
         /// </summary>
         [NameInMap("Limits")]
         [Validation(Required=false)]
         public Dictionary<string, string> Limits { get; set; }
 
         /// <summary>
-        /// <para>Resource requests</para>
+        /// <para>The resource requests.</para>
         /// </summary>
         [NameInMap("Requests")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetTensorboardSharedUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. Used for troubleshooting and support inquiries.</para>
+        /// <para>The request ID. It is used for troubleshooting and technical support.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

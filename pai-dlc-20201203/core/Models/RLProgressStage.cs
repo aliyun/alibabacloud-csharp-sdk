@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLProgressStage : TeaModel {
         /// <summary>
-        /// <para>阶段耗时（秒，保留 3 位小数）；一个 step 常整体落在同一秒内，故不取整</para>
+        /// <para>The duration of the stage in seconds, with three decimal places. A step often falls entirely within the same second, so the value is not rounded to an integer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.483</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? Duration { get; set; }
 
         /// <summary>
-        /// <para>阶段结束时间（unix 秒）</para>
+        /// <para>The end time of the stage in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>阶段标识</para>
+        /// <para>The stage identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>traj</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>阶段中文名</para>
+        /// <para>The Chinese name of the stage.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生成轨迹</para>
+        /// <para>Generate trace</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>匹配该阶段的日志标记文案</para>
+        /// <para>The log marker text used to match the stage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>start/end generation</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>是否为可选阶段；可选阶段未出现时状态记为 skipped</para>
+        /// <para>Specifies whether the stage is optional. If an optional stage does not occur, its status is recorded as skipped.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? Optional { get; set; }
 
         /// <summary>
-        /// <para>阶段开始时间（unix 秒）</para>
+        /// <para>The start time of the stage in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487</para>

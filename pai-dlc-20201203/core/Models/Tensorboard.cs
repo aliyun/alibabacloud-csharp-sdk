@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        /// <summary>
+        /// <para>The CPU resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public long? Cpu { get; set; }
@@ -33,6 +39,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
+        /// <summary>
+        /// <para>The dataset type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OSS</para>
+        /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
@@ -97,20 +109,38 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <para>The maximum running duration in minutes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>240</para>
+        /// </summary>
         [NameInMap("MaxRunningTimeMinutes")]
         [Validation(Required=false)]
         public long? MaxRunningTimeMinutes { get; set; }
 
+        /// <summary>
+        /// <para>The memory size in GB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public long? Memory { get; set; }
 
+        /// <summary>
+        /// <para>The extended fields of the dataset in JSON format. Currently, MountPath is supported, which specifies the mount path for a custom dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</para>
+        /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The priority of the TensorBoard job.</para>
+        /// <para>The priority of the Tensorboard job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +150,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group used by TensorBoard.</para>
+        /// <para>The ID of the resource group used by Tensorboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota12***</para>
@@ -130,7 +160,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource quota used by TensorBoard.</para>
+        /// <para>The name of the resource quota used by Tensorboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-quota</para>
@@ -189,19 +219,25 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string SummaryPath { get; set; }
 
+        /// <summary>
+        /// <para>The absolute path of the summary.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/summary/</para>
+        /// </summary>
         [NameInMap("SummaryRelativePath")]
         [Validation(Required=false)]
         public string SummaryRelativePath { get; set; }
 
         /// <summary>
-        /// <para>The datasets mounted to the TensorBoard job.</para>
+        /// <para>The datasets mounted to the Tensorboard job.</para>
         /// </summary>
         [NameInMap("TensorboardDataSources")]
         [Validation(Required=false)]
         public List<TensorboardDataSourceSpec> TensorboardDataSources { get; set; }
 
         /// <summary>
-        /// <para>Tensorboard ID。</para>
+        /// <para>The Tensorboard ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorboard-xxx</para>
@@ -211,14 +247,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TensorboardId { get; set; }
 
         /// <summary>
-        /// <para>The pay-as-you-go configuration of the TensorBoard job.</para>
+        /// <para>The pay-as-you-go configuration for the Tensorboard job.</para>
         /// </summary>
         [NameInMap("TensorboardSpec")]
         [Validation(Required=false)]
         public TensorboardSpec TensorboardSpec { get; set; }
 
         /// <summary>
-        /// <para>Tensorboard URL。</para>
+        /// <para>The Tensorboard URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://xxxxxx">http://xxxxxx</a></para>
@@ -227,6 +263,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string TensorboardUrl { get; set; }
 
+        /// <summary>
+        /// <para>The token value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</para>
+        /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
@@ -251,6 +293,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Username { get; set; }
 
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123***</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

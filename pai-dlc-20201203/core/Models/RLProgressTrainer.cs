@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLProgressTrainer : TeaModel {
         /// <summary>
-        /// <para>micro-batch 进度</para>
+        /// <para>The micro-batch progress.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public RLProgressMicro Micro { get; set; }
 
         /// <summary>
-        /// <para>当前 mini batch 序号</para>
+        /// <para>The current mini-batch ordinal number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? MiniIdx { get; set; }
 
         /// <summary>
-        /// <para>mini-batch 总数</para>
+        /// <para>The total number of mini-batches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? NumMinibatches { get; set; }
 
         /// <summary>
-        /// <para>参数同步状态</para>
+        /// <para>The parameter synchronization status.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

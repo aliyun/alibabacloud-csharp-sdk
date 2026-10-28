@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The visibility of the job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: Visible to all users in this workspace.</description></item>
-        /// <item><description>PRIVATE: Visible only to you and administrators in this workspace.</description></item>
+        /// <item><description>PUBLIC: The job is visible to all users in the workspace.</description></item>
+        /// <item><description>PRIVATE: The job is visible only to you and administrators in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The display name of the Tensorboard instance.</para>
+        /// <para>The display name of the TensorBoard instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestTensorboard</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query range. The creation time of the Tensorboard instance in UTC is used for filtering. If this parameter is left empty, the default value is the current time.</para>
+        /// <para>The end time of the query interval. Filters instances by the UTC creation time of the TensorBoard instance. If this parameter is left empty, the default value is the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-09T14:45:00Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Filters Tensorboard instances by DLC job ID. See <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</para>
+        /// <para>Filters TensorBoard instances by the DLC job ID. Refer to <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-xxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return in a paged query. The value starts from 1.</para>
+        /// <para>The page number of the current page in the paged query. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of Tensorboard instances to return per page in a paged query.</para>
+        /// <para>The number of TensorBoard instances to return on each page in the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing type of the Tensorboard instance. Valid values:</para>
+        /// <para>The billing method of the TensorBoard instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Free: The Tensorboard instance uses free resources.</description></item>
-        /// <item><description>Postpaid: The Tensorboard instance uses pay-as-you-go resources.</description></item>
+        /// <item><description>Free: The instance uses free resources.</description></item>
+        /// <item><description>Postpaid: The instance uses pay-as-you-go resources.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The resource quota ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Currently, only whitelisted users can use resource quota resources to create Tensorboard instances. To use this feature, contact us.</description></item>
-        /// <item><description>This value is valid only when the Tensorboard instance uses resource quota resources.</description></item>
+        /// <item><description>Currently, only whitelisted users can use resource quotas to create TensorBoard instances. To use this feature, contact us.</description></item>
+        /// <item><description>This parameter is valid only when the TensorBoard instance uses resources from a resource quota.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only Tensorboard instances created by the current user.</para>
+        /// <para>Specifies whether to return only the TensorBoard instances created by the current logged-on user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -128,10 +128,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? ShowOwn { get; set; }
 
         /// <summary>
-        /// <para>Sorts the results by the following fields. Valid values:</para>
+        /// <para>The field by which to sort the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DisplayName: The job name.</description></item>
-        /// <item><description>GmtCreateTime: The job creation time.</description></item>
+        /// <item><description>DisplayName: The name of the job.</description></item>
+        /// <item><description>GmtCreateTime: The creation time of the job.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The data source ID. See <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</para>
+        /// <para>The data source ID. Refer to <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-xxxxxx</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The data source type. Currently, only DLC training jobs are supported, which means the value is job.</para>
+        /// <para>The data source. Currently, only DLC training jobs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range. The creation time of the Tensorboard instance in UTC is used for filtering. If this parameter is left empty, the default value is 7 days before the current time.</para>
+        /// <para>The start time of the query interval. Filters instances by the UTC creation time of the TensorBoard instance. If this parameter is left empty, the default value is 7 days before the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-08T16:00:00Z</para>
@@ -172,13 +172,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The Tensorboard status. Valid values:</para>
+        /// <para>The status of the TensorBoard instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Creating: Being created.</description></item>
-        /// <item><description>Running: Running.</description></item>
-        /// <item><description>Stopped: Stopped.</description></item>
-        /// <item><description>Succeeded: Succeeded.</description></item>
-        /// <item><description>Failed: Failed.</description></item>
+        /// <item><description>Creating: The instance is being created.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
+        /// <item><description>Succeeded: The instance succeeded.</description></item>
+        /// <item><description>Failed: The instance failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Filters the Tensorboard list by Tensorboard ID.</para>
+        /// <para>Filters TensorBoard instances by the TensorBoard ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorboard-xxx</para>
@@ -219,10 +219,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to show details. Valid values:</para>
+        /// <para>Specifies whether to display details. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Show details.</description></item>
-        /// <item><description>false: Do not show details.</description></item>
+        /// <item><description>true: Displays details.</description></item>
+        /// <item><description>false: Does not display details.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. The Tensorboard list is retrieved based on the workspace ID. &lt;props=&quot;china&quot;&gt;See <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The workspace ID. Retrieves the list of TensorBoard instances based on the workspace ID. &lt;props=&quot;china&quot;&gt;Refer to <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>380</para>

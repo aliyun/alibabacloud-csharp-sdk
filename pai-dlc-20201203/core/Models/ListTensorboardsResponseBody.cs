@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list and details of Tensorboard instances.</para>
+        /// <para>The list and details of TensorBoard instances.</para>
         /// </summary>
         [NameInMap("Tensorboards")]
         [Validation(Required=false)]
         public List<Tensorboard> Tensorboards { get; set; }
 
         /// <summary>
-        /// <para>The total number of data sources that match the specified conditions.</para>
+        /// <para>The total number of data sources that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

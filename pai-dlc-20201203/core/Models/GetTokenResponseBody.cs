@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task sharing token, which can be used to view information about the shared task.</para>
+        /// <para>The sharing token of the job, which can be used to view information about the shared job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</para>

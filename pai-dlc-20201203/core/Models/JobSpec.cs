@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class JobSpec : TeaModel {
         /// <summary>
-        /// <para>The node scheduling configuration.</para>
+        /// <para>The specified node scheduling configuration.</para>
         /// </summary>
         [NameInMap("AssignNodeSpec")]
         [Validation(Required=false)]
@@ -30,12 +30,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public bool? ConsiderInSuccessPolicy { get; set; }
 
+        /// <summary>
+        /// <para>The GPU driver version used by the job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>535.54.03</para>
+        /// </summary>
         [NameInMap("Driver")]
         [Validation(Required=false)]
         public string Driver { get; set; }
 
         /// <summary>
-        /// <para>The hardware specification of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed specification list.&gt;Notice: Prices vary depending on the specification.</para>
+        /// <para>The hardware specifications of the worker. For a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing overview</a>.&gt;Notice: Prices vary by specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -44,23 +50,29 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
 
+        /// <summary>
+        /// <para>The list of candidate instance types for this role to participate in elastic spot bidding.</para>
+        /// </summary>
         [NameInMap("ElasticSpotSpecs")]
         [Validation(Required=false)]
         public List<ElasticSpotSpec> ElasticSpotSpecs { get; set; }
 
         /// <summary>
-        /// <para>The extra pod configuration.</para>
+        /// <para>The additional pod configuration.</para>
         /// </summary>
         [NameInMap("ExtraPodSpec")]
         [Validation(Required=false)]
         public ExtraPodSpec ExtraPodSpec { get; set; }
 
+        /// <summary>
+        /// <para>The hypernode scheduling configuration for this role.</para>
+        /// </summary>
         [NameInMap("HyperNodeSchedulingConfig")]
         [Validation(Required=false)]
         public HyperNodeSchedulingConfig HyperNodeSchedulingConfig { get; set; }
 
         /// <summary>
-        /// <para>The runtime image address for this type of worker. Call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to retrieve images provided by the PAI platform. You can also specify a third-party public image.</para>
+        /// <para>The runtime image URL for this type of worker. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain images provided by the PAI platform. You can also specify a public third-party image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/cloud-dsw/tensorflow:1.12PAI-gpu-py36-cu101-ubuntu18.04</para>
@@ -79,7 +91,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This field is deprecated due to a spelling error.</para>
+        /// <para><b>[Deprecated]</b> This field is misspelled and deprecated.</para>
         /// </summary>
         [NameInMap("IsCheif")]
         [Validation(Required=false)]
@@ -87,7 +99,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? IsCheif { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the role is the Chief role. Only one Chief role is allowed.</para>
+        /// <para>Specifies whether this role is the chief role. Only one chief role is allowed.</para>
         /// </summary>
         [NameInMap("IsChief")]
         [Validation(Required=false)]
@@ -100,6 +112,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<LocalMountSpec> LocalMountSpecs { get; set; }
 
+        /// <summary>
+        /// <para>The usage type of idle resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AcceptQuotaOverSold</para>
+        /// </summary>
         [NameInMap("OversoldType")]
         [Validation(Required=false)]
         public string OversoldType { get; set; }
@@ -114,6 +132,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public long? PodCount { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource quota used by the job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>quota12345</para>
+        /// </summary>
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
@@ -156,12 +180,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<StartupDependency> StartupDependencies { get; set; }
 
+        /// <summary>
+        /// <para>The system cloud disk configuration for the job replicas.</para>
+        /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public SystemDisk SystemDisk { get; set; }
 
         /// <summary>
-        /// <para>The type, which is closely related to the job type. Different job types support different worker types.</para>
+        /// <para>The type is closely related to the job type. Different job types support different worker types.</para>
         /// <list type="bullet">
         /// <item><description><para><b>TFJob</b>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</para>
         /// </description></item>
@@ -176,7 +203,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <item><description><para><b>RayJob</b>: Supports Head, Worker, and Worker[-xxx].</para>
         /// </description></item>
         /// </list>
-        /// <para>Master is optional in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch. If not specified, the system automatically designates the first Worker node as Master.</para>
+        /// <para>The Master role in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch is optional. If not specified, the system automatically assigns the first worker node as the master.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Worker</para>

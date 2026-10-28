@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListEcsSpecsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of ECS specifications.</para>
+        /// <para>The list of ECS instance types.</para>
         /// </summary>
         [NameInMap("EcsSpecs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the filter conditions.</para>
+        /// <para>The total number of entries that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

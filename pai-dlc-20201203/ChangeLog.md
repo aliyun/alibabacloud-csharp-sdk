@@ -1,3 +1,7 @@
+2026-10-28 Version: 1.12.7
+- Update API CreateJob: add request parameters body.DryRun.
+
+
 2026-10-08 Version: 1.12.6
 - Update API CreateJob: add request parameters body.DataSources.$.RoleArn.
 

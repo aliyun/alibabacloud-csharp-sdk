@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLProgressMicro : TeaModel {
         /// <summary>
-        /// <para>当前 micro-batch 序号</para>
+        /// <para>The current micro-batch ordinal number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Current { get; set; }
 
         /// <summary>
-        /// <para>micro-batch 总数</para>
+        /// <para>The micro-batch total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
