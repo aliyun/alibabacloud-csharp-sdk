@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the service-linked role has been created.</para>
+        /// <para>Indicates whether the service-linked role is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>

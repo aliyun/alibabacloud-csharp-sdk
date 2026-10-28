@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterConfigChangeLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration file that was modified. For compute clusters, this value is fixed as be.conf. For FE clusters, this value is fixed as fe.conf.</para>
+        /// <para>The configuration file to be modified. The value is fixed to be.conf for compute clusters and fe.conf for FE clusters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>be.conf</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time for querying change records. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time to query change records. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying change records. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time to query change records. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

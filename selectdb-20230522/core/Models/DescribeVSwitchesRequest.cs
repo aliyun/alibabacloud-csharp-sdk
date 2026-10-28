@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// <remarks>
-        /// <para>Warning: This is a reserved parameter and is not supported.</warning></para>
+        /// <para>Warning: Reserved parameter. Not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The token for the next query.</para>
         /// <remarks>
-        /// <para>Warning: This is a reserved parameter and is not supported.</warning></para>
+        /// <para>Warning: Reserved parameter. Not supported.</warning></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the instance.</para>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

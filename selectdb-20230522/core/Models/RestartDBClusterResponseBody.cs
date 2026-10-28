@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class RestartDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

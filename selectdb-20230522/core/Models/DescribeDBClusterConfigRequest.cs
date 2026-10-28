@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration file to be modified.</para>
-        /// <list type="bullet">
-        /// <item><description><para>For a compute cluster, set the value to be.conf.</para>
-        /// </description></item>
-        /// <item><description><para>For a frontend (FE) cluster, set the value to fe.conf.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The configuration file to modify. - For compute clusters: be.conf. - For FE clusters: fe.conf.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GroupTag { get; set; }
 
             /// <summary>
-            /// <para>The IP address whitelist of the instance. Multiple IP addresses are separated by commas (,).</para>
+            /// <para>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.XX.XX</para>

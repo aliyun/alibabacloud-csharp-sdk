@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class AllocateInstancePublicConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the target endpoint, which is the prefix part of the <b>ConnectionString</b> parameter.</para>
+        /// <para>The prefix of the target endpoint, which is the prefix of the <b>ConnectionString</b> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

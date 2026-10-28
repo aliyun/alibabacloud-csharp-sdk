@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) authentication failed.</para>
+        /// <para>The details of the access denial. This field is returned only when RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>failed</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The information returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The details about each parameter returned.</para>
+            /// <para>The user parameters.</para>
             /// </summary>
             [NameInMap("Params")]
             [Validation(Required=false)]
             public List<DescribeDBClusterConfigResponseBodyDataParams> Params { get; set; }
             public class DescribeDBClusterConfigResponseBodyDataParams : TeaModel {
                 /// <summary>
-                /// <para>The comments on the parameter.</para>
+                /// <para>The comment of the field.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>存储引擎并发扫描硬盘的线程数。采用线程池统一管理。</para>
+                /// <para>The number of threads used by the storage engine to concurrently scan hard disks. A thread pool is used for unified management</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the parameter immediately takes effect without requiring a restart.</para>
+                /// <para>Specifies whether the parameter takes effect dynamically without a restart.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? IsDynamic { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the parameter is modifiable.</para>
+                /// <para>Specifies whether users are allowed to modify the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? IsUserModifiable { get; set; }
 
                 /// <summary>
-                /// <para>The name of the parameter.</para>
+                /// <para>The name of the configuration item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>doris_scanner_thread_pool_thread_num</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The value range of the parameter.</para>
+                /// <para>The value range.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[0-20000]</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string Optional { get; set; }
 
                 /// <summary>
-                /// <para>The category of the parameter.</para>
+                /// <para>The category of the configuration item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Query</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string ParamCategory { get; set; }
 
                 /// <summary>
-                /// <para>The current value of the parameter.</para>
+                /// <para>The current value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not returned.</para>
+        /// <para>The dynamic code. This field is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not returned.</para>
+        /// <para>The dynamic message. This field is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>An error occurred while processing your request.</para>

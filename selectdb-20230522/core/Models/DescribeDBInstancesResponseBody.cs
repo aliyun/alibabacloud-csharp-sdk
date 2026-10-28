@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public List<DescribeDBInstancesResponseBodyItems> Items { get; set; }
         public class DescribeDBInstancesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The instance edition. Default value: basic.</para>
+            /// <para>The edition of the instance. Default value: basic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-            /// <item><description><b>Prepaid</b>: subscription</description></item>
+            /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+            /// </description></item>
+            /// <item><description><para><b>Prepaid</b>: subscription</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,9 +117,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the cluster, in ISO 8601 format with time zone information.</para>
+            /// <para>The expiration time of the cluster. The time is displayed in ISO 8601 format and includes the time zone.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for <b>Prepaid</b> (subscription) clusters. For <b>Postpaid</b> (pay-as-you-go) clusters, an empty value is returned.</para>
+            /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). For clusters whose billing method is <b>Postpaid</b> (pay-as-you-go), an empty value is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The list of FE clusters.</para>
+            /// <para>The FE cluster list.</para>
             /// </summary>
             [NameInMap("FEClusterList")]
             [Validation(Required=false)]
@@ -136,6 +138,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public class DescribeDBInstancesResponseBodyItemsFEClusterList : TeaModel {
                 /// <summary>
                 /// <para>The name of the FE cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>selectdb-cn-demo12345-fe</para>
                 /// </summary>
                 [NameInMap("DbClusterId")]
                 [Validation(Required=false)]
@@ -173,6 +178,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
                 /// <summary>
                 /// <para>The status of the FE cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ACTIVATION</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -201,7 +209,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The instance usage type.</para>
+            /// <para>The usage type of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Instance</para>
@@ -213,8 +221,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>Indicates whether the instance is deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The instance is deleted.</description></item>
-            /// <item><description><b>fasle</b>: The instance is not deleted.</description></item>
+            /// <item><description><para><b>true</b>: deleted</para>
+            /// </description></item>
+            /// <item><description><para><b>fasle</b>: not deleted</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,7 +265,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string MaintainEndTimeStr { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter that is not currently returned. The time format does not apply.</para>
+            /// <para>Reserved parameter. Not returned. Therefore, the time format does not apply.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter. Not returned</para>
@@ -275,7 +285,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string MaintainStartTimeStr { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter that is not currently returned. The time format does not apply.</para>
+            /// <para>Reserved parameter. Not returned. Therefore, the time format does not apply.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter. Not returned</para>
@@ -351,7 +361,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ResourceCpu { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter. Not returned</para>
@@ -371,7 +381,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ResourceMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of RDS capacity units (RCUs) in the automatic scaling range of the instance.</para>
+            /// <para>The maximum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -381,7 +391,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of RDS capacity units (RCUs) in the automatic scaling range of the instance.</para>
+            /// <para>The minimum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -394,7 +404,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The redundant field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Null</para>
+            /// <para>Empty</para>
             /// </summary>
             [NameInMap("ScaleReplica")]
             [Validation(Required=false)]
@@ -413,18 +423,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>CREATING</b>: Creating.</para>
-            /// </description></item>
-            /// <item><description><para><b>ACTIVATION</b>: Running.</para>
-            /// </description></item>
-            /// <item><description><para><b>RESOURCE_CHANGING</b>: Changing specifications.</para>
-            /// </description></item>
-            /// <item><description><para><b>ORDER_PREPARING</b>: Confirming the order.</para>
-            /// </description></item>
-            /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: Changing resources (the instance is locked for writing).</para>
-            /// </description></item>
-            /// <item><description><para><b>DELETING</b>: Deleting.</para>
-            /// </description></item>
+            /// <item><description><b>CREATING</b>: Creating.</description></item>
+            /// <item><description><b>ACTIVATION</b>: Running.</description></item>
+            /// <item><description><b>RESOURCE_CHANGING</b>: Changing specifications.</description></item>
+            /// <item><description><b>ORDER_PREPARING</b>: Confirming order.</description></item>
+            /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: Changing resources (the instance is locked for write operations).</description></item>
+            /// <item><description><b>DELETING</b>: Deleting.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -435,7 +439,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity.</para>
+            /// <para>The storage space size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -482,6 +486,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string TagValue { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>Indicates whether TDE is enabled.</para>
+            /// </summary>
+            [NameInMap("TdeEnabled")]
+            [Validation(Required=false)]
+            public bool? TdeEnabled { get; set; }
 
             /// <summary>
             /// <para>The ID of the Prometheus monitoring cluster.</para>
@@ -544,7 +555,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint.</para>
+            /// <para>The connection endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Not returned</para>
@@ -558,7 +569,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>30</b>: Default value.</description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>

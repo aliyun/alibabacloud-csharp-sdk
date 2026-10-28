@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 /// <para>The zone description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Beijing H Zone</para>
+                /// <para>Beijing Zone H</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string SubDomain { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether VPC is enabled.</para>
+                /// <para>Indicates whether the VPC is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public bool? VpcEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether VPC is available.</para>
+                /// <para>Indicates whether the VPC is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing-h</para>

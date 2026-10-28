@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. Separate multiple instance IDs with commas (,).</para>
+        /// <para>The instance IDs. Separate multiple instance IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb-cn-7213cjv****</para>
@@ -32,18 +32,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CREATING</b>: Creating.</para>
-        /// </description></item>
-        /// <item><description><para><b>ACTIVATION</b>: Running.</para>
-        /// </description></item>
-        /// <item><description><para><b>RESOURCE_CHANGING</b>: Changing specifications.</para>
-        /// </description></item>
-        /// <item><description><para><b>ORDER_PREPARING</b>: Confirming the order.</para>
-        /// </description></item>
-        /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: Changing resources (the instance is locked for writing).</para>
-        /// </description></item>
-        /// <item><description><para><b>DELETING</b>: Deleting.</para>
-        /// </description></item>
+        /// <item><description><b>CREATING</b>: Creating.</description></item>
+        /// <item><description><b>ACTIVATION</b>: Running.</description></item>
+        /// <item><description><b>RESOURCE_CHANGING</b>: Changing specifications.</description></item>
+        /// <item><description><b>ORDER_PREPARING</b>: Confirming order.</description></item>
+        /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: Changing resources (the instance is locked for write operations).</description></item>
+        /// <item><description><b>DELETING</b>: Deleting.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +60,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>30</b>: Default value.</description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>
@@ -90,7 +84,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>

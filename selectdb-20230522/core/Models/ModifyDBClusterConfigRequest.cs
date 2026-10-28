@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyDBClusterConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration file to modify. Set this parameter to be.conf for compute clusters or fe.conf for FE clusters.</para>
+        /// <para>The configuration file to modify. The value is fixed to be.conf for compute clusters and fe.conf for frontend clusters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public bool? ParallelOperation { get; set; }
 
         /// <summary>
-        /// <para>The JSON string of parameters and parameter values.</para>
+        /// <para>The JSON string of parameters and their values.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The upgrade mode. If this parameter is not specified, the upgrade takes effect immediately. Set this parameter to 1 to perform the upgrade during the maintenance window.</para>
+        /// <para>The upgrade mode. If you leave this parameter empty, the upgrade is performed immediately. If you set this parameter to 1, the upgrade is performed during the maintenance window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The coupon codes.</para>
+            /// <para>The coupon ID.</para>
             /// </summary>
             [NameInMap("OptionalPromotions")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string CanPromFee { get; set; }
 
                 /// <summary>
-                /// <para>The promotion rule description.</para>
+                /// <para>The description of the promotion rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>789asdf</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 /// <para>The coupon description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>General coupon can deduct 100</para>
+                /// <para>General coupon with a deduction of 100</para>
                 /// </summary>
                 [NameInMap("PromotionDesc")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string PromotionName { get; set; }
 
                 /// <summary>
-                /// <para>The coupon code.</para>
+                /// <para>The coupon ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>732211480132</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             }
 
             /// <summary>
-            /// <para>The unit price results of billing items.</para>
+            /// <para>The unit price results of billable items.</para>
             /// </summary>
             [NameInMap("PricingRules")]
             [Validation(Required=false)]
             public Dictionary<string, string> PricingRules { get; set; }
 
             /// <summary>
-            /// <para>The estimated refund amount when converting a subscription cluster to a pay-as-you-go cluster under a subscription instance.</para>
+            /// <para>The estimated refund amount when a subscription cluster under a subscription instance is changed to a pay-as-you-go cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-100</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string RefundAmount { get; set; }
 
             /// <summary>
-            /// <para>The trade amount.</para>
+            /// <para>The amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.76</para>

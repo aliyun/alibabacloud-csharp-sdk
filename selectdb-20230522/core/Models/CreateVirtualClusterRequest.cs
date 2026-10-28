@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ActiveClusterId { get; set; }
 
         /// <summary>
-        /// <para>The instance name. Naming rules: must start with a letter, can contain up to 64 characters, and can include letters (case-insensitive), digits, and underscores (<em>). The name cannot contain two or more consecutive underscores (</em>), and cluster names must be unique within the same instance.</para>
+        /// <para>The cluster name. The name must start with a letter and can be up to 64 characters in length. It can contain letters (case-insensitive), digits, and underscores (<em>). It cannot contain two or more consecutive underscores (</em>). Cluster names must be unique within the same instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The secondary cluster ID.</para>
+        /// <para>The standby cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

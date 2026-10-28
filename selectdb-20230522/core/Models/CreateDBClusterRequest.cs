@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The node type of the cluster. This parameter takes effect only in Serverless mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>base</para>
         /// </summary>
         [NameInMap("ClusterNodeType")]
         [Validation(Required=false)]

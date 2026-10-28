@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs.</para>
+        /// <para>The array of instance IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tag keys.</para>
+        /// <para>The array of tag keys.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterConfigChangeLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>failed</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public List<DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs> ParamChangeLogs { get; set; }
             public class DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs : TeaModel {
                 /// <summary>
-                /// <para>The task creation time (GMT).</para>
+                /// <para>The time when the task was created (GMT).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-11T08:53:32Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The task modification time (GMT).</para>
+                /// <para>The time when the task was modified (GMT).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-03-08T10:08Z</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic code. This parameter is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>An error occurred while processing your request.</para>

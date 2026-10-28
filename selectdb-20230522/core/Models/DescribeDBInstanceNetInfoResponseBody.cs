@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBInstanceNetInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The network information list of the BE instances.</para>
+        /// <para>The network information of the BE instances.</para>
         /// </summary>
         [NameInMap("DBClustersNetInfos")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string NetType { get; set; }
 
             /// <summary>
-            /// <para>The port list.</para>
+            /// <para>The ports.</para>
             /// </summary>
             [NameInMap("PortList")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public bool? UserVisible { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-****</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The network type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
+            /// <item><description><para><b>VPC</b>: VPC.</para>
             /// </description></item>
             /// <item><description><para><b>PUBLIC</b>: Internet.</para>
             /// </description></item>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string NetType { get; set; }
 
             /// <summary>
-            /// <para>The port objects.</para>
+            /// <para>The ports.</para>
             /// </summary>
             [NameInMap("PortList")]
             [Validation(Required=false)]
@@ -200,9 +200,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 /// <summary>
                 /// <para>The port type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>HttpPort</b>: HTTP protocol port.</para>
+                /// <item><description><para><b>HttpPort</b>: HTTP port.</para>
                 /// </description></item>
-                /// <item><description><para><b>MySQLPort</b>: MySQL protocol port.</para>
+                /// <item><description><para><b>MySQLPort</b>: MySQL port.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -218,9 +218,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>Indicates whether the network information is visible to users. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Visible to users.</para>
+            /// <item><description><para><b>true</b>: Visible.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: Not visible to users.</para>
+            /// <item><description><para><b>false</b>: Invisible.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public bool? UserVisible { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz90scxq6ods388ft****</para>
