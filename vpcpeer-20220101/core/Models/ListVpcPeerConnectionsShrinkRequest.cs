@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class ListVpcPeerConnectionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the VPC peering connection that you want to query.</para>
+        /// <para>The instance ID of the VPC peering connection that you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcc-lnk0m24khwvtkm****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>If this is your first request or no subsequent request is to be sent, leave this parameter empty.</description></item>
+        /// <item><description>If a subsequent request is to be sent, set the value to the NextToken value returned from the last API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to query VPC peering connections.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPC peering connection that you want to query.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -66,25 +66,25 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The ID of the resource group.</para>
-        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfm2ggeub5uf3y</para>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListVpcPeerConnectionsShrinkRequestTags> Tags { get; set; }
         public class ListVpcPeerConnectionsShrinkRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. You can specify up to 20 tag keys. If you specify this parameter, it cannot be an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -94,8 +94,8 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. You can specify up to 20 tag values. If you specify this parameter, it can be an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the requester VPC or accepter VPC of the VPC peering connection that you want to query.</para>
+        /// <para>Filters the results by the VPC IDs of the initiator and acceptor. The filter does not distinguish between the initiator and the acceptor. If you specify only one VPC ID, the results are filtered based on the specified VPC ID.</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Tag Type:</para>
+        /// <para>The tag type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>All(Default)</description></item>
-        /// <item><description>Custom</description></item>
-        /// <item><description>System</description></item>
+        /// <item><description><para>All (default)</para>
+        /// </description></item>
+        /// <item><description><para>Custom</para>
+        /// </description></item>
+        /// <item><description><para>System</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +38,12 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no subsequent query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a next query is to be sent, set the value to the value of <b>NextToken</b> that is returned in the last call.</description></item>
+        /// <item><description><para>If this is your first request or no subsequent requests are to be made, leave this parameter empty.</para>
+        /// </description></item>
+        /// <item><description><para>If a subsequent request is to be made, set this parameter to the value of <b>NextToken</b> returned from the previous API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The region ID of the resource.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +68,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The resource IDs. You can specify up to 20 resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -71,7 +76,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>PeerConnection</b>, which specifies a VPC peering connection.</para>
+        /// <para>The resource type. Valid values: <b>PeerConnection</b> (VPC peering connection).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +89,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -92,10 +97,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. This parameter cannot be an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <remarks>
-            /// <para> You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b>.</para>
+            /// <para>You must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -106,10 +111,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. This parameter can be an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <remarks>
-            /// <para> You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b>.</para>
+            /// <para>You must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

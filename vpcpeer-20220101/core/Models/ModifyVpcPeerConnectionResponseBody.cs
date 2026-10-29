@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class ModifyVpcPeerConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>880C99E1-449B-524A-B81F-1EC53D2A7EAC</para>

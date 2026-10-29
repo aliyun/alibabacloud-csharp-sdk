@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the new resource group.</para>
+        /// <para>The ID of the resource group to which you want to move the VPC peering connection.</para>
         /// <remarks>
-        /// <para> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></para>
+        /// <para>A resource group is a mechanism that allows you to group and manage resources within an Alibaba Cloud account. Resource groups help you resolve the complexities of resource grouping and authorization management within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The region ID of the resource.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC peering connection.</para>
+        /// <para>The instance ID of the VPC peering connection whose resource group you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>PeerConnection</b>, which specifies a VPC peering connection.</para>
+        /// <para>The resource type. Valid value: <b>PeerConnection</b>: VPC peering connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

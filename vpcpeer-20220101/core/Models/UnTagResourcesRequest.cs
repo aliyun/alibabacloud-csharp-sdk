@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class UnTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the specified resource. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: removes all tags from the specified resource.</description></item>
-        /// <item><description><b>false</b>: does not remove all tags from the specified resource. This is the default value.</description></item>
+        /// <item><description><b>true</b>: Removes all tags from the resource.</description></item>
+        /// <item><description><b>false</b> (default): Does not remove all tags from the resource.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the token value on your client and ensure that it is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the tag.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the tag resides. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources.</para>
+        /// <para>The ID of the resource. You can specify up to 20 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>PeerConnection</b>, which specifies a VPC peering connection.</para>
+        /// <para>The resource type. Valid value: <b>PeerConnection</b>, which indicates a VPC peering connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</para>
-        /// <para>It can be up to 128 characters in length. It cannot start with <c>acs:</c> or <c>aliyun</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The tag key that you want to remove. You can specify up to 20 tag keys. If you need to pass this parameter, you can enter an empty string.</para>
+        /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

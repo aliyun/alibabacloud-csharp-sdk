@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class CreateVpcPeerConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the accepter VPC belongs.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the acceptor of the VPC peering connection belongs.</para>
         /// <list type="bullet">
-        /// <item><description>To create a VPC peering connection within your Alibaba Cloud account, enter the ID of your Alibaba Cloud account.</description></item>
-        /// <item><description>To create a VPC peering connection between your Alibaba Cloud account and another Alibaba Cloud account, enter the ID of the peer Alibaba Cloud account.</description></item>
+        /// <item><description><para>If you enter your own Alibaba Cloud account ID, a same-account VPC peering connection is created.</para>
+        /// </description></item>
+        /// <item><description><para>If you enter the ID of another Alibaba Cloud account, a cross-account VPC peering connection is created.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the accepter is a RAM user, set <b>AcceptingAliUid</b> to the ID of the Alibaba Cloud account that created the RAM user.</para>
+        /// <para>If the acceptor account is a Resource Access Management (RAM) user, you must enter the ID of the Alibaba Cloud account to which the RAM user belongs in <b>AcceptingAliUid</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,10 +30,12 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public long? AcceptingAliUid { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the accepter VPC of the VPC peering connection that you want to create.</para>
+        /// <para>The ID of the region where the acceptor of the VPC peering connection is deployed.</para>
         /// <list type="bullet">
-        /// <item><description>To create an intra-region VPC peering connection, enter a region ID that is the same as that of the requester VPC.</description></item>
-        /// <item><description>To create an inter-region VPC peering connection, enter a region ID that is different from that of the requester VPC.</description></item>
+        /// <item><description><para>To create an intra-region VPC peering connection, enter the same region ID as the initiator.</para>
+        /// </description></item>
+        /// <item><description><para>To create an inter-region VPC peering connection, enter a region ID different from that of the initiator.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string AcceptingRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the accepter VPC.</para>
+        /// <para>The ID of the VPC that acts as the acceptor of the VPC peering connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +58,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string AcceptingVpcId { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value must be an integer greater than 0. Before you specify this parameter, make sure that you create an inter-region VPC peering connection.</para>
+        /// <para>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value must be a positive integer.</para>
+        /// <remarks>
+        /// <para>If you want to specify this parameter, make sure that you are creating an inter-region peering connection.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -67,7 +74,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,8 +85,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the VPC peering connection.</para>
-        /// <para>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the VPC peering connection. The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -89,10 +95,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run and does not create a VPC peering connection. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,17 +109,27 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The link type of the VPC peering connection that you want to create. Valid values:</para>
+        /// <para>Specifies whether to enable the jumbo frame feature for the VPC peering connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Platinum.</para>
-        /// </description></item>
-        /// <item><description><para>Gold: default value.</para>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.<remarks>
+        /// <para>Note: If you want to specify this parameter, make sure that you are creating an inter-region peering connection.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableJumboFrame")]
+        [Validation(Required=false)]
+        public bool? EnableJumboFrame { get; set; }
+
+        /// <summary>
+        /// <para>The link type.</para>
+        /// <para>Valid values: Platinum and Gold. Default value: Gold.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you need to specify this parameter, ensure that the VPC peering connection is an inter-region connection.</description></item>
-        /// </list>
+        /// <para>If you want to specify this parameter, make sure that you are creating an inter-region peering connection.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -124,8 +140,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string LinkType { get; set; }
 
         /// <summary>
-        /// <para>The name of the VPC peering connection.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name of the VPC peering connection. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpcpeer</para>
@@ -135,8 +150,8 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create a VPC peering connection.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where you want to create a VPC peering connection. </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,7 +163,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The ID of the resource group.</para>
-        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -158,15 +173,15 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVpcPeerConnectionRequestTag> Tag { get; set; }
         public class CreateVpcPeerConnectionRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You must specify at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>acs:</c> or <c>aliyun</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You must specify at least one tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -176,7 +191,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. You must specify at least one tag value and can specify at most 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value of the resource. You must specify at least one tag value and can specify up to 20 tag values. The tag value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -189,7 +204,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the requester VPC.</para>
+        /// <para>The ID create a VPC that acts as the initiator create a VPC peering connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

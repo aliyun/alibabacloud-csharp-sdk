@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C46FF5A8-C5F0-4024-8262-B16B639225A0</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Indicates whether the tags were created and attached. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: The tags were created and attached.</description></item>
+        /// <item><description><b>false</b>: The tags failed to be created and attached.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

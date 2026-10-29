@@ -39,19 +39,19 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts a virtual private cloud (VPC) peering connection request.</para>
+        /// <para>Accepts a VPC peering connection request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For a cross-account VPC peering connection, the connection is activated only after the accepter VPC accepts the connection request.</para>
         /// <list type="bullet">
-        /// <item><description><b>AcceptVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns a <b>request ID</b> and runs the operation in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being activated.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is activated.</description></item>
+        /// <item><description>For a cross-account VPC peering connection, the VPC peering connection instance is activated only after the acceptor accepts the connection request.</description></item>
+        /// <item><description>The <b>AcceptVpcPeerConnection</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately activated. The activation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Updating</b> state, the instance is being activated.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Activated</b> state, the instance is activated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AcceptVpcPeerConnection</b> operation within a specific period of time.</description></item>
+        /// <item><description>You cannot call the <b>AcceptVpcPeerConnection</b> operation to concurrently accept requests for the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -116,19 +116,19 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts a virtual private cloud (VPC) peering connection request.</para>
+        /// <para>Accepts a VPC peering connection request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For a cross-account VPC peering connection, the connection is activated only after the accepter VPC accepts the connection request.</para>
         /// <list type="bullet">
-        /// <item><description><b>AcceptVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns a <b>request ID</b> and runs the operation in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being activated.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is activated.</description></item>
+        /// <item><description>For a cross-account VPC peering connection, the VPC peering connection instance is activated only after the acceptor accepts the connection request.</description></item>
+        /// <item><description>The <b>AcceptVpcPeerConnection</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately activated. The activation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Updating</b> state, the instance is being activated.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Activated</b> state, the instance is activated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AcceptVpcPeerConnection</b> operation within a specific period of time.</description></item>
+        /// <item><description>You cannot call the <b>AcceptVpcPeerConnection</b> operation to concurrently accept requests for the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -193,19 +193,19 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts a virtual private cloud (VPC) peering connection request.</para>
+        /// <para>Accepts a VPC peering connection request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For a cross-account VPC peering connection, the connection is activated only after the accepter VPC accepts the connection request.</para>
         /// <list type="bullet">
-        /// <item><description><b>AcceptVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns a <b>request ID</b> and runs the operation in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being activated.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is activated.</description></item>
+        /// <item><description>For a cross-account VPC peering connection, the VPC peering connection instance is activated only after the acceptor accepts the connection request.</description></item>
+        /// <item><description>The <b>AcceptVpcPeerConnection</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately activated. The activation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Updating</b> state, the instance is being activated.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Activated</b> state, the instance is activated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AcceptVpcPeerConnection</b> operation within a specific period of time.</description></item>
+        /// <item><description>You cannot call the <b>AcceptVpcPeerConnection</b> operation to concurrently accept requests for the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -224,19 +224,19 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts a virtual private cloud (VPC) peering connection request.</para>
+        /// <para>Accepts a VPC peering connection request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For a cross-account VPC peering connection, the connection is activated only after the accepter VPC accepts the connection request.</para>
         /// <list type="bullet">
-        /// <item><description><b>AcceptVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns a <b>request ID</b> and runs the operation in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being activated.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is activated.</description></item>
+        /// <item><description>For a cross-account VPC peering connection, the VPC peering connection instance is activated only after the acceptor accepts the connection request.</description></item>
+        /// <item><description>The <b>AcceptVpcPeerConnection</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately activated. The activation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Updating</b> state, the instance is being activated.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Activated</b> state, the instance is activated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AcceptVpcPeerConnection</b> operation within a specific period of time.</description></item>
+        /// <item><description>You cannot call the <b>AcceptVpcPeerConnection</b> operation to concurrently accept requests for the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -255,21 +255,22 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC peering connection</para>
+        /// <para>Invokes the CreateVpcPeerConnection operation to create a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you create a VPC peering connection, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns an <b>instance ID</b> and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.</description></item>
+        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After you call this operation, the system returns an <b>InstanceId</b>, but the VPC peering connection is not created yet and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.    </description></item>
         /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is created.</description></item>
-        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, it is a cross-account connection. The connection needs to be accepted on the accepter side.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, the VPC peering connection is created across accounts and must be accepted by the acceptor.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVpcPeerConnection</b> within the specified period of time.
-        /// When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for you.</description></item>
+        /// <item><description>You cannot call the <b>CreateVpcPeerConnection</b> operation to concurrently create VPC peering connections in the same VPC.
+        /// &lt;props=&quot;china&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer and cross-border data transfer.
+        /// &lt;props=&quot;intl&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -324,6 +325,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
             {
                 body["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableJumboFrame))
+            {
+                body["EnableJumboFrame"] = request.EnableJumboFrame;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -362,21 +367,22 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC peering connection</para>
+        /// <para>Invokes the CreateVpcPeerConnection operation to create a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you create a VPC peering connection, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns an <b>instance ID</b> and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.</description></item>
+        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After you call this operation, the system returns an <b>InstanceId</b>, but the VPC peering connection is not created yet and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.    </description></item>
         /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is created.</description></item>
-        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, it is a cross-account connection. The connection needs to be accepted on the accepter side.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, the VPC peering connection is created across accounts and must be accepted by the acceptor.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVpcPeerConnection</b> within the specified period of time.
-        /// When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for you.</description></item>
+        /// <item><description>You cannot call the <b>CreateVpcPeerConnection</b> operation to concurrently create VPC peering connections in the same VPC.
+        /// &lt;props=&quot;china&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer and cross-border data transfer.
+        /// &lt;props=&quot;intl&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -431,6 +437,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
             {
                 body["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableJumboFrame))
+            {
+                body["EnableJumboFrame"] = request.EnableJumboFrame;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -469,21 +479,22 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC peering connection</para>
+        /// <para>Invokes the CreateVpcPeerConnection operation to create a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you create a VPC peering connection, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns an <b>instance ID</b> and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.</description></item>
+        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After you call this operation, the system returns an <b>InstanceId</b>, but the VPC peering connection is not created yet and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.    </description></item>
         /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is created.</description></item>
-        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, it is a cross-account connection. The connection needs to be accepted on the accepter side.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, the VPC peering connection is created across accounts and must be accepted by the acceptor.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVpcPeerConnection</b> within the specified period of time.
-        /// When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for you.</description></item>
+        /// <item><description>You cannot call the <b>CreateVpcPeerConnection</b> operation to concurrently create VPC peering connections in the same VPC.
+        /// &lt;props=&quot;china&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer and cross-border data transfer.
+        /// &lt;props=&quot;intl&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -502,21 +513,22 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC peering connection</para>
+        /// <para>Invokes the CreateVpcPeerConnection operation to create a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you create a VPC peering connection, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After a request is sent, the system returns an <b>instance ID</b> and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.</description></item>
+        /// <item><description><b>CreateVpcPeerConnection</b> is an asynchronous operation. After you call this operation, the system returns an <b>InstanceId</b>, but the VPC peering connection is not created yet and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/426095.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Creating</b> state, the VPC peering connection is being created.    </description></item>
         /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is created.</description></item>
-        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, it is a cross-account connection. The connection needs to be accepted on the accepter side.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Accepting</b> state, the VPC peering connection is created across accounts and must be accepted by the acceptor.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVpcPeerConnection</b> within the specified period of time.
-        /// When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for you.</description></item>
+        /// <item><description>You cannot call the <b>CreateVpcPeerConnection</b> operation to concurrently create VPC peering connections in the same VPC.
+        /// &lt;props=&quot;china&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer and cross-border data transfer.
+        /// &lt;props=&quot;intl&quot;&gt;When you create a VPC peering connection, the system automatically activates Cloud Data Transfer (CDT) for non-cross-border data transfer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -535,21 +547,23 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC对等连接</para>
+        /// <para>Deletes a VPC peering connection instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete VPC peering connections. After you delete a VPC peering connection, your service is affected. Proceed with caution.
-        ///     *   If you forcefully delete a VPC peering connection, the system deletes the routes that point to the VPC peering connection from the VPC route table.
-        ///     *   If you do not forcefully delete a VPC peering connection, the system does not delete these routes. You must manually delete them.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Deleting</b> state, it is being deleted.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Deleted</b> state, it is deleted.</description></item>
+        /// <item><description>You can delete a VPC peering connection instance. After the instance is deleted, your services will be interrupted. Perform this operation only when it does not affect your services.<list type="bullet">
+        /// <item><description>If you choose to force delete the instance, the system deletes the route entry that points to the VPC peering connection instance from the VPC routing table.</description></item>
+        /// <item><description>If you do not choose to force delete the instance, the system does not delete the route entry that points to the VPC peering connection instance from the VPC routing table. You must manually delete the route entry.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you call the operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2523294.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleted</b> state, the instance is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot call the <b>DeleteVpcPeerConnection</b> operation to concurrently delete the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -604,21 +618,23 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC对等连接</para>
+        /// <para>Deletes a VPC peering connection instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete VPC peering connections. After you delete a VPC peering connection, your service is affected. Proceed with caution.
-        ///     *   If you forcefully delete a VPC peering connection, the system deletes the routes that point to the VPC peering connection from the VPC route table.
-        ///     *   If you do not forcefully delete a VPC peering connection, the system does not delete these routes. You must manually delete them.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Deleting</b> state, it is being deleted.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Deleted</b> state, it is deleted.</description></item>
+        /// <item><description>You can delete a VPC peering connection instance. After the instance is deleted, your services will be interrupted. Perform this operation only when it does not affect your services.<list type="bullet">
+        /// <item><description>If you choose to force delete the instance, the system deletes the route entry that points to the VPC peering connection instance from the VPC routing table.</description></item>
+        /// <item><description>If you do not choose to force delete the instance, the system does not delete the route entry that points to the VPC peering connection instance from the VPC routing table. You must manually delete the route entry.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you call the operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2523294.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleted</b> state, the instance is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot call the <b>DeleteVpcPeerConnection</b> operation to concurrently delete the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -673,21 +689,23 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC对等连接</para>
+        /// <para>Deletes a VPC peering connection instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete VPC peering connections. After you delete a VPC peering connection, your service is affected. Proceed with caution.
-        ///     *   If you forcefully delete a VPC peering connection, the system deletes the routes that point to the VPC peering connection from the VPC route table.
-        ///     *   If you do not forcefully delete a VPC peering connection, the system does not delete these routes. You must manually delete them.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Deleting</b> state, it is being deleted.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Deleted</b> state, it is deleted.</description></item>
+        /// <item><description>You can delete a VPC peering connection instance. After the instance is deleted, your services will be interrupted. Perform this operation only when it does not affect your services.<list type="bullet">
+        /// <item><description>If you choose to force delete the instance, the system deletes the route entry that points to the VPC peering connection instance from the VPC routing table.</description></item>
+        /// <item><description>If you do not choose to force delete the instance, the system does not delete the route entry that points to the VPC peering connection instance from the VPC routing table. You must manually delete the route entry.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you call the operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2523294.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleted</b> state, the instance is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot call the <b>DeleteVpcPeerConnection</b> operation to concurrently delete the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -706,21 +724,23 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC对等连接</para>
+        /// <para>Deletes a VPC peering connection instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete VPC peering connections. After you delete a VPC peering connection, your service is affected. Proceed with caution.
-        ///     *   If you forcefully delete a VPC peering connection, the system deletes the routes that point to the VPC peering connection from the VPC route table.
-        ///     *   If you do not forcefully delete a VPC peering connection, the system does not delete these routes. You must manually delete them.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.<list type="bullet">
-        /// <item><description>If a VPC peering connection is in the <b>Deleting</b> state, it is being deleted.</description></item>
-        /// <item><description>If a VPC peering connection is in the <b>Deleted</b> state, it is deleted.</description></item>
+        /// <item><description>You can delete a VPC peering connection instance. After the instance is deleted, your services will be interrupted. Perform this operation only when it does not affect your services.<list type="bullet">
+        /// <item><description>If you choose to force delete the instance, the system deletes the route entry that points to the VPC peering connection instance from the VPC routing table.</description></item>
+        /// <item><description>If you do not choose to force delete the instance, the system does not delete the route entry that points to the VPC peering connection instance from the VPC routing table. You must manually delete the route entry.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>The <b>DeleteVpcPeerConnection</b> operation is asynchronous. After you call the operation, the system returns a <b>RequestId</b>, but the VPC peering connection instance is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2523294.html">GetVpcPeerConnectionAttribute</a> operation to query the status of the VPC peering connection instance.<list type="bullet">
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the VPC peering connection instance is in the <b>Deleted</b> state, the instance is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot call the <b>DeleteVpcPeerConnection</b> operation to concurrently delete the same VPC peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -739,7 +759,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Queries the details of a specified VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -785,7 +805,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Queries the details of a specified VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -831,7 +851,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Queries the details of a specified VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -849,7 +869,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Queries the details of a specified VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -867,16 +887,16 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Queries the tags bound to VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Set <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object to be queried.</para>
         /// <list type="bullet">
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you set only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you set only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you set <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// <item><description>Specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters in the request to determine the resources to query.</description></item>
+        /// <item><description><b>Tag.N</b> is the tag of the resource and consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values associated with the tag key are returned. If you specify only <b>Tag.N.Value</b>, an error is reported.</description></item>
+        /// <item><description>If you specify both <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, the <b>ResourceId.N</b> parameter must match all the specified tag key-value pairs.</description></item>
+        /// <item><description>If you specify multiple tag key-value pairs, the returned resources contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -943,16 +963,16 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Queries the tags bound to VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Set <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object to be queried.</para>
         /// <list type="bullet">
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you set only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you set only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you set <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// <item><description>Specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters in the request to determine the resources to query.</description></item>
+        /// <item><description><b>Tag.N</b> is the tag of the resource and consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values associated with the tag key are returned. If you specify only <b>Tag.N.Value</b>, an error is reported.</description></item>
+        /// <item><description>If you specify both <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, the <b>ResourceId.N</b> parameter must match all the specified tag key-value pairs.</description></item>
+        /// <item><description>If you specify multiple tag key-value pairs, the returned resources contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1019,16 +1039,16 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Queries the tags bound to VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Set <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object to be queried.</para>
         /// <list type="bullet">
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you set only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you set only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you set <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// <item><description>Specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters in the request to determine the resources to query.</description></item>
+        /// <item><description><b>Tag.N</b> is the tag of the resource and consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values associated with the tag key are returned. If you specify only <b>Tag.N.Value</b>, an error is reported.</description></item>
+        /// <item><description>If you specify both <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, the <b>ResourceId.N</b> parameter must match all the specified tag key-value pairs.</description></item>
+        /// <item><description>If you specify multiple tag key-value pairs, the returned resources contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1047,16 +1067,16 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Queries the tags bound to VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Set <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object to be queried.</para>
         /// <list type="bullet">
-        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you set only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you set only <b>Tag.N.Value</b>, an error message is returned.</description></item>
-        /// <item><description>If you set <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
-        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// <item><description>Specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters in the request to determine the resources to query.</description></item>
+        /// <item><description><b>Tag.N</b> is the tag of the resource and consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values associated with the tag key are returned. If you specify only <b>Tag.N.Value</b>, an error is reported.</description></item>
+        /// <item><description>If you specify both <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, the <b>ResourceId.N</b> parameter must match all the specified tag key-value pairs.</description></item>
+        /// <item><description>If you specify multiple tag key-value pairs, the returned resources contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1075,7 +1095,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virtual private cloud (VPC) peering connections.</para>
+        /// <para>Queries the details of VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1153,7 +1173,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virtual private cloud (VPC) peering connections.</para>
+        /// <para>Queries the details of VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1231,7 +1251,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virtual private cloud (VPC) peering connections.</para>
+        /// <para>Queries the details of VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1249,7 +1269,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virtual private cloud (VPC) peering connections.</para>
+        /// <para>Queries the details of VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1267,16 +1287,18 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description or name of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Modifies the name or description of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>ModifyVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.
-        ///     *   If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being modified.
-        ///     *   If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is modified.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>ModifyVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> is an asynchronous operation. The system returns a <b>RequestId</b>, but the VPC peering connection is not immediately modified. The modification task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Updating</b> state, it is being modified.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the modification is complete.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> does not support concurrent modifications to the name and description of the same VPC peering connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1315,6 +1337,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
             {
                 body["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableJumboFrame))
+            {
+                body["EnableJumboFrame"] = request.EnableJumboFrame;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -1345,16 +1371,18 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description or name of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Modifies the name or description of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>ModifyVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.
-        ///     *   If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being modified.
-        ///     *   If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is modified.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>ModifyVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> is an asynchronous operation. The system returns a <b>RequestId</b>, but the VPC peering connection is not immediately modified. The modification task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Updating</b> state, it is being modified.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the modification is complete.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> does not support concurrent modifications to the name and description of the same VPC peering connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1393,6 +1421,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
             {
                 body["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableJumboFrame))
+            {
+                body["EnableJumboFrame"] = request.EnableJumboFrame;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -1423,16 +1455,18 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description or name of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Modifies the name or description of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>ModifyVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.
-        ///     *   If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being modified.
-        ///     *   If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is modified.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>ModifyVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> is an asynchronous operation. The system returns a <b>RequestId</b>, but the VPC peering connection is not immediately modified. The modification task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Updating</b> state, it is being modified.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the modification is complete.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> does not support concurrent modifications to the name and description of the same VPC peering connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1451,16 +1485,18 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description or name of a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Modifies the name or description of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>ModifyVpcPeerConnection</b> operation is asynchronous. After you send a request, the system returns <b>RequestId</b>, but the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> operation to query the status of a VPC peering connection.
-        ///     *   If a VPC peering connection is in the <b>Updating</b> state, the VPC peering connection is being modified.
-        ///     *   If a VPC peering connection is in the <b>Activated</b> state, the VPC peering connection is modified.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>ModifyVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> is an asynchronous operation. The system returns a <b>RequestId</b>, but the VPC peering connection is not immediately modified. The modification task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/426100.html">GetVpcPeerConnectionAttribute</a> to query the status of the VPC peering connection.<list type="bullet">
+        /// <item><description>If the VPC peering connection is in the <b>Updating</b> state, it is being modified.</description></item>
+        /// <item><description>If the VPC peering connection is in the <b>Activated</b> state, the modification is complete.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>ModifyVpcPeerConnection</b> does not support concurrent modifications to the name and description of the same VPC peering connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1479,7 +1515,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a Virtual Private Cloud (VPC) peering connection from one resource group to another.</para>
+        /// <para>Modifies the resource group of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1533,7 +1569,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a Virtual Private Cloud (VPC) peering connection from one resource group to another.</para>
+        /// <para>Modifies the resource group of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1587,7 +1623,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a Virtual Private Cloud (VPC) peering connection from one resource group to another.</para>
+        /// <para>Modifies the resource group of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1605,7 +1641,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a Virtual Private Cloud (VPC) peering connection from one resource group to another.</para>
+        /// <para>Modifies the resource group of a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1623,14 +1659,14 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拒绝VPC对等连接</para>
+        /// <para>Rejects a request for a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  An acceptor VPC can reject a connection request from the requester VPC of a cross-account VPC peering connection. After the connection request is rejected, the VPC peering connection enters the <b>Rejected</b> state.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>RejectVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>For a cross-account VPC peering connection instance, the acceptor can reject the connection request. A VPC peering connection instance whose connection request is rejected enters the <b>Rejected</b> state.</description></item>
+        /// <item><description><b>RejectVpcPeerConnection</b> does not support concurrent requests to reject the same peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1685,14 +1721,14 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拒绝VPC对等连接</para>
+        /// <para>Rejects a request for a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  An acceptor VPC can reject a connection request from the requester VPC of a cross-account VPC peering connection. After the connection request is rejected, the VPC peering connection enters the <b>Rejected</b> state.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>RejectVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>For a cross-account VPC peering connection instance, the acceptor can reject the connection request. A VPC peering connection instance whose connection request is rejected enters the <b>Rejected</b> state.</description></item>
+        /// <item><description><b>RejectVpcPeerConnection</b> does not support concurrent requests to reject the same peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1747,14 +1783,14 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拒绝VPC对等连接</para>
+        /// <para>Rejects a request for a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  An acceptor VPC can reject a connection request from the requester VPC of a cross-account VPC peering connection. After the connection request is rejected, the VPC peering connection enters the <b>Rejected</b> state.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>RejectVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>For a cross-account VPC peering connection instance, the acceptor can reject the connection request. A VPC peering connection instance whose connection request is rejected enters the <b>Rejected</b> state.</description></item>
+        /// <item><description><b>RejectVpcPeerConnection</b> does not support concurrent requests to reject the same peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1773,14 +1809,14 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拒绝VPC对等连接</para>
+        /// <para>Rejects a request for a VPC peering connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  An acceptor VPC can reject a connection request from the requester VPC of a cross-account VPC peering connection. After the connection request is rejected, the VPC peering connection enters the <b>Rejected</b> state.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>RejectVpcPeerConnection</b> operation for the same VPC peering connection within the specified period of time.</description></item>
+        /// <item><description>For a cross-account VPC peering connection instance, the acceptor can reject the connection request. A VPC peering connection instance whose connection request is rejected enters the <b>Rejected</b> state.</description></item>
+        /// <item><description><b>RejectVpcPeerConnection</b> does not support concurrent requests to reject the same peering connection instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1799,20 +1835,20 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and adds them to a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Creates and attaches tags to one or more specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</para>
+        /// <para>Tags are labels that you assign to instances. Instance tag consists of a key-value pair. Take note of the following limits on tags: </para>
         /// <list type="bullet">
-        /// <item><description>The keys of tags that are added to the same instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>Tag information is not shared across regions.
-        /// For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.</description></item>
-        /// <item><description>For the same account and region, tags added to different VPC peering connections are shared.
-        /// For example, if a tag is added to a VPC peering connection, the tag can also be added to other VPC peering connections within the same account and region. You can modify the key and the value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.</description></item>
-        /// <item><description>You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// <item><description>The key of instance tag on an instance must be unique.</description></item>
+        /// <item><description>Tags must be attached to instances. Unattached tags are not supported.</description></item>
+        /// <item><description>Tag information is not shared across regions. 
+        ///   For example, tags created in the China (Hangzhou) region are not visible in the China (Shanghai) region.</description></item>
+        /// <item><description>Within the same account and region, tag information is shared across different VPC peering connections. 
+        ///  For example, if a tag is attached to a VPC peering connection within the same account and region, you can directly select and attach this tag to other VPC peering connections on the Edit Tags page without manually entering the key-value pair. You can modify the key and value of a tag, or delete the tag from an instance at any time. If an instance is deleted, all tags attached to the instance are also deleted.</description></item>
+        /// <item><description>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1871,20 +1907,20 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and adds them to a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Creates and attaches tags to one or more specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</para>
+        /// <para>Tags are labels that you assign to instances. Instance tag consists of a key-value pair. Take note of the following limits on tags: </para>
         /// <list type="bullet">
-        /// <item><description>The keys of tags that are added to the same instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>Tag information is not shared across regions.
-        /// For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.</description></item>
-        /// <item><description>For the same account and region, tags added to different VPC peering connections are shared.
-        /// For example, if a tag is added to a VPC peering connection, the tag can also be added to other VPC peering connections within the same account and region. You can modify the key and the value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.</description></item>
-        /// <item><description>You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// <item><description>The key of instance tag on an instance must be unique.</description></item>
+        /// <item><description>Tags must be attached to instances. Unattached tags are not supported.</description></item>
+        /// <item><description>Tag information is not shared across regions. 
+        ///   For example, tags created in the China (Hangzhou) region are not visible in the China (Shanghai) region.</description></item>
+        /// <item><description>Within the same account and region, tag information is shared across different VPC peering connections. 
+        ///  For example, if a tag is attached to a VPC peering connection within the same account and region, you can directly select and attach this tag to other VPC peering connections on the Edit Tags page without manually entering the key-value pair. You can modify the key and value of a tag, or delete the tag from an instance at any time. If an instance is deleted, all tags attached to the instance are also deleted.</description></item>
+        /// <item><description>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1943,20 +1979,20 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and adds them to a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Creates and attaches tags to one or more specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</para>
+        /// <para>Tags are labels that you assign to instances. Instance tag consists of a key-value pair. Take note of the following limits on tags: </para>
         /// <list type="bullet">
-        /// <item><description>The keys of tags that are added to the same instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>Tag information is not shared across regions.
-        /// For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.</description></item>
-        /// <item><description>For the same account and region, tags added to different VPC peering connections are shared.
-        /// For example, if a tag is added to a VPC peering connection, the tag can also be added to other VPC peering connections within the same account and region. You can modify the key and the value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.</description></item>
-        /// <item><description>You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// <item><description>The key of instance tag on an instance must be unique.</description></item>
+        /// <item><description>Tags must be attached to instances. Unattached tags are not supported.</description></item>
+        /// <item><description>Tag information is not shared across regions. 
+        ///   For example, tags created in the China (Hangzhou) region are not visible in the China (Shanghai) region.</description></item>
+        /// <item><description>Within the same account and region, tag information is shared across different VPC peering connections. 
+        ///  For example, if a tag is attached to a VPC peering connection within the same account and region, you can directly select and attach this tag to other VPC peering connections on the Edit Tags page without manually entering the key-value pair. You can modify the key and value of a tag, or delete the tag from an instance at any time. If an instance is deleted, all tags attached to the instance are also deleted.</description></item>
+        /// <item><description>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1975,20 +2011,20 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and adds them to a virtual private cloud (VPC) peering connection.</para>
+        /// <para>Creates and attaches tags to one or more specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</para>
+        /// <para>Tags are labels that you assign to instances. Instance tag consists of a key-value pair. Take note of the following limits on tags: </para>
         /// <list type="bullet">
-        /// <item><description>The keys of tags that are added to the same instance must be unique.</description></item>
-        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
-        /// <item><description>Tag information is not shared across regions.
-        /// For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.</description></item>
-        /// <item><description>For the same account and region, tags added to different VPC peering connections are shared.
-        /// For example, if a tag is added to a VPC peering connection, the tag can also be added to other VPC peering connections within the same account and region. You can modify the key and the value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.</description></item>
-        /// <item><description>You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// <item><description>The key of instance tag on an instance must be unique.</description></item>
+        /// <item><description>Tags must be attached to instances. Unattached tags are not supported.</description></item>
+        /// <item><description>Tag information is not shared across regions. 
+        ///   For example, tags created in the China (Hangzhou) region are not visible in the China (Shanghai) region.</description></item>
+        /// <item><description>Within the same account and region, tag information is shared across different VPC peering connections. 
+        ///  For example, if a tag is attached to a VPC peering connection within the same account and region, you can directly select and attach this tag to other VPC peering connections on the Edit Tags page without manually entering the key-value pair. You can modify the key and value of a tag, or delete the tag from an instance at any time. If an instance is deleted, all tags attached to the instance are also deleted.</description></item>
+        /// <item><description>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2007,7 +2043,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Removes tags from specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2069,7 +2105,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Removes tags from specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2131,7 +2167,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Removes tags from specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2149,7 +2185,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified Virtual Private Cloud (VPC) peering connections.</para>
+        /// <para>Removes tags from specified VPC peering connections.</para>
         /// </summary>
         /// 
         /// <param name="request">

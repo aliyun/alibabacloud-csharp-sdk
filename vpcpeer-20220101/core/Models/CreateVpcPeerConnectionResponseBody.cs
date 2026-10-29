@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class CreateVpcPeerConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance on which the VPC peering connection is created.</para>
+        /// <para>The instance ID of the created VPC peering connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcc-lnk0m24khwvtkm****</para>

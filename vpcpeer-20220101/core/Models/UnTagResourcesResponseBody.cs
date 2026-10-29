@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the tags are removed. Valid values:</para>
+        /// <para>Indicates whether the unbinding was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: The creation and binding were successful.</description></item>
+        /// <item><description><b>false</b>: The creation and binding failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

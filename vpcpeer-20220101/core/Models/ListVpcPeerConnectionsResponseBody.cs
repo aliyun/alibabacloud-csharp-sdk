@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class ListVpcPeerConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
-        /// <item><description>If the value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent request is to be sent.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,24 +54,24 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The details of the VPC peering connections.</para>
+        /// <para>The details of the queried VPC peering connections.</para>
         /// </summary>
         [NameInMap("VpcPeerConnects")]
         [Validation(Required=false)]
         public List<ListVpcPeerConnectionsResponseBodyVpcPeerConnects> VpcPeerConnects { get; set; }
         public class ListVpcPeerConnectionsResponseBodyVpcPeerConnects : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the accepter VPC belongs.</para>
+            /// <para>The Alibaba Cloud account ID of the acceptor of the VPC peering connection.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>253460731706911258</para>
+            /// <para>25346073170691****</para>
             /// </summary>
             [NameInMap("AcceptingOwnerUid")]
             [Validation(Required=false)]
             public long? AcceptingOwnerUid { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the accepter VPC.</para>
+            /// <para>The region ID of the acceptor of the VPC peering connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -81,28 +81,28 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string AcceptingRegionId { get; set; }
 
             /// <summary>
-            /// <para>The details of the accepter VPC.</para>
+            /// <para>The details of the acceptor VPC-connected instance.</para>
             /// </summary>
             [NameInMap("AcceptingVpc")]
             [Validation(Required=false)]
             public ListVpcPeerConnectionsResponseBodyVpcPeerConnectsAcceptingVpc AcceptingVpc { get; set; }
             public class ListVpcPeerConnectionsResponseBodyVpcPeerConnectsAcceptingVpc : TeaModel {
                 /// <summary>
-                /// <para>The CIDR block of the accepter VPC.</para>
+                /// <para>The IPv4 CIDR blocks of the acceptor.</para>
                 /// </summary>
                 [NameInMap("Ipv4Cidrs")]
                 [Validation(Required=false)]
                 public List<string> Ipv4Cidrs { get; set; }
 
                 /// <summary>
-                /// <para>The IPv6 CIDR block of the accepter VPC.</para>
+                /// <para>The IPv6 CIDR blocks of the acceptor.</para>
                 /// </summary>
                 [NameInMap("Ipv6Cidrs")]
                 [Validation(Required=false)]
                 public List<string> Ipv6Cidrs { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the accepter VPC.</para>
+                /// <para>The instance ID of the acceptor VPC-connected instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp1vzjkp2q1xgnind****</para>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             }
 
             /// <summary>
-            /// <para>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value is an integer greater than 0.</para>
+            /// <para>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value must be an integer greater than 0.</para>
             /// <remarks>
-            /// <para> If the value is set to -1, it indicates that no limit is imposed on the bandwidth.</para>
+            /// <para>A value of -1 indicates that no bandwidth limit is applied.</para>
             /// </remarks>
-            /// <para>Default value:</para>
+            /// <para>Default values:</para>
             /// <list type="bullet">
-            /// <item><description>The default bandwidth of an inter-region VPC peering connection is <b>1024</b> Mbit/s.</description></item>
-            /// <item><description>The default bandwidth of an intra-region VPC peering connection is <b>-1</b> Mbit/s.</description></item>
+            /// <item><description>The default bandwidth of a cross-region VPC peering connection is 1024 Mbit/s.</description></item>
+            /// <item><description>The default bandwidth of an intra-region VPC peering connection is -1 Mbit/s, which indicates that no bandwidth limit is applied.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,10 +132,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The business status of the VPC peering connection. Valid values:</para>
+            /// <para>The billing status of the VPC peering connection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b></description></item>
-            /// <item><description><b>FinancialLocked</b></description></item>
+            /// <item><description><b>Normal</b>: Normal.</description></item>
+            /// <item><description><b>FinancialLocked</b>: Locked due to overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,7 +156,21 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the VPC peering connection was created. The time is displayed in the <c>YYYY-MM-DDThh:mm:ssZ</c> format in UTC.</para>
+            /// <para>Indicates whether the jumbo frame feature is enabled for the VPC peering connection. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("EnableJumboFrame")]
+            [Validation(Required=false)]
+            public bool? EnableJumboFrame { get; set; }
+
+            /// <summary>
+            /// <para>The time when the VPC peering connection was created. The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-24T09:02:36Z</para>
@@ -166,8 +180,8 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the VPC peering connection. The time is displayed in the <c>YYYY-MM-DDThh:mm:ssZ</c> format in UTC.</para>
-            /// <para>The expiration time is returned only when the <b>Status</b> of the VPC peering connection is <b>Accepting</b> or <b>Expired</b>. Otherwise, <b>null</b> is returned.</para>
+            /// <para>The expiration time of the VPC peering connection. The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// <para>The specific expiration time is returned only when the <b>Status</b> of the VPC peering connection is <b>Accepting</b> or <b>Expired</b>. If the VPC peering connection is in other states, <b>null</b> is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-01T09:02:36Z</para>
@@ -177,7 +191,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string GmtExpired { get; set; }
 
             /// <summary>
-            /// <para>The time when the VPC peering connection was modified. The time is displayed in the <c>YYYY-MM-DDThh:mm:ssZ</c> format in UTC.</para>
+            /// <para>The time when the VPC peering connection was modified. The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-24T19:20:45Z</para>
@@ -187,7 +201,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC peering connection.</para>
+            /// <para>The instance ID of the VPC peering connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pcc-lnk0m24khwvtkm****</para>
@@ -198,6 +212,11 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
             /// <summary>
             /// <para>The link type of the VPC peering connection.</para>
+            /// <para>Default values:</para>
+            /// <list type="bullet">
+            /// <item><description>The default link type of a cross-region VPC peering connection is Gold.</description></item>
+            /// <item><description>The default link type of an intra-region VPC peering connection is empty.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Gold</para>
@@ -207,6 +226,8 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string LinkType { get; set; }
 
             /// <summary>
+            /// <para>The associated cloud service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SWAS</para>
             /// </summary>
@@ -225,17 +246,17 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the requester VPC belongs.</para>
+            /// <para>The Alibaba Cloud account ID of the initiator of the VPC peering connection.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>253460731706911258</para>
+            /// <para>25346073170691****</para>
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public long? OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the requester VPC.</para>
+            /// <para>The region ID of the initiator of the VPC peering connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -248,7 +269,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-aek2gvbs746gt4q</para>
+            /// <para>rg-acfmxazb4ph6aiy****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
@@ -257,16 +278,16 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             /// <summary>
             /// <para>The status of the VPC peering connection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b></description></item>
-            /// <item><description><b>Accepting</b></description></item>
-            /// <item><description><b>Updating</b></description></item>
-            /// <item><description><b>Rejected</b></description></item>
-            /// <item><description><b>Expired</b></description></item>
-            /// <item><description><b>Activated</b></description></item>
-            /// <item><description><b>Deleting</b></description></item>
-            /// <item><description><b>Deleted</b></description></item>
+            /// <item><description><b>Creating</b>: Creating.</description></item>
+            /// <item><description><b>Accepting</b>: Accepting.</description></item>
+            /// <item><description><b>Updating</b>: Updating.</description></item>
+            /// <item><description><b>Rejected</b>: Rejected.</description></item>
+            /// <item><description><b>Expired</b>: Expired.</description></item>
+            /// <item><description><b>Activated</b>: Activated.</description></item>
+            /// <item><description><b>Deleting</b>: Deleting.</description></item>
+            /// <item><description><b>Deleted</b>: Deleted.</description></item>
             /// </list>
-            /// <para>For more information about the status of VPC peering connections, see <a href="https://help.aliyun.com/document_detail/418507.html">Overview of VPC peering connections</a>.</para>
+            /// <para>For more information about the statuses of VPC peering connections, see <a href="https://help.aliyun.com/document_detail/418507.html">VPC peering connection overview</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Activated</para>
@@ -276,7 +297,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -305,28 +326,28 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             }
 
             /// <summary>
-            /// <para>The details of the requester VPC.</para>
+            /// <para>The details of the initiator VPC-connected instance.</para>
             /// </summary>
             [NameInMap("Vpc")]
             [Validation(Required=false)]
             public ListVpcPeerConnectionsResponseBodyVpcPeerConnectsVpc Vpc { get; set; }
             public class ListVpcPeerConnectionsResponseBodyVpcPeerConnectsVpc : TeaModel {
                 /// <summary>
-                /// <para>The CIDR block of the requester VPC.</para>
+                /// <para>The IPv4 CIDR blocks of the initiator.</para>
                 /// </summary>
                 [NameInMap("Ipv4Cidrs")]
                 [Validation(Required=false)]
                 public List<string> Ipv4Cidrs { get; set; }
 
                 /// <summary>
-                /// <para>The IPv6 CIDR block of the requester VPC.</para>
+                /// <para>The IPv6 CIDR blocks of the initiator.</para>
                 /// </summary>
                 [NameInMap("Ipv6Cidrs")]
                 [Validation(Required=false)]
                 public List<string> Ipv6Cidrs { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the requester VPC.</para>
+                /// <para>The instance ID of the initiator VPC-connected instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp1gsk7h12ew7oegk****</para>

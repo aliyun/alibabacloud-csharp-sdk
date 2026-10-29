@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The new description of the VPC peering connection.</para>
-        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newdescription</para>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without modifying the information. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, an error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,24 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC peering connection whose name or description you want to modify.</para>
+        /// <para>Specifies whether the jumbo frame feature is enabled for the VPC peering connection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.<remarks>
+        /// <para>Note: To specify this parameter, make sure that you create a cross-region peering connection.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableJumboFrame")]
+        [Validation(Required=false)]
+        public bool? EnableJumboFrame { get; set; }
+
+        /// <summary>
+        /// <para>The instance ID of the VPC peering connection whose name or description you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,17 +87,10 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Type of connection. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Platinum.</para>
-        /// </description></item>
-        /// <item><description><para>Gold: default value.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The link type.</para>
+        /// <para>Valid values: Platinum and Gold. Default value: Gold.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you need to specify this parameter, ensure that the VPC peering connection is an inter-region connection.</description></item>
-        /// </list>
+        /// <para>To specify this parameter, make sure that you create a cross-region peering connection.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,7 +102,7 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 
         /// <summary>
         /// <para>The new name of the VPC peering connection.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpcpeername</para>
