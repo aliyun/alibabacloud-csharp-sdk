@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitPenetrationTestResponseBodyData Data { get; set; }
         public class SubmitPenetrationTestResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response data.</para>
+            /// <para>The returned data.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 /// <summary>
                 /// <para>The type of the asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>EIP</b>: The public IP address of a virtual private cloud (VPC).</description></item>
+                /// <item><description><b>EIP</b>: the public IP address of a VPC.</description></item>
                 /// <item><description><b>SLB</b>: load balancing.</description></item>
-                /// <item><description><b>ECS</b>: The public IP address of an Elastic Compute Service (ECS) instance in the classic network.</description></item>
+                /// <item><description><b>ECS</b>: the public IP address of an ECS instance in the classic network.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -83,10 +83,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The call status. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

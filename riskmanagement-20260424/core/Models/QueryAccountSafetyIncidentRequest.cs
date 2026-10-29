@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public List<string> ActionCodes { get; set; }
 
         /// <summary>
-        /// <para>The internationalization language. Default value: zh. Valid values:</para>
+        /// <para>The language. Default value: zh. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -31,9 +31,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
+        /// <para>The set of cloud service codes.</para>
+        /// </summary>
+        [NameInMap("BusinessCodes")]
+        [Validation(Required=false)]
+        public List<string> BusinessCodes { get; set; }
+
+        /// <summary>
         /// <para>The event name code.</para>
         /// <remarks>
-        /// <para>This parameter does not take effect when the CaseCodes parameter is not empty.</para>
+        /// <para>This parameter does not take effect if the CaseCodes parameter is not empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +70,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The event ID.</para>
         /// <remarks>
-        /// <para>This parameter does not take effect when the EventIds parameter is not empty.</para>
+        /// <para>This parameter does not take effect if the EventIds parameter is not empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,7 +88,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public List<string> EventIds { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -129,13 +136,13 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Executing</b>: In progress.</description></item>
-        /// <item><description><b>Removed</b>: Removed.</description></item>
-        /// <item><description><b>Alerting</b>: Alerting.</description></item>
-        /// <item><description><b>Ended</b>: Ended.</description></item>
+        /// <item><description><b>Executing</b>: The event is being executed.</description></item>
+        /// <item><description><b>Removed</b>: The event is removed.</description></item>
+        /// <item><description><b>Alerting</b>: The event is in the alerting state.</description></item>
+        /// <item><description><b>Ended</b>: The event has ended.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter does not take effect when the Statuses parameter is not empty.</para>
+        /// <para>This parameter does not take effect if the Statuses parameter is not empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

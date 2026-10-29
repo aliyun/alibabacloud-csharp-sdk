@@ -1539,7 +1539,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately terminates a penetration test.</para>
+        /// <para>Immediately ends a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1581,7 +1581,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately terminates a penetration test.</para>
+        /// <para>Immediately ends a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1623,7 +1623,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately terminates a penetration test.</para>
+        /// <para>Immediately ends a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1641,7 +1641,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately terminates a penetration test.</para>
+        /// <para>Immediately ends a penetration test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4077,6 +4077,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             {
                 request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessCodes))
+            {
+                request.BusinessCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessCodes, "BusinessCodes", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodes))
             {
                 request.CaseCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseCodes, "CaseCodes", "json");
@@ -4097,6 +4101,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
             {
                 query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCodesShrink))
+            {
+                query["BusinessCodes"] = request.BusinessCodesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCode))
             {
@@ -4185,6 +4193,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             {
                 request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessCodes))
+            {
+                request.BusinessCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessCodes, "BusinessCodes", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodes))
             {
                 request.CaseCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseCodes, "CaseCodes", "json");
@@ -4205,6 +4217,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
             {
                 query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCodesShrink))
+            {
+                query["BusinessCodes"] = request.BusinessCodesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCode))
             {
@@ -5931,7 +5947,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a penetration test application.</para>
+        /// <para>Submits a penetration test request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6009,7 +6025,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a penetration test application.</para>
+        /// <para>Submits a penetration test request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6087,7 +6103,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a penetration test application.</para>
+        /// <para>Submits a penetration test request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6105,7 +6121,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a penetration test application.</para>
+        /// <para>Submits a penetration test request.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Successful.</description></item>
-        /// <item><description><b>Other values (such as 400 and 500)</b>: Failed.</description></item>
+        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>Other values (such as 400 and 500)</b>: Failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 /// <summary>
                 /// <para>The type of the asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>EIP</b>: Public IP address of a VPC.</description></item>
-                /// <item><description><b>SLB</b>: Server Load Balancer (SLB) instance for load balancing.</description></item>
-                /// <item><description><b>ECS</b>: Public IP address of an ECS instance in the classic network.</description></item>
+                /// <item><description><b>EIP</b>: The public IP address of a VPC.</description></item>
+                /// <item><description><b>SLB</b>: Server Load Balancer.</description></item>
+                /// <item><description><b>ECS</b>: The public IP address of an ECS instance in the classic network.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string AssetType { get; set; }
 
                 /// <summary>
-                /// <para>The unique identity ID of the alerting event record.</para>
+                /// <para>The unique identifier of the alert event record.</para>
                 /// <remarks>
-                /// <para>The data type of this field is Long. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Make sure that the value does not exceed 9007199254740991.</para>
+                /// <para>The data type of this field is Long. Precision loss may occur during the serialization or deserialization process. Make sure that the value does not exceed 9007199254740991.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -86,13 +86,13 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// <para>The task status. Valid values:</para>
+                /// <para>The status of the task. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>early_end</b>: The user applied for early termination.</description></item>
                 /// <item><description><b>expired</b>: The authorization expired.</description></item>
-                /// <item><description><b>auditing</b>: Under review.</description></item>
-                /// <item><description><b>approved</b>: Approved.</description></item>
-                /// <item><description><b>rejected</b>: Rejected.</description></item>
+                /// <item><description><b>auditing</b>: The application is being reviewed.</description></item>
+                /// <item><description><b>approved</b>: The application is approved.</description></item>
+                /// <item><description><b>rejected</b>: The application is rejected.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -132,9 +132,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public QueryPenetrationTestListResponseBodyDataPageInfo PageInfo { get; set; }
             public class QueryPenetrationTestListResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The page number of the returned page.</para>
+                /// <para>The page number from which the query results are displayed.</para>
                 /// <remarks>
-                /// <para>Default value: 1, which indicates the first page.</para>
+                /// <para>Default value: 1, which indicates that the query results are displayed starting from the first page.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -189,9 +189,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.                               </description></item>
+        /// <item><description><b>true</b>: The call is successful.                               </description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 

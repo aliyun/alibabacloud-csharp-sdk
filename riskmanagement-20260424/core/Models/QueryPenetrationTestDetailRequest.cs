@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class QueryPenetrationTestDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the application record.</para>
+        /// <para>The unique identity of the application record.</para>
         /// <remarks>
-        /// <para>This field is of the Long type. Precision loss may occur when you serialize or deserialize the value. Make sure that the value does not exceed 9007199254740991.</para>
+        /// <para>This field is of the Long type. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Ensure that the value does not exceed 9007199254740991.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

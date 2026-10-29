@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The asset list.</para>
         /// <remarks>
-        /// <para>The array supports a maximum of 50 IP addresses.</para>
+        /// <para>The array supports up to 50 IP addresses.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The test content.</para>
         /// <remarks>
-        /// <para>The content must not exceed 500 characters. Provide detailed information to facilitate the approval process.</para>
+        /// <para>The content must be up to 500 characters in length. Provide detailed information to facilitate the approval process.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The source IP addresses used for the test.</para>
         /// <remarks>
-        /// <para>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). 0.0.0.0 indicates that all IP addresses are allowed. CIDR blocks such as 140.168.0.0/16 are not supported.</para>
+        /// <para>Up to 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). Enter 0.0.0.0 to allow all IP addresses. CIDR blocks such as 140.168.0.0/16 are not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The test steps.</para>
         /// <remarks>
-        /// <para>The steps must not exceed 500 characters. Provide detailed information to facilitate the approval process.</para>
+        /// <para>The steps must be up to 500 characters in length. Provide detailed information to facilitate the approval process.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string ThirdpartyMobile { get; set; }
 
         /// <summary>
-        /// <para>The third-party tester.</para>
+        /// <para>The name of the third-party tester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>

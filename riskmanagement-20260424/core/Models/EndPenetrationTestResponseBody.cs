@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>200: Success. Other values (such as 500 and 400): error codes.</para>
+        /// <para>200: Success. Other values (such as 500 and 400): Error codes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call is successful.                                </description></item>
-        /// <item><description><b>false</b>: The call fails.</description></item>
+        /// <item><description><b>true</b>: The call was successful.                                </description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

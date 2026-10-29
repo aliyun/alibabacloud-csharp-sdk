@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: success</description></item>
-        /// <item><description><b>Other values (400, 500)</b>: failure</description></item>
+        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>Other values (400 and 500)</b>: Failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public long? ApplyTime { get; set; }
 
             /// <summary>
-            /// <para>The asset type. Valid values:</para>
+            /// <para>The type of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>EIP</b>: public IP address of a VPC</description></item>
-            /// <item><description><b>SLB</b>: load balancing</description></item>
-            /// <item><description><b>ECS</b>: public IP address of an ECS instance in the classic network</description></item>
+            /// <item><description><b>EIP</b>: public IP address in a VPC.</description></item>
+            /// <item><description><b>SLB</b>: load balancing.</description></item>
+            /// <item><description><b>ECS</b>: public IP address in the classic network.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the application record.</para>
+            /// <para>The unique identity of the application record.</para>
             /// <remarks>
-            /// <para>This field is of the Long type. Precision loss may occur when you serialize or deserialize the value. Make sure that the value does not exceed 9007199254740991.</para>
+            /// <para>This field is of the Long type. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Ensure that the value does not exceed 9007199254740991.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,10 +79,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the test is performed by a third-party service provider.</para>
+            /// <para>Indicates whether the test is performed by a third-party service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Yes.</description></item>
-            /// <item><description>false: No.</description></item>
+            /// <item><description><para>true: Yes.</para>
+            /// </description></item>
+            /// <item><description><para>false: No.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,11 +97,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>early_end</b>: The user applies for early termination.</description></item>
+            /// <item><description><b>early_end</b>: The user applied for early termination.</description></item>
             /// <item><description><b>expired</b>: The authorization has expired.</description></item>
-            /// <item><description><b>auditing</b>: The application is being reviewed.</description></item>
-            /// <item><description><b>approved</b>: The application is approved.</description></item>
-            /// <item><description><b>rejected</b>: The application is rejected.</description></item>
+            /// <item><description><b>auditing</b>: Under review.</description></item>
+            /// <item><description><b>approved</b>: Approved.</description></item>
+            /// <item><description><b>rejected</b>: Rejected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,7 +115,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             /// <para>The test content.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>The content must be within 500 characters. Carefully fill in the content to increase the chance of passing the review.</description></item>
+            /// <item><description>Maximum 500 characters. Provide detailed information to increase the chance of passing the review.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -137,7 +139,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             /// <summary>
             /// <para>The source IP addresses used for the test.</para>
             /// <remarks>
-            /// <para>You can specify up to 50 IP addresses. Separate multiple IP addresses with line breaks or commas (,). Specify 0.0.0.0 to allow all IP addresses. CIDR blocks are not supported, such as 140.168.0.0/16.</para>
+            /// <para>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). Specify 0.0.0.0 to allow all IP addresses. CIDR blocks are not supported, such as 140.168.0.0/16.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -160,7 +162,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             /// <summary>
             /// <para>The test steps.</para>
             /// <remarks>
-            /// <para>The content must be within 500 characters. Carefully fill in the content to increase the chance of passing the review.</para>
+            /// <para>Maximum 500 characters. Provide detailed information to increase the chance of passing the review.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -203,7 +205,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -223,10 +225,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The call is successful.                               </description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
