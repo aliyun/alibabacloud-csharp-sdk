@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCenterPolicyListRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the academic proxy feature. Valid values:</para>
+        /// <para>學術代理功能開關。取值範圍：</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on：開啟。</description></item>
+        /// <item><description>off：關閉。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AcademicProxy { get; set; }
 
         /// <summary>
-        /// <para>The business type.</para>
+        /// <para>業務類型。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? BusinessType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the model library feature. Valid values:</para>
+        /// <para>模型庫功能開關。取值範圍：</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on：開啟。</description></item>
+        /// <item><description>off：關閉。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ModelLibrary { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query. This parameter implements paging.<br>Default value: 1.</para>
+        /// <para>分頁查詢時，當前頁的頁碼。<br>預設值：1。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows per page in a paged query. This parameter implements paging.</para>
+        /// <para>分頁查詢時，每頁最大行數。</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -69,17 +69,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of Cloud Desktop policy IDs.</para>
+        /// <para>雲端電腦策略ID清單。</para>
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public List<string> PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the port proxy feature. Valid values:</para>
+        /// <para>連接埠代理功能開關。取值範圍：</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on：開啟。</description></item>
+        /// <item><description>off：關閉。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PortProxy { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>資源類型。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the Cloud Desktop policy.</para>
+        /// <para>雲端電腦策略的生效範圍。</para>
         /// 
         /// <b>Example:</b>
         /// <para>GLOBAL</para>

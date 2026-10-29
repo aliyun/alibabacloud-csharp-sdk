@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeResourceByCenterPolicyIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Count { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no more results are available.</para>
+        /// <para>The token that is used to start the next query. If NextToken is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The target cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by WUYING Workspace.</para>
+            /// <para>The target cloud desktop type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the IDs of cloud desktop types supported by WUYING Workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.enterprise_office.8c32g</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource.</para>
+            /// <para>The resource status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Stopped</para>

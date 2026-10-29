@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? BindCount { get; set; }
 
             /// <summary>
-            /// <para>The quantity information of resources bound to the configuration.</para>
+            /// <para>The information about the number of resources bound to the configuration.</para>
             /// </summary>
             [NameInMap("BindCountMap")]
             [Validation(Required=false)]
             public Dictionary<string, int?> BindCountMap { get; set; }
 
             /// <summary>
-            /// <para>The configuration information of scheduled tasks. This is a list structure.</para>
+            /// <para>The configuration information of scheduled tasks.</para>
             /// </summary>
             [NameInMap("ConfigTimers")]
             [Validation(Required=false)]
             public List<DescribeTimerGroupResponseBodyDataConfigTimers> ConfigTimers { get; set; }
             public class DescribeTimerGroupResponseBodyDataConfigTimers : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether end users are allowed to configure scheduled tasks on their own.</para>
+                /// <para>Specifies whether end users are allowed to configure scheduled tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to forcefully execute the task. A value of true indicates that the desktop and connection status checks are ignored and the scheduled task is forcefully executed.</para>
+                /// <para>Specifies whether to forcibly execute the task. A value of true indicates that the scheduled task is forcibly executed, ignoring the desktop and connection status checks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public bool? Enforce { get; set; }
 
                 /// <summary>
-                /// <para>The time interval. Unit: minutes.</para>
+                /// <para>The time interval, in minutes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? Interval { get; set; }
 
                 /// <summary>
-                /// <para>The advance notification time before the scheduled task is executed. Unit: seconds.</para>
+                /// <para>The advance notification time before the scheduled task is executed, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? NotificationTime { get; set; }
 
                 /// <summary>
-                /// <para>The type of the disconnect scheduled task.</para>
+                /// <para>The type of the disconnection scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Shutdown</para>
@@ -101,14 +101,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string OperationType { get; set; }
 
                 /// <summary>
-                /// <para>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</para>
+                /// <para>The process whitelist for the intelligent evaluation of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</para>
                 /// </summary>
                 [NameInMap("ProcessWhitelist")]
                 [Validation(Required=false)]
                 public List<string> ProcessWhitelist { get; set; }
 
                 /// <summary>
-                /// <para>The reset type of the reset scheduled task.</para>
+                /// <para>The reset type for the scheduled reset task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RESET_TYPE_SYSTEM</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public List<DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers> SegmentTimers { get; set; }
                 public class DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers : TeaModel {
                     /// <summary>
-                    /// <para>The appointment timer used for executing scheduled tasks at specified time points. After this parameter is specified, the scheduled task is executed at the specified time points.</para>
+                    /// <para>Specifies the time to execute the scheduled task. After this parameter is specified, the scheduled task is executed at the specified time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1764660600967</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public bool? CreateSnapshot { get; set; }
 
                     /// <summary>
-                    /// <para>The cron expression for the end time of the scheduled task.</para>
+                    /// <para>The cron expression for ending the execution of the scheduled task.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 18 ? * 1-5</para>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string EndCronExpression { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to forcefully execute the task. A value of true indicates that the desktop and connection status checks are ignored and the scheduled task is forcefully executed.</para>
+                    /// <para>Specifies whether to forcibly execute the task. A value of true indicates that the scheduled task is forcibly executed, ignoring the desktop and connection status checks.</para>
                     /// </summary>
                     [NameInMap("Enforce")]
                     [Validation(Required=false)]
                     public bool? Enforce { get; set; }
 
                     /// <summary>
-                    /// <para>The image ID specified for the image change scheduled task.</para>
+                    /// <para>Specifies the ID of the image to be replaced. This parameter is used for scheduled image replacement tasks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>m-5b0vjqbiqu010XXXXXX</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string ImageId { get; set; }
 
                     /// <summary>
-                    /// <para>The time interval. Unit: minutes.</para>
+                    /// <para>The time interval, in minutes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public List<string> IpSegments { get; set; }
 
                     /// <summary>
-                    /// <para>The duration of inactivity before the screen is locked, used by the no-operation lock screen feature. Unit: minutes. Only AD-joined cloud desktops are supported.</para>
+                    /// <para>Specifies the duration of inactivity before the screen is locked, in minutes. This parameter is used for the no-operation lock screen feature and is supported only by AD cloud desktops.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public int? LockScreenTime { get; set; }
 
                     /// <summary>
-                    /// <para>The advance notification time before the scheduled task is executed. Unit: seconds.</para>
+                    /// <para>The advance notification time before the scheduled task is executed, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public int? NotificationTime { get; set; }
 
                     /// <summary>
-                    /// <para>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</para>
+                    /// <para>The operation type of the scheduled task. Currently, only disconnection scheduled tasks are supported.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Shutdown</para>
@@ -226,14 +226,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string PatchId { get; set; }
 
                     /// <summary>
-                    /// <para>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</para>
+                    /// <para>The process whitelist for the intelligent evaluation of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</para>
                     /// </summary>
                     [NameInMap("ProcessWhitelist")]
                     [Validation(Required=false)]
                     public List<string> ProcessWhitelist { get; set; }
 
                     /// <summary>
-                    /// <para>The reset type, which determines whether to reset and the scope of cloud disks to reset.</para>
+                    /// <para>The reset type, which determines whether to reset and the scope of cloud disks to be reset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string ResetType { get; set; }
 
                     /// <summary>
-                    /// <para>The cron expression for the start time of the scheduled task.</para>
+                    /// <para>The cron expression for starting the execution of the scheduled task.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 8 ? * 1-5</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string StartCronExpression { get; set; }
 
                     /// <summary>
-                    /// <para>The execution order number of the timer.</para>
+                    /// <para>The execution sequence number of the timer.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string Timezone { get; set; }
 
                     /// <summary>
-                    /// <para>The trigger configuration type of the no-operation scheduled task.</para>
+                    /// <para>The trigger configuration type for no-operation scheduled tasks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Standard</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string TriggerType { get; set; }
 
                     /// <summary>
-                    /// <para>The advance notification time before verification is executed. Unit: seconds.</para>
+                    /// <para>The advance notification time before execution verification, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public int? VerificationNotificationTime { get; set; }
 
                     /// <summary>
-                    /// <para>The verification wait duration. Unit: seconds.</para>
+                    /// <para>The verification wait duration, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>600</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string TimerType { get; set; }
 
                 /// <summary>
-                /// <para>The trigger configuration type of the no-operation scheduled task.</para>
+                /// <para>The trigger configuration type for no-operation scheduled tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Standard</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The description of the configuration group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ScheduledTask</para>
+            /// <para>Scheduled task</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The code of the system scheduled task description, used for frontend display.</para>
+            /// <para>Used for frontend display. The description of the system scheduled task uses a code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</para>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InnerTimerDesc { get; set; }
 
             /// <summary>
-            /// <para>The mapping code of the system scheduled task name, used for frontend display.</para>
+            /// <para>Used for frontend display. The name mapping of the system scheduled task uses a code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</para>
@@ -367,14 +367,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InnerTimerName { get; set; }
 
             /// <summary>
-            /// <para>Used for system scheduled task check. The current scheduled task does not support unbinding or binding.</para>
+            /// <para>Used for system scheduled task checks. The current scheduled task cannot be bound or unbound.</para>
             /// </summary>
             [NameInMap("IsBind")]
             [Validation(Required=false)]
             public bool? IsBind { get; set; }
 
             /// <summary>
-            /// <para>Used for system scheduled task check. The current scheduled task does not support modification.</para>
+            /// <para>Used for system scheduled task checks. The current scheduled task cannot be modified.</para>
             /// </summary>
             [NameInMap("IsUpdate")]
             [Validation(Required=false)]
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the configuration group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ScheduledTask</para>
+            /// <para>Scheduled task</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration group.</para>
+            /// <para>The configuration group type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Timer</para>

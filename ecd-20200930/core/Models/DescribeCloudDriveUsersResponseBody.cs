@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDriveUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of user personal drives.</para>
+        /// <para>The list of user personal drives.</para>
         /// </summary>
         [NameInMap("CloudDriveUsers")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Maximum storage capacity for the user’s personal drive, in bytes.</para>
+            /// <para>The maximum storage capacity of the user personal drive. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104857600</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalSize { get; set; }
 
             /// <summary>
-            /// <para>The used storage space, in bytes.</para>
+            /// <para>The size of the used storage space. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10485760</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token for the next page of results. An empty value indicates that all results have been returned.</para>
+        /// <para>The pagination token for the next query. If <c>NextToken</c> is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</para>

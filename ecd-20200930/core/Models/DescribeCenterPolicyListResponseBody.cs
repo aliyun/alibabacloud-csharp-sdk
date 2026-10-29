@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCenterPolicyListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the cloud desktop policies.</para>
+        /// <para>雲端電腦原則的詳細資訊。</para>
         /// </summary>
         [NameInMap("DescribePolicyGroups")]
         [Validation(Required=false)]
         public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroups> DescribePolicyGroups { get; set; }
         public class DescribeCenterPolicyListResponseBodyDescribePolicyGroups : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the academic proxy feature. Valid values:</para>
+            /// <para>學術代理功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AcademicProxy { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user has administrator permissions after connecting to the cloud desktop.</para>
+            /// <para>使用者連線雲端電腦後是否具有管理員權限。</para>
             /// <remarks>
-            /// <para>This feature is in invitational preview and is not publicly available.</para>
+            /// <para>該功能處於定向邀測中，暫不對外開放。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AdminAccess { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable administrator keyboard control in full-screen mode. Valid values:</para>
+            /// <para>全螢幕模式下管理員鍵盤控制開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AdminKeyboardOnFullScreen { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable administrator keyboard control within the Windows system. Valid values:</para>
+            /// <para>Windows 系統內管理員鍵盤控制開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AdminKeyboardOnWindows { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable administrator monitoring. Valid values:</para>
+            /// <para>管理員監控開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>1: Enabled.</description></item>
-            /// <item><description>0: Disabled.</description></item>
+            /// <item><description>1：開啟。</description></item>
+            /// <item><description>0：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? AdminMonitor { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the screenshot prevention feature is enabled.</para>
+            /// <para>是否開啟防截圖功能。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -96,14 +96,43 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AppContentProtection { get; set; }
 
             /// <summary>
-            /// <para>The client access IP whitelist.</para>
+            /// <para>防截圖行動裝置截圖自訂 OSS Bucket 清單。</para>
+            /// </summary>
+            [NameInMap("AppScreenshotBuckets")]
+            [Validation(Required=false)]
+            public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAppScreenshotBuckets> AppScreenshotBuckets { get; set; }
+            public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAppScreenshotBuckets : TeaModel {
+                /// <summary>
+                /// <para>Bucket 名稱。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my-bucket-01</para>
+                /// </summary>
+                [NameInMap("BucketName")]
+                [Validation(Required=false)]
+                public string BucketName { get; set; }
+
+                /// <summary>
+                /// <para>使用者 OSS Bucket 所在地域，必須與 Bucket 的實際地域一致。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
+                /// </summary>
+                [NameInMap("BucketRegionId")]
+                [Validation(Required=false)]
+                public string BucketRegionId { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>用戶端存取 IP 白名單。</para>
             /// </summary>
             [NameInMap("AuthorizeAccessPolicyRules")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> AuthorizeAccessPolicyRules { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules : TeaModel {
                 /// <summary>
-                /// <para>The client access IP CIDR block, in IPv4 CIDR notation.</para>
+                /// <para>用戶端存取 IP 位址區段。格式為 CIDR 格式的 IPv4 位址區段。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.100.XX.XX/16</para>
@@ -113,10 +142,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CidrIp { get; set; }
 
                 /// <summary>
-                /// <para>The description of the client access IP CIDR block.</para>
+                /// <para>用戶端存取 IP 位址區段備註資訊。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Corporate office network segment</para>
+                /// <para>公司辦公網段</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -125,14 +154,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The list of security group rules.</para>
+            /// <para>安全性群組管控規則清單。</para>
             /// </summary>
             [NameInMap("AuthorizeSecurityPolicyRules")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> AuthorizeSecurityPolicyRules { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules : TeaModel {
                 /// <summary>
-                /// <para>The object of the security group rule, which is an IPv4 CIDR block.</para>
+                /// <para>安全性群組管控規則的對象，CIDR 格式的 IPv4 位址區段。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.100.XX.XX/16</para>
@@ -142,17 +171,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CidrIp { get; set; }
 
                 /// <summary>
-                /// <para>The description of the security group rule.</para>
+                /// <para>安全性群組管控規則的描述資訊。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Allow access to the internal R&amp;D environment</para>
+                /// <para>允許存取內網研發環境</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The protocol type of the security group rule.</para>
+                /// <para>安全性群組管控規則的通訊協定類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tcp</para>
@@ -162,7 +191,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string IpProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The authorization policy of the security group rule.</para>
+                /// <para>安全性群組管控規則的授權原則。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>accept</para>
@@ -172,7 +201,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Policy { get; set; }
 
                 /// <summary>
-                /// <para>The port range of the security group rule.</para>
+                /// <para>安全性群組管控規則的連接埠範圍。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22/22</para>
@@ -182,7 +211,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string PortRange { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the security group rule. A smaller value indicates a higher priority.</para>
+                /// <para>安全性群組管控規則的優先順序，數字越小，代表優先順序越高。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -192,7 +221,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Priority { get; set; }
 
                 /// <summary>
-                /// <para>The direction of the security group rule.</para>
+                /// <para>安全性群組管控規則的規則方向。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>inflow</para>
@@ -204,7 +233,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic reconnection on the client.</para>
+            /// <para>用戶端自動重新連線開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -214,7 +243,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AutoReconnect { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether local camera redirection is enabled.</para>
+            /// <para>自動儲存行動裝置截圖。取值範圍：</para>
+            /// <list type="bullet">
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("AutoSaveAppScreenshot")]
+            [Validation(Required=false)]
+            public string AutoSaveAppScreenshot { get; set; }
+
+            /// <summary>
+            /// <para>是否開啟本機攝影機重新導向。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -224,10 +267,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CameraRedirect { get; set; }
 
             /// <summary>
-            /// <para>The client control menu display switch. Valid values:</para>
+            /// <para>用戶端控制選單顯示開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -238,10 +281,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientControlMenu { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the custom snapshot creation feature on the client. Valid values:</para>
+            /// <para>用戶端建立自訂快照功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -252,10 +295,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientCreateSnapshot { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the hibernate option in the client menu. Valid values:</para>
+            /// <para>用戶端休眠選單開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -266,10 +309,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientHibernate { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the restart option in the client menu. Valid values:</para>
+            /// <para>用戶端重新啟動選單開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -280,10 +323,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientRestart { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the shutdown option in the client menu. Valid values:</para>
+            /// <para>用戶端關機選單開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -294,14 +337,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientShutdown { get; set; }
 
             /// <summary>
-            /// <para>The logon method control rules.</para>
+            /// <para>登入方式管控規則。</para>
             /// </summary>
             [NameInMap("ClientTypes")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsClientTypes> ClientTypes { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsClientTypes : TeaModel {
                 /// <summary>
-                /// <para>The client type.</para>
+                /// <para>用戶端類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>windows</para>
@@ -311,7 +354,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ClientType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a specific type of client is allowed to log on to the cloud desktop.</para>
+                /// <para>是否允許某一類型的用戶端登入雲端桌面。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -323,7 +366,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The clipboard permission.</para>
+            /// <para>剪貼簿權限。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -333,7 +376,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Clipboard { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether color enhancement is enabled for design and 3D common scenarios.</para>
+            /// <para>設計及 3D 應用場景選擇是否開啟色彩增強。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -343,10 +386,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ColorEnhancement { get; set; }
 
             /// <summary>
-            /// <para>The local drive clipboard feature switch. Valid values:</para>
+            /// <para>本機驅動程式剪貼簿功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -357,7 +400,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CpdDriveClipboard { get; set; }
 
             /// <summary>
-            /// <para>The CPU downgrade duration. Valid values: 30 to 120. Unit: seconds.</para>
+            /// <para>CPU 降頻時長，取值範圍： 30\~120。單位：秒。</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -367,10 +410,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? CpuDownGradeDuration { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable CPU overload protection. Valid values:</para>
+            /// <para>CPU 負載保護開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -381,14 +424,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CpuOverload { get; set; }
 
             /// <summary>
-            /// <para>The process name.</para>
+            /// <para>處理程序名稱。</para>
             /// </summary>
             [NameInMap("CpuProcessors")]
             [Validation(Required=false)]
             public List<string> CpuProcessors { get; set; }
 
             /// <summary>
-            /// <para>The CPU spike protection mode switch.</para>
+            /// <para>CPU 保護模式開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -398,7 +441,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CpuProtectedMode { get; set; }
 
             /// <summary>
-            /// <para>The overall CPU usage percentage. Valid values: 70 to 90.</para>
+            /// <para>CPU 整體使用率百分比，取值範圍： 70\~90。</para>
             /// 
             /// <b>Example:</b>
             /// <para>70</para>
@@ -408,7 +451,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? CpuRateLimit { get; set; }
 
             /// <summary>
-            /// <para>The overall CPU sampling duration. Valid values: 10 to 60. Unit: seconds.</para>
+            /// <para>CPU 整體取樣時長，取值範圍： 10\~60。單位：秒。</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -418,7 +461,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? CpuSampleDuration { get; set; }
 
             /// <summary>
-            /// <para>The single-core CPU usage percentage. Valid values: 70 to 100.</para>
+            /// <para>CPU 單核心使用率百分比，取值範圍： 70\~100。</para>
             /// 
             /// <b>Example:</b>
             /// <para>70</para>
@@ -428,7 +471,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? CpuSingleRateLimit { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud desktops associated with the policy.</para>
+            /// <para>已關聯該原則的雲端電腦數量。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -438,7 +481,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? DesktopCount { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud desktop pools associated with the policy.</para>
+            /// <para>已關聯該原則的雲端電腦集區數量。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -448,7 +491,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? DesktopGroupCount { get; set; }
 
             /// <summary>
-            /// <para>The peripheral connection notification control.</para>
+            /// <para>周邊裝置連線提示控制。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -458,14 +501,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DeviceConnectHint { get; set; }
 
             /// <summary>
-            /// <para>The device redirection rules.</para>
+            /// <para>裝置重新導向規則。</para>
             /// </summary>
             [NameInMap("DeviceRedirects")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsDeviceRedirects> DeviceRedirects { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsDeviceRedirects : TeaModel {
                 /// <summary>
-                /// <para>The peripheral device type.</para>
+                /// <para>周邊裝置類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>camera</para>
@@ -475,7 +518,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DeviceType { get; set; }
 
                 /// <summary>
-                /// <para>The redirection type.</para>
+                /// <para>重新導向類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>usbRedirect</para>
@@ -487,14 +530,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The custom peripheral device rules.</para>
+            /// <para>自訂周邊裝置規則。</para>
             /// </summary>
             [NameInMap("DeviceRules")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsDeviceRules> DeviceRules { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsDeviceRules : TeaModel {
                 /// <summary>
-                /// <para>The device name.</para>
+                /// <para>裝置名稱。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sandisk</para>
@@ -504,7 +547,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DeviceName { get; set; }
 
                 /// <summary>
-                /// <para>The product ID.</para>
+                /// <para>產品 ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0x55b1</para>
@@ -514,7 +557,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DevicePid { get; set; }
 
                 /// <summary>
-                /// <para>The peripheral device type.</para>
+                /// <para>周邊裝置類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>storage</para>
@@ -524,7 +567,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DeviceType { get; set; }
 
                 /// <summary>
-                /// <para>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</para>
+                /// <para>生產廠商 ID。參見 <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0x0781</para>
@@ -534,7 +577,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DeviceVid { get; set; }
 
                 /// <summary>
-                /// <para>The link optimization command.</para>
+                /// <para>連結最佳化指令。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2:0</para>
@@ -544,7 +587,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string OptCommand { get; set; }
 
                 /// <summary>
-                /// <para>The platform types to which the device rule applies.</para>
+                /// <para>裝置規則適用的平台類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Windows</para>
@@ -554,7 +597,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Platforms { get; set; }
 
                 /// <summary>
-                /// <para>The redirection type.</para>
+                /// <para>重新導向類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>usbRedirect</para>
@@ -566,9 +609,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to retain the session after disconnection.</para>
+            /// <para>工作階段斷線保留。</para>
             /// <remarks>
-            /// <para>This applies only to cloud application policies.</para>
+            /// <para>僅適用於雲端應用程式原則。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -579,9 +622,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DisconnectKeepSession { get; set; }
 
             /// <summary>
-            /// <para>The session retention duration after disconnection. Unit: seconds.</para>
+            /// <para>工作階段斷線保留時長。單位：秒。</para>
             /// <remarks>
-            /// <para>This applies only to cloud application policies.</para>
+            /// <para>僅適用於雲端應用程式原則。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -592,10 +635,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? DisconnectKeepSessionTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable disk overload protection. Valid values:</para>
+            /// <para>磁碟負載保護開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -606,7 +649,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DiskOverload { get; set; }
 
             /// <summary>
-            /// <para>The display mode.</para>
+            /// <para>顯示模式。</para>
             /// 
             /// <b>Example:</b>
             /// <para>adminCustom</para>
@@ -616,7 +659,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DisplayMode { get; set; }
 
             /// <summary>
-            /// <para>The domain name resolution effective field.</para>
+            /// <para>網域解析生效欄位。</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -626,24 +669,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainRegisterValue { get; set; }
 
             /// <summary>
-            /// <para>The details of the domain name resolution policy.</para>
+            /// <para>網域解析原則詳情。</para>
             /// </summary>
             [NameInMap("DomainResolveRule")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsDomainResolveRule> DomainResolveRule { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsDomainResolveRule : TeaModel {
                 /// <summary>
-                /// <para>The policy description.</para>
+                /// <para>原則描述。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test rule</para>
+                /// <para>測試規則</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The domain name.</para>
+                /// <para>網域。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>*.example.com</para>
@@ -653,7 +696,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// <para>The resolution policy.</para>
+                /// <para>解析原則。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>allow</para>
@@ -665,7 +708,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The domain name resolution policy switch.</para>
+            /// <para>網域解析原則開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -675,7 +718,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainResolveRuleType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether end users can request administrator assistance.</para>
+            /// <para>使用者請求管理員協助。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -685,7 +728,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserApplyAdminCoordinate { get; set; }
 
             /// <summary>
-            /// <para>The number of associated end users.</para>
+            /// <para>關聯的終端使用者數量。</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -695,7 +738,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether users within the same office network can share cloud desktops.</para>
+            /// <para>同一個辦公網路下使用者共享雲端電腦。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -705,10 +748,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserGroupCoordinate { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the use of external storage devices. Valid values:</para>
+            /// <para>外接儲存裝置使用開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -719,7 +762,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ExternalDrive { get; set; }
 
             /// <summary>
-            /// <para>The file migration setting.</para>
+            /// <para>檔案遷移。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -729,7 +772,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileMigrate { get; set; }
 
             /// <summary>
-            /// <para>The service address for the file transfer feature.</para>
+            /// <para>檔案傳輸功能的服務位址。</para>
             /// 
             /// <b>Example:</b>
             /// <para>filetransfer.example.com</para>
@@ -739,7 +782,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferAddress { get; set; }
 
             /// <summary>
-            /// <para>The file size limit for a single transfer to the cloud desktop. This parameter must be used together with the inbound unit parameter.</para>
+            /// <para>單次傳入雲端電腦的檔案大小限制，需與傳入單位參數配合使用。</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -749,7 +792,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferInSize { get; set; }
 
             /// <summary>
-            /// <para>The unit for the file size limit of a single transfer to the cloud desktop.</para>
+            /// <para>單次傳入雲端電腦的檔案大小限制單位。</para>
             /// 
             /// <b>Example:</b>
             /// <para>MB</para>
@@ -759,7 +802,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferInUnit { get; set; }
 
             /// <summary>
-            /// <para>The file size limit for a single transfer from the cloud desktop. This parameter must be used together with the outbound unit parameter.</para>
+            /// <para>單次從雲端電腦傳出的檔案大小限制，需與傳出單位參數配合使用。</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -769,7 +812,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferOutSize { get; set; }
 
             /// <summary>
-            /// <para>The unit for the file size limit of a single transfer from the cloud desktop.</para>
+            /// <para>單次從雲端電腦傳出的檔案大小限制單位。</para>
             /// 
             /// <b>Example:</b>
             /// <para>MB</para>
@@ -779,10 +822,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferOutUnit { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the file transfer size limit. Valid values:</para>
+            /// <para>檔案傳輸大小限制開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -793,7 +836,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferSizeLimit { get; set; }
 
             /// <summary>
-            /// <para>The file transfer speed level.</para>
+            /// <para>檔案傳輸速度檔位。</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -803,7 +846,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferSpeed { get; set; }
 
             /// <summary>
-            /// <para>The location where the file transfer speed configured on the client takes effect.</para>
+            /// <para>用戶端設定的檔案傳輸速度生效位置。</para>
             /// 
             /// <b>Example:</b>
             /// <para>client</para>
@@ -813,6 +856,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileTransferSpeedLocation { get; set; }
 
             /// <summary>
+            /// <para>檔案同步開關。取值範圍：</para>
+            /// <list type="bullet">
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>off</para>
             /// </summary>
@@ -821,7 +870,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FolderSync { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image quality policy is enabled for GPU-accelerated cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</para>
+            /// <para>是否為圖形型規格雲端電腦開啟畫質策略。對雲端電腦效能和使用體驗要求較高時，例如專業設計場景下，建議開啟該策略。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -831,10 +880,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuAcceleration { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the configuration message notification on the floating ball. Valid values:</para>
+            /// <para>懸浮球設定訊息提示開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -845,10 +894,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string HoverConfigMsg { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the hibernate button on the floating ball. Valid values:</para>
+            /// <para>懸浮球休眠按鈕開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -859,10 +908,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string HoverHibernate { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the restart button on the floating ball. Valid values:</para>
+            /// <para>懸浮球重新啟動按鈕開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -873,10 +922,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string HoverRestart { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the shutdown button on the floating ball. Valid values:</para>
+            /// <para>懸浮球關機按鈕開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -887,7 +936,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string HoverShutdown { get; set; }
 
             /// <summary>
-            /// <para>The web client access policy.</para>
+            /// <para>Web用戶端存取策略。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -897,7 +946,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Html5Access { get; set; }
 
             /// <summary>
-            /// <para>The web client file transfer policy.</para>
+            /// <para>Web用戶端檔案傳輸策略。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -907,7 +956,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Html5FileTransfer { get; set; }
 
             /// <summary>
-            /// <para>The network communication protocol.</para>
+            /// <para>網路通訊協定。</para>
             /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
@@ -917,10 +966,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InternetCommunicationProtocol { get; set; }
 
             /// <summary>
-            /// <para>The network printer feature switch. Valid values:</para>
+            /// <para>網路印表機功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -931,10 +980,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InternetPrinter { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable keyboard control on the floating ball. Valid values:</para>
+            /// <para>懸浮球鍵盤控制開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -945,10 +994,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string KeyboardControl { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the KMS server. Valid values:</para>
+            /// <para>KMS 伺服器開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -959,7 +1008,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string KmsServer { get; set; }
 
             /// <summary>
-            /// <para>The KMS server configuration in the format of address:port.</para>
+            /// <para>KMS 伺服器設定，格式為位址:連接埠。</para>
             /// 
             /// <b>Example:</b>
             /// <para>kms.example.com:1688</para>
@@ -969,7 +1018,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string KmsServerConfig { get; set; }
 
             /// <summary>
-            /// <para>The local disk mapping permission.</para>
+            /// <para>本機磁碟映射權限。</para>
             /// 
             /// <b>Example:</b>
             /// <para>readwrite</para>
@@ -979,7 +1028,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string LocalDrive { get; set; }
 
             /// <summary>
-            /// <para>The maximum reconnection retry time when the cloud desktop is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</para>
+            /// <para>雲端電腦由於客觀原因造成中斷連線的最大連線重試時間。取值範圍：30\~7200，單位：秒。</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -989,7 +1038,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MaxReconnectTime { get; set; }
 
             /// <summary>
-            /// <para>The memory downgrade duration of a single process. Valid values: 30 to 120. Unit: seconds.</para>
+            /// <para>開啟 MCP 服務。取值範圍：</para>
+            /// <list type="bullet">
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("McpService")]
+            [Validation(Required=false)]
+            public string McpService { get; set; }
+
+            /// <summary>
+            /// <para>單個處理程序記憶體降頻時長，取值範圍： 30\~120。單位：秒。</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -999,10 +1062,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MemoryDownGradeDuration { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable memory overload protection. Valid values:</para>
+            /// <para>記憶體負載保護開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1013,14 +1076,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemoryOverload { get; set; }
 
             /// <summary>
-            /// <para>The process name.</para>
+            /// <para>處理程序名稱。</para>
             /// </summary>
             [NameInMap("MemoryProcessors")]
             [Validation(Required=false)]
             public List<string> MemoryProcessors { get; set; }
 
             /// <summary>
-            /// <para>The memory protection mode switch.</para>
+            /// <para>記憶體保護模式開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1030,7 +1093,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemoryProtectedMode { get; set; }
 
             /// <summary>
-            /// <para>The overall memory usage percentage. Valid values: 70 to 90.</para>
+            /// <para>記憶體整體使用率百分比，取值範圍： 70\~90。</para>
             /// 
             /// <b>Example:</b>
             /// <para>70</para>
@@ -1040,7 +1103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MemoryRateLimit { get; set; }
 
             /// <summary>
-            /// <para>The overall memory sampling duration. Valid values: 30 to 60. Unit: seconds.</para>
+            /// <para>記憶體整體取樣時長，取值範圍： 30\~60。單位：秒。</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -1050,7 +1113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MemorySampleDuration { get; set; }
 
             /// <summary>
-            /// <para>The memory usage percentage of a single process. Valid values: 30 to 60.</para>
+            /// <para>單個處理程序記憶體使用率百分比，取值範圍： 30\~60。</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -1060,9 +1123,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MemorySingleRateLimit { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the restart button is provided in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</para>
+            /// <para>透過行動端（Android用戶端&lt;props=&quot;china&quot;&gt;和iOS用戶端）連線雲端電腦時，是否在雲端電腦懸浮球內提供重新啟動按鈕。</para>
             /// <remarks>
-            /// <para>This applies only to mobile clients of V7.4 or later.</para>
+            /// <para>僅適用於V7.4或更高版本的行動端。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1073,7 +1136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileRestart { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the Windows security control on mobile clients.</para>
+            /// <para>行動端Windows 安全性控制開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1083,9 +1146,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileSafeMenu { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the shutdown button is provided in the cloud desktop floating ball when connecting to the cloud desktop from a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</para>
+            /// <para>透過行動端（Android用戶端&lt;props=&quot;china&quot;&gt;和iOS用戶端）連線雲端電腦時，是否在雲端電腦懸浮球內提供關機按鈕。</para>
             /// <remarks>
-            /// <para>This applies only to mobile clients of V7.4 or later.</para>
+            /// <para>僅適用於V7.4或更高版本的行動端。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1096,7 +1159,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileShutdown { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable WUYING Keeper on mobile clients.</para>
+            /// <para>行動端無影管家開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1106,7 +1169,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileWuyingKeeper { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the WUYING Assistant on mobile clients.</para>
+            /// <para>行動端小穎的開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1116,10 +1179,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileWyAssistant { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the model library feature. Valid values:</para>
+            /// <para>模型庫功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1130,10 +1193,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ModelLibrary { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the multi-screen display feature. Valid values:</para>
+            /// <para>多螢幕顯示功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1144,7 +1207,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MultiScreen { get; set; }
 
             /// <summary>
-            /// <para>The policy name.</para>
+            /// <para>策略名稱。</para>
             /// 
             /// <b>Example:</b>
             /// <para>testPolicyGroupName</para>
@@ -1154,9 +1217,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network redirection setting.</para>
+            /// <para>網路重新導向。</para>
             /// <remarks>
-            /// <para>This feature is in invitational preview and is not publicly available.</para>
+            /// <para>該功能處於定向邀測中，暫不對外開放。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1167,9 +1230,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetRedirect { get; set; }
 
             /// <summary>
-            /// <para>The details of the network redirection policy.</para>
+            /// <para>網路重新導向策略詳細資訊。</para>
             /// <remarks>
-            /// <para>This feature is in invitational preview and is not publicly available.</para>
+            /// <para>該功能處於定向邀測中，暫不對外開放。</para>
             /// </remarks>
             /// </summary>
             [NameInMap("NetRedirectRule")]
@@ -1177,7 +1240,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsNetRedirectRule> NetRedirectRule { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsNetRedirectRule : TeaModel {
                 /// <summary>
-                /// <para>The domain name.</para>
+                /// <para>網域。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>*.example.com</para>
@@ -1187,7 +1250,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// <para>The redirection policy.</para>
+                /// <para>重新導向策略。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>allow</para>
@@ -1197,7 +1260,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Policy { get; set; }
 
                 /// <summary>
-                /// <para>The rule type.</para>
+                /// <para>規則類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>domain</para>
@@ -1209,10 +1272,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The network printer feature switch. Valid values:</para>
+            /// <para>網路印表機功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1223,9 +1286,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkPrinter { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to disconnect the session when no operation is performed.</para>
+            /// <para>無操作中斷連線。</para>
             /// <remarks>
-            /// <para>This applies only to cloud application policies.</para>
+            /// <para>僅適用於雲端應用策略。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1236,9 +1299,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NoOperationDisconnect { get; set; }
 
             /// <summary>
-            /// <para>The idle disconnection duration. Unit: seconds.</para>
+            /// <para>無操作中斷連線時長。單位：秒。</para>
             /// <remarks>
-            /// <para>This applies only to cloud application policies.</para>
+            /// <para>僅適用於雲端應用策略。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1249,7 +1312,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? NoOperationDisconnectTime { get; set; }
 
             /// <summary>
-            /// <para>The number of associated organizations.</para>
+            /// <para>關聯的組織數量。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -1259,7 +1322,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OrganizationCount { get; set; }
 
             /// <summary>
-            /// <para>The policy ID.</para>
+            /// <para>策略ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-gx2x1dhsmthe9****</para>
@@ -1269,7 +1332,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>策略類型。</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -1279,7 +1342,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupType { get; set; }
 
             /// <summary>
-            /// <para>The status of the cloud desktop policy.</para>
+            /// <para>雲端電腦策略狀態。</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE</para>
@@ -1289,10 +1352,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyStatus { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the port proxy feature. Valid values:</para>
+            /// <para>連接埠代理功能開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1303,11 +1366,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PortProxy { get; set; }
 
             /// <summary>
-            /// <para>The printer alert dialog setting. Valid values:</para>
+            /// <para>印表機彈出視窗提示。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>default: Default.</description></item>
-            /// <item><description>off: Disabled.</description></item>
-            /// <item><description>custom: Custom.</description></item>
+            /// <item><description>default：預設值。</description></item>
+            /// <item><description>off：關閉。</description></item>
+            /// <item><description>custom：自訂。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1318,7 +1381,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PrinterAlert { get; set; }
 
             /// <summary>
-            /// <para>The content of the printer alert dialog.</para>
+            /// <para>印表機彈出視窗提示內容。</para>
             /// 
             /// <b>Example:</b>
             /// <para>Print Content.</para>
@@ -1328,7 +1391,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PrinterAlertContent { get; set; }
 
             /// <summary>
-            /// <para>The title of the printer alert dialog.</para>
+            /// <para>印表機彈出視窗提示標題。</para>
             /// 
             /// <b>Example:</b>
             /// <para>Print Title</para>
@@ -1338,7 +1401,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PrinterAlertTitle { get; set; }
 
             /// <summary>
-            /// <para>The printer redirection policy.</para>
+            /// <para>印表機重新導向策略。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1348,7 +1411,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PrinterRedirection { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether image quality enhancement is enabled for design and 3D common scenarios.</para>
+            /// <para>設計及3D應用場景選擇是否開啟畫質增強。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1358,7 +1421,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string QualityEnhancement { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether custom screen recording is enabled.</para>
+            /// <para>是否開啟自訂螢幕錄影。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1368,7 +1431,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordContent { get; set; }
 
             /// <summary>
-            /// <para>The expiration period of custom screen recording files. Default value: 30. Unit: days.</para>
+            /// <para>自訂螢幕錄影的檔案過期時間，預設30天。</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -1378,7 +1441,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? RecordContentExpires { get; set; }
 
             /// <summary>
-            /// <para>The screen recording duration after an event is detected in screen recording audit. Unit: minutes. Valid values: 10 to 60.</para>
+            /// <para>螢幕錄影稽核中偵測到事件發生後螢幕錄影的時長。單位：分鐘。取值範圍：10\~60。</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -1388,21 +1451,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RecordEventDuration { get; set; }
 
             /// <summary>
-            /// <para>The absolute paths for file monitoring in screen recording audit.</para>
+            /// <para>螢幕錄影稽核中的檔案監控絕對路徑。</para>
             /// </summary>
             [NameInMap("RecordEventFilePaths")]
             [Validation(Required=false)]
             public List<string> RecordEventFilePaths { get; set; }
 
             /// <summary>
-            /// <para>The absolute paths for registry monitoring in screen recording audit.</para>
+            /// <para>螢幕錄影稽核中的登錄檔監控絕對路徑。</para>
             /// </summary>
             [NameInMap("RecordEventRegisters")]
             [Validation(Required=false)]
             public List<string> RecordEventRegisters { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether screen recording is enabled.</para>
+            /// <para>是否開啟螢幕錄影。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1412,7 +1475,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Recording { get; set; }
 
             /// <summary>
-            /// <para>The option for recording cloud desktop audio.</para>
+            /// <para>錄製雲端電腦聲音選項。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -1422,7 +1485,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordingAudio { get; set; }
 
             /// <summary>
-            /// <para>The duration of screen recording files, in minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</para>
+            /// <para>螢幕錄影檔案閱覽時長，單位為分鐘。錄製檔案會根據您設定的時長自動分割並上傳至儲存空間，檔案達到300MB時優先滾動更新。</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -1432,7 +1495,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RecordingDuration { get; set; }
 
             /// <summary>
-            /// <para>The end time of screen recording, in the format of HH:MM:SS. This response value is meaningful only when Recording is set to period.</para>
+            /// <para>螢幕錄影結束時間，取值：HH:MM:SS。只有Recording取值是period時，該傳回值有實際意義。</para>
             /// 
             /// <b>Example:</b>
             /// <para>08:59:00</para>
@@ -1442,7 +1505,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordingEndTime { get; set; }
 
             /// <summary>
-            /// <para>The retention period of screen recording files. Valid values: 1 to 180. Unit: days.</para>
+            /// <para>螢幕錄影檔案的保留時間。取值範圍為1\~180天。</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -1452,7 +1515,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? RecordingExpires { get; set; }
 
             /// <summary>
-            /// <para>The frame rate of screen recording. Unit: FPS (frames per second).</para>
+            /// <para>螢幕錄影幀率。單位：FPS（幀/秒）。</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -1462,7 +1525,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? RecordingFps { get; set; }
 
             /// <summary>
-            /// <para>The start time of screen recording, in the format of HH:MM:SS. This response value is meaningful only when Recording is set to period.</para>
+            /// <para>螢幕錄影開始時間，取值：HH:MM:SS。只有Recording取值是period時，該傳回值有實際意義。</para>
             /// 
             /// <b>Example:</b>
             /// <para>08:00:00</para>
@@ -1472,7 +1535,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordingStartTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether end users are notified that screen recording is enabled.</para>
+            /// <para>提示終端客戶已開啟螢幕錄影。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1482,17 +1545,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordingUserNotify { get; set; }
 
             /// <summary>
-            /// <para>The notification message displayed to end users when screen recording is enabled.</para>
+            /// <para>提示終端客戶開啟螢幕錄影的資訊。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Screen recording is enabled</para>
+            /// <para>螢幕錄影已開啟</para>
             /// </summary>
             [NameInMap("RecordingUserNotifyMessage")]
             [Validation(Required=false)]
             public string RecordingUserNotifyMessage { get; set; }
 
             /// <summary>
-            /// <para>The keyboard and mouse control permission for remote assistance.</para>
+            /// <para>遠端協助鍵盤與滑鼠控制權限。</para>
             /// 
             /// <b>Example:</b>
             /// <para>fullControl</para>
@@ -1502,7 +1565,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RemoteCoordinate { get; set; }
 
             /// <summary>
-            /// <para>The setting for resetting the cloud desktop.</para>
+            /// <para>重置雲端電腦。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1512,7 +1575,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResetDesktop { get; set; }
 
             /// <summary>
-            /// <para>The DPI value of the screen resolution.</para>
+            /// <para>螢幕解析度的 DPI 值。</para>
             /// 
             /// <b>Example:</b>
             /// <para>96</para>
@@ -1522,7 +1585,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? ResolutionDpi { get; set; }
 
             /// <summary>
-            /// <para>The resolution height. Unit: pixels.</para>
+            /// <para>解析度的高度。單位：畫素。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1280</para>
@@ -1532,7 +1595,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? ResolutionHeight { get; set; }
 
             /// <summary>
-            /// <para>The resolution type.</para>
+            /// <para>解析度類型。</para>
             /// 
             /// <b>Example:</b>
             /// <para>adaptive</para>
@@ -1542,7 +1605,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResolutionModel { get; set; }
 
             /// <summary>
-            /// <para>The resolution width. Unit: pixels.</para>
+            /// <para>解析度的寬度。單位：畫素。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1920</para>
@@ -1552,7 +1615,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? ResolutionWidth { get; set; }
 
             /// <summary>
-            /// <para>The number of resource groups associated with the policy.</para>
+            /// <para>已關聯該策略的資源群組數量。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1562,10 +1625,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? ResourceGroupCount { get; set; }
 
             /// <summary>
-            /// <para>The security center shortcut key switch. Valid values:</para>
+            /// <para>安全中心快速鍵開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1576,7 +1639,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SafeMenu { get; set; }
 
             /// <summary>
-            /// <para>The scope of the policy.</para>
+            /// <para>策略的生效範圍。</para>
             /// 
             /// <b>Example:</b>
             /// <para>GLOBAL</para>
@@ -1586,14 +1649,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block that the policy applies to.</para>
+            /// <para>生效的 CIDR Block。</para>
             /// </summary>
             [NameInMap("ScopeValue")]
             [Validation(Required=false)]
             public List<string> ScopeValue { get; set; }
 
             /// <summary>
-            /// <para>The screen display mode.</para>
+            /// <para>螢幕顯示模式。</para>
             /// 
             /// <b>Example:</b>
             /// <para>auto</para>
@@ -1603,7 +1666,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ScreenDisplayMode { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether smoothness enhancement is enabled for daily office scenarios.</para>
+            /// <para>日常辦公場景選擇，是否開啟平滑度增強。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1613,7 +1676,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SmoothEnhancement { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the status monitoring entry is provided in the cloud desktop floating ball.</para>
+            /// <para>是否在雲端電腦懸浮球內提供狀態監控功能入口。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -1623,7 +1686,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string StatusMonitor { get; set; }
 
             /// <summary>
-            /// <para>The streaming mode adaptation scenario.</para>
+            /// <para>串流模式適配場景。</para>
             /// 
             /// <b>Example:</b>
             /// <para>smooth</para>
@@ -1633,7 +1696,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string StreamingMode { get; set; }
 
             /// <summary>
-            /// <para>The target frame rate. Valid values: 10 to 60.</para>
+            /// <para>目標幀率，取值範圍：10\~60。</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -1643,9 +1706,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? TargetFps { get; set; }
 
             /// <summary>
-            /// <para>The application taskbar.</para>
+            /// <para>應用程式工作列。</para>
             /// <remarks>
-            /// <para>This applies only to cloud application policies.</para>
+            /// <para>僅適用於雲端應用程式策略。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1656,10 +1719,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Taskbar { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the three-screen feature. Valid values:</para>
+            /// <para>三螢幕開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1670,7 +1733,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ThreeScreen { get; set; }
 
             /// <summary>
-            /// <para>The USB redirection setting.</para>
+            /// <para>USB 重新導向。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1680,24 +1743,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string UsbRedirect { get; set; }
 
             /// <summary>
-            /// <para>The USB redirection rules.</para>
+            /// <para>USB 重新導向規則。</para>
             /// </summary>
             [NameInMap("UsbSupplyRedirectRule")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule> UsbSupplyRedirectRule { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule : TeaModel {
                 /// <summary>
-                /// <para>The rule description.</para>
+                /// <para>規則描述。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test rule</para>
+                /// <para>測試規則</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The product ID.</para>
+                /// <para>產品 ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>08**</para>
@@ -1707,7 +1770,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ProductId { get; set; }
 
                 /// <summary>
-                /// <para>The USB redirection type.</para>
+                /// <para>USB 重新導向類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1717,7 +1780,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? UsbRedirectType { get; set; }
 
                 /// <summary>
-                /// <para>The USB redirection rule type.</para>
+                /// <para>USB 重新導向規則類型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1727,7 +1790,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? UsbRuleType { get; set; }
 
                 /// <summary>
-                /// <para>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</para>
+                /// <para>生產廠商 ID。參見 <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>04**</para>
@@ -1739,10 +1802,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to display the usage duration on the floating ball. Valid values:</para>
+            /// <para>懸浮球使用時長顯示開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1753,7 +1816,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string UseTime { get; set; }
 
             /// <summary>
-            /// <para>The average bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</para>
+            /// <para>影片編碼平均位元率。單位：Kbps。取值範圍：1000\~50000。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -1763,7 +1826,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? VideoEncAvgKbps { get; set; }
 
             /// <summary>
-            /// <para>The maximum QP for video encoding, which represents the lowest quality. Valid values: 0 to 51.</para>
+            /// <para>影片編碼最大 QP，畫面最低品質，取值範圍：0\~51。</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -1773,7 +1836,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? VideoEncMaxQP { get; set; }
 
             /// <summary>
-            /// <para>The minimum QP for video encoding, which represents the highest quality. Valid values: 0 to 51.</para>
+            /// <para>影片編碼最小 QP，最高品質。取值範圍：0\~51。</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -1783,7 +1846,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? VideoEncMinQP { get; set; }
 
             /// <summary>
-            /// <para>The peak bitrate for video encoding. Unit: Kbps. Valid values: 1000 to 50000.</para>
+            /// <para>影片編碼峰值位元率。單位：Kbps。取值範圍：1000~50000。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -1793,7 +1856,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? VideoEncPeakKbps { get; set; }
 
             /// <summary>
-            /// <para>The video encoding policy.</para>
+            /// <para>影片編碼策略。</para>
             /// 
             /// <b>Example:</b>
             /// <para>qualityFirst</para>
@@ -1803,7 +1866,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string VideoEncPolicy { get; set; }
 
             /// <summary>
-            /// <para>The multimedia redirection setting.</para>
+            /// <para>多媒體重新導向。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1813,7 +1876,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string VideoRedirect { get; set; }
 
             /// <summary>
-            /// <para>The image display quality policy.</para>
+            /// <para>影像顯示品質策略。</para>
             /// 
             /// <b>Example:</b>
             /// <para>medium</para>
@@ -1823,7 +1886,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string VisualQuality { get; set; }
 
             /// <summary>
-            /// <para>The watermark setting.</para>
+            /// <para>浮水印。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -1833,7 +1896,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Watermark { get; set; }
 
             /// <summary>
-            /// <para>The invisible watermark anti-camera capture feature.</para>
+            /// <para>隱藏式浮水印防拍照功能。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1843,7 +1906,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkAntiCam { get; set; }
 
             /// <summary>
-            /// <para>The watermark font color. Valid values: 0 to 16777215.</para>
+            /// <para>浮水印字型顏色。取值範圍：0\~16777215。</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1853,7 +1916,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? WatermarkColor { get; set; }
 
             /// <summary>
-            /// <para>If the <c>WatermarkType</c> parameter is set to <c>custom</c>, you must also specify the custom text content by using the <c>WatermarkCustomText</c> parameter.</para>
+            /// <para>若參數 <c>WatermarkType</c> 傳入 <c>custom</c>，則必須同時透過參數 <c>WatermarkCustomText</c> 傳入自訂文字的內容。</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom-watermark</para>
@@ -1863,7 +1926,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkCustomText { get; set; }
 
             /// <summary>
-            /// <para>The watermark tilt angle. Valid values: -10 to -30.</para>
+            /// <para>浮水印傾斜度。取值範圍：-10\~-30。</para>
             /// 
             /// <b>Example:</b>
             /// <para>-10</para>
@@ -1873,7 +1936,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public double? WatermarkDegree { get; set; }
 
             /// <summary>
-            /// <para>The watermark font size. Valid values: 10 to 20.</para>
+            /// <para>浮水印字型大小。取值範圍：10\~20。</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -1883,7 +1946,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? WatermarkFontSize { get; set; }
 
             /// <summary>
-            /// <para>The watermark font style.</para>
+            /// <para>浮水印字型樣式。</para>
             /// 
             /// <b>Example:</b>
             /// <para>plain</para>
@@ -1893,7 +1956,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkFontStyle { get; set; }
 
             /// <summary>
-            /// <para>The invisible watermark enhancement feature.</para>
+            /// <para>隱藏式浮水印增強功能。</para>
             /// 
             /// <b>Example:</b>
             /// <para>medium</para>
@@ -1903,7 +1966,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkPower { get; set; }
 
             /// <summary>
-            /// <para>The number of watermark rows.</para>
+            /// <para>浮水印行數。</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -1913,7 +1976,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? WatermarkRowAmount { get; set; }
 
             /// <summary>
-            /// <para>The invisible watermark security-first rule.</para>
+            /// <para>隱藏式浮水印安全優先規則。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -1923,10 +1986,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkSecurity { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the watermark shadow effect. Valid values:</para>
+            /// <para>浮水印陰影效果開關。取值範圍：</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on：開啟。</description></item>
+            /// <item><description>off：關閉。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1937,7 +2000,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkShadow { get; set; }
 
             /// <summary>
-            /// <para>The watermark transparency. A larger value indicates lower transparency. Valid values: 10 to 100.</para>
+            /// <para>浮水印透明度，值越大，透明度越小。取值範圍：10\~100。</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -1947,7 +2010,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? WatermarkTransparencyValue { get; set; }
 
             /// <summary>
-            /// <para>The watermark type.</para>
+            /// <para>浮水印類型。</para>
             /// 
             /// <b>Example:</b>
             /// <para>EndUserId</para>
@@ -1957,7 +2020,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WatermarkType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable WUYING Keeper.</para>
+            /// <para>無影管家開關。</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -1967,7 +2030,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string WuyingKeeper { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the WUYING AI Assistant entry is provided in the cloud desktop floating ball.</para>
+            /// <para>是否在雲端電腦懸浮球內提供無影 AI 助手功能入口。</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -1979,7 +2042,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>請求 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -1989,7 +2052,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of query results.</para>
+        /// <para>查詢結果總數。</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

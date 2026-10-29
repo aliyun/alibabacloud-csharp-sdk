@@ -1,3 +1,19 @@
+2026-10-29 Version: 5.3.3
+- Update API CreateCenterPolicy: add request parameters AppScreenshotBuckets.
+- Update API CreateCenterPolicy: add request parameters AutoSaveAppScreenshot.
+- Update API CreateCenterPolicy: add request parameters McpService.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.AppScreenshotBuckets.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.AutoSaveAppScreenshot.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.McpService.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.AppScreenshotBuckets.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.AutoSaveAppScreenshot.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.McpService.
+- Update API DescribeResourceByCenterPolicyId: add request parameters ResourceName.
+- Update API ModifyCenterPolicy: add request parameters AppScreenshotBuckets.
+- Update API ModifyCenterPolicy: add request parameters AutoSaveAppScreenshot.
+- Update API ModifyCenterPolicy: add request parameters McpService.
+
+
 2026-10-27 Version: 5.3.2
 - Update API CreateCenterPolicy: add request parameters FolderSync.
 - Update API CreateDesktops: add request parameters HostGpuDriverVersion.

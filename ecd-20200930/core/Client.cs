@@ -6283,7 +6283,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a region-independent Cloud Desktop policy.</para>
+        /// <para>Creates a region-independent cloud desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6320,6 +6320,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AppContentProtection"] = request.AppContentProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppScreenshotBuckets))
+            {
+                query["AppScreenshotBuckets"] = request.AppScreenshotBuckets;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeAccessPolicyRule))
             {
                 query["AuthorizeAccessPolicyRule"] = request.AuthorizeAccessPolicyRule;
@@ -6331,6 +6335,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReconnect))
             {
                 query["AutoReconnect"] = request.AutoReconnect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSaveAppScreenshot))
+            {
+                query["AutoSaveAppScreenshot"] = request.AutoSaveAppScreenshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
@@ -6531,6 +6539,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
             {
                 query["MaxReconnectTime"] = request.MaxReconnectTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpService))
+            {
+                query["McpService"] = request.McpService;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryDownGradeDuration))
             {
@@ -6893,7 +6905,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a region-independent Cloud Desktop policy.</para>
+        /// <para>Creates a region-independent cloud desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6930,6 +6942,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AppContentProtection"] = request.AppContentProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppScreenshotBuckets))
+            {
+                query["AppScreenshotBuckets"] = request.AppScreenshotBuckets;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeAccessPolicyRule))
             {
                 query["AuthorizeAccessPolicyRule"] = request.AuthorizeAccessPolicyRule;
@@ -6941,6 +6957,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReconnect))
             {
                 query["AutoReconnect"] = request.AutoReconnect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSaveAppScreenshot))
+            {
+                query["AutoSaveAppScreenshot"] = request.AutoSaveAppScreenshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
@@ -7141,6 +7161,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
             {
                 query["MaxReconnectTime"] = request.MaxReconnectTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpService))
+            {
+                query["McpService"] = request.McpService;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryDownGradeDuration))
             {
@@ -7503,7 +7527,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a region-independent Cloud Desktop policy.</para>
+        /// <para>Creates a region-independent cloud desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7521,7 +7545,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a region-independent Cloud Desktop policy.</para>
+        /// <para>Creates a region-independent cloud desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19387,7 +19411,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of regionless policies.</para>
+        /// <para>查詢無地域策略的詳細資訊。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19461,7 +19485,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of regionless policies.</para>
+        /// <para>查詢無地域策略的詳細資訊。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19535,7 +19559,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of regionless policies.</para>
+        /// <para>查詢無地域策略的詳細資訊。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19553,7 +19577,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of regionless policies.</para>
+        /// <para>查詢無地域策略的詳細資訊。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20499,7 +20523,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</para>
+        /// <para>Queries the list and basic information of all personal drives in an enterprise drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20557,7 +20581,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</para>
+        /// <para>Queries the list and basic information of all personal drives in an enterprise drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20615,7 +20639,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</para>
+        /// <para>Queries the list and basic information of all personal drives in an enterprise drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20633,7 +20657,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</para>
+        /// <para>Queries the list and basic information of all personal drives in an enterprise drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28619,7 +28643,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computer policies.</para>
+        /// <para>Queries the details of cloud desktop policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28693,7 +28717,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computer policies.</para>
+        /// <para>Queries the details of cloud desktop policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28767,7 +28791,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computer policies.</para>
+        /// <para>Queries the details of cloud desktop policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28785,7 +28809,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computer policies.</para>
+        /// <para>Queries the details of cloud desktop policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30772,6 +30796,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResourceId"] = request.ResourceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -30829,6 +30857,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -40447,7 +40479,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a region-free policy.</para>
+        /// <para>Modifies the configuration of a regionless policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40484,6 +40516,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AppContentProtection"] = request.AppContentProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppScreenshotBuckets))
+            {
+                query["AppScreenshotBuckets"] = request.AppScreenshotBuckets;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeAccessPolicyRule))
             {
                 query["AuthorizeAccessPolicyRule"] = request.AuthorizeAccessPolicyRule;
@@ -40495,6 +40531,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReconnect))
             {
                 query["AutoReconnect"] = request.AutoReconnect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSaveAppScreenshot))
+            {
+                query["AutoSaveAppScreenshot"] = request.AutoSaveAppScreenshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
@@ -40691,6 +40731,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
             {
                 query["MaxReconnectTime"] = request.MaxReconnectTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpService))
+            {
+                query["McpService"] = request.McpService;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryDownGradeDuration))
             {
@@ -41065,7 +41109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a region-free policy.</para>
+        /// <para>Modifies the configuration of a regionless policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41102,6 +41146,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AppContentProtection"] = request.AppContentProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppScreenshotBuckets))
+            {
+                query["AppScreenshotBuckets"] = request.AppScreenshotBuckets;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeAccessPolicyRule))
             {
                 query["AuthorizeAccessPolicyRule"] = request.AuthorizeAccessPolicyRule;
@@ -41113,6 +41161,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReconnect))
             {
                 query["AutoReconnect"] = request.AutoReconnect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSaveAppScreenshot))
+            {
+                query["AutoSaveAppScreenshot"] = request.AutoSaveAppScreenshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
@@ -41309,6 +41361,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReconnectTime))
             {
                 query["MaxReconnectTime"] = request.MaxReconnectTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpService))
+            {
+                query["McpService"] = request.McpService;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryDownGradeDuration))
             {
@@ -41683,7 +41739,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a region-free policy.</para>
+        /// <para>Modifies the configuration of a regionless policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41701,7 +41757,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a region-free policy.</para>
+        /// <para>Modifies the configuration of a regionless policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48347,7 +48403,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
+        /// <para>Modifies the specific settings of a configuration group, such as the configuration of scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48405,7 +48461,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
+        /// <para>Modifies the specific settings of a configuration group, such as the configuration of scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48463,7 +48519,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
+        /// <para>Modifies the specific settings of a configuration group, such as the configuration of scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48481,7 +48537,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
+        /// <para>Modifies the specific settings of a configuration group, such as the configuration of scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">

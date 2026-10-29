@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDriveUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise network drive.</para>
+        /// <para>The ID of the enterprise drive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The end user ID.</para>
-        /// <para>If specified, the query returns only the personal drive of that user. If left empty, the query returns the personal drives of all users.</para>
+        /// <para>The ID of the end user. If this parameter is not empty, only the personal drive of the specified user is queried. If this parameter is empty, the personal drives of all users are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -32,12 +31,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return per page in a paged query. This parameter is used for paging.</para>
         /// <list type="bullet">
-        /// <item><description><para>Maximum: 100.</para>
-        /// </description></item>
-        /// <item><description><para>Default: 10.</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. This is the <c>NextToken</c> value from the previous response. Leave this parameter empty for the first request.</para>
+        /// <para>The pagination token. Set the value to the <c>NextToken</c> value returned in the last call to this operation. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</para>
@@ -58,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. To obtain a list of supported regions, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Wuying Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

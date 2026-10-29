@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer specification. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported specification IDs.</para>
+        /// <para>The cloud computer specification. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported cloud computer specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.enterprise_office.16c64g</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopType { get; set; }
 
         /// <summary>
-        /// <para>The list of IDs of authorized users for the shared cloud computer.</para>
+        /// <para>The IDs of the authorized users of the shared cloud computer.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ImageId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging in a paged query.
+        /// <para>The number of entries to return on each page in a paging query.
         /// Maximum value: 100.
         /// Default value: 10.</para>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the shared cloud computer is a multi-resource shared cloud computer.</para>
+        /// <para>Specifies whether the shared cloud computer is of the multi-resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? MultiResource { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that no more results are available.</para>
+        /// <para>The token that is used to start the next query. An empty value indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The type of the shared cloud computer.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,16 +133,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? OwnType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the shared cloud computer. The unit is specified by PeriodUnit.</para>
+        /// <para>The subscription duration of the shared cloud computer. The unit is specified by <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description>If PeriodUnit is set to Month, valid values:<list type="bullet">
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are:<list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
         /// <item><description>3</description></item>
         /// <item><description>6</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>If PeriodUnit is set to Year, valid values:<list type="bullet">
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are:<list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
         /// <item><description>3</description></item>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The time unit of the subscription billing Billable methods.</para>
+        /// <para>The unit of duration for the subscription Billable methods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bandwidth throttling rule.</para>
+        /// <para>The ID of the QoS rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-5605u0gelk200****</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string QosRuleId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Wuying Cloud Computer.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopGroupsRequestTag> Tag { get; set; }
         public class DescribeDesktopGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The value cannot be an empty string. It can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. The tag key cannot be an empty string. It can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The value can be an empty string. It can be up to 128 characters in length, and cannot start with <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The tag value can be an empty string. It can be up to 128 characters in length, and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

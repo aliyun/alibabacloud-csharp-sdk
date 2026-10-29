@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer policy IDs to exclude from the query results.</para>
+        /// <para>The IDs of the cloud desktop policies to exclude from the query results.</para>
         /// </summary>
         [NameInMap("ExternalPolicyGroupIds")]
         [Validation(Required=false)]
         public List<string> ExternalPolicyGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries to return per page when paging in a paged query.</para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 100.</description></item>
         /// <item><description>Default value: 10.</description></item>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned from the last call to this operation. You do not need to set this parameter for the first request.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the last call to this operation. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page for a paged query.</para>
+        /// <para>The current page number when paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.<br>Default value: 20.</para>
+        /// <para>The maximum number of entries to return per page when paging in a paged query.<br>Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer policy IDs.</para>
+        /// <para>The IDs of the cloud desktop policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system-all-enabled-policy</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Wuying Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the cloud computer policy.</para>
+        /// <para>The effective scope of the cloud desktop policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GLOBAL</para>

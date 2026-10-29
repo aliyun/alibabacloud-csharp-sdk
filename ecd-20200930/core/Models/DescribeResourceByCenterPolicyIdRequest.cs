@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l69tQX7yFxx6/4dbooBAOc</para>
@@ -63,6 +63,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
+
+        /// <summary>
+        /// <para>The resource name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testName</para>
+        /// </summary>
+        [NameInMap("ResourceName")]
+        [Validation(Required=false)]
+        public string ResourceName { get; set; }
 
     }
 
