@@ -11555,6 +11555,194 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
+        /// <list type="bullet">
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
+        /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticSecurityPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticSecurityPoliciesResponse
+        /// </returns>
+        public ListAgenticSecurityPoliciesResponse ListAgenticSecurityPoliciesWithOptions(ListAgenticSecurityPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeArchived))
+            {
+                query["IncludeArchived"] = request.IncludeArchived;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyStatus))
+            {
+                query["PolicyStatus"] = request.PolicyStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticSecurityPolicies",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticSecurityPoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
+        /// <list type="bullet">
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
+        /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticSecurityPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticSecurityPoliciesResponse
+        /// </returns>
+        public async Task<ListAgenticSecurityPoliciesResponse> ListAgenticSecurityPoliciesWithOptionsAsync(ListAgenticSecurityPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeArchived))
+            {
+                query["IncludeArchived"] = request.IncludeArchived;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyStatus))
+            {
+                query["PolicyStatus"] = request.PolicyStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticSecurityPolicies",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticSecurityPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
+        /// <list type="bullet">
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
+        /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticSecurityPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticSecurityPoliciesResponse
+        /// </returns>
+        public ListAgenticSecurityPoliciesResponse ListAgenticSecurityPolicies(ListAgenticSecurityPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAgenticSecurityPoliciesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
+        /// <list type="bullet">
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
+        /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticSecurityPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticSecurityPoliciesResponse
+        /// </returns>
+        public async Task<ListAgenticSecurityPoliciesResponse> ListAgenticSecurityPoliciesAsync(ListAgenticSecurityPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAgenticSecurityPoliciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
         /// </summary>
         /// 

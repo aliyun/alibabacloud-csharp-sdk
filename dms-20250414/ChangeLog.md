@@ -1,3 +1,7 @@
+2026-10-29 Version: 4.4.0
+- Support API ListAgenticSecurityPolicies.
+
+
 2026-10-23 Version: 4.3.2
 - Update API CreateDataAgentSkillMeta: add request parameters SkillId.
 
