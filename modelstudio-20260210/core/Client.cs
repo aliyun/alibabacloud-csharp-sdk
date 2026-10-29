@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account and directly adds it as a member.</para>
+        /// <para>Creates an account and directly adds a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account and directly adds it as a member.</para>
+        /// <para>Creates an account and directly adds a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account and directly adds it as a member.</para>
+        /// <para>Creates an account and directly adds a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account and directly adds it as a member.</para>
+        /// <para>Creates an account and directly adds a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns seats in batches to the member level.</para>
+        /// <para>Assigns seats to member accounts in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns seats in batches to the member level.</para>
+        /// <para>Assigns seats to member accounts in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns seats in batches to the member level.</para>
+        /// <para>Assigns seats to member accounts in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns seats in batches to the member level.</para>
+        /// <para>Assigns seats to member accounts in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes member-level seats in batches.</para>
+        /// <para>Revokes member-level seats in bulk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes member-level seats in batches.</para>
+        /// <para>Revokes member-level seats in bulk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes member-level seats in batches.</para>
+        /// <para>Revokes member-level seats in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes member-level seats in batches.</para>
+        /// <para>Revokes member-level seats in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
+        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -537,7 +537,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
+        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -593,7 +593,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
+        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -612,7 +612,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
+        /// <para>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -631,18 +631,18 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TokenPlan member invitation link.</para>
+        /// <para>Creates an invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A user can have only one valid invitation link at a time.
+        /// <para>A user can have only one valid invitation link.
         /// If the user already has a valid invitation link, this operation returns the existing link.
-        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link first.
-        /// This operation returns only the generated token. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link.
+        /// This operation returns only the generated token. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
-        /// <item><description>For the China site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
+        /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -693,18 +693,18 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TokenPlan member invitation link.</para>
+        /// <para>Creates an invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A user can have only one valid invitation link at a time.
+        /// <para>A user can have only one valid invitation link.
         /// If the user already has a valid invitation link, this operation returns the existing link.
-        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link first.
-        /// This operation returns only the generated token. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link.
+        /// This operation returns only the generated token. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
-        /// <item><description>For the China site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
+        /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -755,18 +755,18 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TokenPlan member invitation link.</para>
+        /// <para>Creates an invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A user can have only one valid invitation link at a time.
+        /// <para>A user can have only one valid invitation link.
         /// If the user already has a valid invitation link, this operation returns the existing link.
-        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link first.
-        /// This operation returns only the generated token. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link.
+        /// This operation returns only the generated token. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
-        /// <item><description>For the China site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
+        /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -786,18 +786,18 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TokenPlan member invitation link.</para>
+        /// <para>Creates an invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A user can have only one valid invitation link at a time.
+        /// <para>A user can have only one valid invitation link.
         /// If the user already has a valid invitation link, this operation returns the existing link.
-        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link first.
-        /// This operation returns only the generated token. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link.
+        /// This operation returns only the generated token. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
-        /// <item><description>For the China site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
+        /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1093,7 +1093,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authentication credential API key.</para>
+        /// <para>Deletes an authentication API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1129,7 +1129,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authentication credential API key.</para>
+        /// <para>Deletes an authentication API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1165,7 +1165,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authentication credential API key.</para>
+        /// <para>Deletes an authentication API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1180,7 +1180,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an authentication credential API key.</para>
+        /// <para>Deletes an authentication API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1200,12 +1200,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <para>You can delete a workspace only if it meets the following conditional requirements:</para>
         /// <ol>
         /// <item><description>The workspace is not the default workspace.</description></item>
-        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
-        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
-        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// <item><description>The workspace is not used to purchase other services, such as AMB.</description></item>
+        /// <item><description>The workspace is not granted to Resource Access Management (RAM) users or RAM roles in permission management.</description></item>
+        /// <item><description>No resources exist in the workspace, such as API keys, model deployments, or knowledge bases.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1251,12 +1251,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <para>You can delete a workspace only if it meets the following conditional requirements:</para>
         /// <ol>
         /// <item><description>The workspace is not the default workspace.</description></item>
-        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
-        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
-        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// <item><description>The workspace is not used to purchase other services, such as AMB.</description></item>
+        /// <item><description>The workspace is not granted to Resource Access Management (RAM) users or RAM roles in permission management.</description></item>
+        /// <item><description>No resources exist in the workspace, such as API keys, model deployments, or knowledge bases.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1302,12 +1302,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <para>You can delete a workspace only if it meets the following conditional requirements:</para>
         /// <ol>
         /// <item><description>The workspace is not the default workspace.</description></item>
-        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
-        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
-        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// <item><description>The workspace is not used to purchase other services, such as AMB.</description></item>
+        /// <item><description>The workspace is not granted to Resource Access Management (RAM) users or RAM roles in permission management.</description></item>
+        /// <item><description>No resources exist in the workspace, such as API keys, model deployments, or knowledge bases.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1332,12 +1332,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <para>You can delete a workspace only if it meets the following conditional requirements:</para>
         /// <ol>
         /// <item><description>The workspace is not the default workspace.</description></item>
-        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
-        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
-        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// <item><description>The workspace is not used to purchase other services, such as AMB.</description></item>
+        /// <item><description>The workspace is not granted to Resource Access Management (RAM) users or RAM roles in permission management.</description></item>
+        /// <item><description>No resources exist in the workspace, such as API keys, model deployments, or knowledge bases.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -1362,7 +1362,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already disabled cannot be disabled again.</para>
+        /// <para>You cannot disable an API key repeatedly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1407,7 +1407,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already disabled cannot be disabled again.</para>
+        /// <para>You cannot disable an API key repeatedly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1452,7 +1452,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already disabled cannot be disabled again.</para>
+        /// <para>You cannot disable an API key repeatedly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1476,7 +1476,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already disabled cannot be disabled again.</para>
+        /// <para>You cannot disable an API key repeatedly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1500,7 +1500,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// <para>You cannot enable an API key multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1545,7 +1545,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// <para>You cannot enable an API key multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1590,7 +1590,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// <para>You cannot enable an API key multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1614,7 +1614,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// <para>You cannot enable an API key multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1735,7 +1735,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bill overview.</para>
+        /// <para>Queries the billing overview.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1764,6 +1764,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             {
                 request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimePeriod))
+            {
+                request.TimePeriodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimePeriod, "timePeriod", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
             {
@@ -1772,6 +1776,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
             {
                 query["filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
             {
@@ -1784,6 +1792,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriodShrink))
+            {
+                query["timePeriod"] = request.TimePeriodShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
             {
@@ -1815,7 +1827,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bill overview.</para>
+        /// <para>Queries the billing overview.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1844,6 +1856,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             {
                 request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimePeriod))
+            {
+                request.TimePeriodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimePeriod, "timePeriod", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
             {
@@ -1852,6 +1868,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
             {
                 query["filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
             {
@@ -1864,6 +1884,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriodShrink))
+            {
+                query["timePeriod"] = request.TimePeriodShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
             {
@@ -1895,7 +1919,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bill overview.</para>
+        /// <para>Queries the billing overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1914,7 +1938,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bill overview.</para>
+        /// <para>Queries the billing overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1933,7 +1957,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bill trends.</para>
+        /// <para>Queries the billing trends.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1979,6 +2003,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             {
                 query["groupBy"] = request.GroupByShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeHistoryPeriod))
+            {
+                query["includeHistoryPeriod"] = request.IncludeHistoryPeriod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
             {
                 query["locale"] = request.Locale;
@@ -2021,7 +2049,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bill trends.</para>
+        /// <para>Queries the billing trends.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2067,6 +2095,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             {
                 query["groupBy"] = request.GroupByShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeHistoryPeriod))
+            {
+                query["includeHistoryPeriod"] = request.IncludeHistoryPeriod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
             {
                 query["locale"] = request.Locale;
@@ -2109,7 +2141,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bill trends.</para>
+        /// <para>Queries the billing trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2128,7 +2160,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bill trends.</para>
+        /// <para>Queries the billing trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2147,12 +2179,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specified organization.</para>
+        /// <para>Retrieves the details of a specified organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a specified organization by OrgId.</para>
+        /// <para>Retrieves the details of a specified organization by using the organization ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2192,12 +2224,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specified organization.</para>
+        /// <para>Retrieves the details of a specified organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a specified organization by OrgId.</para>
+        /// <para>Retrieves the details of a specified organization by using the organization ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2237,12 +2269,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specified organization.</para>
+        /// <para>Retrieves the details of a specified organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a specified organization by OrgId.</para>
+        /// <para>Retrieves the details of a specified organization by using the organization ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2261,12 +2293,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specified organization.</para>
+        /// <para>Retrieves the details of a specified organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves information about a specified organization by OrgId.</para>
+        /// <para>Retrieves the details of a specified organization by using the organization ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2285,7 +2317,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries organization member statistics information, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
+        /// <para>Queries the statistics information of organization members, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2325,7 +2357,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries organization member statistics information, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
+        /// <para>Queries the statistics information of organization members, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2365,7 +2397,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries organization member statistics information, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
+        /// <para>Queries the statistics information of organization members, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2384,7 +2416,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries organization member statistics information, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
+        /// <para>Queries the statistics information of organization members, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2403,7 +2435,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries seat details by paging.</para>
+        /// <para>Performs a paging query on seat details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2469,7 +2501,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries seat details by paging.</para>
+        /// <para>Performs a paging query on seat details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2535,7 +2567,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries seat details by paging.</para>
+        /// <para>Performs a paging query on seat details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2554,7 +2586,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries seat details by paging.</para>
+        /// <para>Performs a paging query on seat details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2573,7 +2605,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of members and seats for member management.</para>
+        /// <para>Queries the member and seat count information for member management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2613,7 +2645,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of members and seats for member management.</para>
+        /// <para>Queries the member and seat count information for member management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2653,7 +2685,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of members and seats for member management.</para>
+        /// <para>Queries the member and seat count information for member management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2672,7 +2704,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of members and seats for member management.</para>
+        /// <para>Queries the member and seat count information for member management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2691,12 +2723,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan account details and organization information.</para>
+        /// <para>Retrieves the details and organization information of a TokenPlan account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the TokenPlan management platform account information when the user is logged in.</para>
+        /// <para>Retrieves the account information from the TokenPlan management platform when logged on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2736,12 +2768,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan account details and organization information.</para>
+        /// <para>Retrieves the details and organization information of a TokenPlan account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the TokenPlan management platform account information when the user is logged in.</para>
+        /// <para>Retrieves the account information from the TokenPlan management platform when logged on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2781,12 +2813,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan account details and organization information.</para>
+        /// <para>Retrieves the details and organization information of a TokenPlan account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the TokenPlan management platform account information when the user is logged in.</para>
+        /// <para>Retrieves the account information from the TokenPlan management platform when logged on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2805,12 +2837,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan account details and organization information.</para>
+        /// <para>Retrieves the details and organization information of a TokenPlan account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the TokenPlan management platform account information when the user is logged in.</para>
+        /// <para>Retrieves the account information from the TokenPlan management platform when logged on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2829,12 +2861,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan member invitation link.</para>
+        /// <para>Retrieves the invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns only the generated token and expiration time. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// <para>This operation returns only the generated token and expiration time. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
         /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
@@ -2878,12 +2910,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan member invitation link.</para>
+        /// <para>Retrieves the invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns only the generated token and expiration time. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// <para>This operation returns only the generated token and expiration time. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
         /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
@@ -2927,12 +2959,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan member invitation link.</para>
+        /// <para>Retrieves the invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns only the generated token and expiration time. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// <para>This operation returns only the generated token and expiration time. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
         /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
@@ -2955,12 +2987,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the TokenPlan member invitation link.</para>
+        /// <para>Retrieves the invitation link for a TokenPlan member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns only the generated token and expiration time. The invitation link is assembled in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c></para>
+        /// <para>This operation returns only the generated token and expiration time. The invitation link is concatenated in the following format: <c>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</c>.</para>
         /// <list type="bullet">
         /// <item><description>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</description></item>
         /// <item><description>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</description></item>
@@ -3441,19 +3473,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model authorizations for a workspace.</para>
+        /// <para>Queries model authorizations in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
-        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
-        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
-        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
-        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
-        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// <item><description>Specify the workspace to query by using <c>workspaceId</c> (required and cannot be empty).</description></item>
+        /// <item><description>Uses token-based pagination: <c>nextToken</c> is a string offset and is not required for the first page. The default value of <c>maxResults</c> is 20. If the value exceeds the upper limit, the <c>InvalidParameter.maxResults</c> error is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> specifies models that are authorized for the specified action, and <c>AUTHORIZABLE</c> specifies all authorizable directories.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently, only <c>INFERENCE</c> is supported. If this parameter is left empty, the default value <c>INFERENCE</c> is used.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match for model and name) or <c>model</c> (exact match for a single model).</description></item>
+        /// <item><description>Returns <c>TokenBasedPage</c>, which contains the authorization status (inference, fine-tuning, and deployment) and throttling information for each model.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3520,19 +3552,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model authorizations for a workspace.</para>
+        /// <para>Queries model authorizations in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
-        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
-        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
-        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
-        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
-        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// <item><description>Specify the workspace to query by using <c>workspaceId</c> (required and cannot be empty).</description></item>
+        /// <item><description>Uses token-based pagination: <c>nextToken</c> is a string offset and is not required for the first page. The default value of <c>maxResults</c> is 20. If the value exceeds the upper limit, the <c>InvalidParameter.maxResults</c> error is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> specifies models that are authorized for the specified action, and <c>AUTHORIZABLE</c> specifies all authorizable directories.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently, only <c>INFERENCE</c> is supported. If this parameter is left empty, the default value <c>INFERENCE</c> is used.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match for model and name) or <c>model</c> (exact match for a single model).</description></item>
+        /// <item><description>Returns <c>TokenBasedPage</c>, which contains the authorization status (inference, fine-tuning, and deployment) and throttling information for each model.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3599,19 +3631,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model authorizations for a workspace.</para>
+        /// <para>Queries model authorizations in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
-        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
-        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
-        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
-        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
-        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// <item><description>Specify the workspace to query by using <c>workspaceId</c> (required and cannot be empty).</description></item>
+        /// <item><description>Uses token-based pagination: <c>nextToken</c> is a string offset and is not required for the first page. The default value of <c>maxResults</c> is 20. If the value exceeds the upper limit, the <c>InvalidParameter.maxResults</c> error is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> specifies models that are authorized for the specified action, and <c>AUTHORIZABLE</c> specifies all authorizable directories.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently, only <c>INFERENCE</c> is supported. If this parameter is left empty, the default value <c>INFERENCE</c> is used.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match for model and name) or <c>model</c> (exact match for a single model).</description></item>
+        /// <item><description>Returns <c>TokenBasedPage</c>, which contains the authorization status (inference, fine-tuning, and deployment) and throttling information for each model.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3631,19 +3663,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model authorizations for a workspace.</para>
+        /// <para>Queries model authorizations in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
-        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
-        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
-        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
-        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
-        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// <item><description>Specify the workspace to query by using <c>workspaceId</c> (required and cannot be empty).</description></item>
+        /// <item><description>Uses token-based pagination: <c>nextToken</c> is a string offset and is not required for the first page. The default value of <c>maxResults</c> is 20. If the value exceeds the upper limit, the <c>InvalidParameter.maxResults</c> error is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> specifies models that are authorized for the specified action, and <c>AUTHORIZABLE</c> specifies all authorizable directories.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently, only <c>INFERENCE</c> is supported. If this parameter is left empty, the default value <c>INFERENCE</c> is used.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match for model and name) or <c>model</c> (exact match for a single model).</description></item>
+        /// <item><description>Returns <c>TokenBasedPage</c>, which contains the authorization status (inference, fine-tuning, and deployment) and throttling information for each model.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3663,7 +3695,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型元数据-查询基础模型列表</para>
+        /// <para>Queries a list of models.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3755,7 +3787,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型元数据-查询基础模型列表</para>
+        /// <para>Queries a list of models.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3847,7 +3879,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型元数据-查询基础模型列表</para>
+        /// <para>Queries a list of models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3866,7 +3898,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型元数据-查询基础模型列表</para>
+        /// <para>Queries a list of models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3885,7 +3917,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries a list of organization members, including seat information. Supports filtering by name, status, and seat allocation status, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3947,7 +3979,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries a list of organization members, including seat information. Supports filtering by name, status, and seat allocation status, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4009,7 +4041,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries a list of organization members, including seat information. Supports filtering by name, status, and seat allocation status, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4028,7 +4060,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries a list of organization members, including seat information. Supports filtering by name, status, and seat allocation status, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4623,7 +4655,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a TokenPlan member invitation link.</para>
+        /// <para>Revokes the TokenPlan member invitation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4663,7 +4695,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a TokenPlan member invitation link.</para>
+        /// <para>Revokes the TokenPlan member invitation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4703,7 +4735,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a TokenPlan member invitation link.</para>
+        /// <para>Revokes the TokenPlan member invitation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4722,7 +4754,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes a TokenPlan member invitation link.</para>
+        /// <para>Revokes the TokenPlan member invitation link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4746,7 +4778,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API Key value changes. The API Key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4797,7 +4829,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API Key value changes. The API Key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4848,7 +4880,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API Key value changes. The API Key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4872,7 +4904,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the API Key value changes. The API Key ID remains unchanged.</para>
+        /// <para>Only the API key changes. The API key ID remains unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5029,7 +5061,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an API Key authentication credential.</para>
+        /// <para>Modifies the information of an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5081,7 +5113,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an API Key authentication credential.</para>
+        /// <para>Modifies the information of an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5133,7 +5165,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an API Key authentication credential.</para>
+        /// <para>Modifies the information of an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5152,7 +5184,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an API Key authentication credential.</para>
+        /// <para>Modifies the information of an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5171,7 +5203,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// <para>Updates the model throttling settings for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5227,7 +5259,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// <para>Updates the model throttling settings for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5283,7 +5315,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// <para>Updates the model throttling settings for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5302,7 +5334,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// <para>Updates the model throttling settings for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5321,7 +5353,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates model authorization for a workspace.</para>
+        /// <para>Updates the model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5375,7 +5407,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates model authorization for a workspace.</para>
+        /// <para>Updates the model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5429,7 +5461,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates model authorization for a workspace.</para>
+        /// <para>Updates the model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5448,7 +5480,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates model authorization for a workspace.</para>
+        /// <para>Updates the model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5467,7 +5499,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies organization information.</para>
+        /// <para>Modifies the organization information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5517,7 +5549,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies organization information.</para>
+        /// <para>Modifies the organization information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5567,7 +5599,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies organization information.</para>
+        /// <para>Modifies the organization information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5586,7 +5618,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies organization information.</para>
+        /// <para>Modifies the organization information.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the workspace is successfully deleted. Valid values:</para>
+        /// <para>Indicates whether the deletion is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Succeeded.</para>
+        /// <item><description><para>true: successful</para>
         /// </description></item>
-        /// <item><description><para>false: Failed.</para>
+        /// <item><description><para>false: failed</para>
         /// </description></item>
         /// </list>
         /// 
@@ -97,8 +97,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Succeeded.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: successful</description></item>
+        /// <item><description>false: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

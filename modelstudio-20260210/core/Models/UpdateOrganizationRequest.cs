@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class UpdateOrganizationRequest : TeaModel {
         /// <summary>
-        /// <para>The organization description.</para>
+        /// <para>The description of the organization.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>新的组织描述</para>
+        /// <para>New organization description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The organization name.</para>
+        /// <para>The name of the organization.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>新的组织名称</para>
+        /// <para>New organization name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

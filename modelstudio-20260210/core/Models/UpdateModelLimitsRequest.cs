@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The throttling values for the workspace.</para>
+        /// <para>The throttling limits for the workspace.</para>
         /// </summary>
         [NameInMap("workspaceLimits")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <para>The throttling operation type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>OVERLAY</b>: Sets or overwrites the throttling configuration.</description></item>
-            /// <item><description><b>DELETE</b>: Deletes the throttling configuration (restores to no throttling).</description></item>
+            /// <item><description><b>DELETE</b>: Deletes the throttling configuration to restore the unlimited state.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The request throttling value.</para>
+            /// <para>The request throttling limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? RequestLimit { get; set; }
 
             /// <summary>
-            /// <para>The time period for request throttling. Unit: seconds.</para>
+            /// <para>The time period for request throttling, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? RequestLimitPeriod { get; set; }
 
             /// <summary>
-            /// <para>The usage throttling value.</para>
+            /// <para>The usage throttling limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? UsageLimit { get; set; }
 
             /// <summary>
-            /// <para>The time period for usage throttling. Unit: seconds.</para>
+            /// <para>The time period for usage throttling, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>账号名称</para>
+        /// <para>Account name</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The organization role code. Only ORG_ADMIN or ORG_MEMBER is allowed. Default value: ORG_MEMBER.</para>
+        /// <para>The organization role code. Valid values: ORG_ADMIN and ORG_MEMBER. Default value: ORG_MEMBER.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>The seat specification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: standard seat.</description></item>
-        /// <item><description>pro: premium seat.</description></item>
-        /// <item><description>max: exclusive seat.</description></item>
+        /// <item><description>standard: Standard seat.</description></item>
+        /// <item><description>pro: Pro seat.</description></item>
+        /// <item><description>max: Premium seat.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

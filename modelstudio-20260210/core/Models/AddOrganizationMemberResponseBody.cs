@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the seat was assigned successfully.</para>
+            /// <para>Indicates whether the seat is assigned successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

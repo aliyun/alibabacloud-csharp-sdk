@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListOrganizationMembersRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to filter by seat assignment.</para>
+        /// <para>Specifies whether to filter by seat allocation status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public bool? HasSeat { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy filter by member name. Matches accountName or email, case-insensitive.</para>
+        /// <para>The fuzzy filter for the member name. It matches the accountName or email and is case-insensitive.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MemberName</para>
+        /// <para>Member name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by member status, such as ACTIVE or FROZEN. A value of null indicates no filtering.</para>
+        /// <para>The filter for the member status, such as ACTIVE or FROZEN. A null value indicates no filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>

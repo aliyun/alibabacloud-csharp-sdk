@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string ItemsShrink { get; set; }
 
         /// <summary>
-        /// <para>The language. Valid values: zh-CN and en-US.</para>
+        /// <para>The locale. Valid values: zh-CN and en-US.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>

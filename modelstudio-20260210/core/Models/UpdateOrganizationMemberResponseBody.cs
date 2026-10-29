@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class UpdateOrganizationMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is empty if the operation is successful.</para>
+        /// <para>The error code. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is empty if the operation is successful.</para>
+        /// <para>The error message. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9531C132-DF05-5C7F-8BB0-96EA8C4D00D7</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public UpdateOrganizationResponseBodyData Data { get; set; }
         public class UpdateOrganizationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The organization description.</para>
+            /// <para>The description of the organization.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>组织描述</para>
+            /// <para>Organization description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the organization was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T02:19:27Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The time when the organization was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-08 13:59:11</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The organization name.</para>
+            /// <para>The name of the organization.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>组织名称</para>
+            /// <para>Organization name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The product namespace ID.</para>
+            /// <para>The ID of the product namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namespace-1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// <para>The organization ID.</para>
+            /// <para>The ID of the organization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>org_123456789</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The business account identifier of the organization owner. The value is aliyunUid for the ALIYUN type and userIdentifier for the SSO type.</para>
+            /// <para>The business account identifier of the organization owner. For the ALIYUN type, the value is aliyunUid. For the SSO type, the value is userIdentifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1269388320468566</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC0B0D42-A88C-55F5-AF48-498B8207F6BC</para>
@@ -153,10 +153,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

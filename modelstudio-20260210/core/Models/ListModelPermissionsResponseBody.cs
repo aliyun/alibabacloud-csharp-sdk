@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListModelPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This value is empty when the call is successful.</para>
+        /// <para>The error code. This parameter is empty if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The model name.</para>
+            /// <para>The name of the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public ListModelPermissionsResponseBodyListPermissions Permissions { get; set; }
             public class ListModelPermissionsResponseBodyListPermissions : TeaModel {
                 /// <summary>
-                /// <para>The model deployment authorization. A value of true indicates that the model has been granted authorization. A value of false indicates that the model has not been granted authorization.</para>
+                /// <para>The model deployment permission. A value of true indicates that the model is authorized for deployment. A value of false indicates that the model is not authorized.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public bool? Deploy { get; set; }
 
                 /// <summary>
-                /// <para>The model training authorization. A value of true indicates that the model has been granted training authorization. A value of false indicates that the model has not been granted authorization.</para>
+                /// <para>The model training permission. A value of true indicates that the model is authorized for fine-tuning. A value of false indicates that the model is not authorized.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public bool? FineTune { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model has inference permission. A value of true indicates that the model is authorized. A value of false indicates that the model is not authorized.</para>
+                /// <para>The model invocation permission. A value of true indicates that the model is authorized for inference. A value of false indicates that the model is not authorized.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per request.</para>
+        /// <para>The maximum number of records returned in a single call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next request.</para>
+        /// <para>The pagination token for the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lwytFRtLdNk=</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36045E0A-551D-592D-B1BC-4C56596CE59E</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

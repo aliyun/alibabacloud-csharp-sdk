@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class GetBillingTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The dimension filter conditions.</para>
+        /// <para>The dimension filter condition.</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public GetBillingTrendRequestFilter Filter { get; set; }
         public class GetBillingTrendRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The dimension filter list.</para>
+            /// <para>The list of dimension filters.</para>
             /// </summary>
             [NameInMap("dimensions")]
             [Validation(Required=false)]
             public List<GetBillingTrendRequestFilterDimensions> Dimensions { get; set; }
             public class GetBillingTrendRequestFilterDimensions : TeaModel {
                 /// <summary>
-                /// <para>The filter dimension code. For more information, see the &quot;Additional information&quot; section below.</para>
+                /// <para>The filter dimension code. For more information, see the &quot;Additional notes&quot; section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CHARGE_TYPE</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The filter method.</para>
+                /// <para>The filtering method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IN</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string SelectType { get; set; }
 
                 /// <summary>
-                /// <para>The filter value list.</para>
+                /// <para>The list of filter values.</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The grouping conditions. This parameter must contain one and only one element.</para>
+        /// <para>The grouping condition. This parameter must contain exactly one element.</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]
         public List<GetBillingTrendRequestGroupBy> GroupBy { get; set; }
         public class GetBillingTrendRequestGroupBy : TeaModel {
             /// <summary>
-            /// <para>The grouping dimension code. For more information, see the &quot;Additional information&quot; section below.</para>
+            /// <para>The grouping dimension code. For more information, see the &quot;Additional notes&quot; section below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BASE_MODEL</para>
@@ -84,7 +84,17 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The response language. Default value: en-US.</para>
+        /// <para>Specifies whether to query the previous non-overlapping period of the same length. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("includeHistoryPeriod")]
+        [Validation(Required=false)]
+        public bool? IncludeHistoryPeriod { get; set; }
+
+        /// <summary>
+        /// <para>The language of the response. Default value: en-US.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -104,7 +114,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The query time range, including the start time and end time. This parameter is required.</para>
+        /// <para>The time range to query, including the start time and end time. This parameter is required.</para>
         /// </summary>
         [NameInMap("timePeriod")]
         [Validation(Required=false)]
@@ -133,7 +143,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Others&quot;.</para>
+        /// <para>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Other&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -143,7 +153,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? TopNum { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter out groups with a zero amount. Default value: true.</para>
+        /// <para>Specifies whether to filter out groups with an amount of 0. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

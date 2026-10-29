@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class BatchRevokeSeatsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is empty if the request was successful.</para>
+        /// <para>The error code. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is empty if the request was successful.</para>
+        /// <para>The error message. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

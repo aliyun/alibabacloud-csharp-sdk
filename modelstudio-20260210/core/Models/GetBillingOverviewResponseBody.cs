@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class GetBillingOverviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request result code.</para>
+        /// <para>The result code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The bill overview data.</para>
+        /// <para>The billing overview data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The top N groups sorted by amount in descending order.</para>
+            /// <para>The list of top N groups sorted by amount in descending order.</para>
             /// </summary>
             [NameInMap("groups")]
             [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string Amount { get; set; }
 
                 /// <summary>
-                /// <para>The list of commodity codes associated with the current group.</para>
+                /// <para>The list of commodity codes involved in the current group.</para>
                 /// </summary>
                 [NameInMap("articleCodes")]
                 [Validation(Required=false)]
                 public List<string> ArticleCodes { get; set; }
 
                 /// <summary>
-                /// <para>The grouping dimension value. A null value is returned as DIMENSION_FILTER_NULL_VALUE.</para>
+                /// <para>The value of the grouping dimension. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>inference</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the group, which is affected by the locale parameter. A null value is displayed as -.</para>
+                /// <para>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Model invocation</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ratio of the group amount to the total amount of the top N groups.</para>
+                /// <para>The proportion of the group amount to the total amount of the top N groups.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.10</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The request result message.</para>
+        /// <para>The description of the request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

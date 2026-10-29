@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public CreateApiKeyResponseBodyApiKey ApiKey { get; set; }
         public class CreateApiKeyResponseBodyApiKey : TeaModel {
             /// <summary>
-            /// <para>API Key ID。</para>
+            /// <para>The API key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1858636</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <summary>
             /// <para>The value of the API key.</para>
             /// <remarks>
-            /// <para>Notice: Copy your API key immediately. Store it securely. Anyone who obtains this key can initiate service requests on your behalf and incur charges. If you lose the key, you can reset it or create a new one.</para>
+            /// <para>Notice: Copy your API key immediately. Keep it secure. Anyone who obtains this key can initiate service requests and incur charges on your behalf. If the key is lost, you can reset it or create a new one.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -122,10 +122,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Succeeded.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

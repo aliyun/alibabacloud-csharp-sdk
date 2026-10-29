@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <para>The description of the key.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>APIKEY描述</para>
+        /// <para>API key description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

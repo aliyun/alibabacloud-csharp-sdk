@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public List<string> AccountIds { get; set; }
 
         /// <summary>
-        /// <para>The code of the new role. When you perform a batch operation, all specified accounts are changed to this role.</para>
+        /// <para>The code of the new role. In batch operations, this role is applied to all specified accounts.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

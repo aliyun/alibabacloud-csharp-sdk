@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <para>The organization description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>组织描述</para>
+            /// <para>Organization description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-13T02:11:56Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <para>The organization name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>组织名称</para>
+            /// <para>Organization name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The business account identifier of the organization owner. The value is aliyunUid for the ALIYUN type and userIdentifier for the SSO type.</para>
+            /// <para>The business account identifier of the organization owner. For the ALIYUN type, the value is aliyunUid. For the SSO type, the value is userIdentifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1543686331379464</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The status. Valid values: ACTIVE and FROZEN.</para>
+            /// <para>The status of the organization. Valid values: ACTIVE and FROZEN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CB5868D-C6E5-59A6-A20A-C39EB2E75BDE</para>

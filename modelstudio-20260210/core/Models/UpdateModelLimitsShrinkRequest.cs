@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The throttling values for the workspace.</para>
+        /// <para>The throttling limits for the workspace.</para>
         /// </summary>
         [NameInMap("workspaceLimits")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class UpdateModelPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is empty when the call is successful.</para>
+        /// <para>The error code. This parameter is empty if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is empty when the call is successful.</para>
+        /// <para>The error message. This parameter is empty if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameter is invalid</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36045E0A-551D-592D-B1BC-4C56596CE59E</para>

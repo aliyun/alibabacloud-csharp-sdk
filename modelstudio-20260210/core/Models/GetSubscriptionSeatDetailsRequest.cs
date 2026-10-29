@@ -30,7 +30,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The seat assignment status filter. Set to true for assigned seats, false for unassigned seats, or null for all seats.</para>
+        /// <para>The filter for the seat assignment status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: assigned</description></item>
+        /// <item><description>false: unassigned</description></item>
+        /// <item><description>null: all</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -52,9 +57,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>The seat type (specType). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: standard seat.</description></item>
-        /// <item><description>pro: pro seat.</description></item>
-        /// <item><description>max: premium seat.</description></item>
+        /// <item><description>standard: standard seat</description></item>
+        /// <item><description>pro: advanced seat</description></item>
+        /// <item><description>max: premium seat</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +70,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string SeatType { get; set; }
 
         /// <summary>
-        /// <para>The list of seat statuses used for filtering.</para>
+        /// <para>The list of seat statuses for filtering.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]

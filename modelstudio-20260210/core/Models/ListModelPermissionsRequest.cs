@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListModelPermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The authorization query dimension. Valid values:</para>
+        /// <para>The query dimension for the authorization scope.</para>
         /// <list type="bullet">
-        /// <item><description><b>AUTHORIZED</b>: models that have been authorized for the specified modelAction. Use this value together with modelAction.</description></item>
-        /// <item><description><b>AUTHORIZABLE</b>: full authorizable catalog.</description></item>
+        /// <item><description><b>AUTHORIZED</b>: models that are authorized for the specified modelAction. This value must be used together with modelAction.</description></item>
+        /// <item><description><b>AUTHORIZABLE</b>: all authorizable directories.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Default value: 20. If the upper limit is exceeded, the error code InvalidParameter.maxResults is returned.</para>
+        /// <para>The maximum number of entries to return on each page. Default value: 20. If the value exceeds the upper limit, the <c>InvalidParameter.maxResults</c> error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The authorization action dimension. Valid values:</para>
+        /// <para>The authorization action dimension.</para>
         /// <list type="bullet">
-        /// <item><description><b>INFERENCE</b>: model inference authorization.</description></item>
+        /// <item><description><b>INFERENCE</b>: model invocation authorization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string ModelAction { get; set; }
 
         /// <summary>
-        /// <para>The pagination token (offset) for the next page. Do not pass this parameter for the first page.</para>
+        /// <para>The pagination token that is used to retrieve the next page. This parameter is not required for the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lwytFRtLdNk=</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. This parameter is required and cannot be empty.</para>
+        /// <para>The ID of the workspace. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

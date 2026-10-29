@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public List<string> AccountIds { get; set; }
 
         /// <summary>
-        /// <para>The language. Valid values: zh-CN and en-US.</para>
+        /// <para>The locale. Valid values: zh-CN and en-US.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>The seat type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard: standard seat</description></item>
-        /// <item><description>pro: pro seat</description></item>
-        /// <item><description>max: premium seat</description></item>
+        /// <item><description>standard: Standard seat.</description></item>
+        /// <item><description>pro: Pro seat.</description></item>
+        /// <item><description>max: Max seat.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data result of the current category statistics.</para>
+        /// <para>The statistical data results for the current category.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTokenPlanOrgInviteConfigResponseBodyData Data { get; set; }
         public class GetTokenPlanOrgInviteConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The default organization role ID to assign. Valid values:</para>
+            /// <para>The ID of the default assigned organization role. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SYSTEM_ROLE_ORG_ADMIN</description></item>
             /// <item><description>SYSTEM_ROLE_ORG_MEMBER</description></item>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The default seat allocation strategy. Valid values:</para>
+            /// <para>The default seat assignment strategy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HIGH_TO_LOW</description></item>
             /// <item><description>LOW_TO_HIGH </description></item>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>

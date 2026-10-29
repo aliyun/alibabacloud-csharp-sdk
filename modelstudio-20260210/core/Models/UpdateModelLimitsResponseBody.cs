@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class UpdateModelLimitsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is empty when the request is successful.</para>
+        /// <para>The error code. This parameter is empty if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E4C14AE6-E987-5C2F-9230-9960AB48F4F2</para>

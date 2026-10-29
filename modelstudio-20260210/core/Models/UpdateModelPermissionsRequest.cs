@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class UpdateModelPermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The tri-state value for one-click authorization. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>OPEN: grants authorization to all models with one click.</description></item>
-        /// <item><description>CLOSE: cancels one-click authorization.</description></item>
-        /// <item><description>KEEP: keeps per-model authorization.</description></item>
-        /// </list>
+        /// <para>The tri-state configuration for one-click authorization. Valid values: OPEN: enables one-click authorization. CLOSE: cancels one-click authorization. KEEP: retains model-by-model authorization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OPEN</para>
@@ -25,28 +20,28 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string AccessAllEntities { get; set; }
 
         /// <summary>
-        /// <para>The list of per-model authorization items.</para>
+        /// <para>The list of model-by-model authorization items.</para>
         /// </summary>
         [NameInMap("models")]
         [Validation(Required=false)]
         public List<UpdateModelPermissionsRequestModels> Models { get; set; }
         public class UpdateModelPermissionsRequestModels : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to grant model deployment permission.</para>
+            /// <para>Specifies whether to grant the model deployment permission.</para>
             /// </summary>
             [NameInMap("deploy")]
             [Validation(Required=false)]
             public bool? Deploy { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to grant model training permission.</para>
+            /// <para>Specifies whether to grant the model training permission.</para>
             /// </summary>
             [NameInMap("fineTune")]
             [Validation(Required=false)]
             public bool? FineTune { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to grant model invocation permission.</para>
+            /// <para>Specifies whether to grant the model invocation permission.</para>
             /// </summary>
             [NameInMap("inference")]
             [Validation(Required=false)]

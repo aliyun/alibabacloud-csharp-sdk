@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud UID. This parameter applies only to accounts of the ALIYUN type.</para>
+            /// <para>The Alibaba Cloud UID of an ALIYUN account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1122334455</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string AliyunUid { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Thu May 28 14:33:52 CST 2026</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The email address. This parameter applies only to accounts of the SSO type.</para>
+            /// <para>The email address of an SSO account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@email.com">test@email.com</a></para>
@@ -82,7 +82,11 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The global status of the account. A value of 0 indicates Normal. A value of 1 indicates Frozen.</para>
+            /// <para>The global status of the account. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Normal.</description></item>
+            /// <item><description>1: Frozen.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -102,14 +106,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of organization memberships in a tree structure (organization → workspace).</para>
+            /// <para>The list of organization memberships in a tree structure from organization to workspace.</para>
             /// </summary>
             [NameInMap("OrgMemberships")]
             [Validation(Required=false)]
             public List<GetTokenPlanAccountDetailResponseBodyDataOrgMemberships> OrgMemberships { get; set; }
             public class GetTokenPlanAccountDetailResponseBodyDataOrgMemberships : TeaModel {
                 /// <summary>
-                /// <para>The organization member status. Valid values:</para>
+                /// <para>The status of the organization member. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ACTIVE </description></item>
                 /// <item><description>INITIAL </description></item>
@@ -168,7 +172,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     /// <summary>
                     /// <para>The member status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ACTIVE </description></item>
+                    /// <item><description>ACTIVE</description></item>
                     /// <item><description>FROZEN</description></item>
                     /// </list>
                     /// 
@@ -240,7 +244,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C0DC05D9-C506-519B-AFF3-2B00165176E4</para>
@@ -252,8 +256,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

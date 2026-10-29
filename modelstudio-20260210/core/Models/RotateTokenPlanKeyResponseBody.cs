@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public RotateTokenPlanKeyResponseBodyData Data { get; set; }
         public class RotateTokenPlanKeyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API Key ID, which is system-generated.</para>
+            /// <para>The system-generated API key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ak_123456</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string ApiKeyId { get; set; }
 
             /// <summary>
-            /// <para>The new masked_api_key returned by BaiLian, such as sk_***cdef.</para>
+            /// <para>The new masked API key returned by Model Studio, such as sk_***cdef.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk_***6</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string MaskedApiKey { get; set; }
 
             /// <summary>
-            /// <para>The new plaintext API Key returned by BaiLian. This value is returned only once during the reset operation.</para>
+            /// <para>The new plaintext API key returned by Model Studio. This key is returned only once upon reset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-ws.abc123456</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string PlainApiKey { get; set; }
 
             /// <summary>
-            /// <para>The time when the API key was reset.</para>
+            /// <para>The reset time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-18T03:19:17Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string ResetAt { get; set; }
 
             /// <summary>
-            /// <para>The source_id returned by BaiLian.</para>
+            /// <para>The source_id returned by Model Studio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public GetSubscriptionStatsResponseBodyData Data { get; set; }
         public class GetSubscriptionStatsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of seat information, grouped by specType.</para>
+            /// <para>The list of seat information grouped by specType.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public long? AssignedSeats { get; set; }
 
                 /// <summary>
-                /// <para>The total credits quota for the seat.</para>
+                /// <para>The total credits quota for seats.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public double? SeatCredits { get; set; }
 
                 /// <summary>
-                /// <para>The refresh time of the current cycle, in milliseconds.</para>
+                /// <para>The refresh time of the current cycle in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1781422734</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             }
 
             /// <summary>
-            /// <para>The subscription end time, in milliseconds.</para>
+            /// <para>The subscription end time in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1781422734</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? SubscriptionEndTime { get; set; }
 
             /// <summary>
-            /// <para>The subscription start time, in milliseconds.</para>
+            /// <para>The subscription start time in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1781422733</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>
