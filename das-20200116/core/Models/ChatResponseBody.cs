@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>direct_skill_rejected</para>
+        /// 
         /// <b>Example:</b>
         /// <para>direct_skill_rejected</para>
         /// </summary>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The display name of the child agent for STEP_STARTED.</para>
+        /// <para>The display name of the sub-agent for STEP_STARTED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL performance diagnostics</para>
@@ -78,6 +80,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Label { get; set; }
 
         /// <summary>
+        /// <para>[HdmApiClient] instance is not managed by the agent</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[HdmApiClient] instance is not managed by the agent</para>
         /// </summary>
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The execution step name.</para>
+        /// <para>The name of the execution step.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sub_agent_performance_diagnose_mysql</para>
@@ -206,7 +210,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Timestamp { get; set; }
 
         /// <summary>
-        /// <para>The error that occurred when invoking the tool.</para>
+        /// <para>The fault that occurs when you invoke tool calling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>error</para>
@@ -216,7 +220,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ToolCallError { get; set; }
 
         /// <summary>
-        /// <para>The tool call ID.</para>
+        /// <para>The ID of the tool calling to invoke.</para>
         /// 
         /// <b>Example:</b>
         /// <para>call_edf9cdb69e0e4c9796a6a5a6</para>
