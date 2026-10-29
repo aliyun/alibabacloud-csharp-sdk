@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListPublishedAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID used for filtering delivery groups. Substring matching is supported. The delivery group must contain a deployed application that matches the condition. If this parameter is not specified or is set to an empty string, no filtering by application ID is applied. When specified together with <c>AppName</c>, the same application must satisfy both conditions.</para>
-        /// <para>This condition does not trim the returned <c>Apps</c> list.</para>
+        /// <para>The ID of the application used to filter delivery groups. Partial matching is supported. The delivery group must contain a deployed application that meets the condition. If this parameter is not specified or is set to an empty string, the results are not filtered by application ID. If this parameter is specified together with <c>AppName</c>, both conditions must be met by the same application.</para>
+        /// <para>This condition does not restrict the returned <c>Apps</c> list to the matched applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-i87mycyn419nu****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group ID used for filtering. Substring matching is supported. You can pass in a full ID or a consecutive segment of the ID. If this parameter is not specified or is set to an empty string, no filtering by ID is applied. This parameter can be used together with other filter conditions. Results must satisfy all conditions simultaneously.</para>
+        /// <para>The ID of the delivery group used for filtering. Partial matching is supported. You can pass the complete ID or a continuous segment of it. If this parameter is not specified or is set to an empty string, the results are not filtered by ID. This parameter can be used together with other filter conditions, and the results must meet all conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -31,29 +31,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group name used for filtering. Substring matching is supported. For example, if you pass in <c>OfficeApps</c>, delivery groups whose names contain this text are matched. If this parameter is not specified or is set to an empty string, no filtering by name is applied. When specified together with the delivery group ID, both the ID and name must match.</para>
+        /// <para>The name of the delivery group used for filtering. Partial matching is supported. For example, if you pass <c>Office applications</c>, delivery groups whose names contain this text are matched. If this parameter is not specified or is set to an empty string, the results are not filtered by name. If this parameter is specified together with the delivery group ID, both the ID and the name must be matched.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OfficeApps</para>
+        /// <para>Office applications</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The application name used for filtering delivery groups. Substring matching is supported. The delivery group must contain a deployed application whose name includes the specified text. If this parameter is not specified or is set to an empty string, no filtering by application name is applied. When specified together with <c>AppId</c>, the same application must satisfy both conditions.</para>
-        /// <para>This condition does not trim the returned <c>Apps</c> list.</para>
+        /// <para>The name of the application used to filter delivery groups. Partial matching is supported. The delivery group must contain a deployed application whose name contains the specified text. If this parameter is not specified or is set to an empty string, the results are not filtered by application name. If this parameter is specified together with <c>AppId</c>, both conditions must be met by the same application.</para>
+        /// <para>This condition does not restrict the returned <c>Apps</c> list to the matched applications.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OfficeApps</para>
+        /// <para>Office applications</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The username to exclude based on existing authorization. Exact username matching is used, for example, <c>alice</c>. When specified, delivery groups in which all applications have been directly authorized to this user are excluded. If this parameter is not specified or is set to an empty string, no exclusion based on user authorization is applied.</para>
-        /// <para><b>Authorization granted for individual applications only, or access permissions obtained through user groups, is not fully evaluated by this condition.</b> Do not treat the returned results as a complete list of delivery groups that the user has no access permissions to.</para>
+        /// <para>The username to be excluded based on existing authorizations. Exact match by full username is supported, such as <c>alice</c>. If this parameter is specified, delivery groups for which all applications have been directly authorized to the user are excluded. If this parameter is not specified or is set to an empty string, the results are not filtered by user authorization status.</para>
+        /// <para><b>Authorizations for a single application or access permissions obtained through user groups are not fully evaluated by this condition.</b> Do not equate the returned results with a list of delivery groups to which the user has no access at all.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -63,7 +63,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ExcludeUserId { get; set; }
 
         /// <summary>
-        /// <para>The page number. This parameter is required. Start from page <c>1</c> and use this parameter together with <c>PageSize</c>. Keep other filter conditions unchanged when querying subsequent pages.</para>
+        /// <para>The ID of the office network.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing+dir-172301****</para>
+        /// </summary>
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
+
+        /// <summary>
+        /// <para>The page number. This parameter is required. Start the query from page <c>1</c> and use it in conjunction with <c>PageSize</c>. Keep other filter conditions unchanged when querying subsequent pages.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of delivery groups to return per page. This parameter is required. Valid values: <c>1</c> to <c>100</c>. Unit: delivery groups. Specify this value explicitly and do not rely on default values from other query operations.</para>
+        /// <para>The maximum number of delivery groups to return per page. This parameter is required. Valid values: <c>1</c> to <c>100</c>. Explicitly specify this parameter and do not use the default values of other query operations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,16 +95,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type. This parameter is required. The value must match the product type of the delivery groups you want to query. Only published delivery groups of the specified product type are returned. A parameter error is returned if an unrecognized value is passed in.</para>
+        /// <para>The product type. This parameter is required. The value must be the same as the product type of the delivery groups to be queried. Only published delivery groups of this product type are returned. If an unrecognized value is passed, a parameter error is returned.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>CloudApp</c>: WUYING Cloud Application.</description></item>
-        /// <item><description><c>CloudBrowser</c>: Cloud Browser.</description></item>
-        /// <item><description><c>WuyingServer</c>: Enterprise Workstation.</description></item>
-        /// <item><description><c>WuyingWorkstation</c>: Personal Edition Lingjou Container Workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationTeam</c>: Team Edition Lingjou Container Workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationBusiness</c>: Dedicated Edition Lingjou Container Workstation.</description></item>
-        /// <item><description><c>AndroidCloud</c>: Cloud Phone.</description></item>
+        /// <item><description><c>CloudApp</c>: Wuying Cloud App.</description></item>
+        /// <item><description><c>CloudBrowser</c>: Cloud browser.</description></item>
+        /// <item><description><c>WuyingServer</c>: Enterprise Edition workstation.</description></item>
+        /// <item><description><c>WuyingWorkstation</c>: Personal Edition Linggou container workstation.</description></item>
+        /// <item><description><c>WuyingWorkstationTeam</c>: Team Edition Linggou container workstation.</description></item>
+        /// <item><description><c>WuyingWorkstationBusiness</c>: Dedicated Edition Linggou container workstation.</description></item>
+        /// <item><description><c>AndroidCloud</c>: Cloud phone.</description></item>
         /// <item><description><c>AIAgent</c>: AgentBay (AI agent).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
